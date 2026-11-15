@@ -1,6 +1,9 @@
 # .github/workflows/anthropic-wif-test.yml
 name: anthropic-wif-test
-on: push
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
 permissions:
   id-token: write
   contents: read
