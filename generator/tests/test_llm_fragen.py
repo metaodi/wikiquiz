@@ -143,3 +143,19 @@ def test_generierung_und_pruefung_teilen_einen_client(monkeypatch):
     monkeypatch.setenv("WIKIQUIZ_CHECK_MODEL", "claude-sonnet-5-5")
     v = client.Verbrauch()
     assert client.LLM.generierung(v).client is client.LLM.pruefung(v).client
+
+
+def test_kategorie_abgleich(monkeypatch):
+    from wikiquiz_gen.popularity import Kandidat
+    from wikiquiz_gen.wikipedia import kandidaten as kand
+
+    monkeypatch.setattr(kand, "artikel_kategorien", lambda http, titel: {
+        "Friedrich II. (Preußen)": ["Kategorie:König (Preußen)", "Kategorie:Herrscher (18. Jahrhundert)",
+                                    "Kategorie:Komponist (Klassik)"],
+        "Mozart": ["Kategorie:Komponist (Klassik)", "Kategorie:Opernkomponist"],
+        "Unklar": ["Kategorie:Mann"],
+    })
+    ks = [Kandidat("Q1", t, t, 100) for t in ("Friedrich II. (Preußen)", "Mozart", "Unklar")]
+    behalten, verworfen = kand.passende_kategorie(None, ks, "kunst")
+    assert [k.titel for k in behalten] == ["Mozart", "Unklar"]
+    assert verworfen[0][1] == "kategorie passt nicht: geschichte"

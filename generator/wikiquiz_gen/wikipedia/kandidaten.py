@@ -78,6 +78,35 @@ def qualitaets_artikel(http: Http) -> list[dict]:
     return ergebnis
 
 
+def artikel_kategorien(http: Http, titel: list[str]) -> dict[str, list[str]]:
+    """Nicht versteckte Wikipedia-Kategorien pro Artikel (50 Titel pro Request)."""
+    ergebnis: dict[str, list[str]] = {}
+    for i in range(0, len(titel), 50):
+        seiten = _abfrage_mit_fortsetzung(http, {
+            "action": "query", "format": "json", "formatversion": "2", "prop": "categories",
+            "clshow": "!hidden", "cllimit": "max", "titles": "|".join(titel[i : i + 50]),
+        })
+        for p in seiten.values():
+            ergebnis[p["title"]] = p.get("categories", [])
+    return ergebnis
+
+
+def passende_kategorie(http: Http, kandidaten: list[Kandidat], kategorie: str
+                       ) -> tuple[list[Kandidat], list[tuple[Kandidat, str]]]:
+    """Kategorie-Abgleich: Zeigen die Wikipedia-Kategorien eines Artikels eindeutig auf eine andere
+    Quizkategorie, wird er übersprungen (z. B. Friedrich II. aus „Komponist (Klassik)“ → Geschichte).
+    Artikel ohne eindeutige Zuordnung bleiben drin."""
+    kats = artikel_kategorien(http, [k.titel for k in kandidaten])
+    behalten, verworfen = [], []
+    for k in kandidaten:
+        zuordnung = zuordnen(kats.get(k.titel, []))
+        if zuordnung is not None and zuordnung != kategorie:
+            verworfen.append((k, f"kategorie passt nicht: {zuordnung}"))
+        else:
+            behalten.append(k)
+    return behalten, verworfen
+
+
 def sitelinks(http: Http, qids: list[str]) -> dict[str, int]:
     """Anzahl Sprachversionen pro Wikidata-Objekt (SPARQL, 300 Objekte pro Abfrage)."""
     anzahl: dict[str, int] = {}

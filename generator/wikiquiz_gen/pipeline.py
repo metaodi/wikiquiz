@@ -86,7 +86,7 @@ def wikipedia(
     from .llm.fragen import artikel_verarbeiten
     from .output import jetzt_iso
     from .wikipedia.auszug import auszug, klartext
-    from .wikipedia.kandidaten import sammeln
+    from .wikipedia.kandidaten import passende_kategorie, sammeln
 
     vorhanden = sum(1 for f in bestand if f["quelle_typ"] == "wikipedia")
     bedarf = ziel - vorhanden
@@ -105,6 +105,13 @@ def wikipedia(
 
     roh = sammeln(ktx.http, ktx.kategorie, ktx.schwellen.min_sitelinks)
     kandidaten = ktx.filtern([k for k in roh if k.titel not in verarbeitet], "artikel")
+    kandidaten, falsche_kategorie = passende_kategorie(ktx.http, kandidaten, ktx.kategorie)
+    for k, grund in falsche_kategorie:
+        ktx.protokoll.verwerfen(ktx.kategorie, "kategorie", grund, {"titel": k.titel})
+    if falsche_kategorie:
+        log.info("%s: %d Artikel passen thematisch zu einer anderen Kategorie, z. B. %s",
+                 ktx.kategorie, len(falsche_kategorie),
+                 ", ".join(f"{k.titel} ({g.split(': ')[1]})" for k, g in falsche_kategorie[:5]))
     kandidaten.sort(key=lambda k: -(k.pageviews or 0))
     pro_quelle: dict[str, list[dict]] = {}
     for f in bestand:

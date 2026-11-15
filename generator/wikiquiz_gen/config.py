@@ -49,3 +49,6 @@ class Schwellen:
 SCHWELLEN: dict[str, Schwellen] = {k: Schwellen() for k in KATEGORIEN}
 # Sport & Unterhaltung: Seitenaufrufe hoch, aber kurzlebig → strengerer Sitelink-Filter
 SCHWELLEN["sport"] = Schwellen(min_sitelinks=50)
+# Kunst, Musik & Literatur: zeitgenössische Personen mit kurzfristig hohen Seitenaufrufen
+# (z. B. nach Preisverleihungen) ausschliessen
+SCHWELLEN["kunst"] = Schwellen(min_sitelinks=50)
