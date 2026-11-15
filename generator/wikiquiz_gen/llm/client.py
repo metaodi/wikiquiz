@@ -29,6 +29,12 @@ PREISE = {
 }
 
 
+def _env(name: str, standard: str) -> str:
+    """Umgebungsvariable lesen; leere Werte zählen als nicht gesetzt.
+    (GitHub Actions setzt nicht definierte Repository-Variablen als leeren String.)"""
+    return (os.environ.get(name) or "").strip() or standard
+
+
 class LLMFehler(Exception):
     """Fehler bei einem einzelnen Aufruf; der Lauf geht mit dem nächsten Artikel weiter."""
 
@@ -60,17 +66,17 @@ class Verbrauch:
 class LLM:
     def __init__(self, modell: str, effort: str | None = None, verbrauch: Verbrauch | None = None) -> None:
         self.modell = modell
-        self.effort = effort or os.environ.get("WIKIQUIZ_EFFORT", "medium")
+        self.effort = effort or _env("WIKIQUIZ_EFFORT", "medium")
         self.verbrauch = verbrauch or Verbrauch()
         self.client = anthropic.Anthropic(max_retries=4)
 
     @classmethod
     def generierung(cls, verbrauch: Verbrauch) -> "LLM":
-        return cls(os.environ.get("WIKIQUIZ_GEN_MODEL", STANDARD_MODELL), verbrauch=verbrauch)
+        return cls(_env("WIKIQUIZ_GEN_MODEL", STANDARD_MODELL), verbrauch=verbrauch)
 
     @classmethod
     def pruefung(cls, verbrauch: Verbrauch) -> "LLM":
-        modell = os.environ.get("WIKIQUIZ_CHECK_MODEL") or os.environ.get("WIKIQUIZ_GEN_MODEL", STANDARD_MODELL)
+        modell = _env("WIKIQUIZ_CHECK_MODEL", _env("WIKIQUIZ_GEN_MODEL", STANDARD_MODELL))
         return cls(modell, verbrauch=verbrauch)
 
     def pruefe_anmeldung(self) -> None:

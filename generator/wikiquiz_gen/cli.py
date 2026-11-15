@@ -181,8 +181,11 @@ def main(argv: list[str] | None = None) -> int:
     try:
         return args.func(args)
     except Exception as e:
-        from .llm.client import AnmeldeFehler
+        from .llm.client import AnmeldeFehler, LLMFehler
 
+        if isinstance(e, LLMFehler):
+            print(f"::error::{e}", file=sys.stderr)
+            return 3
         if not isinstance(e, AnmeldeFehler):
             raise
         hinweis = (

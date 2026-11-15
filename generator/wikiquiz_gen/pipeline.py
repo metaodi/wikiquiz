@@ -120,6 +120,7 @@ def wikipedia(
 
     neue: list[Frage] = []
     neu_verarbeitet: dict[str, dict] = {}
+    fehler: list[str] = []
 
     def bearbeiten(k):
         text = auszug(klartext(ktx.http, k.titel))
@@ -150,6 +151,7 @@ def wikipedia(
                     raise
                 except LLMFehler as e:
                     log.warning("LLM-Fehler: %s", e)
+                    fehler.append(str(e))
                     continue
                 eintrag = {"qid": k.qid, "datum": jetzt_iso()[:10]}
                 if erg is None:
@@ -165,6 +167,13 @@ def wikipedia(
                              k.titel[:40], erg.bekanntheit_thema, len(erg.angenommen), len(erg.verworfen),
                              len(neue), bedarf, verbrauch.kosten_usd)
                 neu_verarbeitet[k.titel] = eintrag
+
+    # Scheitern alle Artikel am LLM, liegt ein grundsätzliches Problem vor (Modellname, Konfiguration)
+    if fehler and not neu_verarbeitet:
+        raise LLMFehler(f"Alle {len(fehler)} Artikel scheiterten am LLM, zuletzt: {fehler[-1]}")
+    if fehler:
+        log.warning("%d Artikel wegen LLM-Fehlern übersprungen (werden im nächsten Lauf erneut versucht)",
+                    len(fehler))
 
     # Gegen den Bestand deduplizieren (Bestand hat Vorrang)
     behalten, verworfen = deduplizieren([*(_aus_json(f) for f in bestand), *neue])
