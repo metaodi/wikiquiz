@@ -106,6 +106,14 @@ jobs:
               mv "$ANTHROPIC_IDENTITY_TOKEN_FILE.neu" "$ANTHROPIC_IDENTITY_TOKEN_FILE"
             }
             token_holen
+            # Nicht geheime Angaben des Tokens ausgeben, um sie mit der Federation-Regel zu vergleichen
+            python3 - "$ANTHROPIC_IDENTITY_TOKEN_FILE" <<'PY'
+          import base64, json, sys
+          teil = open(sys.argv[1]).read().strip().split(".")[1]
+          c = json.loads(base64.urlsafe_b64decode(teil + "=" * (-len(teil) % 4)))
+          print("GitHub-OIDC-Token:", json.dumps({k: c.get(k) for k in
+                ("iss", "sub", "aud", "ref", "repository_owner", "event_name")}, indent=1))
+          PY
             ( while sleep 60; do token_holen || echo "::warning::OIDC-Token konnte nicht erneuert werden"; done ) &
             ERNEUERUNG=$!
             trap 'kill $ERNEUERUNG 2>/dev/null || true' EXIT
@@ -150,9 +158,11 @@ jobs:
           cat pr-text.md >> "$GITHUB_STEP_SUMMARY"
 
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: ausgabe-${{ matrix.kategorie }}
           path: generator/out/
+          if-no-files-found: ignore
 
       - name: Pull Request erstellen
         if: ${{ !inputs.trockenlauf }}

@@ -29,8 +29,18 @@ PREISE = {
 }
 
 
+def _env(name: str, standard: str) -> str:
+    """Umgebungsvariable lesen; leere Werte zählen als nicht gesetzt.
+    (GitHub Actions setzt nicht definierte Repository-Variablen als leeren String.)"""
+    return (os.environ.get(name) or "").strip() or standard
+
+
 class LLMFehler(Exception):
-    pass
+    """Fehler bei einem einzelnen Aufruf; der Lauf geht mit dem nächsten Artikel weiter."""
+
+
+class AnmeldeFehler(Exception):
+    """Anmeldung bei Anthropic fehlgeschlagen (API-Key, Föderation); der Lauf wird abgebrochen."""
 
 
 @dataclass
@@ -56,18 +66,31 @@ class Verbrauch:
 class LLM:
     def __init__(self, modell: str, effort: str | None = None, verbrauch: Verbrauch | None = None) -> None:
         self.modell = modell
-        self.effort = effort or os.environ.get("WIKIQUIZ_EFFORT", "medium")
+        self.effort = effort or _env("WIKIQUIZ_EFFORT", "medium")
         self.verbrauch = verbrauch or Verbrauch()
         self.client = anthropic.Anthropic(max_retries=4)
 
     @classmethod
     def generierung(cls, verbrauch: Verbrauch) -> "LLM":
-        return cls(os.environ.get("WIKIQUIZ_GEN_MODEL", STANDARD_MODELL), verbrauch=verbrauch)
+        return cls(_env("WIKIQUIZ_GEN_MODEL", STANDARD_MODELL), verbrauch=verbrauch)
 
     @classmethod
     def pruefung(cls, verbrauch: Verbrauch) -> "LLM":
-        modell = os.environ.get("WIKIQUIZ_CHECK_MODEL") or os.environ.get("WIKIQUIZ_GEN_MODEL", STANDARD_MODELL)
+        modell = _env("WIKIQUIZ_CHECK_MODEL", _env("WIKIQUIZ_GEN_MODEL", STANDARD_MODELL))
         return cls(modell, verbrauch=verbrauch)
+
+    def pruefe_anmeldung(self) -> None:
+        """Kostenloser Test vor dem Lauf: Anmeldung und Modellname prüfen (Models API)."""
+        try:
+            self.client.models.retrieve(self.modell)
+        except anthropic.NotFoundError as e:
+            raise AnmeldeFehler(f"Modell {self.modell!r} nicht gefunden") from e
+        except anthropic.APIConnectionError as e:
+            raise LLMFehler(f"Verbindungsfehler: {e}") from e
+        except anthropic.APIStatusError as e:
+            raise AnmeldeFehler(f"HTTP {e.status_code}: {e.message}") from e
+        except anthropic.AnthropicError as e:
+            raise AnmeldeFehler(str(e)) from e
 
     def json(self, nachricht: str, schema: dict, system: str | None = None, max_tokens: int = 16000) -> dict:
         """Ein Aufruf mit erzwungener JSON-Ausgabe nach `schema`."""
@@ -84,10 +107,14 @@ class LLM:
             antwort = self.client.beta.messages.create(
                 **params, betas=["server-side-fallback-2026-07-01"], fallbacks="default"
             )
+        except (anthropic.AuthenticationError, anthropic.PermissionDeniedError) as e:
+            raise AnmeldeFehler(f"HTTP {e.status_code}: {e.message}") from e
         except anthropic.APIStatusError as e:
             raise LLMFehler(f"API-Fehler {e.status_code}: {e.message}") from e
         except anthropic.APIConnectionError as e:
             raise LLMFehler(f"Verbindungsfehler: {e}") from e
+        except anthropic.AnthropicError as e:  # z. B. fehlgeschlagener Token-Austausch (Föderation)
+            raise AnmeldeFehler(str(e)) from e
         self.verbrauch.addieren(self.modell, antwort.usage)
         if antwort.stop_reason == "refusal":
             raise LLMFehler("Anfrage abgelehnt (refusal)")

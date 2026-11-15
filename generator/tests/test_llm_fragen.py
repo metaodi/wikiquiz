@@ -118,3 +118,18 @@ def test_zuordnung_personen():
     assert zuordnen(["Kategorie:Politiker (21. Jahrhundert)", "Kategorie:Literatur (Deutsch)", "Kategorie:Autor"]) == "geschichte"
     assert zuordnen(["Kategorie:Philosoph (18. Jahrhundert)", "Kategorie:Literatur (18. Jahrhundert)"]) == "allgemeinwissen"
     assert zuordnen(["Kategorie:Komponist (Klassik)", "Kategorie:Literatur (Deutsch)"]) == "kunst"
+
+
+def test_leere_umgebungsvariable_zaehlt_als_nicht_gesetzt(monkeypatch):
+    from wikiquiz_gen.llm import client
+
+    monkeypatch.setenv("WIKIQUIZ_GEN_MODEL", "")
+    monkeypatch.setenv("WIKIQUIZ_CHECK_MODEL", "claude-sonnet-5-5")
+    monkeypatch.setenv("WIKIQUIZ_EFFORT", " ")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "test")
+    v = client.Verbrauch()
+    assert client.LLM.generierung(v).modell == client.STANDARD_MODELL
+    assert client.LLM.pruefung(v).modell == "claude-sonnet-5-5"
+    assert client.LLM.generierung(v).effort == "medium"
+    monkeypatch.setenv("WIKIQUIZ_CHECK_MODEL", "")
+    assert client.LLM.pruefung(v).modell == client.STANDARD_MODELL
