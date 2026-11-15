@@ -8,7 +8,7 @@ Bestätigte Fassung von Schritt 1 (siehe `SPEC.md`).
  Wikidata SPARQL ─┐                                   ┌─ generator/out/rejected.jsonl
  Pageviews API ───┤   Python-Generator (offline)      ├─ generator/out/review/*.md
  MediaWiki API ───┼─► Kandidaten → Bekanntheitsfilter ┤
- LLM-API (Key) ───┘   → Templates / LLM + Prüfer      └─ app/public/questions.json (committet)
+ LLM-API (Key) ───┘   → Templates / LLM + Prüfer      └─ data/fragen/<kategorie>.json (committet)
                       → Validierung → Dedupe                    │
                                                                 ▼
                                           PWA (Vite + TS + Svelte 5), GitHub Pages
@@ -34,7 +34,7 @@ generator/
     models.py        Frage-Datenklasse, stabile IDs
     validate.py      formale Regeln
     dedupe.py        max. 2 pro Quelle, ähnliche Fragen
-    output.py        questions.json, rejected.jsonl
+    output.py        data/fragen/<kategorie>.json, rejected.jsonl
     review.py        Markdown-Stichproben
     templates/       Wikidata-Templates pro Kategorie
     llm/             (Schritt 3) Prompts, Generierung, Prüfung
@@ -88,6 +88,7 @@ Schwellen pro Kategorie in `config.py`, per CLI übersteuerbar.
 |---|---|
 | Neuladen während Frage | Timer läuft gemäss `timerStart` weiter |
 | LLM | Anthropic Claude, Modelle und Key über Env (`WIKIQUIZ_GEN_MODEL`, `WIKIQUIZ_CHECK_MODEL`, `ANTHROPIC_API_KEY`) |
-| Hosting | GitHub Pages, `questions.json` wird committet |
+| Hosting | GitHub Pages; die Fragen (`data/fragen/`) werden committet |
 | Rechtschreibung | Alle Texte werden auf „ss“ normalisiert (kein „ß“) |
-| Automatisierung | Geplant: GitHub Action (manuell/geplant), die neue Fragen im Modus „ergänzen“ erzeugt und als Pull Request mit Review-Stichprobe vorschlägt |
+| Fragenablage | Eine Datei pro Kategorie (`data/fragen/`), der App-Build fügt sie zu `questions.json` zusammen |
+| Automatisierung | GitHub Action „Fragen generieren“: pro Kategorie ein Pull Request im Modus „ergänzen“ mit Stichprobe |
