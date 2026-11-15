@@ -133,3 +133,13 @@ def test_leere_umgebungsvariable_zaehlt_als_nicht_gesetzt(monkeypatch):
     assert client.LLM.generierung(v).effort == "medium"
     monkeypatch.setenv("WIKIQUIZ_CHECK_MODEL", "")
     assert client.LLM.pruefung(v).modell == client.STANDARD_MODELL
+
+
+def test_generierung_und_pruefung_teilen_einen_client(monkeypatch):
+    """Ein Client = ein Token-Austausch; OIDC-Tokens sind nur einmal eintauschbar."""
+    from wikiquiz_gen.llm import client
+
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "test")
+    monkeypatch.setenv("WIKIQUIZ_CHECK_MODEL", "claude-sonnet-5-5")
+    v = client.Verbrauch()
+    assert client.LLM.generierung(v).client is client.LLM.pruefung(v).client
