@@ -91,7 +91,6 @@ Alle Optionen, Umgebungsvariablen, Schwellen des Bekanntheitsfilters und eine Ko
 | `ci.yml` – *Tests* | jeder Push und PR | Generator: pytest · App: Typprüfung, Vitest, Playwright |
 | `pages.yml` | Push auf `main` | App bauen und auf GitHub Pages veröffentlichen |
 | `fragen.yml` – *Fragen generieren* | manuell | Fragen pro Kategorie erzeugen, je Kategorie ein Pull Request mit Stichprobe |
-| `anthropic-wif-test.yml` | Push auf `main`, manuell | Rauchtest der Anmeldung bei Anthropic per Workload Identity Federation |
 
 Einmalige Einrichtung im Repository:
 

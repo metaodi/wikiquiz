@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { VitePWA } from 'vite-plugin-pwa';
 
-// GitHub Pages: https://metaodi.github.io/wikiquiz/ → BASE_PATH=/wikiquiz/
+// GitHub Pages (eigene Domain): https://metaodi.ch/wikiquiz/ → BASE_PATH=/wikiquiz/
 const base = process.env.BASE_PATH ?? '/';
 
 export default defineConfig({
