@@ -10,7 +10,6 @@ from ..sparql import abfrage
 from .quellen import QUALITAETSKATEGORIEN, STARTKATEGORIEN, zuordnen
 
 log = logging.getLogger(__name__)
-WIKIDATA_API = "https://www.wikidata.org/w/api.php"
 
 
 def _abfrage_mit_fortsetzung(http: Http, params: dict, max_seiten: int = 10_000) -> dict[int, dict]:
@@ -80,14 +79,14 @@ def qualitaets_artikel(http: Http) -> list[dict]:
 
 
 def sitelinks(http: Http, qids: list[str]) -> dict[str, int]:
+    """Anzahl Sprachversionen pro Wikidata-Objekt (SPARQL, 300 Objekte pro Abfrage)."""
     anzahl: dict[str, int] = {}
-    for i in range(0, len(qids), 50):
-        block = qids[i : i + 50]
-        res = http.json(WIKIDATA_API, params={
-            "action": "wbgetentities", "format": "json", "ids": "|".join(block), "props": "sitelinks",
-        }, ttl=30 * TAG)
-        for q, e in res.get("entities", {}).items():
-            anzahl[q] = len(e.get("sitelinks", {}))
+    eindeutig = sorted(set(qids))
+    for i in range(0, len(eindeutig), 300):
+        werte = " ".join(f"wd:{q}" for q in eindeutig[i : i + 300])
+        for r in abfrage(http, f"SELECT ?item ?sl WHERE {{ VALUES ?item {{ {werte} }} ?item wikibase:sitelinks ?sl. }}",
+                         ttl=30 * TAG):
+            anzahl[r["item"].rsplit("/", 1)[-1]] = int(r["sl"])
     return anzahl
 
 
