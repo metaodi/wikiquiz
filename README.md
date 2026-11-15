@@ -3,7 +3,7 @@
 Mobile Quiz-App für 1–4 Spieler im Pass-and-Play-Modus: Alle spielen abwechselnd auf einem Gerät,
 das jeweils weitergegeben wird. Die Fragen stammen aus der deutschsprachigen Wikipedia und aus Wikidata.
 
-**Spielen:** <https://metaodi.github.io/wikiquiz/> (installierbar als App, funktioniert offline)
+**Spielen:** <https://metaodi.ch/wikiquiz> (installierbar als App, funktioniert offline)
 
 ## Wie es funktioniert
 
