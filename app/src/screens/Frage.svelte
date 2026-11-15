@@ -23,7 +23,9 @@
 
   const kat = $derived(KATEGORIE_MAP[frage.kategorie]);
   let jetzt = $state(Date.now());
-  const rest = $derived(timerStart === null ? ZEITLIMIT_S : Math.max(0, ZEITLIMIT_S - (jetzt - timerStart) / 1000));
+  const rest = $derived(
+    timerStart === null ? ZEITLIMIT_S : Math.min(ZEITLIMIT_S, Math.max(0, ZEITLIMIT_S - (jetzt - timerStart) / 1000)),
+  );
   let gesendet = false;
 
   onMount(() => {

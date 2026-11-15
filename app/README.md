@@ -9,6 +9,7 @@ npm install
 npm run dev        # Entwicklungsserver
 npm run check      # Typprüfung (svelte-check)
 npm test           # Unit-Tests der Spiellogik (Vitest)
+npm run e2e        # End-to-End-Tests (Playwright, Chromium, Pixel-7-Viewport)
 npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für GitHub Pages)
 ```
 
@@ -30,6 +31,19 @@ npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für Git
 - **Erschöpfte Kategorien** sind ausgegraut („keine Fragen mehr“ bzw. „bald verfügbar“); beim Antippen erscheint ein Hinweis.
   „Zufall“ wählt nur unter Kategorien mit verbleibenden Fragen. Sind alle erschöpft, endet das Spiel.
 - **Zwischenstand** nach jeder Runde (bei mehreren Spielern); bei einem Spieler zeigt das Feedback den Punktestand.
+
+## End-to-End-Tests (`e2e/`)
+
+Die Tests liefern per `page.route` einen kleinen Fixture-Pool (6× Geografie, 2× Kunst, 2× Sport)
+und steuern die Zeit über Playwrights Fake-Clock – Punkte und Timeouts werden exakt geprüft.
+
+| Test | Abgedeckt |
+|---|---|
+| 1 Spieler | kein Übergabe-Screen, 100 P. sofort, 55 P. nach 7.5 s, falsche Antwort, Timeout, Wikipedia-Link, keine Doppelfragen, erschöpfte Kategorie mit Hinweis, Zufall nur aus offenen Kategorien, vorzeitiges Spielende, „Nochmals spielen“ |
+| 4 Spieler | Übergabe an jeden Spieler, Zwischenstand mit geteilten Rängen, Zufall, Rangliste „Gleichstand“, „Neues Spiel“ mit vorbelegten Namen |
+| Neuladen | mitten in der Frage (gleiche Frage und Reihenfolge, Timer läuft weiter, Punkte gemäss Gesamtzeit), nach Ablauf (Timeout), auf Feedback- und Übergabe-Screen |
+| Timer | startet erst nach dem Einblenden, Warnfarbe ab 5 s Restzeit |
+| UX | kein horizontales Scrollen bei 320 px, alle Touch-Targets ≥ 48 px, Info-Seite mit Lizenzen, kein „ß“ |
 
 ## Deployment
 

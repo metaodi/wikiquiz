@@ -23,7 +23,7 @@
   let infoOffen = $state(false);
   let meldung = $state<string | null>(null);
   let history = storage.ladeHistory();
-  const letzte = storage.ladeLetzteSpieler();
+  let letzte = $state(storage.ladeLetzteSpieler());
 
   const fragen = $derived(pool?.fragen ?? []);
   const aktuelleFrage = $derived(spiel?.zug ? fragen.find((f) => f.id === spiel!.zug!.frageId) : undefined);
@@ -69,7 +69,8 @@
   }
 
   function starten(spieler: { name: string; farbe: string }[], runden: number) {
-    storage.speichereLetzteSpieler({ namen: spieler.map((p) => p.name), farben: spieler.map((p) => p.farbe), runden });
+    letzte = { namen: spieler.map((p) => p.name), farben: spieler.map((p) => p.farbe), runden };
+    storage.speichereLetzteSpieler(letzte);
     meldung = null;
     setzen(game.neuesSpiel(spieler, runden));
   }
