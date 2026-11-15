@@ -2,7 +2,7 @@ from datetime import date
 
 from wikiquiz_gen.dedupe import deduplizieren
 from wikiquiz_gen.models import Frage, swiss
-from wikiquiz_gen.output import schreibe_pool
+from wikiquiz_gen.output import lade_kategorie, schreibe_kategorie
 from wikiquiz_gen.popularity import ist_listentitel, zeitraum_12_monate
 from wikiquiz_gen.sparql import artikel_url, titel_aus_url
 from wikiquiz_gen.templates.base import naechste_nach_bekanntheit, schwierigkeit_aus_pageviews, stufen_nach_rang
@@ -120,12 +120,15 @@ def test_schwierigkeit():
     assert schwierigkeit_aus_pageviews(300) == 3
 
 
-def test_schreibe_pool_modi(tmp_path):
-    p = tmp_path / "q.json"
-    a, c = frage().to_json(), frage(frage="Auf welchem Kontinent liegt Kanada?", richtig="Nordamerika",
-                                     falsch=["Europa", "Asien", "Afrika"]).to_json()
-    schreibe_pool([a], {("geografie", "wikidata")}, pfad=p)
-    pool = schreibe_pool([c], {("geografie", "wikidata")}, modus="ergaenzen", pfad=p)
-    assert {f["id"] for f in pool["fragen"]} == {a["id"], c["id"]}
-    pool = schreibe_pool([c], {("geografie", "wikidata")}, modus="ersetzen", pfad=p)
-    assert [f["id"] for f in pool["fragen"]] == [c["id"]]
+def test_schreibe_kategorie_modi(tmp_path):
+    a = frage().to_json()
+    c = frage(frage="Auf welchem Kontinent liegt Kanada?", richtig="Nordamerika",
+              falsch=["Europa", "Asien", "Afrika"]).to_json()
+    w = frage(quelle_typ="wikipedia", frage="Welche Sprache spricht man in Kanada?", richtig="Englisch",
+              falsch=["Spanisch", "Russisch", "Arabisch"]).to_json()
+    schreibe_kategorie("geografie", [a, w], {"wikidata", "wikipedia"}, verzeichnis=tmp_path)
+    schreibe_kategorie("geografie", [c], {"wikidata"}, modus="ergaenzen", verzeichnis=tmp_path)
+    assert {f["id"] for f in lade_kategorie("geografie", tmp_path)} == {a["id"], c["id"], w["id"]}
+    # ersetzen betrifft nur die angegebene Quelle
+    schreibe_kategorie("geografie", [c], {"wikidata"}, modus="ersetzen", verzeichnis=tmp_path)
+    assert {f["id"] for f in lade_kategorie("geografie", tmp_path)} == {c["id"], w["id"]}

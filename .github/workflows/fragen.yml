@@ -1,0 +1,134 @@
+name: Fragen generieren
+
+# Manuell starten: Actions → „Fragen generieren“ → Run workflow.
+# Pro Kategorie entsteht ein eigener Pull Request mit Stichprobe zur Prüfung.
+on:
+  workflow_dispatch:
+    inputs:
+      kategorie:
+        description: Kategorie
+        type: choice
+        default: alle
+        options: [alle, naturwissenschaften, kunst, geschichte, sport, geografie, allgemeinwissen]
+      quelle:
+        description: Quelle
+        type: choice
+        default: wikipedia
+        options: [wikipedia, wikidata, alle]
+      ziel:
+        description: Zielbestand pro Kategorie und Quelle
+        type: number
+        default: 150
+      max_artikel:
+        description: Max. Wikipedia-Artikel pro Kategorie und Lauf (Kostenbremse)
+        type: number
+        default: 40
+      trockenlauf:
+        description: Trockenlauf (nur Stichprobe als Artifact, kein Pull Request)
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  kategorien:
+    runs-on: ubuntu-latest
+    outputs:
+      liste: ${{ steps.liste.outputs.liste }}
+    steps:
+      - id: liste
+        run: |
+          if [ "${{ inputs.kategorie }}" = "alle" ]; then
+            echo 'liste=["naturwissenschaften","kunst","geschichte","sport","geografie","allgemeinwissen"]' >> "$GITHUB_OUTPUT"
+          else
+            echo 'liste=["${{ inputs.kategorie }}"]' >> "$GITHUB_OUTPUT"
+          fi
+
+  generieren:
+    needs: kategorien
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 2 # Wikimedia-APIs schonen
+      matrix:
+        kategorie: ${{ fromJSON(needs.kategorien.outputs.liste) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generator installieren
+        working-directory: generator
+        run: pip install -e ".[llm,dev]"
+
+      - name: HTTP-Cache wiederherstellen
+        uses: actions/cache@v4
+        with:
+          path: generator/cache
+          key: http-${{ matrix.kategorie }}-${{ github.run_id }}
+          restore-keys: |
+            http-${{ matrix.kategorie }}-
+            http-
+
+      - name: Fragen generieren
+        working-directory: generator
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          WIKIQUIZ_GEN_MODEL: ${{ vars.WIKIQUIZ_GEN_MODEL }}
+          WIKIQUIZ_CHECK_MODEL: ${{ vars.WIKIQUIZ_CHECK_MODEL }}
+        run: >
+          python -m wikiquiz_gen generate
+          --kategorie ${{ matrix.kategorie }}
+          --quelle ${{ inputs.quelle }}
+          --ziel ${{ inputs.ziel }}
+          --max-artikel ${{ inputs.max_artikel }}
+          --modus ergaenzen
+          ${{ inputs.trockenlauf && '--dry-run' || '' }}
+
+      # Pull Requests, die mit GITHUB_TOKEN erstellt werden, lösen keine weiteren Workflows aus.
+      # Darum laufen die Prüfungen hier.
+      - name: Tests
+        working-directory: generator
+        run: python -m pytest -q
+
+      - name: Fragen zusammenführen (prüft u. a. doppelte IDs)
+        working-directory: app
+        run: node scripts/fragen-zusammenfuehren.mjs
+
+      - name: PR-Beschreibung
+        run: |
+          {
+            echo "Automatisch erzeugte Fragen für **${{ matrix.kategorie }}** (Quelle: ${{ inputs.quelle }}, Ziel ${{ inputs.ziel }}, max. ${{ inputs.max_artikel }} Artikel)."
+            echo
+            cat generator/out/zusammenfassung.md
+            echo
+            if [ -f "generator/out/review/${{ matrix.kategorie }}-neu.md" ]; then
+              sed 's/^# /## /' "generator/out/review/${{ matrix.kategorie }}-neu.md"
+            fi
+            echo
+            echo "Verworfene Kandidaten und Fragen mit Begründung: Artifact \`ausgabe-${{ matrix.kategorie }}\` (rejected.jsonl) im [Workflow-Lauf](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})."
+          } | head -c 60000 > pr-text.md
+          cat pr-text.md >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ausgabe-${{ matrix.kategorie }}
+          path: generator/out/
+
+      - name: Pull Request erstellen
+        if: ${{ !inputs.trockenlauf }}
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: fragen/${{ matrix.kategorie }}-${{ github.run_number }}
+          add-paths: |
+            data/fragen/${{ matrix.kategorie }}.json
+            data/verarbeitet/${{ matrix.kategorie }}.json
+          commit-message: "Neue Fragen: ${{ matrix.kategorie }}"
+          title: "Neue Fragen: ${{ matrix.kategorie }} (Lauf ${{ github.run_number }})"
+          body-path: pr-text.md
+          labels: fragen

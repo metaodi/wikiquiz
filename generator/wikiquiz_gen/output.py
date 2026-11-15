@@ -1,45 +1,59 @@
-"""Schreiben von questions.json und rejected.jsonl."""
+"""Fragenablage pro Kategorie (data/fragen/<kategorie>.json) und Protokoll verworfener Fragen.
+
+Eine Datei pro Kategorie, damit parallele Pull Requests (z. B. aus der GitHub Action) nicht
+miteinander in Konflikt geraten. Der App-Build fügt die Dateien zu questions.json zusammen.
+"""
 from __future__ import annotations
 
 import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .config import OUT_DIR, QUESTIONS_PATH
+from .config import DATA_DIR, KATEGORIEN, OUT_DIR
 
 
 def jetzt_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
-def lade_pool(pfad: Path = QUESTIONS_PATH) -> dict:
+def kategorie_pfad(kategorie: str, verzeichnis: Path | None = None) -> Path:
+    return (verzeichnis or DATA_DIR) / f"{kategorie}.json"
+
+
+def lade_kategorie(kategorie: str, verzeichnis: Path | None = None) -> list[dict]:
+    pfad = kategorie_pfad(kategorie, verzeichnis)
     if pfad.exists():
-        return json.loads(pfad.read_text(encoding="utf-8"))
-    return {"version": 1, "generiert_am": None, "fragen": []}
+        return json.loads(pfad.read_text(encoding="utf-8"))["fragen"]
+    return []
 
 
-def schreibe_pool(
+def lade_alle(verzeichnis: Path | None = None) -> list[dict]:
+    return [f for kat in KATEGORIEN for f in lade_kategorie(kat, verzeichnis)]
+
+
+def schreibe_kategorie(
+    kategorie: str,
     neue: list[dict],
-    bereiche: set[tuple[str, str]],
-    modus: str = "ersetzen",
-    pfad: Path = QUESTIONS_PATH,
-) -> dict:
-    """Fügt `neue` Fragen in den Pool ein.
+    quellen: set[str],
+    modus: str = "ergaenzen",
+    verzeichnis: Path | None = None,
+) -> list[dict]:
+    """Fügt `neue` Fragen in die Datei der Kategorie ein.
 
-    modus="ersetzen": bestehende Fragen der Bereiche (kategorie, quelle_typ) werden ersetzt.
-    modus="ergaenzen": bestehende Fragen bleiben, nur neue IDs kommen dazu.
+    modus="ersetzen": bestehende Fragen der Quellen (`quelle_typ`) werden ersetzt.
+    modus="ergaenzen": bestehende Fragen bleiben unverändert, nur neue IDs kommen dazu.
     """
-    pool = lade_pool(pfad)
-    alte = pool["fragen"]
+    alte = lade_kategorie(kategorie, verzeichnis)
     if modus == "ersetzen":
-        alte = [f for f in alte if (f["kategorie"], f["quelle_typ"]) not in bereiche]
+        alte = [f for f in alte if f["quelle_typ"] not in quellen]
     vorhandene = {f["id"] for f in alte}
     fragen = alte + [f for f in neue if f["id"] not in vorhandene]
-    fragen.sort(key=lambda f: (f["kategorie"], f["quelle_typ"], f["id"]))
-    pool = {"version": 1, "generiert_am": jetzt_iso(), "fragen": fragen}
+    fragen.sort(key=lambda f: (f["quelle_typ"], f["id"]))
+    pfad = kategorie_pfad(kategorie, verzeichnis)
     pfad.parent.mkdir(parents=True, exist_ok=True)
-    pfad.write_text(json.dumps(pool, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    return pool
+    inhalt = {"version": 1, "kategorie": kategorie, "generiert_am": jetzt_iso(), "fragen": fragen}
+    pfad.write_text(json.dumps(inhalt, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    return fragen
 
 
 class Protokoll:
@@ -63,3 +77,20 @@ class Protokoll:
         with self.pfad.open("a", encoding="utf-8") as fh:
             for e in self.eintraege:
                 fh.write(json.dumps(e, ensure_ascii=False, default=str) + "\n")
+
+
+# Bereits verarbeitete Wikipedia-Artikel (verhindert erneute, kostenpflichtige LLM-Aufrufe)
+def verarbeitet_pfad(kategorie: str, verzeichnis: Path | None = None) -> Path:
+    return (verzeichnis or DATA_DIR.parent / "verarbeitet") / f"{kategorie}.json"
+
+
+def lade_verarbeitet(kategorie: str, verzeichnis: Path | None = None) -> dict[str, dict]:
+    pfad = verarbeitet_pfad(kategorie, verzeichnis)
+    return json.loads(pfad.read_text(encoding="utf-8")) if pfad.exists() else {}
+
+
+def schreibe_verarbeitet(kategorie: str, eintraege: dict[str, dict], verzeichnis: Path | None = None) -> None:
+    pfad = verarbeitet_pfad(kategorie, verzeichnis)
+    pfad.parent.mkdir(parents=True, exist_ok=True)
+    pfad.write_text(json.dumps(dict(sorted(eintraege.items())), ensure_ascii=False, indent=1) + "\n",
+                    encoding="utf-8")
