@@ -112,3 +112,9 @@ def test_zuordnung_qualitaetsartikel():
     assert zuordnen(["Kategorie:Oper (Werk)", "Kategorie:Werk von Wolfgang Amadeus Mozart"]) == "kunst"
     assert zuordnen(["Kategorie:Schlacht des Zweiten Weltkriegs"]) == "geschichte"
     assert zuordnen(["Kategorie:Mann", "Kategorie:Geboren 1900"]) is None
+
+
+def test_zuordnung_personen():
+    assert zuordnen(["Kategorie:Politiker (21. Jahrhundert)", "Kategorie:Literatur (Deutsch)", "Kategorie:Autor"]) == "geschichte"
+    assert zuordnen(["Kategorie:Philosoph (18. Jahrhundert)", "Kategorie:Literatur (18. Jahrhundert)"]) == "allgemeinwissen"
+    assert zuordnen(["Kategorie:Komponist (Klassik)", "Kategorie:Literatur (Deutsch)"]) == "kunst"

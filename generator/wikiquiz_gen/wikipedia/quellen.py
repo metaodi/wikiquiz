@@ -89,8 +89,8 @@ STICHWORTE: dict[str, dict[str, int]] = {
         "nobelpreisträger für": 1, "naturwissenschaftler": 2, "elektr": 1,
     },
     "kunst": {
-        "maler": 2, "malerei": 2, "gemälde": 2, "komponist": 2, "oper": 2, "literatur": 2,
-        "roman": 2, "schriftsteller": 1, "autor": 1, "dichter": 2, "lyrik": 2, "drama": 1,
+        "maler": 2, "malerei": 2, "gemälde": 2, "komponist": 2, "oper": 2, "literatur": 1,
+        "roman": 2, "schriftsteller": 1, "dichter": 2, "lyrik": 2, "drama": 1,
         "bildhauer": 2, "skulptur": 2, "architekt": 1, "theater": 1, "ballett": 2,
         "klassische musik": 2, "musikinstrument": 2, "museum": 1,
     },
@@ -98,6 +98,8 @@ STICHWORTE: dict[str, dict[str, int]] = {
         "geschichte": 1, "krieg": 2, "schlacht": 2, "herrscher": 2, "kaiser": 2, "könig": 1,
         "pharao": 2, "dynastie": 2, "revolution": 2, "antike": 1, "mittelalter": 1,
         "imperium": 2, "präsident": 1, "bundeskanzler": 2, "archäolog": 1, "militär": 1,
+        "politiker": 2, "feldherr": 2, "konsul": 2, "reformat": 2, "widerstandskämpfer": 2,
+        "nationalsozialismus": 2, "holocaust": 2, "opfer des": 2, "nsdap": 2,
     },
     "sport": {
         "sport": 2, "fußball": 2, "olympi": 2, "tennis": 2, "film": 2, "fernseh": 2,
@@ -112,7 +114,7 @@ STICHWORTE: dict[str, dict[str, int]] = {
     "allgemeinwissen": {
         "lebensmittel": 2, "getränk": 2, "feiertag": 2, "religion": 1, "sprache": 1,
         "säugetier": 1, "haustier": 2, "nutztier": 2, "pflanze": 1, "brauch": 2, "spiel": 1,
-        "kleidung": 2, "speise": 2, "küche": 1,
+        "kleidung": 2, "speise": 2, "küche": 1, "philosoph": 2, "theolog": 1,
     },
 }
 
