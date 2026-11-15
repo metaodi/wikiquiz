@@ -3,14 +3,17 @@ import { punkteFuerZeit, ZEITLIMIT_S } from '../src/lib/config';
 import {
   antworten,
   bereit,
+  einstellungenPruefen,
   kategorieWaehlen,
   neuesSpiel,
   nochmals,
   pruefeTimeout,
   rangliste,
   timerStarten,
+  waehler,
   weiter,
   wiederherstellen,
+  zufallFertig,
   zwischenstandWeiter,
 } from '../src/lib/game';
 import { waehleFrage } from '../src/lib/picker';
@@ -169,5 +172,87 @@ describe('Wiederherstellen', () => {
     const s = wiederherstellen(r.stand, [frage('x')], 0);
     expect(s.phase).toBe('kategorie');
     expect(s.zug).toBeNull();
+  });
+});
+
+describe('Einstellungen', () => {
+  it('Standard: selbst wählen, alle Kategorien; ungültige Werte werden ersetzt', () => {
+    const s = zweiSpieler();
+    expect(s.modus).toBe('selbst');
+    expect(s.kategorien).toHaveLength(6);
+    expect(einstellungenPruefen({ modus: 'vorgaenger' }, 1).modus).toBe('selbst');
+    expect(einstellungenPruefen({ kategorien: [] }, 2).kategorien).toHaveLength(6);
+    expect(einstellungenPruefen({ kategorien: ['sport', 'kunst', 'xyz' as KategorieId] }, 2).kategorien).toEqual([
+      'kunst',
+      'sport',
+    ]);
+  });
+
+  it('nur gewählte Kategorien: Zufall lost nur unter diesen, andere sind gesperrt', () => {
+    const pool = [frage('g1'), frage('k1', 'kunst'), frage('k2', 'kunst')];
+    let s = neuesSpiel([{ name: 'Solo', farbe: '#f00' }], 5, { kategorien: ['kunst'] });
+    expect(kategorieWaehlen(s, pool, 'geografie', [], rng).ok).toBe(false);
+    for (let i = 0; i < 2; i++) {
+      const r = kategorieWaehlen(s, pool, 'zufall', [], () => 0.99);
+      if (!r.ok) throw new Error(r.grund);
+      expect(r.frage.kategorie).toBe('kunst');
+      s = weiter(antworten(timerStarten(zufallFertig(r.stand), 0), r.frage, 0, 0));
+    }
+    const r = kategorieWaehlen(s, pool, 'zufall', [], rng);
+    expect(r.ok ? null : r.grund).toBe('alle_erschoepft');
+  });
+
+  it('Immer Zufall: eigene Wahl ist nicht möglich', () => {
+    const s = neuesSpiel([{ name: 'Solo', farbe: '#f00' }], 5, { modus: 'zufall' });
+    expect(kategorieWaehlen(s, POOL, 'geografie', [], rng).ok).toBe(false);
+    const r = kategorieWaehlen(s, POOL, 'zufall', [], rng);
+    expect(r.ok && r.stand.phase).toBe('zufall');
+  });
+
+  it('Vorheriger Spieler wählt: Wahl vor der Übergabe, danach direkt zur Frage', () => {
+    let s = neuesSpiel([{ name: 'A', farbe: '#f00' }, { name: 'B', farbe: '#0f0' }, { name: 'C', farbe: '#00f' }], 2, {
+      modus: 'vorgaenger',
+    });
+    // Erste Frage von A: C (der letzte) wählt
+    expect(s.phase).toBe('kategorie');
+    expect(waehler(s)).toBe(2);
+    let r = kategorieWaehlen(s, POOL, 'kunst', [], rng);
+    if (!r.ok) throw new Error(r.grund);
+    expect(r.stand.phase).toBe('uebergabe');
+    expect(r.stand.zug!.spieler).toBe(0);
+    s = bereit(r.stand);
+    expect(s.phase).toBe('frage');
+    s = weiter(antworten(timerStarten(s, 0), r.frage, 2, 0));
+    // A wählt für B, auch per Zufall – die Animation sieht erst B
+    expect(s.phase).toBe('kategorie');
+    expect(waehler(s)).toBe(0);
+    r = kategorieWaehlen(s, POOL, 'zufall', [], rng);
+    if (!r.ok) throw new Error(r.grund);
+    expect(r.stand.phase).toBe('uebergabe');
+    expect(bereit(r.stand).phase).toBe('zufall');
+  });
+
+  it('Vorheriger Spieler: nach dem Zwischenstand wählt der Letzte für den Ersten', () => {
+    let s = neuesSpiel([{ name: 'A', farbe: '#f00' }, { name: 'B', farbe: '#0f0' }], 2, { modus: 'vorgaenger' });
+    for (let i = 0; i < 2; i++) {
+      const r = kategorieWaehlen(s, POOL, 'geografie', [], rng);
+      if (!r.ok) throw new Error(r.grund);
+      s = weiter(antworten(timerStarten(bereit(r.stand), 0), r.frage, 2, 0));
+    }
+    expect(s.phase).toBe('zwischenstand');
+    s = zwischenstandWeiter(s);
+    expect(s.phase).toBe('kategorie');
+    expect(s.aktiverSpieler).toBe(0);
+    expect(waehler(s)).toBe(1);
+    expect(nochmals(s).modus).toBe('vorgaenger');
+  });
+
+  it('ältere Spielstände ohne Einstellungen werden ergänzt', () => {
+    const alt = { ...zweiSpieler() } as Partial<Spielstand>;
+    delete alt.modus;
+    delete alt.kategorien;
+    const s = wiederherstellen(alt as Spielstand, POOL, 0);
+    expect(s.modus).toBe('selbst');
+    expect(s.kategorien).toHaveLength(6);
   });
 });

@@ -9,8 +9,12 @@ export function verfuegbar(pool: Frage[], kategorie: KategorieId, gestellt: stri
   return pool.filter((f) => f.kategorie === kategorie && !g.has(f.id));
 }
 
-export function verfuegbareKategorien(pool: Frage[], gestellt: string[]): KategorieId[] {
-  return KATEGORIEN.map((k) => k.id).filter((id) => verfuegbar(pool, id, gestellt).length > 0);
+export function verfuegbareKategorien(
+  pool: Frage[],
+  gestellt: string[],
+  erlaubt: KategorieId[] = KATEGORIEN.map((k) => k.id),
+): KategorieId[] {
+  return erlaubt.filter((id) => verfuegbar(pool, id, gestellt).length > 0);
 }
 
 export function anzahlProKategorie(pool: Frage[], gestellt: string[]): Record<KategorieId, number> {

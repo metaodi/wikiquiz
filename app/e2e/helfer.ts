@@ -46,12 +46,13 @@ export async function oeffnen(page: Page) {
   await expect(page.getByRole('button', { name: 'Spiel starten' })).toBeVisible();
 }
 
-export async function setup(page: Page, namen: string[], runden: 5 | 10 | 15) {
+export async function setup(page: Page, namen: string[], runden: 5 | 10 | 15, vorStart?: () => Promise<void>) {
   for (let i = 0; i < namen.length; i++) {
     if (i > 0) await page.getByRole('button', { name: '+ Spieler hinzufügen' }).click();
     await page.getByLabel(`Name Spieler ${i + 1}`).fill(namen[i]);
   }
   await page.getByRole('radio', { name: String(runden), exact: true }).click();
+  if (vorStart) await vorStart();
   await page.getByRole('button', { name: 'Spiel starten' }).click();
 }
 
@@ -60,7 +61,7 @@ export async function uebergabe(page: Page, name: string) {
   await page.getByRole('button', { name: 'Bereit' }).click();
 }
 
-const KAT_NAME: Record<Kat, RegExp> = {
+export const KAT_NAME: Record<Kat, RegExp> = {
   geografie: /Geografie/,
   kunst: /Kunst, Musik/,
   sport: /Sport &/,
@@ -75,6 +76,11 @@ export async function frageOeffnen(page: Page, kat: Kat | 'zufall') {
   } else {
     await page.getByRole('button', { name: KAT_NAME[kat] }).click();
   }
+  return warteAufFrage(page);
+}
+
+/** Warten, bis die Frage sichtbar ist und der Timer läuft (ggf. nach der Zufalls-Animation). */
+export async function warteAufFrage(page: Page) {
   const frage = page.getByRole('heading', { level: 1 });
   const sichtbar = page.locator('h1', { hasText: 'Testfrage' });
   for (let ms = 0; ms <= 3000 && (await sichtbar.count()) === 0; ms += 50) {

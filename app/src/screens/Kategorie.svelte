@@ -1,12 +1,15 @@
 <script lang="ts">
   import { KATEGORIEN, KATEGORIE_MAP } from '../lib/categories';
   import type { Wahl } from '../lib/game';
-  import type { KategorieId } from '../lib/types';
+  import type { KategorieId, Spieler } from '../lib/types';
 
   let {
     offen,
     gesamt,
     meldung,
+    kategorien,
+    waehler,
+    fuer,
     onWahl,
     onBeenden,
   }: {
@@ -15,11 +18,18 @@
     /** Fragen pro Kategorie im ganzen Pool */
     gesamt: Record<KategorieId, number>;
     meldung: string | null;
+    /** Kategorien, mit denen gespielt wird */
+    kategorien: KategorieId[];
+    /** Wählt jemand anderes für den aktiven Spieler (Modus „Vorheriger Spieler“)? */
+    waehler: Spieler | null;
+    /** Spieler, der die Frage beantwortet */
+    fuer: Spieler;
     onWahl: (w: Wahl) => void;
     onBeenden: () => void;
   } = $props();
 
-  const irgendwas = $derived(Object.values(offen).some((n) => n > 0));
+  const sichtbar = $derived(KATEGORIEN.filter((k) => kategorien.includes(k.id)));
+  const irgendwas = $derived(sichtbar.some((k) => offen[k.id] > 0));
   let hinweis = $state<string | null>(null);
   const anzeige = $derived(hinweis ?? meldung);
 
@@ -37,7 +47,14 @@
   }
 </script>
 
-<h1 class="titel">Wähle eine Kategorie</h1>
+{#if waehler}
+  <h1 class="titel">Kategorie für <span style:color={fuer.farbe}>{fuer.name}</span></h1>
+  <p class="muted untertitel">
+    <strong style:color={waehler.farbe}>{waehler.name}</strong> wählt – danach geht das Gerät an {fuer.name}.
+  </p>
+{:else}
+  <h1 class="titel">Wähle eine Kategorie</h1>
+{/if}
 
 {#if anzeige}
   <p class="hinweis" role="alert">{anzeige}</p>
@@ -45,7 +62,7 @@
 
 {#if irgendwas}
   <div class="raster">
-    {#each KATEGORIEN as k (k.id)}
+    {#each sichtbar as k (k.id)}
       {@const leer = offen[k.id] === 0}
       <button
         class="kat"
@@ -79,6 +96,11 @@
 <style>
   .titel {
     font-size: 1.4rem;
+    overflow-wrap: anywhere;
+  }
+  .untertitel {
+    margin: -8px 0 0;
+    overflow-wrap: anywhere;
   }
   .raster {
     display: grid;

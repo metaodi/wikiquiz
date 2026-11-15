@@ -4,11 +4,17 @@
   import { ZUFALL_ANIMATION_MS } from '../lib/config';
   import type { KategorieId } from '../lib/types';
 
-  let { ziel, onFertig }: { ziel: KategorieId; onFertig: () => void } = $props();
+  let {
+    ziel,
+    kategorien,
+    onFertig,
+  }: { ziel: KategorieId; kategorien: KategorieId[]; onFertig: () => void } = $props();
 
   let index = $state(0);
   let gelandet = $state(false);
-  const aktuell = $derived(gelandet ? KATEGORIE_MAP[ziel] : KATEGORIEN[index % KATEGORIEN.length]);
+  // Nur durch die Kategorien drehen, mit denen gespielt wird
+  const rad = $derived(KATEGORIEN.filter((k) => kategorien.includes(k.id)));
+  const aktuell = $derived(gelandet || rad.length === 0 ? KATEGORIE_MAP[ziel] : rad[index % rad.length]);
 
   onMount(() => {
     // Immer langsamer durch die Kategorien drehen, dann auf dem Ziel landen

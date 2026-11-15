@@ -59,7 +59,21 @@ export type Phase =
   | 'zwischenstand'
   | 'rangliste';
 
-export interface Spielstand {
+/**
+ * Wer bestimmt die Kategorie eines Zugs?
+ * - `selbst`: der aktive Spieler
+ * - `zufall`: immer der Zufall
+ * - `vorgaenger`: der vorherige Spieler wählt für den nächsten (nur ab 2 Spielern)
+ */
+export type KategorieModus = 'selbst' | 'zufall' | 'vorgaenger';
+
+export interface Einstellungen {
+  modus: KategorieModus;
+  /** Kategorien, mit denen gespielt wird (mindestens eine) */
+  kategorien: KategorieId[];
+}
+
+export interface Spielstand extends Einstellungen {
   version: 1;
   phase: Phase;
   spieler: Spieler[];
