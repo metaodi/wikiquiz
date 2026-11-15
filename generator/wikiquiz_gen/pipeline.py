@@ -82,7 +82,7 @@ def wikipedia(
     """
     from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 
-    from .llm.client import LLM, LLMFehler, Verbrauch
+    from .llm.client import LLM, AnmeldeFehler, LLMFehler, Verbrauch
     from .llm.fragen import artikel_verarbeiten
     from .output import jetzt_iso
     from .wikipedia.auszug import auszug, klartext
@@ -94,22 +94,30 @@ def wikipedia(
     if bedarf <= 0:
         return [], {}, None
 
+    verbrauch = Verbrauch()
+    if not nur_kandidaten:
+        # Vor der (langen) Artikelsuche prüfen, ob die Anmeldung bei Anthropic klappt
+        gen, pruefer = LLM.generierung(verbrauch), LLM.pruefung(verbrauch)
+        gen.pruefe_anmeldung()
+        if pruefer.modell != gen.modell:
+            pruefer.pruefe_anmeldung()
+        log.info("Anmeldung bei Anthropic ok (Generierung: %s, Prüfung: %s)", gen.modell, pruefer.modell)
+
     roh = sammeln(ktx.http, ktx.kategorie, ktx.schwellen.min_sitelinks)
     kandidaten = ktx.filtern([k for k in roh if k.titel not in verarbeitet], "artikel")
     kandidaten.sort(key=lambda k: -(k.pageviews or 0))
     pro_quelle: dict[str, list[dict]] = {}
     for f in bestand:
         pro_quelle.setdefault(f.get("quelle_id", ""), []).append(f)
-    kandidaten = [k for k in kandidaten if len(pro_quelle.get(k.qid, [])) < 2][:max_artikel]
-    log.info("%s: %d Artikel bestehen den Bekanntheitsfilter (max. %d werden verarbeitet)",
+    kandidaten = [k for k in kandidaten if len(pro_quelle.get(k.qid, [])) < 2]
+    log.info("%s: %d neue Artikel bestehen den Bekanntheitsfilter, davon werden höchstens %d verarbeitet",
              ktx.kategorie, len(kandidaten), max_artikel)
+    kandidaten = kandidaten[:max_artikel]
     if nur_kandidaten:
         for k in kandidaten:
             print(f"  {k.titel:45} sitelinks {k.sitelinks:4}  pv/Tag {k.pageviews:7.0f}  [{k.extra['quelle']}]")
         return [], {}, None
 
-    verbrauch = Verbrauch()
-    gen, pruefer = LLM.generierung(verbrauch), LLM.pruefung(verbrauch)
     neue: list[Frage] = []
     neu_verarbeitet: dict[str, dict] = {}
 
@@ -136,6 +144,10 @@ def wikipedia(
             for fut in fertig:
                 try:
                     k, erg, grund = fut.result()
+                except AnmeldeFehler:
+                    for f in laufend:
+                        f.cancel()
+                    raise
                 except LLMFehler as e:
                     log.warning("LLM-Fehler: %s", e)
                     continue

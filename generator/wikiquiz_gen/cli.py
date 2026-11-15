@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import dataclasses
 import logging
+import os
 import sys
 from collections import Counter
 
@@ -175,7 +176,21 @@ def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO,
                         format="%(levelname)s %(name)s: %(message)s")
     logging.getLogger("urllib3").setLevel(logging.WARNING)
-    return args.func(args)
+    logging.getLogger("httpx").setLevel(logging.WARNING)
+    logging.getLogger("httpx2").setLevel(logging.WARNING)
+    try:
+        return args.func(args)
+    except Exception as e:
+        from .llm.client import AnmeldeFehler
+
+        if not isinstance(e, AnmeldeFehler):
+            raise
+        hinweis = (
+            "Föderation: Grund in der Claude Console unter Workload identity → Authentication history"
+            if os.environ.get("ANTHROPIC_FEDERATION_RULE_ID") else "API-Key prüfen (ANTHROPIC_API_KEY)"
+        )
+        print(f"::error::Anmeldung bei Anthropic fehlgeschlagen: {e} – {hinweis}", file=sys.stderr)
+        return 2
 
 
 if __name__ == "__main__":
