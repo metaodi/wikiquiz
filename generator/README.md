@@ -47,8 +47,17 @@ Kategorie (oder „alle“), Quelle, Zielbestand, max. Artikel, Trockenlauf. Pro
 Pull Request mit Zusammenfassung und Stichprobe; `rejected.jsonl` hängt als Artifact am Lauf.
 
 Einmalig nötig:
-- Secret `ANTHROPIC_API_KEY` (*Settings → Secrets and variables → Actions*)
 - *Settings → Actions → General → Allow GitHub Actions to create and approve pull requests*
+- Authentifizierung bei Anthropic, eine der beiden Varianten:
+  - **Empfohlen: Workload Identity Federation** (kein dauerhafter Schlüssel). In der Claude Console unter
+    *Settings → Workload identity → Connect workload → GitHub Actions* einrichten:
+    Subject `repo:metaodi/wikiquiz:ref:refs/heads/main`, Audience `https://api.anthropic.com`,
+    Claims `repository_owner=metaodi`, `ref=refs/heads/main`. Danach die IDs als
+    **Repository-Variablen** hinterlegen: `ANTHROPIC_FEDERATION_RULE_ID`, `ANTHROPIC_ORGANIZATION_ID`,
+    `ANTHROPIC_SERVICE_ACCOUNT_ID`, `ANTHROPIC_WORKSPACE_ID`. Der Workflow holt jede Minute ein frisches
+    GitHub-OIDC-Token (gültig ca. 5 Minuten, einmal eintauschbar); das SDK tauscht es selbständig.
+  - **Alternative: API-Key** als Secret `ANTHROPIC_API_KEY`. Wird nur verwendet, wenn keine Föderation
+    konfiguriert ist.
 - optional Variablen `WIKIQUIZ_GEN_MODEL` / `WIKIQUIZ_CHECK_MODEL` (sonst `claude-opus-5-5`)
 
 ## LLM-Pipeline (Wikipedia)

@@ -31,6 +31,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  id-token: write # OIDC-Token für die Identitätsföderation mit Anthropic (WIF)
 
 jobs:
   kategorien:
@@ -78,17 +79,50 @@ jobs:
       - name: Fragen generieren
         working-directory: generator
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Bevorzugt: Workload Identity Federation (Repository-Variablen, keine Secrets nötig).
+          # Fallback: API-Key als Secret. Ist die Föderation konfiguriert, wird der Key nicht gesetzt,
+          # weil ANTHROPIC_API_KEY sonst Vorrang hätte.
+          WIF_RULE_ID: ${{ vars.ANTHROPIC_FEDERATION_RULE_ID }}
+          WIF_ORGANIZATION_ID: ${{ vars.ANTHROPIC_ORGANIZATION_ID }}
+          WIF_SERVICE_ACCOUNT_ID: ${{ vars.ANTHROPIC_SERVICE_ACCOUNT_ID }}
+          WIF_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
+          API_KEY_SECRET: ${{ secrets.ANTHROPIC_API_KEY }}
           WIKIQUIZ_GEN_MODEL: ${{ vars.WIKIQUIZ_GEN_MODEL }}
           WIKIQUIZ_CHECK_MODEL: ${{ vars.WIKIQUIZ_CHECK_MODEL }}
-        run: >
-          python -m wikiquiz_gen generate
-          --kategorie ${{ matrix.kategorie }}
-          --quelle ${{ inputs.quelle }}
-          --ziel ${{ inputs.ziel }}
-          --max-artikel ${{ inputs.max_artikel }}
-          --modus ergaenzen
-          ${{ inputs.trockenlauf && '--dry-run' || '' }}
+        run: |
+          set -euo pipefail
+          if [ -n "$WIF_RULE_ID" ]; then
+            export ANTHROPIC_FEDERATION_RULE_ID="$WIF_RULE_ID"
+            export ANTHROPIC_ORGANIZATION_ID="$WIF_ORGANIZATION_ID"
+            export ANTHROPIC_SERVICE_ACCOUNT_ID="$WIF_SERVICE_ACCOUNT_ID"
+            if [ -n "$WIF_WORKSPACE_ID" ]; then export ANTHROPIC_WORKSPACE_ID="$WIF_WORKSPACE_ID"; fi
+            export ANTHROPIC_IDENTITY_TOKEN_FILE="$RUNNER_TEMP/gha-oidc.jwt"
+            # GitHub-Tokens laufen nach ca. 5 Minuten ab und sind nur einmal eintauschbar.
+            # Das SDK liest die Datei bei jeder Erneuerung neu, darum hier jede Minute ein frisches Token.
+            token_holen() {
+              curl -fsS -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+                "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://api.anthropic.com" \
+                | jq -r .value > "$ANTHROPIC_IDENTITY_TOKEN_FILE.neu"
+              mv "$ANTHROPIC_IDENTITY_TOKEN_FILE.neu" "$ANTHROPIC_IDENTITY_TOKEN_FILE"
+            }
+            token_holen
+            ( while sleep 60; do token_holen || echo "::warning::OIDC-Token konnte nicht erneuert werden"; done ) &
+            ERNEUERUNG=$!
+            trap 'kill $ERNEUERUNG 2>/dev/null || true' EXIT
+            echo "Anthropic-Authentifizierung: Workload Identity Federation"
+          elif [ -n "$API_KEY_SECRET" ]; then
+            export ANTHROPIC_API_KEY="$API_KEY_SECRET"
+            echo "Anthropic-Authentifizierung: API-Key (Secret)"
+          else
+            echo "::warning::Weder Föderation noch API-Key konfiguriert – die LLM-Pipeline wird fehlschlagen"
+          fi
+          python -m wikiquiz_gen generate \
+            --kategorie "${{ matrix.kategorie }}" \
+            --quelle "${{ inputs.quelle }}" \
+            --ziel "${{ inputs.ziel }}" \
+            --max-artikel "${{ inputs.max_artikel }}" \
+            --modus ergaenzen \
+            ${{ inputs.trockenlauf && '--dry-run' || '' }}
 
       # Pull Requests, die mit GITHUB_TOKEN erstellt werden, lösen keine weiteren Workflows aus.
       # Darum laufen die Prüfungen hier.
