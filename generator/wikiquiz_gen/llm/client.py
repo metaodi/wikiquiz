@@ -35,6 +35,24 @@ def _env(name: str, standard: str) -> str:
     return (os.environ.get(name) or "").strip() or standard
 
 
+_CLIENT: anthropic.Anthropic | None = None
+_CLIENT_LOCK = threading.Lock()
+
+
+def gemeinsamer_client() -> anthropic.Anthropic:
+    """Ein einziger API-Client für alle Aufrufe (Generierung und Prüfung, alle Threads).
+
+    Bei Workload Identity Federation hat jeder Client einen eigenen Token-Cache und tauscht das
+    GitHub-OIDC-Token selbst ein. Diese Tokens sind aber nur einmal eintauschbar (jti); ein zweiter
+    Client mit demselben Token würde mit 401 (jti_reused) abgelehnt.
+    """
+    global _CLIENT
+    with _CLIENT_LOCK:
+        if _CLIENT is None:
+            _CLIENT = anthropic.Anthropic(max_retries=4)
+        return _CLIENT
+
+
 class LLMFehler(Exception):
     """Fehler bei einem einzelnen Aufruf; der Lauf geht mit dem nächsten Artikel weiter."""
 
@@ -68,7 +86,7 @@ class LLM:
         self.modell = modell
         self.effort = effort or _env("WIKIQUIZ_EFFORT", "medium")
         self.verbrauch = verbrauch or Verbrauch()
-        self.client = anthropic.Anthropic(max_retries=4)
+        self.client = gemeinsamer_client()
 
     @classmethod
     def generierung(cls, verbrauch: Verbrauch) -> "LLM":
