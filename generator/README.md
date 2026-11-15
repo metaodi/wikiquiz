@@ -65,6 +65,8 @@ Einmalig nötig:
 1. **Artikelauswahl:** Startkategorien pro Quizkategorie (`wikipedia/quellen.py`) sowie exzellente und
    lesenswerte Artikel, die über ihre Wikipedia-Kategorien per Stichwort zugeordnet werden.
    Danach der Bekanntheitsfilter; die bekanntesten Artikel werden zuerst verarbeitet.
+   **Kategorie-Abgleich:** Zeigen die Wikipedia-Kategorien eines Artikels per Stichwort eindeutig auf eine
+   andere Quizkategorie, wird er übersprungen (z. B. Friedrich II. aus „Komponist (Klassik)“ → Geschichte).
 2. **Textauszug:** Einleitung und erste Abschnitte, ca. 4000 Zeichen Klartext; Abschnitte wie
    Literatur, Weblinks oder Rezeption werden übersprungen.
 3. **Generierung:** Prompt wörtlich aus `SPEC.md` (`llm/prompts.py`, ein Test prüft die Übereinstimmung),
@@ -95,7 +97,7 @@ Schwellen pro Kategorie in `wikiquiz_gen/config.py` (per CLI übersteuerbar):
 
 | Schwelle | Standard | Bemerkung |
 |---|---|---|
-| `min_sitelinks` | 30 (Sport: 50) | wichtigster Indikator, direkt aus SPARQL |
+| `min_sitelinks` | 30 (Sport, Kunst: 50) | wichtigster Indikator, direkt aus SPARQL. Höher, wo Seitenaufrufe kurzlebig sind (Sport, zeitgenössische Kunst und Literatur) |
 | `min_pageviews` | 200/Tag | abgefragtes Thema, Ø der letzten 12 vollen Monate auf de.wikipedia |
 | `min_pageviews_antwort` | 100/Tag | richtige Antwort (z. B. Hauptstadt) – Städteartikel werden seltener aufgerufen als Länderartikel (Ankara ≈ 170, Nairobi ≈ 150) |
 | `min_zeichen` | 3000 | Klartext, geschätzt als 60 % der Wikitext-Länge (`prop=info`, 50 Titel/Request) |
