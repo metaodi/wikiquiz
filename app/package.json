@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "fragen": "node scripts/fragen-zusammenfuehren.mjs",
+    "predev": "npm run fragen",
+    "prebuild": "npm run fragen",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",

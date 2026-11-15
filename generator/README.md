@@ -1,39 +1,81 @@
 # WikiQuiz – Fragen-Generator
 
-Erzeugt `app/public/questions.json` aus Wikidata (Templates) und – ab Schritt 3 – aus
-Wikipedia-Artikeln mit LLM-Generierung und unabhängiger Prüfung.
+Erzeugt den Fragenpool in `data/fragen/<kategorie>.json` aus Wikidata (Templates) und aus
+Wikipedia-Artikeln mit LLM-Generierung und unabhängiger Prüfung. Der App-Build fügt die Dateien
+zu `app/public/questions.json` zusammen (`app/scripts/fragen-zusammenfuehren.mjs`).
 
 ## Installation
 
 ```bash
 cd generator
-pip install -e ".[dev]"        # später für die LLM-Pipeline: ".[llm,dev]"
+pip install -e ".[llm,dev]"
 ```
 
 ## Bedienung
 
 ```bash
-# Trockenlauf: nichts schreiben, Stichprobe als Markdown ausgeben
-python -m wikiquiz_gen generate --kategorie geografie --dry-run
+# Wikipedia + LLM: Zielbestand 150 Fragen, höchstens 40 Artikel pro Lauf (Kostenbremse)
+python -m wikiquiz_gen generate --kategorie kunst --quelle wikipedia --ziel 150 --max-artikel 40
 
-# Schreiben (ersetzt die Wikidata-Fragen der Kategorie in questions.json)
-python -m wikiquiz_gen generate --kategorie geografie --ziel 200
+# Nur die Artikelkandidaten nach Bekanntheitsfilter auflisten (ohne LLM, ohne Kosten)
+python -m wikiquiz_gen generate --kategorie kunst --quelle wikipedia --nur-kandidaten
 
-# Nur neue Fragen ergänzen, bestehende IDs bleiben unverändert
-python -m wikiquiz_gen generate --kategorie geografie --modus ergaenzen
+# Trockenlauf: Fragen erzeugen (inkl. LLM-Kosten), aber nichts in data/ schreiben
+python -m wikiquiz_gen generate --kategorie kunst --quelle wikipedia --max-artikel 10 --dry-run
 
-# Schwellen übersteuern
-python -m wikiquiz_gen generate --kategorie geografie --min-sitelinks 50 --min-pageviews 500 --dry-run
+# Wikidata-Templates neu erzeugen und die bisherigen Wikidata-Fragen der Kategorie ersetzen
+python -m wikiquiz_gen generate --kategorie geografie --quelle wikidata --ziel 200 --modus ersetzen
 
 # Review-Stichprobe (30 Fragen pro Kategorie) → out/review/<kategorie>.md
-python -m wikiquiz_gen review --kategorie geografie --n 30
+python -m wikiquiz_gen review --kategorie kunst --n 30
 
 # Übersicht
 python -m wikiquiz_gen stats
 ```
 
-Verworfene Kandidaten und Fragen landen mit Grund in `out/rejected.jsonl`
-(Bekanntheitsfilter, formale Regeln, Deduplizierung), um Schwellen nachzujustieren.
+Standard ist `--modus ergaenzen`: Bestehende Fragen bleiben unverändert, nur neue IDs kommen dazu.
+`data/verarbeitet/<kategorie>.json` merkt sich die bereits verarbeiteten Artikel, damit spätere Läufe
+sie nicht erneut (kostenpflichtig) ans LLM schicken.
+
+Ausgaben in `out/`: `rejected.jsonl` (alle verworfenen Kandidaten und Fragen mit Grund),
+`zusammenfassung.md` (Zahlen, Tokens, Kostenschätzung) und `review/<kategorie>-neu.md` (Stichprobe der neuen Fragen).
+
+## GitHub Action „Fragen generieren“
+
+`.github/workflows/fragen.yml`, manuell unter *Actions → Fragen generieren → Run workflow*:
+Kategorie (oder „alle“), Quelle, Zielbestand, max. Artikel, Trockenlauf. Pro Kategorie entsteht ein
+Pull Request mit Zusammenfassung und Stichprobe; `rejected.jsonl` hängt als Artifact am Lauf.
+
+Einmalig nötig:
+- *Settings → Actions → General → Allow GitHub Actions to create and approve pull requests*
+- Authentifizierung bei Anthropic, eine der beiden Varianten:
+  - **Empfohlen: Workload Identity Federation** (kein dauerhafter Schlüssel). In der Claude Console unter
+    *Settings → Workload identity → Connect workload → GitHub Actions* einrichten:
+    Subject `repo:metaodi/wikiquiz:ref:refs/heads/main`, Audience `https://api.anthropic.com`,
+    Claims `repository_owner=metaodi`, `ref=refs/heads/main`. Danach die IDs als
+    **Repository-Variablen** hinterlegen: `ANTHROPIC_FEDERATION_RULE_ID`, `ANTHROPIC_ORGANIZATION_ID`,
+    `ANTHROPIC_SERVICE_ACCOUNT_ID`, `ANTHROPIC_WORKSPACE_ID`. Der Workflow holt jede Minute ein frisches
+    GitHub-OIDC-Token (gültig ca. 5 Minuten, einmal eintauschbar); das SDK tauscht es selbständig.
+  - **Alternative: API-Key** als Secret `ANTHROPIC_API_KEY`. Wird nur verwendet, wenn keine Föderation
+    konfiguriert ist.
+- optional Variablen `WIKIQUIZ_GEN_MODEL` / `WIKIQUIZ_CHECK_MODEL` (sonst `claude-opus-5-5`)
+
+## LLM-Pipeline (Wikipedia)
+
+1. **Artikelauswahl:** Startkategorien pro Quizkategorie (`wikipedia/quellen.py`) sowie exzellente und
+   lesenswerte Artikel, die über ihre Wikipedia-Kategorien per Stichwort zugeordnet werden.
+   Danach der Bekanntheitsfilter; die bekanntesten Artikel werden zuerst verarbeitet.
+2. **Textauszug:** Einleitung und erste Abschnitte, ca. 4000 Zeichen Klartext; Abschnitte wie
+   Literatur, Weblinks oder Rezeption werden übersprungen.
+3. **Generierung:** Prompt wörtlich aus `SPEC.md` (`llm/prompts.py`, ein Test prüft die Übereinstimmung),
+   strukturierte JSON-Ausgabe erzwungen.
+4. **Prüfung:** zweiter, unabhängiger Aufruf mit gemischten Antworten, ohne Hinweis auf die richtige.
+5. **Aufnahme** nur, wenn: Bekanntheit des Themas ≥ 3, Belegstelle steht im Text (ß/ss und
+   Anführungszeichen normalisiert), Prüfer wählt dieselbe Antwort, eindeutig, Allgemeinwissen ≥ 3,
+   formale Regeln eingehalten. Danach Deduplizierung gegen den Bestand.
+
+Kosten (grobe Schätzung mit `claude-opus-5-5`, Denkaufwand `medium`): ca. 0.05–0.10 USD pro Artikel,
+also rund 5–15 USD für 150 Fragen einer Kategorie. Der Lauf protokolliert die tatsächlichen Tokens.
 
 ## Umgebungsvariablen
 
@@ -42,8 +84,10 @@ Verworfene Kandidaten und Fragen landen mit Grund in `out/rejected.jsonl`
 | `WIKIQUIZ_USER_AGENT` | User-Agent für Wikimedia-APIs (Standard mit Kontaktangabe) |
 | `WIKIQUIZ_CACHE_DIR` | HTTP-Cache (Standard `generator/cache/`) |
 | `WIKIQUIZ_OUT_DIR` | Protokolle und Reviews (Standard `generator/out/`) |
-| `WIKIQUIZ_QUESTIONS` | Zieldatei (Standard `app/public/questions.json`) |
-| `ANTHROPIC_API_KEY`, `WIKIQUIZ_GEN_MODEL`, `WIKIQUIZ_CHECK_MODEL` | LLM (Schritt 3) |
+| `WIKIQUIZ_DATA_DIR` | Fragenablage (Standard `data/fragen/`) |
+| `ANTHROPIC_API_KEY` | API-Key für die LLM-Pipeline (nur im Generator, nie in der App) |
+| `WIKIQUIZ_GEN_MODEL`, `WIKIQUIZ_CHECK_MODEL` | Modelle für Generierung und Prüfung (Standard `claude-opus-5-5`) |
+| `WIKIQUIZ_EFFORT` | Denkaufwand `low`/`medium`/`high` (Standard `medium`) |
 
 ## Bekanntheitsfilter
 

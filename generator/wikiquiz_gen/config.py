@@ -10,9 +10,8 @@ REPO_DIR = GENERATOR_DIR.parent
 
 CACHE_DIR = Path(os.environ.get("WIKIQUIZ_CACHE_DIR", GENERATOR_DIR / "cache"))
 OUT_DIR = Path(os.environ.get("WIKIQUIZ_OUT_DIR", GENERATOR_DIR / "out"))
-QUESTIONS_PATH = Path(
-    os.environ.get("WIKIQUIZ_QUESTIONS", REPO_DIR / "app" / "public" / "questions.json")
-)
+# Fragen pro Kategorie (committet); der App-Build fügt sie zu questions.json zusammen
+DATA_DIR = Path(os.environ.get("WIKIQUIZ_DATA_DIR", REPO_DIR / "data" / "fragen"))
 
 USER_AGENT = os.environ.get(
     "WIKIQUIZ_USER_AGENT",

@@ -1,9 +1,10 @@
 """Kommandozeile des Fragen-Generators.
 
 Beispiele:
-  python -m wikiquiz_gen generate --kategorie geografie --ziel 150
-  python -m wikiquiz_gen generate --kategorie geografie --dry-run --min-pageviews 500
-  python -m wikiquiz_gen review --kategorie geografie --n 30
+  python -m wikiquiz_gen generate --kategorie kunst --quelle wikipedia --ziel 150 --max-artikel 40
+  python -m wikiquiz_gen generate --kategorie kunst --quelle wikipedia --nur-kandidaten
+  python -m wikiquiz_gen generate --kategorie geografie --quelle wikidata --modus ersetzen
+  python -m wikiquiz_gen review --kategorie kunst --n 30
   python -m wikiquiz_gen stats
 """
 from __future__ import annotations
@@ -15,11 +16,13 @@ import sys
 from collections import Counter
 
 from . import output, pipeline
-from .config import KATEGORIEN, OUT_DIR, QUESTIONS_PATH, SCHWELLEN
+from .config import KATEGORIEN, OUT_DIR, SCHWELLEN
 from .http import Http
 from .popularity import Bekanntheit
 from .review import stichprobe_markdown
 from .templates.base import Kontext
+
+log = logging.getLogger("wikiquiz_gen")
 
 
 def _schwellen(kategorie: str, args: argparse.Namespace):
@@ -41,46 +44,78 @@ def cmd_generate(args: argparse.Namespace) -> int:
     http = Http(nur_cache=args.nur_cache)
     bekanntheit = Bekanntheit(http, exakt=args.pageviews_exakt)
     protokoll = output.Protokoll(aktiv=not args.dry_run)
-    kategorien = args.kategorie or list(pipeline.WIKIDATA_TEMPLATES)
-    neue: list[dict] = []
-    bereiche: set[tuple[str, str]] = set()
+    kategorien = args.kategorie or list(KATEGORIEN)
+    alle_neuen: list[dict] = []
+    zusammenfassung: list[str] = []
     for kat in kategorien:
         schwellen = _schwellen(kat, args)
-        logging.info("== %s (%s) ==", KATEGORIEN[kat], schwellen)
+        log.info("== %s (%s) ==", KATEGORIEN[kat], schwellen)
         ktx = Kontext(kat, http, bekanntheit, schwellen, protokoll,
                       max_kandidaten=args.max_kandidaten, seed=args.seed)
-        if args.quelle in ("wikidata", "alle"):
+        bestand = output.lade_kategorie(kat)
+        neue: list[dict] = []
+        quellen: set[str] = set()
+        zeilen = [f"### {KATEGORIEN[kat]}", "", f"Bestand vorher: {len(bestand)} Fragen"]
+
+        if args.quelle in ("wikidata", "alle") and kat in pipeline.WIKIDATA_TEMPLATES:
             fragen = pipeline.wikidata(ktx, args.ziel)
             neue += [f.to_json() for f in fragen]
-            bereiche.add((kat, "wikidata"))
+            quellen.add("wikidata")
             vorlagen = Counter(f.template for f in fragen)
-            print(f"{KATEGORIEN[kat]}: {len(fragen)} Wikidata-Fragen "
-                  f"({', '.join(f'{k} {v}' for k, v in vorlagen.items())})")
-        if args.quelle in ("wikipedia", "alle"):
-            print(f"{KATEGORIEN[kat]}: LLM-Pipeline folgt in Schritt 3")
-    gruende = Counter(e["stufe"] + ": " + e["grund"].split(" ")[0] for e in protokoll.eintraege)
-    print("Verworfen:", ", ".join(f"{k} ×{v}" for k, v in gruende.most_common(10)) or "–")
-    print(f"HTTP: {http.stats['netz']} Netz, {http.stats['cache']} Cache")
+            zeilen.append(f"Wikidata: {len(fragen)} Fragen ({', '.join(f'{k} {v}' for k, v in vorlagen.items())})")
 
-    if args.dry_run:
-        print("Trockenlauf: nichts geschrieben.")
-        for kat in kategorien:
-            print()
-            print(stichprobe_markdown(neue, kat, n=args.stichprobe, seed=args.seed))
-        return 0
+        if args.quelle in ("wikipedia", "alle"):
+            verarbeitet = output.lade_verarbeitet(kat)
+            fragen, neu_verarbeitet, verbrauch = pipeline.wikipedia(
+                ktx, args.ziel, args.max_artikel, bestand, verarbeitet,
+                threads=args.threads, nur_kandidaten=args.nur_kandidaten,
+            )
+            neue += [f.to_json() for f in fragen]
+            quellen.add("wikipedia")
+            if verbrauch:
+                zeilen.append(
+                    f"Wikipedia + LLM: {len(fragen)} neue Fragen aus {len(neu_verarbeitet)} Artikeln · "
+                    f"{verbrauch.aufrufe} LLM-Aufrufe · {verbrauch.eingabe:,} / {verbrauch.ausgabe:,} Tokens "
+                    f"(ein/aus) · ca. {verbrauch.kosten_usd:.2f} USD"
+                )
+            if not args.dry_run and neu_verarbeitet:
+                output.schreibe_verarbeitet(kat, {**verarbeitet, **neu_verarbeitet})
+
+        if not args.dry_run and not args.nur_kandidaten and neue:
+            fragen_kat = output.schreibe_kategorie(kat, neue, quellen, modus=args.modus)
+            zeilen.append(f"Bestand nachher: {len(fragen_kat)} Fragen")
+        alle_neuen += neue
+        zusammenfassung += zeilen + [""]
+
+    gruende = Counter(e["stufe"] + ": " + e["grund"].split(":")[0].split(" ")[0] for e in protokoll.eintraege)
+    zusammenfassung.append("Verworfen: " + (", ".join(f"{k} ×{v}" for k, v in gruende.most_common(12)) or "–"))
+    zusammenfassung.append(f"HTTP: {http.stats['netz']} Netz, {http.stats['cache']} Cache")
+    text = "\n".join(zusammenfassung)
+    print(text)
     protokoll.speichern()
-    pool = output.schreibe_pool(neue, bereiche, modus=args.modus)
-    print(f"{QUESTIONS_PATH}: {len(pool['fragen'])} Fragen total; verworfen → {protokoll.pfad}")
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    (OUT_DIR / "zusammenfassung.md").write_text(text + "\n", encoding="utf-8")
+    for kat in kategorien:
+        neu_kat = [f for f in alle_neuen if f["kategorie"] == kat]
+        if neu_kat:
+            md = stichprobe_markdown(neu_kat, kat, n=args.stichprobe, seed=args.seed, titel="Neue Fragen")
+            (OUT_DIR / "review").mkdir(parents=True, exist_ok=True)
+            (OUT_DIR / "review" / f"{kat}-neu.md").write_text(md + "\n", encoding="utf-8")
+            if args.dry_run:
+                print()
+                print(md)
+    if args.dry_run:
+        print("\nTrockenlauf: keine Fragen geschrieben.")
     return 0
 
 
 def cmd_review(args: argparse.Namespace) -> int:
-    pool = output.lade_pool()
-    kategorien = args.kategorie or sorted({f["kategorie"] for f in pool["fragen"]})
+    fragen = output.lade_alle()
+    kategorien = args.kategorie or sorted({f["kategorie"] for f in fragen})
     ziel = OUT_DIR / "review"
     ziel.mkdir(parents=True, exist_ok=True)
     for kat in kategorien:
-        md = stichprobe_markdown(pool["fragen"], kat, n=args.n, seed=args.seed)
+        md = stichprobe_markdown(fragen, kat, n=args.n, seed=args.seed)
         (ziel / f"{kat}.md").write_text(md + "\n", encoding="utf-8")
         print(md)
         print()
@@ -89,12 +124,12 @@ def cmd_review(args: argparse.Namespace) -> int:
 
 
 def cmd_stats(args: argparse.Namespace) -> int:
-    pool = output.lade_pool()
-    c = Counter((f["kategorie"], f["quelle_typ"]) for f in pool["fragen"])
+    fragen = output.lade_alle()
+    c = Counter((f["kategorie"], f["quelle_typ"]) for f in fragen)
     for kat in KATEGORIEN:
         wd, wp = c[(kat, "wikidata")], c[(kat, "wikipedia")]
         print(f"{KATEGORIEN[kat]:32} {wd + wp:5}  (wikidata {wd}, wikipedia {wp})")
-    print(f"{'Total':32} {len(pool['fragen']):5}  generiert {pool['generiert_am']}")
+    print(f"{'Total':32} {len(fragen):5}")
     return 0
 
 
@@ -106,8 +141,12 @@ def main(argv: list[str] | None = None) -> int:
 
     g = sub.add_parser("generate", help="Fragen erzeugen")
     g.add_argument("--kategorie", action="append", choices=list(KATEGORIEN))
-    g.add_argument("--quelle", choices=["wikidata", "wikipedia", "alle"], default="wikidata")
-    g.add_argument("--ziel", type=int, default=200, help="max. Fragen pro Kategorie und Quelle")
+    g.add_argument("--quelle", choices=["wikidata", "wikipedia", "alle"], default="alle")
+    g.add_argument("--ziel", type=int, default=150,
+                   help="Wikidata: max. Fragen; Wikipedia: Zielbestand (es wird nur die Differenz erzeugt)")
+    g.add_argument("--max-artikel", type=int, default=40, help="max. Wikipedia-Artikel pro Lauf (Kostenbremse)")
+    g.add_argument("--threads", type=int, default=4, help="parallele LLM-Aufrufe")
+    g.add_argument("--nur-kandidaten", action="store_true", help="nur Artikelkandidaten auflisten, kein LLM")
     g.add_argument("--min-sitelinks", type=int)
     g.add_argument("--min-pageviews", type=float)
     g.add_argument("--min-pageviews-antwort", type=float)
@@ -115,14 +154,15 @@ def main(argv: list[str] | None = None) -> int:
     g.add_argument("--pageviews-exakt", action="store_true",
                    help="12-Monats-Werte für alle Kandidaten (sonst nur im Graubereich)")
     g.add_argument("--max-kandidaten", type=int, default=300, help="pro Template aus SPARQL")
-    g.add_argument("--modus", choices=["ersetzen", "ergaenzen"], default="ersetzen")
+    g.add_argument("--modus", choices=["ersetzen", "ergaenzen"], default="ergaenzen")
     g.add_argument("--seed", type=int, default=42)
-    g.add_argument("--dry-run", action="store_true", help="nichts schreiben, Stichprobe ausgeben")
+    g.add_argument("--dry-run", action="store_true",
+                   help="Trockenlauf: Fragen erzeugen (inkl. LLM), aber nichts in data/ schreiben")
     g.add_argument("--stichprobe", type=int, default=30)
     g.add_argument("--nur-cache", action="store_true", help="keine Netzwerkzugriffe")
     g.set_defaults(func=cmd_generate)
 
-    r = sub.add_parser("review", help="Markdown-Stichprobe aus questions.json")
+    r = sub.add_parser("review", help="Markdown-Stichprobe aus data/fragen/")
     r.add_argument("--kategorie", action="append", choices=list(KATEGORIEN))
     r.add_argument("--n", type=int, default=30)
     r.add_argument("--seed", type=int, default=1)
