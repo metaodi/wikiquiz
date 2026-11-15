@@ -1,6 +1,6 @@
 /** localStorage-Zugriffe, alle in try/catch (privater Modus, gesperrter Speicher …). */
 import { HISTORY_MAX } from './config';
-import type { Spielstand } from './types';
+import type { Einstellungen, Spielstand } from './types';
 
 const KEY_SPIEL = 'wikiquiz:game:v1';
 const KEY_HISTORY = 'wikiquiz:history:v1';
@@ -47,7 +47,7 @@ export function merkeFrage(id: string): string[] {
   return neu;
 }
 
-export interface LetzteSpieler {
+export interface LetzteSpieler extends Partial<Einstellungen> {
   namen: string[];
   farben: string[];
   runden: number;

@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import { onMount, untrack } from 'svelte';
   import Kopf from './components/Kopf.svelte';
   import * as game from './lib/game';
   import { haptik } from './lib/haptics';
   import { anzahlProKategorie } from './lib/picker';
   import { ladePool } from './lib/pool';
   import * as storage from './lib/storage';
-  import type { Pool, Spielstand } from './lib/types';
+  import type { Einstellungen, Pool, Spielstand } from './lib/types';
   import Feedback from './screens/Feedback.svelte';
   import Frage from './screens/Frage.svelte';
   import Info from './screens/Info.svelte';
@@ -29,6 +29,7 @@
   const aktuelleFrage = $derived(spiel?.zug ? fragen.find((f) => f.id === spiel!.zug!.frageId) : undefined);
   const gesamt = $derived(anzahlProKategorie(fragen, []));
   const offen = $derived(anzahlProKategorie(fragen, spiel?.gestellt ?? []));
+  const offenGewaehlt = $derived(!!spiel && spiel.kategorien.some((k) => offen[k] > 0));
   const letzterZug = $derived(
     !!spiel && spiel.aktiverSpieler === spiel.spieler.length - 1 && spiel.runde >= spiel.runden,
   );
@@ -64,26 +65,30 @@
     window.scrollTo(0, 0);
   });
 
+  // Modus „Immer Zufall“: Kategorie ohne Zutun auslosen
+  $effect(() => {
+    if (spiel?.phase === 'kategorie' && spiel.modus === 'zufall') untrack(() => waehlen('zufall'));
+  });
+
   function setzen(neu: Spielstand) {
     spiel = neu;
   }
 
-  function starten(spieler: { name: string; farbe: string }[], runden: number) {
-    letzte = { namen: spieler.map((p) => p.name), farben: spieler.map((p) => p.farbe), runden };
+  function starten(spieler: { name: string; farbe: string }[], runden: number, einstellungen: Einstellungen) {
+    letzte = { namen: spieler.map((p) => p.name), farben: spieler.map((p) => p.farbe), runden, ...einstellungen };
     storage.speichereLetzteSpieler(letzte);
     meldung = null;
-    setzen(game.neuesSpiel(spieler, runden));
+    setzen(game.neuesSpiel(spieler, runden, einstellungen));
   }
 
   function waehlen(wahl: game.Wahl) {
     if (!spiel) return;
-    haptik.tippen();
+    if (spiel.modus !== 'zufall') haptik.tippen();
     const r = game.kategorieWaehlen(spiel, fragen, wahl, history);
     if (!r.ok) {
+      // Sind alle Fragen aufgebraucht, zeigt der Kategorie-Screen das Spielende bereits an
       meldung =
-        r.grund === 'alle_erschoepft'
-          ? 'Es sind keine Fragen mehr übrig.'
-          : 'In dieser Kategorie gibt es keine Fragen mehr. Bitte wähle eine andere.';
+        r.grund === 'alle_erschoepft' ? null : 'In dieser Kategorie gibt es keine Fragen mehr. Bitte wähle eine andere.';
       return;
     }
     meldung = null;
@@ -111,7 +116,7 @@
 {:else if infoOffen}
   <Info {pool} onZurueck={() => (infoOffen = false)} />
 {:else if !spiel}
-  <Setup {letzte} anzahlFragen={fragen.length} onStart={starten} onInfo={() => (infoOffen = true)} />
+  <Setup {letzte} {gesamt} onStart={starten} onInfo={() => (infoOffen = true)} />
 {:else if spiel.phase === 'uebergabe'}
   <Uebergabe
     spieler={spiel.spieler[spiel.aktiverSpieler]}
@@ -131,9 +136,22 @@
   <div class="screen">
     <Kopf {spiel} onBeenden={abbrechen} />
     {#if spiel.phase === 'kategorie'}
-      <Kategorie {offen} {gesamt} {meldung} onWahl={waehlen} onBeenden={() => setzen(game.beenden(spiel!))} />
+      <!-- Bei „Immer Zufall“ wird automatisch gelost; der Screen erscheint nur, wenn nichts mehr übrig ist -->
+      {#if spiel.modus !== 'zufall' || !offenGewaehlt}
+        {@const w = game.waehler(spiel)}
+        <Kategorie
+          {offen}
+          {gesamt}
+          {meldung}
+          kategorien={spiel.kategorien}
+          waehler={w !== spiel.aktiverSpieler ? spiel.spieler[w] : null}
+          fuer={spiel.spieler[spiel.aktiverSpieler]}
+          onWahl={waehlen}
+          onBeenden={() => setzen(game.beenden(spiel!))}
+        />
+      {/if}
     {:else if spiel.phase === 'zufall' && spiel.zug}
-      <Zufall ziel={spiel.zug.kategorie} onFertig={() => setzen(game.zufallFertig(spiel!))} />
+      <Zufall ziel={spiel.zug.kategorie} kategorien={spiel.kategorien} onFertig={() => setzen(game.zufallFertig(spiel!))} />
     {:else if spiel.phase === 'frage' && spiel.zug && aktuelleFrage}
       {#key spiel.zug.frageId}
         <Frage

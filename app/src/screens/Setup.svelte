@@ -1,18 +1,28 @@
 <script lang="ts">
+  import { KATEGORIEN } from '../lib/categories';
   import { FARB_NAMEN, MAX_SPIELER, RUNDEN_OPTIONEN, RUNDEN_STANDARD, SPIELER_FARBEN } from '../lib/config';
+  import { ALLE_KATEGORIEN, einstellungenPruefen } from '../lib/game';
   import type { LetzteSpieler } from '../lib/storage';
+  import type { Einstellungen, KategorieId, KategorieModus } from '../lib/types';
 
   let {
     letzte,
-    anzahlFragen,
+    gesamt,
     onStart,
     onInfo,
   }: {
     letzte: LetzteSpieler | null;
-    anzahlFragen: number;
-    onStart: (spieler: { name: string; farbe: string }[], runden: number) => void;
+    /** Fragen pro Kategorie im Pool */
+    gesamt: Record<KategorieId, number>;
+    onStart: (spieler: { name: string; farbe: string }[], runden: number, einstellungen: Einstellungen) => void;
     onInfo: () => void;
   } = $props();
+
+  const MODI: { id: KategorieModus; titel: string; text: string }[] = [
+    { id: 'selbst', titel: 'Selbst wählen', text: 'Jeder wählt die Kategorie für seine eigene Frage.' },
+    { id: 'vorgaenger', titel: 'Vorheriger Spieler wählt', text: 'Wer gerade dran war, wählt die Kategorie für den Nächsten.' },
+    { id: 'zufall', titel: 'Immer Zufall', text: 'Die Kategorie wird jedes Mal ausgelost.' },
+  ];
 
   // svelte-ignore state_referenced_locally
   const start = letzte;
@@ -23,6 +33,21 @@
   );
   // svelte-ignore state_referenced_locally
   let runden = $state(start?.runden ?? RUNDEN_STANDARD);
+  // svelte-ignore state_referenced_locally
+  const startEinst = einstellungenPruefen(start ?? undefined, MAX_SPIELER);
+  let modus = $state<KategorieModus>(startEinst.modus);
+  let kategorien = $state<KategorieId[]>(startEinst.kategorien);
+
+  // „Vorheriger Spieler“ braucht mindestens 2 Spieler
+  const modusEffektiv = $derived<KategorieModus>(modus === 'vorgaenger' && spieler.length < 2 ? 'selbst' : modus);
+  const alle = $derived(kategorien.length === ALLE_KATEGORIEN.length);
+  const fragenGewaehlt = $derived(kategorien.reduce((n, k) => n + (gesamt[k] ?? 0), 0));
+
+  function umschalten(id: KategorieId) {
+    kategorien = kategorien.includes(id)
+      ? kategorien.filter((k) => k !== id)
+      : ALLE_KATEGORIEN.filter((k) => k === id || kategorien.includes(k));
+  }
 
   const namen = $derived(spieler.map((p, i) => p.name.trim() || `Spieler ${i + 1}`));
   const doppelt = $derived(new Set(namen.map((n) => n.toLowerCase())).size !== namen.length);
@@ -38,10 +63,11 @@
 
   function starten(e: SubmitEvent) {
     e.preventDefault();
-    if (doppelt) return;
+    if (doppelt || fragenGewaehlt === 0) return;
     onStart(
       spieler.map((p, i) => ({ name: namen[i], farbe: p.farbe })),
       runden,
+      { modus: modusEffektiv, kategorien: [...kategorien] },
     );
   }
 </script>
@@ -107,8 +133,67 @@
     </div>
   </section>
 
+  <section class="karte" aria-labelledby="modus-titel">
+    <h2 id="modus-titel">Kategorie-Wahl</h2>
+    <div class="modi" role="radiogroup" aria-labelledby="modus-titel">
+      {#each MODI as m (m.id)}
+        {@const gesperrt = m.id === 'vorgaenger' && spieler.length < 2}
+        <button
+          type="button"
+          role="radio"
+          class="modus"
+          aria-checked={modusEffektiv === m.id}
+          class:aktiv={modusEffektiv === m.id}
+          disabled={gesperrt}
+          onclick={() => (modus = m.id)}
+        >
+          <span class="modus-titel">{m.titel}</span>
+          <span class="modus-text">{gesperrt ? 'Ab 2 Spielern möglich.' : m.text}</span>
+        </button>
+      {/each}
+    </div>
+  </section>
+
+  <section class="karte" aria-labelledby="kategorien-titel">
+    <div class="kopfzeile">
+      <h2 id="kategorien-titel">Kategorien</h2>
+      <button
+        type="button"
+        class="textlink alle"
+        onclick={() => (kategorien = alle ? [] : [...ALLE_KATEGORIEN])}
+      >
+        {alle ? 'Keine' : 'Alle'}
+      </button>
+    </div>
+    <p class="muted klein-text">Mit allen spielen oder nur mit einer Auswahl.</p>
+    <div class="kategorien" role="group" aria-labelledby="kategorien-titel">
+      {#each KATEGORIEN as k (k.id)}
+        {@const an = kategorien.includes(k.id)}
+        <button
+          type="button"
+          class="kat"
+          class:an
+          style:--kf={k.farbe}
+          style:--kt={k.text}
+          aria-pressed={an}
+          onclick={() => umschalten(k.id)}
+        >
+          <span class="kat-icon" aria-hidden="true">{k.icon}</span>
+          <span class="haken" aria-hidden="true">{an ? '✓' : ''}</span>
+          <span class="kat-name">{k.name}</span>
+          <span class="kat-anzahl">{gesamt[k.id] ? `${gesamt[k.id]} Fragen` : 'bald verfügbar'}</span>
+        </button>
+      {/each}
+    </div>
+    {#if kategorien.length === 0}
+      <p class="fehler" role="alert">Bitte mindestens eine Kategorie wählen.</p>
+    {:else if fragenGewaehlt === 0}
+      <p class="fehler" role="alert">Für die gewählten Kategorien gibt es noch keine Fragen.</p>
+    {/if}
+  </section>
+
   <div class="unten">
-    <button class="btn" type="submit" disabled={doppelt || anzahlFragen === 0}>Spiel starten</button>
+    <button class="btn" type="submit" disabled={doppelt || fragenGewaehlt === 0}>Spiel starten</button>
     <button type="button" class="textlink" onclick={onInfo}>Info, Quellen & Lizenzen</button>
   </div>
 </form>
@@ -198,5 +283,95 @@
   .fehler {
     color: var(--bad);
     margin: 0;
+  }
+  .modi {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .modus {
+    min-height: 52px;
+    border-radius: 12px;
+    border: 2px solid var(--line);
+    background: var(--bg);
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    text-align: left;
+  }
+  .modus.aktiv {
+    border-color: var(--accent);
+    box-shadow: inset 0 0 0 1px var(--accent);
+  }
+  .modus.aktiv .modus-titel::before {
+    content: '✓ ';
+    color: var(--accent);
+  }
+  .modus:disabled {
+    opacity: 0.5;
+  }
+  .modus-titel {
+    font-weight: 700;
+  }
+  .modus-text {
+    font-size: 0.9rem;
+    color: var(--text-2);
+  }
+  .kopfzeile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .alle {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  .kategorien {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .kat {
+    min-height: 88px;
+    border-radius: 12px;
+    border: 2px solid var(--line);
+    background: var(--bg);
+    color: var(--text);
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    text-align: left;
+    line-height: 1.2;
+    opacity: 0.6;
+    position: relative;
+  }
+  .haken {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-weight: 800;
+  }
+  .kat.an {
+    background: var(--kf);
+    color: var(--kt);
+    border-color: var(--kf);
+    opacity: 1;
+  }
+  .kat-icon {
+    font-size: 1.3rem;
+  }
+  .kat-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+  .kat-anzahl {
+    font-size: 0.8rem;
+    margin-top: auto;
   }
 </style>

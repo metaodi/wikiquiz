@@ -4,20 +4,56 @@
  */
 import { ZEITLIMIT_S, punkteFuerZeit } from './config';
 import { mischen, verfuegbareKategorien, waehleFrage, type Rng } from './picker';
-import type { Frage, KategorieId, Phase, Spieler, Spielstand } from './types';
+import { KATEGORIEN } from './categories';
+import type { Einstellungen, Frage, KategorieId, Phase, Spieler, Spielstand } from './types';
 
 export type Wahl = KategorieId | 'zufall';
 
-export function startPhase(s: Pick<Spielstand, 'spieler'>): Phase {
+export const ALLE_KATEGORIEN: KategorieId[] = KATEGORIEN.map((k) => k.id);
+
+export const STANDARD_EINSTELLUNGEN: Einstellungen = { modus: 'selbst', kategorien: ALLE_KATEGORIEN };
+
+/** Ungültige oder fehlende Werte (z. B. aus älteren Spielständen) durch Standardwerte ersetzen. */
+export function einstellungenPruefen(e: Partial<Einstellungen> | undefined, anzahlSpieler: number): Einstellungen {
+  let modus = e?.modus ?? STANDARD_EINSTELLUNGEN.modus;
+  if (!['selbst', 'zufall', 'vorgaenger'].includes(modus)) modus = 'selbst';
+  if (modus === 'vorgaenger' && anzahlSpieler < 2) modus = 'selbst';
+  // Reihenfolge wie in KATEGORIEN, unbekannte IDs verwerfen
+  const gewaehlt = ALLE_KATEGORIEN.filter((id) => e?.kategorien?.includes(id));
+  return { modus, kategorien: gewaehlt.length > 0 ? gewaehlt : [...ALLE_KATEGORIEN] };
+}
+
+/** Wählt der vorherige Spieler die Kategorie für den aktiven Spieler? */
+export function vorgaengerWaehlt(s: Pick<Spielstand, 'spieler' | 'modus'>): boolean {
+  return s.modus === 'vorgaenger' && s.spieler.length > 1;
+}
+
+/** Index des Spielers, der die Kategorie für den aktuellen Zug bestimmt */
+export function waehler(s: Pick<Spielstand, 'spieler' | 'modus' | 'aktiverSpieler'>): number {
+  const n = s.spieler.length;
+  return vorgaengerWaehlt(s) ? (s.aktiverSpieler - 1 + n) % n : s.aktiverSpieler;
+}
+
+/**
+ * Erste Phase eines Zugs. Wählt der Vorgänger, kommt zuerst die Kategoriewahl (das Gerät ist
+ * noch bei ihm), danach die Übergabe. Sonst zuerst die Übergabe (ausser bei einem Spieler).
+ */
+export function startPhase(s: Pick<Spielstand, 'spieler' | 'modus'>): Phase {
+  if (vorgaengerWaehlt(s)) return 'kategorie';
   return s.spieler.length > 1 ? 'uebergabe' : 'kategorie';
 }
 
-export function neuesSpiel(spieler: Omit<Spieler, 'punkte'>[], runden: number): Spielstand {
+export function neuesSpiel(
+  spieler: Omit<Spieler, 'punkte'>[],
+  runden: number,
+  einstellungen?: Partial<Einstellungen>,
+): Spielstand {
   const s: Spielstand = {
     version: 1,
     phase: 'setup',
     spieler: spieler.map((p) => ({ name: p.name.trim(), farbe: p.farbe, punkte: 0 })),
     runden,
+    ...einstellungenPruefen(einstellungen, spieler.length),
     runde: 1,
     aktiverSpieler: 0,
     gestellt: [],
@@ -28,11 +64,14 @@ export function neuesSpiel(spieler: Omit<Spieler, 'punkte'>[], runden: number): 
 
 /** Gleiche Spieler, Punkte zurückgesetzt */
 export function nochmals(s: Spielstand): Spielstand {
-  return neuesSpiel(s.spieler, s.runden);
+  return neuesSpiel(s.spieler, s.runden, { modus: s.modus, kategorien: s.kategorien });
 }
 
+/** Übergabe bestätigt: Kategorie wählen – oder, falls der Vorgänger schon gewählt hat, direkt zur Frage. */
 export function bereit(s: Spielstand): Spielstand {
-  return s.phase === 'uebergabe' ? { ...s, phase: 'kategorie' } : s;
+  if (s.phase !== 'uebergabe') return s;
+  if (s.zug) return { ...s, phase: s.zug.zufall ? 'zufall' : 'frage' };
+  return { ...s, phase: 'kategorie' };
 }
 
 export type WahlErgebnis =
@@ -49,10 +88,11 @@ export function kategorieWaehlen(
   if (s.phase !== 'kategorie') return { ok: false, grund: 'erschoepft' };
   let kategorie: KategorieId;
   if (wahl === 'zufall') {
-    const offen = verfuegbareKategorien(pool, s.gestellt);
+    const offen = verfuegbareKategorien(pool, s.gestellt, s.kategorien);
     if (offen.length === 0) return { ok: false, grund: 'alle_erschoepft' };
     kategorie = offen[Math.floor(rng() * offen.length)];
   } else {
+    if (s.modus === 'zufall' || !s.kategorien.includes(wahl)) return { ok: false, grund: 'erschoepft' };
     kategorie = wahl;
   }
   const frage = waehleFrage(pool, kategorie, s.gestellt, history, rng);
@@ -62,7 +102,8 @@ export function kategorieWaehlen(
     frage,
     stand: {
       ...s,
-      phase: wahl === 'zufall' ? 'zufall' : 'frage',
+      // Hat der Vorgänger gewählt, geht das Gerät jetzt erst an den aktiven Spieler
+      phase: vorgaengerWaehlt(s) ? 'uebergabe' : wahl === 'zufall' ? 'zufall' : 'frage',
       gestellt: [...s.gestellt, frage.id],
       zug: {
         spieler: s.aktiverSpieler,
@@ -122,7 +163,7 @@ export function weiter(s: Spielstand): Spielstand {
   if (s.phase !== 'feedback') return s;
   const naechster = s.aktiverSpieler + 1;
   if (naechster < s.spieler.length) {
-    return { ...s, aktiverSpieler: naechster, zug: null, phase: 'uebergabe' };
+    return { ...s, aktiverSpieler: naechster, zug: null, phase: startPhase(s) };
   }
   // Runde abgeschlossen
   if (s.runde >= s.runden) return { ...s, zug: null, phase: 'rangliste' };
@@ -161,9 +202,10 @@ export function rangliste(spieler: Spieler[]): Platz[] {
  * Konsistenz nach dem Laden aus localStorage: Frage noch im Pool? Phase gültig?
  * Ist die Frage verschwunden (neuer Pool), wird der Zug verworfen und neu gewählt.
  */
-export function wiederherstellen(s: Spielstand, pool: Frage[], jetzt: number): Spielstand {
+export function wiederherstellen(gespeichert: Spielstand, pool: Frage[], jetzt: number): Spielstand {
+  const s: Spielstand = { ...gespeichert, ...einstellungenPruefen(gespeichert, gespeichert.spieler.length) };
   if (s.phase === 'setup') return s;
-  if (s.zug && ['zufall', 'frage', 'feedback'].includes(s.phase)) {
+  if (s.zug && ['uebergabe', 'zufall', 'frage', 'feedback'].includes(s.phase)) {
     const frage = pool.find((f) => f.id === s.zug!.frageId);
     if (!frage) return { ...s, zug: null, phase: 'kategorie' };
     if (s.phase === 'zufall') return { ...s, phase: 'frage' };
