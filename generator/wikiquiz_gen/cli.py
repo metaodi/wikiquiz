@@ -29,6 +29,7 @@ def _schwellen(kategorie: str, args: argparse.Namespace):
         for k, v in {
             "min_sitelinks": args.min_sitelinks,
             "min_pageviews": args.min_pageviews,
+            "min_pageviews_antwort": args.min_pageviews_antwort,
             "min_zeichen": args.min_zeichen,
         }.items()
         if v is not None
@@ -38,7 +39,7 @@ def _schwellen(kategorie: str, args: argparse.Namespace):
 
 def cmd_generate(args: argparse.Namespace) -> int:
     http = Http(nur_cache=args.nur_cache)
-    bekanntheit = Bekanntheit(http)
+    bekanntheit = Bekanntheit(http, exakt=args.pageviews_exakt)
     protokoll = output.Protokoll(aktiv=not args.dry_run)
     kategorien = args.kategorie or list(pipeline.WIKIDATA_TEMPLATES)
     neue: list[dict] = []
@@ -109,7 +110,10 @@ def main(argv: list[str] | None = None) -> int:
     g.add_argument("--ziel", type=int, default=200, help="max. Fragen pro Kategorie und Quelle")
     g.add_argument("--min-sitelinks", type=int)
     g.add_argument("--min-pageviews", type=float)
+    g.add_argument("--min-pageviews-antwort", type=float)
     g.add_argument("--min-zeichen", type=int)
+    g.add_argument("--pageviews-exakt", action="store_true",
+                   help="12-Monats-Werte für alle Kandidaten (sonst nur im Graubereich)")
     g.add_argument("--max-kandidaten", type=int, default=300, help="pro Template aus SPARQL")
     g.add_argument("--modus", choices=["ersetzen", "ergaenzen"], default="ersetzen")
     g.add_argument("--seed", type=int, default=42)

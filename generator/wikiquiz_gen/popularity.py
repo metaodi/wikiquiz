@@ -22,6 +22,9 @@ API_URL = "https://de.wikipedia.org/w/api.php"
 # Klartext ≈ 60 % des Wikitexts (Markup, Vorlagen, Einzelnachweise). Volltexte über TextExtracts
 # werden stark gedrosselt; für den Stub-Filter genügt die Länge aus prop=info (50 Titel/Request).
 KLARTEXT_ANTEIL = 0.6
+# Vorfilter mit 60-Tage-Werten (50 Titel pro Request). Nur Werte im Graubereich
+# [unten × Schwelle, oben × Schwelle] werden über 12 Monate (REST-API, 1 Titel/Request) verfeinert.
+GRAUBEREICH = (0.5, 2.0)
 
 
 @dataclass
@@ -50,8 +53,9 @@ def ist_listentitel(titel: str) -> bool:
 
 
 class Bekanntheit:
-    def __init__(self, http: Http, heute: date | None = None) -> None:
+    def __init__(self, http: Http, heute: date | None = None, exakt: bool = False) -> None:
         self.http = http
+        self.exakt = exakt  # immer 12-Monats-Werte abfragen
         self.heute = heute or date.today()
         self._start, self._ende = zeitraum_12_monate(self.heute)
 
@@ -69,6 +73,32 @@ class Bekanntheit:
         summe = sum(item["views"] for item in res.get("items", []))
         tage = (self._ende - self._start).days + 1
         return summe / tage
+
+    def pageviews_60_tage(self, titel_liste: list[str]) -> dict[str, float]:
+        """Durchschnitt pro Tag über die letzten 60 Tage, 50 Titel pro Request (PageViewInfo)."""
+        werte: dict[str, float] = {}
+        for i in range(0, len(titel_liste), 50):
+            block = titel_liste[i : i + 50]
+            fortsetzung: dict = {}
+            while True:
+                res = self.http.json(
+                    API_URL,
+                    params={"action": "query", "format": "json", "formatversion": "2",
+                            "prop": "pageviews", "pvipdays": "60", "titles": "|".join(block),
+                            **fortsetzung},
+                    ttl=14 * TAG,
+                )
+                q = res.get("query", {})
+                norm = {n["to"]: n["from"] for n in q.get("normalized", [])}
+                for p in q.get("pages", []):
+                    if "pageviews" not in p:
+                        continue  # kommt in einer späteren Fortsetzung
+                    tage = [v for v in p["pageviews"].values() if v is not None]
+                    werte[norm.get(p["title"], p["title"])] = sum(tage) / len(tage) if tage else 0.0
+                if "continue" not in res:
+                    break
+                fortsetzung = res["continue"]
+        return werte
 
     def seiteninfo(self, titel_liste: list[str]) -> dict[str, dict]:
         """Begriffsklärung/fehlend für bis zu 50 Titel pro Request."""
@@ -133,9 +163,16 @@ class Bekanntheit:
             else:
                 rest.append(k)
 
-        # Pageviews seriell: die REST-API drosselt parallele Anfragen
+        # Erst 60-Tage-Werte im Block, dann 12 Monate (seriell, REST drosselt) nur im Graubereich
+        schnell = self.pageviews_60_tage([k.titel for k in rest])
+        unten, oben = (g * schwellen.min_pageviews for g in GRAUBEREICH)
         for k in rest:
-            k.pageviews = self.pageviews(k.titel)
+            pv60 = schnell.get(k.titel, 0.0)
+            k.extra["pageviews_60"] = pv60
+            if self.exakt or unten <= pv60 <= oben:
+                k.pageviews = self.pageviews(k.titel)
+            else:
+                k.pageviews = pv60
         neu = []
         for k in rest:
             if k.pageviews < schwellen.min_pageviews:

@@ -1,0 +1,3606 @@
+{
+ "version": 1,
+ "generiert_am": "2026-11-15T15:34:01Z",
+ "fragen": [
+  {
+   "id": "wd-002a9cdcc4",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg Loreley?",
+   "antworten": [
+    "Dänemark",
+    "Österreich",
+    "Deutschland",
+    "Tschechien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Loreley",
+   "lizenz": "CC0",
+   "quelle_titel": "Loreley",
+   "quelle_id": "Q4168"
+  },
+  {
+   "id": "wd-024b648397",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Belarus?",
+   "antworten": [
+    "Minsk",
+    "Ankara",
+    "Nikosia",
+    "Kischinau"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Belarus",
+   "lizenz": "CC0",
+   "quelle_titel": "Belarus",
+   "quelle_id": "Q184"
+  },
+  {
+   "id": "wd-03e450271a",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt der Slowakei?",
+   "antworten": [
+    "Budapest",
+    "Bratislava",
+    "Bern",
+    "Kopenhagen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Slowakei",
+   "lizenz": "CC0",
+   "quelle_titel": "Slowakei",
+   "quelle_id": "Q214"
+  },
+  {
+   "id": "wd-05532529eb",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Brunei?",
+   "antworten": [
+    "Afrika",
+    "Europa",
+    "Ozeanien",
+    "Asien"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Brunei",
+   "lizenz": "CC0",
+   "quelle_titel": "Brunei",
+   "quelle_id": "Q921"
+  },
+  {
+   "id": "wd-05cc26892c",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg Vesuv?",
+   "antworten": [
+    "Slowenien",
+    "Frankreich",
+    "Italien",
+    "San Marino"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Vesuv",
+   "lizenz": "CC0",
+   "quelle_titel": "Vesuv",
+   "quelle_id": "Q524"
+  },
+  {
+   "id": "wd-093712ba37",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Kanada?",
+   "antworten": [
+    "Washington, D.C.",
+    "Santo Domingo",
+    "Ottawa",
+    "Nassau"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanada",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanada",
+   "quelle_id": "Q16"
+  },
+  {
+   "id": "wd-0a3012d94a",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Rio de Janeiro?",
+   "antworten": [
+    "Venezuela",
+    "Brasilien",
+    "Kolumbien",
+    "Uruguay"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rio_de_Janeiro",
+   "lizenz": "CC0",
+   "quelle_titel": "Rio de Janeiro",
+   "quelle_id": "Q8678"
+  },
+  {
+   "id": "wd-0b6c83af2c",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt St. Lucia?",
+   "antworten": [
+    "Südamerika",
+    "Asien",
+    "Europa",
+    "Nordamerika"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/St._Lucia",
+   "lizenz": "CC0",
+   "quelle_titel": "St. Lucia",
+   "quelle_id": "Q760"
+  },
+  {
+   "id": "wd-0be64bc4da",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Wörthersee?",
+   "antworten": [
+    "Liechtenstein",
+    "Österreich",
+    "Slowakei",
+    "Italien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/W%C3%B6rthersee",
+   "lizenz": "CC0",
+   "quelle_titel": "Wörthersee",
+   "quelle_id": "Q546146"
+  },
+  {
+   "id": "wd-0e71761ff9",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg Dufourspitze?",
+   "antworten": [
+    "Schweiz",
+    "Italien",
+    "Österreich",
+    "Liechtenstein"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dufourspitze",
+   "lizenz": "CC0",
+   "quelle_titel": "Dufourspitze",
+   "quelle_id": "Q3403"
+  },
+  {
+   "id": "wd-0f7c658e56",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg Denali?",
+   "antworten": [
+    "Nicaragua",
+    "Mexiko",
+    "Vereinigte Staaten",
+    "Kanada"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Denali",
+   "lizenz": "CC0",
+   "quelle_titel": "Denali",
+   "quelle_id": "Q130018"
+  },
+  {
+   "id": "wd-15b6661928",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Heidelberg?",
+   "antworten": [
+    "Luxemburg",
+    "Niederlande",
+    "Belgien",
+    "Deutschland"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Heidelberg",
+   "lizenz": "CC0",
+   "quelle_titel": "Heidelberg",
+   "quelle_id": "Q2966"
+  },
+  {
+   "id": "wd-17dfea383d",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegen die Marshallinseln?",
+   "antworten": [
+    "Ozeanien",
+    "Südamerika",
+    "Asien",
+    "Nordamerika"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Marshallinseln",
+   "lizenz": "CC0",
+   "quelle_titel": "Marshallinseln",
+   "quelle_id": "Q709"
+  },
+  {
+   "id": "wd-18a7983d7e",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Düsseldorf?",
+   "antworten": [
+    "Deutschland",
+    "Österreich",
+    "Niederlande",
+    "Polen"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/D%C3%BCsseldorf",
+   "lizenz": "CC0",
+   "quelle_titel": "Düsseldorf",
+   "quelle_id": "Q1718"
+  },
+  {
+   "id": "wd-1ad48a64a0",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Detroit?",
+   "antworten": [
+    "Costa Rica",
+    "Kanada",
+    "Vereinigte Staaten",
+    "Mexiko"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Detroit",
+   "lizenz": "CC0",
+   "quelle_titel": "Detroit",
+   "quelle_id": "Q12439"
+  },
+  {
+   "id": "wd-1c9f70604e",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Burundi?",
+   "antworten": [
+    "Afrika",
+    "Asien",
+    "Europa",
+    "Südamerika"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Burundi",
+   "lizenz": "CC0",
+   "quelle_titel": "Burundi",
+   "quelle_id": "Q967"
+  },
+  {
+   "id": "wd-1d305d1874",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Iseosee?",
+   "antworten": [
+    "Frankreich",
+    "Italien",
+    "Vatikanstadt",
+    "Slowenien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Iseosee",
+   "lizenz": "CC0",
+   "quelle_titel": "Iseosee",
+   "quelle_id": "Q15648"
+  },
+  {
+   "id": "wd-1da3a61937",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Atlanta?",
+   "antworten": [
+    "Mexiko",
+    "Costa Rica",
+    "Kanada",
+    "Vereinigte Staaten"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Atlanta",
+   "lizenz": "CC0",
+   "quelle_titel": "Atlanta",
+   "quelle_id": "Q23556"
+  },
+  {
+   "id": "wd-1e7c94f016",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Neapel?",
+   "antworten": [
+    "Italien",
+    "Slowenien",
+    "Österreich",
+    "Vatikanstadt"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Neapel",
+   "lizenz": "CC0",
+   "quelle_titel": "Neapel",
+   "quelle_id": "Q2634"
+  },
+  {
+   "id": "wd-1e9523f741",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Vanuatu?",
+   "antworten": [
+    "Nordamerika",
+    "Asien",
+    "Ozeanien",
+    "Südamerika"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Vanuatu",
+   "lizenz": "CC0",
+   "quelle_titel": "Vanuatu",
+   "quelle_id": "Q686"
+  },
+  {
+   "id": "wd-20abadf407",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Malmö?",
+   "antworten": [
+    "Norwegen",
+    "Schweden",
+    "Finnland",
+    "Dänemark"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Malm%C3%B6",
+   "lizenz": "CC0",
+   "quelle_titel": "Malmö",
+   "quelle_id": "Q2211"
+  },
+  {
+   "id": "wd-21c4e4e576",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Bremen?",
+   "antworten": [
+    "Frankreich",
+    "Schweiz",
+    "Deutschland",
+    "Niederlande"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bremen",
+   "lizenz": "CC0",
+   "quelle_titel": "Bremen",
+   "quelle_id": "Q24879"
+  },
+  {
+   "id": "wd-23215156a8",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt der Vereinigten Staaten?",
+   "antworten": [
+    "Nassau",
+    "Havanna",
+    "Santo Domingo",
+    "Washington, D.C."
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Vereinigte_Staaten",
+   "lizenz": "CC0",
+   "quelle_titel": "Vereinigte Staaten",
+   "quelle_id": "Q30"
+  },
+  {
+   "id": "wd-244252fdff",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Minneapolis?",
+   "antworten": [
+    "Panama",
+    "Kanada",
+    "Mexiko",
+    "Vereinigte Staaten"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Minneapolis",
+   "lizenz": "CC0",
+   "quelle_titel": "Minneapolis",
+   "quelle_id": "Q36091"
+  },
+  {
+   "id": "wd-248744b8fe",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Leipzig?",
+   "antworten": [
+    "Niederlande",
+    "Frankreich",
+    "Deutschland",
+    "Polen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Leipzig",
+   "lizenz": "CC0",
+   "quelle_titel": "Leipzig",
+   "quelle_id": "Q2079"
+  },
+  {
+   "id": "wd-260599f316",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Dänemark?",
+   "antworten": [
+    "Madrid",
+    "Ljubljana",
+    "Kopenhagen",
+    "Budapest"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/D%C3%A4nemark",
+   "lizenz": "CC0",
+   "quelle_titel": "Dänemark",
+   "quelle_id": "Q35"
+  },
+  {
+   "id": "wd-261a493c59",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Glasgow?",
+   "antworten": [
+    "Ukraine",
+    "Irland",
+    "Montenegro",
+    "Vereinigtes Königreich"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Glasgow",
+   "lizenz": "CC0",
+   "quelle_titel": "Glasgow",
+   "quelle_id": "Q4093"
+  },
+  {
+   "id": "wd-27411bf3c4",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der See Müritz?",
+   "antworten": [
+    "Schweiz",
+    "Deutschland",
+    "Österreich",
+    "Dänemark"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/M%C3%BCritz",
+   "lizenz": "CC0",
+   "quelle_titel": "Müritz",
+   "quelle_id": "Q3369"
+  },
+  {
+   "id": "wd-289f7c8985",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Brünn?",
+   "antworten": [
+    "Polen",
+    "Slowakei",
+    "Tschechien",
+    "Deutschland"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Br%C3%BCnn",
+   "lizenz": "CC0",
+   "quelle_titel": "Brünn",
+   "quelle_id": "Q14960"
+  },
+  {
+   "id": "wd-2b7ac92f9e",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Irland?",
+   "antworten": [
+    "Tallinn",
+    "Zagreb",
+    "Dublin",
+    "Riga"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Irland",
+   "lizenz": "CC0",
+   "quelle_titel": "Irland",
+   "quelle_id": "Q27"
+  },
+  {
+   "id": "wd-2c3f3129da",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Chiemsee?",
+   "antworten": [
+    "Luxemburg",
+    "Deutschland",
+    "Frankreich",
+    "Polen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Chiemsee",
+   "lizenz": "CC0",
+   "quelle_titel": "Chiemsee",
+   "quelle_id": "Q4138"
+  },
+  {
+   "id": "wd-2d55992b47",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Nordkorea?",
+   "antworten": [
+    "Ankara",
+    "Pjöngjang",
+    "Taschkent",
+    "Kathmandu"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Nordkorea",
+   "lizenz": "CC0",
+   "quelle_titel": "Nordkorea",
+   "quelle_id": "Q423"
+  },
+  {
+   "id": "wd-2dc9473f80",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Vietnam?",
+   "antworten": [
+    "Taipeh",
+    "Beirut",
+    "Hanoi",
+    "Jerewan"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Vietnam",
+   "lizenz": "CC0",
+   "quelle_titel": "Vietnam",
+   "quelle_id": "Q881"
+  },
+  {
+   "id": "wd-2f94dae029",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt des Iran?",
+   "antworten": [
+    "Teheran",
+    "Peking",
+    "Seoul",
+    "Baku"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Iran",
+   "lizenz": "CC0",
+   "quelle_titel": "Iran",
+   "quelle_id": "Q794"
+  },
+  {
+   "id": "wd-30a2564055",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Chicago?",
+   "antworten": [
+    "Kanada",
+    "Mexiko",
+    "Belize",
+    "Vereinigte Staaten"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Chicago",
+   "lizenz": "CC0",
+   "quelle_titel": "Chicago",
+   "quelle_id": "Q1297"
+  },
+  {
+   "id": "wd-33a33c64d2",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Graz?",
+   "antworten": [
+    "Slowenien",
+    "Liechtenstein",
+    "Italien",
+    "Österreich"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Graz",
+   "lizenz": "CC0",
+   "quelle_titel": "Graz",
+   "quelle_id": "Q13298"
+  },
+  {
+   "id": "wd-342645f7f0",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Vierwaldstättersee?",
+   "antworten": [
+    "Frankreich",
+    "Italien",
+    "Österreich",
+    "Schweiz"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Vierwaldst%C3%A4ttersee",
+   "lizenz": "CC0",
+   "quelle_titel": "Vierwaldstättersee",
+   "quelle_id": "Q14381"
+  },
+  {
+   "id": "wd-360cdb0904",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Aserbaidschan?",
+   "antworten": [
+    "Bangkok",
+    "Ulaanbaatar",
+    "Baku",
+    "Teheran"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Aserbaidschan",
+   "lizenz": "CC0",
+   "quelle_titel": "Aserbaidschan",
+   "quelle_id": "Q227"
+  },
+  {
+   "id": "wd-363aa77aa4",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt der Philippinen?",
+   "antworten": [
+    "Manila",
+    "Abu Dhabi",
+    "Pjöngjang",
+    "Kathmandu"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Philippinen",
+   "lizenz": "CC0",
+   "quelle_titel": "Philippinen",
+   "quelle_id": "Q928"
+  },
+  {
+   "id": "wd-37660cffc7",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Südkorea?",
+   "antworten": [
+    "Peking",
+    "Seoul",
+    "Ulaanbaatar",
+    "Jerewan"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/S%C3%BCdkorea",
+   "lizenz": "CC0",
+   "quelle_titel": "Südkorea",
+   "quelle_id": "Q884"
+  },
+  {
+   "id": "wd-379a30aad9",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der See Loch Ness?",
+   "antworten": [
+    "Italien",
+    "Irland",
+    "Vereinigtes Königreich",
+    "Frankreich"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Loch_Ness",
+   "lizenz": "CC0",
+   "quelle_titel": "Loch Ness",
+   "quelle_id": "Q49650"
+  },
+  {
+   "id": "wd-396de50023",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Stuttgart?",
+   "antworten": [
+    "Luxemburg",
+    "Tschechien",
+    "Deutschland",
+    "Niederlande"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Stuttgart",
+   "lizenz": "CC0",
+   "quelle_titel": "Stuttgart",
+   "quelle_id": "Q1022"
+  },
+  {
+   "id": "wd-399555a5e1",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Liechtenstein?",
+   "antworten": [
+    "Tirana",
+    "Reykjavík",
+    "Vaduz",
+    "Podgorica"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Liechtenstein",
+   "lizenz": "CC0",
+   "quelle_titel": "Liechtenstein",
+   "quelle_id": "Q347"
+  },
+  {
+   "id": "wd-3a49dee5be",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Armenien?",
+   "antworten": [
+    "Beirut",
+    "Taipeh",
+    "Jerewan",
+    "Ulaanbaatar"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Armenien",
+   "lizenz": "CC0",
+   "quelle_titel": "Armenien",
+   "quelle_id": "Q399"
+  },
+  {
+   "id": "wd-3bc7d02d91",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Belgien?",
+   "antworten": [
+    "Brüssel",
+    "Tiflis",
+    "Zagreb",
+    "Helsinki"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Belgien",
+   "lizenz": "CC0",
+   "quelle_titel": "Belgien",
+   "quelle_id": "Q31"
+  },
+  {
+   "id": "wd-41b5c61fa8",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Äthiopien?",
+   "antworten": [
+    "Addis Abeba",
+    "Kinshasa",
+    "Kairo",
+    "Kampala"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/%C3%84thiopien",
+   "lizenz": "CC0",
+   "quelle_titel": "Äthiopien",
+   "quelle_id": "Q115"
+  },
+  {
+   "id": "wd-421b203e7f",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegen die Komoren?",
+   "antworten": [
+    "Afrika",
+    "Asien",
+    "Europa",
+    "Südamerika"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Komoren",
+   "lizenz": "CC0",
+   "quelle_titel": "Komoren",
+   "quelle_id": "Q970"
+  },
+  {
+   "id": "wd-422cb3fbfa",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt New York City?",
+   "antworten": [
+    "Mexiko",
+    "Kanada",
+    "Vereinigte Staaten",
+    "Haiti"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/New_York_City",
+   "lizenz": "CC0",
+   "quelle_titel": "New York City",
+   "quelle_id": "Q60"
+  },
+  {
+   "id": "wd-4538a2500e",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Trinidad und Tobago?",
+   "antworten": [
+    "Asien",
+    "Südamerika",
+    "Nordamerika",
+    "Europa"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Trinidad_und_Tobago",
+   "lizenz": "CC0",
+   "quelle_titel": "Trinidad und Tobago",
+   "quelle_id": "Q754"
+  },
+  {
+   "id": "wd-463bcedbb3",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Island?",
+   "antworten": [
+    "Reykjavík",
+    "Sofia",
+    "Valletta",
+    "Tirana"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Island",
+   "lizenz": "CC0",
+   "quelle_titel": "Island",
+   "quelle_id": "Q189"
+  },
+  {
+   "id": "wd-48be3fca0a",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg Berg Olymp?",
+   "antworten": [
+    "Griechenland",
+    "Nordmazedonien",
+    "Albanien",
+    "Türkei"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olymp",
+   "lizenz": "CC0",
+   "quelle_titel": "Olymp",
+   "quelle_id": "Q80344"
+  },
+  {
+   "id": "wd-496ca43678",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Málaga?",
+   "antworten": [
+    "Andorra",
+    "Portugal",
+    "Marokko",
+    "Spanien"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/M%C3%A1laga",
+   "lizenz": "CC0",
+   "quelle_titel": "Málaga",
+   "quelle_id": "Q8851"
+  },
+  {
+   "id": "wd-4a95aab23d",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Kap Verde?",
+   "antworten": [
+    "Accra",
+    "Luanda",
+    "Chartum",
+    "Praia"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kap_Verde",
+   "lizenz": "CC0",
+   "quelle_titel": "Kap Verde",
+   "quelle_id": "Q1011"
+  },
+  {
+   "id": "wd-4ba2b3e3b4",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Kaliningrad?",
+   "antworten": [
+    "Georgien",
+    "Russland",
+    "Litauen",
+    "Polen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kaliningrad",
+   "lizenz": "CC0",
+   "quelle_titel": "Kaliningrad",
+   "quelle_id": "Q1829"
+  },
+  {
+   "id": "wd-4bb3acff5a",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt der Demokratischen Republik Kongo?",
+   "antworten": [
+    "Kampala",
+    "Dakar",
+    "Kinshasa",
+    "Addis Abeba"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Demokratische_Republik_Kongo",
+   "lizenz": "CC0",
+   "quelle_titel": "Demokratische Republik Kongo",
+   "quelle_id": "Q974"
+  },
+  {
+   "id": "wd-4d2a471bab",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt San Francisco?",
+   "antworten": [
+    "Mexiko",
+    "Panama",
+    "Kanada",
+    "Vereinigte Staaten"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/San_Francisco",
+   "lizenz": "CC0",
+   "quelle_titel": "San Francisco",
+   "quelle_id": "Q62"
+  },
+  {
+   "id": "wd-4d6d81c679",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Las Vegas?",
+   "antworten": [
+    "Vereinigte Staaten",
+    "Mexiko",
+    "Kanada",
+    "Jamaika"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Las_Vegas",
+   "lizenz": "CC0",
+   "quelle_titel": "Las Vegas",
+   "quelle_id": "Q23768"
+  },
+  {
+   "id": "wd-4d9171a960",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Tonga?",
+   "antworten": [
+    "Asien",
+    "Nordamerika",
+    "Ozeanien",
+    "Südamerika"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tonga",
+   "lizenz": "CC0",
+   "quelle_titel": "Tonga",
+   "quelle_id": "Q678"
+  },
+  {
+   "id": "wd-4e3443cdd2",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt der Türkei?",
+   "antworten": [
+    "Podgorica",
+    "Kathmandu",
+    "Ankara",
+    "Bagdad"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/T%C3%BCrkei",
+   "lizenz": "CC0",
+   "quelle_titel": "Türkei",
+   "quelle_id": "Q43"
+  },
+  {
+   "id": "wd-4e8371185f",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt der Volksrepublik China?",
+   "antworten": [
+    "Moskau",
+    "Taipeh",
+    "Teheran",
+    "Peking"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Volksrepublik_China",
+   "lizenz": "CC0",
+   "quelle_titel": "Volksrepublik China",
+   "quelle_id": "Q148"
+  },
+  {
+   "id": "wd-4efaf5df29",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Florenz?",
+   "antworten": [
+    "Österreich",
+    "Italien",
+    "Schweiz",
+    "San Marino"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Florenz",
+   "lizenz": "CC0",
+   "quelle_titel": "Florenz",
+   "quelle_id": "Q2044"
+  },
+  {
+   "id": "wd-4fbbd13e7a",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Dortmund?",
+   "antworten": [
+    "Deutschland",
+    "Tschechien",
+    "Niederlande",
+    "Dänemark"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dortmund",
+   "lizenz": "CC0",
+   "quelle_titel": "Dortmund",
+   "quelle_id": "Q1295"
+  },
+  {
+   "id": "wd-52c4876225",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Montenegro?",
+   "antworten": [
+    "Nikosia",
+    "Podgorica",
+    "Astana",
+    "Ankara"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Montenegro",
+   "lizenz": "CC0",
+   "quelle_titel": "Montenegro",
+   "quelle_id": "Q236"
+  },
+  {
+   "id": "wd-52ce5fc702",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Tschechien?",
+   "antworten": [
+    "Vatikanstadt",
+    "Kopenhagen",
+    "Ljubljana",
+    "Prag"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tschechien",
+   "lizenz": "CC0",
+   "quelle_titel": "Tschechien",
+   "quelle_id": "Q213"
+  },
+  {
+   "id": "wd-53c1dfcd23",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Malta?",
+   "antworten": [
+    "Sofia",
+    "Astana",
+    "Valletta",
+    "Tirana"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Malta",
+   "lizenz": "CC0",
+   "quelle_titel": "Malta",
+   "quelle_id": "Q233"
+  },
+  {
+   "id": "wd-53ebf53328",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Mailand?",
+   "antworten": [
+    "Frankreich",
+    "Vatikanstadt",
+    "Schweiz",
+    "Italien"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mailand",
+   "lizenz": "CC0",
+   "quelle_titel": "Mailand",
+   "quelle_id": "Q490"
+  },
+  {
+   "id": "wd-56cf30efda",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Attersee?",
+   "antworten": [
+    "Österreich",
+    "Schweiz",
+    "Deutschland",
+    "Ungarn"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Attersee",
+   "lizenz": "CC0",
+   "quelle_titel": "Attersee",
+   "quelle_id": "Q698516"
+  },
+  {
+   "id": "wd-56e65b82bd",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Bordeaux?",
+   "antworten": [
+    "Schweiz",
+    "Monaco",
+    "Frankreich",
+    "Deutschland"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bordeaux",
+   "lizenz": "CC0",
+   "quelle_titel": "Bordeaux",
+   "quelle_id": "Q1479"
+  },
+  {
+   "id": "wd-56f71ab018",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg Chimborazo?",
+   "antworten": [
+    "Argentinien",
+    "Kolumbien",
+    "Peru",
+    "Ecuador"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Chimborazo",
+   "lizenz": "CC0",
+   "quelle_titel": "Chimborazo",
+   "quelle_id": "Q14081"
+  },
+  {
+   "id": "wd-575c1bf8e7",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg Ararat?",
+   "antworten": [
+    "Iran",
+    "Türkei",
+    "Armenien",
+    "Aserbaidschan"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ararat",
+   "lizenz": "CC0",
+   "quelle_titel": "Ararat",
+   "quelle_id": "Q72303"
+  },
+  {
+   "id": "wd-5876fc4bd8",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Edinburgh?",
+   "antworten": [
+    "Schweiz",
+    "Irland",
+    "Ukraine",
+    "Vereinigtes Königreich"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Edinburgh",
+   "lizenz": "CC0",
+   "quelle_titel": "Edinburgh",
+   "quelle_id": "Q23436"
+  },
+  {
+   "id": "wd-5905a11266",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Samoa?",
+   "antworten": [
+    "Ozeanien",
+    "Südamerika",
+    "Nordamerika",
+    "Asien"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Samoa",
+   "lizenz": "CC0",
+   "quelle_titel": "Samoa",
+   "quelle_id": "Q683"
+  },
+  {
+   "id": "wd-5957d208a3",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Saudi-Arabien?",
+   "antworten": [
+    "Riad",
+    "Astana",
+    "Ulaanbaatar",
+    "Beirut"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Saudi-Arabien",
+   "lizenz": "CC0",
+   "quelle_titel": "Saudi-Arabien",
+   "quelle_id": "Q851"
+  },
+  {
+   "id": "wd-5a314fbebd",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Bosnien und Herzegowina?",
+   "antworten": [
+    "Helsinki",
+    "Vilnius",
+    "Sarajevo",
+    "Zagreb"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bosnien_und_Herzegowina",
+   "lizenz": "CC0",
+   "quelle_titel": "Bosnien und Herzegowina",
+   "quelle_id": "Q225"
+  },
+  {
+   "id": "wd-5a7e4115c4",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt St. Kitts und Nevis?",
+   "antworten": [
+    "Europa",
+    "Südamerika",
+    "Asien",
+    "Nordamerika"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/St._Kitts_und_Nevis",
+   "lizenz": "CC0",
+   "quelle_titel": "St. Kitts und Nevis",
+   "quelle_id": "Q763"
+  },
+  {
+   "id": "wd-5ae72dff90",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg Teide?",
+   "antworten": [
+    "Spanien",
+    "Frankreich",
+    "Marokko",
+    "Portugal"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Teide",
+   "lizenz": "CC0",
+   "quelle_titel": "Teide",
+   "quelle_id": "Q38954"
+  },
+  {
+   "id": "wd-5d7d5e0c56",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Malaysia?",
+   "antworten": [
+    "Jerewan",
+    "Riad",
+    "Taipeh",
+    "Kuala Lumpur"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Malaysia",
+   "lizenz": "CC0",
+   "quelle_titel": "Malaysia",
+   "quelle_id": "Q833"
+  },
+  {
+   "id": "wd-5e749ec23c",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Montreal?",
+   "antworten": [
+    "Kanada",
+    "Dominikanische Republik",
+    "Nicaragua",
+    "Vereinigte Staaten"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Montreal",
+   "lizenz": "CC0",
+   "quelle_titel": "Montreal",
+   "quelle_id": "Q340"
+  },
+  {
+   "id": "wd-5f06815f73",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Venedig?",
+   "antworten": [
+    "Italien",
+    "Schweiz",
+    "Österreich",
+    "Frankreich"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Venedig",
+   "lizenz": "CC0",
+   "quelle_titel": "Venedig",
+   "quelle_id": "Q641"
+  },
+  {
+   "id": "wd-5f6bf17970",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Istanbul?",
+   "antworten": [
+    "Türkei",
+    "Iran",
+    "Georgien",
+    "Irak"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Istanbul",
+   "lizenz": "CC0",
+   "quelle_titel": "Istanbul",
+   "quelle_id": "Q406"
+  },
+  {
+   "id": "wd-626f233b50",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Ho-Chi-Minh-Stadt?",
+   "antworten": [
+    "Laos",
+    "Kambodscha",
+    "Vietnam",
+    "Volksrepublik China"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ho-Chi-Minh-Stadt",
+   "lizenz": "CC0",
+   "quelle_titel": "Ho-Chi-Minh-Stadt",
+   "quelle_id": "Q1854"
+  },
+  {
+   "id": "wd-62a3b421c0",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Sydney?",
+   "antworten": [
+    "Indonesien",
+    "Papua-Neuguinea",
+    "Osttimor",
+    "Australien"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sydney",
+   "lizenz": "CC0",
+   "quelle_titel": "Sydney",
+   "quelle_id": "Q3130"
+  },
+  {
+   "id": "wd-62d1d11532",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Barcelona?",
+   "antworten": [
+    "Spanien",
+    "Marokko",
+    "Andorra",
+    "Portugal"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Barcelona",
+   "lizenz": "CC0",
+   "quelle_titel": "Barcelona",
+   "quelle_id": "Q1492"
+  },
+  {
+   "id": "wd-63a48e14a2",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Nizza?",
+   "antworten": [
+    "Frankreich",
+    "Belgien",
+    "Italien",
+    "Brasilien"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Nizza",
+   "lizenz": "CC0",
+   "quelle_titel": "Nizza",
+   "quelle_id": "Q33959"
+  },
+  {
+   "id": "wd-6649b973c7",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Honduras?",
+   "antworten": [
+    "Nordamerika",
+    "Südamerika",
+    "Europa",
+    "Asien"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Honduras",
+   "lizenz": "CC0",
+   "quelle_titel": "Honduras",
+   "quelle_id": "Q783"
+  },
+  {
+   "id": "wd-6655a09804",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Turkmenistan?",
+   "antworten": [
+    "Maskat",
+    "Aşgabat",
+    "Bischkek",
+    "Kabul"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Turkmenistan",
+   "lizenz": "CC0",
+   "quelle_titel": "Turkmenistan",
+   "quelle_id": "Q874"
+  },
+  {
+   "id": "wd-684e7eebce",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Ungarn?",
+   "antworten": [
+    "Amsterdam",
+    "Budapest",
+    "Ljubljana",
+    "Madrid"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ungarn",
+   "lizenz": "CC0",
+   "quelle_titel": "Ungarn",
+   "quelle_id": "Q28"
+  },
+  {
+   "id": "wd-68e0cdff17",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Strassburg?",
+   "antworten": [
+    "Frankreich",
+    "Brasilien",
+    "Monaco",
+    "Italien"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Stra%C3%9Fburg",
+   "lizenz": "CC0",
+   "quelle_titel": "Straßburg",
+   "quelle_id": "Q6602"
+  },
+  {
+   "id": "wd-6975c8d194",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Ägypten?",
+   "antworten": [
+    "Dakar",
+    "Windhoek",
+    "Kairo",
+    "Kampala"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/%C3%84gypten",
+   "lizenz": "CC0",
+   "quelle_titel": "Ägypten",
+   "quelle_id": "Q79"
+  },
+  {
+   "id": "wd-6c592643f5",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Palermo?",
+   "antworten": [
+    "Italien",
+    "Slowenien",
+    "Frankreich",
+    "Vatikanstadt"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Palermo",
+   "lizenz": "CC0",
+   "quelle_titel": "Palermo",
+   "quelle_id": "Q2656"
+  },
+  {
+   "id": "wd-6d2c570f32",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Katar?",
+   "antworten": [
+    "Dhaka",
+    "Kabul",
+    "Pjöngjang",
+    "Doha"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Katar",
+   "lizenz": "CC0",
+   "quelle_titel": "Katar",
+   "quelle_id": "Q846"
+  },
+  {
+   "id": "wd-71c067bce3",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Bonn?",
+   "antworten": [
+    "Belgien",
+    "Deutschland",
+    "Luxemburg",
+    "Schweiz"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bonn",
+   "lizenz": "CC0",
+   "quelle_titel": "Bonn",
+   "quelle_id": "Q586"
+  },
+  {
+   "id": "wd-72cad877c0",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt der Ukraine?",
+   "antworten": [
+    "Dublin",
+    "Helsinki",
+    "Kiew",
+    "Vilnius"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ukraine",
+   "lizenz": "CC0",
+   "quelle_titel": "Ukraine",
+   "quelle_id": "Q212"
+  },
+  {
+   "id": "wd-74b7c8a1bf",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Genf?",
+   "antworten": [
+    "Deutschland",
+    "Frankreich",
+    "Schweiz",
+    "Österreich"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Genf",
+   "lizenz": "CC0",
+   "quelle_titel": "Genf",
+   "quelle_id": "Q71"
+  },
+  {
+   "id": "wd-756afd70d6",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Liverpool?",
+   "antworten": [
+    "Irland",
+    "Kosovo",
+    "Vereinigtes Königreich",
+    "Ukraine"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Liverpool",
+   "lizenz": "CC0",
+   "quelle_titel": "Liverpool",
+   "quelle_id": "Q24826"
+  },
+  {
+   "id": "wd-7591913b85",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt der Schweiz?",
+   "antworten": [
+    "Ljubljana",
+    "Lissabon",
+    "Bern",
+    "Amsterdam"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schweiz",
+   "lizenz": "CC0",
+   "quelle_titel": "Schweiz",
+   "quelle_id": "Q39"
+  },
+  {
+   "id": "wd-762c48dea8",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Polen?",
+   "antworten": [
+    "Lissabon",
+    "Warschau",
+    "Belgrad",
+    "Budapest"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Polen",
+   "lizenz": "CC0",
+   "quelle_titel": "Polen",
+   "quelle_id": "Q36"
+  },
+  {
+   "id": "wd-775b492048",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg Grossglockner?",
+   "antworten": [
+    "Deutschland",
+    "Österreich",
+    "Liechtenstein",
+    "Tschechien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gro%C3%9Fglockner",
+   "lizenz": "CC0",
+   "quelle_titel": "Großglockner",
+   "quelle_id": "Q3388"
+  },
+  {
+   "id": "wd-7771709051",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Dominica?",
+   "antworten": [
+    "Asien",
+    "Südamerika",
+    "Nordamerika",
+    "Europa"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dominica",
+   "lizenz": "CC0",
+   "quelle_titel": "Dominica",
+   "quelle_id": "Q784"
+  },
+  {
+   "id": "wd-7ae1802d40",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Basel?",
+   "antworten": [
+    "Schweiz",
+    "Österreich",
+    "Liechtenstein",
+    "Frankreich"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Basel",
+   "lizenz": "CC0",
+   "quelle_titel": "Basel",
+   "quelle_id": "Q78"
+  },
+  {
+   "id": "wd-7b0d20addc",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt München?",
+   "antworten": [
+    "Tschechien",
+    "Schweiz",
+    "Polen",
+    "Deutschland"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/M%C3%BCnchen",
+   "lizenz": "CC0",
+   "quelle_titel": "München",
+   "quelle_id": "Q1726"
+  },
+  {
+   "id": "wd-7bbf6248e4",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Portugal?",
+   "antworten": [
+    "Amsterdam",
+    "Warschau",
+    "Belgrad",
+    "Lissabon"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Portugal",
+   "lizenz": "CC0",
+   "quelle_titel": "Portugal",
+   "quelle_id": "Q45"
+  },
+  {
+   "id": "wd-7e72d2164f",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Gabun?",
+   "antworten": [
+    "Südamerika",
+    "Europa",
+    "Asien",
+    "Afrika"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gabun",
+   "lizenz": "CC0",
+   "quelle_titel": "Gabun",
+   "quelle_id": "Q1000"
+  },
+  {
+   "id": "wd-7ec45a06e3",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Slowenien?",
+   "antworten": [
+    "Athen",
+    "Ljubljana",
+    "Madrid",
+    "Bern"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Slowenien",
+   "lizenz": "CC0",
+   "quelle_titel": "Slowenien",
+   "quelle_id": "Q215"
+  },
+  {
+   "id": "wd-7f6a72e5e1",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Bulgarien?",
+   "antworten": [
+    "Astana",
+    "Luxemburg",
+    "Tirana",
+    "Sofia"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bulgarien",
+   "lizenz": "CC0",
+   "quelle_titel": "Bulgarien",
+   "quelle_id": "Q219"
+  },
+  {
+   "id": "wd-7f769b4a48",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Lagos?",
+   "antworten": [
+    "Nigeria",
+    "São Tomé und Príncipe",
+    "Kamerun",
+    "Benin"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Lagos",
+   "lizenz": "CC0",
+   "quelle_titel": "Lagos",
+   "quelle_id": "Q8673"
+  },
+  {
+   "id": "wd-8219b7202b",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Spanien?",
+   "antworten": [
+    "Madrid",
+    "Ljubljana",
+    "Kopenhagen",
+    "Bratislava"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Spanien",
+   "lizenz": "CC0",
+   "quelle_titel": "Spanien",
+   "quelle_id": "Q29"
+  },
+  {
+   "id": "wd-82c61914f1",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Lettland?",
+   "antworten": [
+    "Vilnius",
+    "Moskau",
+    "Dublin",
+    "Riga"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Lettland",
+   "lizenz": "CC0",
+   "quelle_titel": "Lettland",
+   "quelle_id": "Q211"
+  },
+  {
+   "id": "wd-8489f519a7",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Toronto?",
+   "antworten": [
+    "Vereinigte Staaten",
+    "Kanada",
+    "Bahamas",
+    "Nicaragua"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Toronto",
+   "lizenz": "CC0",
+   "quelle_titel": "Toronto",
+   "quelle_id": "Q172"
+  },
+  {
+   "id": "wd-8559deff8a",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Serbien?",
+   "antworten": [
+    "Belgrad",
+    "Lissabon",
+    "Budapest",
+    "Athen"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Serbien",
+   "lizenz": "CC0",
+   "quelle_titel": "Serbien",
+   "quelle_id": "Q403"
+  },
+  {
+   "id": "wd-85babb2b3a",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg K2?",
+   "antworten": [
+    "Indien",
+    "Volksrepublik China",
+    "Iran",
+    "Pakistan"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/K2",
+   "lizenz": "CC0",
+   "quelle_titel": "K2",
+   "quelle_id": "Q43512"
+  },
+  {
+   "id": "wd-86b8a710b8",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Seattle?",
+   "antworten": [
+    "Vereinigte Staaten",
+    "Mexiko",
+    "Kanada",
+    "Nicaragua"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Seattle",
+   "lizenz": "CC0",
+   "quelle_titel": "Seattle",
+   "quelle_id": "Q5083"
+  },
+  {
+   "id": "wd-8790a9beef",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt São Tomé und Príncipe?",
+   "antworten": [
+    "Europa",
+    "Südamerika",
+    "Afrika",
+    "Asien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/S%C3%A3o_Tom%C3%A9_und_Pr%C3%ADncipe",
+   "lizenz": "CC0",
+   "quelle_titel": "São Tomé und Príncipe",
+   "quelle_id": "Q1039"
+  },
+  {
+   "id": "wd-8969c58998",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Köln?",
+   "antworten": [
+    "Polen",
+    "Dänemark",
+    "Deutschland",
+    "Schweiz"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/K%C3%B6ln",
+   "lizenz": "CC0",
+   "quelle_titel": "Köln",
+   "quelle_id": "Q365"
+  },
+  {
+   "id": "wd-89eaf313fe",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Achensee?",
+   "antworten": [
+    "Slowakei",
+    "Österreich",
+    "Liechtenstein",
+    "Italien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Achensee",
+   "lizenz": "CC0",
+   "quelle_titel": "Achensee",
+   "quelle_id": "Q615711"
+  },
+  {
+   "id": "wd-8c133b786a",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Bergen?",
+   "antworten": [
+    "Russland",
+    "Schweden",
+    "Norwegen",
+    "Finnland"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bergen_(Norwegen)",
+   "lizenz": "CC0",
+   "quelle_titel": "Bergen (Norwegen)",
+   "quelle_id": "Q26793"
+  },
+  {
+   "id": "wd-8de3bf7d55",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Den Haag?",
+   "antworten": [
+    "Deutschland",
+    "Niederlande",
+    "Belgien",
+    "Österreich"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Den_Haag",
+   "lizenz": "CC0",
+   "quelle_titel": "Den Haag",
+   "quelle_id": "Q36600"
+  },
+  {
+   "id": "wd-8fbb2e4f19",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Grenada?",
+   "antworten": [
+    "Nordamerika",
+    "Europa",
+    "Asien",
+    "Südamerika"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Grenada",
+   "lizenz": "CC0",
+   "quelle_titel": "Grenada",
+   "quelle_id": "Q769"
+  },
+  {
+   "id": "wd-8feb5363eb",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Indien?",
+   "antworten": [
+    "Ankara",
+    "Abu Dhabi",
+    "Astana",
+    "Neu-Delhi"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Indien",
+   "lizenz": "CC0",
+   "quelle_titel": "Indien",
+   "quelle_id": "Q668"
+  },
+  {
+   "id": "wd-90a051c587",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Tuvalu?",
+   "antworten": [
+    "Nordamerika",
+    "Südamerika",
+    "Asien",
+    "Ozeanien"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tuvalu",
+   "lizenz": "CC0",
+   "quelle_titel": "Tuvalu",
+   "quelle_id": "Q672"
+  },
+  {
+   "id": "wd-90d9548f32",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Sambia?",
+   "antworten": [
+    "Asien",
+    "Europa",
+    "Afrika",
+    "Südamerika"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sambia",
+   "lizenz": "CC0",
+   "quelle_titel": "Sambia",
+   "quelle_id": "Q953"
+  },
+  {
+   "id": "wd-932a7dc096",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der See Balaton?",
+   "antworten": [
+    "Kroatien",
+    "Slowenien",
+    "Ungarn",
+    "Serbien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Balaton",
+   "lizenz": "CC0",
+   "quelle_titel": "Balaton",
+   "quelle_id": "Q6383"
+  },
+  {
+   "id": "wd-94b073c5da",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Taiwan?",
+   "antworten": [
+    "Beirut",
+    "Taipeh",
+    "Astana",
+    "Hanoi"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Republik_China_(Taiwan)",
+   "lizenz": "CC0",
+   "quelle_titel": "Republik China (Taiwan)",
+   "quelle_id": "Q865"
+  },
+  {
+   "id": "wd-95a907ff5d",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Boston?",
+   "antworten": [
+    "Vereinigte Staaten",
+    "Barbados",
+    "Kanada",
+    "Mexiko"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Boston",
+   "lizenz": "CC0",
+   "quelle_titel": "Boston",
+   "quelle_id": "Q100"
+  },
+  {
+   "id": "wd-95d76222d2",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Krakau?",
+   "antworten": [
+    "Polen",
+    "Russland",
+    "Deutschland",
+    "Belarus"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Krakau",
+   "lizenz": "CC0",
+   "quelle_titel": "Krakau",
+   "quelle_id": "Q31487"
+  },
+  {
+   "id": "wd-96800e0ff3",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Estland?",
+   "antworten": [
+    "Belgrad",
+    "Bern",
+    "Tallinn",
+    "Moskau"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Estland",
+   "lizenz": "CC0",
+   "quelle_titel": "Estland",
+   "quelle_id": "Q191"
+  },
+  {
+   "id": "wd-9756e86ca2",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Kasachstan?",
+   "antworten": [
+    "Kischinau",
+    "Neu-Delhi",
+    "Beirut",
+    "Astana"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kasachstan",
+   "lizenz": "CC0",
+   "quelle_titel": "Kasachstan",
+   "quelle_id": "Q232"
+  },
+  {
+   "id": "wd-9851521255",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt des Vereinigten Königreichs?",
+   "antworten": [
+    "Paris",
+    "London",
+    "Monaco",
+    "Vatikanstadt"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Vereinigtes_K%C3%B6nigreich",
+   "lizenz": "CC0",
+   "quelle_titel": "Vereinigtes Königreich",
+   "quelle_id": "Q145"
+  },
+  {
+   "id": "wd-9de4396c3f",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Russland?",
+   "antworten": [
+    "Bangkok",
+    "Moskau",
+    "Warschau",
+    "Stockholm"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Russland",
+   "lizenz": "CC0",
+   "quelle_titel": "Russland",
+   "quelle_id": "Q159"
+  },
+  {
+   "id": "wd-9f902de8bf",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Griechenland?",
+   "antworten": [
+    "Ljubljana",
+    "Amsterdam",
+    "Athen",
+    "Madrid"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Griechenland",
+   "lizenz": "CC0",
+   "quelle_titel": "Griechenland",
+   "quelle_id": "Q41"
+  },
+  {
+   "id": "wd-9fd08fc8a7",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Dresden?",
+   "antworten": [
+    "Dänemark",
+    "Niederlande",
+    "Deutschland",
+    "Tschechien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dresden",
+   "lizenz": "CC0",
+   "quelle_titel": "Dresden",
+   "quelle_id": "Q1731"
+  },
+  {
+   "id": "wd-a097291449",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Shanghai?",
+   "antworten": [
+    "Vietnam",
+    "Russland",
+    "Japan",
+    "Volksrepublik China"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Shanghai",
+   "lizenz": "CC0",
+   "quelle_titel": "Shanghai",
+   "quelle_id": "Q8686"
+  },
+  {
+   "id": "wd-a51753ce00",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Indonesien?",
+   "antworten": [
+    "Jakarta",
+    "Peking",
+    "Baku",
+    "Moskau"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Indonesien",
+   "lizenz": "CC0",
+   "quelle_titel": "Indonesien",
+   "quelle_id": "Q252"
+  },
+  {
+   "id": "wd-a575cbab43",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt El Salvador?",
+   "antworten": [
+    "Asien",
+    "Europa",
+    "Südamerika",
+    "Nordamerika"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/El_Salvador",
+   "lizenz": "CC0",
+   "quelle_titel": "El Salvador",
+   "quelle_id": "Q792"
+  },
+  {
+   "id": "wd-a6979529e2",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Gent?",
+   "antworten": [
+    "Niederlande",
+    "Belgien",
+    "Frankreich",
+    "Luxemburg"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gent",
+   "lizenz": "CC0",
+   "quelle_titel": "Gent",
+   "quelle_id": "Q1296"
+  },
+  {
+   "id": "wd-a6c0c6bbfc",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Usbekistan?",
+   "antworten": [
+    "Taschkent",
+    "Bagdad",
+    "Pjöngjang",
+    "Islamabad"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Usbekistan",
+   "lizenz": "CC0",
+   "quelle_titel": "Usbekistan",
+   "quelle_id": "Q265"
+  },
+  {
+   "id": "wd-a6fe5b7834",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Göteborg?",
+   "antworten": [
+    "Norwegen",
+    "Dänemark",
+    "Finnland",
+    "Schweden"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/G%C3%B6teborg",
+   "lizenz": "CC0",
+   "quelle_titel": "Göteborg",
+   "quelle_id": "Q25287"
+  },
+  {
+   "id": "wd-a79d69271f",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Frankreich?",
+   "antworten": [
+    "Paris",
+    "Vatikanstadt",
+    "Rom",
+    "Prag"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Frankreich",
+   "lizenz": "CC0",
+   "quelle_titel": "Frankreich",
+   "quelle_id": "Q142"
+  },
+  {
+   "id": "wd-a8ed50dbc2",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Guatemala?",
+   "antworten": [
+    "Europa",
+    "Südamerika",
+    "Asien",
+    "Nordamerika"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Guatemala",
+   "lizenz": "CC0",
+   "quelle_titel": "Guatemala",
+   "quelle_id": "Q774"
+  },
+  {
+   "id": "wd-ac592bf606",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Sankt Petersburg?",
+   "antworten": [
+    "Lettland",
+    "Vereinigte Staaten",
+    "Russland",
+    "Mongolei"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sankt_Petersburg",
+   "lizenz": "CC0",
+   "quelle_titel": "Sankt Petersburg",
+   "quelle_id": "Q656"
+  },
+  {
+   "id": "wd-ae1a279363",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Katowice?",
+   "antworten": [
+    "Polen",
+    "Litauen",
+    "Slowakei",
+    "Belarus"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Katowice",
+   "lizenz": "CC0",
+   "quelle_titel": "Katowice",
+   "quelle_id": "Q588"
+  },
+  {
+   "id": "wd-af5a759d1a",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Gardasee?",
+   "antworten": [
+    "Malta",
+    "Österreich",
+    "Frankreich",
+    "Italien"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gardasee",
+   "lizenz": "CC0",
+   "quelle_titel": "Gardasee",
+   "quelle_id": "Q6414"
+  },
+  {
+   "id": "wd-af6bd5cb94",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg Nanga Parbat?",
+   "antworten": [
+    "Pakistan",
+    "Volksrepublik China",
+    "Indien",
+    "Afghanistan"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Nanga_Parbat",
+   "lizenz": "CC0",
+   "quelle_titel": "Nanga Parbat",
+   "quelle_id": "Q130736"
+  },
+  {
+   "id": "wd-af97efa1bb",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Thessaloniki?",
+   "antworten": [
+    "Türkei",
+    "Griechenland",
+    "Albanien",
+    "Bulgarien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Thessaloniki",
+   "lizenz": "CC0",
+   "quelle_titel": "Thessaloniki",
+   "quelle_id": "Q17151"
+  },
+  {
+   "id": "wd-b0c1f1ada0",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Argentinien?",
+   "antworten": [
+    "Bogotá",
+    "Brasília",
+    "Caracas",
+    "Buenos Aires"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Argentinien",
+   "lizenz": "CC0",
+   "quelle_titel": "Argentinien",
+   "quelle_id": "Q414"
+  },
+  {
+   "id": "wd-b0e6bada19",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Deutschland?",
+   "antworten": [
+    "Prag",
+    "Paris",
+    "Monaco",
+    "Berlin"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Deutschland",
+   "lizenz": "CC0",
+   "quelle_titel": "Deutschland",
+   "quelle_id": "Q183"
+  },
+  {
+   "id": "wd-b1555e7fae",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Schweden?",
+   "antworten": [
+    "Dublin",
+    "Warschau",
+    "Riga",
+    "Stockholm"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schweden",
+   "lizenz": "CC0",
+   "quelle_titel": "Schweden",
+   "quelle_id": "Q34"
+  },
+  {
+   "id": "wd-b173b7f893",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Albanien?",
+   "antworten": [
+    "Sofia",
+    "Luxemburg",
+    "Astana",
+    "Tirana"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Albanien",
+   "lizenz": "CC0",
+   "quelle_titel": "Albanien",
+   "quelle_id": "Q222"
+  },
+  {
+   "id": "wd-b3a2dc77fd",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Starnberger See?",
+   "antworten": [
+    "Polen",
+    "Deutschland",
+    "Frankreich",
+    "Dänemark"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Starnberger_See",
+   "lizenz": "CC0",
+   "quelle_titel": "Starnberger See",
+   "quelle_id": "Q131615"
+  },
+  {
+   "id": "wd-b67fa7c36d",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Litauen?",
+   "antworten": [
+    "Sarajevo",
+    "Vilnius",
+    "Tiflis",
+    "Kiew"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Litauen",
+   "lizenz": "CC0",
+   "quelle_titel": "Litauen",
+   "quelle_id": "Q37"
+  },
+  {
+   "id": "wd-b6f1282809",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Zypern?",
+   "antworten": [
+    "Podgorica",
+    "Nikosia",
+    "Ankara",
+    "Valletta"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Republik_Zypern",
+   "lizenz": "CC0",
+   "quelle_titel": "Republik Zypern",
+   "quelle_id": "Q229"
+  },
+  {
+   "id": "wd-b74b2992c3",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Innsbruck?",
+   "antworten": [
+    "Schweiz",
+    "Ungarn",
+    "Slowakei",
+    "Österreich"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Innsbruck",
+   "lizenz": "CC0",
+   "quelle_titel": "Innsbruck",
+   "quelle_id": "Q1735"
+  },
+  {
+   "id": "wd-b875eed9ac",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Moldau?",
+   "antworten": [
+    "Kischinau",
+    "Reykjavík",
+    "Pristina",
+    "Ankara"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Republik_Moldau",
+   "lizenz": "CC0",
+   "quelle_titel": "Republik Moldau",
+   "quelle_id": "Q217"
+  },
+  {
+   "id": "wd-bbf9f0eb8d",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Wolgograd?",
+   "antworten": [
+    "Litauen",
+    "Belarus",
+    "Vereinigte Staaten",
+    "Russland"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wolgograd",
+   "lizenz": "CC0",
+   "quelle_titel": "Wolgograd",
+   "quelle_id": "Q914"
+  },
+  {
+   "id": "wd-bc7ce2a362",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg Fuji?",
+   "antworten": [
+    "Südkorea",
+    "Taiwan",
+    "Japan",
+    "Russland"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fuji_(Vulkan)",
+   "lizenz": "CC0",
+   "quelle_titel": "Fuji (Vulkan)",
+   "quelle_id": "Q39231"
+  },
+  {
+   "id": "wd-bdb9717e1e",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Marokko?",
+   "antworten": [
+    "Praia",
+    "Dakar",
+    "Rabat",
+    "Mogadischu"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Marokko",
+   "lizenz": "CC0",
+   "quelle_titel": "Marokko",
+   "quelle_id": "Q1028"
+  },
+  {
+   "id": "wd-becc9f9cab",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Königssee?",
+   "antworten": [
+    "Österreich",
+    "Schweiz",
+    "Frankreich",
+    "Deutschland"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/K%C3%B6nigssee",
+   "lizenz": "CC0",
+   "quelle_titel": "Königssee",
+   "quelle_id": "Q156715"
+  },
+  {
+   "id": "wd-bf3b67662b",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Pakistan?",
+   "antworten": [
+    "Damaskus",
+    "Pjöngjang",
+    "Islamabad",
+    "Abu Dhabi"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pakistan",
+   "lizenz": "CC0",
+   "quelle_titel": "Pakistan",
+   "quelle_id": "Q843"
+  },
+  {
+   "id": "wd-c13b8a20cf",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Frankfurt am Main?",
+   "antworten": [
+    "Polen",
+    "Deutschland",
+    "Luxemburg",
+    "Tschechien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Frankfurt_am_Main",
+   "lizenz": "CC0",
+   "quelle_titel": "Frankfurt am Main",
+   "quelle_id": "Q1794"
+  },
+  {
+   "id": "wd-c30dd15009",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Mainz?",
+   "antworten": [
+    "Schweiz",
+    "Deutschland",
+    "Österreich",
+    "Belgien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mainz",
+   "lizenz": "CC0",
+   "quelle_titel": "Mainz",
+   "quelle_id": "Q1720"
+  },
+  {
+   "id": "wd-c5896f9d61",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Alexandria?",
+   "antworten": [
+    "Ägypten",
+    "Israel",
+    "Libyen",
+    "Sudan"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Alexandria",
+   "lizenz": "CC0",
+   "quelle_titel": "Alexandria",
+   "quelle_id": "Q87"
+  },
+  {
+   "id": "wd-c7a25e9425",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Malawi?",
+   "antworten": [
+    "Asien",
+    "Afrika",
+    "Südamerika",
+    "Europa"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Malawi",
+   "lizenz": "CC0",
+   "quelle_titel": "Malawi",
+   "quelle_id": "Q1020"
+  },
+  {
+   "id": "wd-c7d9eaa63d",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Salzburg?",
+   "antworten": [
+    "Deutschland",
+    "Österreich",
+    "Schweiz",
+    "Slowenien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Salzburg",
+   "lizenz": "CC0",
+   "quelle_titel": "Salzburg",
+   "quelle_id": "Q34713"
+  },
+  {
+   "id": "wd-c929d26f09",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Baikalsee?",
+   "antworten": [
+    "Norwegen",
+    "Lettland",
+    "Belarus",
+    "Russland"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Baikalsee",
+   "lizenz": "CC0",
+   "quelle_titel": "Baikalsee",
+   "quelle_id": "Q5513"
+  },
+  {
+   "id": "wd-ca1b7e8ce7",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Birmingham?",
+   "antworten": [
+    "Vereinigtes Königreich",
+    "Ukraine",
+    "Deutschland",
+    "Irland"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Birmingham",
+   "lizenz": "CC0",
+   "quelle_titel": "Birmingham",
+   "quelle_id": "Q2256"
+  },
+  {
+   "id": "wd-cc04571bfc",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt der Niederlande?",
+   "antworten": [
+    "Bern",
+    "Ljubljana",
+    "Amsterdam",
+    "Athen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Niederlande",
+   "lizenz": "CC0",
+   "quelle_titel": "Niederlande",
+   "quelle_id": "Q55"
+  },
+  {
+   "id": "wd-d26fbba871",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Nürnberg?",
+   "antworten": [
+    "Deutschland",
+    "Polen",
+    "Frankreich",
+    "Schweiz"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/N%C3%BCrnberg",
+   "lizenz": "CC0",
+   "quelle_titel": "Nürnberg",
+   "quelle_id": "Q2090"
+  },
+  {
+   "id": "wd-d405de8c26",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Danzig?",
+   "antworten": [
+    "Russland",
+    "Polen",
+    "Ukraine",
+    "Litauen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Danzig",
+   "lizenz": "CC0",
+   "quelle_titel": "Danzig",
+   "quelle_id": "Q1792"
+  },
+  {
+   "id": "wd-d52fd8ebcf",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Rumänien?",
+   "antworten": [
+    "Skopje",
+    "Bukarest",
+    "Vilnius",
+    "Zagreb"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rum%C3%A4nien",
+   "lizenz": "CC0",
+   "quelle_titel": "Rumänien",
+   "quelle_id": "Q218"
+  },
+  {
+   "id": "wd-d5fd8ac078",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Brasilien?",
+   "antworten": [
+    "Quito",
+    "Bogotá",
+    "Brasília",
+    "Lima"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Brasilien",
+   "lizenz": "CC0",
+   "quelle_titel": "Brasilien",
+   "quelle_id": "Q155"
+  },
+  {
+   "id": "wd-d8278a6ca4",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Lyon?",
+   "antworten": [
+    "Deutschland",
+    "Schweiz",
+    "Suriname",
+    "Frankreich"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Lyon",
+   "lizenz": "CC0",
+   "quelle_titel": "Lyon",
+   "quelle_id": "Q456"
+  },
+  {
+   "id": "wd-d9cef3932f",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Ammersee?",
+   "antworten": [
+    "Polen",
+    "Deutschland",
+    "Frankreich",
+    "Luxemburg"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ammersee",
+   "lizenz": "CC0",
+   "quelle_titel": "Ammersee",
+   "quelle_id": "Q265336"
+  },
+  {
+   "id": "wd-db7fe088ed",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Kroatien?",
+   "antworten": [
+    "Brüssel",
+    "Kiew",
+    "Zagreb",
+    "Sarajevo"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kroatien",
+   "lizenz": "CC0",
+   "quelle_titel": "Kroatien",
+   "quelle_id": "Q224"
+  },
+  {
+   "id": "wd-dba99a42f7",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Potsdam?",
+   "antworten": [
+    "Schweiz",
+    "Frankreich",
+    "Deutschland",
+    "Tschechien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Potsdam",
+   "lizenz": "CC0",
+   "quelle_titel": "Potsdam",
+   "quelle_id": "Q1711"
+  },
+  {
+   "id": "wd-deaba23875",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Kirgisistan?",
+   "antworten": [
+    "Maskat",
+    "Bischkek",
+    "Manila",
+    "Pjöngjang"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kirgisistan",
+   "lizenz": "CC0",
+   "quelle_titel": "Kirgisistan",
+   "quelle_id": "Q813"
+  },
+  {
+   "id": "wd-deb22bd3a2",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Namibia?",
+   "antworten": [
+    "Kinshasa",
+    "Windhoek",
+    "Rabat",
+    "Kampala"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Namibia",
+   "lizenz": "CC0",
+   "quelle_titel": "Namibia",
+   "quelle_id": "Q1030"
+  },
+  {
+   "id": "wd-dffae92d1b",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Italien?",
+   "antworten": [
+    "Rom",
+    "Kopenhagen",
+    "Prag",
+    "Monaco"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Italien",
+   "lizenz": "CC0",
+   "quelle_titel": "Italien",
+   "quelle_id": "Q38"
+  },
+  {
+   "id": "wd-e168595761",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Genua?",
+   "antworten": [
+    "Italien",
+    "Malta",
+    "San Marino",
+    "Schweiz"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Genua",
+   "lizenz": "CC0",
+   "quelle_titel": "Genua",
+   "quelle_id": "Q1449"
+  },
+  {
+   "id": "wd-e186aad762",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Guinea?",
+   "antworten": [
+    "Europa",
+    "Afrika",
+    "Asien",
+    "Südamerika"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Guinea",
+   "lizenz": "CC0",
+   "quelle_titel": "Guinea",
+   "quelle_id": "Q1006"
+  },
+  {
+   "id": "wd-e3c0639b42",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Ecuador?",
+   "antworten": [
+    "Caracas",
+    "Brasília",
+    "Quito",
+    "Montevideo"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ecuador",
+   "lizenz": "CC0",
+   "quelle_titel": "Ecuador",
+   "quelle_id": "Q736"
+  },
+  {
+   "id": "wd-e49e3c10eb",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Dubai?",
+   "antworten": [
+    "Iran",
+    "Oman",
+    "Vereinigte Arabische Emirate",
+    "Saudi-Arabien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dubai",
+   "lizenz": "CC0",
+   "quelle_titel": "Dubai",
+   "quelle_id": "Q612"
+  },
+  {
+   "id": "wd-e6b6476814",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Hannover?",
+   "antworten": [
+    "Deutschland",
+    "Schweiz",
+    "Luxemburg",
+    "Dänemark"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hannover",
+   "lizenz": "CC0",
+   "quelle_titel": "Hannover",
+   "quelle_id": "Q1715"
+  },
+  {
+   "id": "wd-ec78e7ca38",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg Brocken?",
+   "antworten": [
+    "Deutschland",
+    "Frankreich",
+    "Tschechien",
+    "Niederlande"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Brocken",
+   "lizenz": "CC0",
+   "quelle_titel": "Brocken",
+   "quelle_id": "Q155721"
+  },
+  {
+   "id": "wd-ed0b2cec8c",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Nordmazedonien?",
+   "antworten": [
+    "Tiflis",
+    "Reykjavík",
+    "Tirana",
+    "Skopje"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Nordmazedonien",
+   "lizenz": "CC0",
+   "quelle_titel": "Nordmazedonien",
+   "quelle_id": "Q221"
+  },
+  {
+   "id": "wd-eed222c3a9",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Österreich?",
+   "antworten": [
+    "Rom",
+    "Wien",
+    "Monaco",
+    "London"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/%C3%96sterreich",
+   "lizenz": "CC0",
+   "quelle_titel": "Österreich",
+   "quelle_id": "Q40"
+  },
+  {
+   "id": "wd-efa1145580",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg Elbrus?",
+   "antworten": [
+    "Volksrepublik China",
+    "Finnland",
+    "Nordkorea",
+    "Russland"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Elbrus",
+   "lizenz": "CC0",
+   "quelle_titel": "Elbrus",
+   "quelle_id": "Q43105"
+  },
+  {
+   "id": "wd-f10fe69e91",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Finnland?",
+   "antworten": [
+    "Bukarest",
+    "Vilnius",
+    "Sarajevo",
+    "Helsinki"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Finnland",
+   "lizenz": "CC0",
+   "quelle_titel": "Finnland",
+   "quelle_id": "Q33"
+  },
+  {
+   "id": "wd-f1240569c9",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Stettin?",
+   "antworten": [
+    "Tschechien",
+    "Polen",
+    "Litauen",
+    "Slowakei"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Stettin",
+   "lizenz": "CC0",
+   "quelle_titel": "Stettin",
+   "quelle_id": "Q393"
+  },
+  {
+   "id": "wd-f1792c2d21",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Georgien?",
+   "antworten": [
+    "Tiflis",
+    "Pristina",
+    "Tirana",
+    "Skopje"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Georgien",
+   "lizenz": "CC0",
+   "quelle_titel": "Georgien",
+   "quelle_id": "Q230"
+  },
+  {
+   "id": "wd-f35b9e93a1",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt der Mongolei?",
+   "antworten": [
+    "Hanoi",
+    "Beirut",
+    "Riad",
+    "Ulaanbaatar"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mongolei",
+   "lizenz": "CC0",
+   "quelle_titel": "Mongolei",
+   "quelle_id": "Q711"
+  },
+  {
+   "id": "wd-f49b071103",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt von Afghanistan?",
+   "antworten": [
+    "Kabul",
+    "Doha",
+    "Bischkek",
+    "Amman"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Afghanistan",
+   "lizenz": "CC0",
+   "quelle_titel": "Afghanistan",
+   "quelle_id": "Q889"
+  },
+  {
+   "id": "wd-f610c48e2f",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Togo?",
+   "antworten": [
+    "Europa",
+    "Afrika",
+    "Südamerika",
+    "Asien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Togo",
+   "lizenz": "CC0",
+   "quelle_titel": "Togo",
+   "quelle_id": "Q945"
+  },
+  {
+   "id": "wd-f7321f18b9",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt Kiribati?",
+   "antworten": [
+    "Ozeanien",
+    "Asien",
+    "Nordamerika",
+    "Südamerika"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kiribati",
+   "lizenz": "CC0",
+   "quelle_titel": "Kiribati",
+   "quelle_id": "Q710"
+  },
+  {
+   "id": "wd-f9747b3aee",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Turin?",
+   "antworten": [
+    "Italien",
+    "Slowenien",
+    "Österreich",
+    "Frankreich"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Turin",
+   "lizenz": "CC0",
+   "quelle_titel": "Turin",
+   "quelle_id": "Q495"
+  },
+  {
+   "id": "wd-f9a2a984e0",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Berg Mont Ventoux?",
+   "antworten": [
+    "Belgien",
+    "Brasilien",
+    "Italien",
+    "Frankreich"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mont_Ventoux",
+   "lizenz": "CC0",
+   "quelle_titel": "Mont Ventoux",
+   "quelle_id": "Q209064"
+  },
+  {
+   "id": "wd-fa1cfd5727",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Hamburg?",
+   "antworten": [
+    "Frankreich",
+    "Tschechien",
+    "Deutschland",
+    "Schweiz"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hamburg",
+   "lizenz": "CC0",
+   "quelle_titel": "Hamburg",
+   "quelle_id": "Q1055"
+  },
+  {
+   "id": "wd-fafcf4073d",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Vancouver?",
+   "antworten": [
+    "Kanada",
+    "Kuba",
+    "Vereinigte Staaten",
+    "Panama"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Vancouver",
+   "lizenz": "CC0",
+   "quelle_titel": "Vancouver",
+   "quelle_id": "Q24639"
+  },
+  {
+   "id": "wd-fb13646898",
+   "kategorie": "geografie",
+   "frage": "Auf welchem Kontinent liegt der Tschad?",
+   "antworten": [
+    "Asien",
+    "Europa",
+    "Afrika",
+    "Südamerika"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tschad",
+   "lizenz": "CC0",
+   "quelle_titel": "Tschad",
+   "quelle_id": "Q657"
+  },
+  {
+   "id": "wd-fcd23725c6",
+   "kategorie": "geografie",
+   "frage": "Wie heisst die Hauptstadt des Kosovo?",
+   "antworten": [
+    "Tiflis",
+    "Tirana",
+    "Pristina",
+    "Skopje"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kosovo",
+   "lizenz": "CC0",
+   "quelle_titel": "Kosovo",
+   "quelle_id": "Q1246"
+  },
+  {
+   "id": "wd-fd08ee2e42",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt die Stadt Mumbai?",
+   "antworten": [
+    "Bhutan",
+    "Indien",
+    "Volksrepublik China",
+    "Pakistan"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mumbai",
+   "lizenz": "CC0",
+   "quelle_titel": "Mumbai",
+   "quelle_id": "Q1156"
+  }
+ ]
+}

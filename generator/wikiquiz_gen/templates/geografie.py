@@ -13,8 +13,8 @@ from dataclasses import dataclass, field
 from ..models import Frage, swiss
 from ..popularity import Kandidat
 from ..sparql import abfrage, artikel_url, qid, titel_aus_url
-from .base import Kontext, naechste_nach_bekanntheit, schwierigkeit_aus_pageviews
-from .laender import nominativ, von
+from .base import Kontext, naechste_nach_bekanntheit, stufen_nach_rang
+from .laender import hauptstadt_von, liegt
 
 log = logging.getLogger(__name__)
 
@@ -40,8 +40,18 @@ KONTINENT_DISTRAKTOREN = {
 }
 
 # Staaten mit umstrittenem Status oder umstrittener Hauptstadt: nicht abfragen
-AUSSCHLUSS_LAND = {"Q219060"}  # Palästina
+AUSSCHLUSS_LAND = {"Q219060", "Q29999", "Q756617"}  # Palästina; Königreiche → Länder (s. u.)
+# Länder, die in Wikidata nicht als souveräner Staat geführt werden (Teil eines Königreichs)
+ZUSATZ_LAENDER = ["Q55", "Q35"]  # Niederlande, Dänemark
 AUSSCHLUSS_HAUPTSTADT = {"Q801"}  # Israel (Jerusalem umstritten)
+# Kontinentzuordnung umstritten (Kaukasus, Zypern, Landbrücken)
+AUSSCHLUSS_KONTINENT = {"Q230", "Q399", "Q227", "Q229", "Q79", "Q804"}
+# Gebiete mit Sonderstatus: „In welchem Land liegt …?“ wäre nicht eindeutig
+SONDERGEBIETE = ["Q46395", "Q779415", "Q161243", "Q15634554", "Q1048835"]
+# Wikidata ordnet Orte teils dem Königreich statt dem Land zu
+KOENIGREICH_ZU_LAND = {"Q29999": "Q55", "Q756617": "Q35"}
+# Höchstens so viele Fragen pro Template (triviale Templates begrenzen)
+MAX_PRO_TEMPLATE = {"kontinent": 25}
 
 
 @dataclass
@@ -74,7 +84,8 @@ SELECT ?item ?label ?article ?sl
   (GROUP_CONCAT(DISTINCT STRAFTER(STR(?cap), "entity/")) AS ?caps)
   (GROUP_CONCAT(DISTINCT STRAFTER(STR(?nb), "entity/")) AS ?nbs)
 WHERE {{
-  ?item wdt:P31 wd:{SOUVERAENER_STAAT}; wikibase:sitelinks ?sl.
+  {{ ?item wdt:P31 wd:{SOUVERAENER_STAAT} }} UNION {{ VALUES ?item {{ {" ".join("wd:" + q for q in ZUSATZ_LAENDER)} }} }}
+  ?item wikibase:sitelinks ?sl.
   FILTER NOT EXISTS {{ ?item wdt:P576 [] }}
   ?item rdfs:label ?label. FILTER(LANG(?label) = "de")
   ?article schema:about ?item; schema:isPartOf <https://de.wikipedia.org/>.
@@ -104,18 +115,18 @@ WHERE {{
 
 
 def _land_distraktoren(ktx: Kontext, land: Land, laender: dict[str, Land], *schluessel: str) -> list[str]:
-    """Nachbarländer bevorzugt, sonst Länder desselben Kontinents mit ähnlicher Bekanntheit."""
+    """Nachbarländer bevorzugt, sonst bekannte Länder desselben Kontinents."""
     rng = ktx.rng("land", land.k.qid, *schluessel)
     nachbarn = [laender[q] for q in sorted(land.nachbarn)]
     rng.shuffle(nachbarn)
     gewaehlt = [n.name for n in nachbarn[:3]]
     if len(gewaehlt) < 3:
-        pool = [
-            (l.name, l.k.pageviews or 0)
-            for q, l in laender.items()
-            if q != land.k.qid and l.kontinente & land.kontinente and l.name not in gewaehlt
-        ]
-        gewaehlt += naechste_nach_bekanntheit(land.k.pageviews or 0, pool, rng, n=3 - len(gewaehlt))
+        pool = sorted(
+            (l for q, l in laender.items()
+             if q != land.k.qid and l.kontinente & land.kontinente and l.name not in gewaehlt),
+            key=lambda l: -(l.k.pageviews or 0),
+        )[:10]
+        gewaehlt += [l.name for l in rng.sample(pool, min(len(pool), 3 - len(gewaehlt)))]
     return gewaehlt if len(gewaehlt) == 3 else []
 
 
@@ -141,7 +152,7 @@ SELECT ?item ?label ?article ?sl WHERE {{
   ?article schema:about ?item; schema:isPartOf <https://de.wikipedia.org/>.
 }}""",
     )
-    staedte = {k.qid: k for k in ktx.filtern([_kandidat(r) for r in rows], "hauptstadt")}
+    staedte = {k.qid: k for k in ktx.filtern([_kandidat(r) for r in rows], "hauptstadt", antwort=True)}
 
     # Alle Hauptstädte (auch unbekanntere) eindeutig zuordnen: Name → Land
     fragen = []
@@ -157,14 +168,14 @@ SELECT ?item ?label ?article ?sl WHERE {{
         falsch = naechste_nach_bekanntheit(cap.pageviews or 0, pool, ktx.rng("hauptstadt", q))
         if not falsch:
             continue
-        pv = min(l.k.pageviews or 0, cap.pageviews or 0)
+        pv = l.k.pageviews or 0
         fragen.append(
             Frage(
                 kategorie=ktx.kategorie,
-                frage=f"Wie heisst die Hauptstadt {von(l.name)}?",
+                frage=f"Wie heisst die Hauptstadt {hauptstadt_von(l.name)}?",
                 richtig=swiss(cap.label),
                 falsch=falsch,
-                schwierigkeit=schwierigkeit_aus_pageviews(pv),
+                schwierigkeit=2,
                 quelle_typ="wikidata",
                 quelle_url=artikel_url(l.k.titel),
                 quelle_titel=l.k.titel,
@@ -179,24 +190,24 @@ SELECT ?item ?label ?article ?sl WHERE {{
 def kontinent(ktx: Kontext, laender: dict[str, Land]) -> list[Frage]:
     fragen = []
     for q, l in laender.items():
-        if len(l.kontinente) != 1:
+        if len(l.kontinente) != 1 or q in AUSSCHLUSS_KONTINENT:
             continue
         richtig = next(iter(l.kontinente))
         pv = l.k.pageviews or 0
         fragen.append(
             Frage(
                 kategorie=ktx.kategorie,
-                frage=f"Auf welchem Kontinent liegt {nominativ(l.name)}?",
+                frage=f"Auf welchem Kontinent {liegt(l.name)}?",
                 richtig=richtig,
                 falsch=list(KONTINENT_DISTRAKTOREN[richtig]),
-                # Kontinent eines Landes ist leichter als dessen Hauptstadt
-                schwierigkeit=max(1, schwierigkeit_aus_pageviews(pv) - 1),
+                schwierigkeit=1,
                 quelle_typ="wikidata",
                 quelle_url=artikel_url(l.k.titel),
                 quelle_titel=l.k.titel,
                 quelle_id=q,
                 template="kontinent",
-                score=pv,
+                # Weniger bekannte Länder zuerst – „Wo liegt Deutschland?“ ist zu trivial
+                score=-pv,
             )
         )
     return fragen
@@ -223,6 +234,7 @@ def _formulierung(typ: str, name: str) -> str:
 def ort_in_land(ktx: Kontext, laender: dict[str, Land], typ: str) -> list[Frage]:
     """Orte, die genau einem Staat zugeordnet sind (keine Grenzberge/-seen)."""
     typen = " ".join(f"wd:{t}" for t in ORTSTYPEN[typ])
+    sonder = " ".join(f"wd:{t}" for t in SONDERGEBIETE)
     rows = abfrage(
         ktx.http,
         f"""
@@ -230,6 +242,7 @@ SELECT ?item ?label ?article ?sl (SAMPLE(?land) AS ?country) WHERE {{
   VALUES ?typ {{ {typen} }}
   ?item wdt:P31 ?typ; wikibase:sitelinks ?sl.
   FILTER(?sl >= {ktx.schwellen.min_sitelinks})
+  FILTER NOT EXISTS {{ VALUES ?sonder {{ {sonder} }} ?item wdt:P31 ?sonder }}
   ?item wdt:P17 ?land.
   ?item rdfs:label ?label. FILTER(LANG(?label) = "de")
   ?article schema:about ?item; schema:isPartOf <https://de.wikipedia.org/>.
@@ -243,7 +256,7 @@ LIMIT {ktx.max_kandidaten}
     kandidaten = []
     for r in rows:
         k = _kandidat(r)
-        k.extra["land"] = qid(r["country"])
+        k.extra["land"] = KOENIGREICH_ZU_LAND.get(qid(r["country"]), qid(r["country"]))
         if typ == "stadt" and k.qid in hauptstaedte:
             continue  # schon über das Hauptstadt-Template abgedeckt
         if k.extra["land"] not in laender:
@@ -263,7 +276,7 @@ LIMIT {ktx.max_kandidaten}
                 frage=_formulierung(typ, swiss(k.label)),
                 richtig=land.name,
                 falsch=falsch,
-                schwierigkeit=schwierigkeit_aus_pageviews(k.pageviews or 0),
+                schwierigkeit=2,
                 quelle_typ="wikidata",
                 quelle_url=artikel_url(k.titel),
                 quelle_titel=k.titel,
@@ -278,10 +291,20 @@ LIMIT {ktx.max_kandidaten}
 def generiere(ktx: Kontext) -> dict[str, list[Frage]]:
     """Gibt Fragen gruppiert nach Template zurück."""
     laender = lade_laender(ktx)
-    return {
+    gruppen = {
         "hauptstadt": hauptstadt(ktx, laender),
         "kontinent": kontinent(ktx, laender),
         "stadt": ort_in_land(ktx, laender, "stadt"),
         "berg": ort_in_land(ktx, laender, "berg"),
         "see": ort_in_land(ktx, laender, "see"),
     }
+    for name, fragen in gruppen.items():
+        fragen.sort(key=lambda f: -f.score)
+        if name in MAX_PRO_TEMPLATE:
+            del fragen[MAX_PRO_TEMPLATE[name]:]
+        if name == "kontinent":
+            for f in fragen:
+                f.schwierigkeit = 1 if f.score < -1500 else 2
+        else:
+            stufen_nach_rang(fragen)
+    return gruppen

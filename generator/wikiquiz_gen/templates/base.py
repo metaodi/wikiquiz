@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import math
 import random
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 
 from ..config import Schwellen
 from ..http import Http
@@ -25,8 +25,12 @@ class Kontext:
         """Deterministischer Zufall pro Frage → stabile Ausgabe über Läufe."""
         return random.Random(f"{self.seed}|" + "|".join(schluessel))
 
-    def filtern(self, kandidaten: list[Kandidat], stufe: str) -> list[Kandidat]:
-        bestanden, abgelehnt = self.bekanntheit.filtern(kandidaten, self.schwellen)
+    def filtern(self, kandidaten: list[Kandidat], stufe: str, antwort: bool = False) -> list[Kandidat]:
+        """antwort=True: Schwelle für richtige Antworten (min_pageviews_antwort) verwenden."""
+        schwellen = self.schwellen
+        if antwort:
+            schwellen = replace(schwellen, min_pageviews=schwellen.min_pageviews_antwort)
+        bestanden, abgelehnt = self.bekanntheit.filtern(kandidaten, schwellen)
         for k, grund in abgelehnt:
             self.protokoll.verwerfen(
                 self.kategorie,
@@ -56,3 +60,10 @@ def naechste_nach_bekanntheit(
     if len(auswahl) < n:
         return []
     return rng.sample(auswahl, n)
+
+
+def stufen_nach_rang(fragen: list, stufen: tuple[int, ...] = (1, 2, 3)) -> None:
+    """Schwierigkeit nach Bekanntheitsrang innerhalb eines Templates (bekannteste Drittel = leicht)."""
+    sortiert = sorted(fragen, key=lambda f: -f.score)
+    for i, f in enumerate(sortiert):
+        f.schwierigkeit = stufen[min(len(stufen) - 1, i * len(stufen) // max(1, len(sortiert)))]

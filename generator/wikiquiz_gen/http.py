@@ -111,9 +111,16 @@ class Http:
         schluessel = self._schluessel(methode, url, params, daten)
         treffer = self._cache_lesen(schluessel, ttl)
         if treffer is not None:
-            self.stats["cache"] += 1
             status, body = treffer
-            return None if status == 404 else json.loads(body)
+            try:
+                ergebnis = None if status == 404 else json.loads(body)
+                self.stats["cache"] += 1
+                return ergebnis
+            except ValueError:
+                log.warning("Ungültiger Cache-Eintrag für %s, wird neu geladen", url[:100])
+                with self._db_lock:
+                    self._db.execute("DELETE FROM cache WHERE schluessel=?", (schluessel,))
+                    self._db.commit()
         if self.nur_cache:
             raise RuntimeError(f"Nicht im Cache (nur_cache): {url}")
 
@@ -139,6 +146,13 @@ class Http:
                 self._cache_schreiben(schluessel, anzeige, 404, "")
                 return None
             r.raise_for_status()
+            try:
+                daten_json = r.json()
+            except ValueError:
+                # z. B. abgeschnittene SPARQL-Antwort bei Server-Timeout: nicht cachen, neu versuchen
+                log.warning("Ungültiges JSON von %s, neuer Versuch", anzeige[:100])
+                self._limiter.sperre(host, 2**versuch)
+                continue
             self._cache_schreiben(schluessel, anzeige, r.status_code, r.text)
-            return r.json()
+            return daten_json
         raise RuntimeError(f"Request nach {versuche} Versuchen fehlgeschlagen: {anzeige[:200]}")

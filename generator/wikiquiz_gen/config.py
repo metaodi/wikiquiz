@@ -40,6 +40,9 @@ MAX_FRAGEN_PRO_QUELLE = 2
 class Schwellen:
     min_sitelinks: int = 30
     min_pageviews: float = 200.0  # Durchschnitt pro Tag über 12 Monate (de.wikipedia)
+    # Für die richtige Antwort (z. B. Hauptstadt): Städteartikel werden seltener aufgerufen
+    # als Länderartikel (Ankara ≈ 170/Tag, Nairobi ≈ 150/Tag)
+    min_pageviews_antwort: float = 100.0
     min_zeichen: int = 3000  # Klartextlänge des Artikels
     min_ereignis_alter_tage: int = 365
 

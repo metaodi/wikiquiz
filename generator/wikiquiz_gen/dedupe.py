@@ -14,6 +14,12 @@ def aehnlich(a: str, b: str) -> bool:
     return SequenceMatcher(None, normalisiere(a), normalisiere(b)).ratio() >= AEHNLICHKEIT
 
 
+def beide_wikidata(a: Frage, b: Frage) -> bool:
+    """Template-Fragen unterscheiden sich per Konstruktion im Subjekt; ähnlicher Wortlaut ist dort normal.
+    Mehrfachfragen zum selben Subjekt begrenzt bereits `max_pro_quelle`."""
+    return a.quelle_typ == b.quelle_typ == "wikidata"
+
+
 def deduplizieren(
     fragen: list[Frage], max_pro_quelle: int = MAX_FRAGEN_PRO_QUELLE
 ) -> tuple[list[Frage], list[tuple[Frage, str]]]:
@@ -30,7 +36,10 @@ def deduplizieren(
         if pro_quelle[f.quelle_id] >= max_pro_quelle:
             verworfen.append((f, f"mehr als {max_pro_quelle} fragen zu {f.quelle_id}"))
             continue
-        aehnliche = [g for g in nach_antwort[normalisiere(f.richtig)] if aehnlich(f.frage, g.frage)]
+        aehnliche = [
+            g for g in nach_antwort[normalisiere(f.richtig)]
+            if not beide_wikidata(f, g) and aehnlich(f.frage, g.frage)
+        ]
         if aehnliche:
             verworfen.append((f, f"aehnlich zu {aehnliche[0].id}"))
             continue

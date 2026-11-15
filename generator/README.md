@@ -47,19 +47,33 @@ Verworfene Kandidaten und Fragen landen mit Grund in `out/rejected.jsonl`
 
 ## Bekanntheitsfilter
 
-Schwellen pro Kategorie in `wikiquiz_gen/config.py`: mind. 30 Sitelinks (Sport: 50),
-im Schnitt mind. 200 Aufrufe/Tag auf de.wikipedia über die letzten 12 vollen Monate,
-mind. 3000 Zeichen Klartext; Listen, Begriffsklärungen und Ereignisse jünger als 1 Jahr
-werden ausgeschlossen.
+Schwellen pro Kategorie in `wikiquiz_gen/config.py` (per CLI übersteuerbar):
+
+| Schwelle | Standard | Bemerkung |
+|---|---|---|
+| `min_sitelinks` | 30 (Sport: 50) | wichtigster Indikator, direkt aus SPARQL |
+| `min_pageviews` | 200/Tag | abgefragtes Thema, Ø der letzten 12 vollen Monate auf de.wikipedia |
+| `min_pageviews_antwort` | 100/Tag | richtige Antwort (z. B. Hauptstadt) – Städteartikel werden seltener aufgerufen als Länderartikel (Ankara ≈ 170, Nairobi ≈ 150) |
+| `min_zeichen` | 3000 | Klartext, geschätzt als 60 % der Wikitext-Länge (`prop=info`, 50 Titel/Request) |
+
+Ausgeschlossen werden ausserdem Listen, Begriffsklärungen und Ereignisse jünger als 1 Jahr.
+
+**Seitenaufrufe zweistufig:** Zuerst die 60-Tage-Werte der PageViewInfo-API (50 Titel pro Request).
+Nur Kandidaten im Graubereich (0.5×–2× Schwelle) werden über die Pageviews-REST-API auf 12 Monate
+verfeinert (1 Titel pro Request, seriell). `--pageviews-exakt` fragt für alle 12 Monate ab.
 
 Alle HTTP-Antworten werden in `cache/http.sqlite` gecacht (TTL 7–30 Tage); wiederholte Läufe
-belasten die APIs nicht erneut. Die Pageviews-API wird seriell abgefragt (sie drosselt
-parallele Anfragen), bei HTTP 429 pausiert der Client den Host für alle Threads.
+belasten die APIs nicht erneut. Bei HTTP 429 pausiert der Client den Host für alle Threads;
+abgeschnittene Antworten (ungültiges JSON) werden nicht gecacht und neu geladen.
 
 ## Geografie-Templates (Wikidata)
 
 | Template | Frage | Distraktoren |
 |---|---|---|
 | `hauptstadt` | Wie heisst die Hauptstadt von {Land}? | Hauptstädte desselben Kontinents mit ähnlicher Bekanntheit; Länder mit mehreren Hauptstädten ausgeschlossen |
-| `kontinent` | Auf welchem Kontinent liegt {Land}? | plausible Nachbarkontinente; transkontinentale Staaten ausgeschlossen |
-| `stadt` / `berg` / `see` | In welchem Land liegt …? | Nachbarländer, sonst Länder desselben Kontinents; nur Orte mit genau einem Staat (P17) |
+| `kontinent` | Auf welchem Kontinent liegt {Land}? | plausible Nachbarkontinente; transkontinentale und umstrittene Fälle ausgeschlossen; max. 25, weniger bekannte Länder zuerst |
+| `stadt` / `berg` / `see` | In welchem Land liegt …? | Nachbarländer, sonst bekannte Länder desselben Kontinents; nur Orte mit genau einem Staat (P17), ohne Sondergebiete (Überseegebiete, SAR) |
+
+Schwierigkeit: Rang nach Seitenaufrufen innerhalb des Templates (bekanntestes Drittel = 1).
+Länder mit Artikel werden grammatisch korrekt eingesetzt („Hauptstadt der Schweiz“,
+„Auf welchem Kontinent liegen die Bahamas?“).

@@ -77,9 +77,9 @@ app/                 (Schritt 4)
 
 ## Bekanntheitsfilter
 
-Reihenfolge (günstig → teuer): Sitelinks (aus SPARQL) → Titel „Liste …“ → Pageviews
-(Monatswerte der letzten 12 vollen Monate / Anzahl Tage) → Seiteninfo (Begriffsklärung,
-fehlend) → Klartextlänge (TextExtracts, Zeichen) → Ereignis jünger als 1 Jahr (P585/P580).
+Reihenfolge (günstig → teuer): Sitelinks (aus SPARQL) → Titel „Liste …“ / Ereignis jünger als
+1 Jahr → Pageviews (60-Tage-Vorfilter im Block, 12 Monate nur im Graubereich) → Seiteninfo
+(Begriffsklärung, fehlend, Länge). Für richtige Antworten gilt eine eigene, tiefere Pageview-Schwelle.
 Schwellen pro Kategorie in `config.py`, per CLI übersteuerbar.
 
 ## Entscheide

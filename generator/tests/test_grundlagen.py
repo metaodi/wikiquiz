@@ -5,8 +5,8 @@ from wikiquiz_gen.models import Frage, swiss
 from wikiquiz_gen.output import schreibe_pool
 from wikiquiz_gen.popularity import ist_listentitel, zeitraum_12_monate
 from wikiquiz_gen.sparql import artikel_url, titel_aus_url
-from wikiquiz_gen.templates.base import naechste_nach_bekanntheit, schwierigkeit_aus_pageviews
-from wikiquiz_gen.templates.laender import nominativ, von
+from wikiquiz_gen.templates.base import naechste_nach_bekanntheit, schwierigkeit_aus_pageviews, stufen_nach_rang
+from wikiquiz_gen.templates.laender import hauptstadt_von, liegt
 from wikiquiz_gen.validate import pruefe_formal, verraet_antwort
 import random
 
@@ -42,12 +42,23 @@ def test_swiss():
 
 
 def test_laender_grammatik():
-    assert von("Kanada") == "von Kanada"
-    assert von("Schweiz") == "von der Schweiz"
-    assert von("Irak") == "vom Irak"
-    assert von("Niederlande") == "von den Niederlanden"
-    assert von("Vereinigtes Königreich") == "vom Vereinigten Königreich"
-    assert nominativ("Vereinigte Staaten") == "die Vereinigten Staaten"
+    assert hauptstadt_von("Kanada") == "von Kanada"
+    assert hauptstadt_von("Schweiz") == "der Schweiz"
+    assert hauptstadt_von("Irak") == "des Irak"
+    assert hauptstadt_von("Niederlande") == "der Niederlande"
+    assert hauptstadt_von("Vereinigtes Königreich") == "des Vereinigten Königreichs"
+    assert liegt("Vereinigte Staaten") == "liegen die Vereinigten Staaten"
+    assert liegt("Bahamas") == "liegen die Bahamas"
+    assert liegt("Ukraine") == "liegt die Ukraine"
+    assert liegt("Kanada") == "liegt Kanada"
+
+
+def test_stufen_nach_rang():
+    fragen = [frage(quelle_id=str(i)) for i in range(6)]
+    for i, f in enumerate(fragen):
+        f.score = i
+    stufen_nach_rang(fragen)
+    assert [f.schwierigkeit for f in fragen] == [3, 3, 2, 2, 1, 1]
 
 
 def test_formal_ok():
@@ -78,8 +89,8 @@ def test_id_stabil_und_json():
 
 
 def test_dedupe():
-    a = frage()
-    b = frage(frage="Wie heisst die Hauptstadt von  Kanada ?!", quelle_id="Q99")  # gleich normalisiert
+    a = frage(quelle_typ="wikipedia")
+    b = frage(frage="Wie heisst die Hauptstadt von  Kanada ?!", quelle_id="Q99", quelle_typ="wikipedia")
     c = frage(frage="Auf welchem Kontinent liegt Kanada?", richtig="Nordamerika",
               falsch=["Europa", "Asien", "Afrika"])
     d = frage(frage="Welche Sprache spricht man in Kanada?", richtig="Englisch",
@@ -87,6 +98,14 @@ def test_dedupe():
     behalten, verworfen = deduplizieren([a, b, c, d])
     assert behalten == [a, c]
     assert len(verworfen) == 2
+
+
+def test_dedupe_wikidata_templates_nicht_aehnlich():
+    a = frage(frage="In welchem Land liegt die Stadt Lyon?", richtig="Frankreich", quelle_id="Q456",
+              falsch=["Belgien", "Spanien", "Italien"], template="stadt")
+    b = frage(frage="In welchem Land liegt der Berg Lyon?", richtig="Frankreich", quelle_id="Q457",
+              falsch=["Belgien", "Spanien", "Italien"], template="berg")
+    assert deduplizieren([a, b])[0] == [a, b]
 
 
 def test_distraktoren_aehnliche_bekanntheit():
