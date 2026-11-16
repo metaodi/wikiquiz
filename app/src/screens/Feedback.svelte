@@ -10,7 +10,16 @@
     spieler,
     letzterZug,
     onWeiter,
-  }: { frage: Frage; zug: Zug; spieler: Spieler; letzterZug: boolean; onWeiter: () => void } = $props();
+    warteText,
+  }: {
+    frage: Frage;
+    zug: Zug;
+    spieler: Spieler;
+    letzterZug: boolean;
+    /** Ohne `onWeiter` (mehrere Geräte, jemand anders ist dran) erscheint stattdessen `warteText`. */
+    onWeiter?: () => void;
+    warteText?: string;
+  } = $props();
 
   const timeout = $derived(zug.gewaehlt === null);
 
@@ -54,10 +63,18 @@
 </a>
 
 <div class="unten">
-  <button class="btn" onclick={onWeiter}>{letzterZug ? 'Zur Rangliste' : 'Weiter'}</button>
+  {#if onWeiter}
+    <button class="btn" onclick={onWeiter}>{letzterZug ? 'Zur Rangliste' : 'Weiter'}</button>
+  {:else}
+    <p class="muted warten" role="status">{warteText}</p>
+  {/if}
 </div>
 
 <style>
+  .warten {
+    margin: 0;
+    text-align: center;
+  }
   .ergebnis {
     display: flex;
     gap: 14px;

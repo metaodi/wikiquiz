@@ -44,6 +44,8 @@ export function aktionAnwenden(s: Spielstand, aktion: Aktion, k: Kontext): Ergeb
     case 'bereit':
       return { stand: game.bereit(s) };
     case 'kategorie': {
+      // Verspätete oder doppelte Wahl (Doppeltipp, zweites Gerät) ist kein Fehler, sondern wirkungslos
+      if (s.phase !== 'kategorie') return { stand: s };
       const r = game.kategorieWaehlen(s, k.pool, aktion.wahl, k.history, k.rng);
       return r.ok ? { stand: r.stand, neueFrage: r.frage } : { stand: s, fehler: r.grund };
     }

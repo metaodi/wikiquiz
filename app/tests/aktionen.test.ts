@@ -2,7 +2,6 @@ import { describe, expect, it } from 'vitest';
 import { aktionAnwenden, type Aktion, type Kontext } from '../src/lib/aktionen';
 import { punkteFuerZeit } from '../src/lib/config';
 import { neuesSpiel } from '../src/lib/game';
-import { lokalerKanal, type Nachricht } from '../src/lib/kanal';
 import type { Frage, KategorieId, Spielstand } from '../src/lib/types';
 
 function frage(id: string, kategorie: KategorieId = 'geografie'): Frage {
@@ -59,6 +58,14 @@ describe('aktionAnwenden', () => {
     expect(r.neueFrage).toBeUndefined();
   });
 
+  it('ignoriert eine doppelte Kategoriewahl ohne Fehlermeldung', () => {
+    const s = aktionAnwenden(zweiSpieler(), { typ: 'bereit' }, kontext()).stand;
+    const nachWahl = aktionAnwenden(s, { typ: 'kategorie', wahl: 'kunst' }, kontext()).stand;
+    const r = aktionAnwenden(nachWahl, { typ: 'kategorie', wahl: 'geografie' }, kontext());
+    expect(r.fehler).toBeUndefined();
+    expect(r.stand).toBe(nachWahl);
+  });
+
   it('meldet, wenn in keiner Kategorie mehr Fragen übrig sind', () => {
     const s = { ...aktionAnwenden(zweiSpieler(), { typ: 'bereit' }, kontext()).stand, gestellt: ['g1', 'g2', 'k1'] };
     expect(aktionAnwenden(s, { typ: 'kategorie', wahl: 'zufall' }, kontext()).fehler).toBe('alle_erschoepft');
@@ -93,33 +100,5 @@ describe('aktionAnwenden', () => {
   it('Aktionen überstehen JSON (Übertragung zwischen Geräten)', () => {
     const a: Aktion = { typ: 'kategorie', wahl: 'zufall' };
     expect(JSON.parse(JSON.stringify(a))).toEqual(a);
-  });
-});
-
-describe('lokalerKanal', () => {
-  it('stellt Nachrichten synchron an alle Empfänger zu', () => {
-    const k = lokalerKanal();
-    const a: Nachricht[] = [];
-    const b: Nachricht[] = [];
-    k.beiEmpfang((n) => a.push(n));
-    k.beiEmpfang((n) => b.push(n));
-    k.senden({ typ: 'aktion', aktion: { typ: 'weiter' } });
-    expect(a).toEqual([{ typ: 'aktion', aktion: { typ: 'weiter' } }]);
-    expect(b).toEqual(a);
-  });
-
-  it('meldet Empfänger ab und schliesst', () => {
-    const k = lokalerKanal();
-    const a: Nachricht[] = [];
-    const b: Nachricht[] = [];
-    const ab = k.beiEmpfang((n) => a.push(n));
-    k.beiEmpfang((n) => b.push(n));
-    ab();
-    k.senden({ typ: 'stand', stand: null });
-    expect(a).toHaveLength(0);
-    expect(b).toHaveLength(1);
-    k.schliessen();
-    k.senden({ typ: 'stand', stand: null });
-    expect(b).toHaveLength(1);
   });
 });

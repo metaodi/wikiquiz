@@ -3,7 +3,20 @@
   import { rangliste } from '../lib/game';
   import type { Spielstand } from '../lib/types';
 
-  let { spiel, onNochmals, onNeu }: { spiel: Spielstand; onNochmals: () => void; onNeu: () => void } = $props();
+  let {
+    spiel,
+    onNochmals,
+    onNeu,
+    neuText = 'Neues Spiel',
+    warteText,
+  }: {
+    spiel: Spielstand;
+    /** Ohne `onNochmals` (mehrere Geräte, nicht der Host) erscheint stattdessen `warteText`. */
+    onNochmals?: () => void;
+    onNeu: () => void;
+    neuText?: string;
+    warteText?: string;
+  } = $props();
   const plaetze = $derived(rangliste(spiel.spieler));
   const sieger = $derived(plaetze.filter((p) => p.rang === 1));
   const solo = $derived(spiel.spieler.length === 1);
@@ -30,8 +43,12 @@
   {/if}
 
   <div class="unten">
-    <button class="btn" onclick={onNochmals}>Nochmals spielen</button>
-    <button class="btn sekundaer" onclick={onNeu}>Neues Spiel</button>
+    {#if onNochmals}
+      <button class="btn" onclick={onNochmals}>Nochmals spielen</button>
+    {:else if warteText}
+      <p class="muted warten" role="status">{warteText}</p>
+    {/if}
+    <button class="btn sekundaer" onclick={onNeu}>{neuText}</button>
   </div>
 </div>
 
@@ -54,6 +71,9 @@
   }
   p {
     margin: 0;
+  }
+  .warten {
+    text-align: center;
   }
   .gross {
     font-size: 1.4rem;
