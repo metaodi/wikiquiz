@@ -3,7 +3,8 @@
   import { rangliste } from '../lib/game';
   import type { Spielstand } from '../lib/types';
 
-  let { spiel, onWeiter }: { spiel: Spielstand; onWeiter: () => void } = $props();
+  /** Ohne `onWeiter` (mehrere Geräte, nicht der Host) erscheint stattdessen `warteText`. */
+  let { spiel, onWeiter, warteText }: { spiel: Spielstand; onWeiter?: () => void; warteText?: string } = $props();
   const plaetze = $derived(rangliste(spiel.spieler));
 </script>
 
@@ -12,12 +13,19 @@
   <h1>Zwischenstand</h1>
   <Tabelle {plaetze} />
   <div class="unten">
-    <button class="btn" onclick={onWeiter}>Runde {spiel.runde} starten</button>
+    {#if onWeiter}
+      <button class="btn" onclick={onWeiter}>Runde {spiel.runde} starten</button>
+    {:else}
+      <p class="muted warten" role="status">{warteText}</p>
+    {/if}
   </div>
 </div>
 
 <style>
   p {
     margin: 0;
+  }
+  .warten {
+    text-align: center;
   }
 </style>

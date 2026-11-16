@@ -2,7 +2,8 @@
   import { onMount } from 'svelte';
   import { haptik } from '../lib/haptics';
   import { quellenLinkText } from '../lib/quelle';
-  import type { Frage, Spieler, Zug } from '../lib/types';
+  import SpielerChip from '../components/SpielerChip.svelte';
+  import type { Antwort, Frage, Spieler, Zug } from '../lib/types';
 
   let {
     frage,
@@ -10,7 +11,19 @@
     spieler,
     letzterZug,
     onWeiter,
-  }: { frage: Frage; zug: Zug; spieler: Spieler; letzterZug: boolean; onWeiter: () => void } = $props();
+    warteText,
+    ergebnisse,
+  }: {
+    frage: Frage;
+    zug: Zug;
+    spieler: Spieler;
+    letzterZug: boolean;
+    /** Ohne `onWeiter` (mehrere Geräte, jemand anders ist dran) erscheint stattdessen `warteText`. */
+    onWeiter?: () => void;
+    warteText?: string;
+    /** „Alle gleichzeitig“: Ergebnis aller Spieler */
+    ergebnisse?: { spieler: Spieler; antwort: Antwort }[];
+  } = $props();
 
   const timeout = $derived(zug.gewaehlt === null);
 
@@ -49,15 +62,71 @@
   {/each}
 </ul>
 
+{#if ergebnisse}
+  <div class="alle" role="list" aria-label="Ergebnisse">
+    {#each ergebnisse as e, i (i)}
+      <div class="zeile" role="listitem">
+        <SpielerChip spieler={e.spieler} />
+        <span class="wahl" class:ok={e.antwort.richtig}>
+          {e.antwort.gewaehlt === null ? 'keine Antwort' : frage.antworten[e.antwort.gewaehlt]}
+        </span>
+        <span class="plus">
+          {e.antwort.richtig ? `+${e.antwort.punkte}` : '0'}
+          {#if e.antwort.gewaehlt !== null}<span class="muted">· {e.antwort.zeit.toFixed(1)} s</span>{/if}
+        </span>
+      </div>
+    {/each}
+  </div>
+{/if}
+
 <a class="wiki" href={frage.quelle_url} target="_blank" rel="noopener noreferrer">
   {quellenLinkText(frage)} ↗
 </a>
 
 <div class="unten">
-  <button class="btn" onclick={onWeiter}>{letzterZug ? 'Zur Rangliste' : 'Weiter'}</button>
+  {#if onWeiter}
+    <button class="btn" onclick={onWeiter}>{letzterZug ? 'Zur Rangliste' : 'Weiter'}</button>
+  {:else}
+    <p class="muted warten" role="status">{warteText}</p>
+  {/if}
 </div>
 
 <style>
+  .alle {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 14px;
+    border-radius: var(--radius);
+    background: var(--bg-2);
+    box-shadow: var(--shadow);
+  }
+  .zeile {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 2px 10px;
+    align-items: center;
+  }
+  .wahl {
+    grid-column: 1;
+    font-size: 0.95rem;
+    color: var(--bad);
+    overflow-wrap: anywhere;
+  }
+  .wahl.ok {
+    color: var(--ok);
+  }
+  .plus {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    font-weight: 800;
+    text-align: right;
+    white-space: nowrap;
+  }
+  .warten {
+    margin: 0;
+    text-align: center;
+  }
   .ergebnis {
     display: flex;
     gap: 14px;

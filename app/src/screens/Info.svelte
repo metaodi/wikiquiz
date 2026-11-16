@@ -26,6 +26,10 @@
       Zeit geben 0 Punkte. Jeder Spieler wählt vor dem Start seine Schwierigkeit (leicht, mittel oder schwer), auf Wunsch auch pro Kategorie; sind
       in einer Kategorie keine Fragen dieser Stufe mehr übrig, kommt die nächstliegende Stufe dran.
     </p>
+    <p>
+      Mit mehreren Geräten (Beta) spielt jeder auf seinem eigenen: am selben Tisch oder an verschiedenen Orten, reihum
+      oder alle gleichzeitig dieselbe Frage.
+    </p>
   </section>
 
   <section class="karte">
@@ -67,6 +71,11 @@
     <p>
       WikiQuiz läuft vollständig auf deinem Gerät. Spielstand und zuletzt gestellte Fragen werden nur lokal im Browser
       gespeichert.
+    </p>
+    <p>
+      Beim Spiel mit mehreren Geräten verbinden sich die Geräte direkt miteinander (WebRTC, verschlüsselt). Den
+      Verbindungsaufbau vermitteln öffentliche Nostr-Relays; sie sehen dabei die IP-Adresse, aber dank Verschlüsselung
+      weder Namen noch Spielinhalte. Übertragen werden nur Namen, Antworten und Spielstand.
     </p>
   </section>
 

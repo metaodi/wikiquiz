@@ -15,7 +15,7 @@ export default defineConfig({
       manifest: {
         name: 'WikiQuiz',
         short_name: 'WikiQuiz',
-        description: 'Quiz mit Fragen aus Wikipedia und Wikidata – für 1 bis 4 Spieler auf einem Gerät.',
+        description: 'Quiz mit Fragen aus Wikipedia und Wikidata – für 1 bis 4 Spieler, auf einem oder mehreren Geräten.',
         lang: 'de-CH',
         theme_color: '#1f2a44',
         background_color: '#1f2a44',

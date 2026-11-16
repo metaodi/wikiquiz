@@ -12,6 +12,7 @@
     fuer,
     onWahl,
     onBeenden,
+    fuerAlle = false,
   }: {
     /** Noch verfügbare Fragen pro Kategorie in diesem Spiel */
     offen: Record<KategorieId, number>;
@@ -26,6 +27,8 @@
     fuer: Spieler;
     onWahl: (w: Wahl) => void;
     onBeenden: () => void;
+    /** „Alle gleichzeitig“: Die Kategorie gilt für alle Spieler */
+    fuerAlle?: boolean;
   } = $props();
 
   const sichtbar = $derived(KATEGORIEN.filter((k) => kategorien.includes(k.id)));
@@ -52,6 +55,8 @@
   <p class="muted untertitel">
     <strong style:color={waehler.farbe}>{waehler.name}</strong> wählt – danach geht das Gerät an {fuer.name}.
   </p>
+{:else if fuerAlle}
+  <h1 class="titel">Wähle eine Kategorie für alle</h1>
 {:else}
   <h1 class="titel">Wähle eine Kategorie</h1>
 {/if}

@@ -1,9 +1,10 @@
 <script lang="ts">
-  import type { Spielstand } from '../lib/types';
+  import type { Spieler, Spielstand } from '../lib/types';
   import SpielerChip from './SpielerChip.svelte';
 
-  let { spiel, onBeenden }: { spiel: Spielstand; onBeenden: () => void } = $props();
-  const aktiv = $derived(spiel.spieler[spiel.aktiverSpieler]);
+  /** `spieler`: wer oben angezeigt wird – standardmässig der aktive Spieler, bei „Alle gleichzeitig“ man selbst */
+  let { spiel, onBeenden, spieler }: { spiel: Spielstand; onBeenden: () => void; spieler?: Spieler } = $props();
+  const aktiv = $derived(spieler ?? spiel.spieler[spiel.aktiverSpieler]);
 </script>
 
 <header class="kopf">

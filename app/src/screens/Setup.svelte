@@ -1,5 +1,7 @@
 <script lang="ts">
+  import RaumKarte from '../components/RaumKarte.svelte';
   import { KATEGORIEN } from '../lib/categories';
+  import SchwierigkeitWahl from '../components/SchwierigkeitWahl.svelte';
   import {
     FARB_NAMEN,
     MAX_SPIELER,
@@ -17,21 +19,42 @@
     type NeuerSpieler,
   } from '../lib/game';
   import { stufe } from '../lib/picker';
+  import type { Teilnehmer } from '../lib/raum';
   import type { LetzteSpieler } from '../lib/storage';
-  import type { Einstellungen, KategorieId, KategorieModus, ProKategorie, Schwierigkeit } from '../lib/types';
+  import type { Ablauf, Einstellungen, KategorieId, KategorieModus, ProKategorie, Schwierigkeit } from '../lib/types';
 
   let {
     letzte,
     gesamt,
     onStart,
     onInfo,
+    raum,
+    raumLink,
+    onMehrgeraete,
+    onRaumSchliessen,
   }: {
     letzte: LetzteSpieler | null;
     /** Fragen pro Kategorie im Pool */
     gesamt: Record<KategorieId, number>;
     onStart: (spieler: NeuerSpieler[], runden: number, einstellungen: Einstellungen) => void;
     onInfo: () => void;
+    /** Mehrere Geräte: Lobby des Hosts – die Spieler sind die beigetretenen Geräte */
+    raum?: { code: string; teilnehmer: Teilnehmer[]; ich: string };
+    /** Link (und QR-Code) zum Beitreten */
+    raumLink?: string;
+    /** Einstieg „Mit mehreren Geräten spielen“ (nur sichtbar, wenn gesetzt) */
+    onMehrgeraete?: () => void;
+    onRaumSchliessen?: () => void;
   } = $props();
+
+  const ABLAEUFE: { id: Ablauf; titel: string; text: string }[] = [
+    {
+      id: 'gleichzeitig',
+      titel: 'Alle gleichzeitig',
+      text: 'Alle beantworten dieselbe Frage – wer schneller richtig liegt, holt mehr Punkte.',
+    },
+    { id: 'reihum', titel: 'Reihum', text: 'Jeder beantwortet seine eigene Frage, die anderen schauen zu.' },
+  ];
 
   const MODI: { id: KategorieModus; titel: string; text: string }[] = [
     { id: 'selbst', titel: 'Selbst wählen', text: 'Jeder wählt die Kategorie für seine eigene Frage.' },
@@ -64,10 +87,22 @@
     MAX_SPIELER,
   );
   let modus = $state<KategorieModus>(startEinst.modus);
+  // Mehrere Geräte: standardmässig „Alle gleichzeitig“; auf einem Gerät immer reihum
+  // svelte-ignore state_referenced_locally
+  let ablauf = $state<Ablauf>(start?.ablauf ?? 'gleichzeitig');
+  const ablaufEffektiv = $derived<Ablauf>(raum ? ablauf : 'reihum');
+  const gleichzeitig = $derived(ablaufEffektiv === 'gleichzeitig');
   let kategorien = $state<KategorieId[]>(startEinst.kategorien);
+  /** Gemeinsame Stufe im Raum bei „Alle gleichzeitig“ */
+  // svelte-ignore state_referenced_locally
+  let raumStufe = $state<Schwierigkeit>(stufe(start?.raumSchwierigkeit));
+  const stufenName = (w: Schwierigkeit | undefined) => SCHWIERIGKEITEN.find((x) => x.wert === stufe(w))!.name;
 
+  const anzahlSpieler = $derived(raum ? raum.teilnehmer.length : spieler.length);
   // „Vorheriger Spieler“ braucht mindestens 2 Spieler
-  const modusEffektiv = $derived<KategorieModus>(modus === 'vorgaenger' && spieler.length < 2 ? 'selbst' : modus);
+  const modusEffektiv = $derived<KategorieModus>(
+    modus === 'vorgaenger' && (anzahlSpieler < 2 || gleichzeitig) ? 'selbst' : modus,
+  );
   const alle = $derived(kategorien.length === ALLE_KATEGORIEN.length);
   const fragenGewaehlt = $derived(kategorien.reduce((n, k) => n + (gesamt[k] ?? 0), 0));
 
@@ -78,26 +113,11 @@
   }
 
   const namen = $derived(spieler.map((p, i) => p.name.trim() || `Spieler ${i + 1}`));
-  const doppelt = $derived(new Set(namen.map((n) => n.toLowerCase())).size !== namen.length);
+  const doppelt = $derived(!raum && new Set(namen.map((n) => n.toLowerCase())).size !== namen.length);
 
   function hinzufuegen() {
     const frei = SPIELER_FARBEN.find((f) => !spieler.some((p) => p.farbe === f)) ?? SPIELER_FARBEN[0];
     spieler.push({ name: '', farbe: frei, schwierigkeit: SCHWIERIGKEIT_STANDARD, proKategorie: {} });
-  }
-
-  /** Gesamtstufe ändern; Abweichungen, die ihr jetzt entsprechen, fallen weg */
-  function gesamtSetzen(p: SetupSpieler, wert: Schwierigkeit) {
-    p.schwierigkeit = wert;
-    p.proKategorie = proKategoriePruefen(p.proKategorie, wert) ?? {};
-  }
-
-  function kategorieSetzen(p: SetupSpieler, k: KategorieId, wert: Schwierigkeit) {
-    p.proKategorie = proKategoriePruefen({ ...p.proKategorie, [k]: wert }, p.schwierigkeit) ?? {};
-  }
-
-  /** Anzahl Abweichungen in den gewählten Kategorien */
-  function angepasst(p: SetupSpieler): number {
-    return kategorien.filter((k) => p.proKategorie[k] !== undefined).length;
   }
 
   function entfernen(i: number) {
@@ -108,14 +128,21 @@
     e.preventDefault();
     if (doppelt || fragenGewaehlt === 0) return;
     onStart(
-      spieler.map((p, i) => ({
-        name: namen[i],
-        farbe: p.farbe,
-        schwierigkeit: p.schwierigkeit,
-        proKategorie: proKategoriePruefen({ ...p.proKategorie }, p.schwierigkeit),
-      })),
+      raum
+        ? raum.teilnehmer.map((t) =>
+            // „Alle gleichzeitig“: eine Frage für alle → gemeinsame Stufe; reihum gilt die Wahl jedes Geräts
+            gleichzeitig
+              ? { name: t.name, farbe: t.farbe, schwierigkeit: raumStufe }
+              : { name: t.name, farbe: t.farbe, schwierigkeit: t.schwierigkeit, proKategorie: t.proKategorie },
+          )
+        : spieler.map((p, i) => ({
+            name: namen[i],
+            farbe: p.farbe,
+            schwierigkeit: p.schwierigkeit,
+            proKategorie: proKategoriePruefen({ ...p.proKategorie }, p.schwierigkeit),
+          })),
       runden,
-      { modus: modusEffektiv, kategorien: [...kategorien] },
+      { modus: modusEffektiv, kategorien: [...kategorien], ablauf: ablaufEffektiv },
     );
   }
 </script>
@@ -123,15 +150,19 @@
 <form class="screen" onsubmit={starten}>
   <header class="titel">
     <h1>WikiQuiz</h1>
-    <p class="muted">Wissen aus Wikipedia – für 1 bis 4 Spieler auf einem Gerät.</p>
+    <p class="muted">
+      {raum ? 'Spiel mit mehreren Geräten' : 'Wissen aus Wikipedia – für 1 bis 4 Spieler, auf einem oder mehreren Geräten.'}
+    </p>
   </header>
 
+  {#if raum}
+    <RaumKarte code={raum.code} teilnehmer={raum.teilnehmer} ich={raum.ich} link={raumLink} />
+  {:else}
   <section class="karte" aria-labelledby="spieler-titel">
     <h2 id="spieler-titel">Spieler</h2>
     <p class="muted klein-text">Name, Farbe und Schwierigkeit der Fragen – für jeden Spieler einzeln.</p>
     <ol class="liste">
       {#each spieler as p, i (i)}
-        {@const n = angepasst(p)}
         <li class="zeile">
           <input
             class="name"
@@ -160,51 +191,9 @@
               ></button>
             {/each}
           </div>
-          <div class="segment stufen" role="radiogroup" aria-label={`Schwierigkeit Spieler ${i + 1}`}>
-            {#each SCHWIERIGKEITEN as st (st.wert)}
-              <button
-                type="button"
-                role="radio"
-                aria-checked={p.schwierigkeit === st.wert}
-                class:aktiv={p.schwierigkeit === st.wert}
-                onclick={() => gesamtSetzen(p, st.wert)}
-              >
-                {st.name}
-              </button>
-            {/each}
+          <div class="stufen">
+            <SchwierigkeitWahl bind:wert={p.schwierigkeit} bind:pro={p.proKategorie} {kategorien} wer={`Spieler ${i + 1}`} />
           </div>
-          <details class="fein">
-            <summary>
-              <span>Pro Kategorie anpassen{#if n > 0}<span class="anzahl">{` · ${n} angepasst`}</span>{/if}</span>
-            </summary>
-            <p class="muted klein-text">Ohne Anpassung gilt die Stufe oben.</p>
-            <ul class="fein-liste">
-              {#each KATEGORIEN.filter((k) => kategorien.includes(k.id)) as k (k.id)}
-                {@const wert = p.proKategorie[k.id] ?? p.schwierigkeit}
-                <li class="fein-zeile" class:abweichend={p.proKategorie[k.id] !== undefined}>
-                  <span class="fein-name"><span aria-hidden="true">{k.icon}</span> {k.name}</span>
-                  <div class="segment stufen" role="radiogroup" aria-label={`Schwierigkeit ${k.name}, Spieler ${i + 1}`}>
-                    {#each SCHWIERIGKEITEN as st (st.wert)}
-                      <button
-                        type="button"
-                        role="radio"
-                        aria-checked={wert === st.wert}
-                        class:aktiv={wert === st.wert}
-                        onclick={() => kategorieSetzen(p, k.id, st.wert)}
-                      >
-                        {st.name}
-                      </button>
-                    {/each}
-                  </div>
-                </li>
-              {/each}
-            </ul>
-            {#if n > 0}
-              <button type="button" class="textlink zuruecksetzen" onclick={() => (p.proKategorie = {})}>
-                Alle wie oben
-              </button>
-            {/if}
-          </details>
         </li>
       {/each}
     </ol>
@@ -214,11 +203,66 @@
     {#if doppelt}
       <p class="fehler" role="alert">Bitte unterschiedliche Namen verwenden.</p>
     {/if}
+    {#if onMehrgeraete}
+      <button type="button" class="btn sekundaer klein" onclick={onMehrgeraete}>Mit mehreren Geräten spielen</button>
+    {/if}
   </section>
+  {/if}
+
+  {#if raum}
+    <section class="karte" aria-labelledby="ablauf-titel">
+      <h2 id="ablauf-titel">Ablauf</h2>
+      <div class="modi" role="radiogroup" aria-labelledby="ablauf-titel">
+        {#each ABLAEUFE as a (a.id)}
+          <button
+            type="button"
+            role="radio"
+            class="modus"
+            aria-checked={ablauf === a.id}
+            class:aktiv={ablauf === a.id}
+            onclick={() => (ablauf = a.id)}
+          >
+            <span class="modus-titel">{a.titel}</span>
+            <span class="modus-text">{a.text}</span>
+          </button>
+        {/each}
+      </div>
+    </section>
+
+    <section class="karte" aria-labelledby="schwierigkeit-titel">
+      <h2 id="schwierigkeit-titel">Schwierigkeit</h2>
+      {#if gleichzeitig}
+        <p class="muted klein-text">Alle beantworten dieselbe Frage – deshalb gilt eine Stufe für alle.</p>
+        <div class="segment" role="radiogroup" aria-labelledby="schwierigkeit-titel">
+          {#each SCHWIERIGKEITEN as st (st.wert)}
+            <button
+              type="button"
+              role="radio"
+              aria-checked={raumStufe === st.wert}
+              class:aktiv={raumStufe === st.wert}
+              onclick={() => (raumStufe = st.wert)}
+            >
+              {st.name}
+            </button>
+          {/each}
+        </div>
+      {:else}
+        <p class="muted klein-text">Reihum bekommt jeder Fragen in der Stufe, die er beim Beitreten gewählt hat.</p>
+        <ul class="stufen-liste" aria-label="Schwierigkeit pro Spieler">
+          {#each raum.teilnehmer as t (t.geraet)}
+            {@const n = Object.keys(t.proKategorie ?? {}).length}
+            <li><strong>{t.name}</strong>: {stufenName(t.schwierigkeit)}{n > 0 ? ` (${n} Kategorien angepasst)` : ''}</li>
+          {/each}
+        </ul>
+      {/if}
+    </section>
+  {/if}
 
   <section class="karte" aria-labelledby="runden-titel">
     <h2 id="runden-titel">Runden</h2>
-    <p class="muted klein-text">In jeder Runde beantwortet jeder Spieler eine Frage.</p>
+    <p class="muted klein-text">
+      {gleichzeitig ? 'In jeder Runde beantworten alle dieselbe Frage.' : 'In jeder Runde beantwortet jeder Spieler eine Frage.'}
+    </p>
     <div class="segment" role="radiogroup" aria-labelledby="runden-titel">
       {#each RUNDEN_OPTIONEN as r (r)}
         <button type="button" role="radio" aria-checked={runden === r} class:aktiv={runden === r} onclick={() => (runden = r)}>
@@ -232,7 +276,7 @@
     <h2 id="modus-titel">Kategorie-Wahl</h2>
     <div class="modi" role="radiogroup" aria-labelledby="modus-titel">
       {#each MODI as m (m.id)}
-        {@const gesperrt = m.id === 'vorgaenger' && spieler.length < 2}
+        {@const gesperrt = m.id === 'vorgaenger' && (anzahlSpieler < 2 || gleichzeitig)}
         <button
           type="button"
           role="radio"
@@ -243,7 +287,15 @@
           onclick={() => (modus = m.id)}
         >
           <span class="modus-titel">{m.titel}</span>
-          <span class="modus-text">{gesperrt ? 'Ab 2 Spielern möglich.' : m.text}</span>
+          <span class="modus-text">
+            {#if gesperrt}
+              {gleichzeitig ? 'Nur beim Ablauf „Reihum“ möglich.' : 'Ab 2 Spielern möglich.'}
+            {:else if gleichzeitig && m.id === 'selbst'}
+              Reihum wählt jeder die Kategorie für alle.
+            {:else}
+              {m.text}
+            {/if}
+          </span>
         </button>
       {/each}
     </div>
@@ -289,7 +341,11 @@
 
   <div class="unten">
     <button class="btn" type="submit" disabled={doppelt || fragenGewaehlt === 0}>Spiel starten</button>
-    <button type="button" class="textlink" onclick={onInfo}>Info, Quellen & Lizenzen</button>
+    {#if raum && onRaumSchliessen}
+      <button type="button" class="btn sekundaer" onclick={onRaumSchliessen}>Raum schliessen</button>
+    {:else}
+      <button type="button" class="textlink" onclick={onInfo}>Info, Quellen & Lizenzen</button>
+    {/if}
   </div>
 </form>
 
@@ -369,59 +425,12 @@
   .stufen {
     grid-column: 1 / -1;
   }
-  .stufen button {
-    font-size: 1rem;
-    min-height: 48px;
-  }
-  .fein {
-    grid-column: 1 / -1;
-  }
-  .fein summary {
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-weight: 600;
-    color: var(--text-2);
-  }
-  .fein summary::before {
-    content: '▸';
-    margin-right: 6px;
-  }
-  .fein[open] summary::before {
-    content: '▾';
-  }
-  .fein[open] summary {
-    margin-bottom: 8px;
-  }
-  .anzahl {
-    color: var(--accent);
-  }
-  .fein-liste {
-    list-style: none;
+  .stufen-liste {
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .fein-zeile {
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding-left: 8px;
-    border-left: 3px solid transparent;
-  }
-  .fein-zeile.abweichend {
-    border-left-color: var(--accent);
-  }
-  .fein-name {
-    font-size: 0.95rem;
-    overflow-wrap: anywhere;
-  }
-  .zuruecksetzen {
-    min-height: 48px;
-    align-self: flex-start;
   }
   .segment button.aktiv {
     background: var(--accent);
