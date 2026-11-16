@@ -4,24 +4,6 @@
  "generiert_am": "2026-11-16T13:13:05Z",
  "fragen": [
   {
-   "id": "wp-041b1fb034",
-   "kategorie": "natur",
-   "frage": "Von welchem Kontinent stammen die Wildarten, aus denen die Kulturheidelbeeren im Supermarkt gezüchtet wurden?",
-   "antworten": [
-    "Asien",
-    "Australien",
-    "Südamerika",
-    "Nordamerika"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Heidelbeere",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Heidelbeere",
-   "quelle_id": "Q5413585"
-  },
-  {
    "id": "wp-055e88cf5b",
    "kategorie": "natur",
    "frage": "Zu welcher Pflanzenfamilie gehört der Mandelbaum?",
@@ -202,24 +184,6 @@
    "quelle_id": "Q46871"
   },
   {
-   "id": "wp-127048cd36",
-   "kategorie": "natur",
-   "frage": "Welcher Teil der Süssholzpflanze wird zur Herstellung von Lakritze verwendet?",
-   "antworten": [
-    "Die Blätter",
-    "Die Samen",
-    "Die Wurzel",
-    "Die Blüten"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Echtes_S%C3%BC%C3%9Fholz",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Echtes Süßholz",
-   "quelle_id": "Q257106"
-  },
-  {
    "id": "wp-1bd074a8c9",
    "kategorie": "natur",
    "frage": "Auf welche Sprache geht das Wort «Pistazie» ursprünglich zurück?",
@@ -326,24 +290,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Muskatnussbaum",
    "quelle_id": "Q2724976"
-  },
-  {
-   "id": "wp-203a1b8e9f",
-   "kategorie": "natur",
-   "frage": "Welche Farbe haben die Blüten des Schwarzen Holunders?",
-   "antworten": [
-    "Rosa",
-    "Violett",
-    "Hellblau",
-    "Weiss"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Schwarzer_Holunder",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Schwarzer Holunder",
-   "quelle_id": "Q22701"
   },
   {
    "id": "wp-24aeef543d",
@@ -706,24 +652,6 @@
    "quelle_id": "Q156807"
   },
   {
-   "id": "wp-4415d66885",
-   "kategorie": "natur",
-   "frage": "Auf der 2-Euro-Münze welches Landes ist die Moltebeere abgebildet?",
-   "antworten": [
-    "Irland",
-    "Lettland",
-    "Estland",
-    "Finnland"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Moltebeere",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Moltebeere",
-   "quelle_id": "Q160092"
-  },
-  {
    "id": "wp-45d3f3f7d4",
    "kategorie": "natur",
    "frage": "Auf welchem Kontinent ist Reis vor allem ein Grundnahrungsmittel?",
@@ -794,24 +722,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Schwarzer Holunder",
    "quelle_id": "Q22701"
-  },
-  {
-   "id": "wp-539a4e93f6",
-   "kategorie": "natur",
-   "frage": "Welches spanische Getränk wird in der Region Valencia traditionell aus Erdmandeln hergestellt?",
-   "antworten": [
-    "Sidra",
-    "Sangria",
-    "Orujo",
-    "Horchata"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Erdmandel",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Erdmandel",
-   "quelle_id": "Q1165724"
   },
   {
    "id": "wp-5430174590",
@@ -1570,24 +1480,6 @@
    "quelle_id": "Q25356"
   },
   {
-   "id": "wp-a358d19bce",
-   "kategorie": "natur",
-   "frage": "Welche Farbe haben die reifen Beeren des Sanddorns typischerweise?",
-   "antworten": [
-    "Schwarzviolett",
-    "Weiss",
-    "Orange",
-    "Dunkelblau"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Sanddorn",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Sanddorn",
-   "quelle_id": "Q165378"
-  },
-  {
    "id": "wp-a417d75f58",
    "kategorie": "natur",
    "frage": "Wie viele Beine hat ein ausgewachsenes Insekt?",
@@ -1604,24 +1496,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Insekten",
    "quelle_id": "Q1390"
-  },
-  {
-   "id": "wp-a4d7c6246d",
-   "kategorie": "natur",
-   "frage": "Welche Süssigkeit wird aus dem Echten Süssholz gewonnen?",
-   "antworten": [
-    "Nougat",
-    "Karamell",
-    "Lakritze",
-    "Marzipan"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Echtes_S%C3%BC%C3%9Fholz",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Echtes Süßholz",
-   "quelle_id": "Q257106"
   },
   {
    "id": "wp-aa7245fa74",
@@ -1820,24 +1694,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Schildkröten",
    "quelle_id": "Q223044"
-  },
-  {
-   "id": "wp-c071782f28",
-   "kategorie": "natur",
-   "frage": "Unter welchem anderen Namen ist die Erdmandel ebenfalls bekannt?",
-   "antworten": [
-    "Paranuss",
-    "Pekannuss",
-    "Macadamianuss",
-    "Tigernuss"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Erdmandel",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Erdmandel",
-   "quelle_id": "Q1165724"
   },
   {
    "id": "wp-c21d0c0415",
@@ -2324,24 +2180,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Mangostane",
    "quelle_id": "Q170662"
-  },
-  {
-   "id": "wp-f6a79c09e2",
-   "kategorie": "natur",
-   "frage": "Unter welchem Namen ist die Aprikose vor allem in Österreich und Bayern bekannt?",
-   "antworten": [
-    "Ringlotte",
-    "Zwetschge",
-    "Mirabelle",
-    "Marille"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Aprikose",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Aprikose",
-   "quelle_id": "Q37453"
   },
   {
    "id": "wp-f77e84d634",
