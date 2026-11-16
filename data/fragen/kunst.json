@@ -292,24 +292,6 @@
    "quelle_id": "Q151047"
   },
   {
-   "id": "wd-39cf2fa423",
-   "kategorie": "kunst",
-   "frage": "Wer komponierte die Oper «Tosca»?",
-   "antworten": [
-    "Georges Bizet",
-    "Pietro Mascagni",
-    "Giacomo Puccini",
-    "Giuseppe Verdi"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikidata",
-   "quelle_url": "https://de.wikipedia.org/wiki/Tosca",
-   "lizenz": "CC0",
-   "quelle_titel": "Tosca",
-   "quelle_id": "Q192941"
-  },
-  {
    "id": "wd-3a5ed03103",
    "kategorie": "kunst",
    "frage": "Wer schrieb «Momo»?",
@@ -326,42 +308,6 @@
    "lizenz": "CC0",
    "quelle_titel": "Momo (Roman)",
    "quelle_id": "Q874381"
-  },
-  {
-   "id": "wd-3b0889cc2f",
-   "kategorie": "kunst",
-   "frage": "Wer schrieb «Der Report der Magd»?",
-   "antworten": [
-    "Margaret Atwood",
-    "Paulo Coelho",
-    "Michael Ende",
-    "Thomas Harris"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikidata",
-   "quelle_url": "https://de.wikipedia.org/wiki/Der_Report_der_Magd",
-   "lizenz": "CC0",
-   "quelle_titel": "Der Report der Magd",
-   "quelle_id": "Q1541914"
-  },
-  {
-   "id": "wd-3e2dc60b6d",
-   "kategorie": "kunst",
-   "frage": "Wer schrieb «Frankenstein»?",
-   "antworten": [
-    "Hans Christian Andersen",
-    "Mary Shelley",
-    "Alexandre Dumas der Ältere",
-    "Edgar Allan Poe"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikidata",
-   "quelle_url": "https://de.wikipedia.org/wiki/Frankenstein_(Roman)",
-   "lizenz": "CC0",
-   "quelle_titel": "Frankenstein (Roman)",
-   "quelle_id": "Q150827"
   },
   {
    "id": "wd-42a2da33e6",
@@ -688,24 +634,6 @@
    "quelle_id": "Q45585"
   },
   {
-   "id": "wd-8b6725b8f3",
-   "kategorie": "kunst",
-   "frage": "Wer malte das Gemälde «Die Nachtwache»?",
-   "antworten": [
-    "Diego Velázquez",
-    "Sandro Botticelli",
-    "Jan Vermeer",
-    "Rembrandt van Rijn"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikidata",
-   "quelle_url": "https://de.wikipedia.org/wiki/Die_Nachtwache",
-   "lizenz": "CC0",
-   "quelle_titel": "Die Nachtwache",
-   "quelle_id": "Q219831"
-  },
-  {
    "id": "wd-8b8a771c18",
    "kategorie": "kunst",
    "frage": "Wer malte das Gemälde «Das Floss der Medusa»?",
@@ -794,24 +722,6 @@
    "lizenz": "CC0",
    "quelle_titel": "Rebecca (Roman)",
    "quelle_id": "Q1334940"
-  },
-  {
-   "id": "wd-a8e0b1548f",
-   "kategorie": "kunst",
-   "frage": "Wer malte das Gemälde «Das Mädchen mit dem Perlenohrgehänge»?",
-   "antworten": [
-    "Eugène Delacroix",
-    "Caspar David Friedrich",
-    "Raffael",
-    "Jan Vermeer"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikidata",
-   "quelle_url": "https://de.wikipedia.org/wiki/Das_M%C3%A4dchen_mit_dem_Perlenohrring",
-   "lizenz": "CC0",
-   "quelle_titel": "Das Mädchen mit dem Perlenohrring",
-   "quelle_id": "Q185372"
   },
   {
    "id": "wd-b221f33e94",
@@ -922,24 +832,6 @@
    "quelle_id": "Q1513820"
   },
   {
-   "id": "wd-c36427c95b",
-   "kategorie": "kunst",
-   "frage": "Wer schrieb «Buddenbrooks»?",
-   "antworten": [
-    "Robert Musil",
-    "Marcel Proust",
-    "Thomas Mann",
-    "Hermann Hesse"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikidata",
-   "quelle_url": "https://de.wikipedia.org/wiki/Buddenbrooks",
-   "lizenz": "CC0",
-   "quelle_titel": "Buddenbrooks",
-   "quelle_id": "Q326909"
-  },
-  {
    "id": "wd-c3e0685267",
    "kategorie": "kunst",
    "frage": "Wer schrieb «Kamasutra»?",
@@ -992,24 +884,6 @@
    "lizenz": "CC0",
    "quelle_titel": "Göttliche Komödie",
    "quelle_id": "Q40185"
-  },
-  {
-   "id": "wd-d401b8ca48",
-   "kategorie": "kunst",
-   "frage": "Wer schrieb «Höhlengleichnis»?",
-   "antworten": [
-    "Ovid",
-    "Vergil",
-    "Mark Aurel",
-    "Platon"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikidata",
-   "quelle_url": "https://de.wikipedia.org/wiki/H%C3%B6hlengleichnis",
-   "lizenz": "CC0",
-   "quelle_titel": "Höhlengleichnis",
-   "quelle_id": "Q22738"
   },
   {
    "id": "wd-d4c5b23d8d",
@@ -1154,24 +1028,6 @@
    "lizenz": "CC0",
    "quelle_titel": "Stolz und Vorurteil",
    "quelle_id": "Q170583"
-  },
-  {
-   "id": "wd-f979592fdb",
-   "kategorie": "kunst",
-   "frage": "Wer malte das Gemälde «Salvator Mundi»?",
-   "antworten": [
-    "Rembrandt van Rijn",
-    "Leonardo da Vinci",
-    "Raffael",
-    "Diego Velázquez"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikidata",
-   "quelle_url": "https://de.wikipedia.org/wiki/Salvator_mundi_(Gem%C3%A4lde)",
-   "lizenz": "CC0",
-   "quelle_titel": "Salvator mundi (Gemälde)",
-   "quelle_id": "Q1892745"
   },
   {
    "id": "wd-fc31b5c71a",
