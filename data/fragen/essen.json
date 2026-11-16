@@ -220,24 +220,6 @@
    "quelle_id": "Q93235"
   },
   {
-   "id": "wp-13cbbb1027",
-   "kategorie": "essen",
-   "frage": "Zu welcher Pflanzenfamilie gehört der Haselnussstrauch?",
-   "antworten": [
-    "Rosengewächse",
-    "Birkengewächse",
-    "Buchengewächse",
-    "Walnussgewächse"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Gemeine_Hasel",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Gemeine Hasel",
-   "quelle_id": "Q124969"
-  },
-  {
    "id": "wp-15d131c605",
    "kategorie": "essen",
    "frage": "Welches süsse Gebäck aus dünnen Teigschichten mit Nussfüllung wird in Honig oder Zuckersirup eingelegt?",
@@ -1084,24 +1066,6 @@
    "quelle_id": "Q37453"
   },
   {
-   "id": "wp-8c0f6dd755",
-   "kategorie": "essen",
-   "frage": "Welcher deutsche Chemiker stellte 1828 erstmals Harnstoff künstlich im Labor her?",
-   "antworten": [
-    "August Kekulé",
-    "Friedrich Wöhler",
-    "Justus von Liebig",
-    "Robert Bunsen"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Harnstoff",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Harnstoff",
-   "quelle_id": "Q48318"
-  },
-  {
    "id": "wp-8d9b5aeede",
    "kategorie": "essen",
    "frage": "Mit welcher Frucht wird die Nashi-Birne wegen ihrer Form und ihres Geschmacks oft verglichen?",
@@ -1822,24 +1786,6 @@
    "quelle_id": "Q6097"
   },
   {
-   "id": "wp-de637cc8f9",
-   "kategorie": "essen",
-   "frage": "Aus welchen zwei Zitrusfrüchten ist die Orange durch Kreuzung entstanden?",
-   "antworten": [
-    "Zitrone und Mandarine",
-    "Limette und Pampelmuse",
-    "Mandarine und Pampelmuse",
-    "Zitrone und Kumquat"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Orange_(Frucht)",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Orange (Frucht)",
-   "quelle_id": "Q13191"
-  },
-  {
    "id": "wp-dfcb0a4f59",
    "kategorie": "essen",
    "frage": "Weshalb ist Hüttenkäse bei Sportlern zum Muskelaufbau beliebt?",
@@ -2002,24 +1948,6 @@
    "quelle_id": "Q185749"
   },
   {
-   "id": "wp-f3ec2574d9",
-   "kategorie": "essen",
-   "frage": "Warum raten Naturschützer davon ab, Kirschlorbeer als Hecke im Garten zu pflanzen?",
-   "antworten": [
-    "Er entzieht dem Boden alle Nährstoffe",
-    "Er lockt viele Gartenschädlinge an",
-    "Er löst häufig Pollenallergien aus",
-    "Er verwildert leicht und ist invasiv"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Lorbeerkirsche",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Lorbeerkirsche",
-   "quelle_id": "Q157508"
-  },
-  {
    "id": "wp-f89bcd5b9d",
    "kategorie": "essen",
    "frage": "Welche Backzutat wird aus der äusseren Fruchtschale der Pomeranze hergestellt?",
@@ -2036,24 +1964,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Bitterorange",
    "quelle_id": "Q147096"
-  },
-  {
-   "id": "wp-fb7135337c",
-   "kategorie": "essen",
-   "frage": "Wofür wird Harnstoff (Urea) in Salben und Cremes vor allem eingesetzt?",
-   "antworten": [
-    "Gegen fettige Haut",
-    "Gegen trockene, rissige Haut",
-    "Als UV-Sonnenschutz",
-    "Gegen Insektenstiche"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Harnstoff",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Harnstoff",
-   "quelle_id": "Q48318"
   }
  ]
 }
