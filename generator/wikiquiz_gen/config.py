@@ -66,5 +66,6 @@ SCHWELLEN["naturwissenschaften"] = Schwellen(min_pageviews=100.0)
 # Schweiz: Schweizer Themen haben weniger Sprachversionen und Aufrufe als weltweit bekannte
 # (Bundesräte, Kantone, Pässe). Die Bekanntheit prüft zusätzlich das LLM (Allgemeinwissen ≥ 3).
 SCHWELLEN["schweiz"] = Schwellen(min_sitelinks=15, min_pageviews=100.0)
-# Star Wars: Filme und Hauptfiguren sind weltweit bekannt, Nebenfiguren und Romane nicht
-SCHWELLEN["starwars"] = Schwellen(min_sitelinks=20, min_pageviews=100.0)
+# Star Wars: Filme und Serien sind weltweit bekannt; Figuren haben auf de.wikipedia meist keinen
+# eigenen Artikel. Bei 50 Aufrufen/Tag kommen u. a. „Jedi“, „Todesstern“ und die Spiele dazu (31 statt 22 Artikel)
+SCHWELLEN["starwars"] = Schwellen(min_sitelinks=20, min_pageviews=50.0)

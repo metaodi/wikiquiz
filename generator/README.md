@@ -133,7 +133,7 @@ Schwellen pro Kategorie in `wikiquiz_gen/config.py` (per CLI übersteuerbar):
 | Schwelle | Standard | Bemerkung |
 |---|---|---|
 | `min_sitelinks` | 30 (Sport, Kunst: 50; Schweiz: 15; Star Wars: 20) | wichtigster Indikator, direkt aus SPARQL. Höher, wo Seitenaufrufe kurzlebig sind (Sport, zeitgenössische Kunst und Literatur); tiefer bei Schweizer Themen, die in wenigen Sprachen beschrieben sind |
-| `min_pageviews` | 200/Tag (Naturwissenschaften, Schweiz, Star Wars: 100) | abgefragtes Thema, Ø der letzten 12 vollen Monate auf de.wikipedia. Naturwissenschaftliche Artikel werden deutlich seltener aufgerufen (Niels Bohr, Enrico Fermi, Elektron < 200) |
+| `min_pageviews` | 200/Tag (Naturwissenschaften, Schweiz: 100; Star Wars: 50) | abgefragtes Thema, Ø der letzten 12 vollen Monate auf de.wikipedia. Naturwissenschaftliche Artikel werden deutlich seltener aufgerufen (Niels Bohr, Enrico Fermi, Elektron < 200) |
 | `min_pageviews_antwort` | 100/Tag | richtige Antwort (z. B. Hauptstadt) – Städteartikel werden seltener aufgerufen als Länderartikel (Ankara ≈ 170, Nairobi ≈ 150) |
 | `min_zeichen` | 3000 | Klartext, geschätzt als 60 % der Wikitext-Länge (`prop=info`, 50 Titel/Request) |
 
