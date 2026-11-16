@@ -1,8 +1,26 @@
 {
  "version": 1,
  "kategorie": "essen",
- "generiert_am": "2026-11-16T11:49:01Z",
+ "generiert_am": "2026-11-16T13:11:08Z",
  "fragen": [
+  {
+   "id": "wp-0066cbce3b",
+   "kategorie": "essen",
+   "frage": "Botanisch gesehen ist die Erdbeere keine echte Beere. Zu welcher Fruchtform zählt sie stattdessen?",
+   "antworten": [
+    "Kapselfrucht",
+    "Sammelnussfrucht",
+    "Steinfrucht",
+    "Hülsenfrucht"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Erdbeeren",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Erdbeeren",
+   "quelle_id": "Q745"
+  },
   {
    "id": "wp-0154938482",
    "kategorie": "essen",
@@ -40,6 +58,24 @@
    "quelle_id": "Q8486"
   },
   {
+   "id": "wp-0348ccde2e",
+   "kategorie": "essen",
+   "frage": "In welchem Land werden Açaí-Früchte vor allem als Nahrungsmittel genutzt?",
+   "antworten": [
+    "Argentinien",
+    "Chile",
+    "Brasilien",
+    "Mexiko"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Euterpe_oleracea",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Euterpe oleracea",
+   "quelle_id": "Q33943"
+  },
+  {
    "id": "wp-06ba047e90",
    "kategorie": "essen",
    "frage": "Zu welcher Wurstart zählt der Fleischkäse?",
@@ -56,6 +92,42 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Fleischkäse",
    "quelle_id": "Q681841"
+  },
+  {
+   "id": "wp-075e68cfdf",
+   "kategorie": "essen",
+   "frage": "Zu welcher Pflanzenfamilie gehört die Pflanze, an der die Drachenfrucht wächst?",
+   "antworten": [
+    "Rosengewächse",
+    "Bromeliengewächse",
+    "Palmengewächse",
+    "Kakteengewächse"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Drachenfrucht",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Drachenfrucht",
+   "quelle_id": "Q232755"
+  },
+  {
+   "id": "wp-092c51af88",
+   "kategorie": "essen",
+   "frage": "Welcher bekannten Beere sehen die Früchte des Maulbeerbaums äusserlich ähnlich?",
+   "antworten": [
+    "Stachelbeere",
+    "Johannisbeere",
+    "Heidelbeere",
+    "Brombeere"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Maulbeeren",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Maulbeeren",
+   "quelle_id": "Q44789"
   },
   {
    "id": "wp-0b4c2dbaaf",
@@ -76,6 +148,24 @@
    "quelle_id": "Q10223"
   },
   {
+   "id": "wp-0bdd123cbb",
+   "kategorie": "essen",
+   "frage": "An welcher Art von Pflanze wachsen die als «Superfood» bekannten Açaí-Beeren?",
+   "antworten": [
+    "An einer Kletterpflanze",
+    "An einem Kaktus",
+    "An einer Palme",
+    "An einem Dornenstrauch"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Euterpe_oleracea",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Euterpe oleracea",
+   "quelle_id": "Q33943"
+  },
+  {
    "id": "wp-0ebcf3f8aa",
    "kategorie": "essen",
    "frage": "Welche Dip-Creme wird traditionell aus Avocados zubereitet?",
@@ -92,6 +182,42 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Avocado",
    "quelle_id": "Q37153"
+  },
+  {
+   "id": "wp-0efd691c3e",
+   "kategorie": "essen",
+   "frage": "Zu welcher Pflanzenfamilie gehören die Apfelbeeren (Aronia)?",
+   "antworten": [
+    "Stachelbeergewächse",
+    "Heidekrautgewächse",
+    "Rosengewächse",
+    "Nachtschattengewächse"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Apfelbeeren",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Apfelbeeren",
+   "quelle_id": "Q158983"
+  },
+  {
+   "id": "wp-12c9dbcf3e",
+   "kategorie": "essen",
+   "frage": "Mit welcher bekannten Waldbeere ist die Preiselbeere am engsten verwandt (gleiche Pflanzengattung)?",
+   "antworten": [
+    "Walderdbeere",
+    "Himbeere",
+    "Heidelbeere",
+    "Brombeere"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Preiselbeere",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Preiselbeere",
+   "quelle_id": "Q93235"
   },
   {
    "id": "wp-15d131c605",
@@ -130,6 +256,24 @@
    "quelle_id": "Q216781"
   },
   {
+   "id": "wp-1f3f10cb47",
+   "kategorie": "essen",
+   "frage": "Was bildet sich bei der Fermentation von Nattō typischerweise um die Bohnen?",
+   "antworten": [
+    "Ein weisser Schimmelpelz",
+    "Eine glänzende Ölschicht",
+    "Eine harte Salzkruste",
+    "Ein fädenziehender Schleim"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Natt%C5%8D",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Nattō",
+   "quelle_id": "Q505711"
+  },
+  {
    "id": "wp-2222552e0a",
    "kategorie": "essen",
    "frage": "Aus welchem Körperteil von Wiederkäuern werden Kutteln hauptsächlich zubereitet?",
@@ -164,6 +308,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Panettone",
    "quelle_id": "Q854342"
+  },
+  {
+   "id": "wp-30496c3bad",
+   "kategorie": "essen",
+   "frage": "Welcher Likör wird aus Schalen und Saft der Pomeranze (Bitterorange) hergestellt?",
+   "antworten": [
+    "Sambuca",
+    "Amaretto",
+    "Limoncello",
+    "Curaçao"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bitterorange",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Bitterorange",
+   "quelle_id": "Q147096"
   },
   {
    "id": "wp-3333077cf4",
@@ -218,6 +380,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Mezcal",
    "quelle_id": "Q726413"
+  },
+  {
+   "id": "wp-3af3a079ff",
+   "kategorie": "essen",
+   "frage": "Worauf bezieht sich der Name «Granatapfel» ursprünglich?",
+   "antworten": [
+    "Auf die Stadt Granada",
+    "Auf die tiefrote Farbe",
+    "Auf die vielen Samenkörner",
+    "Auf die harte Schale"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Granatapfel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Granatapfel",
+   "quelle_id": "Q13188"
   },
   {
    "id": "wp-3b031cdfb3",
@@ -328,6 +508,42 @@
    "quelle_id": "Q1578239"
   },
   {
+   "id": "wp-3f664aaaa7",
+   "kategorie": "essen",
+   "frage": "Welchen Alkoholgehalt hat ein typischer Wodka?",
+   "antworten": [
+    "Etwa 40 Volumenprozent",
+    "Etwa 60 Volumenprozent",
+    "Etwa 20 Volumenprozent",
+    "Etwa 80 Volumenprozent"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wodka",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Wodka",
+   "quelle_id": "Q374"
+  },
+  {
+   "id": "wp-42c317cdf4",
+   "kategorie": "essen",
+   "frage": "Welche bekannte Teesorte wird klassisch mit dem Öl der Bergamotte aromatisiert?",
+   "antworten": [
+    "Assam",
+    "Darjeeling",
+    "English Breakfast",
+    "Earl Grey"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bergamotte_(Zitrusfr%C3%BCchte)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Bergamotte (Zitrusfrüchte)",
+   "quelle_id": "Q109196"
+  },
+  {
    "id": "wp-436328c1e0",
    "kategorie": "essen",
    "frage": "Welches äussere Merkmal ist typisch für Hüttenkäse?",
@@ -400,6 +616,42 @@
    "quelle_id": "Q131607"
   },
   {
+   "id": "wp-54c43d36c9",
+   "kategorie": "essen",
+   "frage": "Welcher Stoff in Chilis löst das Schärfegefühl aus, das auf der Scoville-Skala gemessen wird?",
+   "antworten": [
+    "Koffein",
+    "Solanin",
+    "Capsaicin",
+    "Theobromin"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Scoville-Skala",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Scoville-Skala",
+   "quelle_id": "Q207047"
+  },
+  {
+   "id": "wp-58381d46bc",
+   "kategorie": "essen",
+   "frage": "Auf welchem Kontinent ist die Ananas ursprünglich heimisch?",
+   "antworten": [
+    "Amerika",
+    "Afrika",
+    "Australien",
+    "Asien"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ananas",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ananas",
+   "quelle_id": "Q1493"
+  },
+  {
    "id": "wp-5b5721a531",
    "kategorie": "essen",
    "frage": "Aus welcher Sprache wurde das deutsche Wort «Tee» im 17. Jahrhundert übernommen?",
@@ -418,6 +670,42 @@
    "quelle_id": "Q6097"
   },
   {
+   "id": "wp-5d88d46a32",
+   "kategorie": "essen",
+   "frage": "Welche Frucht wird im Handel oft einfach nur «Physalis» genannt?",
+   "antworten": [
+    "Cranberry",
+    "Kumquat",
+    "Kiwano",
+    "Kapstachelbeere"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Blasenkirschen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Blasenkirschen",
+   "quelle_id": "Q158663"
+  },
+  {
+   "id": "wp-5f70b61dee",
+   "kategorie": "essen",
+   "frage": "Weshalb wird die Zitrusfrucht Bergamotte hauptsächlich angebaut?",
+   "antworten": [
+    "Wegen ihres süssen Safts",
+    "Wegen des Öls in ihrer Schale",
+    "Wegen ihres Fruchtfleischs",
+    "Wegen ihrer essbaren Samen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bergamotte_(Zitrusfr%C3%BCchte)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Bergamotte (Zitrusfrüchte)",
+   "quelle_id": "Q109196"
+  },
+  {
    "id": "wp-69a99b2969",
    "kategorie": "essen",
    "frage": "In welchem Teil Italiens ist Polenta traditionell besonders beliebt?",
@@ -434,6 +722,114 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Polenta",
    "quelle_id": "Q131607"
+  },
+  {
+   "id": "wp-6ae999c9fa",
+   "kategorie": "essen",
+   "frage": "Mit welcher dieser Pflanzen ist die Erdnuss botanisch eng verwandt?",
+   "antworten": [
+    "Walnuss",
+    "Haselnuss",
+    "Erbse",
+    "Kartoffel"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Erdnuss",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Erdnuss",
+   "quelle_id": "Q37383"
+  },
+  {
+   "id": "wp-6e3033e09d",
+   "kategorie": "essen",
+   "frage": "Zu welcher Pflanzenfamilie gehört die Physalis, die man als Obst oder Dekoration kennt?",
+   "antworten": [
+    "Nachtschattengewächse",
+    "Kürbisgewächse",
+    "Rosengewächse",
+    "Heidekrautgewächse"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Blasenkirschen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Blasenkirschen",
+   "quelle_id": "Q158663"
+  },
+  {
+   "id": "wp-6e7173ccd2",
+   "kategorie": "essen",
+   "frage": "Welche Beere wird im Handel oft als «Kulturpreiselbeere» bezeichnet, obwohl sie gar keine Preiselbeere ist?",
+   "antworten": [
+    "Johannisbeere",
+    "Cranberry",
+    "Heidelbeere",
+    "Holunderbeere"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Preiselbeere",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Preiselbeere",
+   "quelle_id": "Q93235"
+  },
+  {
+   "id": "wp-748d5e195c",
+   "kategorie": "essen",
+   "frage": "Zu welcher Pflanzenfamilie gehört die Paprika?",
+   "antworten": [
+    "Nachtschattengewächse",
+    "Kürbisgewächse",
+    "Doldenblütler",
+    "Kreuzblütler"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Paprika",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Paprika",
+   "quelle_id": "Q201959"
+  },
+  {
+   "id": "wp-75ad1f0440",
+   "kategorie": "essen",
+   "frage": "Welche Pflanzenfarbstoffe sorgen dafür, dass wilde Heidelbeeren Mund und Zähne blau färben?",
+   "antworten": [
+    "Carotinoide",
+    "Xanthophylle",
+    "Chlorophylle",
+    "Anthocyane"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Heidelbeere",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Heidelbeere",
+   "quelle_id": "Q5413585"
+  },
+  {
+   "id": "wp-75e6ab8e76",
+   "kategorie": "essen",
+   "frage": "Aus welcher Pflanze wird Tequila gewonnen?",
+   "antworten": [
+    "Feigenkaktus",
+    "Mais",
+    "Blaue Agave",
+    "Zuckerrohr"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tequila",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tequila",
+   "quelle_id": "Q122195"
   },
   {
    "id": "wp-7622d7a758",
@@ -508,6 +904,78 @@
    "quelle_id": "Q37525"
   },
   {
+   "id": "wp-7d595ee2f1",
+   "kategorie": "essen",
+   "frage": "Aus welchem Land stammt die Nashi-Birne ursprünglich?",
+   "antworten": [
+    "Vietnam",
+    "China",
+    "Korea",
+    "Japan"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Nashi-Birne",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Nashi-Birne",
+   "quelle_id": "Q838963"
+  },
+  {
+   "id": "wp-808598106f",
+   "kategorie": "essen",
+   "frage": "Die Orange heisst auch «Apfelsine». Woher stammt dieser «Apfel» laut der wörtlichen Bedeutung des Namens?",
+   "antworten": [
+    "Aus Persien",
+    "Aus China",
+    "Aus Indien",
+    "Aus Spanien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Orange_(Frucht)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Orange (Frucht)",
+   "quelle_id": "Q13191"
+  },
+  {
+   "id": "wp-830aaf2c56",
+   "kategorie": "essen",
+   "frage": "Welche Farbe haben die Blüten des Schwarzen Holunders, aus denen man oft Sirup macht?",
+   "antworten": [
+    "Weiss bis gelblichweiss",
+    "Zartrosa bis pink",
+    "Hellblau bis bläulich",
+    "Hellviolett bis lila"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schwarzer_Holunder",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schwarzer Holunder",
+   "quelle_id": "Q22701"
+  },
+  {
+   "id": "wp-8473ab8d85",
+   "kategorie": "essen",
+   "frage": "Welcher Strauch wird wegen seiner dunklen Rinde im Gegensatz zum Weissdorn «Schwarzdorn» genannt?",
+   "antworten": [
+    "Berberitze",
+    "Schlehe",
+    "Holunder",
+    "Sanddorn"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wei%C3%9Fdorne",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Weißdorne",
+   "quelle_id": "Q132557"
+  },
+  {
    "id": "wp-878a18a78f",
    "kategorie": "essen",
    "frage": "An welches Gewürz erinnert der typische Geruch von Fenchel?",
@@ -544,6 +1012,96 @@
    "quelle_id": "Q470873"
   },
   {
+   "id": "wp-89a4ac69c2",
+   "kategorie": "essen",
+   "frage": "Was bedeutet das slawische Wort «Wodka» wörtlich übersetzt?",
+   "antworten": [
+    "Schlückchen",
+    "Wässerchen",
+    "Feuerchen",
+    "Tröpfchen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wodka",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Wodka",
+   "quelle_id": "Q374"
+  },
+  {
+   "id": "wp-8abff4b3c4",
+   "kategorie": "essen",
+   "frage": "Für die Zucht welcher Tiere werden die Blätter der Weissen Maulbeere traditionell verwendet?",
+   "antworten": [
+    "Honigbienen",
+    "Seidenraupen",
+    "Schildläuse",
+    "Mehlwürmer"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Maulbeeren",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Maulbeeren",
+   "quelle_id": "Q44789"
+  },
+  {
+   "id": "wp-8b2240c2ee",
+   "kategorie": "essen",
+   "frage": "Auf welches Land verweist der botanische Name der Aprikose, wo sie schon in der Antike angebaut wurde?",
+   "antworten": [
+    "Armenien",
+    "Georgien",
+    "Syrien",
+    "Persien"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Aprikose",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Aprikose",
+   "quelle_id": "Q37453"
+  },
+  {
+   "id": "wp-8d9b5aeede",
+   "kategorie": "essen",
+   "frage": "Mit welcher Frucht wird die Nashi-Birne wegen ihrer Form und ihres Geschmacks oft verglichen?",
+   "antworten": [
+    "Pfirsich",
+    "Apfel",
+    "Quitte",
+    "Aprikose"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Nashi-Birne",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Nashi-Birne",
+   "quelle_id": "Q838963"
+  },
+  {
+   "id": "wp-8dfcd95289",
+   "kategorie": "essen",
+   "frage": "Unter welchem Namen ist die gelblich-orange Frucht der Passionsblume bei uns meist im Handel?",
+   "antworten": [
+    "Physalis",
+    "Maracuja",
+    "Papaya",
+    "Guave"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Passiflora_edulis",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Passiflora edulis",
+   "quelle_id": "Q156790"
+  },
+  {
    "id": "wp-8eaafa00c0",
    "kategorie": "essen",
    "frage": "Wie alt können Olivenbäume werden?",
@@ -560,6 +1118,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Olivenbaum",
    "quelle_id": "Q37083"
+  },
+  {
+   "id": "wp-9224f39a32",
+   "kategorie": "essen",
+   "frage": "Unter welchem anderen Namen ist die Erdmandel im Handel ebenfalls bekannt?",
+   "antworten": [
+    "Pekannuss",
+    "Macadamianuss",
+    "Tigernuss",
+    "Paranuss"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Erdmandel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Erdmandel",
+   "quelle_id": "Q1165724"
   },
   {
    "id": "wp-92383941c9",
@@ -596,6 +1172,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Tupperware",
    "quelle_id": "Q1129117"
+  },
+  {
+   "id": "wp-96580cb6b3",
+   "kategorie": "essen",
+   "frage": "Zu welcher Fruchtart zählen die dunklen Früchte des Holunders aus botanischer Sicht?",
+   "antworten": [
+    "Kapselfrüchte",
+    "Beeren",
+    "Steinobst",
+    "Nüsse"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Holunder",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Holunder",
+   "quelle_id": "Q131448"
   },
   {
    "id": "wp-999630f789",
@@ -688,6 +1282,60 @@
    "quelle_id": "Q8486"
   },
   {
+   "id": "wp-a1d68d89aa",
+   "kategorie": "essen",
+   "frage": "Aus welcher Weltregion stammt die Drachenfrucht ursprünglich?",
+   "antworten": [
+    "Westafrika",
+    "Australien",
+    "Südostasien",
+    "Mittel- und Südamerika"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Drachenfrucht",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Drachenfrucht",
+   "quelle_id": "Q232755"
+  },
+  {
+   "id": "wp-a358d19bce",
+   "kategorie": "essen",
+   "frage": "Welche Farbe haben die reifen Beeren des Sanddorns typischerweise?",
+   "antworten": [
+    "Weiss",
+    "Schwarz",
+    "Orange",
+    "Dunkelblau"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sanddorn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sanddorn",
+   "quelle_id": "Q165378"
+  },
+  {
+   "id": "wp-a3c47cc5c6",
+   "kategorie": "essen",
+   "frage": "Aus welcher Weltregion stammt die Maracuja (Passionsfrucht) ursprünglich?",
+   "antworten": [
+    "Südamerika",
+    "Australien",
+    "Westafrika",
+    "Südostasien"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Passiflora_edulis",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Passiflora edulis",
+   "quelle_id": "Q156790"
+  },
+  {
    "id": "wp-a459cdc41b",
    "kategorie": "essen",
    "frage": "Zu welcher Obstgruppe gehört die Yuzu, die in der feinen Küche beliebt ist?",
@@ -704,6 +1352,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Yuzu",
    "quelle_id": "Q867776"
+  },
+  {
+   "id": "wp-a6c99535ad",
+   "kategorie": "essen",
+   "frage": "Aus welcher Region stammen die Apfelbeeren (Aronia) ursprünglich?",
+   "antworten": [
+    "Ostasien",
+    "Osteuropa",
+    "Skandinavien",
+    "Östliches Nordamerika"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Apfelbeeren",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Apfelbeeren",
+   "quelle_id": "Q158983"
   },
   {
    "id": "wp-a79c6bf7d4",
@@ -742,6 +1408,24 @@
    "quelle_id": "Q153"
   },
   {
+   "id": "wp-b029932c18",
+   "kategorie": "essen",
+   "frage": "Welche Teile des Schwarzen Nachtschattens enthalten besonders viele Giftstoffe?",
+   "antworten": [
+    "Die Wurzeln",
+    "Die reifen Beeren",
+    "Die Blüten",
+    "Die unreifen Beeren"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schwarzer_Nachtschatten",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schwarzer Nachtschatten",
+   "quelle_id": "Q146400"
+  },
+  {
    "id": "wp-b1975ec561",
    "kategorie": "essen",
    "frage": "In welcher heutigen Stadt entstand die moderne Form des Sushi, wie man sie heute kennt?",
@@ -758,6 +1442,60 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Sushi",
    "quelle_id": "Q46383"
+  },
+  {
+   "id": "wp-b1a4a18bc9",
+   "kategorie": "essen",
+   "frage": "Mit welcher Obstsorte wird die Kirschpflaume häufig verwechselt?",
+   "antworten": [
+    "Aprikose",
+    "Sauerkirsche",
+    "Mirabelle",
+    "Nektarine"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kirschpflaume",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kirschpflaume",
+   "quelle_id": "Q146951"
+  },
+  {
+   "id": "wp-b7a1606df6",
+   "kategorie": "essen",
+   "frage": "Welcher Giftstoff, bekannt aus grünen Kartoffeln, steckt im Schwarzen Nachtschatten?",
+   "antworten": [
+    "Solanin",
+    "Koffein",
+    "Blausäure",
+    "Nikotin"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schwarzer_Nachtschatten",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schwarzer Nachtschatten",
+   "quelle_id": "Q146400"
+  },
+  {
+   "id": "wp-b8c81d8e7a",
+   "kategorie": "essen",
+   "frage": "Aus welcher Weltgegend stammt die Wildart, aus der die Kulturblaubeeren im Supermarkt gezüchtet wurden?",
+   "antworten": [
+    "Skandinavien",
+    "Alpenraum",
+    "Ostasien",
+    "Nordamerika"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Heidelbeere",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Heidelbeere",
+   "quelle_id": "Q5413585"
   },
   {
    "id": "wp-bb38928255",
@@ -796,6 +1534,24 @@
    "quelle_id": "Q742127"
   },
   {
+   "id": "wp-be6672c939",
+   "kategorie": "essen",
+   "frage": "Unter welchem Namen kennt man die Aprikose vor allem in Österreich und Bayern?",
+   "antworten": [
+    "Ringlotte",
+    "Marille",
+    "Zwetschge",
+    "Mirabelle"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Aprikose",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Aprikose",
+   "quelle_id": "Q37453"
+  },
+  {
    "id": "wp-c0a0696a3e",
    "kategorie": "essen",
    "frage": "In welchem heutigen Schweizer Kanton wurde Absinth im 18. Jahrhundert ursprünglich hergestellt?",
@@ -812,6 +1568,60 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Absinth",
    "quelle_id": "Q170210"
+  },
+  {
+   "id": "wp-c138d3802a",
+   "kategorie": "essen",
+   "frage": "Welche italienische Region nahe dem Vesuv ist seit dem Altertum für ihren Haselnussanbau bekannt?",
+   "antworten": [
+    "Toskana",
+    "Kampanien",
+    "Apulien",
+    "Sizilien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gemeine_Hasel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gemeine Hasel",
+   "quelle_id": "Q124969"
+  },
+  {
+   "id": "wp-c1affe618c",
+   "kategorie": "essen",
+   "frage": "Nach welchem Land ist die Erdnuss in ihrem traditionellen Schweizer Namen benannt?",
+   "antworten": [
+    "Italien",
+    "Türkei",
+    "Spanien",
+    "Portugal"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Erdnuss",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Erdnuss",
+   "quelle_id": "Q37383"
+  },
+  {
+   "id": "wp-c33ceb86a0",
+   "kategorie": "essen",
+   "frage": "Aus der Kirschpflaume und welcher Wildfrucht ist unsere Pflaume (Zwetschge) hervorgegangen?",
+   "antworten": [
+    "Schlehe",
+    "Vogelbeere",
+    "Holunder",
+    "Hagebutte"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kirschpflaume",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kirschpflaume",
+   "quelle_id": "Q146951"
   },
   {
    "id": "wp-c67386fb31",
@@ -868,6 +1678,24 @@
    "quelle_id": "Q235169"
   },
   {
+   "id": "wp-ccf79db543",
+   "kategorie": "essen",
+   "frage": "Die Moltebeere ist auf der 2-Euro-Münze welches Landes abgebildet?",
+   "antworten": [
+    "Estland",
+    "Lettland",
+    "Finnland",
+    "Litauen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Moltebeere",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Moltebeere",
+   "quelle_id": "Q160092"
+  },
+  {
    "id": "wp-cfafcd50f9",
    "kategorie": "essen",
    "frage": "Wie heisst die kernlose Zuchtform der Kaki, die man schon im harten Zustand essen kann?",
@@ -920,6 +1748,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Absinth",
    "quelle_id": "Q170210"
+  },
+  {
+   "id": "wp-dc7fa0b800",
+   "kategorie": "essen",
+   "frage": "Aus welchen essbaren Knollen wird das spanische Getränk Horchata de Chufa hergestellt?",
+   "antworten": [
+    "Erdmandeln",
+    "Süsskartoffeln",
+    "Topinambur",
+    "Maniok"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Erdmandel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Erdmandel",
+   "quelle_id": "Q1165724"
   },
   {
    "id": "wp-dd5f4c38bf",
@@ -994,6 +1840,24 @@
    "quelle_id": "Q43300"
   },
   {
+   "id": "wp-e893a910e9",
+   "kategorie": "essen",
+   "frage": "Aus welchen Bohnen wird das traditionelle japanische Lebensmittel Nattō hergestellt?",
+   "antworten": [
+    "Mungbohnen",
+    "Kidneybohnen",
+    "Sojabohnen",
+    "Adzukibohnen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Natt%C5%8D",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Nattō",
+   "quelle_id": "Q505711"
+  },
+  {
    "id": "wp-ea09f45b82",
    "kategorie": "essen",
    "frage": "Was bedeutet der gälische Ausdruck, von dem das Wort «Whisky» abstammt?",
@@ -1048,6 +1912,24 @@
    "quelle_id": "Q170219"
   },
   {
+   "id": "wp-f1f27a06e5",
+   "kategorie": "essen",
+   "frage": "Wofür sind die Früchte des Sanddorns besonders bekannt?",
+   "antworten": [
+    "Hohen Vitamin-C-Gehalt",
+    "Hohen Vitamin-D-Gehalt",
+    "Hohen Kalziumgehalt",
+    "Hohen Eisengehalt"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sanddorn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sanddorn",
+   "quelle_id": "Q165378"
+  },
+  {
    "id": "wp-f22ebca909",
    "kategorie": "essen",
    "frage": "Aus welcher Region stammt das Sauermilchgetränk Kefir ursprünglich?",
@@ -1064,6 +1946,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Kefir",
    "quelle_id": "Q185749"
+  },
+  {
+   "id": "wp-f89bcd5b9d",
+   "kategorie": "essen",
+   "frage": "Welche Backzutat wird aus der äusseren Fruchtschale der Pomeranze hergestellt?",
+   "antworten": [
+    "Marzipan",
+    "Zitronat",
+    "Orangeat",
+    "Belegkirschen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bitterorange",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Bitterorange",
+   "quelle_id": "Q147096"
   }
  ]
 }
