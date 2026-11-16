@@ -430,3 +430,18 @@ def test_dedupe_gleiches_werk_wikidata_gegen_bestand():
     behalten, verworfen = deduplizieren([*bestand, *neu])
     assert behalten == [*bestand, *neu[2:]]
     assert [g for _, g in verworfen] == [f"gleiches werk wie {bestand[0].id}", f"gleiches werk wie {bestand[1].id}"]
+
+
+def test_film_gleiche_reihe():
+    from wikiquiz_gen.templates.sport import gleiche_reihe
+
+    # Titelanfang (P179 fehlt in Wikidata oft)
+    assert gleiche_reihe(("Der Pate", set()), ("Der Pate – Teil II", set()))
+    assert gleiche_reihe(("Terminator 2 – Tag der Abrechnung", set()), ("Terminator", set()))
+    # gemeinsame Reihe in Wikidata
+    assert gleiche_reihe(("Harry Potter und der Stein der Weisen", {"Q1"}),
+                         ("Harry Potter und die Kammer des Schreckens", {"Q1"}))
+    # verschiedene Filme, auch bei ähnlichem Anfang nur ganze Wörter
+    assert not gleiche_reihe(("Psycho", set()), ("Rebecca", set()))
+    assert not gleiche_reihe(("Alien", set()), ("Aliens – Die Rückkehr", set()))
+    assert not gleiche_reihe(("Der Pate", {"Q1"}), ("Schindlers Liste", {"Q2"}))

@@ -15,7 +15,7 @@ import logging
 import re
 
 from ..config import Schwellen
-from ..models import Frage, swiss
+from ..models import Frage, normalisiere, swiss
 from ..popularity import Kandidat
 from ..sparql import abfrage, artikel_url, qid, titel_aus_url
 from .base import Kontext, stufen_nach_rang, zeitgenossen
@@ -166,6 +166,27 @@ def wm(ktx: Kontext) -> tuple[list[Frage], list[Frage]]:
     return land_fragen, sieger_fragen
 
 
+def filmreihen(ktx: Kontext, qids: list[str]) -> dict[str, set[str]]:
+    """Filmreihen (Wikidata P179 „ist Teil der Serie“) pro Film, 200 Filme pro Abfrage."""
+    reihen: dict[str, set[str]] = {}
+    eindeutig = sorted(set(qids))
+    for i in range(0, len(eindeutig), 200):
+        werte = " ".join(f"wd:{q}" for q in eindeutig[i : i + 200])
+        for r in abfrage(ktx.http, f"SELECT ?item ?reihe WHERE {{ VALUES ?item {{ {werte} }} ?item wdt:P179 ?reihe. }}",
+                         ttl=30 * 86400):
+            reihen.setdefault(qid(r["item"]), set()).add(qid(r["reihe"]))
+    return reihen
+
+
+def gleiche_reihe(a: tuple[str, set[str]], b: tuple[str, set[str]]) -> bool:
+    """Zwei Filme (Label, Reihen) gehören zur selben Reihe: gemeinsame Reihe in Wikidata oder ein Titel
+    ist der Anfang des anderen („Terminator“ / „Terminator 2 – Tag der Abrechnung“; P179 fehlt oft)."""
+    if a[1] & b[1]:
+        return True
+    na, nb = f"{normalisiere(a[0])} ", f"{normalisiere(b[0])} "
+    return na.startswith(nb) or nb.startswith(na)
+
+
 def film(ktx: Kontext) -> list[Frage]:
     rows = abfrage(ktx.http, f"""
 SELECT ?item ?label ?article ?sl ?person ?pl ?geboren (COUNT(DISTINCT ?p2) AS ?n) WHERE {{
@@ -181,15 +202,25 @@ SELECT ?item ?label ?article ?sl ?person ?pl ?geboren (COUNT(DISTINCT ?p2) AS ?n
     # Regisseure bekannter Filme (60+ Sprachversionen), nicht alle Personen mit Beruf „Filmregisseur“
     bekannte_filme = {k.qid for k in bekannt}
     pool = urheber_pool([r for r in rows if qid(r["item"]) in bekannte_filme])
+    reihen = filmreihen(ktx, list(bekannte_filme))
+    # Pro Regisseur die bereits gefragten Filme (Label, Reihen)
     fragen, pro_person = [], {}
     for k in sorted(bekannt, key=lambda k: -(k.pageviews or 0)):
         person, jahr = regie[k.qid]
-        if pro_person.get(person, 0) >= 2:  # sonst ständig Spielberg
+        bisher = pro_person.setdefault(person, [])
+        if len(bisher) >= 2:  # sonst ständig Spielberg
+            continue
+        # Fortsetzung mit gleicher Regie (Der Pate / Der Pate – Teil II): Kommen beide im selben Spiel,
+        # ist die zweite Frage geschenkt. Nur den bekannteren Film fragen.
+        diese = (k.label, reihen.get(k.qid, set()))
+        if any(gleiche_reihe(diese, f) for f in bisher):
+            ktx.protokoll.verwerfen(ktx.kategorie, "template:film", "fortsetzung mit gleicher regie",
+                                    {"qid": k.qid, "label": k.label, "regie": person})
             continue
         falsch = zeitgenossen(pool, jahr, {person}, ktx.rng("film", k.qid))
         if not falsch:
             continue
-        pro_person[person] = pro_person.get(person, 0) + 1
+        bisher.append(diese)
         fragen.append(_frage(ktx, k, f"Wer führte Regie beim Film «{swiss(k.label)}»?", person, falsch,
                              "film", k.pageviews or 0))
     return fragen
