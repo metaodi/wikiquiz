@@ -37,6 +37,8 @@ In der Cloud-Umgebung ist Chromium vorinstalliert – `playwright install` nicht
   Rechtschreibung: immer „ss“, **nie „ß“** (ein E2E-Test und der Generator prüfen das). Umlaute in Bezeichnern
   werden umschrieben (`ergaenzen`, `Uebergabe.svelte`).
 - **Commit-Messages:** kurzer deutscher Satz im Infinitiv/Imperativ-Stil, z. B. „Sitelinks über SPARQL statt wbgetentities“.
+- **Pull Requests** folgen `.github/pull_request_template.md`: Punkte nur abhaken, wenn sie wirklich
+  ausgeführt wurden, nicht zutreffende durchstreichen. Fragen-PRs erzeugt `fragen.yml` mit eigener Prüfliste.
 - **Spiellogik** (`app/src/lib/game.ts`) bleibt aus reinen Funktionen; Zeit und Zufall werden hereingereicht.
   Zeitlimit, Punkteformel, Runden und Farben gehören in `app/src/lib/config.ts`.
 - **`localStorage`**-Zugriffe nur über `app/src/lib/storage.ts` (alles in try/catch). Schlüssel sind versioniert

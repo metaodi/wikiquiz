@@ -57,7 +57,7 @@ Ausgaben in `out/`: `rejected.jsonl` (alle verworfenen Kandidaten und Fragen mit
 `.github/workflows/fragen.yml`, manuell unter *Actions → Fragen generieren → Run workflow*:
 Kategorie (oder „alle“), Quelle, Zielbestand, max. Artikel, Modus (`ergaenzen`/`ersetzen`, siehe oben), Trockenlauf.
 Wikidata-Läufe brauchen kein LLM und kosten nichts. Pro Kategorie entsteht ein
-Pull Request mit Zusammenfassung und Stichprobe; `rejected.jsonl` hängt als Artifact am Lauf.
+Pull Request mit Prüfliste, Zusammenfassung und Stichprobe; `rejected.jsonl` hängt als Artifact am Lauf.
 
 Einmalig nötig:
 - *Settings → Actions → General → Allow GitHub Actions to create and approve pull requests*

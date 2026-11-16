@@ -152,6 +152,15 @@ jobs:
           {
             echo "Automatisch erzeugte Fragen für **${{ matrix.kategorie }}** (Quelle: ${{ inputs.quelle }}, Modus: ${{ inputs.modus }}, Ziel ${{ inputs.ziel }}, max. ${{ inputs.max_artikel }} Artikel)."
             echo
+            # Prüfliste vor der Stichprobe, damit sie beim Kürzen auf 60'000 Zeichen erhalten bleibt
+            echo "## Prüfliste vor dem Mergen"
+            echo
+            echo "- [ ] Stichprobe durchgesehen: Fragen eindeutig, richtige Antwort stimmt, Distraktoren eindeutig falsch"
+            echo "- [ ] Allgemeinwissen statt Nischenwissen, Schwierigkeit plausibel"
+            echo "- [ ] Keine zeitabhängigen Fragen (amtierende Personen, aktuelle Rekorde)"
+            echo "- [ ] Keine Dubletten zu bestehenden Fragen"
+            echo "- [ ] \`rejected.jsonl\` überflogen: keine auffälligen Häufungen bei den Ablehnungsgründen"
+            echo
             cat generator/out/zusammenfassung.md
             echo
             if [ -f "generator/out/review/${{ matrix.kategorie }}-neu.md" ]; then
