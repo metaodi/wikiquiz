@@ -45,6 +45,18 @@ STARTKATEGORIEN: dict[str, list[tuple[str, int]]] = {
         ("Schlacht", 1),
         ("Revolution", 1),
         ("Herrscher", 1),
+        # Mehr Epochen, damit nicht NS-Zeit und Weltkriege überwiegen (siehe themen.py)
+        ("Altes Ägypten", 1),
+        ("Römisches Reich", 1),
+        ("Mittelalter", 1),
+        ("Kreuzzug", 0),
+        ("Frühe Neuzeit", 1),
+        ("Person der Reformation", 0),
+        ("Entdecker", 0),
+        ("Französische Revolution", 1),
+        ("Kalter Krieg", 0),
+        ("Schweizerische Geschichte", 1),
+        ("Person (Schweizer Geschichte)", 0),
     ],
     "sport": [
         ("Olympische Sportart", 0),
@@ -94,6 +106,8 @@ STICHWORTE: dict[str, dict[str, int]] = {
         "zahlentheorie": 2, "medizin": 1, "krankheit": 2, "erfind": 2, "informatik": 2,
         "chemisches element": 2, "planet": 2, "galaxie": 2, "geolog": 1, "anatomie": 2,
         "genetik": 2, "raumfahrt": 2, "technik": 1, "verbrennungsmotor": 2, "maschinenbau": 2,
+        # Flugzeugtypen (Boeing 747, F-14) gehören zur Technik, auch militärische
+        "erstflug": 2, "flugzeug": 2, "luftfahrzeug": 2,
         "nobelpreisträger für physik": 2, "nobelpreisträger für chemie": 2,
         "nobelpreisträger für physiologie": 2, "naturwissenschaftler": 2, "elektr": 1,
     },

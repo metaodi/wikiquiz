@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "geschichte",
- "generiert_am": "2026-11-16T06:02:43Z",
+ "generiert_am": "2026-11-16T07:54:25Z",
  "fragen": [
   {
    "id": "wp-0098785dd9",
@@ -166,24 +166,6 @@
    "quelle_id": "Q36724"
   },
   {
-   "id": "wp-0e431a70e4",
-   "kategorie": "geschichte",
-   "frage": "Welcher CDU-Politiker wurde im Mai 2025 Bundeskanzler der Bundesrepublik Deutschland?",
-   "antworten": [
-    "Friedrich Merz",
-    "Jens Spahn",
-    "Hendrik Wüst",
-    "Armin Laschet"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Friedrich_Merz",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Friedrich Merz",
-   "quelle_id": "Q566257"
-  },
-  {
    "id": "wp-0e6830a0dc",
    "kategorie": "geschichte",
    "frage": "Welcher Partei trat der Staatsrechtler Carl Schmitt im Jahr 1933 bei?",
@@ -272,24 +254,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Eisernes Kreuz",
    "quelle_id": "Q154554"
-  },
-  {
-   "id": "wp-17a92a4f3d",
-   "kategorie": "geschichte",
-   "frage": "Aus welchem europäischen Kampfjet-Projekt stieg Frankreich aus, bevor es die Rafale allein entwickelte?",
-   "antworten": [
-    "Saab Gripen",
-    "SEPECAT Jaguar",
-    "Panavia Tornado",
-    "Eurofighter"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Dassault_Rafale",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Dassault Rafale",
-   "quelle_id": "Q190973"
   },
   {
    "id": "wp-198fa62de1",
@@ -418,24 +382,6 @@
    "quelle_id": "Q3044"
   },
   {
-   "id": "wp-22aab704dc",
-   "kategorie": "geschichte",
-   "frage": "Welche technische Besonderheit haben die Tragflächen des Kampfflugzeugs Grumman F-14 Tomcat?",
-   "antworten": [
-    "Vorwärts gepfeilte Flügel",
-    "Schwenkflügel",
-    "Deltaflügel",
-    "Nurflügel"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Grumman_F-14",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Grumman F-14",
-   "quelle_id": "Q34945"
-  },
-  {
    "id": "wp-23f6f3b454",
    "kategorie": "geschichte",
    "frage": "Unter welchem Beinamen ist der französische König Ludwig XIV. vor allem bekannt?",
@@ -524,24 +470,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Massaker von Srebrenica",
    "quelle_id": "Q170334"
-  },
-  {
-   "id": "wp-2dd1086662",
-   "kategorie": "geschichte",
-   "frage": "Aus welchem Land stammt das Kampfflugzeug Rafale des Herstellers Dassault Aviation?",
-   "antworten": [
-    "Italien",
-    "Grossbritannien",
-    "Frankreich",
-    "Schweden"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Dassault_Rafale",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Dassault Rafale",
-   "quelle_id": "Q190973"
   },
   {
    "id": "wp-3122fb83b4",
@@ -688,24 +616,6 @@
    "quelle_id": "Q567"
   },
   {
-   "id": "wp-3ba25829ea",
-   "kategorie": "geschichte",
-   "frage": "Welches Flugzeug löste die Boeing 747 im Jahr 2005 als grösstes Passagierflugzeug der Welt ab?",
-   "antworten": [
-    "Concorde",
-    "Boeing 777",
-    "Airbus A380",
-    "Airbus A340"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Boeing_747",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Boeing 747",
-   "quelle_id": "Q179"
-  },
-  {
    "id": "wp-3f861e7b7a",
    "kategorie": "geschichte",
    "frage": "Wen heiratete die spätere Königin Elisabeth II. im Jahr 1947?",
@@ -760,24 +670,6 @@
    "quelle_id": "Q2518"
   },
   {
-   "id": "wp-4690569104",
-   "kategorie": "geschichte",
-   "frage": "Als wievielter Bundeskanzler der Bundesrepublik Deutschland trat Friedrich Merz 2025 sein Amt an?",
-   "antworten": [
-    "Als neunter",
-    "Als elfter",
-    "Als zehnter",
-    "Als achter"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Friedrich_Merz",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Friedrich Merz",
-   "quelle_id": "Q566257"
-  },
-  {
    "id": "wp-46b007b492",
    "kategorie": "geschichte",
    "frage": "Über welches Meer brachte die Wilhelm Gustloff 1945 Flüchtlinge, bevor sie versenkt wurde?",
@@ -830,24 +722,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Winston Churchill",
    "quelle_id": "Q8016"
-  },
-  {
-   "id": "wp-48a6c33b62",
-   "kategorie": "geschichte",
-   "frage": "Welche Weltregion erforschte Alexander von Humboldt auf einer seiner berühmten mehrjährigen Forschungsreisen?",
-   "antworten": [
-    "Australien",
-    "Westafrika",
-    "Lateinamerika",
-    "Südostasien"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Alexander_von_Humboldt",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Alexander von Humboldt",
-   "quelle_id": "Q6694"
   },
   {
    "id": "wp-49e48e8122",
@@ -974,24 +848,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Ronald Reagan",
    "quelle_id": "Q9960"
-  },
-  {
-   "id": "wp-55f319a5f4",
-   "kategorie": "geschichte",
-   "frage": "Unter welchem Spitznamen ist das Verkehrsflugzeug Boeing 747 weltweit bekannt?",
-   "antworten": [
-    "Rosinenbomber",
-    "Jumbo-Jet",
-    "Dreamliner",
-    "Tante Ju"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Boeing_747",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Boeing 747",
-   "quelle_id": "Q179"
   },
   {
    "id": "wp-58b2d9f1f0",
@@ -1336,24 +1192,6 @@
    "quelle_id": "Q87779"
   },
   {
-   "id": "wp-84c78965ce",
-   "kategorie": "geschichte",
-   "frage": "Zu welcher Teilstreitkraft der Vereinigten Staaten gehört die Spezialeinheit Delta Force?",
-   "antworten": [
-    "US Air Force",
-    "US Navy",
-    "US Army",
-    "US Marine Corps"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/1st_Special_Forces_Operational_Detachment-Delta_(Airborne)",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "1st Special Forces Operational Detachment-Delta (Airborne)",
-   "quelle_id": "Q209114"
-  },
-  {
    "id": "wp-8658c9fc87",
    "kategorie": "geschichte",
    "frage": "In welchem Land starb der NS-Kriegsverbrecher Josef Mengele 1979, ohne je gefasst worden zu sein?",
@@ -1514,24 +1352,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Anne Frank",
    "quelle_id": "Q4583"
-  },
-  {
-   "id": "wp-9a8a1185e8",
-   "kategorie": "geschichte",
-   "frage": "Für welche US-Teilstreitkraft wurde das Kampfflugzeug F-14 Tomcat ursprünglich entwickelt?",
-   "antworten": [
-    "US Army",
-    "US Air Force",
-    "US Navy",
-    "US Marine Corps"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Grumman_F-14",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Grumman F-14",
-   "quelle_id": "Q34945"
   },
   {
    "id": "wp-a0c0581647",
@@ -2020,24 +1840,6 @@
    "quelle_id": "Q361"
   },
   {
-   "id": "wp-d1cd6f2bba",
-   "kategorie": "geschichte",
-   "frage": "Anlässlich welches Ereignisses wurde das Ritterkreuz des Eisernen Kreuzes am 1. September 1939 gestiftet?",
-   "antworten": [
-    "Angriff auf Frankreich",
-    "Besetzung des Sudetenlands",
-    "Überfall auf Polen",
-    "Anschluss Österreichs"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Ritterkreuz_des_Eisernen_Kreuzes",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Ritterkreuz des Eisernen Kreuzes",
-   "quelle_id": "Q165558"
-  },
-  {
    "id": "wp-d3f81938b2",
    "kategorie": "geschichte",
    "frage": "In welcher französischen Stadt war der NS-Kriegsverbrecher Klaus Barbie von 1942 bis 1944 Gestapo-Chef?",
@@ -2164,42 +1966,6 @@
    "quelle_id": "Q57160"
   },
   {
-   "id": "wp-de81fa10f8",
-   "kategorie": "geschichte",
-   "frage": "Als Mitbegründer welcher Wissenschaft als Erfahrungswissenschaft gilt Alexander von Humboldt?",
-   "antworten": [
-    "Psychologie",
-    "Geographie",
-    "Archäologie",
-    "Soziologie"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Alexander_von_Humboldt",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Alexander von Humboldt",
-   "quelle_id": "Q6694"
-  },
-  {
-   "id": "wp-e19393277b",
-   "kategorie": "geschichte",
-   "frage": "Mit wem zusammen führte Alexander Gauland von 2017 bis 2021 die AfD-Fraktion im Bundestag?",
-   "antworten": [
-    "Alice Weidel",
-    "Frauke Petry",
-    "Jörg Meuthen",
-    "Beatrix von Storch"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Alexander_Gauland",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Alexander Gauland",
-   "quelle_id": "Q1670311"
-  },
-  {
    "id": "wp-e45c635742",
    "kategorie": "geschichte",
    "frage": "Welchen Premierminister löste Winston Churchill im Mai 1940 an der Spitze der britischen Regierung ab?",
@@ -2236,24 +2002,6 @@
    "quelle_id": "Q28085"
   },
   {
-   "id": "wp-e81eb376a6",
-   "kategorie": "geschichte",
-   "frage": "Mit welchem Ereignis löste Hitler im September 1939 den Zweiten Weltkrieg in Europa aus?",
-   "antworten": [
-    "Überfall auf Polen",
-    "Angriff auf Frankreich",
-    "Besetzung des Sudetenlands",
-    "Anschluss Österreichs"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Adolf_Hitler",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Adolf Hitler",
-   "quelle_id": "Q352"
-  },
-  {
    "id": "wp-e902915672",
    "kategorie": "geschichte",
    "frage": "Welcher Thronfolger Österreich-Ungarns wurde am 28. Juni 1914 in Sarajevo ermordet?",
@@ -2272,24 +2020,6 @@
    "quelle_id": "Q192050"
   },
   {
-   "id": "wp-ea7109cd6e",
-   "kategorie": "geschichte",
-   "frage": "Nach welchem Vernichtungslager ist das Schlagwort benannt, das Holocaustleugner für ihre Leugnung prägten?",
-   "antworten": [
-    "Auschwitz",
-    "Treblinka",
-    "Majdanek",
-    "Sobibor"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Holocaustleugnung",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Holocaustleugnung",
-   "quelle_id": "Q151296"
-  },
-  {
    "id": "wp-ed44e1e383",
    "kategorie": "geschichte",
    "frage": "Welchen Beruf übte der Widerstandskämpfer Dietrich Bonhoeffer aus?",
@@ -2306,24 +2036,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Dietrich Bonhoeffer",
    "quelle_id": "Q76326"
-  },
-  {
-   "id": "wp-efd0e8969e",
-   "kategorie": "geschichte",
-   "frage": "Unter welchem US-Präsidenten war Joe Biden von 2009 bis 2017 Vizepräsident?",
-   "antworten": [
-    "George W. Bush",
-    "Bill Clinton",
-    "Barack Obama",
-    "Jimmy Carter"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Joe_Biden",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Joe Biden",
-   "quelle_id": "Q6279"
   },
   {
    "id": "wp-f35342e044",
@@ -2378,24 +2090,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Mata Hari",
    "quelle_id": "Q82180"
-  },
-  {
-   "id": "wp-f88be0e6c4",
-   "kategorie": "geschichte",
-   "frage": "In welcher Stadt wurde der österreichische Thronfolger Franz Ferdinand 1914 ermordet?",
-   "antworten": [
-    "Sarajevo",
-    "Zagreb",
-    "Mostar",
-    "Belgrad"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Franz_Ferdinand_von_%C3%96sterreich-Este",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Franz Ferdinand von Österreich-Este",
-   "quelle_id": "Q43063"
   },
   {
    "id": "wp-fa91a6e2ac",

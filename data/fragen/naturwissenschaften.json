@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "naturwissenschaften",
- "generiert_am": "2026-11-16T05:36:48Z",
+ "generiert_am": "2026-11-16T07:54:25Z",
  "fragen": [
   {
    "id": "wp-0f9c65a412",
@@ -58,6 +58,60 @@
    "quelle_id": "Q8963"
   },
   {
+   "id": "wp-3ba25829ea",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches Flugzeug löste die Boeing 747 im Jahr 2005 als grösstes Passagierflugzeug der Welt ab?",
+   "antworten": [
+    "Concorde",
+    "Boeing 777",
+    "Airbus A380",
+    "Airbus A340"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Boeing_747",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Boeing 747",
+   "quelle_id": "Q179"
+  },
+  {
+   "id": "wp-48a6c33b62",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welche Weltregion erforschte Alexander von Humboldt auf einer seiner berühmten mehrjährigen Forschungsreisen?",
+   "antworten": [
+    "Australien",
+    "Westafrika",
+    "Lateinamerika",
+    "Südostasien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Alexander_von_Humboldt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Alexander von Humboldt",
+   "quelle_id": "Q6694"
+  },
+  {
+   "id": "wp-55f319a5f4",
+   "kategorie": "naturwissenschaften",
+   "frage": "Unter welchem Spitznamen ist das Verkehrsflugzeug Boeing 747 weltweit bekannt?",
+   "antworten": [
+    "Rosinenbomber",
+    "Jumbo-Jet",
+    "Dreamliner",
+    "Tante Ju"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Boeing_747",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Boeing 747",
+   "quelle_id": "Q179"
+  },
+  {
    "id": "wp-55f9c54745",
    "kategorie": "naturwissenschaften",
    "frage": "Nach welchem Mathematiker ist die Zahlenfolge benannt, die eng mit dem Goldenen Schnitt verbunden ist?",
@@ -92,6 +146,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Turbolader",
    "quelle_id": "Q185525"
+  },
+  {
+   "id": "wp-de81fa10f8",
+   "kategorie": "naturwissenschaften",
+   "frage": "Als Mitbegründer welcher Wissenschaft als Erfahrungswissenschaft gilt Alexander von Humboldt?",
+   "antworten": [
+    "Psychologie",
+    "Geographie",
+    "Archäologie",
+    "Soziologie"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Alexander_von_Humboldt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Alexander von Humboldt",
+   "quelle_id": "Q6694"
   }
  ]
 }

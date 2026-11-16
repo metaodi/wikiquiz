@@ -179,3 +179,75 @@ def test_ersetzen_loescht_nie_wikipedia_fragen(tmp_path):
     ersetzen = ersetzbare_quellen("ersetzen", {"wikidata", "wikipedia"})
     schreibe_kategorie("geografie", [neu_wd], ersetzen, modus="ersetzen", verzeichnis=tmp_path)
     assert {f["id"] for f in lade_kategorie("geografie", tmp_path)} == {neu_wd["id"], alt_wp["id"]}
+
+
+def test_dedupe_gleiche_tatsache_und_gegenseitig_verraten():
+    wp = dict(quelle_typ="wikipedia")
+    polen = frage(**wp, quelle_id="Q1", frage="Mit welchem Ereignis begann der Zweite Weltkrieg in Europa am 1. September 1939?",
+                  richtig="Deutscher Überfall auf Polen", falsch=["Münchner Abkommen", "Anschluss Österreichs", "Reichstagsbrand"])
+    hitler = frage(**wp, quelle_id="Q2", frage="Mit welchem Ereignis löste Hitler im September 1939 den Zweiten Weltkrieg in Europa aus?",
+                   richtig="Überfall auf Polen", falsch=["Münchner Abkommen", "Anschluss Österreichs", "Reichstagsbrand"])
+    obama = frage(**wp, quelle_id="Q3", frage="Wer war während beider Amtszeiten von Barack Obama Vizepräsident der USA?",
+                  richtig="Joe Biden", falsch=["Al Gore", "Dick Cheney", "Mike Pence"])
+    biden = frage(**wp, quelle_id="Q4", frage="Unter welchem US-Präsidenten war Joe Biden von 2009 bis 2017 Vizepräsident?",
+                  richtig="Barack Obama", falsch=["Bill Clinton", "George W. Bush", "Donald Trump"])
+    # Gleiche Antwort, aber verschiedene Werke: keine Dublette
+    zauber = frage(**wp, quelle_id="Q5", frage="Welcher Komponist schrieb die Oper «Die Zauberflöte»?",
+                   richtig="Wolfgang Amadeus Mozart", falsch=["Haydn", "Salieri", "Gluck"])
+    giovanni = frage(**wp, quelle_id="Q6", frage="Welcher Komponist schrieb die Oper «Don Giovanni»?",
+                     richtig="Wolfgang Amadeus Mozart", falsch=["Haydn", "Salieri", "Gluck"])
+    # Die Gewichtung braucht einen Bestand, in dem Fragewörter wie „Komponist“ häufig sind
+    bestand = [frage(**wp, quelle_id=f"F{i}", frage=f"Welcher Komponist schrieb die Oper «{t}»?", richtig=r,
+                     falsch=["Haydn", "Salieri", "Gluck"])
+               for i, (t, r) in enumerate([("Aida", "Verdi"), ("Carmen", "Bizet"), ("Tosca", "Puccini"),
+                                           ("Fidelio", "Beethoven"), ("Lohengrin", "Wagner"), ("Norma", "Bellini")])]
+    behalten, verworfen = deduplizieren([*bestand, polen, hitler, obama, biden, zauber, giovanni])
+    assert behalten == [*bestand, polen, obama, zauber, giovanni]
+    assert [g.split()[0] for _, g in verworfen] == ["gleiche", "verraet"]
+
+
+def test_entfernen(tmp_path):
+    from wikiquiz_gen.output import entfernen, lade_kategorie, schreibe_kategorie
+    import pytest
+
+    a = frage(kategorie="geschichte", quelle_typ="wikipedia").to_json()
+    b = frage(kategorie="geschichte", quelle_typ="wikipedia", frage="Auf welchem Kontinent liegt Kanada?",
+              richtig="Nordamerika", falsch=["Europa", "Asien", "Afrika"]).to_json()
+    schreibe_kategorie("geschichte", [a, b], {"wikipedia"}, verzeichnis=tmp_path)
+    assert [f["id"] for f in entfernen([a["id"]], verzeichnis=tmp_path)] == [a["id"]]
+    assert [f["id"] for f in lade_kategorie("geschichte", tmp_path)] == [b["id"]]
+    with pytest.raises(ValueError):
+        entfernen([a["id"]], verzeichnis=tmp_path)
+
+
+def test_epoche_aus_kategorien():
+    from wikiquiz_gen.wikipedia.themen import jahr_schaetzen, thema
+
+    assert jahr_schaetzen(["Kategorie:Geboren 1638", "Kategorie:Gestorben 1715"]) == 1638 + 0.6 * 77
+    assert jahr_schaetzen(["Kategorie:Geboren 69 v. Chr.", "Kategorie:Gestorben 30 v. Chr."]) < 0
+    assert jahr_schaetzen(["Kategorie:Herrscher (17. Jahrhundert)"]) == 1650
+    assert jahr_schaetzen(["Kategorie:Konflikt 1962", "Kategorie:Kalter Krieg"]) == 1962
+    assert jahr_schaetzen(["Kategorie:Boeing 747"]) is None
+    assert thema("geschichte", ["Kategorie:Schlacht (1. Jahrhundert)", "Kategorie:9"], None) == "Antike"
+    # NS-Zeit hat Vorrang vor der Lebensspanne (Mengele 1911–1979)
+    assert thema("geschichte", ["Kategorie:Geboren 1911", "Kategorie:Gestorben 1979", "Kategorie:SS-Mitglied"], None) == "1914–1945"
+    assert thema("geschichte", [], None, datum_jahr=1989) == "seit 1945"
+    assert thema("kunst", ["Kategorie:Geboren 1756"], "Kategorie:Oper") == "Kategorie:Oper"
+
+
+def test_themen_ausgleichen():
+    from collections import Counter
+
+    from wikiquiz_gen.wikipedia.themen import ausgleichen
+
+    # nach Seitenaufrufen sortiert: zuerst drei Artikel zur NS-Zeit
+    kandidaten = [("Hitler", "ns"), ("Stalingrad", "ns"), ("Gestapo", "ns"), ("Caesar", "antike"), ("Luther", "neuzeit")]
+    geordnet = ausgleichen(kandidaten, lambda k: k[1], Counter({"ns": 10, "antike": 2}))
+    assert [k[0] for k in geordnet] == ["Luther", "Caesar", "Hitler", "Stalingrad", "Gestapo"]
+
+
+def test_flugzeuge_sind_technik():
+    from wikiquiz_gen.wikipedia.quellen import zuordnen
+
+    assert zuordnen(["Kategorie:Erstflug 1970", "Kategorie:Militärluftfahrzeug (Vereinigte Staaten)",
+                     "Kategorie:Militärluftfahrzeug (Iran)", "Kategorie:Trägergestütztes Flugzeug"]) == "naturwissenschaften"

@@ -87,7 +87,7 @@ def wikipedia(
     from .llm.fragen import artikel_verarbeiten
     from .output import jetzt_iso
     from .wikipedia.auszug import auszug, klartext
-    from .wikipedia.kandidaten import passende_kategorie, sammeln
+    from .wikipedia.kandidaten import amtierende, passende_kategorie, sammeln
 
     vorhanden = sum(1 for f in bestand if f["quelle_typ"] == "wikipedia")
     bedarf = ziel - vorhanden
@@ -113,6 +113,14 @@ def wikipedia(
         log.info("%s: %d Artikel passen thematisch zu einer anderen Kategorie, z. B. %s",
                  ktx.kategorie, len(falsche_kategorie),
                  ", ".join(f"{k.titel} ({g.split(': ')[1]})" for k, g in falsche_kategorie[:5]))
+    aktiv = amtierende(ktx.http, [k.qid for k in kandidaten])
+    for k in kandidaten:
+        if k.qid in aktiv:
+            ktx.protokoll.verwerfen(ktx.kategorie, "kategorie", "amtierende person", {"titel": k.titel})
+    if aktiv:
+        log.info("%s: %d amtierende Personen übersprungen: %s", ktx.kategorie, len(aktiv),
+                 ", ".join(k.titel for k in kandidaten if k.qid in aktiv))
+    kandidaten = [k for k in kandidaten if k.qid not in aktiv]
     kandidaten.sort(key=lambda k: -(k.pageviews or 0))
     pro_quelle: dict[str, list[dict]] = {}
     for f in bestand:
@@ -120,6 +128,7 @@ def wikipedia(
     kandidaten = [k for k in kandidaten if len(pro_quelle.get(k.qid, [])) < 2]
     log.info("%s: %d neue Artikel bestehen den Bekanntheitsfilter, davon werden höchstens %d verarbeitet",
              ktx.kategorie, len(kandidaten), max_artikel)
+    kandidaten = _themen_ausgleichen(ktx, roh, kandidaten, bestand)
     kandidaten = kandidaten[:max_artikel]
     if nur_kandidaten:
         for k in kandidaten:
@@ -192,6 +201,30 @@ def wikipedia(
             ktx.protokoll.verwerfen(ktx.kategorie, "dedupe", grund,
                                     {"frage": f.frage, "richtig": f.richtig, "titel": f.quelle_titel})
     return ergebnis[:bedarf], neu_verarbeitet, verbrauch
+
+
+def _themen_ausgleichen(ktx: Kontext, roh: list, kandidaten: list, bestand: list[dict]) -> list:
+    """Kandidaten reihum nach Thema ordnen (siehe wikipedia/themen.py), Bestand eingerechnet."""
+    from collections import Counter
+
+    from .wikipedia.kandidaten import artikel_kategorien
+    from .wikipedia.themen import ausgleichen, thema
+
+    quelle = {k.titel: k.extra.get("quelle") for k in roh}
+    datum = {k.titel: k.datum.year for k in roh if k.datum}
+    titel_bestand = sorted({f.get("quelle_titel", "") for f in bestand if f["quelle_typ"] == "wikipedia"} - {""})
+    kats = artikel_kategorien(ktx.http, sorted({k.titel for k in kandidaten} | set(titel_bestand)))
+
+    def thema_von(titel: str) -> str:
+        return thema(ktx.kategorie, kats.get(titel, []), quelle.get(titel), datum.get(titel))
+
+    zaehler = Counter(thema_von(f["quelle_titel"]) for f in bestand
+                      if f["quelle_typ"] == "wikipedia" and f.get("quelle_titel"))
+    geordnet = ausgleichen(kandidaten, lambda k: thema_von(k.titel), zaehler)
+    neu = Counter(thema_von(k.titel) for k in kandidaten)
+    log.info("%s: Fragen pro Thema im Bestand: %s; neue Kandidaten: %s", ktx.kategorie,
+             dict(zaehler.most_common()), dict(neu.most_common()))
+    return geordnet
 
 
 def _aus_json(d: dict) -> Frage:
