@@ -12,6 +12,7 @@
     onTimerStart,
     onAntwort,
     onTimeout,
+    zuschauen = false,
   }: {
     frage: Frage;
     reihenfolge: number[];
@@ -19,6 +20,8 @@
     onTimerStart: () => void;
     onAntwort: (index: number) => void;
     onTimeout: () => void;
+    /** Mehrere Geräte: Frage nur anzeigen – jemand anders antwortet und startet den Timer */
+    zuschauen?: boolean;
   } = $props();
 
   const kat = $derived(KATEGORIE_MAP[frage.kategorie]);
@@ -31,7 +34,7 @@
   onMount(() => {
     // Timer erst starten, wenn Frage und Antworten vollständig eingeblendet sind.
     // Nach einem Neuladen läuft ein bereits gestarteter Timer gemäss timerStart weiter.
-    const start = timerStart === null ? setTimeout(onTimerStart, EINBLENDEN_MS) : undefined;
+    const start = timerStart === null && !zuschauen ? setTimeout(onTimerStart, EINBLENDEN_MS) : undefined;
     let raf = 0;
     const tick = () => {
       jetzt = Date.now();
@@ -50,7 +53,7 @@
   });
 
   function waehlen(i: number) {
-    if (timerStart === null || gesendet) return;
+    if (timerStart === null || gesendet || zuschauen) return;
     gesendet = true;
     onAntwort(i);
   }
@@ -65,10 +68,11 @@
 
 <div class="unten">
   <TimerBar {rest} />
+  {#if zuschauen}<p class="muted zuschauen">Du schaust zu.</p>{/if}
   <ul class="antworten" aria-label="Antworten">
     {#each reihenfolge as i, pos (i)}
       <li style:--verzoegerung="{pos * 70}ms">
-        <button class="antwort" disabled={timerStart === null} onclick={() => waehlen(i)}>
+        <button class="antwort" disabled={timerStart === null || zuschauen} onclick={() => waehlen(i)}>
           <span class="buchstabe" aria-hidden="true">{'ABCD'[pos]}</span>
           <span class="text">{frage.antworten[i]}</span>
         </button>
@@ -78,6 +82,10 @@
 </div>
 
 <style>
+  .zuschauen {
+    margin: 0;
+    text-align: center;
+  }
   .kategorie {
     align-self: flex-start;
     display: inline-flex;

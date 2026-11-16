@@ -1,0 +1,92 @@
+/**
+ * Spielen mit mehreren Geräten: Ein Gerät eröffnet einen Raum und leitet das Spiel (Host),
+ * jedes Gerät steuert genau einen Spieler. Reine Funktionen, siehe docs/ARCHITEKTUR.md.
+ */
+import type { Aktion } from './aktionen';
+import { MAX_SPIELER, SPIELER_FARBEN } from './config';
+import { waehler } from './game';
+import type { Rng } from './picker';
+import type { Spielstand } from './types';
+
+export interface Teilnehmer {
+  /** Zufällige ID des Geräts (pro Browser-Tab) */
+  geraet: string;
+  name: string;
+  farbe: string;
+}
+
+/** Kein Spieler, sondern der Host bedient die aktuelle Phase */
+export const HOST = -1;
+
+/** Index des Spielers, dessen Gerät die aktuelle Phase bedient – oder `HOST`. */
+export function zustaendig(s: Spielstand): number {
+  switch (s.phase) {
+    case 'uebergabe':
+    case 'zufall':
+    case 'frage':
+      return s.aktiverSpieler;
+    case 'kategorie':
+      return waehler(s);
+    case 'feedback':
+      return s.zug?.spieler ?? s.aktiverSpieler;
+    default:
+      return HOST;
+  }
+}
+
+/** Darf das Gerät `von` diese Aktion jetzt auslösen? Der Host prüft das für jede empfangene Aktion. */
+export function darf(s: Spielstand, teilnehmer: Teilnehmer[], hostGeraet: string, von: string, aktion: Aktion): boolean {
+  // Zeitablauf melden darf jedes Gerät; der Host prüft die Zeit ohnehin selbst
+  if (aktion.typ === 'zeitPruefen') return true;
+  // Der Host darf das Spiel jederzeit beenden (z. B. wenn ein Gerät nicht mehr reagiert)
+  if (aktion.typ === 'beenden' && von === hostGeraet) return true;
+  const z = zustaendig(s);
+  return z === HOST ? von === hostGeraet : teilnehmer[z]?.geraet === von;
+}
+
+export type BeitrittsFehler = 'laeuft' | 'voll' | 'name';
+
+export const BEITRITTS_FEHLER: Record<BeitrittsFehler, string> = {
+  laeuft: 'In diesem Raum läuft bereits ein Spiel.',
+  voll: `Der Raum ist voll (höchstens ${MAX_SPIELER} Spieler).`,
+  name: 'Dieser Name ist im Raum schon vergeben.',
+};
+
+/**
+ * Gerät tritt dem Raum bei. Bekannte Geräte (z. B. nach Neuladen) sind immer willkommen;
+ * neue nur, solange kein Spiel läuft, Platz frei ist und der Name noch nicht vergeben ist.
+ * Die Farbe vergibt der Host: die erste noch freie.
+ */
+export function beitreten(
+  teilnehmer: Teilnehmer[],
+  geraet: string,
+  name: string,
+  spielLaeuft: boolean,
+): { ok: true; teilnehmer: Teilnehmer[] } | { ok: false; fehler: BeitrittsFehler } {
+  if (teilnehmer.some((t) => t.geraet === geraet)) return { ok: true, teilnehmer };
+  if (spielLaeuft) return { ok: false, fehler: 'laeuft' };
+  if (teilnehmer.length >= MAX_SPIELER) return { ok: false, fehler: 'voll' };
+  const n = name.trim();
+  if (teilnehmer.some((t) => t.name.toLowerCase() === n.toLowerCase())) return { ok: false, fehler: 'name' };
+  const farbe = SPIELER_FARBEN.find((f) => !teilnehmer.some((t) => t.farbe === f)) ?? SPIELER_FARBEN[0];
+  return { ok: true, teilnehmer: [...teilnehmer, { geraet, name: n, farbe }] };
+}
+
+export function verlassen(teilnehmer: Teilnehmer[], geraet: string): Teilnehmer[] {
+  return teilnehmer.filter((t) => t.geraet !== geraet);
+}
+
+/** Ohne leicht verwechselbare Zeichen (I, O, 0, 1) */
+const CODE_ZEICHEN = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+export const CODE_LAENGE = 4;
+
+export function zufallsCode(rng: Rng, laenge = CODE_LAENGE): string {
+  let code = '';
+  for (let i = 0; i < laenge; i++) code += CODE_ZEICHEN[Math.floor(rng() * CODE_ZEICHEN.length)];
+  return code;
+}
+
+/** Eingabe vereinheitlichen: Grossbuchstaben, ohne Leer- und Sonderzeichen */
+export function codeNormalisieren(eingabe: string): string {
+  return eingabe.toUpperCase().replace(/[^A-Z0-9]/g, '');
+}

@@ -85,6 +85,48 @@ Reihenfolge (günstig → teuer): Sitelinks (aus SPARQL) → Titel „Liste …�
 (Begriffsklärung, fehlend, Länge). Für richtige Antworten gilt eine eigene, tiefere Pageview-Schwelle.
 Schwellen pro Kategorie in `config.py`, per CLI übersteuerbar.
 
+## Mehrere Geräte (Konzept, teilweise umgesetzt)
+
+Ziel: Spiel zwischen Spielern mit eigenen Geräten, am selben Tisch wie auch remote, weiterhin ohne eigenes Backend
+(statische Seite auf GitHub Pages).
+
+- **Host-autoritativ:** Das eröffnende Gerät hält den `Spielstand` und wendet als einziges die reinen Funktionen aus
+  `game.ts` an. Gäste schicken Aktionen (z. B. `{ typ: 'antworten', index, zeit }`), der Host verteilt nach jeder
+  Änderung den ganzen Spielstand.
+- **Keine Fragen übertragen:** Alle Geräte laden dieselbe `questions.json`; übertragen werden nur `frageId` und
+  `reihenfolge`. Beim Beitritt wird eine Prüfsumme der Fragen verglichen (PWA-Cache kann veraltet sein).
+- **Antwortzeit misst der Gast lokal** ab Anzeige der Frage; der Host prüft nur auf `ZEITLIMIT_S` plus Toleranz.
+  Kein Schutz gegen Schummeln (die Lösung steht ohnehin in `questions.json`).
+- **Reconnect:** Raum, Teilnehmer und (beim Host) Spielstand liegen pro Tab im `sessionStorage` (`wikiquiz:raum:v1`,
+  Geräte-ID `wikiquiz:geraet:v1`) – so bleiben mehrere Tabs im selben Browser getrennte Geräte, und ein Spiel im Raum
+  überschreibt nicht das gespeicherte Spiel auf einem Gerät. Gäste klopfen mit `hallo` an, bis der Host antwortet, und
+  erhalten den aktuellen Stand. Neue Geräte nur in der Lobby. Fällt der Host aus, pausiert das Spiel.
+- **Zuständigkeit:** `raum.ts` bestimmt pro Phase das bedienende Gerät (`zustaendig`): Übergabe, Zufall, Frage → aktiver
+  Spieler; Kategorie → Wählender; Feedback → wer dran war; Zwischenstand, Rangliste → Host. Der Host verwirft Aktionen
+  anderer Geräte (`darf`); Zeitablauf darf jeder melden, beenden darf der Host immer. Der Host überwacht den Timer selbst.
+- **Transport hinter einer Schnittstelle** `Kanal { senden, beiEmpfang }` mit den Umsetzungen
+  lokal (heutiges Pass-and-Play), `BroadcastChannel` (mehrere Tabs, für E2E-Tests mit mehreren Seiten) und WebRTC.
+- **WebRTC über Trystero:** Signalisierung über öffentliche Relays (Nostr/MQTT/BitTorrent-Tracker), danach direkte,
+  verschlüsselte Datenkanäle. Beitritt per Raumcode, QR-Code oder Link (`#raum=…`). Auch am Tisch braucht der
+  Verbindungsaufbau Internet, weil Browser keine Geräte im lokalen Netz finden können.
+- **Neuer Spielmodus „Alle gleichzeitig“:** alle beantworten dieselbe Frage, Punkte nach Zeit. Erst damit bringen
+  mehrere Geräte spielerisch einen echten Mehrwert; reihum bleibt als Variante (statt `Uebergabe` „X ist dran“).
+
+Etappen:
+
+1. ✅ Aktionen als Nachrichten (`app/src/lib/aktionen.ts`, `aktionAnwenden(stand, aktion, { pool, history, jetzt, rng })`)
+   und `Kanal`-Schnittstelle (`app/src/lib/kanal.ts`); Pass-and-Play läuft unverändert über den lokalen Kanal.
+2. ✅ Raum, Lobby und Host-Logik über `BroadcastChannel` (`app/src/lib/raum.ts`, `broadcastKanal`), reihum gespielt;
+   E2E-Tests mit zwei Tabs und gemeinsamer Fake-Clock (`app/e2e/mehrgeraete.spec.ts`). Vorschau hinter `?mehrgeraete`.
+   Antwortzeit misst vorerst der Host (im selben Browser gleichwertig).
+3. Modus „Alle gleichzeitig“ (eigener Zug mit Antworten pro Spieler, Wartephase bis alle geantwortet haben).
+4. Trystero, Raumcode/QR/Link; Antwortzeit misst der Gast, Prüfsumme der Fragen beim Beitritt; Einstieg ohne `?mehrgeraete`.
+5. Nur falls es in der Praxis hakt (Mobilfunk mit CGNAT): TURN-Server ergänzen oder auf ein kleines Backend
+   (Cloudflare Durable Object / PartyKit) wechseln – dank `Kanal` ein Austausch an einer Stelle.
+
+Verworfen bzw. zurückgestellt: SDP-Austausch per QR-Code (zwei Scans pro Gast, remote unbrauchbar), PeerJS
+(gleiche NAT-Grenzen, Gratis-Server ohne Garantie), Firebase/Supabase/Ably (Konto bei Drittanbieter nötig).
+
 ## Entscheide
 
 | Thema | Entscheid |
@@ -105,3 +147,4 @@ Schwellen pro Kategorie in `config.py`, per CLI übersteuerbar.
 | Aktuelle Politik | Lebende Personen mit laufendem Amt (Wikidata P39 ohne Enddatum, Beginn ≤ 20 Jahre) werden nicht verarbeitet |
 | Gleiche Quelle | Die App stellt Fragen zum selben Artikel (`quelle_url`) im selben Spiel erst, wenn keine anderen mehr übrig sind; so verraten sich Fragen zum selben Thema nicht gegenseitig |
 | Nischenwissen | Pro Kategorie eine von Hand gepflegte Artikelliste (`generator/eigene_artikel.toml`): ohne Bekanntheitsfilter, vor allen anderen und auch bei erreichtem Ziel verarbeitet; das LLM erhält einen Hinweis, die Schwellen für Bekanntheit und Allgemeinwissen entfallen, Beleg und unabhängige Prüfung bleiben |
+| Mehrere Geräte | Ohne eigenes Backend: Host-Gerät hält den Spielstand, Übertragung per WebRTC (Trystero, öffentliche Signalisierung) hinter einer `Kanal`-Schnittstelle; kleines Backend erst, wenn Verbindungen in der Praxis scheitern. Details im Abschnitt „Mehrere Geräte“ |

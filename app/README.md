@@ -19,9 +19,12 @@ npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für Git
 |---|---|
 | `src/lib/config.ts` | Zeitlimit (15 s), Punkteformel, Runden, Farben – zentral konfigurierbar |
 | `src/lib/game.ts` | Spiellogik als reine Funktionen (Zeit und Zufall werden hereingereicht) |
+| `src/lib/aktionen.ts` | Spielzüge als serialisierbare Aktionen; `aktionAnwenden` führt sie über `game.ts` aus |
+| `src/lib/kanal.ts` | Übertragungsweg für Aktionen und Spielstände: `lokalerKanal` (Pass-and-Play), `broadcastKanal` (Tabs im selben Browser) |
+| `src/lib/raum.ts` | Mehrere Geräte: wer welche Phase bedient (`zustaendig`, `darf`), Beitritt, Raumcode |
 | `src/lib/picker.ts` | Fragenauswahl: nie doppelt pro Spiel, möglichst kein zweites Mal derselbe Wikipedia-Artikel im Spiel (Fragen dazu verraten sich oft gegenseitig), zuletzt gestellte Fragen bevorzugt vermeiden |
 | `src/lib/storage.ts` | `localStorage` (Spielstand, History, letzte Spieler), alles in try/catch |
-| `src/screens/*` | Setup, Übergabe, Kategorie, Zufall, Frage, Feedback, Zwischenstand, Rangliste, Info |
+| `src/screens/*` | Setup, Übergabe, Kategorie, Zufall, Frage, Feedback, Zwischenstand, Rangliste, Info; für mehrere Geräte RaumStart, Lobby, Warten |
 
 ## Verhalten
 
@@ -42,6 +45,16 @@ npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für Git
   „Mehr auf Wikipedia (englisch): Titel“ (`src/lib/quelle.ts`). Der Titel wird mit „ss“ statt „ß“ angezeigt
   („Fussball-Weltmeisterschaft 2022“), der Link zeigt weiter auf den Originalartikel.
 - **Zwischenstand** nach jeder Runde (bei mehreren Spielern); bei einem Spieler zeigt das Feedback den Punktestand.
+- **Mehrere Geräte (Vorschau):** nur sichtbar mit `?mehrgeraete` in der URL und vorerst nur zwischen Tabs im selben
+  Browser (`BroadcastChannel`). Ein Gerät eröffnet einen Raum (4-stelliger Code) und leitet das Spiel (Host), bis zu
+  drei weitere treten mit dem Code bei; jedes Gerät ist ein Spieler, die Farbe vergibt der Host. Der Host wählt Runden,
+  Modus und Kategorien und startet. Gespielt wird reihum wie auf einem Gerät: Wer dran ist, sieht „Du bist dran“,
+  wählt und antwortet; die anderen sehen, wer dran ist bzw. wählt, und schauen bei der Frage zu (Antworten gesperrt).
+  Feedback sehen alle, „Weiter“ hat nur, wer dran war; Zwischenstand und Rangliste bedient der Host. Der Host prüft jede
+  Aktion (`darf`) und überwacht den Timer selbst. Neuladen: Raum und Geräte-ID liegen pro Tab im `sessionStorage`
+  (`wikiquiz:raum:v1`, `wikiquiz:geraet:v1`); Gäste werden wiedererkannt, der Host führt das Spiel weiter. Neue Geräte
+  können nur in der Lobby beitreten. Beendet der Host das Spiel, sind alle wieder im Raum; schliesst er den Raum, werden
+  die Gäste informiert. Spiele im Raum berühren den gespeicherten Spielstand und die Spielernamen des Spiels auf einem Gerät nicht.
 
 ## End-to-End-Tests (`e2e/`)
 
@@ -56,6 +69,7 @@ und steuern die Zeit über Playwrights Fake-Clock – Punkte und Timeouts werden
 | Neuladen | mitten in der Frage (gleiche Frage und Reihenfolge, Timer läuft weiter, Punkte gemäss Gesamtzeit), nach Ablauf (Timeout), auf Feedback- und Übergabe-Screen |
 | Timer | startet erst nach dem Einblenden, Warnfarbe ab 5 s Restzeit |
 | UX | kein horizontales Scrollen bei 320 px, alle Touch-Targets ≥ 48 px, Info-Seite mit Lizenzen, kein „ß“ |
+| Mehrere Geräte | zwei Tabs in einem Browser-Kontext (gemeinsame Fake-Clock): Lobby, Züge reihum mit Zuschauen, Neuladen von Gast und Host, Spiel beenden → zurück in den Raum, Raum verlassen; Beitritt mit vergebenem Namen abgelehnt, Host schliesst den Raum; Einstieg nur mit `?mehrgeraete`, 320 px |
 
 ## Deployment
 

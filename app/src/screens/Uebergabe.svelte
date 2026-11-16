@@ -1,16 +1,32 @@
 <script lang="ts">
   import type { Spieler } from '../lib/types';
 
-  let { spieler, runde, runden, onBereit }: { spieler: Spieler; runde: number; runden: number; onBereit: () => void } =
-    $props();
+  let {
+    spieler,
+    runde,
+    runden,
+    onBereit,
+    eigenesGeraet = false,
+  }: {
+    spieler: Spieler;
+    runde: number;
+    runden: number;
+    onBereit: () => void;
+    /** Mehrere Geräte: Jeder hat sein eigenes Gerät, nichts wird weitergegeben */
+    eigenesGeraet?: boolean;
+  } = $props();
 </script>
 
 <div class="screen uebergabe" style:--farbe={spieler.farbe}>
   <p class="muted">Runde {runde} von {runden}</p>
   <div class="mitte">
     <div class="avatar" aria-hidden="true">{spieler.name.slice(0, 1).toUpperCase()}</div>
-    <h1>Gib das Gerät an<br /><span class="name">{spieler.name}</span></h1>
-    <p class="muted">Die anderen schauen bitte weg.</p>
+    {#if eigenesGeraet}
+      <h1>Du bist dran,<br /><span class="name">{spieler.name}</span></h1>
+    {:else}
+      <h1>Gib das Gerät an<br /><span class="name">{spieler.name}</span></h1>
+      <p class="muted">Die anderen schauen bitte weg.</p>
+    {/if}
   </div>
   <div class="unten">
     <button class="btn bereit" onclick={onBereit}>Bereit</button>

@@ -1,7 +1,9 @@
 <script lang="ts">
+  import RaumKarte from '../components/RaumKarte.svelte';
   import { KATEGORIEN } from '../lib/categories';
   import { FARB_NAMEN, MAX_SPIELER, RUNDEN_OPTIONEN, RUNDEN_STANDARD, SPIELER_FARBEN } from '../lib/config';
   import { ALLE_KATEGORIEN, einstellungenPruefen, neueKategorienErgaenzen } from '../lib/game';
+  import type { Teilnehmer } from '../lib/raum';
   import type { LetzteSpieler } from '../lib/storage';
   import type { Einstellungen, KategorieId, KategorieModus } from '../lib/types';
 
@@ -10,12 +12,20 @@
     gesamt,
     onStart,
     onInfo,
+    raum,
+    onMehrgeraete,
+    onRaumSchliessen,
   }: {
     letzte: LetzteSpieler | null;
     /** Fragen pro Kategorie im Pool */
     gesamt: Record<KategorieId, number>;
     onStart: (spieler: { name: string; farbe: string }[], runden: number, einstellungen: Einstellungen) => void;
     onInfo: () => void;
+    /** Mehrere Geräte: Lobby des Hosts – die Spieler sind die beigetretenen Geräte */
+    raum?: { code: string; teilnehmer: Teilnehmer[]; ich: string };
+    /** Einstieg „Mit mehreren Geräten spielen“ (nur sichtbar, wenn gesetzt) */
+    onMehrgeraete?: () => void;
+    onRaumSchliessen?: () => void;
   } = $props();
 
   const MODI: { id: KategorieModus; titel: string; text: string }[] = [
@@ -41,8 +51,9 @@
   let modus = $state<KategorieModus>(startEinst.modus);
   let kategorien = $state<KategorieId[]>(startEinst.kategorien);
 
+  const anzahlSpieler = $derived(raum ? raum.teilnehmer.length : spieler.length);
   // „Vorheriger Spieler“ braucht mindestens 2 Spieler
-  const modusEffektiv = $derived<KategorieModus>(modus === 'vorgaenger' && spieler.length < 2 ? 'selbst' : modus);
+  const modusEffektiv = $derived<KategorieModus>(modus === 'vorgaenger' && anzahlSpieler < 2 ? 'selbst' : modus);
   const alle = $derived(kategorien.length === ALLE_KATEGORIEN.length);
   const fragenGewaehlt = $derived(kategorien.reduce((n, k) => n + (gesamt[k] ?? 0), 0));
 
@@ -53,7 +64,7 @@
   }
 
   const namen = $derived(spieler.map((p, i) => p.name.trim() || `Spieler ${i + 1}`));
-  const doppelt = $derived(new Set(namen.map((n) => n.toLowerCase())).size !== namen.length);
+  const doppelt = $derived(!raum && new Set(namen.map((n) => n.toLowerCase())).size !== namen.length);
 
   function hinzufuegen() {
     const frei = SPIELER_FARBEN.find((f) => !spieler.some((p) => p.farbe === f)) ?? SPIELER_FARBEN[0];
@@ -68,7 +79,9 @@
     e.preventDefault();
     if (doppelt || fragenGewaehlt === 0) return;
     onStart(
-      spieler.map((p, i) => ({ name: namen[i], farbe: p.farbe })),
+      raum
+        ? raum.teilnehmer.map((t) => ({ name: t.name, farbe: t.farbe }))
+        : spieler.map((p, i) => ({ name: namen[i], farbe: p.farbe })),
       runden,
       { modus: modusEffektiv, kategorien: [...kategorien] },
     );
@@ -78,9 +91,14 @@
 <form class="screen" onsubmit={starten}>
   <header class="titel">
     <h1>WikiQuiz</h1>
-    <p class="muted">Wissen aus Wikipedia – für 1 bis 4 Spieler auf einem Gerät.</p>
+    <p class="muted">
+      {raum ? 'Spiel mit mehreren Geräten' : 'Wissen aus Wikipedia – für 1 bis 4 Spieler auf einem Gerät.'}
+    </p>
   </header>
 
+  {#if raum}
+    <RaumKarte code={raum.code} teilnehmer={raum.teilnehmer} ich={raum.ich} />
+  {:else}
   <section class="karte" aria-labelledby="spieler-titel">
     <h2 id="spieler-titel">Spieler</h2>
     <ol class="liste">
@@ -122,7 +140,11 @@
     {#if doppelt}
       <p class="fehler" role="alert">Bitte unterschiedliche Namen verwenden.</p>
     {/if}
+    {#if onMehrgeraete}
+      <button type="button" class="btn sekundaer klein" onclick={onMehrgeraete}>Mit mehreren Geräten spielen</button>
+    {/if}
   </section>
+  {/if}
 
   <section class="karte" aria-labelledby="runden-titel">
     <h2 id="runden-titel">Runden</h2>
@@ -140,7 +162,7 @@
     <h2 id="modus-titel">Kategorie-Wahl</h2>
     <div class="modi" role="radiogroup" aria-labelledby="modus-titel">
       {#each MODI as m (m.id)}
-        {@const gesperrt = m.id === 'vorgaenger' && spieler.length < 2}
+        {@const gesperrt = m.id === 'vorgaenger' && anzahlSpieler < 2}
         <button
           type="button"
           role="radio"
@@ -197,7 +219,11 @@
 
   <div class="unten">
     <button class="btn" type="submit" disabled={doppelt || fragenGewaehlt === 0}>Spiel starten</button>
-    <button type="button" class="textlink" onclick={onInfo}>Info, Quellen & Lizenzen</button>
+    {#if raum && onRaumSchliessen}
+      <button type="button" class="btn sekundaer" onclick={onRaumSchliessen}>Raum schliessen</button>
+    {:else}
+      <button type="button" class="textlink" onclick={onInfo}>Info, Quellen & Lizenzen</button>
+    {/if}
   </div>
 </form>
 
