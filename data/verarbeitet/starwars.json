@@ -1,0 +1,527 @@
+{
+ "Ahsoka (Fernsehserie)": {
+  "qid": "Q104153367",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Andor": {
+  "qid": "Q60462338",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Das Buch von Boba Fett": {
+  "qid": "Q104396610",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Das Imperium schlägt zurück": {
+  "qid": "Q181795",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Die Rückkehr der Jedi-Ritter": {
+  "qid": "Q181803",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Figuren aus Star Wars": {
+  "qid": "Q51805",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Jedi": {
+  "qid": "Q51724",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Krieg der Sterne": {
+  "qid": "Q17738",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Obi-Wan Kenobi (Fernsehserie)": {
+  "qid": "Q104154217",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Orte aus Star Wars": {
+  "qid": "Q2294199",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Rogue One: A Star Wars Story": {
+  "qid": "Q19590955",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Solo: A Star Wars Story": {
+  "qid": "Q27038847",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Star Wars": {
+  "qid": "Q462",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Star Wars Jedi: Fallen Order": {
+  "qid": "Q55449345",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Star Wars Jedi: Survivor": {
+  "qid": "Q112704136",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Star Wars Outlaws": {
+  "qid": "Q119361001",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 2,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "Star Wars Rebels": {
+  "qid": "Q28787",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Star Wars: Das Erwachen der Macht": {
+  "qid": "Q6074",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Star Wars: Der Aufstieg Skywalkers": {
+  "qid": "Q20977110",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Star Wars: Die letzten Jedi": {
+  "qid": "Q18486021",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Star Wars: Episode I – Die dunkle Bedrohung": {
+  "qid": "Q165713",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Star Wars: Episode II – Angriff der Klonkrieger": {
+  "qid": "Q181069",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Star Wars: Episode III – Die Rache der Sith": {
+  "qid": "Q42051",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Star Wars: Knights of the Old Republic": {
+  "qid": "Q725902",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Star Wars: Skeleton Crew": {
+  "qid": "Q113275091",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Star Wars: The Bad Batch": {
+  "qid": "Q97365172",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Star Wars: The Clone Wars (Fernsehserie)": {
+  "qid": "Q632672",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "The Acolyte": {
+  "qid": "Q104161310",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "The Mandalorian": {
+  "qid": "Q56876444",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Todesstern": {
+  "qid": "Q19907",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Admiral Ackbar": {
+  "qid": "Q52306",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "en:Ahsoka Tano": {
+  "qid": "Q51755",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Alderaan": {
+  "qid": "Q752192",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Asajj Ventress": {
+  "qid": "Q14417",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 2,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "en:BB-8": {
+  "qid": "Q21541731",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Boba Fett": {
+  "qid": "Q51790",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:C-3PO": {
+  "qid": "Q51787",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Caravan of Courage: An Ewok Adventure": {
+  "qid": "Q1383257",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 2,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "en:Clone Wars": {
+  "qid": "Q1133061",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Coruscant": {
+  "qid": "Q719329",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "en:Darth Bane": {
+  "qid": "Q51764",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 2,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "en:Darth Maul": {
+  "qid": "Q51766",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Darth Vader": {
+  "qid": "Q12206942",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Droid (Star Wars)": {
+  "qid": "Q52383",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Ewok": {
+  "qid": "Q1409501",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Ewoks: The Battle for Endor": {
+  "qid": "Q738360",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 2,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "en:Finn (Star Wars)": {
+  "qid": "Q21772120",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:First Order (Star Wars)": {
+  "qid": "Q20501234",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Galactic Empire": {
+  "qid": "Q52347",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Galactic Republic": {
+  "qid": "Q733195",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "en:General Grievous": {
+  "qid": "Q51792",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "en:Grand Admiral Thrawn": {
+  "qid": "Q51780",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Grand Moff Tarkin": {
+  "qid": "Q51800",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Grogu": {
+  "qid": "Q77001957",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Hutt (Star Wars)": {
+  "qid": "Q340152",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Jango Fett": {
+  "qid": "Q51795",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Jar Jar Binks": {
+  "qid": "Q51793",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Jediism": {
+  "qid": "Q258945",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Lando Calrissian": {
+  "qid": "Q51799",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Lightsaber": {
+  "qid": "Q19873",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Luke Skywalker": {
+  "qid": "Q51746",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Mandalorian (character)": {
+  "qid": "Q79325377",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Mandalorians": {
+  "qid": "Q54289",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Palpatine": {
+  "qid": "Q51770",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Princess Leia": {
+  "qid": "Q51797",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "en:R2-D2": {
+  "qid": "Q51788",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Rebel Alliance": {
+  "qid": "Q52316",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Revan": {
+  "qid": "Q51745",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 2,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "en:Sith": {
+  "qid": "Q51771",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Star Wars Knights of the Old Republic II: The Sith Lords": {
+  "qid": "Q74669",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 2,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "en:Supreme Leader Snoke": {
+  "qid": "Q20501302",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Tatooine": {
+  "qid": "Q723764",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "en:The Force": {
+  "qid": "Q1093766",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "en:Wookiee": {
+  "qid": "Q1750900",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "en:Yoda": {
+  "qid": "Q51730",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ }
+}

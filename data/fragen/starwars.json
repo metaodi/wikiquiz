@@ -1,0 +1,1987 @@
+{
+ "version": 1,
+ "kategorie": "starwars",
+ "generiert_am": "2026-11-16T09:28:55Z",
+ "fragen": [
+  {
+   "id": "wp-046467db36",
+   "kategorie": "starwars",
+   "frage": "Welche Star-Wars-Figur entpuppt sich als Zwillingsbruder von Prinzessin Leia?",
+   "antworten": [
+    "Lando Calrissian",
+    "Obi-Wan Kenobi",
+    "Luke Skywalker",
+    "Han Solo"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Princess_Leia",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Princess Leia",
+   "quelle_id": "Q51797"
+  },
+  {
+   "id": "wp-06d0a28642",
+   "kategorie": "starwars",
+   "frage": "Wer führte Regie beim Film «Star Wars: Episode II – Angriff der Klonkrieger» (2002)?",
+   "antworten": [
+    "Irvin Kershner",
+    "George Lucas",
+    "J. J. Abrams",
+    "Steven Spielberg"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Episode_II_%E2%80%93_Angriff_der_Klonkrieger",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: Episode II – Angriff der Klonkrieger",
+   "quelle_id": "Q181069"
+  },
+  {
+   "id": "wp-099d27fd71",
+   "kategorie": "starwars",
+   "frage": "Wer herrscht in Star Wars als Imperator über das Galaktische Imperium?",
+   "antworten": [
+    "Darth Vader",
+    "Palpatine",
+    "Grand Moff Tarkin",
+    "Count Dooku"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Galactic_Empire",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Galactic Empire",
+   "quelle_id": "Q52347"
+  },
+  {
+   "id": "wp-09b4a915be",
+   "kategorie": "starwars",
+   "frage": "Auf welcher Filmreihe beruht die Glaubens- und Philosophiebewegung des Jediismus?",
+   "antworten": [
+    "Star Wars",
+    "Matrix",
+    "Der Herr der Ringe",
+    "Star Trek"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Jediism",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jediism",
+   "quelle_id": "Q258945"
+  },
+  {
+   "id": "wp-0b4be727da",
+   "kategorie": "starwars",
+   "frage": "Zu welchem Volk gehört die Star-Wars-Figur Jar Jar Binks?",
+   "antworten": [
+    "Gungans",
+    "Wookiees",
+    "Ewoks",
+    "Jawas"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Jar_Jar_Binks",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jar Jar Binks",
+   "quelle_id": "Q51793"
+  },
+  {
+   "id": "wp-0e987f6444",
+   "kategorie": "starwars",
+   "frage": "Auf welchem Mond leben die kleinen, pelzigen Ewoks aus Star Wars?",
+   "antworten": [
+    "Hoth",
+    "Yavin 4",
+    "Tatooine",
+    "Endor"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Ewok",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ewok",
+   "quelle_id": "Q1409501"
+  },
+  {
+   "id": "wp-0ed45c3552",
+   "kategorie": "starwars",
+   "frage": "In welchem Jahr kam «Star Wars: Episode I – Die dunkle Bedrohung» in die Kinos?",
+   "antworten": [
+    "1995",
+    "1983",
+    "2002",
+    "1999"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Episode_I_%E2%80%93_Die_dunkle_Bedrohung",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: Episode I – Die dunkle Bedrohung",
+   "quelle_id": "Q165713"
+  },
+  {
+   "id": "wp-10200966cc",
+   "kategorie": "starwars",
+   "frage": "Welcher Filmemacher hat die Weltraum-Saga «Star Wars» erfunden?",
+   "antworten": [
+    "Ridley Scott",
+    "George Lucas",
+    "James Cameron",
+    "Steven Spielberg"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars",
+   "quelle_id": "Q462"
+  },
+  {
+   "id": "wp-15a1dac5c6",
+   "kategorie": "starwars",
+   "frage": "Welcher Kanzler der Republik steckte als heimlicher Sith-Lord hinter den Klonkriegen in «Star Wars»?",
+   "antworten": [
+    "Palpatine",
+    "Bail Organa",
+    "Mon Mothma",
+    "Valorum"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Clone_Wars",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Clone Wars",
+   "quelle_id": "Q1133061"
+  },
+  {
+   "id": "wp-179a5e04cb",
+   "kategorie": "starwars",
+   "frage": "Wie viele Sith-Lords existieren in Star Wars nach dem Beinahe-Untergang ihres Ordens jeweils gleichzeitig?",
+   "antworten": [
+    "Sieben",
+    "Drei",
+    "Zwölf",
+    "Zwei"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Sith",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sith",
+   "quelle_id": "Q51771"
+  },
+  {
+   "id": "wp-189155336c",
+   "kategorie": "starwars",
+   "frage": "Wer führte Regie beim Star-Wars-Film ‹Die Rache der Sith› aus dem Jahr 2005?",
+   "antworten": [
+    "J. J. Abrams",
+    "Ridley Scott",
+    "Steven Spielberg",
+    "George Lucas"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Episode_III_%E2%80%93_Die_Rache_der_Sith",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: Episode III – Die Rache der Sith",
+   "quelle_id": "Q42051"
+  },
+  {
+   "id": "wp-18b0b88f31",
+   "kategorie": "starwars",
+   "frage": "Welcher Filmemacher erschuf die Star-Wars-Welt und damit auch den Roboter R2-D2?",
+   "antworten": [
+    "George Lucas",
+    "James Cameron",
+    "Steven Spielberg",
+    "J. J. Abrams"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/R2-D2",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "R2-D2",
+   "quelle_id": "Q51788"
+  },
+  {
+   "id": "wp-1a7d0c36f0",
+   "kategorie": "starwars",
+   "frage": "Welcher Schauspieler spielt in der Star-Wars-Serie «Andor» die Titelrolle?",
+   "antworten": [
+    "Oscar Isaac",
+    "Pedro Pascal",
+    "Diego Luna",
+    "Gael García Bernal"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Andor",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Andor",
+   "quelle_id": "Q60462338"
+  },
+  {
+   "id": "wp-1aa0cd4b6d",
+   "kategorie": "starwars",
+   "frage": "In welchem Star-Wars-Kinofilm traten die Ewoks erstmals auf?",
+   "antworten": [
+    "Das Imperium schlägt zurück",
+    "Die Rache der Sith",
+    "Krieg der Sterne",
+    "Die Rückkehr der Jedi-Ritter"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Ewok",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ewok",
+   "quelle_id": "Q1409501"
+  },
+  {
+   "id": "wp-1f2ce190a0",
+   "kategorie": "starwars",
+   "frage": "Was war die Star-Wars-Figur Finn, bevor er sich dem Widerstand anschloss?",
+   "antworten": [
+    "Ein Sturmtruppler der Ersten Ordnung",
+    "Ein Schmuggler aus Tatooine",
+    "Ein Kopfgeldjäger der Unterwelt",
+    "Ein Jedi-Schüler von Luke"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Finn_(Star_Wars)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Finn (Star Wars)",
+   "quelle_id": "Q21772120"
+  },
+  {
+   "id": "wp-202a806cbc",
+   "kategorie": "starwars",
+   "frage": "Wer hat Star Wars erfunden und den ersten Film «Krieg der Sterne» geschaffen?",
+   "antworten": [
+    "George Lucas",
+    "Ridley Scott",
+    "Steven Spielberg",
+    "James Cameron"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Figuren_aus_Star_Wars",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Figuren aus Star Wars",
+   "quelle_id": "Q51805"
+  },
+  {
+   "id": "wp-22cd4ca247",
+   "kategorie": "starwars",
+   "frage": "Auf welchem Planeten übernimmt Boba Fett in seiner Disney+-Serie den einstigen Palast von Jabba dem Hutten?",
+   "antworten": [
+    "Endor",
+    "Naboo",
+    "Tatooine",
+    "Hoth"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Das_Buch_von_Boba_Fett",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Das Buch von Boba Fett",
+   "quelle_id": "Q104396610"
+  },
+  {
+   "id": "wp-260dddf2d8",
+   "kategorie": "starwars",
+   "frage": "Welcher Held der ersten Star-Wars-Filmtrilogie ist der Sohn von Darth Vader?",
+   "antworten": [
+    "Obi-Wan Kenobi",
+    "Lando Calrissian",
+    "Han Solo",
+    "Luke Skywalker"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Darth_Vader",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Darth Vader",
+   "quelle_id": "Q12206942"
+  },
+  {
+   "id": "wp-2ac40b4af0",
+   "kategorie": "starwars",
+   "frage": "Wer stürzt in Star Wars den Obersten Anführer Snoke und übernimmt das Kommando der Ersten Ordnung?",
+   "antworten": [
+    "Kylo Ren",
+    "Captain Phasma",
+    "Darth Maul",
+    "General Hux"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/First_Order_(Star_Wars)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "First Order (Star Wars)",
+   "quelle_id": "Q20501234"
+  },
+  {
+   "id": "wp-2b5f743872",
+   "kategorie": "starwars",
+   "frage": "Welche Stadt verwaltet Lando Calrissian, als er in «Das Imperium schlägt zurück» erstmals auftritt?",
+   "antworten": [
+    "Mos Eisley",
+    "Coruscant",
+    "Theed",
+    "Die Wolkenstadt (Cloud City)"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Lando_Calrissian",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Lando Calrissian",
+   "quelle_id": "Q51799"
+  },
+  {
+   "id": "wp-2bc04a95d5",
+   "kategorie": "starwars",
+   "frage": "Von welcher Star-Wars-Serie ist «Das Buch von Boba Fett» ein Ableger und teilweise eine Fortsetzung?",
+   "antworten": [
+    "Andor",
+    "The Mandalorian",
+    "The Acolyte",
+    "Obi-Wan Kenobi"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Das_Buch_von_Boba_Fett",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Das Buch von Boba Fett",
+   "quelle_id": "Q104396610"
+  },
+  {
+   "id": "wp-30ade09311",
+   "kategorie": "starwars",
+   "frage": "Welcher britische Schauspieler spielt in der Star-Wars-Serie «Skeleton Crew» den geheimnisvollen Jod Na Nawood?",
+   "antworten": [
+    "Jude Law",
+    "Benedict Cumberbatch",
+    "Tom Hardy",
+    "Colin Firth"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Skeleton_Crew",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: Skeleton Crew",
+   "quelle_id": "Q113275091"
+  },
+  {
+   "id": "wp-30f52090ad",
+   "kategorie": "starwars",
+   "frage": "Welche Hauptfigur aus Star Wars stammt vom Planeten Alderaan?",
+   "antworten": [
+    "Luke Skywalker",
+    "Han Solo",
+    "Prinzessin Leia",
+    "Padmé Amidala"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Alderaan",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Alderaan",
+   "quelle_id": "Q752192"
+  },
+  {
+   "id": "wp-3165fbd449",
+   "kategorie": "starwars",
+   "frage": "Welchem Piloten des Widerstands gehört der Droide BB-8 in den neueren Star-Wars-Filmen?",
+   "antworten": [
+    "Han Solo",
+    "Finn",
+    "Poe Dameron",
+    "Luke Skywalker"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/BB-8",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "BB-8",
+   "quelle_id": "Q21541731"
+  },
+  {
+   "id": "wp-34524b6ca2",
+   "kategorie": "starwars",
+   "frage": "Welcher kugelförmige Droide mit beweglichem Kuppelkopf ist in der Star-Wars-Fortsetzungstrilogie zu sehen?",
+   "antworten": [
+    "C-3PO",
+    "K-2SO",
+    "R2-D2",
+    "BB-8"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/BB-8",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "BB-8",
+   "quelle_id": "Q21541731"
+  },
+  {
+   "id": "wp-346a4d909d",
+   "kategorie": "starwars",
+   "frage": "Welche Schauspielerin verkörpert Ahsoka Tano in der Disney+-Serie «The Mandalorian»?",
+   "antworten": [
+    "Zoe Saldaña",
+    "Rosario Dawson",
+    "Thandiwe Newton",
+    "Tessa Thompson"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Ahsoka_Tano",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ahsoka Tano",
+   "quelle_id": "Q51755"
+  },
+  {
+   "id": "wp-3580165099",
+   "kategorie": "starwars",
+   "frage": "Welche Star-Wars-Serie von 2023 setzt die Handlung der Animationsserie «Star Wars Rebels» direkt fort?",
+   "antworten": [
+    "Ahsoka",
+    "Andor",
+    "The Mandalorian",
+    "Obi-Wan Kenobi"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars_Rebels",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars Rebels",
+   "quelle_id": "Q28787"
+  },
+  {
+   "id": "wp-386fd30d83",
+   "kategorie": "starwars",
+   "frage": "Welchen jungen Helden bildet Yoda in der ursprünglichen Star-Wars-Trilogie in der Macht aus?",
+   "antworten": [
+    "Han Solo",
+    "Lando Calrissian",
+    "Luke Skywalker",
+    "Poe Dameron"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Yoda",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Yoda",
+   "quelle_id": "Q51730"
+  },
+  {
+   "id": "wp-3aa031a05d",
+   "kategorie": "starwars",
+   "frage": "Welcher Schauspieler spielt in der Serie «The Mandalorian» die Titelfigur Din Djarin?",
+   "antworten": [
+    "Oscar Isaac",
+    "Diego Luna",
+    "Pedro Pascal",
+    "Javier Bardem"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/The_Mandalorian",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "The Mandalorian",
+   "quelle_id": "Q56876444"
+  },
+  {
+   "id": "wp-3e6e3d7053",
+   "kategorie": "starwars",
+   "frage": "Welche Star-Wars-Figur diente als genetische Vorlage für die Klonarmee der Republik?",
+   "antworten": [
+    "Han Solo",
+    "Darth Maul",
+    "Graf Dooku",
+    "Jango Fett"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Jango_Fett",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jango Fett",
+   "quelle_id": "Q51795"
+  },
+  {
+   "id": "wp-411a8504c0",
+   "kategorie": "starwars",
+   "frage": "Wer führte Regie beim Star-Wars-Film «Solo: A Star Wars Story» (2018)?",
+   "antworten": [
+    "Ron Howard",
+    "J. J. Abrams",
+    "Rian Johnson",
+    "Gareth Edwards"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Solo:_A_Star_Wars_Story",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Solo: A Star Wars Story",
+   "quelle_id": "Q27038847"
+  },
+  {
+   "id": "wp-41b6556d44",
+   "kategorie": "starwars",
+   "frage": "Auf welchem Streamingdienst lief die Star-Wars-Animationsserie «The Bad Batch»?",
+   "antworten": [
+    "Disney+",
+    "Amazon Prime Video",
+    "Netflix",
+    "Apple TV+"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_The_Bad_Batch",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: The Bad Batch",
+   "quelle_id": "Q97365172"
+  },
+  {
+   "id": "wp-452095fcfd",
+   "kategorie": "starwars",
+   "frage": "Wie heissen in Star Wars die Gegenspieler der Jedi, die die dunkle Seite der Macht nutzen?",
+   "antworten": [
+    "Sith",
+    "Klonkrieger",
+    "Mandalorianer",
+    "Sturmtruppen"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/The_Force",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "The Force",
+   "quelle_id": "Q1093766"
+  },
+  {
+   "id": "wp-458f18f727",
+   "kategorie": "starwars",
+   "frage": "Wer erfährt in «Die Rückkehr der Jedi-Ritter», dass Prinzessin Leia seine Zwillingsschwester ist?",
+   "antworten": [
+    "Obi-Wan Kenobi",
+    "Luke Skywalker",
+    "Han Solo",
+    "Lando Calrissian"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_R%C3%BCckkehr_der_Jedi-Ritter",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Die Rückkehr der Jedi-Ritter",
+   "quelle_id": "Q181803"
+  },
+  {
+   "id": "wp-46c8d207e5",
+   "kategorie": "starwars",
+   "frage": "Wie lange vor «Episode I – Die dunkle Bedrohung» spielt die Serie «The Acolyte» ungefähr?",
+   "antworten": [
+    "Rund 30 Jahre",
+    "Rund 1000 Jahre",
+    "Rund 10 Jahre",
+    "Rund 100 Jahre"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/The_Acolyte",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "The Acolyte",
+   "quelle_id": "Q104161310"
+  },
+  {
+   "id": "wp-4731d962ca",
+   "kategorie": "starwars",
+   "frage": "In welcher Disney+-Serie wurde die Figur Grogu, auch «Baby Yoda» genannt, bekannt?",
+   "antworten": [
+    "The Mandalorian",
+    "Obi-Wan Kenobi",
+    "Andor",
+    "Ahsoka"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Grogu",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Grogu",
+   "quelle_id": "Q77001957"
+  },
+  {
+   "id": "wp-4ea82abf88",
+   "kategorie": "starwars",
+   "frage": "Welcher Unterhaltungskonzern übernahm im Jahr 2012 die Marke «Star Wars»?",
+   "antworten": [
+    "Sony",
+    "Universal",
+    "Warner Bros.",
+    "Disney"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Orte_aus_Star_Wars",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Orte aus Star Wars",
+   "quelle_id": "Q2294199"
+  },
+  {
+   "id": "wp-5099fc2aa2",
+   "kategorie": "starwars",
+   "frage": "Welches Star-Wars-Spiel von 2019 ist der direkte Vorgänger von «Star Wars Jedi: Survivor»?",
+   "antworten": [
+    "Fallen Order",
+    "The Force Unleashed",
+    "Squadrons",
+    "Battlefront II"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars_Jedi:_Survivor",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars Jedi: Survivor",
+   "quelle_id": "Q112704136"
+  },
+  {
+   "id": "wp-5187eb0f5e",
+   "kategorie": "starwars",
+   "frage": "Für welchen Gangsterboss arbeitet Boba Fett im Film «Die Rückkehr der Jedi-Ritter»?",
+   "antworten": [
+    "Dryden Vos",
+    "Watto",
+    "Jabba der Hutte",
+    "Lando Calrissian"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Boba_Fett",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Boba Fett",
+   "quelle_id": "Q51790"
+  },
+  {
+   "id": "wp-5259323819",
+   "kategorie": "starwars",
+   "frage": "Wie lange vor den Ereignissen der Star-Wars-Filme spielt das Spiel «Knights of the Old Republic» ungefähr?",
+   "antworten": [
+    "Rund 40 000 Jahre",
+    "Rund 40 Jahre",
+    "Rund 4000 Jahre",
+    "Rund 400 Jahre"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Knights_of_the_Old_Republic",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: Knights of the Old Republic",
+   "quelle_id": "Q725902"
+  },
+  {
+   "id": "wp-58dfe4388b",
+   "kategorie": "starwars",
+   "frage": "Welchen Namen trug Darth Vader, bevor er der dunklen Seite der Macht verfiel?",
+   "antworten": [
+    "Anakin Skywalker",
+    "Obi-Wan Kenobi",
+    "Mace Windu",
+    "Qui-Gon Jinn"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Darth_Vader",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Darth Vader",
+   "quelle_id": "Q12206942"
+  },
+  {
+   "id": "wp-5f620d8c01",
+   "kategorie": "starwars",
+   "frage": "Was sammelt General Grievous in «Star Wars» als Trophäen von besiegten Jedi?",
+   "antworten": [
+    "Ihre Kommunikatoren",
+    "Ihre Umhänge",
+    "Ihre Lichtschwerter",
+    "Ihre Holocrons"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/General_Grievous",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "General Grievous",
+   "quelle_id": "Q51792"
+  },
+  {
+   "id": "wp-60d79d0f4f",
+   "kategorie": "starwars",
+   "frage": "Welchen Beruf übt die Star-Wars-Figur Boba Fett mit Helm und Rüstung aus?",
+   "antworten": [
+    "Schmuggler",
+    "Kopfgeldjäger",
+    "Jedi-Ritter",
+    "Sturmtruppler"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Boba_Fett",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Boba Fett",
+   "quelle_id": "Q51790"
+  },
+  {
+   "id": "wp-67951c0fbe",
+   "kategorie": "starwars",
+   "frage": "In welchem Jahr kam der erste «Star Wars»-Film («Krieg der Sterne») in die Kinos?",
+   "antworten": [
+    "1977",
+    "1971",
+    "1985",
+    "1983"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars",
+   "quelle_id": "Q462"
+  },
+  {
+   "id": "wp-69985926f8",
+   "kategorie": "starwars",
+   "frage": "Welchen Helden hält Jabba in «Die Rückkehr der Jedi-Ritter» als Trophäe gefangen?",
+   "antworten": [
+    "Qui-Gon Jinn",
+    "Lando Calrissian",
+    "Obi-Wan Kenobi",
+    "Han Solo"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Hutt_(Star_Wars)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hutt (Star Wars)",
+   "quelle_id": "Q340152"
+  },
+  {
+   "id": "wp-6bcd10b93d",
+   "kategorie": "starwars",
+   "frage": "Auf welchem Sumpfplaneten lebt Yoda in der ursprünglichen Star-Wars-Trilogie zurückgezogen?",
+   "antworten": [
+    "Tatooine",
+    "Dagobah",
+    "Hoth",
+    "Endor"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Yoda",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Yoda",
+   "quelle_id": "Q51730"
+  },
+  {
+   "id": "wp-6d4b86c9f2",
+   "kategorie": "starwars",
+   "frage": "Zwischen welchen beiden Star-Wars-Kinofilmen spielt die Animationsserie «Star Wars: The Clone Wars»?",
+   "antworten": [
+    "Episode III und Episode IV",
+    "Episode IV und Episode V",
+    "Episode II und Episode III",
+    "Episode I und Episode II"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_The_Clone_Wars_(Fernsehserie)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: The Clone Wars (Fernsehserie)",
+   "quelle_id": "Q632672"
+  },
+  {
+   "id": "wp-6dc3996eb5",
+   "kategorie": "starwars",
+   "frage": "Wer schützte in Star Wars die Republik vor den Klonkriegen als Friedenshüter, da sie keine eigene Armee hatte?",
+   "antworten": [
+    "Die Mandalorianer",
+    "Die Jedi",
+    "Die Sith",
+    "Die Wookiees"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Galactic_Republic",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Galactic Republic",
+   "quelle_id": "Q733195"
+  },
+  {
+   "id": "wp-6de55492de",
+   "kategorie": "starwars",
+   "frage": "Wie heisst die Kampfstation des Imperiums in Star Wars, die ganze Planeten zerstören kann?",
+   "antworten": [
+    "Sternenzerstörer",
+    "Todesstern",
+    "Millennium Falke",
+    "Sternenfestung"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Galactic_Empire",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Galactic Empire",
+   "quelle_id": "Q52347"
+  },
+  {
+   "id": "wp-74700ac453",
+   "kategorie": "starwars",
+   "frage": "Wie heisst die junge Schrottsammlerin vom Wüstenplaneten Jakku in «Das Erwachen der Macht»?",
+   "antworten": [
+    "Rey",
+    "Padmé",
+    "Leia",
+    "Jyn"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Das_Erwachen_der_Macht",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: Das Erwachen der Macht",
+   "quelle_id": "Q6074"
+  },
+  {
+   "id": "wp-75eb2147ab",
+   "kategorie": "starwars",
+   "frage": "In welchem Star-Wars-Film spielt Jar Jar Binks eine Hauptrolle?",
+   "antworten": [
+    "Episode IV – Eine neue Hoffnung",
+    "Episode II – Angriff der Klonkrieger",
+    "Episode III – Die Rache der Sith",
+    "Episode I – Die dunkle Bedrohung"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Jar_Jar_Binks",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jar Jar Binks",
+   "quelle_id": "Q51793"
+  },
+  {
+   "id": "wp-76cefa4e00",
+   "kategorie": "starwars",
+   "frage": "Wie heisst die riesige Raumstation des Imperiums, die ganze Planeten vernichten kann?",
+   "antworten": [
+    "Todesstern",
+    "Todesfestung",
+    "Kampfstern",
+    "Sternzerstörer"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Krieg_der_Sterne",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Krieg der Sterne",
+   "quelle_id": "Q17738"
+  },
+  {
+   "id": "wp-780fcfa52a",
+   "kategorie": "starwars",
+   "frage": "Welcher Jedi war in Star Wars der frühere Lehrmeister von Ahsoka Tano?",
+   "antworten": [
+    "Anakin Skywalker",
+    "Obi-Wan Kenobi",
+    "Qui-Gon Jinn",
+    "Mace Windu"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ahsoka_(Fernsehserie)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ahsoka (Fernsehserie)",
+   "quelle_id": "Q104153367"
+  },
+  {
+   "id": "wp-78577a4d8c",
+   "kategorie": "starwars",
+   "frage": "Wie viele Kommunikationsformen beherrscht der Star-Wars-Droide C-3PO nach eigener Aussage?",
+   "antworten": [
+    "Über sechzig Millionen",
+    "Über sechs Millionen",
+    "Über sechshunderttausend",
+    "Über sechstausend"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/C-3PO",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "C-3PO",
+   "quelle_id": "Q51787"
+  },
+  {
+   "id": "wp-7bb61becad",
+   "kategorie": "starwars",
+   "frage": "Auf welchem Eisplaneten liegt die Rebellenbasis zu Beginn von «Das Imperium schlägt zurück»?",
+   "antworten": [
+    "Endor",
+    "Naboo",
+    "Tatooine",
+    "Hoth"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Das_Imperium_schl%C3%A4gt_zur%C3%BCck",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Das Imperium schlägt zurück",
+   "quelle_id": "Q181795"
+  },
+  {
+   "id": "wp-7cf24e8921",
+   "kategorie": "starwars",
+   "frage": "Welcher Spielekonzern veröffentlichte 2023 das Videospiel «Star Wars Jedi: Survivor»?",
+   "antworten": [
+    "Nintendo",
+    "Ubisoft",
+    "Activision",
+    "Electronic Arts"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars_Jedi:_Survivor",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars Jedi: Survivor",
+   "quelle_id": "Q112704136"
+  },
+  {
+   "id": "wp-7d16c8cfe4",
+   "kategorie": "starwars",
+   "frage": "In wen verliebt sich der junge Anakin Skywalker im Film «Star Wars: Episode II – Angriff der Klonkrieger»?",
+   "antworten": [
+    "Mon Mothma",
+    "Ahsoka Tano",
+    "Padmé Amidala",
+    "Leia Organa"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Episode_II_%E2%80%93_Angriff_der_Klonkrieger",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: Episode II – Angriff der Klonkrieger",
+   "quelle_id": "Q181069"
+  },
+  {
+   "id": "wp-81a3d1f17f",
+   "kategorie": "starwars",
+   "frage": "Welche Klingenfarbe tragen die Lichtschwerter der Sith in Star Wars typischerweise?",
+   "antworten": [
+    "Blau",
+    "Violett",
+    "Rot",
+    "Grün"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Lightsaber",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Lightsaber",
+   "quelle_id": "Q19873"
+  },
+  {
+   "id": "wp-84695e0b6e",
+   "kategorie": "starwars",
+   "frage": "Zu derselben Spezies wie welcher berühmte Star-Wars-Jedi-Meister gehört die Figur Grogu?",
+   "antworten": [
+    "Mace Windu",
+    "Yoda",
+    "Obi-Wan Kenobi",
+    "Qui-Gon Jinn"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Grogu",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Grogu",
+   "quelle_id": "Q77001957"
+  },
+  {
+   "id": "wp-87e6282bd2",
+   "kategorie": "starwars",
+   "frage": "Welche Star-Wars-Figur lebt in Episode I als neunjähriger Sklave auf dem Wüstenplaneten Tatooine?",
+   "antworten": [
+    "Han Solo",
+    "Anakin Skywalker",
+    "Lando Calrissian",
+    "Luke Skywalker"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Episode_I_%E2%80%93_Die_dunkle_Bedrohung",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: Episode I – Die dunkle Bedrohung",
+   "quelle_id": "Q165713"
+  },
+  {
+   "id": "wp-8d9ff95d9e",
+   "kategorie": "starwars",
+   "frage": "Welche riesige Raumstation befehligt Grand Moff Tarkin im ersten Star-Wars-Film von 1977?",
+   "antworten": [
+    "Die Wolkenstadt",
+    "Die Starkiller-Basis",
+    "Den Sternenzerstörer",
+    "Den Todesstern"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Grand_Moff_Tarkin",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Grand Moff Tarkin",
+   "quelle_id": "Q51800"
+  },
+  {
+   "id": "wp-90ebaacbaa",
+   "kategorie": "starwars",
+   "frage": "Welcher Filmemacher erfand die Rebellenallianz aus dem Star-Wars-Universum?",
+   "antworten": [
+    "Ridley Scott",
+    "Steven Spielberg",
+    "George Lucas",
+    "J. J. Abrams"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Rebel_Alliance",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rebel Alliance",
+   "quelle_id": "Q52316"
+  },
+  {
+   "id": "wp-9178b8cb39",
+   "kategorie": "starwars",
+   "frage": "Welcher Schauspieler spielte Lando Calrissian in «Das Imperium schlägt zurück» und «Die Rückkehr der Jedi-Ritter»?",
+   "antworten": [
+    "Samuel L. Jackson",
+    "James Earl Jones",
+    "Billy Dee Williams",
+    "Morgan Freeman"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Lando_Calrissian",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Lando Calrissian",
+   "quelle_id": "Q51799"
+  },
+  {
+   "id": "wp-92cc5e82bc",
+   "kategorie": "starwars",
+   "frage": "Welche Figur tötet den Obersten Anführer Snoke im Star-Wars-Film «Die letzten Jedi»?",
+   "antworten": [
+    "Luke Skywalker",
+    "Kylo Ren",
+    "Rey",
+    "Finn"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Supreme_Leader_Snoke",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Supreme Leader Snoke",
+   "quelle_id": "Q20501302"
+  },
+  {
+   "id": "wp-94a2911d8e",
+   "kategorie": "starwars",
+   "frage": "Welcher Schauspieler verkörpert Luke Skywalker in den Star-Wars-Filmen?",
+   "antworten": [
+    "Ewan McGregor",
+    "Harrison Ford",
+    "Hayden Christensen",
+    "Mark Hamill"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Luke_Skywalker",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Luke Skywalker",
+   "quelle_id": "Q51746"
+  },
+  {
+   "id": "wp-9549d2d7f9",
+   "kategorie": "starwars",
+   "frage": "Welche Schauspielerin spielt die Titelrolle in der Star-Wars-Serie «Ahsoka»?",
+   "antworten": [
+    "Gina Carano",
+    "Daisy Ridley",
+    "Zoe Saldaña",
+    "Rosario Dawson"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ahsoka_(Fernsehserie)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ahsoka (Fernsehserie)",
+   "quelle_id": "Q104153367"
+  },
+  {
+   "id": "wp-981cae3af0",
+   "kategorie": "starwars",
+   "frage": "Welcher Schauspieler verkörpert Finn in den Star-Wars-Filmen ab «Das Erwachen der Macht»?",
+   "antworten": [
+    "Daniel Kaluuya",
+    "Chadwick Boseman",
+    "Oscar Isaac",
+    "John Boyega"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Finn_(Star_Wars)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Finn (Star Wars)",
+   "quelle_id": "Q21772120"
+  },
+  {
+   "id": "wp-99261e75b7",
+   "kategorie": "starwars",
+   "frage": "Wessen Jedi-Schülerin (Padawan) ist Ahsoka Tano in der Star-Wars-Serie «The Clone Wars»?",
+   "antworten": [
+    "Obi-Wan Kenobi",
+    "Mace Windu",
+    "Yoda",
+    "Anakin Skywalker"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Ahsoka_Tano",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ahsoka Tano",
+   "quelle_id": "Q51755"
+  },
+  {
+   "id": "wp-9b0cb42bb1",
+   "kategorie": "starwars",
+   "frage": "Welcher goldfarbene Droide ist in den Star-Wars-Filmen der ständige Begleiter von R2-D2?",
+   "antworten": [
+    "C-3PO",
+    "IG-88",
+    "K-2SO",
+    "BB-8"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/R2-D2",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "R2-D2",
+   "quelle_id": "Q51788"
+  },
+  {
+   "id": "wp-9f0b2e7be4",
+   "kategorie": "starwars",
+   "frage": "Wer schrieb das Drehbuch und führte Regie beim Film «Krieg der Sterne» von 1977?",
+   "antworten": [
+    "George Lucas",
+    "Steven Spielberg",
+    "Francis Ford Coppola",
+    "Ridley Scott"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Krieg_der_Sterne",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Krieg der Sterne",
+   "quelle_id": "Q17738"
+  },
+  {
+   "id": "wp-9fa1009657",
+   "kategorie": "starwars",
+   "frage": "Wer besiegt Darth Maul im Lichtschwertduell am Ende von «Episode I – Die dunkle Bedrohung»?",
+   "antworten": [
+    "Anakin Skywalker",
+    "Obi-Wan Kenobi",
+    "Qui-Gon Jinn",
+    "Mace Windu"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Darth_Maul",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Darth Maul",
+   "quelle_id": "Q51766"
+  },
+  {
+   "id": "wp-a0806f09d9",
+   "kategorie": "starwars",
+   "frage": "Welche Figur wendet sich im Film ‹Die Rache der Sith› der dunklen Seite der Macht zu?",
+   "antworten": [
+    "Luke Skywalker",
+    "Obi-Wan Kenobi",
+    "Anakin Skywalker",
+    "Mace Windu"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Episode_III_%E2%80%93_Die_Rache_der_Sith",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: Episode III – Die Rache der Sith",
+   "quelle_id": "Q42051"
+  },
+  {
+   "id": "wp-a53b6f2a97",
+   "kategorie": "starwars",
+   "frage": "Welches kanadische Studio entwickelte das Star-Wars-Rollenspiel «Knights of the Old Republic» (2003)?",
+   "antworten": [
+    "Bethesda",
+    "Blizzard",
+    "Ubisoft",
+    "BioWare"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Knights_of_the_Old_Republic",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: Knights of the Old Republic",
+   "quelle_id": "Q725902"
+  },
+  {
+   "id": "wp-a70e2acdd7",
+   "kategorie": "starwars",
+   "frage": "Wie heisst der berühmteste schneckenartige Verbrecherboss aus «Star Wars»?",
+   "antworten": [
+    "Jabba",
+    "Watto",
+    "Greedo",
+    "Boba Fett"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Hutt_(Star_Wars)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hutt (Star Wars)",
+   "quelle_id": "Q340152"
+  },
+  {
+   "id": "wp-a7e2141c63",
+   "kategorie": "starwars",
+   "frage": "Welcher Autor erfand die Star-Wars-Figur Grossadmiral Thrawn in einer Romantrilogie?",
+   "antworten": [
+    "Drew Karpyshyn",
+    "Timothy Zahn",
+    "Michael A. Stackpole",
+    "Kevin J. Anderson"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Grand_Admiral_Thrawn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Grand Admiral Thrawn",
+   "quelle_id": "Q51780"
+  },
+  {
+   "id": "wp-a9ca69551b",
+   "kategorie": "starwars",
+   "frage": "Von welchem Wort ist der Begriff «Droide» aus Star Wars eine Kurzform?",
+   "antworten": [
+    "Android",
+    "Planetoid",
+    "Humanoid",
+    "Asteroid"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Droid_(Star_Wars)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Droid (Star Wars)",
+   "quelle_id": "Q52383"
+  },
+  {
+   "id": "wp-b42dde36d3",
+   "kategorie": "starwars",
+   "frage": "In welcher Disney+-Serie war Grossadmiral Thrawn erstmals als Realfilm-Figur zu sehen?",
+   "antworten": [
+    "Andor",
+    "Ahsoka",
+    "Obi-Wan Kenobi",
+    "The Mandalorian"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Grand_Admiral_Thrawn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Grand Admiral Thrawn",
+   "quelle_id": "Q51780"
+  },
+  {
+   "id": "wp-b5ea7d031e",
+   "kategorie": "starwars",
+   "frage": "Mit welchem Droiden bildet C-3PO in Star Wars ein Duo nach dem Vorbild von Laurel und Hardy?",
+   "antworten": [
+    "K-2SO",
+    "BB-8",
+    "IG-88",
+    "R2-D2"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/C-3PO",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "C-3PO",
+   "quelle_id": "Q51787"
+  },
+  {
+   "id": "wp-b6fd79dee3",
+   "kategorie": "starwars",
+   "frage": "Welche Waffe ist das Markenzeichen des Star-Wars-Bösewichts Darth Maul?",
+   "antworten": [
+    "Zwei kurze Lichtschwerter",
+    "Ein Lichtschwert mit Querklingen",
+    "Ein gebogenes Lichtschwert",
+    "Ein doppelklingiges Lichtschwert"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Darth_Maul",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Darth Maul",
+   "quelle_id": "Q51766"
+  },
+  {
+   "id": "wp-b77b00bb95",
+   "kategorie": "starwars",
+   "frage": "Welcher Ausruf von Admiral Ackbar aus Star Wars wurde zu einem beliebten Internet-Meme?",
+   "antworten": [
+    "It's a trap!",
+    "Use the Force, Luke!",
+    "May the Force be with you!",
+    "I am your father!"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Admiral_Ackbar",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Admiral Ackbar",
+   "quelle_id": "Q52306"
+  },
+  {
+   "id": "wp-b81569f882",
+   "kategorie": "starwars",
+   "frage": "Welcher Wookiee ist in Star Wars der treue Begleiter von Han Solo?",
+   "antworten": [
+    "Yoda",
+    "Chewbacca",
+    "Jabba",
+    "Greedo"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Wookiee",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Wookiee",
+   "quelle_id": "Q1750900"
+  },
+  {
+   "id": "wp-bdbbdf6d7c",
+   "kategorie": "starwars",
+   "frage": "Welche Figur zerstört am Ende des Films «Krieg der Sterne» (1977) den ersten Todesstern?",
+   "antworten": [
+    "Leia Organa",
+    "Han Solo",
+    "Luke Skywalker",
+    "Obi-Wan Kenobi"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Figuren_aus_Star_Wars",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Figuren aus Star Wars",
+   "quelle_id": "Q51805"
+  },
+  {
+   "id": "wp-bf52019970",
+   "kategorie": "starwars",
+   "frage": "Welcher Schauspieler spielte im Film von 2018 den jungen Han Solo?",
+   "antworten": [
+    "Miles Teller",
+    "Alden Ehrenreich",
+    "Ansel Elgort",
+    "Taron Egerton"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Solo:_A_Star_Wars_Story",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Solo: A Star Wars Story",
+   "quelle_id": "Q27038847"
+  },
+  {
+   "id": "wp-bf8b89c192",
+   "kategorie": "starwars",
+   "frage": "In welchem Star-Wars-Film tritt die Erste Ordnung zum ersten Mal auf?",
+   "antworten": [
+    "Der Aufstieg Skywalkers",
+    "Rogue One",
+    "Das Erwachen der Macht",
+    "Die letzten Jedi"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/First_Order_(Star_Wars)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "First Order (Star Wars)",
+   "quelle_id": "Q20501234"
+  },
+  {
+   "id": "wp-c749d3b0e4",
+   "kategorie": "starwars",
+   "frage": "Auf welchem Streamingdienst startete 2024 die Star-Wars-Serie «The Acolyte»?",
+   "antworten": [
+    "Disney+",
+    "Netflix",
+    "Amazon Prime Video",
+    "Apple TV+"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/The_Acolyte",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "The Acolyte",
+   "quelle_id": "Q104161310"
+  },
+  {
+   "id": "wp-c76db7280d",
+   "kategorie": "starwars",
+   "frage": "Auf welchem Streamingdienst startete die Star-Wars-Serie «Skeleton Crew» im Dezember 2024?",
+   "antworten": [
+    "Apple TV+",
+    "Netflix",
+    "Amazon Prime Video",
+    "Disney+"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Skeleton_Crew",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: Skeleton Crew",
+   "quelle_id": "Q113275091"
+  },
+  {
+   "id": "wp-c7e200533a",
+   "kategorie": "starwars",
+   "frage": "Welche typische Waffe benutzen die Jedi-Ritter in Star Wars?",
+   "antworten": [
+    "Energiebogen",
+    "Lichtschwert",
+    "Blaster",
+    "Plasmaspeer"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jedi",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jedi",
+   "quelle_id": "Q51724"
+  },
+  {
+   "id": "wp-cf3bb3f312",
+   "kategorie": "starwars",
+   "frage": "Wie heisst der junge Jedi-Held im Videospiel «Star Wars Jedi: Fallen Order»?",
+   "antworten": [
+    "Galen Marek",
+    "Ezra Bridger",
+    "Kyle Katarn",
+    "Cal Kestis"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars_Jedi:_Fallen_Order",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars Jedi: Fallen Order",
+   "quelle_id": "Q55449345"
+  },
+  {
+   "id": "wp-d00ffaaebf",
+   "kategorie": "starwars",
+   "frage": "Welcher Schauspieler verkörperte Snoke in den Star-Wars-Filmen mittels Motion-Capture?",
+   "antworten": [
+    "Oscar Isaac",
+    "Domhnall Gleeson",
+    "Andy Serkis",
+    "Mark Hamill"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Supreme_Leader_Snoke",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Supreme Leader Snoke",
+   "quelle_id": "Q20501302"
+  },
+  {
+   "id": "wp-d06e487f39",
+   "kategorie": "starwars",
+   "frage": "Welchen im Exil lebenden Jedi-Meister sucht Rey im Film «Star Wars: Die letzten Jedi» auf?",
+   "antworten": [
+    "Yoda",
+    "Luke Skywalker",
+    "Mace Windu",
+    "Obi-Wan Kenobi"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Die_letzten_Jedi",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: Die letzten Jedi",
+   "quelle_id": "Q18486021"
+  },
+  {
+   "id": "wp-d280df12da",
+   "kategorie": "starwars",
+   "frage": "Welcher Jedi tötet in Star Wars Episode II den Kopfgeldjäger Jango Fett?",
+   "antworten": [
+    "Anakin Skywalker",
+    "Mace Windu",
+    "Yoda",
+    "Obi-Wan Kenobi"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Jango_Fett",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jango Fett",
+   "quelle_id": "Q51795"
+  },
+  {
+   "id": "wp-d3eededf5d",
+   "kategorie": "starwars",
+   "frage": "Auf welchem Streamingdienst startete 2020 die letzte Staffel der Serie «Star Wars: The Clone Wars»?",
+   "antworten": [
+    "Netflix",
+    "Amazon Prime Video",
+    "Apple TV+",
+    "Disney+"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_The_Clone_Wars_(Fernsehserie)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: The Clone Wars (Fernsehserie)",
+   "quelle_id": "Q632672"
+  },
+  {
+   "id": "wp-d5624b03a0",
+   "kategorie": "starwars",
+   "frage": "Wie viele Sonnen hat der Wüstenplanet Tatooine aus Star Wars?",
+   "antworten": [
+    "Vier",
+    "Zwei",
+    "Eine",
+    "Drei"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Tatooine",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tatooine",
+   "quelle_id": "Q723764"
+  },
+  {
+   "id": "wp-da8653628e",
+   "kategorie": "starwars",
+   "frage": "Welcher Schauspieler spielt in der Disney+-Serie ‹Obi-Wan Kenobi› die Titelrolle des Jedi-Meisters?",
+   "antworten": [
+    "Mark Hamill",
+    "Liam Neeson",
+    "Ewan McGregor",
+    "Hayden Christensen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Obi-Wan_Kenobi_(Fernsehserie)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Obi-Wan Kenobi (Fernsehserie)",
+   "quelle_id": "Q104154217"
+  },
+  {
+   "id": "wp-db5debedea",
+   "kategorie": "starwars",
+   "frage": "Gegen welche Macht kämpft die Rebellenallianz in der ursprünglichen Star-Wars-Trilogie?",
+   "antworten": [
+    "Die Handelsföderation",
+    "Die Erste Ordnung",
+    "Die Separatisten",
+    "Das Galaktische Imperium"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Rebel_Alliance",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rebel Alliance",
+   "quelle_id": "Q52316"
+  },
+  {
+   "id": "wp-dfd7e242df",
+   "kategorie": "starwars",
+   "frage": "Was trugen 2001 viele Menschen nach einem E-Mail-Aufruf bei Volkszählungen als ihre Religion ein?",
+   "antworten": [
+    "Zauberer",
+    "Klingone",
+    "Jedi",
+    "Hobbit"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Jediism",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jediism",
+   "quelle_id": "Q258945"
+  },
+  {
+   "id": "wp-e13c0556bd",
+   "kategorie": "starwars",
+   "frage": "Wer führte Regie beim Star-Wars-Film «Das Erwachen der Macht» (2015)?",
+   "antworten": [
+    "George Lucas",
+    "J. J. Abrams",
+    "Rian Johnson",
+    "Steven Spielberg"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Das_Erwachen_der_Macht",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: Das Erwachen der Macht",
+   "quelle_id": "Q6074"
+  },
+  {
+   "id": "wp-e43792dcc5",
+   "kategorie": "starwars",
+   "frage": "Mit welchem geheimen Befehl wurden die Klonkrieger in «Star Wars» dazu gebracht, die Jedi zu töten?",
+   "antworten": [
+    "Order 66",
+    "Order 13",
+    "Order 42",
+    "Order 77"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Clone_Wars",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Clone Wars",
+   "quelle_id": "Q1133061"
+  },
+  {
+   "id": "wp-e52aa1e861",
+   "kategorie": "starwars",
+   "frage": "Welcher Gruss der Jedi aus Star Wars ist zu einem geflügelten Wort der Popkultur geworden?",
+   "antworten": [
+    "Lang lebe die Republik",
+    "Das Gleichgewicht sei mit dir",
+    "Folge dem Licht der Sterne",
+    "Möge die Macht mit dir sein"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/The_Force",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "The Force",
+   "quelle_id": "Q1093766"
+  },
+  {
+   "id": "wp-e5523ebf30",
+   "kategorie": "starwars",
+   "frage": "Welcher britische Schauspieler verkörperte Grand Moff Tarkin im ersten Star-Wars-Film?",
+   "antworten": [
+    "Anthony Hopkins",
+    "Alec Guinness",
+    "Peter Cushing",
+    "Christopher Lee"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Grand_Moff_Tarkin",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Grand Moff Tarkin",
+   "quelle_id": "Q51800"
+  },
+  {
+   "id": "wp-e7cb563988",
+   "kategorie": "starwars",
+   "frage": "Wer führte Regie beim Star-Wars-Film «Der Aufstieg Skywalkers» (2019)?",
+   "antworten": [
+    "Steven Spielberg",
+    "George Lucas",
+    "Rian Johnson",
+    "J. J. Abrams"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Der_Aufstieg_Skywalkers",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Star Wars: Der Aufstieg Skywalkers",
+   "quelle_id": "Q20977110"
+  },
+  {
+   "id": "wp-e858408168",
+   "kategorie": "starwars",
+   "frage": "Unter welchem Sith-Namen ist der Imperator Palpatine aus «Star Wars» ebenfalls bekannt?",
+   "antworten": [
+    "Darth Plagueis",
+    "Darth Maul",
+    "Darth Tyranus",
+    "Darth Sidious"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Palpatine",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Palpatine",
+   "quelle_id": "Q51770"
+  },
+  {
+   "id": "wp-e97d2fcf0c",
+   "kategorie": "starwars",
+   "frage": "Welcher Planet ist in Star Wars Hauptstadt der Republik und des Imperiums sowie Sitz des Jedi-Ordens?",
+   "antworten": [
+    "Naboo",
+    "Endor",
+    "Coruscant",
+    "Tatooine"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Coruscant",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Coruscant",
+   "quelle_id": "Q719329"
+  },
+  {
+   "id": "wp-ea3fa74f42",
+   "kategorie": "starwars",
+   "frage": "Welcher bekannte Star-Wars-Droide ist auf Übersetzung, Etikette und fremde Kulturen spezialisiert?",
+   "antworten": [
+    "R2-D2",
+    "C-3PO",
+    "K-2SO",
+    "BB-8"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Droid_(Star_Wars)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Droid (Star Wars)",
+   "quelle_id": "Q52383"
+  },
+  {
+   "id": "wp-f490eaddc9",
+   "kategorie": "starwars",
+   "frage": "Welche Waffe des Imperiums zerstört im ersten Star-Wars-Film (1977) den Planeten Alderaan?",
+   "antworten": [
+    "Die Executor",
+    "Die Starkiller-Basis",
+    "Ein Sternenzerstörer",
+    "Der Todesstern"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Alderaan",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Alderaan",
+   "quelle_id": "Q752192"
+  },
+  {
+   "id": "wp-f558d76f7c",
+   "kategorie": "starwars",
+   "frage": "Welches Fluggerät gehört neben Helm und Rüstung typischerweise zur Ausrüstung der Mandalorianer in Star Wars?",
+   "antworten": [
+    "Flügelanzug",
+    "Hoverboard",
+    "Jetpack",
+    "Gleitschirm"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Mandalorians",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mandalorians",
+   "quelle_id": "Q54289"
+  },
+  {
+   "id": "wp-f5b778ace3",
+   "kategorie": "starwars",
+   "frage": "Welche Star-Wars-Figur ist besonders für ihr Lichtschwert mit zwei Klingen bekannt?",
+   "antworten": [
+    "Count Dooku",
+    "Darth Maul",
+    "Kylo Ren",
+    "Darth Vader"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Lightsaber",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Lightsaber",
+   "quelle_id": "Q19873"
+  },
+  {
+   "id": "wp-f9941b4bb2",
+   "kategorie": "starwars",
+   "frage": "Wer tötet in der ursprünglichen «Star Wars»-Trilogie den Imperator Palpatine?",
+   "antworten": [
+    "Luke Skywalker",
+    "Obi-Wan Kenobi",
+    "Darth Vader",
+    "Han Solo"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Palpatine",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Palpatine",
+   "quelle_id": "Q51770"
+  },
+  {
+   "id": "wp-fa87cb1e05",
+   "kategorie": "starwars",
+   "frage": "Welche Farbe hat in Star Wars das Lichtschwert eines Sith-Lords üblicherweise?",
+   "antworten": [
+    "Violett",
+    "Blau",
+    "Grün",
+    "Rot"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Sith",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sith",
+   "quelle_id": "Q51771"
+  },
+  {
+   "id": "wp-fe28735ab0",
+   "kategorie": "starwars",
+   "frage": "Mit welchem berühmten Satz verabschieden sich die Jedi in der deutschen Fassung von Star Wars?",
+   "antworten": [
+    "Möge die Macht mit dir sein",
+    "Die Sterne seien mit dir",
+    "Möge das Licht dich leiten",
+    "Lebe lang und in Frieden"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jedi",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jedi",
+   "quelle_id": "Q51724"
+  }
+ ]
+}
