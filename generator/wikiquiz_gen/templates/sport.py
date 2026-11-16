@@ -179,7 +179,8 @@ SELECT ?item ?label ?article ?sl ?person ?pl ?geboren (COUNT(DISTINCT ?p2) AS ?n
     regie = {q: (swiss(r["pl"]), geburtsjahr(r["geboren"])) for q, r in eindeutig.items()}
     bekannt = ktx.filtern([_kandidat(r) for r in eindeutig.values()], "film", schwellen=SCHWELLEN_FILM)
     # Regisseure bekannter Filme (60+ Sprachversionen), nicht alle Personen mit Beruf „Filmregisseur“
-    pool = urheber_pool(rows)
+    bekannte_filme = {k.qid for k in bekannt}
+    pool = urheber_pool([r for r in rows if qid(r["item"]) in bekannte_filme])
     fragen, pro_person = [], {}
     for k in sorted(bekannt, key=lambda k: -(k.pageviews or 0)):
         person, jahr = regie[k.qid]

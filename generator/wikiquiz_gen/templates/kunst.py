@@ -76,30 +76,43 @@ def urheber_pool(rows: list[dict]) -> list[tuple[str, int]]:
 
 def werke(ktx: Kontext, name: str, art: Werkart) -> list[Frage]:
     """Der Urheber muss einen der Berufe der Werkart haben: Das schliesst u. a. Bibelbücher aus
-    („Römer“ → Paulus von Tarsus), die Wikidata ebenfalls als literarische Werke führt."""
-    berufe = " ".join(f"wd:{b}" for b in art.berufe)
+    („Römer“ → Paulus von Tarsus), die Wikidata ebenfalls als literarische Werke führt.
+
+    Bewusst einfache Abfrage ohne GROUP BY und ohne Berufsfilter: Mit beidem lief die Abfrage für
+    literarische Werke in Lauf 25 achtmal in die Zeitbegrenzung des Wikidata-Abfragedienstes.
+    Anzahl Urheber und Berufe werden danach in Python bzw. in kleinen Paketen geprüft."""
+    from ..wikipedia.kandidaten import berufe as berufe_von
+
     rows = abfrage(ktx.http, f"""
-SELECT ?item ?label ?article ?sl ?person ?pl ?geboren (COUNT(DISTINCT ?p2) AS ?n) WHERE {{
+SELECT ?item ?label ?article ?sl ?person ?pl ?geboren WHERE {{
   {art.muster}
-  ?item wdt:{art.urheber} ?person; wdt:{art.urheber} ?p2.
-  ?person wdt:P31 wd:Q5; rdfs:label ?pl. FILTER(LANG(?pl) = "de")
-  FILTER EXISTS {{ VALUES ?beruf {{ {berufe} }} ?person wdt:P106 ?beruf }}
-  OPTIONAL {{ ?person wdt:P569 ?geboren }}
   ?item wikibase:sitelinks ?sl. FILTER(?sl >= {SCHWELLEN_WERK.min_sitelinks})
+  ?item wdt:{art.urheber} ?person.
+  ?person rdfs:label ?pl. FILTER(LANG(?pl) = "de")
+  OPTIONAL {{ ?person wdt:P569 ?geboren }}
   ?item rdfs:label ?label. FILTER(LANG(?label) = "de")
   ?article schema:about ?item; schema:isPartOf <https://de.wikipedia.org/>.
-}} GROUP BY ?item ?label ?article ?sl ?person ?pl ?geboren""", ttl=30 * 86400)
+}}""", ttl=30 * 86400)
+    personen_pro_werk: dict[str, set[str]] = {}
+    for r in rows:
+        personen_pro_werk.setdefault(qid(r["item"]), set()).add(r["person"])
+    beruf = berufe_von(ktx.http, [qid(r["person"]) for r in rows])
+    passend = {p for p, b in beruf.items() if set(b) & set(art.berufe)}
+    rows = [r for r in rows if qid(r["person"]) in passend]
     urheber: dict[str, tuple[str, int]] = {}
     for r in rows:
         q = qid(r["item"])
-        if r["n"] != "1" or geburtsjahr(r.get("geboren")) is None:
+        jahr = geburtsjahr(r.get("geboren"))
+        if len(personen_pro_werk[q]) != 1 or jahr is None:
             ktx.protokoll.verwerfen(ktx.kategorie, f"template:{name}", "nicht genau ein urheber mit geburtsjahr",
                                     {"qid": q, "label": r["label"]})
             continue
-        urheber.setdefault(q, (swiss(r["pl"]), geburtsjahr(r["geboren"])))
+        urheber.setdefault(q, (swiss(r["pl"]), jahr))
     kandidaten = {qid(r["item"]): r for r in rows if qid(r["item"]) in urheber and r["label"] not in AUSSCHLUSS}
     bekannt = ktx.filtern([_kandidat(r) for r in kandidaten.values()], name, schwellen=SCHWELLEN_WERK)
-    pool = urheber_pool(rows)
+    # Distraktoren nur von Urhebern bekannter Werke (sonst z. B. Papst Franziskus als „Schriftsteller“)
+    bekannte_werke = {k.qid for k in bekannt}
+    pool = urheber_pool([r for r in rows if qid(r["item"]) in bekannte_werke])
     fragen: list[Frage] = []
     pro_urheber: dict[str, int] = {}
     for k in sorted(bekannt, key=lambda k: -(k.pageviews or 0)):
