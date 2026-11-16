@@ -319,3 +319,37 @@ def test_landessprache():
     assert landessprache("Bündnerromanisch") == "Rätoromanisch"
     assert landessprache("Italienisch") == "Italienisch"
     assert landessprache("Latein") is None
+
+
+def test_dedupe_gleiche_antwort_hoechstens_zweimal():
+    from wikiquiz_gen.dedupe import antwort_schluessel
+
+    def wp(text, richtig, qid, falsch=("Ridley Scott", "James Cameron", "Steven Spielberg")):
+        return frage(frage=text, richtig=richtig, falsch=list(falsch), quelle_id=qid, quelle_typ="wikipedia")
+
+    lucas = [
+        wp("Welcher Filmemacher erfand die Weltraum-Saga Star Wars?", "George Lucas", "Q1"),
+        wp("Wer führte Regie bei Episode II?", "George Lucas", "Q2"),
+        wp("Wer schrieb das Drehbuch zum Film von 1977?", "George Lucas", "Q3"),
+    ]
+    todesstern = [
+        wp("Welche Raumstation zerstört Alderaan?", "Der Todesstern", "Q4", ("Sternzerstörer", "Executor", "Kampfstern")),
+        wp("Welche Station befehligt Tarkin?", "Den Todesstern", "Q5", ("Sternzerstörer", "Executor", "Kampfstern")),
+        wp("Wie heisst die Kampfstation des Imperiums?", "Todesstern", "Q6", ("Sternzerstörer", "Executor", "Kampfstern")),
+    ]
+    jahre = [wp(t, "1977", f"Q{10 + i}", ("1971", "1985", "1983")) for i, t in enumerate([
+        "Wann kam Krieg der Sterne in die Kinos?", "In welchem Jahr starb Elvis Presley?",
+        "Wann startete die Raumsonde Voyager 1?"])]
+    behalten, verworfen = deduplizieren([*lucas, *todesstern, *jahre])
+    assert behalten == [*lucas[:2], *todesstern[:2], *jahre]
+    assert [g for _, g in verworfen] == ["gleiche antwort: schon 2 fragen mit «George Lucas»",
+                                          "gleiche antwort: schon 2 fragen mit «Todesstern»"]
+    assert antwort_schluessel("Der Todesstern") == antwort_schluessel("todesstern") == "todesstern"
+    assert antwort_schluessel("1977") is None
+
+
+def test_dedupe_gleiche_antwort_nicht_fuer_wikidata():
+    fragen = [frage(frage=f"In welchem Land liegt die Stadt {s}?", richtig="Frankreich", quelle_id=f"Q{i}",
+                    falsch=["Belgien", "Spanien", "Italien"], template="stadt")
+              for i, s in enumerate(["Lyon", "Lille", "Nizza"])]
+    assert deduplizieren(fragen)[0] == fragen

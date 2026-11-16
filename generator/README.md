@@ -117,7 +117,10 @@ Einmalig nötig:
    formale Regeln eingehalten. Danach Deduplizierung gegen den Bestand: fast gleicher Wortlaut, dieselbe
    Tatsache mit leicht anderer Antwort („Überfall auf Polen“ / „Deutscher Überfall auf Polen“, gewichtete
    Wortüberschneidung ≥ 0.6) und Fragen, die sich gegenseitig verraten („Wer war Obamas Vizepräsident?“ ↔
-   „Unter wem war Biden Vizepräsident?“). Die neuere Frage wird verworfen.
+   „Unter wem war Biden Vizepräsident?“). Ausserdem höchstens 2 Fragen mit derselben richtigen Antwort pro
+   Kategorie (`MAX_GLEICHE_ANTWORT` in `dedupe.py`; Artikel wie „Der Todesstern“ zählen nicht, Jahreszahlen
+   und Wikidata-Templatefragen sind ausgenommen). Sonst wiederholen sich vor allem in Themenkategorien
+   Antworten wie George Lucas, Hogwarts oder Muggel. Die neuere Frage wird verworfen, der Bestand bleibt.
 
 Kosten (grobe Schätzung mit `claude-opus-5-5`, Denkaufwand `medium`): ca. 0.05–0.10 USD pro Artikel,
 also rund 5–15 USD für 150 Fragen einer Kategorie. Der Lauf protokolliert die tatsächlichen Tokens.

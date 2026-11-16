@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "starwars",
- "generiert_am": "2026-11-16T09:42:06Z",
+ "generiert_am": "2026-11-16T10:29:08Z",
  "fragen": [
   {
    "id": "wp-046467db36",
@@ -452,24 +452,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Solo: A Star Wars Story",
    "quelle_id": "Q27038847"
-  },
-  {
-   "id": "wp-41b6556d44",
-   "kategorie": "starwars",
-   "frage": "Auf welchem Streamingdienst lief die Star-Wars-Animationsserie «The Bad Batch»?",
-   "antworten": [
-    "Disney+",
-    "Amazon Prime Video",
-    "Netflix",
-    "Apple TV+"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_The_Bad_Batch",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Star Wars: The Bad Batch",
-   "quelle_id": "Q97365172"
   },
   {
    "id": "wp-452095fcfd",
@@ -1264,24 +1246,6 @@
    "quelle_id": "Q104161310"
   },
   {
-   "id": "wp-c76db7280d",
-   "kategorie": "starwars",
-   "frage": "Auf welchem Streamingdienst startete die Star-Wars-Serie «Skeleton Crew» im Dezember 2024?",
-   "antworten": [
-    "Apple TV+",
-    "Netflix",
-    "Amazon Prime Video",
-    "Disney+"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_Skeleton_Crew",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Star Wars: Skeleton Crew",
-   "quelle_id": "Q113275091"
-  },
-  {
    "id": "wp-c7e200533a",
    "kategorie": "starwars",
    "frage": "Welche typische Waffe benutzen die Jedi-Ritter in Star Wars?",
@@ -1370,24 +1334,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Jango Fett",
    "quelle_id": "Q51795"
-  },
-  {
-   "id": "wp-d3eededf5d",
-   "kategorie": "starwars",
-   "frage": "Auf welchem Streamingdienst startete 2020 die letzte Staffel der Serie «Star Wars: The Clone Wars»?",
-   "antworten": [
-    "Netflix",
-    "Amazon Prime Video",
-    "Apple TV+",
-    "Disney+"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Star_Wars:_The_Clone_Wars_(Fernsehserie)",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Star Wars: The Clone Wars (Fernsehserie)",
-   "quelle_id": "Q632672"
   },
   {
    "id": "wp-d5624b03a0",

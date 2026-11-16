@@ -4,7 +4,10 @@ Neben fast gleichem Wortlaut erkennt sie zwei weitere Fälle, die im selben Spie
 - **dieselbe Tatsache** mit leicht anderer Antwort („Überfall auf Polen“ / „Deutscher Überfall auf
   Polen“) und ähnlichem Inhalt der Fragen,
 - **gegenseitiges Verraten**: Die Antwort der einen Frage steht in der anderen und umgekehrt
-  („Wer war Obamas Vizepräsident?“ ↔ „Unter wem war Biden Vizepräsident?“).
+  („Wer war Obamas Vizepräsident?“ ↔ „Unter wem war Biden Vizepräsident?“),
+- **dieselbe Antwort zu oft**: Pro Kategorie höchstens `MAX_GLEICHE_ANTWORT` Fragen mit derselben
+  richtigen Antwort. In Themenkategorien kommen sonst Hogwarts, Muggel oder George Lucas immer wieder
+  vor, oft mit anders formulierten Fragen zur selben Tatsache.
 """
 from __future__ import annotations
 
@@ -24,6 +27,10 @@ AEHNLICHKEIT = 0.8
 GLEICHE_TATSACHE = 0.6  # Bestand: Polen-Paar 0.66, Zauberflöte/Don Giovanni 0.49
 # Anteil der Antwortwörter, die in der anderen Frage vorkommen müssen
 ANTWORT_IN_FRAGE = 0.6
+# Höchstens so viele Fragen mit derselben richtigen Antwort pro Deduplizierungslauf (= pro Kategorie).
+# Lauf 12 (Star Wars) und 14 (Harry Potter): George Lucas ×7, Hogwarts ×3, Muggel ×3, Horkruxe ×3
+MAX_GLEICHE_ANTWORT = 2
+_ARTIKEL = ("der ", "die ", "das ", "den ", "dem ", "des ", "ein ", "eine ", "einen ", "einem ")
 
 _FUELLWOERTER = {
     "welche", "welcher", "welches", "welchem", "welchen", "wurde", "wurden", "worden", "hatte",
@@ -89,6 +96,17 @@ def kommt_vor(antwort: str, frage: str) -> bool:
     return len(w & inhaltswoerter(frage)) / len(w) >= ANTWORT_IN_FRAGE
 
 
+def antwort_schluessel(antwort: str) -> str | None:
+    """Vergleichsform der richtigen Antwort ohne Artikel („Der Todesstern“ = „Todesstern“).
+    None für Jahreszahlen und Zahlen: Gleiche Jahre stehen oft für verschiedene Ereignisse."""
+    n = normalisiere(antwort)
+    for artikel in _ARTIKEL:
+        if n.startswith(artikel):
+            n = n[len(artikel):]
+            break
+    return None if not n or n.isdigit() else n
+
+
 def verraten_sich(a: Frage, b: Frage) -> bool:
     return kommt_vor(a.richtig, b.frage) and kommt_vor(b.richtig, a.frage)
 
@@ -100,12 +118,15 @@ def beide_wikidata(a: Frage, b: Frage) -> bool:
 
 
 def deduplizieren(
-    fragen: list[Frage], max_pro_quelle: int = MAX_FRAGEN_PRO_QUELLE
+    fragen: list[Frage], max_pro_quelle: int = MAX_FRAGEN_PRO_QUELLE,
+    max_gleiche_antwort: int = MAX_GLEICHE_ANTWORT,
 ) -> tuple[list[Frage], list[tuple[Frage, str]]]:
-    """Behält die Reihenfolge bei (vorne = bevorzugt)."""
+    """Behält die Reihenfolge bei (vorne = bevorzugt). Wikidata-Templatefragen zählen nicht zur
+    Grenze gleicher Antworten („In welchem Land liegt …? → Frankreich“ ist dort normal)."""
     behalten: list[Frage] = []
     verworfen: list[tuple[Frage, str]] = []
     pro_quelle: dict[str, int] = defaultdict(int)
+    pro_antwort: dict[str, int] = defaultdict(int)
     ids: set[str] = set()
     gewichte = Gewichte(fragen)
     for f in fragen:
@@ -114,6 +135,10 @@ def deduplizieren(
             continue
         if pro_quelle[f.quelle_id] >= max_pro_quelle:
             verworfen.append((f, f"mehr als {max_pro_quelle} fragen zu {f.quelle_id}"))
+            continue
+        antwort = antwort_schluessel(f.richtig) if f.quelle_typ != "wikidata" else None
+        if antwort and pro_antwort[antwort] >= max_gleiche_antwort:
+            verworfen.append((f, f"gleiche antwort: schon {max_gleiche_antwort} fragen mit «{f.richtig}»"))
             continue
         grund = None
         for g in behalten:
@@ -133,4 +158,6 @@ def deduplizieren(
         behalten.append(f)
         ids.add(f.id)
         pro_quelle[f.quelle_id] += 1
+        if antwort:
+            pro_antwort[antwort] += 1
     return behalten, verworfen
