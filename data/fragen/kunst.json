@@ -1,0 +1,2707 @@
+{
+ "version": 1,
+ "kategorie": "kunst",
+ "generiert_am": "2026-11-16T05:20:31Z",
+ "fragen": [
+  {
+   "id": "wp-075a875048",
+   "kategorie": "kunst",
+   "frage": "Welches Leiden beendete Beethovens Karriere als Pianist vorzeitig?",
+   "antworten": [
+    "Zunehmende Blindheit",
+    "Zittern der Hände",
+    "Zunehmende Taubheit",
+    "Lähmung der Finger"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ludwig_van_Beethoven",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ludwig van Beethoven",
+   "quelle_id": "Q255"
+  },
+  {
+   "id": "wp-07d1251f3e",
+   "kategorie": "kunst",
+   "frage": "In welchem heutigen Land wurde der Schriftsteller Albert Camus geboren?",
+   "antworten": [
+    "Senegal",
+    "Marokko",
+    "Tunesien",
+    "Algerien"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Albert_Camus",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Albert Camus",
+   "quelle_id": "Q34670"
+  },
+  {
+   "id": "wp-088021a824",
+   "kategorie": "kunst",
+   "frage": "In welcher Stadt verbrachte der Barockkomponist Händel den Grossteil seines Lebens und starb dort?",
+   "antworten": [
+    "Wien",
+    "Hamburg",
+    "London",
+    "Paris"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Georg_Friedrich_H%C3%A4ndel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Georg Friedrich Händel",
+   "quelle_id": "Q7302"
+  },
+  {
+   "id": "wp-09911008de",
+   "kategorie": "kunst",
+   "frage": "Welche Schriftstellerin schrieb den Roman «Der Report der Magd» (The Handmaid’s Tale)?",
+   "antworten": [
+    "Ursula K. Le Guin",
+    "Alice Munro",
+    "Doris Lessing",
+    "Margaret Atwood"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Margaret_Atwood",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Margaret Atwood",
+   "quelle_id": "Q183492"
+  },
+  {
+   "id": "wp-0cc912c042",
+   "kategorie": "kunst",
+   "frage": "Was enthält der berühmte Codex Hammurapi aus dem alten Babylon?",
+   "antworten": [
+    "Eine Sammlung von Rechtssätzen",
+    "Eine Liste der Könige Babylons",
+    "Ein Heldenepos über Gilgamesch",
+    "Eine Sammlung von Götterhymnen"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Codex_Hammurapi",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Codex Hammurapi",
+   "quelle_id": "Q93304"
+  },
+  {
+   "id": "wp-0f9c65a412",
+   "kategorie": "kunst",
+   "frage": "Welchem Zahlenwert entspricht das Teilungsverhältnis des Goldenen Schnitts ungefähr?",
+   "antworten": [
+    "2,718",
+    "1,732",
+    "1,414",
+    "1,618"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Goldener_Schnitt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Goldener Schnitt",
+   "quelle_id": "Q41690"
+  },
+  {
+   "id": "wp-1270f54800",
+   "kategorie": "kunst",
+   "frage": "Von welchem Dichter stammt das Drama «Hamlet»?",
+   "antworten": [
+    "John Milton",
+    "Christopher Marlowe",
+    "Ben Jonson",
+    "William Shakespeare"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hamlet",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hamlet",
+   "quelle_id": "Q41567"
+  },
+  {
+   "id": "wp-12bf871b27",
+   "kategorie": "kunst",
+   "frage": "Aus welchem Land stammte der Schriftsteller Samuel Beckett, der lange in Paris lebte?",
+   "antworten": [
+    "Irland",
+    "Belgien",
+    "Schottland",
+    "Frankreich"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Samuel_Beckett",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Samuel Beckett",
+   "quelle_id": "Q37327"
+  },
+  {
+   "id": "wp-183b4280bb",
+   "kategorie": "kunst",
+   "frage": "Welcher Drachentöter aus dem Nibelungenlied galt im 19. und 20. Jahrhundert als deutscher Nationalheld?",
+   "antworten": [
+    "Lohengrin",
+    "Siegfried",
+    "Parzival",
+    "Tristan"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Nibelungenlied",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Nibelungenlied",
+   "quelle_id": "Q131554"
+  },
+  {
+   "id": "wp-1889d81cd3",
+   "kategorie": "kunst",
+   "frage": "Aus welchem Land stammt die Schriftstellerin Margaret Atwood?",
+   "antworten": [
+    "Australien",
+    "Kanada",
+    "Grossbritannien",
+    "USA"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Margaret_Atwood",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Margaret Atwood",
+   "quelle_id": "Q183492"
+  },
+  {
+   "id": "wp-1ad8f3487b",
+   "kategorie": "kunst",
+   "frage": "Wohin zieht der junge Hirte Santiago im Roman «Der Alchimist», um einen Schatz zu suchen?",
+   "antworten": [
+    "Zum Felsendom in Jerusalem",
+    "Zur Alhambra in Granada",
+    "Zur Kaaba in Mekka",
+    "Zu den Pyramiden in Ägypten"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Alchimist",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Der Alchimist",
+   "quelle_id": "Q179021"
+  },
+  {
+   "id": "wp-1b3eadbdb7",
+   "kategorie": "kunst",
+   "frage": "Welcher Komponist schrieb die Oper ‚Rigoletto‘?",
+   "antworten": [
+    "Gaetano Donizetti",
+    "Giuseppe Verdi",
+    "Giacomo Puccini",
+    "Gioachino Rossini"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rigoletto",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rigoletto",
+   "quelle_id": "Q189234"
+  },
+  {
+   "id": "wp-1bed51377b",
+   "kategorie": "kunst",
+   "frage": "Welches Thema steht im Zentrum von Stevensons Novelle «Der seltsame Fall des Dr. Jekyll und Mr. Hyde»?",
+   "antworten": [
+    "Unsterblichkeit",
+    "Zeitreisen",
+    "Persönlichkeitsspaltung",
+    "Unsichtbarkeit"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Robert_Louis_Stevenson",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Robert Louis Stevenson",
+   "quelle_id": "Q1512"
+  },
+  {
+   "id": "wp-1d3510ba10",
+   "kategorie": "kunst",
+   "frage": "In welcher Stadt wurde Wagners «Ring des Nibelungen» 1876 erstmals vollständig aufgeführt?",
+   "antworten": [
+    "Bayreuth",
+    "Dresden",
+    "München",
+    "Weimar"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Ring_des_Nibelungen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Der Ring des Nibelungen",
+   "quelle_id": "Q190237"
+  },
+  {
+   "id": "wp-1db49825ef",
+   "kategorie": "kunst",
+   "frage": "Welcher König förderte Richard Wagner und liess Schlösser wie Neuschwanstein mit Opernszenen gestalten?",
+   "antworten": [
+    "Ludwig I. von Bayern",
+    "Maximilian II. von Bayern",
+    "Ludwig II. von Bayern",
+    "Wilhelm I. von Preussen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Richard_Wagner",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Richard Wagner",
+   "quelle_id": "Q1511"
+  },
+  {
+   "id": "wp-1e394b35d1",
+   "kategorie": "kunst",
+   "frage": "Welcher Dichter schrieb den Briefroman «Die Leiden des jungen Werthers»?",
+   "antworten": [
+    "Heinrich von Kleist",
+    "Gotthold Ephraim Lessing",
+    "Friedrich Schiller",
+    "Johann Wolfgang Goethe"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_Leiden_des_jungen_Werthers",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Die Leiden des jungen Werthers",
+   "quelle_id": "Q151883"
+  },
+  {
+   "id": "wp-1f1f31558d",
+   "kategorie": "kunst",
+   "frage": "In welcher Stadt wurde der Reformator Martin Luther geboren?",
+   "antworten": [
+    "Wittenberg",
+    "Erfurt",
+    "Eisenach",
+    "Eisleben"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Martin_Luther",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Martin Luther",
+   "quelle_id": "Q9554"
+  },
+  {
+   "id": "wp-1fe5a311ab",
+   "kategorie": "kunst",
+   "frage": "Aus welchem heutigen Land stammte der Maler Hieronymus Bosch?",
+   "antworten": [
+    "Niederlande",
+    "Frankreich",
+    "Deutschland",
+    "Belgien"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hieronymus_Bosch",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hieronymus Bosch",
+   "quelle_id": "Q130531"
+  },
+  {
+   "id": "wp-20936edb2f",
+   "kategorie": "kunst",
+   "frage": "Welcher Kunstepoche wird der deutsche Maler Caspar David Friedrich zugeordnet?",
+   "antworten": [
+    "Expressionismus",
+    "Barock",
+    "Romantik",
+    "Impressionismus"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Caspar_David_Friedrich",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Caspar David Friedrich",
+   "quelle_id": "Q104884"
+  },
+  {
+   "id": "wp-219b4691b0",
+   "kategorie": "kunst",
+   "frage": "Mit welchem dänischen Astronomen arbeitete Johannes Kepler in Prag zusammen, bevor er dessen Nachfolger wurde?",
+   "antworten": [
+    "Nikolaus Kopernikus",
+    "Ole Rømer",
+    "Galileo Galilei",
+    "Tycho Brahe"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Johannes_Kepler",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Johannes Kepler",
+   "quelle_id": "Q8963"
+  },
+  {
+   "id": "wp-2472395c5c",
+   "kategorie": "kunst",
+   "frage": "Wie nannte Joseph Beuys sein Konzept, die Gesellschaft als Gesamtkunstwerk mitzugestalten?",
+   "antworten": [
+    "Land Art",
+    "Soziale Plastik",
+    "Konkrete Kunst",
+    "Arte Povera"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Joseph_Beuys",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Joseph Beuys",
+   "quelle_id": "Q153965"
+  },
+  {
+   "id": "wp-25870c96b7",
+   "kategorie": "kunst",
+   "frage": "Für welche Art von Romanen ist die Schriftstellerin Patricia Highsmith vor allem bekannt?",
+   "antworten": [
+    "Historische Abenteuerromane",
+    "Psychologische Kriminalromane",
+    "Fantasy-Romane",
+    "Familiensagas"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Patricia_Highsmith",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Patricia Highsmith",
+   "quelle_id": "Q270635"
+  },
+  {
+   "id": "wp-2673ec70e7",
+   "kategorie": "kunst",
+   "frage": "Welche bekannte Oper komponierte Camille Saint-Saëns?",
+   "antworten": [
+    "Faust",
+    "Manon",
+    "Samson et Dalila",
+    "Carmen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Camille_Saint-Sa%C3%ABns",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Camille Saint-Saëns",
+   "quelle_id": "Q150445"
+  },
+  {
+   "id": "wp-27ce55bcc9",
+   "kategorie": "kunst",
+   "frage": "Welcher italienische Komponist schrieb die Opern «Tosca» und «Madama Butterfly»?",
+   "antworten": [
+    "Giacomo Puccini",
+    "Giuseppe Verdi",
+    "Gioachino Rossini",
+    "Gaetano Donizetti"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Giacomo_Puccini",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Giacomo Puccini",
+   "quelle_id": "Q7311"
+  },
+  {
+   "id": "wp-2add413a65",
+   "kategorie": "kunst",
+   "frage": "Wofür sind die Gemälde von Hieronymus Bosch besonders bekannt?",
+   "antworten": [
+    "Menschenleere Landschaften",
+    "Nüchterne Kaufmannsporträts",
+    "Fantastische Fabelwesen",
+    "Ruhige Blumenstillleben"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hieronymus_Bosch",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hieronymus Bosch",
+   "quelle_id": "Q130531"
+  },
+  {
+   "id": "wp-2b0df92da3",
+   "kategorie": "kunst",
+   "frage": "Welches Werk konnte Mozart vor seinem Tod nicht mehr vollenden?",
+   "antworten": [
+    "Eine kleine Nachtmusik",
+    "Don Giovanni",
+    "Die Zauberflöte",
+    "Das Requiem"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Wolfgang Amadeus Mozart",
+   "quelle_id": "Q254"
+  },
+  {
+   "id": "wp-2bc823fbbf",
+   "kategorie": "kunst",
+   "frage": "Welche Schulpädagogik geht auf den österreichischen Denker Rudolf Steiner zurück?",
+   "antworten": [
+    "Waldorfpädagogik",
+    "Montessoripädagogik",
+    "Jenaplan-Pädagogik",
+    "Reggio-Pädagogik"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rudolf_Steiner",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rudolf Steiner",
+   "quelle_id": "Q78484"
+  },
+  {
+   "id": "wp-2be3316fe5",
+   "kategorie": "kunst",
+   "frage": "In welcher Stadt starb der deutsche Schriftsteller und Revolutionär Georg Büchner 1837?",
+   "antworten": [
+    "Strassburg",
+    "Zürich",
+    "Basel",
+    "Paris"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Georg_B%C3%BCchner",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Georg Büchner",
+   "quelle_id": "Q154014"
+  },
+  {
+   "id": "wp-32b981633f",
+   "kategorie": "kunst",
+   "frage": "Welcher literarischen Epoche wird Goethes Roman «Die Leiden des jungen Werthers» zugeordnet?",
+   "antworten": [
+    "Sturm und Drang",
+    "Weimarer Klassik",
+    "Biedermeier",
+    "Romantik"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_Leiden_des_jungen_Werthers",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Die Leiden des jungen Werthers",
+   "quelle_id": "Q151883"
+  },
+  {
+   "id": "wp-3339bb6608",
+   "kategorie": "kunst",
+   "frage": "Welcher Astronom entdeckte die Gesetze, nach denen sich die Planeten um die Sonne bewegen?",
+   "antworten": [
+    "Nikolaus Kopernikus",
+    "Tycho Brahe",
+    "Galileo Galilei",
+    "Johannes Kepler"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Johannes_Kepler",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Johannes Kepler",
+   "quelle_id": "Q8963"
+  },
+  {
+   "id": "wp-35532ec616",
+   "kategorie": "kunst",
+   "frage": "Welches Instrument war das Hauptinstrument des Rockmusikers Frank Zappa?",
+   "antworten": [
+    "Klavier",
+    "Trompete",
+    "E-Gitarre",
+    "Saxofon"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Frank_Zappa",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Frank Zappa",
+   "quelle_id": "Q127330"
+  },
+  {
+   "id": "wp-36624871af",
+   "kategorie": "kunst",
+   "frage": "Welcher Künstler malte das berühmte Deckenfresko «Die Erschaffung Adams»?",
+   "antworten": [
+    "Leonardo da Vinci",
+    "Sandro Botticelli",
+    "Michelangelo",
+    "Raffael"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_Erschaffung_Adams",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Die Erschaffung Adams",
+   "quelle_id": "Q500242"
+  },
+  {
+   "id": "wp-374a188cb2",
+   "kategorie": "kunst",
+   "frage": "Welcher Dramatiker schrieb das Theaterstück «Die Dreigroschenoper»?",
+   "antworten": [
+    "Ödön von Horváth",
+    "Carl Zuckmayer",
+    "Gerhart Hauptmann",
+    "Bertolt Brecht"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bertolt_Brecht",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Bertolt Brecht",
+   "quelle_id": "Q38757"
+  },
+  {
+   "id": "wp-37fdc84a71",
+   "kategorie": "kunst",
+   "frage": "Wofür steht das «A.» im Namen des Dichters E. T. A. Hoffmann?",
+   "antworten": [
+    "Anton",
+    "August",
+    "Amadeus",
+    "Adalbert"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/E._T._A._Hoffmann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "E. T. A. Hoffmann",
+   "quelle_id": "Q150471"
+  },
+  {
+   "id": "wp-3cd768ecfc",
+   "kategorie": "kunst",
+   "frage": "In welcher Stadt verbrachte der Dichter Heinrich Heine seine zweite Lebenshälfte im Exil?",
+   "antworten": [
+    "Zürich",
+    "Brüssel",
+    "London",
+    "Paris"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Heinrich_Heine",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Heinrich Heine",
+   "quelle_id": "Q44403"
+  },
+  {
+   "id": "wp-3dae17e73f",
+   "kategorie": "kunst",
+   "frage": "Aus welchem Land stammte die Schriftstellerin Ingeborg Bachmann, Autorin des Romans «Malina»?",
+   "antworten": [
+    "Deutschland",
+    "Schweiz",
+    "Österreich",
+    "Liechtenstein"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ingeborg_Bachmann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ingeborg Bachmann",
+   "quelle_id": "Q78506"
+  },
+  {
+   "id": "wp-439af83b08",
+   "kategorie": "kunst",
+   "frage": "In welcher niederländischen Stadt wurde der Barockmaler Jan Vermeer geboren und begraben?",
+   "antworten": [
+    "Leiden",
+    "Delft",
+    "Haarlem",
+    "Amsterdam"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jan_Vermeer",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jan Vermeer",
+   "quelle_id": "Q41264"
+  },
+  {
+   "id": "wp-43f419a7b8",
+   "kategorie": "kunst",
+   "frage": "Welcher Schweizer Schriftsteller schrieb das Theaterstück «Der Besuch der alten Dame»?",
+   "antworten": [
+    "Friedrich Dürrenmatt",
+    "Robert Walser",
+    "Gottfried Keller",
+    "Max Frisch"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Friedrich_D%C3%BCrrenmatt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Friedrich Dürrenmatt",
+   "quelle_id": "Q23481"
+  },
+  {
+   "id": "wp-47f0b6000d",
+   "kategorie": "kunst",
+   "frage": "Welcher US-Schriftsteller schrieb den Roman «Früchte des Zorns»?",
+   "antworten": [
+    "William Faulkner",
+    "Mark Twain",
+    "John Steinbeck",
+    "Ernest Hemingway"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/John_Steinbeck",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "John Steinbeck",
+   "quelle_id": "Q39212"
+  },
+  {
+   "id": "wp-4a88f521a7",
+   "kategorie": "kunst",
+   "frage": "Welche britische Schriftstellerin schrieb den feministischen Essay «Ein Zimmer für sich allein»?",
+   "antworten": [
+    "Virginia Woolf",
+    "Daphne du Maurier",
+    "Agatha Christie",
+    "Katherine Mansfield"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Virginia_Woolf",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Virginia Woolf",
+   "quelle_id": "Q40909"
+  },
+  {
+   "id": "wp-4c43317216",
+   "kategorie": "kunst",
+   "frage": "In welchem Museum ist die Steinstele mit dem Codex Hammurapi heute ausgestellt?",
+   "antworten": [
+    "Pergamonmuseum in Berlin",
+    "Metropolitan Museum in New York",
+    "Louvre in Paris",
+    "British Museum in London"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Codex_Hammurapi",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Codex Hammurapi",
+   "quelle_id": "Q93304"
+  },
+  {
+   "id": "wp-4d4b4691e3",
+   "kategorie": "kunst",
+   "frage": "Mit welchem Schweizer Schriftsteller hatte Ingeborg Bachmann eine fast fünfjährige Liebesbeziehung?",
+   "antworten": [
+    "Max Frisch",
+    "Adolf Muschg",
+    "Friedrich Dürrenmatt",
+    "Peter Bichsel"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ingeborg_Bachmann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ingeborg Bachmann",
+   "quelle_id": "Q78506"
+  },
+  {
+   "id": "wp-4dfdaa6a8c",
+   "kategorie": "kunst",
+   "frage": "Lou Andreas-Salomé war Schriftstellerin. Welchen weiteren Beruf übte sie aus?",
+   "antworten": [
+    "Psychoanalytikerin",
+    "Malerin",
+    "Fotografin",
+    "Archäologin"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Lou_Andreas-Salom%C3%A9",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Lou Andreas-Salomé",
+   "quelle_id": "Q38873"
+  },
+  {
+   "id": "wp-4f715e4152",
+   "kategorie": "kunst",
+   "frage": "Welches monumentale Gemälde Picassos von 1937 zeigt die Schrecken des Spanischen Bürgerkriegs?",
+   "antworten": [
+    "Guernica",
+    "Der alte Gitarrenspieler",
+    "Die Absinthtrinkerin",
+    "Les Demoiselles d’Avignon"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pablo_Picasso",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Pablo Picasso",
+   "quelle_id": "Q5593"
+  },
+  {
+   "id": "wp-4faf459936",
+   "kategorie": "kunst",
+   "frage": "Was altert in Oscar Wildes berühmtem Roman an Stelle der jung bleibenden Hauptfigur Dorian Gray?",
+   "antworten": [
+    "Sein Spiegelbild",
+    "Sein gemaltes Porträt",
+    "Sein treuer Diener",
+    "Sein Zwillingsbruder"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Das_Bildnis_des_Dorian_Gray",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Das Bildnis des Dorian Gray",
+   "quelle_id": "Q82464"
+  },
+  {
+   "id": "wp-4fb0316953",
+   "kategorie": "kunst",
+   "frage": "Als wichtiger Vertreter welcher Literaturströmung gilt der Schriftsteller Klaus Mann heute?",
+   "antworten": [
+    "Expressionismus",
+    "Literatur der Romantik",
+    "Exilliteratur nach 1933",
+    "Trümmerliteratur"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Klaus_Mann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Klaus Mann",
+   "quelle_id": "Q77087"
+  },
+  {
+   "id": "wp-518d6dd926",
+   "kategorie": "kunst",
+   "frage": "Zu welcher Kunstrichtung zählen die Werke der Malerin Paula Modersohn-Becker?",
+   "antworten": [
+    "Kubismus",
+    "Expressionismus",
+    "Surrealismus",
+    "Impressionismus"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Paula_Modersohn-Becker",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Paula Modersohn-Becker",
+   "quelle_id": "Q234370"
+  },
+  {
+   "id": "wp-55f9c54745",
+   "kategorie": "kunst",
+   "frage": "Nach welchem Mathematiker ist die Zahlenfolge benannt, die eng mit dem Goldenen Schnitt verbunden ist?",
+   "antworten": [
+    "Gauss",
+    "Euler",
+    "Fibonacci",
+    "Pascal"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Goldener_Schnitt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Goldener Schnitt",
+   "quelle_id": "Q41690"
+  },
+  {
+   "id": "wp-56423cbd7a",
+   "kategorie": "kunst",
+   "frage": "In welcher Stadt am Rhein wurde der Dichter Heinrich Heine geboren?",
+   "antworten": [
+    "Düsseldorf",
+    "Bonn",
+    "Köln",
+    "Mainz"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Heinrich_Heine",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Heinrich Heine",
+   "quelle_id": "Q44403"
+  },
+  {
+   "id": "wp-56a32fb87a",
+   "kategorie": "kunst",
+   "frage": "In welcher Stadt wurde der Komponist Johannes Brahms geboren?",
+   "antworten": [
+    "Bremen",
+    "Leipzig",
+    "Wien",
+    "Hamburg"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Johannes_Brahms",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Johannes Brahms",
+   "quelle_id": "Q7294"
+  },
+  {
+   "id": "wp-5828c82659",
+   "kategorie": "kunst",
+   "frage": "Welcher deutsche Schriftsteller erfand die Abenteuergeschichten um den Indianer Winnetou?",
+   "antworten": [
+    "Theodor Fontane",
+    "Karl May",
+    "Jules Verne",
+    "Friedrich Gerstäcker"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Karl_May",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Karl May",
+   "quelle_id": "Q22714"
+  },
+  {
+   "id": "wp-5a230bbf24",
+   "kategorie": "kunst",
+   "frage": "In welchem Land starb der russische Komponist Sergei Rachmaninow im Jahr 1943?",
+   "antworten": [
+    "Schweiz",
+    "USA",
+    "Frankreich",
+    "England"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sergei_Wassiljewitsch_Rachmaninow",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sergei Wassiljewitsch Rachmaninow",
+   "quelle_id": "Q131861"
+  },
+  {
+   "id": "wp-5b30a41267",
+   "kategorie": "kunst",
+   "frage": "Welcher Schriftsteller veröffentlichte 1901 den Familienroman «Buddenbrooks»?",
+   "antworten": [
+    "Hermann Hesse",
+    "Thomas Mann",
+    "Heinrich Böll",
+    "Theodor Fontane"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Thomas_Mann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Thomas Mann",
+   "quelle_id": "Q37030"
+  },
+  {
+   "id": "wp-5cd1f9be45",
+   "kategorie": "kunst",
+   "frage": "Wofür waren die Songtexte von Frank Zappa vor allem bekannt?",
+   "antworten": [
+    "Romantisch und gefühlvoll",
+    "Religiös und erbaulich",
+    "Satirisch und absurd",
+    "Sachlich und belehrend"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Frank_Zappa",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Frank Zappa",
+   "quelle_id": "Q127330"
+  },
+  {
+   "id": "wp-5dbbabf355",
+   "kategorie": "kunst",
+   "frage": "Welcher preussische König liess das Schloss Sanssouci als Sommerresidenz erbauen?",
+   "antworten": [
+    "Friedrich Wilhelm I.",
+    "Wilhelm II.",
+    "Friedrich der Grosse",
+    "Friedrich Wilhelm IV."
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schloss_Sanssouci",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schloss Sanssouci",
+   "quelle_id": "Q151330"
+  },
+  {
+   "id": "wp-5f83e0f200",
+   "kategorie": "kunst",
+   "frage": "Welcher französische Komponist schrieb den «Karneval der Tiere»?",
+   "antworten": [
+    "Georges Bizet",
+    "Maurice Ravel",
+    "Camille Saint-Saëns",
+    "Claude Debussy"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Camille_Saint-Sa%C3%ABns",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Camille Saint-Saëns",
+   "quelle_id": "Q150445"
+  },
+  {
+   "id": "wp-612cda3d36",
+   "kategorie": "kunst",
+   "frage": "In welcher Hafenstadt an der Ostsee wurde der Maler Caspar David Friedrich 1774 geboren?",
+   "antworten": [
+    "Greifswald",
+    "Wismar",
+    "Rostock",
+    "Stralsund"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Caspar_David_Friedrich",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Caspar David Friedrich",
+   "quelle_id": "Q104884"
+  },
+  {
+   "id": "wp-64aefa0970",
+   "kategorie": "kunst",
+   "frage": "Für welche Musikgattung ist Franz Schubert mit über 600 Werken besonders berühmt?",
+   "antworten": [
+    "Lieder",
+    "Streichquartette",
+    "Klavierkonzerte",
+    "Opern"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Franz_Schubert",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Franz Schubert",
+   "quelle_id": "Q7312"
+  },
+  {
+   "id": "wp-664d952577",
+   "kategorie": "kunst",
+   "frage": "In welcher Stadt lebte Goethe ab 1775 bis zu seinem Tod?",
+   "antworten": [
+    "Dresden",
+    "Leipzig",
+    "Jena",
+    "Weimar"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Johann_Wolfgang_von_Goethe",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Johann Wolfgang von Goethe",
+   "quelle_id": "Q5879"
+  },
+  {
+   "id": "wp-68317f8cc5",
+   "kategorie": "kunst",
+   "frage": "Welche Schriftstellerin erfand den belgischen Detektiv Hercule Poirot?",
+   "antworten": [
+    "Agatha Christie",
+    "P. D. James",
+    "Patricia Highsmith",
+    "Dorothy L. Sayers"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Agatha_Christie",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Agatha Christie",
+   "quelle_id": "Q35064"
+  },
+  {
+   "id": "wp-6a7e23a3d5",
+   "kategorie": "kunst",
+   "frage": "Welcher Komponist schrieb die Oper «Don Giovanni»?",
+   "antworten": [
+    "Antonio Salieri",
+    "Wolfgang Amadeus Mozart",
+    "Joseph Haydn",
+    "Christoph Willibald Gluck"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Don_Giovanni",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Don Giovanni",
+   "quelle_id": "Q192039"
+  },
+  {
+   "id": "wp-6c1fecdf5c",
+   "kategorie": "kunst",
+   "frage": "Welche Stellung hat die Titelfigur in Verdis Oper ‚Rigoletto‘ am Hof des Herzogs von Mantua?",
+   "antworten": [
+    "Kammerdiener",
+    "Hofmusiker",
+    "Hofnarr",
+    "Leibarzt"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rigoletto",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rigoletto",
+   "quelle_id": "Q189234"
+  },
+  {
+   "id": "wp-6d09a87363",
+   "kategorie": "kunst",
+   "frage": "Mit welchem Theaterstück über drei Wissenschaftler in einer Irrenanstalt erlangte Dürrenmatt Weltruhm?",
+   "antworten": [
+    "Biedermann und die Brandstifter",
+    "Andorra",
+    "Die Physiker",
+    "Der Hauptmann von Köpenick"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Friedrich_D%C3%BCrrenmatt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Friedrich Dürrenmatt",
+   "quelle_id": "Q23481"
+  },
+  {
+   "id": "wp-6db3a967ea",
+   "kategorie": "kunst",
+   "frage": "Welcher US-Maler machte die auf Max Ernst zurückgehende Technik Drip Painting zum Teil des abstrakten Expressionismus?",
+   "antworten": [
+    "Roy Lichtenstein",
+    "Jackson Pollock",
+    "Mark Rothko",
+    "Andy Warhol"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Max_Ernst",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Max Ernst",
+   "quelle_id": "Q154842"
+  },
+  {
+   "id": "wp-7431ea94f0",
+   "kategorie": "kunst",
+   "frage": "Welcher deutsche Schriftsteller schrieb das Buch «Die unendliche Geschichte»?",
+   "antworten": [
+    "Otfried Preussler",
+    "Cornelia Funke",
+    "Erich Kästner",
+    "Michael Ende"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Michael_Ende",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Michael Ende",
+   "quelle_id": "Q76498"
+  },
+  {
+   "id": "wp-7479ad3ba9",
+   "kategorie": "kunst",
+   "frage": "Georg Büchner hinterliess nur ein schmales Werk. In welchem Alter starb er?",
+   "antworten": [
+    "Mit 23 Jahren",
+    "Mit 41 Jahren",
+    "Mit 33 Jahren",
+    "Mit 29 Jahren"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Georg_B%C3%BCchner",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Georg Büchner",
+   "quelle_id": "Q154014"
+  },
+  {
+   "id": "wp-74ed8696da",
+   "kategorie": "kunst",
+   "frage": "In welcher Stadt wirkte Johann Sebastian Bach in seiner Hauptschaffenszeit als Thomaskantor?",
+   "antworten": [
+    "Leipzig",
+    "Weimar",
+    "Dresden",
+    "Halle"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Johann_Sebastian_Bach",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Johann Sebastian Bach",
+   "quelle_id": "Q1339"
+  },
+  {
+   "id": "wp-7965154853",
+   "kategorie": "kunst",
+   "frage": "In welcher italienischen Stadt wurde der Komponist Antonio Vivaldi geboren?",
+   "antworten": [
+    "Rom",
+    "Neapel",
+    "Venedig",
+    "Florenz"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Antonio_Vivaldi",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Antonio Vivaldi",
+   "quelle_id": "Q1340"
+  },
+  {
+   "id": "wp-7b10b3af09",
+   "kategorie": "kunst",
+   "frage": "Welche Nationalität hatte der Schriftsteller Thomas Bernhard?",
+   "antworten": [
+    "Deutsch",
+    "Schweizerisch",
+    "Österreichisch",
+    "Niederländisch"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Thomas_Bernhard",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Thomas Bernhard",
+   "quelle_id": "Q44336"
+  },
+  {
+   "id": "wp-7bee84b535",
+   "kategorie": "kunst",
+   "frage": "Welchen Beruf übte der Schriftsteller Max Frisch einige Jahre lang aus, bevor er ganz vom Schreiben lebte?",
+   "antworten": [
+    "Arzt",
+    "Lehrer",
+    "Architekt",
+    "Rechtsanwalt"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Max_Frisch",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Max Frisch",
+   "quelle_id": "Q115483"
+  },
+  {
+   "id": "wp-7ebf0fb826",
+   "kategorie": "kunst",
+   "frage": "Welchen Architekten, den späteren Gründer des Bauhauses, heiratete Alma Mahler-Werfel 1915?",
+   "antworten": [
+    "Le Corbusier",
+    "Adolf Loos",
+    "Walter Gropius",
+    "Ludwig Mies van der Rohe"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Alma_Mahler-Werfel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Alma Mahler-Werfel",
+   "quelle_id": "Q156898"
+  },
+  {
+   "id": "wp-849ea6dcc6",
+   "kategorie": "kunst",
+   "frage": "Welche bedeutende Auszeichnung erhielt Hermann Hesse im Jahr 1946?",
+   "antworten": [
+    "Georg-Büchner-Preis",
+    "Nobelpreis für Literatur",
+    "Friedenspreis des Buchhandels",
+    "Goethepreis der Stadt Zürich"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hermann_Hesse",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hermann Hesse",
+   "quelle_id": "Q25973"
+  },
+  {
+   "id": "wp-88bf68d7c8",
+   "kategorie": "kunst",
+   "frage": "Welcher Musikepoche wird der Komponist Antonio Salieri zugeordnet?",
+   "antworten": [
+    "Renaissance",
+    "Klassik",
+    "Romantik",
+    "Barock"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Antonio_Salieri",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Antonio Salieri",
+   "quelle_id": "Q51088"
+  },
+  {
+   "id": "wp-89f0058db0",
+   "kategorie": "kunst",
+   "frage": "Was wünscht sich der Blechmann im Kinderbuch ‚Der Zauberer von Oz‘ am meisten?",
+   "antworten": [
+    "Ein Herz",
+    "Mut",
+    "Ein Zuhause",
+    "Verstand"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Zauberer_von_Oz",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Der Zauberer von Oz",
+   "quelle_id": "Q130295"
+  },
+  {
+   "id": "wp-8d8acc4b4b",
+   "kategorie": "kunst",
+   "frage": "Welche Auszeichnung erhielt der von den Nazis inhaftierte Journalist Carl von Ossietzky im Jahr 1936?",
+   "antworten": [
+    "Pulitzer-Preis",
+    "Georg-Büchner-Preis",
+    "Friedensnobelpreis",
+    "Literaturnobelpreis"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Carl_von_Ossietzky",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Carl von Ossietzky",
+   "quelle_id": "Q76358"
+  },
+  {
+   "id": "wp-925203cb7f",
+   "kategorie": "kunst",
+   "frage": "Aus welchem Land stammte Alfred Büchi, der 1905 das Prinzip des Turboladers patentieren liess?",
+   "antworten": [
+    "Deutschland",
+    "Schweiz",
+    "Österreich",
+    "Frankreich"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Turbolader",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Turbolader",
+   "quelle_id": "Q185525"
+  },
+  {
+   "id": "wp-9256a8bca8",
+   "kategorie": "kunst",
+   "frage": "Auf welchem Instrument wurde Clara Schumann schon als Wunderkind berühmt?",
+   "antworten": [
+    "Querflöte",
+    "Harfe",
+    "Klavier",
+    "Violine"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Clara_Schumann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Clara Schumann",
+   "quelle_id": "Q132232"
+  },
+  {
+   "id": "wp-92e2be48d6",
+   "kategorie": "kunst",
+   "frage": "Als einer der Hauptvertreter welcher Kunstrichtung gilt der spanische Maler Salvador Dalí?",
+   "antworten": [
+    "Impressionismus",
+    "Kubismus",
+    "Expressionismus",
+    "Surrealismus"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Salvador_Dal%C3%AD",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Salvador Dalí",
+   "quelle_id": "Q5577"
+  },
+  {
+   "id": "wp-930dccfe26",
+   "kategorie": "kunst",
+   "frage": "In welchem Bauwerk befindet sich das Deckenfresko «Die Erschaffung Adams»?",
+   "antworten": [
+    "Petersdom",
+    "Sixtinische Kapelle",
+    "Lateranbasilika",
+    "Scrovegni-Kapelle"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_Erschaffung_Adams",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Die Erschaffung Adams",
+   "quelle_id": "Q500242"
+  },
+  {
+   "id": "wp-950b30d464",
+   "kategorie": "kunst",
+   "frage": "Welcher Komponist schrieb die Oper «Die Zauberflöte»?",
+   "antworten": [
+    "Ludwig van Beethoven",
+    "Wolfgang Amadeus Mozart",
+    "Franz Schubert",
+    "Joseph Haydn"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_Zauberfl%C3%B6te",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Die Zauberflöte",
+   "quelle_id": "Q5064"
+  },
+  {
+   "id": "wp-9579752c29",
+   "kategorie": "kunst",
+   "frage": "Welche Bildergeschichte stammt ebenfalls vom Schöpfer von «Max und Moritz»?",
+   "antworten": [
+    "Die fromme Helene",
+    "Die Biene Maja",
+    "Emil und die Detektive",
+    "Der Struwwelpeter"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wilhelm_Busch",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Wilhelm Busch",
+   "quelle_id": "Q109540"
+  },
+  {
+   "id": "wp-9648585178",
+   "kategorie": "kunst",
+   "frage": "Gegen welches Regime leistete Dietrich Bonhoeffer Widerstand?",
+   "antworten": [
+    "Wilhelminisches Kaiserreich",
+    "DDR-Regime",
+    "Stalinismus",
+    "Nationalsozialismus"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dietrich_Bonhoeffer",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Dietrich Bonhoeffer",
+   "quelle_id": "Q76326"
+  },
+  {
+   "id": "wp-9782941aef",
+   "kategorie": "kunst",
+   "frage": "Welchem Philosophen der Aufklärung wird der Aufruf «Zurück zur Natur!» zugeschrieben?",
+   "antworten": [
+    "Denis Diderot",
+    "Jean-Jacques Rousseau",
+    "Immanuel Kant",
+    "Charles de Montesquieu"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jean-Jacques_Rousseau",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jean-Jacques Rousseau",
+   "quelle_id": "Q6527"
+  },
+  {
+   "id": "wp-98032b15b2",
+   "kategorie": "kunst",
+   "frage": "In welcher europäischen Stadt starb der Rocksänger Jim Morrison im Jahr 1971?",
+   "antworten": [
+    "Amsterdam",
+    "Rom",
+    "Paris",
+    "London"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jim_Morrison",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jim Morrison",
+   "quelle_id": "Q44301"
+  },
+  {
+   "id": "wp-982692d6e1",
+   "kategorie": "kunst",
+   "frage": "Welche Figur der «Zauberflöte» singt die berühmte Arie «Der Hölle Rache kocht in meinem Herzen»?",
+   "antworten": [
+    "Königin der Nacht",
+    "Pamina",
+    "Erste Dame",
+    "Papagena"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_Zauberfl%C3%B6te",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Die Zauberflöte",
+   "quelle_id": "Q5064"
+  },
+  {
+   "id": "wp-999c0ad457",
+   "kategorie": "kunst",
+   "frage": "Welcher niederländische Maler schuf das berühmte Gemälde «Das Mädchen mit dem Perlenohrring»?",
+   "antworten": [
+    "Pieter de Hooch",
+    "Frans Hals",
+    "Rembrandt van Rijn",
+    "Jan Vermeer"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jan_Vermeer",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jan Vermeer",
+   "quelle_id": "Q41264"
+  },
+  {
+   "id": "wp-99b67666eb",
+   "kategorie": "kunst",
+   "frage": "Welche schmelzenden Gegenstände wurden zu einem Erkennungsmerkmal von Salvador Dalís Gemälden?",
+   "antworten": [
+    "Schlüssel",
+    "Spiegel",
+    "Uhren",
+    "Geigen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Salvador_Dal%C3%AD",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Salvador Dalí",
+   "quelle_id": "Q5577"
+  },
+  {
+   "id": "wp-9aaf0b0f49",
+   "kategorie": "kunst",
+   "frage": "In welcher spanischen Stadt beginnt die Handlung der Oper «Carmen»?",
+   "antworten": [
+    "Granada",
+    "Barcelona",
+    "Madrid",
+    "Sevilla"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Carmen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Carmen",
+   "quelle_id": "Q185968"
+  },
+  {
+   "id": "wp-9f866996ff",
+   "kategorie": "kunst",
+   "frage": "Welches in Tee getauchte Gebäck löst in Prousts Roman die berühmte Kindheitserinnerung aus?",
+   "antworten": [
+    "Croissant",
+    "Éclair",
+    "Madeleine",
+    "Brioche"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Auf_der_Suche_nach_der_verlorenen_Zeit",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Auf der Suche nach der verlorenen Zeit",
+   "quelle_id": "Q464928"
+  },
+  {
+   "id": "wp-a0095f7d40",
+   "kategorie": "kunst",
+   "frage": "Welcher Barockkomponist schuf den Violinkonzert-Zyklus «Die vier Jahreszeiten»?",
+   "antworten": [
+    "Georg Friedrich Händel",
+    "Georg Philipp Telemann",
+    "Johann Sebastian Bach",
+    "Antonio Vivaldi"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Antonio_Vivaldi",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Antonio Vivaldi",
+   "quelle_id": "Q1340"
+  },
+  {
+   "id": "wp-a0464b1438",
+   "kategorie": "kunst",
+   "frage": "Welcher Musikepoche wird der Komponist Antonín Dvořák zugeordnet?",
+   "antworten": [
+    "Renaissance",
+    "Barock",
+    "Romantik",
+    "Klassik"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Anton%C3%ADn_Dvo%C5%99%C3%A1k",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Antonín Dvořák",
+   "quelle_id": "Q7298"
+  },
+  {
+   "id": "wp-a04925fbf4",
+   "kategorie": "kunst",
+   "frage": "Als Hauptvertreter welcher Kunstrichtung des frühen 20. Jahrhunderts gilt der Maler Henri Matisse?",
+   "antworten": [
+    "Kubismus",
+    "Surrealismus",
+    "Fauvismus",
+    "Futurismus"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Henri_Matisse",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Henri Matisse",
+   "quelle_id": "Q5589"
+  },
+  {
+   "id": "wp-a255b72f24",
+   "kategorie": "kunst",
+   "frage": "Welcher Kunstrichtung wird der deutsche Maler Max Liebermann vor allem zugeordnet?",
+   "antworten": [
+    "Impressionismus",
+    "Surrealismus",
+    "Expressionismus",
+    "Romantik"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Max_Liebermann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Max Liebermann",
+   "quelle_id": "Q158062"
+  },
+  {
+   "id": "wp-a261f2ce1b",
+   "kategorie": "kunst",
+   "frage": "Welcher Dichter schrieb das Drama «Faust», das als bedeutendste Schöpfung deutscher Literatur gilt?",
+   "antworten": [
+    "Heinrich Heine",
+    "Gotthold Ephraim Lessing",
+    "Friedrich Schiller",
+    "Johann Wolfgang von Goethe"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Johann_Wolfgang_von_Goethe",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Johann Wolfgang von Goethe",
+   "quelle_id": "Q5879"
+  },
+  {
+   "id": "wp-a2d26decd1",
+   "kategorie": "kunst",
+   "frage": "Welcher Barockkomponist schrieb die «Brandenburgischen Konzerte»?",
+   "antworten": [
+    "Georg Philipp Telemann",
+    "Georg Friedrich Händel",
+    "Johann Sebastian Bach",
+    "Antonio Vivaldi"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Johann_Sebastian_Bach",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Johann Sebastian Bach",
+   "quelle_id": "Q1339"
+  },
+  {
+   "id": "wp-a2d2a4a98f",
+   "kategorie": "kunst",
+   "frage": "Welches Theaterstück ist das bekannteste Werk von Samuel Beckett?",
+   "antworten": [
+    "Der Besuch der alten Dame",
+    "Die Nashörner",
+    "Warten auf Godot",
+    "Die kahle Sängerin"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Samuel_Beckett",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Samuel Beckett",
+   "quelle_id": "Q37327"
+  },
+  {
+   "id": "wp-a32f974f0f",
+   "kategorie": "kunst",
+   "frage": "Aus welchem Land stammte der Komponist Antonín Dvořák?",
+   "antworten": [
+    "Polen",
+    "Ungarn",
+    "Tschechien",
+    "Slowakei"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Anton%C3%ADn_Dvo%C5%99%C3%A1k",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Antonín Dvořák",
+   "quelle_id": "Q7298"
+  },
+  {
+   "id": "wp-a41c9e4fbf",
+   "kategorie": "kunst",
+   "frage": "In welchem norddeutschen Ort, bekannt als Künstlerkolonie, starb Paula Modersohn-Becker 1907?",
+   "antworten": [
+    "Worpswede",
+    "Ahrenshoop",
+    "Murnau",
+    "Dachau"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Paula_Modersohn-Becker",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Paula Modersohn-Becker",
+   "quelle_id": "Q234370"
+  },
+  {
+   "id": "wp-a4abf3cbae",
+   "kategorie": "kunst",
+   "frage": "Welche berühmte Pianistin heiratete der Komponist Robert Schumann im Jahr 1840?",
+   "antworten": [
+    "Clara Wieck",
+    "Cosima Liszt",
+    "Alma Mahler",
+    "Fanny Hensel"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Robert_Schumann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Robert Schumann",
+   "quelle_id": "Q7351"
+  },
+  {
+   "id": "wp-a76d39c75e",
+   "kategorie": "kunst",
+   "frage": "Welcher Komponist schrieb die Oper «Carmen»?",
+   "antworten": [
+    "Giuseppe Verdi",
+    "Giacomo Puccini",
+    "Jules Massenet",
+    "Georges Bizet"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Carmen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Carmen",
+   "quelle_id": "Q185968"
+  },
+  {
+   "id": "wp-a9b3e44fd3",
+   "kategorie": "kunst",
+   "frage": "Auf welchem Instrument wurde Franz Liszt als Virtuose berühmt?",
+   "antworten": [
+    "Orgel",
+    "Violine",
+    "Cello",
+    "Klavier"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Franz_Liszt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Franz Liszt",
+   "quelle_id": "Q41309"
+  },
+  {
+   "id": "wp-a9d71904a7",
+   "kategorie": "kunst",
+   "frage": "Welches Land schenkte die Freiheitsstatue in New York den Vereinigten Staaten?",
+   "antworten": [
+    "Italien",
+    "Frankreich",
+    "Spanien",
+    "Grossbritannien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Freiheitsstatue",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Freiheitsstatue",
+   "quelle_id": "Q9202"
+  },
+  {
+   "id": "wp-ac707a8049",
+   "kategorie": "kunst",
+   "frage": "Mit welcher ebenfalls bekannten Schriftstellerin war Paul Auster in zweiter Ehe verheiratet?",
+   "antworten": [
+    "Donna Tartt",
+    "Jhumpa Lahiri",
+    "Zadie Smith",
+    "Siri Hustvedt"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Paul_Auster",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Paul Auster",
+   "quelle_id": "Q214642"
+  },
+  {
+   "id": "wp-ac8a1b2d21",
+   "kategorie": "kunst",
+   "frage": "Aus welchem Oratorium von Georg Friedrich Händel stammt der berühmte Chor «Halleluja»?",
+   "antworten": [
+    "Der Messias",
+    "Paulus",
+    "Weihnachtsoratorium",
+    "Die Schöpfung"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Georg_Friedrich_H%C3%A4ndel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Georg Friedrich Händel",
+   "quelle_id": "Q7302"
+  },
+  {
+   "id": "wp-afecd23ead",
+   "kategorie": "kunst",
+   "frage": "Für welche Kunstform ist der deutsche Künstler Joseph Beuys vor allem bekannt?",
+   "antworten": [
+    "Op-Art",
+    "Pop-Art",
+    "Fotorealismus",
+    "Aktionskunst"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Joseph_Beuys",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Joseph Beuys",
+   "quelle_id": "Q153965"
+  },
+  {
+   "id": "wp-b19cdd2b58",
+   "kategorie": "kunst",
+   "frage": "Welcher Komponist schuf das berühmte Chorwerk «Ein deutsches Requiem»?",
+   "antworten": [
+    "Johannes Brahms",
+    "Franz Schubert",
+    "Anton Bruckner",
+    "Felix Mendelssohn"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Johannes_Brahms",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Johannes Brahms",
+   "quelle_id": "Q7294"
+  },
+  {
+   "id": "wp-b3079412cc",
+   "kategorie": "kunst",
+   "frage": "Welches Motiv steht im Mittelpunkt der bekanntesten Gemälde von Franz Marc, etwa beim Bild mit blauen Pferden?",
+   "antworten": [
+    "Landschaften",
+    "Porträts",
+    "Stillleben",
+    "Tiere"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Franz_Marc",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Franz Marc",
+   "quelle_id": "Q44054"
+  },
+  {
+   "id": "wp-b485d02867",
+   "kategorie": "kunst",
+   "frage": "Welcher Komponist gründete die Bayreuther Festspiele?",
+   "antworten": [
+    "Richard Strauss",
+    "Johannes Brahms",
+    "Richard Wagner",
+    "Franz Liszt"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Richard_Wagner",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Richard Wagner",
+   "quelle_id": "Q1511"
+  },
+  {
+   "id": "wp-b5f8005081",
+   "kategorie": "kunst",
+   "frage": "Welcher Theologe des 16. Jahrhunderts prägte mit seiner Bibelübersetzung die neuhochdeutsche Sprache entscheidend?",
+   "antworten": [
+    "Philipp Melanchthon",
+    "Martin Luther",
+    "Huldrych Zwingli",
+    "Johannes Calvin"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Martin_Luther",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Martin Luther",
+   "quelle_id": "Q9554"
+  },
+  {
+   "id": "wp-b90d3e5cd6",
+   "kategorie": "kunst",
+   "frage": "Mit welchem Komponisten gilt Franz Liszt als bekanntester Vertreter der Neudeutschen Schule?",
+   "antworten": [
+    "Johannes Brahms",
+    "Felix Mendelssohn",
+    "Robert Schumann",
+    "Richard Wagner"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Franz_Liszt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Franz Liszt",
+   "quelle_id": "Q41309"
+  },
+  {
+   "id": "wp-bab3cbe773",
+   "kategorie": "kunst",
+   "frage": "In welcher Stadt wurde der Maler Max Liebermann geboren und starb er auch?",
+   "antworten": [
+    "Hamburg",
+    "München",
+    "Wien",
+    "Berlin"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Max_Liebermann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Max Liebermann",
+   "quelle_id": "Q158062"
+  },
+  {
+   "id": "wp-bbff9b9d17",
+   "kategorie": "kunst",
+   "frage": "In welcher Stadt wirkte der Komponist Antonio Salieri als kaiserlicher Hofkapellmeister?",
+   "antworten": [
+    "Wien",
+    "München",
+    "Salzburg",
+    "Prag"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Antonio_Salieri",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Antonio Salieri",
+   "quelle_id": "Q51088"
+  },
+  {
+   "id": "wp-bcce74539e",
+   "kategorie": "kunst",
+   "frage": "Mit welcher Musikrichtung feierte Bob Dylan erste Erfolge, bevor er sich Mitte der 1960er-Jahre dem Rock zuwandte?",
+   "antworten": [
+    "Soul",
+    "Klassik",
+    "Jazz",
+    "Folk"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bob_Dylan",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Bob Dylan",
+   "quelle_id": "Q392"
+  },
+  {
+   "id": "wp-bd34b152d5",
+   "kategorie": "kunst",
+   "frage": "Welcher russische Schriftsteller schrieb den Roman «Schuld und Sühne»?",
+   "antworten": [
+    "Nikolai Gogol",
+    "Fjodor Dostojewski",
+    "Iwan Turgenew",
+    "Lew Tolstoi"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fjodor_Michailowitsch_Dostojewski",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Fjodor Michailowitsch Dostojewski",
+   "quelle_id": "Q991"
+  },
+  {
+   "id": "wp-bd834f0c2a",
+   "kategorie": "kunst",
+   "frage": "Isaac Asimov zählt zu den bekanntesten Autoren welcher Literaturgattung?",
+   "antworten": [
+    "Kriminalroman",
+    "Science-Fiction",
+    "Fantasy",
+    "Horror"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Isaac_Asimov",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Isaac Asimov",
+   "quelle_id": "Q34981"
+  },
+  {
+   "id": "wp-bda809f353",
+   "kategorie": "kunst",
+   "frage": "In welchem US-Bundesstaat spielen die meisten Romane von John Steinbeck?",
+   "antworten": [
+    "Oklahoma",
+    "Texas",
+    "Florida",
+    "Kalifornien"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/John_Steinbeck",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "John Steinbeck",
+   "quelle_id": "Q39212"
+  },
+  {
+   "id": "wp-c40280653d",
+   "kategorie": "kunst",
+   "frage": "Mit welcher Technik schuf der schwer erkrankte Henri Matisse in den 1940er Jahren sein gefeiertes Spätwerk?",
+   "antworten": [
+    "Holzschnitte",
+    "Radierungen",
+    "Scherenschnitte",
+    "Aquarelle"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Henri_Matisse",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Henri Matisse",
+   "quelle_id": "Q5589"
+  },
+  {
+   "id": "wp-c43b8fd595",
+   "kategorie": "kunst",
+   "frage": "Welcher Renaissance-Maler schuf Wandfresken in der Sixtinischen Kapelle?",
+   "antworten": [
+    "Leonardo da Vinci",
+    "Albrecht Dürer",
+    "Tizian",
+    "Sandro Botticelli"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sixtinische_Kapelle",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sixtinische Kapelle",
+   "quelle_id": "Q2943"
+  },
+  {
+   "id": "wp-c551925744",
+   "kategorie": "kunst",
+   "frage": "In welchem Alter starb der österreichische Komponist Franz Schubert?",
+   "antworten": [
+    "Mit 42 Jahren",
+    "Mit 56 Jahren",
+    "Mit 35 Jahren",
+    "Mit 31 Jahren"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Franz_Schubert",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Franz Schubert",
+   "quelle_id": "Q7312"
+  },
+  {
+   "id": "wp-c5c1bb2384",
+   "kategorie": "kunst",
+   "frage": "In welcher Stadt wurde der Maler Albrecht Dürer 1471 geboren?",
+   "antworten": [
+    "Bamberg",
+    "Augsburg",
+    "Nürnberg",
+    "Regensburg"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Albrecht Dürer",
+   "quelle_id": "Q5580"
+  },
+  {
+   "id": "wp-c5d9c888ae",
+   "kategorie": "kunst",
+   "frage": "Welche traditionelle Gattung der Malerei hat Anselm Kiefer nach Ansicht vieler neu belebt?",
+   "antworten": [
+    "Stilllebenmalerei",
+    "Porträtmalerei",
+    "Historienmalerei",
+    "Landschaftsmalerei"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Anselm_Kiefer",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Anselm Kiefer",
+   "quelle_id": "Q170344"
+  },
+  {
+   "id": "wp-cd0ca45657",
+   "kategorie": "kunst",
+   "frage": "Welche Zeitschrift gab der Pazifist Carl von Ossietzky in der Weimarer Republik heraus?",
+   "antworten": [
+    "Simplicissimus",
+    "Die Weltbühne",
+    "Der Sturm",
+    "Die Fackel"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Carl_von_Ossietzky",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Carl von Ossietzky",
+   "quelle_id": "Q76358"
+  },
+  {
+   "id": "wp-cd1ac827a8",
+   "kategorie": "kunst",
+   "frage": "Welcher Autor fasste mehrere seiner Geschichten zur berühmten Romanreihe «Foundation» zusammen?",
+   "antworten": [
+    "Arthur C. Clarke",
+    "Ray Bradbury",
+    "Robert A. Heinlein",
+    "Isaac Asimov"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Isaac_Asimov",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Isaac Asimov",
+   "quelle_id": "Q34981"
+  },
+  {
+   "id": "wp-d2486088af",
+   "kategorie": "kunst",
+   "frage": "In der Gegend welcher Stadt am Rhein lag das Burgunderreich, das als historischer Kern der Nibelungensage gilt?",
+   "antworten": [
+    "Speyer",
+    "Mainz",
+    "Worms",
+    "Koblenz"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Nibelungenlied",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Nibelungenlied",
+   "quelle_id": "Q131554"
+  },
+  {
+   "id": "wp-d3e9a8976c",
+   "kategorie": "kunst",
+   "frage": "Für welchen Baustil ist das Guggenheim-Museum in Bilbao berühmt?",
+   "antworten": [
+    "Brutalismus",
+    "Jugendstil",
+    "Funktionalismus",
+    "Dekonstruktivismus"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Guggenheim-Museum_Bilbao",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Guggenheim-Museum Bilbao",
+   "quelle_id": "Q179199"
+  },
+  {
+   "id": "wp-d57a2c7c26",
+   "kategorie": "kunst",
+   "frage": "Als Wegbereiter welcher Kunstepoche gilt der französische Maler Paul Cézanne?",
+   "antworten": [
+    "Barock",
+    "Biedermeier",
+    "Jugendstil",
+    "Klassische Moderne"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Paul_C%C3%A9zanne",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Paul Cézanne",
+   "quelle_id": "Q35548"
+  },
+  {
+   "id": "wp-da46dd6255",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb den siebenteiligen Roman «Auf der Suche nach der verlorenen Zeit»?",
+   "antworten": [
+    "André Gide",
+    "Gustave Flaubert",
+    "Marcel Proust",
+    "Émile Zola"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Auf_der_Suche_nach_der_verlorenen_Zeit",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Auf der Suche nach der verlorenen Zeit",
+   "quelle_id": "Q464928"
+  },
+  {
+   "id": "wp-db2207650a",
+   "kategorie": "kunst",
+   "frage": "Mit welchem österreichischen Maler hatte Alma Mahler-Werfel ab 1912 eine heftige Liebesbeziehung?",
+   "antworten": [
+    "Oskar Kokoschka",
+    "Egon Schiele",
+    "Koloman Moser",
+    "Richard Gerstl"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Alma_Mahler-Werfel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Alma Mahler-Werfel",
+   "quelle_id": "Q156898"
+  },
+  {
+   "id": "wp-dd71cf69a5",
+   "kategorie": "kunst",
+   "frage": "In welchem Beruf war Isabel Allende vor ihrem Erfolg als Romanautorin vor allem tätig?",
+   "antworten": [
+    "Anwältin",
+    "Ärztin",
+    "Journalistin",
+    "Lehrerin"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Isabel_Allende",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Isabel Allende",
+   "quelle_id": "Q83566"
+  },
+  {
+   "id": "wp-dd93909017",
+   "kategorie": "kunst",
+   "frage": "Mit welcher Künstlergruppe stand Paul Klee in engem Kontakt und zeigte 1912 Grafiken in ihrer Ausstellung?",
+   "antworten": [
+    "Wiener Secession",
+    "Die Brücke",
+    "Les Fauves",
+    "Der Blaue Reiter"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Paul_Klee",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Paul Klee",
+   "quelle_id": "Q44007"
+  },
+  {
+   "id": "wp-dfafa03f5d",
+   "kategorie": "kunst",
+   "frage": "Welcher Schriftsteller schrieb die Novelle «Der Schimmelreiter»?",
+   "antworten": [
+    "Gottfried Keller",
+    "Wilhelm Raabe",
+    "Theodor Fontane",
+    "Theodor Storm"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Theodor_Storm",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Theodor Storm",
+   "quelle_id": "Q26993"
+  },
+  {
+   "id": "wp-e14c0c0f8f",
+   "kategorie": "kunst",
+   "frage": "Welche römische Göttin stellt die Freiheitsstatue in New York dar?",
+   "antworten": [
+    "Libertas",
+    "Minerva",
+    "Justitia",
+    "Victoria"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Freiheitsstatue",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Freiheitsstatue",
+   "quelle_id": "Q9202"
+  },
+  {
+   "id": "wp-e14f8f5704",
+   "kategorie": "kunst",
+   "frage": "In welcher Stadt wurde die Schriftstellerin Lou Andreas-Salomé 1861 geboren?",
+   "antworten": [
+    "Riga",
+    "St. Petersburg",
+    "Moskau",
+    "Königsberg"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Lou_Andreas-Salom%C3%A9",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Lou Andreas-Salomé",
+   "quelle_id": "Q38873"
+  },
+  {
+   "id": "wp-e230b31bec",
+   "kategorie": "kunst",
+   "frage": "Welche englische Schriftstellerin schrieb den 1818 erschienenen Roman «Frankenstein»?",
+   "antworten": [
+    "Emily Brontë",
+    "Charlotte Brontë",
+    "Mary Shelley",
+    "Jane Austen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mary_Shelley",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mary Shelley",
+   "quelle_id": "Q47152"
+  },
+  {
+   "id": "wp-e51b3020b2",
+   "kategorie": "kunst",
+   "frage": "Welcher schottische Schriftsteller schrieb den Jugendbuchklassiker «Die Schatzinsel»?",
+   "antworten": [
+    "Robert Louis Stevenson",
+    "Arthur Conan Doyle",
+    "Jules Verne",
+    "Walter Scott"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Robert_Louis_Stevenson",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Robert Louis Stevenson",
+   "quelle_id": "Q1512"
+  },
+  {
+   "id": "wp-e6ad985ba1",
+   "kategorie": "kunst",
+   "frage": "Aus welchem Land stammt der Prinz in Shakespeares Tragödie «Hamlet»?",
+   "antworten": [
+    "Dänemark",
+    "Norwegen",
+    "Schottland",
+    "Schweden"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hamlet",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hamlet",
+   "quelle_id": "Q41567"
+  },
+  {
+   "id": "wp-eab5df77c2",
+   "kategorie": "kunst",
+   "frage": "Für welches Instrument schrieb Frédéric Chopin fast alle seine Werke?",
+   "antworten": [
+    "Gitarre",
+    "Klavier",
+    "Violine",
+    "Orgel"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Frédéric Chopin",
+   "quelle_id": "Q1268"
+  },
+  {
+   "id": "wp-ed53f77059",
+   "kategorie": "kunst",
+   "frage": "Welcher Regisseur verfilmte 1951 Patricia Highsmiths ersten Roman «Strangers on a Train»?",
+   "antworten": [
+    "Fritz Lang",
+    "Alfred Hitchcock",
+    "Orson Welles",
+    "Billy Wilder"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Patricia_Highsmith",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Patricia Highsmith",
+   "quelle_id": "Q270635"
+  },
+  {
+   "id": "wp-ee131718c7",
+   "kategorie": "kunst",
+   "frage": "Jim Morrison war der Sänger und Frontmann welcher US-amerikanischen Rockband?",
+   "antworten": [
+    "Jefferson Airplane",
+    "The Velvet Underground",
+    "The Byrds",
+    "The Doors"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jim_Morrison",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jim Morrison",
+   "quelle_id": "Q44301"
+  },
+  {
+   "id": "wp-f0be60e8e1",
+   "kategorie": "kunst",
+   "frage": "Aus welchem Land stammte der Schriftsteller Paul Auster?",
+   "antworten": [
+    "Irland",
+    "USA",
+    "Grossbritannien",
+    "Kanada"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Paul_Auster",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Paul Auster",
+   "quelle_id": "Q214642"
+  },
+  {
+   "id": "wp-f2b17a7a6c",
+   "kategorie": "kunst",
+   "frage": "In welcher norddeutschen Hansestadt wurde der Nobelpreisträger Thomas Mann geboren?",
+   "antworten": [
+    "Lübeck",
+    "Bremen",
+    "Hamburg",
+    "Rostock"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Thomas_Mann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Thomas Mann",
+   "quelle_id": "Q37030"
+  },
+  {
+   "id": "wp-f2f6d53929",
+   "kategorie": "kunst",
+   "frage": "Welcher Maler schuf das berühmte Gemälde «Die Nachtwache»?",
+   "antworten": [
+    "Peter Paul Rubens",
+    "Frans Hals",
+    "Rembrandt",
+    "Jan Vermeer"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rembrandt_van_Rijn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rembrandt van Rijn",
+   "quelle_id": "Q5598"
+  },
+  {
+   "id": "wp-f43e90a859",
+   "kategorie": "kunst",
+   "frage": "Aus welchem Land stammte der romantische Komponist Frédéric Chopin?",
+   "antworten": [
+    "Österreich",
+    "Polen",
+    "Litauen",
+    "Ungarn"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Frédéric Chopin",
+   "quelle_id": "Q1268"
+  },
+  {
+   "id": "wp-f4f8c43e22",
+   "kategorie": "kunst",
+   "frage": "Welcher Architekt entwarf das Guggenheim-Museum in Bilbao?",
+   "antworten": [
+    "Daniel Libeskind",
+    "Frank O. Gehry",
+    "Zaha Hadid",
+    "Renzo Piano"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Guggenheim-Museum_Bilbao",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Guggenheim-Museum Bilbao",
+   "quelle_id": "Q179199"
+  },
+  {
+   "id": "wp-f61a255775",
+   "kategorie": "kunst",
+   "frage": "Wie heisst die einzige Oper, die Ludwig van Beethoven komponiert hat?",
+   "antworten": [
+    "Der Freischütz",
+    "Die Zauberflöte",
+    "Fidelio",
+    "Don Giovanni"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ludwig_van_Beethoven",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ludwig van Beethoven",
+   "quelle_id": "Q255"
+  },
+  {
+   "id": "wp-f6da60ae60",
+   "kategorie": "kunst",
+   "frage": "Auf welchem Instrument trat der russische Komponist Sergei Rachmaninow als gefeierter Virtuose auf?",
+   "antworten": [
+    "Violine",
+    "Orgel",
+    "Klavier",
+    "Cello"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sergei_Wassiljewitsch_Rachmaninow",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sergei Wassiljewitsch Rachmaninow",
+   "quelle_id": "Q131861"
+  },
+  {
+   "id": "wp-f942ddca42",
+   "kategorie": "kunst",
+   "frage": "Welcher Schriftsteller schrieb die Romane «Der Steppenwolf» und «Siddhartha»?",
+   "antworten": [
+    "Stefan Zweig",
+    "Thomas Mann",
+    "Hermann Hesse",
+    "Max Frisch"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hermann_Hesse",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hermann Hesse",
+   "quelle_id": "Q25973"
+  },
+  {
+   "id": "wp-fc5594d6f7",
+   "kategorie": "kunst",
+   "frage": "An welchem See entstand im Sommer 1816 die Idee zu Mary Shelleys Roman «Frankenstein»?",
+   "antworten": [
+    "Genfersee",
+    "Lago Maggiore",
+    "Comer See",
+    "Bodensee"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mary_Shelley",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mary Shelley",
+   "quelle_id": "Q47152"
+  },
+  {
+   "id": "wp-fdef6a04b2",
+   "kategorie": "kunst",
+   "frage": "Die Schriftstellerin Isabel Allende besitzt die Staatsbürgerschaft der USA und welches südamerikanischen Landes?",
+   "antworten": [
+    "Kolumbien",
+    "Uruguay",
+    "Chile",
+    "Argentinien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Isabel_Allende",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Isabel Allende",
+   "quelle_id": "Q83566"
+  },
+  {
+   "id": "wp-fff04b53e0",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb den 1988 erschienenen Weltbestseller-Roman «Der Alchimist»?",
+   "antworten": [
+    "Mario Vargas Llosa",
+    "Gabriel García Márquez",
+    "Paulo Coelho",
+    "Isabel Allende"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Alchimist",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Der Alchimist",
+   "quelle_id": "Q179021"
+  }
+ ]
+}
