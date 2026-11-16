@@ -265,7 +265,7 @@ ihre deutsche Bezeichnung auf die Landessprache abgebildet. Kantone selbst durch
   Fledermäuse, Kloakentiere, Pinguine, Laufvögel, Haie, Rochen, Aale, Seepferdchen, Blindschleichen,
   Schwanzlurche, Krokodile, Schildkröten …), höchstens 3 pro Taxon. Dazu höchstens ein gewöhnliches Tier
   pro Gruppe („Zu welcher Tiergruppe gehört der Löwe?“ ist zu leicht).
-- Tiere: Arten (P105) mit deutschem Trivialnamen (P1843) und mind. 60 Sprachversionen. Eine Abfrage aller
+- Tiere: Arten (P105) mit deutschem Trivialnamen (P1843) und mind. 60 Sprachversionen (Bekanntheitsfilter: 40 Aufrufe pro Tag, 2000 Zeichen). Eine Abfrage aller
   Arten mit vielen Sprachversionen läuft in die Zeitbegrenzung des Abfragedienstes; der Trivialname grenzt ein.
 - Tiergruppe: Elterntaxon (P171) paketweise nach oben verfolgen bis zu einer bekannten Klasse (Säugetiere, Vögel,
   Reptilien, Amphibien, Knochen- und Knorpelfische, Insekten, Spinnentiere). Pflanzen fallen dabei weg.

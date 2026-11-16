@@ -73,7 +73,9 @@ EINZAHL = {"Säugetiere": "ein Säugetier", "Vögel": "ein Vogel", "Reptilien": 
            "Spinnentiere": "ein Spinnentier"}
 
 MAX_PRO_TEMPLATE = {"tierklasse": 25, "welches_tier": 15}
-SCHWELLEN_TIER = Schwellen(min_sitelinks=60, min_pageviews=80.0, min_zeichen=2000)
+# Tiere mit 60+ Sprachversionen sind bekannt genug; bei 80 Aufrufen/Tag fehlten in Lauf 31 u. a. alle
+# Pinguine und das Schnabeltier weg (19 Fragen)
+SCHWELLEN_TIER = Schwellen(min_sitelinks=60, min_pageviews=40.0, min_zeichen=2000)
 _ARTIKEL = re.compile(r"^(Der|Die|Das)\s+(.+?)\s*(\(.*?\))?\s*(?:,[^,]*,)?\s*(ist|war|gehört|zählt)\b")
 
 
