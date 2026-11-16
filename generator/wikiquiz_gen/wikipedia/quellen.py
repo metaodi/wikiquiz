@@ -146,6 +146,7 @@ EN_STARTKATEGORIEN: dict[str, list[tuple[str, int]]] = {
     "harrypotter": [
         ("Harry Potter characters", 1),
         ("Fictional universe of Harry Potter", 1),
+        ("Harry Potter novels", 0),  # Romane, deren deutsche Artikel kaum aufgerufen werden
     ],
 }
 
