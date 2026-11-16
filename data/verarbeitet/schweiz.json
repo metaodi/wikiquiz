@@ -1,0 +1,422 @@
+{
+ "Aare": {
+  "qid": "Q1675",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Alberto Giacometti": {
+  "qid": "Q157194",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Alpen": {
+  "qid": "Q1286",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Bern": {
+  "qid": "Q70",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Bodensee": {
+  "qid": "Q4127",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Bundespräsident (Schweiz)": {
+  "qid": "Q688230",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Bundesrat (Schweiz)": {
+  "qid": "Q30917",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "CERN": {
+  "qid": "Q42944",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Christoph Blocher": {
+  "qid": "Q123857",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Crans-Montana": {
+  "qid": "Q688557",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Davos": {
+  "qid": "Q68097",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Deutscher Bauernkrieg": {
+  "qid": "Q154031",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Erika Mann": {
+  "qid": "Q61597",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Fleischkäse": {
+  "qid": "Q681841",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Friedrich Nietzsche": {
+  "qid": "Q9358",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Genfersee": {
+  "qid": "Q6403",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Geschichte der Schweiz": {
+  "qid": "Q208761",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Grappa": {
+  "qid": "Q693078",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Helvetische Republik": {
+  "qid": "Q206696",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Henry Dunant": {
+  "qid": "Q12091",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Hochrhein": {
+  "qid": "Q650521",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Hochwasser in West- und Mitteleuropa 2021": {
+  "qid": "Q107529288",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Inn": {
+  "qid": "Q14369",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Jura (Gebirge)": {
+  "qid": "Q178611",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Kanton (Schweiz)": {
+  "qid": "Q23058",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Kanton Aargau": {
+  "qid": "Q11972",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 0,
+  "verworfen": 1
+ },
+ "Kanton Appenzell Innerrhoden": {
+  "qid": "Q12094",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Kanton Bern": {
+  "qid": "Q11911",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Kanton Schwyz": {
+  "qid": "Q12433",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Kanton St. Gallen": {
+  "qid": "Q12746",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Kanton Wallis": {
+  "qid": "Q834",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 1
+ },
+ "Kanton Zürich": {
+  "qid": "Q11943",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Lago Maggiore": {
+  "qid": "Q14379",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Leopard 2": {
+  "qid": "Q151968",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Luganersee": {
+  "qid": "Q14418",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Luzern": {
+  "qid": "Q4191",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Maggi": {
+  "qid": "Q688424",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Nestlé": {
+  "qid": "Q160746",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Oeschinensee": {
+  "qid": "Q14533",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Polenta": {
+  "qid": "Q131607",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Rhein": {
+  "qid": "Q584",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Rhone": {
+  "qid": "Q602",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Ricotta": {
+  "qid": "Q216781",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Riesen-Bärenklau": {
+  "qid": "Q826602",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Roger Federer": {
+  "qid": "Q1426",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Rütlischwur": {
+  "qid": "Q674223",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Schokokuss": {
+  "qid": "Q1578239",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Schweizerpsalm": {
+  "qid": "Q182536",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Schwingen": {
+  "qid": "Q685078",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Schwäbische Alb": {
+  "qid": "Q159589",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "St. Moritz": {
+  "qid": "Q68986",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 1
+ },
+ "Stieglitz": {
+  "qid": "Q25418",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Stutenkerl": {
+  "qid": "Q153944",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Waldohreule": {
+  "qid": "Q25384",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Walensee": {
+  "qid": "Q14444",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Westfälischer Friede": {
+  "qid": "Q150995",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Wiener Kongress": {
+  "qid": "Q46362",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Zermatt": {
+  "qid": "Q27494",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Zürich": {
+  "qid": "Q72",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Zürichsee": {
+  "qid": "Q14407",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ }
+}
