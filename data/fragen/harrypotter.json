@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "harrypotter",
- "generiert_am": "2026-11-16T09:49:27Z",
+ "generiert_am": "2026-11-16T10:25:43Z",
  "fragen": [
   {
    "id": "wp-009a6194db",
@@ -58,42 +58,6 @@
    "quelle_id": "Q1057918"
   },
   {
-   "id": "wp-0c2fafe94f",
-   "kategorie": "harrypotter",
-   "frage": "Wie heisst das Zaubererinternat, das Harry Potter in den Romanen besucht?",
-   "antworten": [
-    "Ilvermorny",
-    "Durmstrang",
-    "Beauxbatons",
-    "Hogwarts"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Harry Potter",
-   "quelle_id": "Q8337"
-  },
-  {
-   "id": "wp-0c8eb106da",
-   "kategorie": "harrypotter",
-   "frage": "Welcher Schauspieler spielte die Titelrolle im Film «Harry Potter und der Stein der Weisen» (2001)?",
-   "antworten": [
-    "Rupert Grint",
-    "Daniel Radcliffe",
-    "Tom Felton",
-    "Freddie Highmore"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Stein_der_Weisen_(Film)",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Harry Potter und der Stein der Weisen (Film)",
-   "quelle_id": "Q102438"
-  },
-  {
    "id": "wp-0d5d3bd203",
    "kategorie": "harrypotter",
    "frage": "In welcher Form erschien die Harry-Potter-Fortsetzung «Das verwunschene Kind» ursprünglich?",
@@ -148,24 +112,6 @@
    "quelle_id": "Q176772"
   },
   {
-   "id": "wp-17d6b3d0d4",
-   "kategorie": "harrypotter",
-   "frage": "Welche Schriftstellerin schrieb die Romanreihe «Harry Potter»?",
-   "antworten": [
-    "Enid Blyton",
-    "Joanne K. Rowling",
-    "Astrid Lindgren",
-    "Cornelia Funke"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Harry Potter",
-   "quelle_id": "Q8337"
-  },
-  {
    "id": "wp-1c533f829b",
    "kategorie": "harrypotter",
    "frage": "Welche Figur ruft in Harry Potter die Geheimorganisation «Orden des Phönix» gegen Voldemort wieder ins Leben?",
@@ -200,42 +146,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Phantastische Tierwesen und wo sie zu finden sind (Film)",
    "quelle_id": "Q18199330"
-  },
-  {
-   "id": "wp-221f54c39c",
-   "kategorie": "harrypotter",
-   "frage": "Welcher verstorbene Schauspieler spielte in allen Harry-Potter-Filmen den Zaubertrankmeister Severus Snape?",
-   "antworten": [
-    "Richard Harris",
-    "Richard Griffiths",
-    "Alan Rickman",
-    "Gary Oldman"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_20th_Anniversary:_Return_to_Hogwarts",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Harry Potter 20th Anniversary: Return to Hogwarts",
-   "quelle_id": "Q110207138"
-  },
-  {
-   "id": "wp-22a8af2cf0",
-   "kategorie": "harrypotter",
-   "frage": "Welches Fach unterrichtet Remus Lupin in Hogwarts im Band «Harry Potter und der Gefangene von Askaban»?",
-   "antworten": [
-    "Verteidigung gegen die dunklen Künste",
-    "Pflege magischer Geschöpfe",
-    "Verwandlung",
-    "Zaubertränke"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://en.wikipedia.org/wiki/Remus_Lupin",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Remus Lupin",
-   "quelle_id": "Q208657"
   },
   {
    "id": "wp-26d301a12c",
@@ -436,42 +346,6 @@
    "quelle_id": "Q46887"
   },
   {
-   "id": "wp-55c985e64f",
-   "kategorie": "harrypotter",
-   "frage": "Welche Zauberschule leitet Albus Dumbledore in den Harry-Potter-Romanen als Schulleiter?",
-   "antworten": [
-    "Ilvermorny",
-    "Beauxbatons",
-    "Durmstrang",
-    "Hogwarts"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://en.wikipedia.org/wiki/Albus_Dumbledore",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Albus Dumbledore",
-   "quelle_id": "Q712548"
-  },
-  {
-   "id": "wp-580a5be882",
-   "kategorie": "harrypotter",
-   "frage": "In welchem Harry-Potter-Band ist Sirius Black die titelgebende Figur?",
-   "antworten": [
-    "Der Feuerkelch",
-    "Die Kammer des Schreckens",
-    "Der Gefangene von Askaban",
-    "Der Halbblutprinz"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://en.wikipedia.org/wiki/Sirius_Black",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Sirius Black",
-   "quelle_id": "Q713701"
-  },
-  {
    "id": "wp-5bc7db5010",
    "kategorie": "harrypotter",
    "frage": "In welches Tier kann sich Professorin McGonagall in den Harry-Potter-Büchern jederzeit verwandeln?",
@@ -560,24 +434,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Harry Potter 20th Anniversary: Return to Hogwarts",
    "quelle_id": "Q110207138"
-  },
-  {
-   "id": "wp-600c9c75a8",
-   "kategorie": "harrypotter",
-   "frage": "Welchem Haus gehörte Albus Dumbledore während seiner eigenen Schulzeit in Hogwarts an?",
-   "antworten": [
-    "Hufflepuff",
-    "Gryffindor",
-    "Slytherin",
-    "Ravenclaw"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://en.wikipedia.org/wiki/Albus_Dumbledore",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Albus Dumbledore",
-   "quelle_id": "Q712548"
   },
   {
    "id": "wp-60fbce716b",
@@ -706,24 +562,6 @@
    "quelle_id": "Q174009"
   },
   {
-   "id": "wp-7f55c6ccf5",
-   "kategorie": "harrypotter",
-   "frage": "Aus wie vielen Kinofilmen besteht die Harry-Potter-Filmreihe von 2001 bis 2011?",
-   "antworten": [
-    "Sieben",
-    "Acht",
-    "Sechs",
-    "Neun"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_(Filmreihe)",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Harry Potter (Filmreihe)",
-   "quelle_id": "Q216930"
-  },
-  {
    "id": "wp-8033661fd3",
    "kategorie": "harrypotter",
    "frage": "Wie heisst Harrys Schneeeule, die in «Harry Potter und die Heiligtümer des Todes – Teil 1» stirbt?",
@@ -850,24 +688,6 @@
    "quelle_id": "Q43361"
   },
   {
-   "id": "wp-9d7309f128",
-   "kategorie": "harrypotter",
-   "frage": "Welche Ministeriumsbeamtin wird bei Harry Potter im fünften Band nach Hogwarts geschickt, um die Schule zu überwachen?",
-   "antworten": [
-    "Narzissa Malfoy",
-    "Dolores Umbridge",
-    "Bellatrix Lestrange",
-    "Rita Kimmkorn"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://en.wikipedia.org/wiki/Ministry_of_Magic",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Ministry of Magic",
-   "quelle_id": "Q193584"
-  },
-  {
    "id": "wp-9dd5ca41eb",
    "kategorie": "harrypotter",
    "frage": "Welches Fach unterrichtet Professor Snape im sechsten Harry-Potter-Film neu in Hogwarts?",
@@ -922,24 +742,6 @@
    "quelle_id": "Q208361"
   },
   {
-   "id": "wp-b1c73fe612",
-   "kategorie": "harrypotter",
-   "frage": "Nach welchen magischen Objekten sucht Harry im letzten Band zusammen mit Ron und Hermine?",
-   "antworten": [
-    "Horkruxe",
-    "Denkarien",
-    "Portschlüssel",
-    "Zeitumkehrer"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_die_Heiligt%C3%BCmer_des_Todes",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Harry Potter und die Heiligtümer des Todes",
-   "quelle_id": "Q46758"
-  },
-  {
    "id": "wp-b2c7b7f6f7",
    "kategorie": "harrypotter",
    "frage": "Welchen magischen Gegenstand stehlen Albus und Scorpius in «Das verwunschene Kind», um die Vergangenheit zu ändern?",
@@ -956,24 +758,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Harry Potter und das verwunschene Kind",
    "quelle_id": "Q20711488"
-  },
-  {
-   "id": "wp-b65bb1e309",
-   "kategorie": "harrypotter",
-   "frage": "Welche Rolle hat Sirius Black im Leben von Harry Potter?",
-   "antworten": [
-    "Er ist sein Cousin",
-    "Er ist sein Grossvater",
-    "Er ist sein Onkel",
-    "Er ist sein Pate"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://en.wikipedia.org/wiki/Sirius_Black",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Sirius Black",
-   "quelle_id": "Q713701"
   },
   {
    "id": "wp-b867fb3599",
@@ -1046,24 +830,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Minerva McGonagall",
    "quelle_id": "Q192179"
-  },
-  {
-   "id": "wp-cb2fc3d067",
-   "kategorie": "harrypotter",
-   "frage": "Wie nennen Zauberer in den Harry-Potter-Romanen die nichtmagischen Menschen?",
-   "antworten": [
-    "Muggel",
-    "Auroren",
-    "Kobolde",
-    "Todesser"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Begriffe_der_Harry-Potter-Romane",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Begriffe der Harry-Potter-Romane",
-   "quelle_id": "Q190327"
   },
   {
    "id": "wp-cce93e9147",
@@ -1174,24 +940,6 @@
    "quelle_id": "Q176772"
   },
   {
-   "id": "wp-e666f24e85",
-   "kategorie": "harrypotter",
-   "frage": "Welche Hauptfigur der Harry-Potter-Romane ist eine Hexe mit nichtmagischen Eltern?",
-   "antworten": [
-    "Luna Lovegood",
-    "Hermine Granger",
-    "Bellatrix Lestrange",
-    "Ginny Weasley"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://en.wikipedia.org/wiki/Muggle",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Muggle",
-   "quelle_id": "Q154224"
-  },
-  {
    "id": "wp-e83ad09adf",
    "kategorie": "harrypotter",
    "frage": "Wen heiratet Ginny Weasley am Ende der Romanreihe von J. K. Rowling?",
@@ -1226,24 +974,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Draco Malfoy",
    "quelle_id": "Q179641"
-  },
-  {
-   "id": "wp-edb9005497",
-   "kategorie": "harrypotter",
-   "frage": "Wie heisst der dunkle Zaubergegenstand, der Unsterblichkeit verleiht und nach dem Voldemort Slughorn ausfragte?",
-   "antworten": [
-    "Horkrux",
-    "Denkarium",
-    "Portschlüssel",
-    "Stein der Weisen"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Half-Blood_Prince",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Harry Potter and the Half-Blood Prince",
-   "quelle_id": "Q46887"
   },
   {
    "id": "wp-ee8f0b301a",
@@ -1316,42 +1046,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Harry Potter (character)",
    "quelle_id": "Q3244512"
-  },
-  {
-   "id": "wp-f5f4d4a65a",
-   "kategorie": "harrypotter",
-   "frage": "Wie nennt man in «Harry Potter» Menschen ohne Zauberkräfte, die aus nichtmagischen Familien stammen?",
-   "antworten": [
-    "Halbblüter",
-    "Reinblüter",
-    "Muggel",
-    "Squibs"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://en.wikipedia.org/wiki/Muggle",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Muggle",
-   "quelle_id": "Q154224"
-  },
-  {
-   "id": "wp-ff41f95ba0",
-   "kategorie": "harrypotter",
-   "frage": "In welchem Land befindet sich die Zauberschule Hogwarts aus den Harry-Potter-Romanen?",
-   "antworten": [
-    "Wales",
-    "Irland",
-    "England",
-    "Schottland"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Handlungsorte_der_Harry-Potter-Romane",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Handlungsorte der Harry-Potter-Romane",
-   "quelle_id": "Q208361"
   }
  ]
 }
