@@ -13,6 +13,13 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Albert von Sachsen-Coburg und Gotha": {
+  "qid": "Q152245",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
  "Alberto Giacometti": {
   "qid": "Q157194",
   "datum": "2026-11-16",
@@ -45,6 +52,13 @@
   "qid": "Q170344",
   "datum": "2026-11-16",
   "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Anton Pawlowitsch Tschechow": {
+  "qid": "Q5685",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
   "angenommen": 1,
   "verworfen": 1
  },
@@ -117,6 +131,13 @@
   "bekanntheit_thema": 4,
   "angenommen": 2,
   "verworfen": 0
+ },
+ "Cembalo": {
+  "qid": "Q81982",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
  },
  "Clara Schumann": {
   "qid": "Q132232",
@@ -211,6 +232,13 @@
  },
  "E. T. A. Hoffmann": {
   "qid": "Q150471",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Edvard Grieg": {
+  "qid": "Q80621",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
   "angenommen": 1,
@@ -362,6 +390,13 @@
   "bekanntheit_thema": 4,
   "angenommen": 2,
   "verworfen": 0
+ },
+ "Honoré de Balzac": {
+  "qid": "Q9711",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
  },
  "Ingeborg Bachmann": {
   "qid": "Q78506",
