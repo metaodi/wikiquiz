@@ -232,6 +232,8 @@ def test_epoche_aus_kategorien():
     # NS-Zeit hat Vorrang vor der Lebensspanne (Mengele 1911–1979)
     assert thema("geschichte", ["Kategorie:Geboren 1911", "Kategorie:Gestorben 1979", "Kategorie:SS-Mitglied"], None) == "1914–1945"
     assert thema("geschichte", [], None, datum_jahr=1989) == "seit 1945"
+    # Ohne Jahr: ein gemeinsamer Topf statt der Startkategorie
+    assert thema("geschichte", ["Kategorie:Flughafen in Berlin"], "Exzellent/Lesenswert") == "ohne Epoche"
     assert thema("kunst", ["Kategorie:Geboren 1756"], "Kategorie:Oper") == "Kategorie:Oper"
 
 

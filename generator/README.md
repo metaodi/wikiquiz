@@ -89,8 +89,8 @@ Einmalig nötig:
    ihnen veralten schnell.
    **Themenvielfalt:** Jeder Artikel bekommt ein Thema: in der Geschichte die Epoche (Antike, Mittelalter,
    Frühe Neuzeit, 1789–1914, 1914–1945, seit 1945; geschätzt aus Jahreszahlen in den Wikipedia-Kategorien
-   wie „Geboren 1638“ oder „Herrscher (17. Jahrhundert)“, NS-Zeit und Weltkriege per Stichwort), sonst die
-   Startkategorie. Verarbeitet wird reihum zuerst aus dem Thema mit den bisher wenigsten Fragen (Bestand
+   wie „Geboren 1638“ oder „Herrscher (17. Jahrhundert)“, sonst aus dem Ereignisdatum in Wikidata; NS-Zeit
+   und Weltkriege per Stichwort; ohne Jahr ein gemeinsamer Topf „ohne Epoche“), sonst die Startkategorie. Verarbeitet wird reihum zuerst aus dem Thema mit den bisher wenigsten Fragen (Bestand
    eingerechnet), innerhalb eines Themas nach Seitenaufrufen (`wikipedia/themen.py`). So überwiegen nicht
    allein die meistgelesenen Themen (in der Geschichte NS-Zeit und Zweiter Weltkrieg).
    **Themenkategorien** (`schweiz`, `starwars`; `THEMENKATEGORIEN` in `config.py`) liegen quer zu den

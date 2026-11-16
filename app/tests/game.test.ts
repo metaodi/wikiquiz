@@ -18,7 +18,7 @@ import {
   zufallFertig,
   zwischenstandWeiter,
 } from '../src/lib/game';
-import { waehleFrage } from '../src/lib/picker';
+import { andereQuellen, waehleFrage } from '../src/lib/picker';
 import type { Frage, KategorieId, Spielstand } from '../src/lib/types';
 
 function frage(id: string, kategorie: KategorieId = 'geografie'): Frage {
@@ -157,6 +157,23 @@ describe('History', () => {
   it('nimmt sonst die am längsten zurückliegende', () => {
     const f = waehleFrage(POOL, 'geografie', [], ['g2', 'g3', 'g1'], () => 0);
     expect(f!.id).toBe('g2');
+  });
+});
+
+describe('Quellen', () => {
+  const mitQuelle = (id: string, artikel: string): Frage => ({
+    ...frage(id), quelle_url: `https://de.wikipedia.org/wiki/${artikel}`,
+  });
+  const pool = [mitQuelle('brahms-1', 'Brahms'), mitQuelle('brahms-2', 'Brahms'), mitQuelle('bach-1', 'Bach')];
+
+  it('meidet Fragen zu einem Artikel, der im Spiel schon vorkam', () => {
+    // History bevorzugt brahms-2, die Quelle hat aber Vorrang
+    const f = waehleFrage(pool, 'geografie', ['brahms-1'], ['bach-1'], () => 0);
+    expect(f!.id).toBe('bach-1');
+  });
+  it('erlaubt die gleiche Quelle, wenn nichts anderes übrig ist', () => {
+    expect(waehleFrage(pool, 'geografie', ['brahms-1', 'bach-1'], [], () => 0)!.id).toBe('brahms-2');
+    expect(andereQuellen([pool[1]], pool, ['brahms-1'])).toEqual([pool[1]]);
   });
 });
 

@@ -28,6 +28,7 @@ EPOCHEN: list[tuple[float, str]] = [
     (float("inf"), "seit 1945"),
 ]
 THEMA_NACH_EPOCHE = {"geschichte"}
+OHNE_EPOCHE = "ohne Epoche"
 FRAGEN_PRO_ARTIKEL = 2
 
 # Diese Stichworte in einer Wikipedia-Kategorie legen die Epoche fest. Personen der NS-Zeit lebten
@@ -88,8 +89,9 @@ def thema(kategorie: str, kategorien: Iterable[str], quelle: str | None, datum_j
         jahr = jahr_schaetzen(kategorien)
         if jahr is None:
             jahr = datum_jahr
-        if jahr is not None:
-            return epoche(jahr)
+        # Ohne Jahr ein gemeinsamer Topf: Eigene Töpfe pro Startkategorie hätten keine Fragen im
+        # Bestand und kämen darum immer zuerst dran (so landete z. B. Flughafen Tegel früh im Lauf).
+        return epoche(jahr) if jahr is not None else OHNE_EPOCHE
     return quelle or "unbekannt"
 
 
