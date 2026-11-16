@@ -70,9 +70,10 @@ SCHWELLEN["schweiz"] = Schwellen(min_sitelinks=15, min_pageviews=100.0)
 # eigenen Artikel. Bei 50 Aufrufen/Tag kommen u. a. „Jedi“, „Todesstern“ und die Spiele dazu (31 statt 22 Artikel)
 SCHWELLEN["starwars"] = Schwellen(min_sitelinks=20, min_pageviews=50.0)
 
-# Englische Wikipedia als ergänzende Quelle, pro Kategorie einschaltbar: nur Artikel, zu denen es
-# keinen deutschen Artikel gibt (z. B. Star-Wars-Figuren). Startkategorien in wikipedia/quellen.py.
-# Seitenaufrufe auf en.wikipedia sind etwa 5–10× höher als auf de.wikipedia → eigene Schwellen.
+# Englische Wikipedia als ergänzende Quelle, pro Kategorie einschaltbar: für Themen, zu denen kein
+# deutscher Artikel den Bekanntheitsfilter besteht (Star-Wars-Figuren haben oft nur kurze, kaum
+# aufgerufene deutsche Artikel). Startkategorien in wikipedia/quellen.py. Eigene Schwellen, gemessen
+# auf en.wikipedia (Tatooine ≈ 220, The Force ≈ 150, BB-8 ≈ 120 Aufrufe/Tag).
 EN_SCHWELLEN: dict[str, Schwellen] = {
-    "starwars": Schwellen(min_sitelinks=20, min_pageviews=500.0),
+    "starwars": Schwellen(min_sitelinks=20, min_pageviews=100.0),
 }

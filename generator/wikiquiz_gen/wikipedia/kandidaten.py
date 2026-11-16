@@ -152,19 +152,6 @@ SELECT DISTINCT ?item WHERE {{
     return ergebnis
 
 
-def deutsche_artikel(http: Http, qids: list[str]) -> set[str]:
-    """QIDs, zu denen es einen Artikel auf de.wikipedia gibt (SPARQL, 300 Objekte pro Abfrage)."""
-    vorhanden: set[str] = set()
-    eindeutig = sorted(set(qids))
-    for i in range(0, len(eindeutig), 300):
-        werte = " ".join(f"wd:{q}" for q in eindeutig[i : i + 300])
-        for r in abfrage(http, f"SELECT ?item WHERE {{ VALUES ?item {{ {werte} }} "
-                               f"?a schema:about ?item; schema:isPartOf <https://de.wikipedia.org/>. }}",
-                         ttl=30 * TAG):
-            vorhanden.add(r["item"].rsplit("/", 1)[-1])
-    return vorhanden
-
-
 def sitelinks(http: Http, qids: list[str]) -> dict[str, int]:
     """Anzahl Sprachversionen pro Wikidata-Objekt (SPARQL, 300 Objekte pro Abfrage)."""
     anzahl: dict[str, int] = {}
@@ -226,8 +213,9 @@ def sammeln(http: Http, kategorie: str, min_sitelinks: int, max_pro_quelle: int 
 
 
 def sammeln_englisch(http: Http, kategorie: str, min_sitelinks: int, max_pro_quelle: int = 1500) -> list[Kandidat]:
-    """Kandidaten aus der englischen Wikipedia (EN_STARTKATEGORIEN), nur Artikel ohne deutsches Pendant
-    und mit mind. `min_sitelinks`. Seitenaufrufe usw. prüft danach der Bekanntheitsfilter (sprache="en")."""
+    """Kandidaten aus der englischen Wikipedia (EN_STARTKATEGORIEN) mit mind. `min_sitelinks`.
+    Seitenaufrufe usw. prüft danach der Bekanntheitsfilter (sprache="en"). Ob es schon einen deutschen
+    Kandidaten gibt, entscheidet die Pipeline."""
     roh: dict[str, dict] = {}
     for kat, tiefe in EN_STARTKATEGORIEN.get(kategorie, []):
         artikel = kategorie_artikel(http, kat, tiefe, max_artikel=max_pro_quelle, sprache="en")
@@ -240,15 +228,13 @@ def sammeln_englisch(http: Http, kategorie: str, min_sitelinks: int, max_pro_que
     qids = [p["pageprops"]["wikibase_item"] for p in mit_qid.values()]
     links = sitelinks(http, qids)
     bekannt = {t: p for t, p in mit_qid.items() if links.get(p["pageprops"]["wikibase_item"], 0) >= min_sitelinks}
-    deutsch = deutsche_artikel(http, [p["pageprops"]["wikibase_item"] for p in bekannt.values()])
-    ohne_de = {t: p for t, p in bekannt.items() if p["pageprops"]["wikibase_item"] not in deutsch}
-    daten = ereignisdaten(http, [p["pageprops"]["wikibase_item"] for p in ohne_de.values()])
+    daten = ereignisdaten(http, [p["pageprops"]["wikibase_item"] for p in bekannt.values()])
     kandidaten = []
-    for titel, p in ohne_de.items():
+    for titel, p in bekannt.items():
         q = p["pageprops"]["wikibase_item"]
         k = Kandidat(qid=q, label=titel, titel=titel, sitelinks=links[q], datum=daten.get(q), sprache="en")
         k.extra["quelle"] = p["quelle"]
         kandidaten.append(k)
-    log.info("%s (en): %d Artikel gefunden, %d mit mind. %d Sitelinks, davon %d ohne deutschen Artikel",
-             kategorie, len(roh), len(bekannt), min_sitelinks, len(kandidaten))
+    log.info("%s (en): %d Artikel gefunden, %d mit mind. %d Sitelinks", kategorie, len(roh), len(kandidaten),
+             min_sitelinks)
     return kandidaten

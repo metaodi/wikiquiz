@@ -118,9 +118,10 @@ def wikipedia(
     schwelle = {"de": ktx.schwellen.min_pageviews}
     en_schwellen = EN_SCHWELLEN.get(ktx.kategorie)
     if en_schwellen:
-        # Ergänzend englische Artikel ohne deutsches Pendant (eigene Bekanntheitsschwellen)
+        # Ergänzend englische Artikel, wenn kein deutscher Artikel zum selben Thema den Bekanntheitsfilter
+        # besteht (fehlt oder wird auf de.wikipedia kaum aufgerufen, z. B. Darth Vader). Eigene Schwellen.
         schwelle["en"] = en_schwellen.min_pageviews
-        de_qids = {k.qid for k in roh}
+        de_qids = {k.qid for k in kandidaten} | {d.get("qid") for d in verarbeitet.values()}
         en_roh = [k for k in sammeln_englisch(ktx.http, ktx.kategorie, en_schwellen.min_sitelinks)
                   if k.qid not in de_qids and k.schluessel not in verarbeitet]
         en_bekanntheit = Bekanntheit(ktx.http, heute=ktx.bekanntheit.heute, exakt=ktx.bekanntheit.exakt,

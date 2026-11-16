@@ -100,9 +100,10 @@ Einmalig nötig:
    Artikel können zusätzlich Fragen in ihrer Fachkategorie liefern. Für Themenkategorien gibt es (noch) keine
    Wikidata-Templates. Leere oder nicht existierende Startkategorien werden im Log gemeldet.
    **Englische Wikipedia** (ergänzend, pro Kategorie in `EN_SCHWELLEN` in `config.py`, bisher nur Star Wars):
-   Startkategorien in `EN_STARTKATEGORIEN` (`wikipedia/quellen.py`). Übernommen werden nur Artikel, zu denen
-   es keinen deutschen Artikel gibt (Wikidata-Sitelink), z. B. Star-Wars-Figuren. Seitenaufrufe und Länge
-   werden auf en.wikipedia gemessen (Star Wars: mind. 500 Aufrufe/Tag, 20 Sitelinks). Das LLM erhält den
+   Startkategorien in `EN_STARTKATEGORIEN` (`wikipedia/quellen.py`). Übernommen werden Themen (Wikidata-QID),
+   zu denen kein deutscher Artikel den Bekanntheitsfilter besteht: Tatooine hat keinen deutschen Artikel,
+   Darth Vader nur einen kurzen, kaum aufgerufenen. Seitenaufrufe und Länge werden auf en.wikipedia gemessen
+   (Star Wars: mind. 100 Aufrufe/Tag, 20 Sitelinks). Das LLM erhält den
    englischen Text und formuliert die Frage auf Deutsch; die Belegstelle bleibt ein englisches Zitat.
    `quelle_url` zeigt auf en.wikipedia, in `data/verarbeitet/` stehen solche Artikel als `en:Titel`.
    Braucht Netzwerkzugriff auf `en.wikipedia.org`.

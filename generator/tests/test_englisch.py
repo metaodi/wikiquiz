@@ -61,18 +61,16 @@ def test_englische_nebenabschnitte_uebersprungen():
     assert "Part one." in a and "Ref X" not in a and "Link." not in a
 
 
-def test_sammeln_englisch_nur_ohne_deutschen_artikel(monkeypatch):
+def test_sammeln_englisch(monkeypatch):
     seiten = [
         {"title": "Darth Vader", "ns": 0, "pageprops": {"wikibase_item": "Q1"}},
-        {"title": "Jedi", "ns": 0, "pageprops": {"wikibase_item": "Q2"}},          # hat de-Artikel
         {"title": "Minor droid", "ns": 0, "pageprops": {"wikibase_item": "Q3"}},   # zu wenige Sitelinks
         {"title": "Vader (redirect)", "ns": 0, "pageprops": {}},                   # ohne QID
     ]
     sprachen = []
     monkeypatch.setattr(kand, "kategorie_artikel",
                         lambda http, kat, tiefe, max_artikel, sprache: sprachen.append(sprache) or seiten)
-    monkeypatch.setattr(kand, "sitelinks", lambda http, qids: {"Q1": 80, "Q2": 60, "Q3": 5})
-    monkeypatch.setattr(kand, "deutsche_artikel", lambda http, qids: {"Q2"})
+    monkeypatch.setattr(kand, "sitelinks", lambda http, qids: {"Q1": 80, "Q3": 5})
     monkeypatch.setattr(kand, "ereignisdaten", lambda http, qids: {})
     ks = kand.sammeln_englisch(None, "starwars", min_sitelinks=20)
     assert [(k.titel, k.sprache, k.schluessel) for k in ks] == [("Darth Vader", "en", "en:Darth Vader")]
