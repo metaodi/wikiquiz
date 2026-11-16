@@ -14,6 +14,27 @@ def swiss(text: str) -> str:
     return text.replace("ß", "ss").replace("ẞ", "SS")
 
 
+_ANFUEHRUNG_PAARE = [
+    re.compile(r"„([^„“”\"«»]+)“"),   # „…“ (deutsch)
+    re.compile(r"“([^„“”\"«»]+)”"),   # “…” (englisch)
+    re.compile(r"\"([^„“”\"«»]+)\""),  # "…"
+    re.compile(r"‚([^‚‘«»]+)‘"),       # ‚…‘ (deutsch, einfach)
+]
+
+
+def anfuehrungszeichen(text: str) -> str:
+    """Einheitlich Schweizer Guillemets: „Faust“, "Faust", ‚Faust‘ → «Faust».
+    Einzelne Apostrophe („Handmaid’s“) bleiben unverändert."""
+    for muster in _ANFUEHRUNG_PAARE:
+        text = muster.sub(r"«\1»", text)
+    return text
+
+
+def text_bereinigen(text: str) -> str:
+    """Für Fragen und Antworten: Schweizer Rechtschreibung und einheitliche Anführungszeichen."""
+    return anfuehrungszeichen(swiss(text.strip()))
+
+
 def normalisiere(text: str) -> str:
     return re.sub(r"\W+", " ", text.lower()).strip()
 

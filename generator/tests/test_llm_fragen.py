@@ -114,10 +114,27 @@ def test_zuordnung_qualitaetsartikel():
     assert zuordnen(["Kategorie:Mann", "Kategorie:Geboren 1900"]) is None
 
 
+def test_zuordnung_nur_am_wortanfang():
+    # „Verdichter“ und „Kirchenlieddichter“ sind keine Dichter
+    assert zuordnen(["Kategorie:Verdichter", "Kategorie:Leistungssteigerung (Verbrennungsmotor)",
+                     "Kategorie:Technikgeschichte (20. Jahrhundert)"]) == "naturwissenschaften"
+    assert zuordnen(["Kategorie:Kirchenlieddichter", "Kategorie:Hingerichtete Person (NS-Opfer)",
+                     "Kategorie:Häftling im KZ Buchenwald"]) == "geschichte"
+
+
+def test_zuordnung_mit_berufen():
+    # Kepler: Astronom (Q11063) und Mathematiker (Q170790), daneben Schriftsteller (Q36180)
+    kats = ["Kategorie:Autor", "Kategorie:Erzählung", "Kategorie:Literatur (17. Jahrhundert)"]
+    assert zuordnen(kats, ["Q11063", "Q170790", "Q36180"]) == "naturwissenschaften"
+    # Komponist (Q36834) bleibt Kunst
+    assert zuordnen(["Kategorie:Komponist (Klassik)"], ["Q36834", "Q486748"]) == "kunst"
+
+
 def test_zuordnung_personen():
     assert zuordnen(["Kategorie:Politiker (21. Jahrhundert)", "Kategorie:Literatur (Deutsch)", "Kategorie:Autor"]) == "geschichte"
     assert zuordnen(["Kategorie:Philosoph (18. Jahrhundert)", "Kategorie:Literatur (18. Jahrhundert)"]) == "allgemeinwissen"
     assert zuordnen(["Kategorie:Komponist (Klassik)", "Kategorie:Literatur (Deutsch)"]) == "kunst"
+    assert zuordnen(["Kategorie:Person im Zweiten Weltkrieg", "Kategorie:Schlacht"]) == "geschichte"
 
 
 def test_leere_umgebungsvariable_zaehlt_als_nicht_gesetzt(monkeypatch):
@@ -155,6 +172,7 @@ def test_kategorie_abgleich(monkeypatch):
         "Mozart": ["Kategorie:Komponist (Klassik)", "Kategorie:Opernkomponist"],
         "Unklar": ["Kategorie:Mann"],
     })
+    monkeypatch.setattr(kand, "berufe", lambda http, qids: {})
     ks = [Kandidat("Q1", t, t, 100) for t in ("Friedrich II. (Preußen)", "Mozart", "Unklar")]
     behalten, verworfen = kand.passende_kategorie(None, ks, "kunst")
     assert [k.titel for k in behalten] == ["Mozart", "Unklar"]

@@ -132,3 +132,31 @@ def test_schreibe_kategorie_modi(tmp_path):
     # ersetzen betrifft nur die angegebene Quelle
     schreibe_kategorie("geografie", [c], {"wikidata"}, modus="ersetzen", verzeichnis=tmp_path)
     assert {f["id"] for f in lade_kategorie("geografie", tmp_path)} == {c["id"], w["id"]}
+
+
+def test_anfuehrungszeichen():
+    from wikiquiz_gen.models import anfuehrungszeichen, text_bereinigen
+
+    assert anfuehrungszeichen("Wer schrieb ‚Rigoletto‘?") == "Wer schrieb «Rigoletto»?"
+    assert anfuehrungszeichen("„Faust“ und \"Hamlet\" und “Carmen”") == "«Faust» und «Hamlet» und «Carmen»"
+    assert anfuehrungszeichen("«Der Report der Magd» (The Handmaid’s Tale)") == "«Der Report der Magd» (The Handmaid’s Tale)"
+    assert text_bereinigen("  ‚Großes‘ Haus ") == "«Grosses» Haus"
+    # Die ID hängt nicht an Satzzeichen: Bereinigen ändert sie nicht
+    assert frage(frage="Wer schrieb ‚Faust‘?").id == frage(frage="Wer schrieb «Faust»?").id
+
+
+def test_verschieben(tmp_path):
+    from wikiquiz_gen.output import lade_kategorie, schreibe_kategorie, verschieben
+    import pytest
+
+    a = frage(kategorie="kunst", quelle_typ="wikipedia", frage="Wer formulierte die Planetengesetze?",
+              richtig="Kepler", falsch=["Brahe", "Galilei", "Kopernikus"]).to_json()
+    b = frage(kategorie="kunst", quelle_typ="wikipedia").to_json()
+    schreibe_kategorie("kunst", [a, b], {"wikipedia"}, verzeichnis=tmp_path)
+    verschoben = verschieben([a["id"]], "naturwissenschaften", verzeichnis=tmp_path)
+    assert [f["id"] for f in verschoben] == [a["id"]]
+    assert [f["id"] for f in lade_kategorie("kunst", tmp_path)] == [b["id"]]
+    ziel = lade_kategorie("naturwissenschaften", tmp_path)
+    assert ziel[0]["id"] == a["id"] and ziel[0]["kategorie"] == "naturwissenschaften"
+    with pytest.raises(ValueError):
+        verschieben(["wp-gibtsnicht"], "geschichte", verzeichnis=tmp_path)

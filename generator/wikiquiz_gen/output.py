@@ -47,13 +47,38 @@ def schreibe_kategorie(
     if modus == "ersetzen":
         alte = [f for f in alte if f["quelle_typ"] not in quellen]
     vorhandene = {f["id"] for f in alte}
-    fragen = alte + [f for f in neue if f["id"] not in vorhandene]
-    fragen.sort(key=lambda f: (f["quelle_typ"], f["id"]))
+    return speichere_kategorie(kategorie, alte + [f for f in neue if f["id"] not in vorhandene], verzeichnis)
+
+
+def speichere_kategorie(kategorie: str, fragen: list[dict], verzeichnis: Path | None = None) -> list[dict]:
+    """Schreibt alle Fragen einer Kategorie (sortiert, damit Diffs klein bleiben)."""
+    fragen = sorted(fragen, key=lambda f: (f["quelle_typ"], f["id"]))
     pfad = kategorie_pfad(kategorie, verzeichnis)
     pfad.parent.mkdir(parents=True, exist_ok=True)
     inhalt = {"version": 1, "kategorie": kategorie, "generiert_am": jetzt_iso(), "fragen": fragen}
     pfad.write_text(json.dumps(inhalt, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     return fragen
+
+
+def verschieben(ids: list[str], nach: str, verzeichnis: Path | None = None) -> list[dict]:
+    """Verschiebt Fragen per ID in eine andere Kategorie. Die IDs bleiben gleich
+    (sie hängen nur von Quelle und Fragetext ab). Gibt die verschobenen Fragen zurück."""
+    gesucht = set(ids)
+    verschoben: list[dict] = []
+    for kat in KATEGORIEN:
+        if kat == nach:
+            continue
+        fragen = lade_kategorie(kat, verzeichnis)
+        bleiben = [f for f in fragen if f["id"] not in gesucht]
+        if len(bleiben) != len(fragen):
+            verschoben += [{**f, "kategorie": nach} for f in fragen if f["id"] in gesucht]
+            speichere_kategorie(kat, bleiben, verzeichnis)
+    fehlend = gesucht - {f["id"] for f in verschoben}
+    if fehlend:
+        raise ValueError(f"Nicht gefunden (oder schon in {nach}): {', '.join(sorted(fehlend))}")
+    ziel = lade_kategorie(nach, verzeichnis)
+    speichere_kategorie(nach, ziel + verschoben, verzeichnis)
+    return verschoben
 
 
 class Protokoll:
