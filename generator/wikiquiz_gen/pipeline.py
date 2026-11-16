@@ -83,12 +83,12 @@ def wikipedia(
     """
     from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 
+    from .config import EN_SCHWELLEN
     from .llm.client import LLM, AnmeldeFehler, LLMFehler, Verbrauch
     from .llm.fragen import artikel_verarbeiten
     from .output import jetzt_iso
-    from .wikipedia.auszug import auszug, klartext
-    from .config import EN_SCHWELLEN
     from .popularity import Bekanntheit
+    from .wikipedia.auszug import auszug, klartext
     from .wikipedia.kandidaten import amtierende, passende_kategorie, sammeln, sammeln_englisch
 
     vorhanden = sum(1 for f in bestand if f["quelle_typ"] == "wikipedia")
@@ -116,14 +116,16 @@ def wikipedia(
                  ktx.kategorie, len(falsche_kategorie),
                  ", ".join(f"{k.titel} ({g.split(': ')[1]})" for k, g in falsche_kategorie[:5]))
     schwelle = {"de": ktx.schwellen.min_pageviews}
+    alle_roh = list(roh)  # für den Themenausgleich (Startkategorie pro Artikel)
     en_schwellen = EN_SCHWELLEN.get(ktx.kategorie)
     if en_schwellen:
         # Ergänzend englische Artikel, wenn kein deutscher Artikel zum selben Thema den Bekanntheitsfilter
         # besteht (fehlt oder wird auf de.wikipedia kaum aufgerufen, z. B. Darth Vader). Eigene Schwellen.
         schwelle["en"] = en_schwellen.min_pageviews
         de_qids = {k.qid for k in kandidaten} | {d.get("qid") for d in verarbeitet.values()}
-        en_roh = [k for k in sammeln_englisch(ktx.http, ktx.kategorie, en_schwellen.min_sitelinks)
-                  if k.qid not in de_qids and k.schluessel not in verarbeitet]
+        en_alle = sammeln_englisch(ktx.http, ktx.kategorie, en_schwellen.min_sitelinks)
+        alle_roh += en_alle
+        en_roh = [k for k in en_alle if k.qid not in de_qids and k.schluessel not in verarbeitet]
         en_bekanntheit = Bekanntheit(ktx.http, heute=ktx.bekanntheit.heute, exakt=ktx.bekanntheit.exakt,
                                      sprache="en")
         kandidaten += ktx.filtern(en_roh, "artikel-en", bekanntheit=en_bekanntheit, schwellen=en_schwellen)
@@ -143,7 +145,7 @@ def wikipedia(
     kandidaten = [k for k in kandidaten if len(pro_quelle.get(k.qid, [])) < 2]
     log.info("%s: %d neue Artikel bestehen den Bekanntheitsfilter, davon werden höchstens %d verarbeitet",
              ktx.kategorie, len(kandidaten), max_artikel)
-    kandidaten = _themen_ausgleichen(ktx, roh, kandidaten, bestand)
+    kandidaten = _themen_ausgleichen(ktx, alle_roh, kandidaten, bestand)
     kandidaten = kandidaten[:max_artikel]
     if nur_kandidaten:
         for k in kandidaten:
@@ -225,18 +227,26 @@ def _themen_ausgleichen(ktx: Kontext, roh: list, kandidaten: list, bestand: list
     from .wikipedia.kandidaten import artikel_kategorien
     from .wikipedia.themen import ausgleichen, thema
 
-    quelle = {k.titel: k.extra.get("quelle") for k in roh}
-    datum = {k.titel: k.datum.year for k in roh if k.datum}
-    titel_bestand = sorted({f.get("quelle_titel", "") for f in bestand if f["quelle_typ"] == "wikipedia"} - {""})
-    kats = artikel_kategorien(ktx.http, sorted({k.titel for k in kandidaten} | set(titel_bestand)))
+    # Schlüssel „Titel“ bzw. „en:Titel“; Wikipedia-Kategorien gibt es nur für deutsche Artikel,
+    # englische Artikel ordnet thema() über ihre Startkategorie („en:Category:…“) ein.
+    quelle = {k.schluessel: k.extra.get("quelle") for k in roh}
+    datum = {k.schluessel: k.datum.year for k in roh if k.datum}
 
-    def thema_von(titel: str) -> str:
-        return thema(ktx.kategorie, kats.get(titel, []), quelle.get(titel), datum.get(titel))
+    def schluessel_bestand(f: dict) -> str:
+        en = f.get("quelle_url", "").startswith("https://en.wikipedia.org/")
+        return f"en:{f['quelle_titel']}" if en else f["quelle_titel"]
 
-    zaehler = Counter(thema_von(f["quelle_titel"]) for f in bestand
-                      if f["quelle_typ"] == "wikipedia" and f.get("quelle_titel"))
-    geordnet = ausgleichen(kandidaten, lambda k: thema_von(k.titel), zaehler)
-    neu = Counter(thema_von(k.titel) for k in kandidaten)
+    alt = [f for f in bestand if f["quelle_typ"] == "wikipedia" and f.get("quelle_titel")]
+    titel_de = {k.titel for k in kandidaten if k.sprache == "de"}
+    titel_de |= {s for s in map(schluessel_bestand, alt) if not s.startswith("en:")}
+    kats = artikel_kategorien(ktx.http, sorted(titel_de))
+
+    def thema_von(schluessel: str) -> str:
+        return thema(ktx.kategorie, kats.get(schluessel, []), quelle.get(schluessel), datum.get(schluessel))
+
+    zaehler = Counter(thema_von(schluessel_bestand(f)) for f in alt)
+    geordnet = ausgleichen(kandidaten, lambda k: thema_von(k.schluessel), zaehler)
+    neu = Counter(thema_von(k.schluessel) for k in kandidaten)
     log.info("%s: Fragen pro Thema im Bestand: %s; neue Kandidaten: %s", ktx.kategorie,
              dict(zaehler.most_common()), dict(neu.most_common()))
     return geordnet

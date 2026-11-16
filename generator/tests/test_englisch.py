@@ -75,3 +75,27 @@ def test_sammeln_englisch(monkeypatch):
     ks = kand.sammeln_englisch(None, "starwars", min_sitelinks=20)
     assert [(k.titel, k.sprache, k.schluessel) for k in ks] == [("Darth Vader", "en", "en:Darth Vader")]
     assert set(sprachen) == {"en"}
+
+
+def test_themen_ausgleichen_mit_englischen_kandidaten(monkeypatch):
+    from types import SimpleNamespace
+
+    from wikiquiz_gen import pipeline
+
+    abgefragt = []
+    monkeypatch.setattr(kand, "artikel_kategorien", lambda http, titel: abgefragt.extend(titel) or {})
+    de = Kandidat("Q1", "Jedi", "Jedi", 60, pageviews=60)
+    de.extra["quelle"] = "Kategorie:Star Wars"
+    en1 = Kandidat("Q2", "Yoda", "Yoda", 68, pageviews=500, sprache="en")
+    en1.extra["quelle"] = "en:Category:Star Wars characters"
+    en2 = Kandidat("Q3", "Grogu", "Grogu", 31, pageviews=1300, sprache="en")
+    en2.extra["quelle"] = "en:Category:Star Wars characters"
+    # Bestand: schon eine Frage aus einer englischen Figur → Figuren kommen nach dem deutschen Thema
+    bestand = [{"quelle_typ": "wikipedia", "quelle_titel": "Darth Vader",
+                "quelle_url": "https://en.wikipedia.org/wiki/Darth_Vader"}]
+    alle = [de, en1, en2, Kandidat("Q4", "Darth Vader", "Darth Vader", 85, sprache="en",
+                                   extra={"quelle": "en:Category:Star Wars characters"})]
+    ktx = SimpleNamespace(kategorie="starwars", http=None)
+    geordnet = pipeline._themen_ausgleichen(ktx, alle, [en2, en1, de], bestand)
+    assert geordnet[0] is de
+    assert abgefragt == ["Jedi"]  # nur deutsche Titel nach Wikipedia-Kategorien gefragt
