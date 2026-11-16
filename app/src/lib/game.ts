@@ -5,22 +5,24 @@
 import { ZEITLIMIT_S, punkteFuerZeit } from './config';
 import { mischen, verfuegbareKategorien, waehleFrage, type Rng } from './picker';
 import { KATEGORIEN, URSPRUENGLICHE_KATEGORIEN } from './categories';
-import type { Einstellungen, Frage, KategorieId, Phase, Spieler, Spielstand } from './types';
+import type { Antwort, Einstellungen, Frage, KategorieId, Phase, Spieler, Spielstand } from './types';
 
 export type Wahl = KategorieId | 'zufall';
 
 export const ALLE_KATEGORIEN: KategorieId[] = KATEGORIEN.map((k) => k.id);
 
-export const STANDARD_EINSTELLUNGEN: Einstellungen = { modus: 'selbst', kategorien: ALLE_KATEGORIEN };
+export const STANDARD_EINSTELLUNGEN: Einstellungen = { modus: 'selbst', kategorien: ALLE_KATEGORIEN, ablauf: 'reihum' };
 
 /** Ungültige oder fehlende Werte (z. B. aus älteren Spielständen) durch Standardwerte ersetzen. */
 export function einstellungenPruefen(e: Partial<Einstellungen> | undefined, anzahlSpieler: number): Einstellungen {
+  const ablauf = e?.ablauf === 'gleichzeitig' ? 'gleichzeitig' : 'reihum';
   let modus = e?.modus ?? STANDARD_EINSTELLUNGEN.modus;
   if (!['selbst', 'zufall', 'vorgaenger'].includes(modus)) modus = 'selbst';
-  if (modus === 'vorgaenger' && anzahlSpieler < 2) modus = 'selbst';
+  // „Vorheriger Spieler wählt“ gibt es nur reihum und ab 2 Spielern
+  if (modus === 'vorgaenger' && (anzahlSpieler < 2 || ablauf === 'gleichzeitig')) modus = 'selbst';
   // Reihenfolge wie in KATEGORIEN, unbekannte IDs verwerfen
   const gewaehlt = ALLE_KATEGORIEN.filter((id) => e?.kategorien?.includes(id));
-  return { modus, kategorien: gewaehlt.length > 0 ? gewaehlt : [...ALLE_KATEGORIEN] };
+  return { modus, kategorien: gewaehlt.length > 0 ? gewaehlt : [...ALLE_KATEGORIEN], ablauf };
 }
 
 /**
@@ -41,12 +43,14 @@ export function neueKategorienErgaenzen(
 }
 
 /** Wählt der vorherige Spieler die Kategorie für den aktiven Spieler? */
-export function vorgaengerWaehlt(s: Pick<Spielstand, 'spieler' | 'modus'>): boolean {
-  return s.modus === 'vorgaenger' && s.spieler.length > 1;
+export function vorgaengerWaehlt(s: Pick<Spielstand, 'spieler' | 'modus'> & Partial<Pick<Spielstand, 'ablauf'>>): boolean {
+  return s.modus === 'vorgaenger' && s.spieler.length > 1 && s.ablauf !== 'gleichzeitig';
 }
 
 /** Index des Spielers, der die Kategorie für den aktuellen Zug bestimmt */
-export function waehler(s: Pick<Spielstand, 'spieler' | 'modus' | 'aktiverSpieler'>): number {
+export function waehler(
+  s: Pick<Spielstand, 'spieler' | 'modus' | 'aktiverSpieler'> & Partial<Pick<Spielstand, 'ablauf'>>,
+): number {
   const n = s.spieler.length;
   return vorgaengerWaehlt(s) ? (s.aktiverSpieler - 1 + n) % n : s.aktiverSpieler;
 }
@@ -54,9 +58,10 @@ export function waehler(s: Pick<Spielstand, 'spieler' | 'modus' | 'aktiverSpiele
 /**
  * Erste Phase eines Zugs. Wählt der Vorgänger, kommt zuerst die Kategoriewahl (das Gerät ist
  * noch bei ihm), danach die Übergabe. Sonst zuerst die Übergabe (ausser bei einem Spieler).
+ * „Alle gleichzeitig“: keine Übergabe, jeder hat sein Gerät.
  */
-export function startPhase(s: Pick<Spielstand, 'spieler' | 'modus'>): Phase {
-  if (vorgaengerWaehlt(s)) return 'kategorie';
+export function startPhase(s: Pick<Spielstand, 'spieler' | 'modus'> & Partial<Pick<Spielstand, 'ablauf'>>): Phase {
+  if (s.ablauf === 'gleichzeitig' || vorgaengerWaehlt(s)) return 'kategorie';
   return s.spieler.length > 1 ? 'uebergabe' : 'kategorie';
 }
 
@@ -81,7 +86,7 @@ export function neuesSpiel(
 
 /** Gleiche Spieler, Punkte zurückgesetzt */
 export function nochmals(s: Spielstand): Spielstand {
-  return neuesSpiel(s.spieler, s.runden, { modus: s.modus, kategorien: s.kategorien });
+  return neuesSpiel(s.spieler, s.runden, { modus: s.modus, kategorien: s.kategorien, ablauf: s.ablauf });
 }
 
 /** Übergabe bestätigt: Kategorie wählen – oder, falls der Vorgänger schon gewählt hat, direkt zur Frage. */
@@ -133,6 +138,7 @@ export function kategorieWaehlen(
         zeit: null,
         punkte: 0,
         richtig: false,
+        ...(s.ablauf === 'gleichzeitig' ? { alle: s.spieler.map(() => null) } : {}),
       },
     },
   };
@@ -161,9 +167,35 @@ function zugAbschliessen(s: Spielstand, gewaehlt: number | null, zeit: number, f
   return { ...s, phase: 'feedback', spieler, zug: { ...zug, gewaehlt, zeit, punkte, richtig } };
 }
 
-export function antworten(s: Spielstand, frage: Frage, index: number, jetzt: number): Spielstand {
+/** „Alle gleichzeitig“: Fehlende Antworten zählen als Timeout, Punkte gutschreiben, Feedback zeigen. */
+function alleAbschliessen(s: Spielstand): Spielstand {
+  const alle = s.zug!.alle!.map((a): Antwort => a ?? { gewaehlt: null, zeit: ZEITLIMIT_S, punkte: 0, richtig: false });
+  const spieler = s.spieler.map((p, i) => ({ ...p, punkte: p.punkte + alle[i].punkte }));
+  return { ...s, phase: 'feedback', spieler, zug: { ...s.zug!, alle } };
+}
+
+/**
+ * Antwort auswerten. Reihum antwortet der aktive Spieler und der Zug ist abgeschlossen.
+ * „Alle gleichzeitig“: `spieler` antwortet (nur einmal); haben alle geantwortet, folgt das Feedback.
+ */
+export function antworten(
+  s: Spielstand,
+  frage: Frage,
+  index: number,
+  jetzt: number,
+  spieler = s.aktiverSpieler,
+): Spielstand {
   if (s.phase !== 'frage' || !s.zug || s.zug.timerStart === null) return s;
   const zeit = (jetzt - s.zug.timerStart) / 1000;
+  const alle = s.zug.alle;
+  if (alle) {
+    if (spieler < 0 || spieler >= alle.length || alle[spieler] !== null) return s;
+    if (zeit > ZEITLIMIT_S) return alleAbschliessen(s);
+    const richtig = index === frage.korrekt_index;
+    const antwort: Antwort = { gewaehlt: index, zeit, punkte: richtig ? punkteFuerZeit(zeit) : 0, richtig };
+    const neu = { ...s, zug: { ...s.zug, alle: alle.map((a, i) => (i === spieler ? antwort : a)) } };
+    return neu.zug.alle.every((a) => a !== null) ? alleAbschliessen(neu) : neu;
+  }
   if (zeit > ZEITLIMIT_S) return zugAbschliessen(s, null, ZEITLIMIT_S, frage);
   return zugAbschliessen(s, index, zeit, frage);
 }
@@ -172,12 +204,20 @@ export function antworten(s: Spielstand, frage: Frage, index: number, jetzt: num
 export function pruefeTimeout(s: Spielstand, frage: Frage, jetzt: number): Spielstand {
   if (s.phase !== 'frage' || !s.zug || s.zug.timerStart === null) return s;
   if (restzeit(s, jetzt) > 0) return s;
+  if (s.zug.alle) return alleAbschliessen(s);
   return zugAbschliessen(s, null, ZEITLIMIT_S, frage);
 }
 
 /** Nach dem Feedback: nächster Spieler, ggf. Zwischenstand oder Rangliste. */
 export function weiter(s: Spielstand): Spielstand {
   if (s.phase !== 'feedback') return s;
+  if (s.ablauf === 'gleichzeitig') {
+    // Eine Runde = eine Frage für alle; die Kategorie wählt reihum der Nächste. Kein Zwischenstand –
+    // das Feedback zeigt bereits alle Ergebnisse.
+    if (s.runde >= s.runden) return { ...s, zug: null, phase: 'rangliste' };
+    const aktiverSpieler = (s.aktiverSpieler + 1) % s.spieler.length;
+    return { ...s, runde: s.runde + 1, aktiverSpieler, zug: null, phase: 'kategorie' };
+  }
   const naechster = s.aktiverSpieler + 1;
   if (naechster < s.spieler.length) {
     return { ...s, aktiverSpieler: naechster, zug: null, phase: startPhase(s) };

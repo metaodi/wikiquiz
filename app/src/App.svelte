@@ -9,6 +9,7 @@
   import { anzahlProKategorie } from './lib/picker';
   import { ladePool } from './lib/pool';
   import {
+    ALLE,
     BEITRITTS_FEHLER,
     beitreten,
     darf,
@@ -63,8 +64,9 @@
   const gesamt = $derived(anzahlProKategorie(fragen, []));
   const offen = $derived(anzahlProKategorie(fragen, spiel?.gestellt ?? []));
   const offenGewaehlt = $derived(!!spiel && spiel.kategorien.some((k) => offen[k] > 0));
+  const gleichzeitig = $derived(spiel?.ablauf === 'gleichzeitig');
   const letzterZug = $derived(
-    !!spiel && spiel.aktiverSpieler === spiel.spieler.length - 1 && spiel.runde >= spiel.runden,
+    !!spiel && (gleichzeitig || spiel.aktiverSpieler === spiel.spieler.length - 1) && spiel.runde >= spiel.runden,
   );
 
   // Mehrere Geräte: Wer bin ich, und bediene ich die aktuelle Phase?
@@ -73,9 +75,14 @@
   const amZug = $derived.by(() => {
     if (!raum || !spiel) return true;
     const z = zustaendig(spiel);
+    if (z === ALLE) return ich >= 0;
     return z === HOST ? !istGast : z === ich;
   });
   const hostName = $derived(raum?.teilnehmer[0]?.name ?? '');
+  /** „Alle gleichzeitig“: der eigene Spieler (für Kopfzeile, Antwort und Ergebnis) */
+  const ichSpieler = $derived(gleichzeitig && spiel && ich >= 0 ? spiel.spieler[ich] : undefined);
+  const eigeneAntwort = $derived(ich >= 0 ? (spiel?.zug?.alle?.[ich] ?? null) : null);
+  const beantwortet = $derived(spiel?.zug?.alle?.filter((a) => a !== null).length ?? 0);
 
   // Spielzüge laufen als Aktionen über einen Kanal. Ohne Raum ist das Gerät zugleich Host und empfängt
   // seine eigenen Aktionen (Pass-and-Play); im Raum wendet nur der Host Aktionen an. Siehe docs/ARCHITEKTUR.md.
@@ -160,7 +167,9 @@
   function anwenden(von: string, aktion: Aktion) {
     if (!spiel) return;
     if (raum && !darf(spiel, raum.teilnehmer, geraet, von, aktion)) return;
-    const r = aktionAnwenden(spiel, aktion, { pool: fragen, history, jetzt: Date.now() });
+    // Wer antwortet? Im Raum bestimmt der Host das aus dem Gerät, nie aus der Nachricht
+    const spieler = raum ? raum.teilnehmer.findIndex((t) => t.geraet === von) : spiel.aktiverSpieler;
+    const r = aktionAnwenden(spiel, aktion, { pool: fragen, history, jetzt: Date.now(), spieler });
     if (r.fehler) {
       // Sind alle Fragen aufgebraucht, zeigt der Kategorie-Screen das Spielende bereits an
       meldung =
@@ -386,17 +395,20 @@
 {:else}
   {@const aktiv = spiel.spieler[spiel.aktiverSpieler]}
   <div class="screen">
-    <Kopf {spiel} onBeenden={abbrechen} />
+    <Kopf {spiel} onBeenden={abbrechen} spieler={ichSpieler} />
     {#if spiel.phase === 'kategorie'}
       {@const w = game.waehler(spiel)}
       {#if !amZug}
         <Warten
           spieler={spiel.spieler[w]}
           text={spiel.modus === 'zufall'
-            ? `Kategorie für ${aktiv.name} wird ausgelost …`
-            : w !== spiel.aktiverSpieler
-              ? `${spiel.spieler[w].name} wählt eine Kategorie für ${aktiv.name}`
-              : `${aktiv.name} wählt eine Kategorie`}
+            ? `Kategorie für ${gleichzeitig ? 'alle' : aktiv.name} wird ausgelost …`
+            : gleichzeitig
+              ? `${aktiv.name} wählt eine Kategorie für alle`
+              : w !== spiel.aktiverSpieler
+                ? `${spiel.spieler[w].name} wählt eine Kategorie für ${aktiv.name}`
+                : `${aktiv.name} wählt eine Kategorie`}
+          hinweis={gleichzeitig ? `Runde ${spiel.runde} von ${spiel.runden}` : undefined}
         />
       {:else if spiel.modus !== 'zufall' || !offenGewaehlt}
         <!-- Bei „Immer Zufall“ wird automatisch gelost; der Screen erscheint nur, wenn nichts mehr übrig ist -->
@@ -407,6 +419,7 @@
           kategorien={spiel.kategorien}
           waehler={w !== spiel.aktiverSpieler ? spiel.spieler[w] : null}
           fuer={aktiv}
+          fuerAlle={gleichzeitig}
           onWahl={waehlen}
           onBeenden={() => ausfuehren({ typ: 'beenden' })}
         />
@@ -426,11 +439,26 @@
           reihenfolge={spiel.zug.reihenfolge}
           timerStart={spiel.zug.timerStart}
           zuschauen={!amZug}
+          eigeneWahl={gleichzeitig ? (eigeneAntwort?.gewaehlt ?? null) : undefined}
+          warteText={gleichzeitig ? `Warte auf die anderen … (${beantwortet}/${spiel.spieler.length})` : undefined}
           onTimerStart={() => ausfuehren({ typ: 'timerStarten' })}
           onAntwort={(i) => ausfuehren({ typ: 'antworten', index: i })}
           onTimeout={zeitPruefen}
         />
       {/key}
+    {:else if spiel.phase === 'feedback' && spiel.zug?.alle && aktuelleFrage}
+      {@const alle = spiel.zug.alle}
+      {@const meine = ich >= 0 ? alle[ich] : null}
+      <!-- „Alle gleichzeitig“: oben das eigene Ergebnis, darunter alle -->
+      <Feedback
+        frage={aktuelleFrage}
+        zug={meine ? { ...spiel.zug, ...meine } : spiel.zug}
+        spieler={ichSpieler ?? aktiv}
+        {letzterZug}
+        ergebnisse={spiel.spieler.flatMap((p, i) => (alle[i] ? [{ spieler: p, antwort: alle[i] }] : []))}
+        onWeiter={amZug ? () => ausfuehren({ typ: 'weiter' }) : undefined}
+        warteText={`Warte auf ${hostName} …`}
+      />
     {:else if spiel.phase === 'feedback' && spiel.zug && aktuelleFrage}
       <Feedback
         frage={aktuelleFrage}

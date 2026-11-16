@@ -1,5 +1,5 @@
 import { expect, test, type BrowserContext, type Page } from '@playwright/test';
-import { beantworten, fixturePool, frageOeffnen, warteAufFrage, weiter } from './helfer';
+import { beantworten, fixturePool, frageOeffnen, KAT_NAME, warteAufFrage, weiter } from './helfer';
 
 /**
  * Mehrere Geräte = mehrere Tabs im selben Browser-Kontext (BroadcastChannel).
@@ -37,7 +37,7 @@ async function beitreten(context: BrowserContext, code: string, name: string) {
 
 const spielerImRaum = (page: Page) => page.getByRole('list', { name: 'Spieler im Raum' });
 
-test('zwei Geräte: Lobby, Züge reihum, Zuschauen, Neuladen, zurück zum Raum, verlassen', async ({ context }) => {
+test('zwei Geräte reihum: Lobby, Züge, Zuschauen, Neuladen, zurück zum Raum, verlassen', async ({ context }) => {
   await vorbereiten(context);
   const { host, code } = await raumEroeffnen(context, 'Anna');
   const gast = await beitreten(context, code, 'Ben');
@@ -46,6 +46,7 @@ test('zwei Geräte: Lobby, Züge reihum, Zuschauen, Neuladen, zurück zum Raum, 
   await expect(gast.getByText('Warte, bis Anna das Spiel startet …')).toBeVisible();
   await expect(spielerImRaum(host)).toContainText('Ben');
   await expect(spielerImRaum(gast)).toContainText('Anna');
+  await host.getByRole('radio', { name: /^(✓ )?Reihum/ }).click();
   await host.getByRole('radio', { name: '5', exact: true }).click();
   await host.getByRole('button', { name: 'Spiel starten' }).click();
 
@@ -144,4 +145,80 @@ test('Mehrere Geräte: ohne ?mehrgeraete nicht sichtbar; bei 320 px kein horizon
   await host.getByRole('button', { name: 'Mit mehreren Geräten spielen' }).click();
   await pruefen();
   expect(await host.locator('body').innerText()).not.toContain('ß');
+});
+
+test('drei Geräte „Alle gleichzeitig“: gleiche Frage, Warten, Timeout, Ergebnisse, Kategorie reihum, Rangliste', async ({
+  context,
+}) => {
+  await vorbereiten(context);
+  const { host: anna, code } = await raumEroeffnen(context, 'Anna');
+  const ben = await beitreten(context, code, 'Ben');
+  const cleo = await beitreten(context, code, 'Cleo');
+  const alle = [anna, ben, cleo];
+  await expect(spielerImRaum(anna).getByRole('listitem')).toHaveCount(3);
+
+  // Standard im Raum: „Alle gleichzeitig“; „Vorheriger Spieler wählt“ ist dann gesperrt
+  await expect(anna.getByRole('radio', { name: /Alle gleichzeitig/ })).toHaveAttribute('aria-checked', 'true');
+  await expect(anna.getByRole('radio', { name: /Vorheriger Spieler wählt/ })).toBeDisabled();
+  await expect(anna.getByText('In jeder Runde beantworten alle dieselbe Frage.')).toBeVisible();
+  await anna.getByRole('radio', { name: '5', exact: true }).click();
+  await anna.getByRole('button', { name: 'Spiel starten' }).click();
+
+  // Runde 1: Anna wählt für alle, keine Übergabe
+  await expect(anna.getByRole('heading', { name: 'Wähle eine Kategorie für alle' })).toBeVisible();
+  await expect(ben.getByRole('heading', { name: 'Anna wählt eine Kategorie für alle' })).toBeVisible();
+  const frage = await frageOeffnen(anna, 'geografie');
+  for (const p of [ben, cleo]) {
+    await expect(p.getByRole('heading', { level: 1 })).toHaveText(frage);
+    await expect(p.locator('.antwort').first()).toBeEnabled();
+  }
+
+  // Ben richtig nach 3 s, Anna falsch, Cleo antwortet nicht
+  await anna.clock.runFor(3000);
+  await ben.locator('.antwort', { hasText: /Richtig/ }).click();
+  await expect(ben.getByText('Warte auf die anderen … (1/3)')).toBeVisible();
+  await expect(ben.locator('.antwort').first()).toBeDisabled();
+  await anna.locator('.antwort', { hasText: 'Falsch A' }).click();
+  await expect(anna.getByText('Warte auf die anderen … (2/3)')).toBeVisible();
+  await expect(cleo.locator('.antwort').first()).toBeEnabled();
+  await anna.clock.runFor(12_500);
+
+  // Feedback: jeder sieht sein eigenes Ergebnis und alle Ergebnisse
+  await expect(ben.getByRole('heading', { name: 'Richtig!' })).toBeVisible();
+  await expect(ben.locator('.punkte')).toContainText('+82 Punkte');
+  await expect(anna.getByRole('heading', { name: 'Leider falsch' })).toBeVisible();
+  await expect(cleo.getByRole('heading', { name: 'Zeit abgelaufen' })).toBeVisible();
+  for (const p of alle) {
+    const ergebnisse = p.getByRole('list', { name: 'Ergebnisse' });
+    await expect(ergebnisse.getByRole('listitem').filter({ hasText: 'Ben' })).toContainText('+82');
+    await expect(ergebnisse.getByRole('listitem').filter({ hasText: 'Cleo' })).toContainText('keine Antwort');
+    await expect(ergebnisse.getByRole('listitem').filter({ hasText: 'Anna' })).toContainText('Falsch A');
+  }
+  await expect(ben.getByText('Warte auf Anna …')).toBeVisible();
+  await expect(ben.getByRole('button', { name: 'Weiter' })).toHaveCount(0);
+  await weiter(anna);
+
+  // Runde 2: Ben wählt für alle; jeder sieht oben seine eigenen Punkte
+  await expect(ben.getByRole('heading', { name: 'Wähle eine Kategorie für alle' })).toBeVisible();
+  await expect(anna.getByRole('heading', { name: 'Ben wählt eine Kategorie für alle' })).toBeVisible();
+  await expect(ben.getByText('Runde 2/5 · 82 P.')).toBeVisible();
+  await expect(cleo.getByText('Runde 2/5 · 0 P.')).toBeVisible();
+
+  // Runden 2–5: alle sofort richtig → Feedback ohne Warten auf den Timer
+  const waehlende = [ben, cleo, anna, ben];
+  for (const [i, waehlt] of waehlende.entries()) {
+    await waehlt.getByRole('button', { name: KAT_NAME[i % 2 ? 'sport' : 'geografie'] }).click();
+    await warteAufFrage(waehlt);
+    for (const p of alle) await p.locator('.antwort', { hasText: /Richtig/ }).click();
+    for (const p of alle) await expect(p.getByRole('heading', { name: 'Richtig!' })).toBeVisible();
+    await anna.getByRole('button', { name: i === 3 ? 'Zur Rangliste' : 'Weiter' }).click();
+  }
+
+  // Rangliste: Ben gewinnt (82 + 4 × 100), Gäste warten auf den Host
+  for (const p of alle) await expect(p.getByRole('heading', { name: 'Ben gewinnt!' })).toBeVisible();
+  await expect(cleo.getByText('Warte auf Anna …')).toBeVisible();
+  await expect(cleo.getByRole('button', { name: 'Raum verlassen' })).toBeVisible();
+  await anna.getByRole('button', { name: 'Nochmals spielen' }).click();
+  await expect(anna.getByRole('heading', { name: 'Wähle eine Kategorie für alle' })).toBeVisible();
+  await expect(cleo.getByText('Runde 1/5 · 0 P.')).toBeVisible();
 });

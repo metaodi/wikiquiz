@@ -5,7 +5,7 @@
   import { ALLE_KATEGORIEN, einstellungenPruefen, neueKategorienErgaenzen } from '../lib/game';
   import type { Teilnehmer } from '../lib/raum';
   import type { LetzteSpieler } from '../lib/storage';
-  import type { Einstellungen, KategorieId, KategorieModus } from '../lib/types';
+  import type { Ablauf, Einstellungen, KategorieId, KategorieModus } from '../lib/types';
 
   let {
     letzte,
@@ -28,6 +28,15 @@
     onRaumSchliessen?: () => void;
   } = $props();
 
+  const ABLAEUFE: { id: Ablauf; titel: string; text: string }[] = [
+    {
+      id: 'gleichzeitig',
+      titel: 'Alle gleichzeitig',
+      text: 'Alle beantworten dieselbe Frage – wer schneller richtig liegt, holt mehr Punkte.',
+    },
+    { id: 'reihum', titel: 'Reihum', text: 'Jeder beantwortet seine eigene Frage, die anderen schauen zu.' },
+  ];
+
   const MODI: { id: KategorieModus; titel: string; text: string }[] = [
     { id: 'selbst', titel: 'Selbst wählen', text: 'Jeder wählt die Kategorie für seine eigene Frage.' },
     { id: 'vorgaenger', titel: 'Vorheriger Spieler wählt', text: 'Wer gerade dran war, wählt die Kategorie für den Nächsten.' },
@@ -49,11 +58,18 @@
     MAX_SPIELER,
   );
   let modus = $state<KategorieModus>(startEinst.modus);
+  // Mehrere Geräte: standardmässig „Alle gleichzeitig“; auf einem Gerät immer reihum
+  // svelte-ignore state_referenced_locally
+  let ablauf = $state<Ablauf>(start?.ablauf ?? 'gleichzeitig');
+  const ablaufEffektiv = $derived<Ablauf>(raum ? ablauf : 'reihum');
+  const gleichzeitig = $derived(ablaufEffektiv === 'gleichzeitig');
   let kategorien = $state<KategorieId[]>(startEinst.kategorien);
 
   const anzahlSpieler = $derived(raum ? raum.teilnehmer.length : spieler.length);
   // „Vorheriger Spieler“ braucht mindestens 2 Spieler
-  const modusEffektiv = $derived<KategorieModus>(modus === 'vorgaenger' && anzahlSpieler < 2 ? 'selbst' : modus);
+  const modusEffektiv = $derived<KategorieModus>(
+    modus === 'vorgaenger' && (anzahlSpieler < 2 || gleichzeitig) ? 'selbst' : modus,
+  );
   const alle = $derived(kategorien.length === ALLE_KATEGORIEN.length);
   const fragenGewaehlt = $derived(kategorien.reduce((n, k) => n + (gesamt[k] ?? 0), 0));
 
@@ -83,7 +99,7 @@
         ? raum.teilnehmer.map((t) => ({ name: t.name, farbe: t.farbe }))
         : spieler.map((p, i) => ({ name: namen[i], farbe: p.farbe })),
       runden,
-      { modus: modusEffektiv, kategorien: [...kategorien] },
+      { modus: modusEffektiv, kategorien: [...kategorien], ablauf: ablaufEffektiv },
     );
   }
 </script>
@@ -146,9 +162,32 @@
   </section>
   {/if}
 
+  {#if raum}
+    <section class="karte" aria-labelledby="ablauf-titel">
+      <h2 id="ablauf-titel">Ablauf</h2>
+      <div class="modi" role="radiogroup" aria-labelledby="ablauf-titel">
+        {#each ABLAEUFE as a (a.id)}
+          <button
+            type="button"
+            role="radio"
+            class="modus"
+            aria-checked={ablauf === a.id}
+            class:aktiv={ablauf === a.id}
+            onclick={() => (ablauf = a.id)}
+          >
+            <span class="modus-titel">{a.titel}</span>
+            <span class="modus-text">{a.text}</span>
+          </button>
+        {/each}
+      </div>
+    </section>
+  {/if}
+
   <section class="karte" aria-labelledby="runden-titel">
     <h2 id="runden-titel">Runden</h2>
-    <p class="muted klein-text">In jeder Runde beantwortet jeder Spieler eine Frage.</p>
+    <p class="muted klein-text">
+      {gleichzeitig ? 'In jeder Runde beantworten alle dieselbe Frage.' : 'In jeder Runde beantwortet jeder Spieler eine Frage.'}
+    </p>
     <div class="segment" role="radiogroup" aria-labelledby="runden-titel">
       {#each RUNDEN_OPTIONEN as r (r)}
         <button type="button" role="radio" aria-checked={runden === r} class:aktiv={runden === r} onclick={() => (runden = r)}>
@@ -162,7 +201,7 @@
     <h2 id="modus-titel">Kategorie-Wahl</h2>
     <div class="modi" role="radiogroup" aria-labelledby="modus-titel">
       {#each MODI as m (m.id)}
-        {@const gesperrt = m.id === 'vorgaenger' && anzahlSpieler < 2}
+        {@const gesperrt = m.id === 'vorgaenger' && (anzahlSpieler < 2 || gleichzeitig)}
         <button
           type="button"
           role="radio"
@@ -173,7 +212,15 @@
           onclick={() => (modus = m.id)}
         >
           <span class="modus-titel">{m.titel}</span>
-          <span class="modus-text">{gesperrt ? 'Ab 2 Spielern möglich.' : m.text}</span>
+          <span class="modus-text">
+            {#if gesperrt}
+              {gleichzeitig ? 'Nur beim Ablauf „Reihum“ möglich.' : 'Ab 2 Spielern möglich.'}
+            {:else if gleichzeitig && m.id === 'selbst'}
+              Reihum wählt jeder die Kategorie für alle.
+            {:else}
+              {m.text}
+            {/if}
+          </span>
         </button>
       {/each}
     </div>

@@ -17,18 +17,23 @@ export interface Teilnehmer {
 
 /** Kein Spieler, sondern der Host bedient die aktuelle Phase */
 export const HOST = -1;
+/** Alle Spieler zugleich („Alle gleichzeitig“: jeder beantwortet die Frage auf seinem Gerät) */
+export const ALLE = -2;
 
-/** Index des Spielers, dessen Gerät die aktuelle Phase bedient – oder `HOST`. */
+/** Index des Spielers, dessen Gerät die aktuelle Phase bedient – oder `HOST` bzw. `ALLE`. */
 export function zustaendig(s: Spielstand): number {
+  const gleichzeitig = s.ablauf === 'gleichzeitig';
   switch (s.phase) {
+    case 'frage':
+      return gleichzeitig ? ALLE : s.aktiverSpieler;
     case 'uebergabe':
     case 'zufall':
-    case 'frage':
       return s.aktiverSpieler;
     case 'kategorie':
       return waehler(s);
     case 'feedback':
-      return s.zug?.spieler ?? s.aktiverSpieler;
+      // Gleichzeitig: alle sehen ihr Ergebnis, weiter geht es beim Host
+      return gleichzeitig ? HOST : (s.zug?.spieler ?? s.aktiverSpieler);
     default:
       return HOST;
   }
@@ -41,6 +46,7 @@ export function darf(s: Spielstand, teilnehmer: Teilnehmer[], hostGeraet: string
   // Der Host darf das Spiel jederzeit beenden (z. B. wenn ein Gerät nicht mehr reagiert)
   if (aktion.typ === 'beenden' && von === hostGeraet) return true;
   const z = zustaendig(s);
+  if (z === ALLE) return teilnehmer.some((t) => t.geraet === von);
   return z === HOST ? von === hostGeraet : teilnehmer[z]?.geraet === von;
 }
 
