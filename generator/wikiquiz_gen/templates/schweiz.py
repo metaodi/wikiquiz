@@ -13,6 +13,7 @@ from __future__ import annotations
 import logging
 from dataclasses import dataclass, field
 
+from ..config import Schwellen
 from ..models import Frage, swiss
 from ..popularity import Kandidat
 from ..sparql import abfrage, artikel_url, qid, titel_aus_url
@@ -25,14 +26,22 @@ GEMEINDE = "Q70208"
 BERG = "Q8502"
 SEE = "Q23397"
 
-# Wikidata führt teils Varietäten; für die Frage zählt die Sprache
-SPRACHEN = {
-    "Q188": "Deutsch", "Q387066": "Deutsch",           # Deutsch, Schweizer Hochdeutsch
-    "Q150": "Französisch", "Q1475958": "Französisch",  # Französisch, Schweizer Französisch
-    "Q652": "Italienisch",
-    "Q13199": "Rätoromanisch", "Q11085": "Rätoromanisch",
-}
+# Wikidata führt teils Varietäten (Schweizer Hochdeutsch, Schweizer Französisch, Bündnerromanisch);
+# für die Frage zählt die Landessprache. Zuordnung über die deutsche Bezeichnung.
+def landessprache(bezeichnung: str) -> str | None:
+    b = bezeichnung.lower()
+    for teil, sprache in (("romanisch", "Rätoromanisch"), ("deutsch", "Deutsch"),
+                          ("französisch", "Französisch"), ("italienisch", "Italienisch")):
+        if teil in b:
+            return sprache
+    return None
+
+
 ALLE_SPRACHEN = ["Deutsch", "Französisch", "Italienisch", "Rätoromanisch"]
+
+# Berge und Seen haben weniger Sprachversionen und Aufrufe als Gemeinden, auch bekannte wie
+# Pilatus oder Walensee. Mit den Schwellen der Kategorie blieben im Testlauf nur 4 Berge und 3 Seen.
+SCHWELLEN_NATUR = Schwellen(min_sitelinks=10, min_pageviews=40.0, min_zeichen=1500)
 
 MAX_PRO_TEMPLATE = {"hauptort": 20, "gemeinde": 30, "berg": 15, "see": 15, "sprache": 6}
 # Distraktoren für den Hauptort: die grössten anderen Gemeinden des Kantons
@@ -80,13 +89,13 @@ def lade_kantone(ktx: Kontext) -> dict[str, Kanton]:
     rows = abfrage(ktx.http, f"""
 SELECT ?item ?label ?article ?sl
   (GROUP_CONCAT(DISTINCT STRAFTER(STR(?cap), "entity/")) AS ?caps)
-  (GROUP_CONCAT(DISTINCT STRAFTER(STR(?sp), "entity/")) AS ?sps)
+  (GROUP_CONCAT(DISTINCT ?spLabel; separator="|") AS ?sps)
   (GROUP_CONCAT(DISTINCT STRAFTER(STR(?nb), "entity/")) AS ?nbs)
 WHERE {{
   ?item wdt:P31 wd:{KANTON}.
   {_artikel_teil()}
   OPTIONAL {{ ?item wdt:P36 ?cap }}
-  OPTIONAL {{ ?item wdt:P37 ?sp }}
+  OPTIONAL {{ ?item wdt:P37 ?sp. ?sp rdfs:label ?spLabel. FILTER(LANG(?spLabel) = "de") }}
   OPTIONAL {{ ?item wdt:P47 ?nb. ?nb wdt:P31 wd:{KANTON} }}
 }} GROUP BY ?item ?label ?article ?sl""")
     kantone = {}
@@ -97,7 +106,7 @@ WHERE {{
         kantone[k.qid] = Kanton(
             k=k,
             hauptorte=set(r.get("caps", "").split()),
-            sprachen={SPRACHEN[s] for s in r.get("sps", "").split() if s in SPRACHEN},
+            sprachen={sp for b in r.get("sps", "").split("|") if (sp := landessprache(b))},
             nachbarn=set(r.get("nbs", "").split()),
         )
     # Kantone sind alle Allgemeinwissen: kein Bekanntheitsfilter, Schwierigkeit nach Sitelinks
@@ -162,11 +171,14 @@ def hauptort(ktx: Kontext, kantone: dict[str, Kanton], gemeinden: list[dict]) ->
 
 
 def im_kanton(ktx: Kontext, kantone: dict[str, Kanton], rows: list[dict], template: str,
-              vorlage: str) -> list[Frage]:
-    """„In welchem Kanton liegt …?“ – nur Orte in genau einem Kanton und mit bekanntem Artikel."""
+              vorlage: str, schwellen: Schwellen | None = None) -> list[Frage]:
+    """„In welchem Kanton liegt …?“ – nur Orte in genau einem Kanton und mit bekanntem Artikel.
+    Hauptorte fallen weg: „In welchem Kanton liegt Aarau?“ und „Wie heisst der Hauptort des
+    Kantons Aargau?“ verrieten sich gegenseitig."""
+    hauptorte = {h for kt in kantone.values() for h in kt.hauptorte}
     eindeutig = {qid(r["item"]): r for r in rows
-                 if len(r["kantone"].split()) == 1 and r["kantone"] in kantone}
-    bekannt = ktx.filtern([_kandidat(r) for r in eindeutig.values()], template)
+                 if len(r["kantone"].split()) == 1 and r["kantone"] in kantone and qid(r["item"]) not in hauptorte}
+    bekannt = ktx.filtern([_kandidat(r) for r in eindeutig.values()], template, schwellen=schwellen)
     fragen = []
     for k in bekannt:
         kanton = kantone[eindeutig[k.qid]["kantone"]]
@@ -202,8 +214,10 @@ def generiere(ktx: Kontext) -> dict[str, list[Frage]]:
     gruppen = {
         "hauptort": hauptort(ktx, kantone, gemeinden),
         "gemeinde": im_kanton(ktx, kantone, gemeinden, "gemeinde", "In welchem Kanton liegt die Gemeinde {name}?"),
-        "berg": im_kanton(ktx, kantone, _orte(ktx, BERG, kantone), "berg", "In welchem Kanton liegt der Berg {name}?"),
-        "see": im_kanton(ktx, kantone, _orte(ktx, SEE, kantone), "see", "In welchem Kanton liegt der {name}?"),
+        "berg": im_kanton(ktx, kantone, _orte(ktx, BERG, kantone), "berg", "In welchem Kanton liegt der Berg {name}?",
+                          SCHWELLEN_NATUR),
+        "see": im_kanton(ktx, kantone, _orte(ktx, SEE, kantone), "see", "In welchem Kanton liegt der {name}?",
+                        SCHWELLEN_NATUR),
         "sprache": sprache(ktx, kantone),
     }
     for name, fragen in gruppen.items():

@@ -306,3 +306,13 @@ def test_schweiz_sprache():
     drei = fragen["Welcher Kanton hat drei Amtssprachen?"]
     assert drei.richtig == "Graubünden" and sorted(drei.falsch) == ["Bern", "Freiburg", "Wallis"]
     assert len(fragen) == 2  # Uri (deutschsprachig) wird nicht gefragt
+
+
+def test_landessprache():
+    from wikiquiz_gen.templates.schweiz import landessprache
+
+    assert landessprache("Schweizer Hochdeutsch") == "Deutsch"
+    assert landessprache("Schweizer Französisch") == "Französisch"
+    assert landessprache("Bündnerromanisch") == "Rätoromanisch"
+    assert landessprache("Italienisch") == "Italienisch"
+    assert landessprache("Latein") is None
