@@ -1,26 +1,8 @@
 {
  "version": 1,
  "kategorie": "natur",
- "generiert_am": "2026-11-16T11:08:32Z",
+ "generiert_am": "2026-11-16T11:49:11Z",
  "fragen": [
-  {
-   "id": "wp-04829eb8dd",
-   "kategorie": "natur",
-   "frage": "Aus welchem Land stammt der Ginkgo-Baum ursprünglich?",
-   "antworten": [
-    "Korea",
-    "China",
-    "Indien",
-    "Japan"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Ginkgo",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Ginkgo",
-   "quelle_id": "Q43284"
-  },
   {
    "id": "wp-0608461a4f",
    "kategorie": "natur",
@@ -56,24 +38,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Giersch",
    "quelle_id": "Q217778"
-  },
-  {
-   "id": "wp-079c3e096c",
-   "kategorie": "natur",
-   "frage": "Welches ist das grösste heute lebende Krokodil?",
-   "antworten": [
-    "Gangesgavial",
-    "Mississippi-Alligator",
-    "Nilkrokodil",
-    "Leistenkrokodil"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Leistenkrokodil",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Leistenkrokodil",
-   "quelle_id": "Q182599"
   },
   {
    "id": "wp-0d06886f5a",
@@ -328,42 +292,6 @@
    "quelle_id": "Q163025"
   },
   {
-   "id": "wp-3537a13050",
-   "kategorie": "natur",
-   "frage": "Zu welcher Pflanzenfamilie gehört die Süsskartoffel?",
-   "antworten": [
-    "Nachtschattengewächse",
-    "Kürbisgewächse",
-    "Windengewächse",
-    "Doldenblütler"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/S%C3%BC%C3%9Fkartoffel",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Süßkartoffel",
-   "quelle_id": "Q37937"
-  },
-  {
-   "id": "wp-367332a9f6",
-   "kategorie": "natur",
-   "frage": "Zu welcher Pflanzenfamilie gehört der Johannisbrotbaum, dessen Früchte als Schoten wachsen?",
-   "antworten": [
-    "Hülsenfrüchtler",
-    "Rosengewächse",
-    "Doldenblütler",
-    "Lippenblütler"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Johannisbrotbaum",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Johannisbrotbaum",
-   "quelle_id": "Q68763"
-  },
-  {
    "id": "wp-37ab90a1a0",
    "kategorie": "natur",
    "frage": "Der Cashewbaum trägt einen Beinamen, der auf die Form seiner Kerne anspielt. Welchem Organ ähneln sie?",
@@ -436,24 +364,6 @@
    "quelle_id": "Q157417"
   },
   {
-   "id": "wp-3dda1540d2",
-   "kategorie": "natur",
-   "frage": "Zu welcher Pflanzenfamilie gehört der Laubbaum Elsbeere?",
-   "antworten": [
-    "Birkengewächse",
-    "Rosengewächse",
-    "Buchengewächse",
-    "Ölbaumgewächse"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Elsbeere",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Elsbeere",
-   "quelle_id": "Q147459"
-  },
-  {
    "id": "wp-3e15c8c366",
    "kategorie": "natur",
    "frage": "Wie nennt man die länglichen, hängenden Blütenstände der Birke?",
@@ -490,24 +400,6 @@
    "quelle_id": "Q80024"
   },
   {
-   "id": "wp-424022f9b1",
-   "kategorie": "natur",
-   "frage": "Zu welcher Pflanzenfamilie gehört die Hainbuche, obwohl ihr Name anderes vermuten lässt?",
-   "antworten": [
-    "Buchengewächse",
-    "Rosengewächse",
-    "Birkengewächse",
-    "Weidengewächse"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Gemeine_Hainbuche",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Gemeine Hainbuche",
-   "quelle_id": "Q158776"
-  },
-  {
    "id": "wp-47566f62f7",
    "kategorie": "natur",
    "frage": "In welchem dieser Länder wächst der Pistazienbaum ursprünglich wild?",
@@ -524,24 +416,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Pistazie",
    "quelle_id": "Q36071"
-  },
-  {
-   "id": "wp-48f4892625",
-   "kategorie": "natur",
-   "frage": "Aus welchem Land stammt der Blauglockenbaum, der bei uns als Zierbaum gepflanzt wird, ursprünglich?",
-   "antworten": [
-    "China",
-    "Australien",
-    "Indien",
-    "Brasilien"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Blauglockenbaum",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Blauglockenbaum",
-   "quelle_id": "Q157393"
   },
   {
    "id": "wp-4e27eab17f",
@@ -778,24 +652,6 @@
    "quelle_id": "Q223044"
   },
   {
-   "id": "wp-7d9c8a723f",
-   "kategorie": "natur",
-   "frage": "Aus welcher Weltregion stammt die Douglasie, die heute auch in europäischen Wäldern angebaut wird?",
-   "antworten": [
-    "Nordamerika",
-    "Ostasien",
-    "Sibirien",
-    "Südamerika"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Gew%C3%B6hnliche_Douglasie",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Gewöhnliche Douglasie",
-   "quelle_id": "Q156687"
-  },
-  {
    "id": "wp-7e94e9d111",
    "kategorie": "natur",
    "frage": "Von welchem Kontinent stammt die Robinie, die heute in Europa auch wild wächst?",
@@ -848,24 +704,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Karpfen",
    "quelle_id": "Q81110"
-  },
-  {
-   "id": "wp-80f751f6c5",
-   "kategorie": "natur",
-   "frage": "Unter welchem Namen kennt man den Baum, dessen rote Früchte Vogelbeeren heissen, meist?",
-   "antworten": [
-    "Traubenkirsche",
-    "Weissdorn",
-    "Kornelkirsche",
-    "Eberesche"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Vogelbeere",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Vogelbeere",
-   "quelle_id": "Q146198"
   },
   {
    "id": "wp-82273dafca",
@@ -1030,24 +868,6 @@
    "quelle_id": "Q134185"
   },
   {
-   "id": "wp-a3ba3d4ceb",
-   "kategorie": "natur",
-   "frage": "Welcher einheimische Nadelbaum ist bis auf den roten Samenmantel in fast allen Teilen stark giftig?",
-   "antworten": [
-    "Weisstanne",
-    "Waldföhre",
-    "Fichte",
-    "Eibe"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Europ%C3%A4ische_Eibe",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Europäische Eibe",
-   "quelle_id": "Q179729"
-  },
-  {
    "id": "wp-a417d75f58",
    "kategorie": "natur",
    "frage": "Wie viele Beine hat ein ausgewachsenes Insekt?",
@@ -1082,24 +902,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Vögel",
    "quelle_id": "Q5113"
-  },
-  {
-   "id": "wp-aac2f22c26",
-   "kategorie": "natur",
-   "frage": "Zu welcher Pflanzenfamilie gehört der Giersch?",
-   "antworten": [
-    "Lippenblütler",
-    "Doldenblütler",
-    "Korbblütler",
-    "Kreuzblütler"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Giersch",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Giersch",
-   "quelle_id": "Q217778"
   },
   {
    "id": "wp-aede95f53a",
@@ -1192,42 +994,6 @@
    "quelle_id": "Q22699"
   },
   {
-   "id": "wp-b796dd423f",
-   "kategorie": "natur",
-   "frage": "Aus welcher Weltregion stammt die Orange ursprünglich?",
-   "antworten": [
-    "Aus China bzw. Südostasien",
-    "Aus dem Mittelmeerraum",
-    "Aus Südamerika",
-    "Aus Nordafrika"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Orange_(Frucht)",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Orange (Frucht)",
-   "quelle_id": "Q13191"
-  },
-  {
-   "id": "wp-b8224262a6",
-   "kategorie": "natur",
-   "frage": "Zu welcher Pflanzenfamilie gehört der Gundermann, auch Gundelrebe genannt?",
-   "antworten": [
-    "Lippenblütler",
-    "Rosengewächse",
-    "Korbblütler",
-    "Doldenblütler"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Gundermann",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Gundermann",
-   "quelle_id": "Q162544"
-  },
-  {
    "id": "wp-bc10f3dfc4",
    "kategorie": "natur",
    "frage": "Welchen Vögeln ähnelt der Mauersegler stark, obwohl er mit ihnen nicht näher verwandt ist?",
@@ -1318,24 +1084,6 @@
    "quelle_id": "Q147278"
   },
   {
-   "id": "wp-c531387486",
-   "kategorie": "natur",
-   "frage": "Wofür wird Mönchspfeffer in der Naturheilkunde heute vor allem eingesetzt?",
-   "antworten": [
-    "Bei Schlafstörungen",
-    "Bei Sodbrennen",
-    "Bei Zyklusstörungen",
-    "Bei Gelenkschmerzen"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/M%C3%B6nchspfeffer",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Mönchspfeffer",
-   "quelle_id": "Q259318"
-  },
-  {
    "id": "wp-c66875e3f0",
    "kategorie": "natur",
    "frage": "Auf welchem Kontinent kommen Fledermäuse von Natur aus nicht vor?",
@@ -1354,24 +1102,6 @@
    "quelle_id": "Q971343"
   },
   {
-   "id": "wp-c88de003c7",
-   "kategorie": "natur",
-   "frage": "Zu welcher Pflanzenfamilie gehört der Jackfruchtbaum, der die grosse Jackfrucht trägt?",
-   "antworten": [
-    "Rosengewächse",
-    "Bananengewächse",
-    "Maulbeergewächse",
-    "Rautengewächse"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Jackfruchtbaum",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Jackfruchtbaum",
-   "quelle_id": "Q45757"
-  },
-  {
    "id": "wp-c9590e2a92",
    "kategorie": "natur",
    "frage": "Unter welchem anderen Namen ist der Wels im deutschsprachigen Raum regional auch bekannt?",
@@ -1388,24 +1118,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Europäischer Wels",
    "quelle_id": "Q159323"
-  },
-  {
-   "id": "wp-ced4036d1e",
-   "kategorie": "natur",
-   "frage": "Aus welcher Region stammt die Aronia (Apfelbeere) ursprünglich?",
-   "antworten": [
-    "Östliches Nordamerika",
-    "Nordafrika",
-    "Südosteuropa",
-    "Ostasien"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Apfelbeeren",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Apfelbeeren",
-   "quelle_id": "Q158983"
   },
   {
    "id": "wp-d2f7751c7d",
@@ -1462,24 +1174,6 @@
    "quelle_id": "Q144"
   },
   {
-   "id": "wp-da05fd84ae",
-   "kategorie": "natur",
-   "frage": "Welche Klasse von Tieren umfasst mit Abstand die meisten bekannten Arten?",
-   "antworten": [
-    "Spinnentiere",
-    "Insekten",
-    "Krebstiere",
-    "Vögel"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Insekten",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Insekten",
-   "quelle_id": "Q1390"
-  },
-  {
    "id": "wp-e35a05b4f8",
    "kategorie": "natur",
    "frage": "Welches Gemüse ist eine Zuchtform der Gemeinen Wegwarte?",
@@ -1496,24 +1190,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Gemeine Wegwarte",
    "quelle_id": "Q2544599"
-  },
-  {
-   "id": "wp-e58daa721e",
-   "kategorie": "natur",
-   "frage": "Zu welcher Gattung von Laubbäumen gehört die Espe?",
-   "antworten": [
-    "Erlen",
-    "Pappeln",
-    "Birken",
-    "Weiden"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Espe",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Espe",
-   "quelle_id": "Q146110"
   },
   {
    "id": "wp-e82f5294b6",
@@ -1640,24 +1316,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Pampelmuse",
    "quelle_id": "Q80024"
-  },
-  {
-   "id": "wp-f8d9fe64b0",
-   "kategorie": "natur",
-   "frage": "Welches Tier umwindet den Stab des Asklepios, das Symbol der Medizin und Apotheken?",
-   "antworten": [
-    "Ein Aal",
-    "Ein Drache",
-    "Eine Schlange",
-    "Eine Eidechse"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Schlangen",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Schlangen",
-   "quelle_id": "Q2102"
   },
   {
    "id": "wp-fdd3c42da0",
