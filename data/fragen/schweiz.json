@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "schweiz",
- "generiert_am": "2026-11-16T11:49:02Z",
+ "generiert_am": "2026-11-16T13:14:16Z",
  "fragen": [
   {
    "id": "wd-04c83cba32",
@@ -1102,6 +1102,60 @@
    "quelle_id": "Q123857"
   },
   {
+   "id": "wp-09401c1aa0",
+   "kategorie": "schweiz",
+   "frage": "Welcher berühmte Alpenpass liegt im Süden des Kantons Uri?",
+   "antworten": [
+    "Grosser St. Bernhard",
+    "Simplonpass",
+    "Gotthardpass",
+    "San-Bernardino-Pass"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Uri",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kanton Uri",
+   "quelle_id": "Q12404"
+  },
+  {
+   "id": "wp-0c010e1f74",
+   "kategorie": "schweiz",
+   "frage": "In welchem Jahr wurde der Gotthard-Basistunnel feierlich eröffnet?",
+   "antworten": [
+    "2020",
+    "2012",
+    "2007",
+    "2016"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gotthard-Basistunnel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gotthard-Basistunnel",
+   "quelle_id": "Q193002"
+  },
+  {
+   "id": "wp-0e69922cfa",
+   "kategorie": "schweiz",
+   "frage": "Aus welcher Schweizer Region stammt der Käse Tête de Moine?",
+   "antworten": [
+    "Aus dem Emmental",
+    "Aus dem Greyerzerland",
+    "Aus dem Appenzellerland",
+    "Aus dem Jura"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/T%C3%AAte_de_Moine",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tête de Moine",
+   "quelle_id": "Q687579"
+  },
+  {
    "id": "wp-0e93696611",
    "kategorie": "schweiz",
    "frage": "Welcher Fluss teilt die Stadt Luzern in Altstadt und Neustadt?",
@@ -1174,6 +1228,42 @@
    "quelle_id": "Q11911"
   },
   {
+   "id": "wp-15c09054b4",
+   "kategorie": "schweiz",
+   "frage": "Wofür ist die Bündner Gemeinde Samnaun besonders bekannt?",
+   "antworten": [
+    "Dort gilt der Euro als Zahlungsmittel",
+    "Sie hat eine eigene Währung",
+    "Sie ist ein zollfreies Gebiet",
+    "Sie ist von allen Steuern befreit"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Samnaun",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Samnaun",
+   "quelle_id": "Q69358"
+  },
+  {
+   "id": "wp-1ac36e5c0f",
+   "kategorie": "schweiz",
+   "frage": "Womit ist ein klassisches Cordon bleu gefüllt?",
+   "antworten": [
+    "Mit Spinat und Feta",
+    "Mit Käse und Schinken",
+    "Mit Pilzen und Speck",
+    "Mit Ei und Zwiebeln"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schnitzel_Cordon_bleu",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schnitzel Cordon bleu",
+   "quelle_id": "Q429518"
+  },
+  {
    "id": "wp-1c1252e692",
    "kategorie": "schweiz",
    "frage": "Welches internationale Golfturnier wird im Walliser Ferienort Crans-Montana ausgetragen?",
@@ -1190,6 +1280,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Crans-Montana",
    "quelle_id": "Q688557"
+  },
+  {
+   "id": "wp-1eed37723b",
+   "kategorie": "schweiz",
+   "frage": "In welchem Jahr fand die Fussball-Weltmeisterschaft in der Schweiz statt?",
+   "antworten": [
+    "1962",
+    "1950",
+    "1934",
+    "1954"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schweizer_Fussballnationalmannschaft",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schweizer Fussballnationalmannschaft",
+   "quelle_id": "Q165141"
   },
   {
    "id": "wp-245f98df3c",
@@ -1264,6 +1372,96 @@
    "quelle_id": "Q72"
   },
   {
+   "id": "wp-32b0f1e9a2",
+   "kategorie": "schweiz",
+   "frage": "Der Pilatus liegt in Luzern und Nidwalden – in welchem dritten Kanton liegt er auch?",
+   "antworten": [
+    "Obwalden",
+    "Uri",
+    "Zug",
+    "Schwyz"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pilatus_(Bergmassiv)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Pilatus (Bergmassiv)",
+   "quelle_id": "Q15265"
+  },
+  {
+   "id": "wp-32b21672d4",
+   "kategorie": "schweiz",
+   "frage": "Welche Farben zeigt das Wappen des Kantons Freiburg?",
+   "antworten": [
+    "Grün und Weiss",
+    "Blau und Weiss",
+    "Schwarz und Weiss",
+    "Rot und Weiss"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Freiburg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kanton Freiburg",
+   "quelle_id": "Q12640"
+  },
+  {
+   "id": "wp-32dff5dd2c",
+   "kategorie": "schweiz",
+   "frage": "In welchem Jahr fand der Sonderbundskrieg, der letzte Krieg auf Schweizer Boden, statt?",
+   "antworten": [
+    "1815",
+    "1874",
+    "1798",
+    "1847"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sonderbundskrieg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sonderbundskrieg",
+   "quelle_id": "Q688297"
+  },
+  {
+   "id": "wp-33e814c977",
+   "kategorie": "schweiz",
+   "frage": "Der Pilatus gilt als Hausberg welcher Schweizer Stadt?",
+   "antworten": [
+    "Luzern",
+    "Zug",
+    "Schwyz",
+    "Bern"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pilatus_(Bergmassiv)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Pilatus (Bergmassiv)",
+   "quelle_id": "Q15265"
+  },
+  {
+   "id": "wp-33f602108a",
+   "kategorie": "schweiz",
+   "frage": "Welcher Kanton liegt zwischen den Kantonen Zürich, Schwyz, Luzern und Aargau?",
+   "antworten": [
+    "Obwalden",
+    "Zug",
+    "Uri",
+    "Nidwalden"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Zug",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kanton Zug",
+   "quelle_id": "Q11933"
+  },
+  {
    "id": "wp-354edd33a5",
    "kategorie": "schweiz",
    "frage": "Welcher Fluss umfliesst in einer grossen Schleife die Altstadt der Schweizer Bundesstadt?",
@@ -1280,6 +1478,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Bern",
    "quelle_id": "Q70"
+  },
+  {
+   "id": "wp-3bb0cee810",
+   "kategorie": "schweiz",
+   "frage": "Wie wird der Schweizer Käse Tête de Moine traditionell portioniert?",
+   "antworten": [
+    "In dicke Scheiben geschnitten",
+    "Am Stück im Ofen geschmolzen",
+    "Zu dünnen Rosetten geschabt",
+    "In kleine Würfel geschnitten"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/T%C3%AAte_de_Moine",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tête de Moine",
+   "quelle_id": "Q687579"
   },
   {
    "id": "wp-3bcb47783b",
@@ -1300,6 +1516,24 @@
    "quelle_id": "Q14418"
   },
   {
+   "id": "wp-3bdee9aff5",
+   "kategorie": "schweiz",
+   "frage": "Aus welcher Stadt kam der Crossair-Flug, der im November 2001 im Anflug auf Zürich verunglückte?",
+   "antworten": [
+    "Hamburg",
+    "Berlin",
+    "München",
+    "Frankfurt"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Crossair-Flug_3597",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Crossair-Flug 3597",
+   "quelle_id": "Q569392"
+  },
+  {
    "id": "wp-3d256d6c62",
    "kategorie": "schweiz",
    "frage": "Mit welchem Produkt legte Firmengründer Henri Nestlé 1867 den Grundstein für sein Unternehmen?",
@@ -1318,6 +1552,24 @@
    "quelle_id": "Q160746"
   },
   {
+   "id": "wp-43710d2d93",
+   "kategorie": "schweiz",
+   "frage": "Welche berühmte Marienfigur zieht Pilger ins Kloster Einsiedeln?",
+   "antworten": [
+    "Die Schwarze Madonna",
+    "Die Goldene Madonna",
+    "Die Sixtinische Madonna",
+    "Die Weisse Madonna"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Einsiedeln",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Einsiedeln",
+   "quelle_id": "Q68950"
+  },
+  {
    "id": "wp-478b6bbf03",
    "kategorie": "schweiz",
    "frage": "Der Hochrhein ist der Flussabschnitt vom Bodensee bis zu welcher Stadt?",
@@ -1334,6 +1586,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Hochrhein",
    "quelle_id": "Q650521"
+  },
+  {
+   "id": "wp-48d8aa0cc8",
+   "kategorie": "schweiz",
+   "frage": "Aus welchem Schweizer Kanton stammt das Käsegericht Raclette ursprünglich?",
+   "antworten": [
+    "Waadt",
+    "Wallis",
+    "Graubünden",
+    "Freiburg"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Raclette",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Raclette",
+   "quelle_id": "Q20748"
   },
   {
    "id": "wp-49e12fb82a",
@@ -1426,6 +1696,60 @@
    "quelle_id": "Q693078"
   },
   {
+   "id": "wp-5300728034",
+   "kategorie": "schweiz",
+   "frage": "Mit welchem Partner wurde Stan Wawrinka 2008 Olympiasieger im Doppel?",
+   "antworten": [
+    "Michael Lammer",
+    "Yves Allegro",
+    "Marco Chiudinelli",
+    "Roger Federer"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Stan_Wawrinka",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Stan Wawrinka",
+   "quelle_id": "Q193661"
+  },
+  {
+   "id": "wp-53588ac3ad",
+   "kategorie": "schweiz",
+   "frage": "Welche Zutat macht den grössten Anteil des Schweizer Getränkepulvers Ovomaltine aus?",
+   "antworten": [
+    "Zucker",
+    "Kakaopulver",
+    "Gerstenmalzextrakt",
+    "Milchpulver"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ovomaltine",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ovomaltine",
+   "quelle_id": "Q685005"
+  },
+  {
+   "id": "wp-56e4dd9dfa",
+   "kategorie": "schweiz",
+   "frage": "Was bedeutet das Walliser Dialektwort, von dem der Name «Raclette» abgeleitet ist?",
+   "antworten": [
+    "schaben",
+    "schmelzen",
+    "braten",
+    "rösten"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Raclette",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Raclette",
+   "quelle_id": "Q20748"
+  },
+  {
    "id": "wp-59343782b5",
    "kategorie": "schweiz",
    "frage": "Wofür sind die bekanntesten Skulpturen des Schweizer Künstlers Alberto Giacometti berühmt?",
@@ -1442,6 +1766,96 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Alberto Giacometti",
    "quelle_id": "Q157194"
+  },
+  {
+   "id": "wp-598a8c5930",
+   "kategorie": "schweiz",
+   "frage": "Welche Sprache spricht die Mehrheit der Bevölkerung im zweisprachigen Kanton Freiburg?",
+   "antworten": [
+    "Italienisch",
+    "Französisch",
+    "Rätoromanisch",
+    "Deutsch"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Freiburg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kanton Freiburg",
+   "quelle_id": "Q12640"
+  },
+  {
+   "id": "wp-59bb24bd9e",
+   "kategorie": "schweiz",
+   "frage": "Durch welche zwei Niederlagen verloren die Habsburger ihre Stammlande an die Eidgenossen?",
+   "antworten": [
+    "Marignano und Bicocca",
+    "Morgarten und Sempach",
+    "Murten und Grandson",
+    "Kappel und Villmergen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Vorder%C3%B6sterreich",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Vorderösterreich",
+   "quelle_id": "Q660702"
+  },
+  {
+   "id": "wp-5ad21c5e62",
+   "kategorie": "schweiz",
+   "frage": "In welcher Schweizer Stadt steht die erste Fabrik der bekannten dreieckigen Schokolade Toblerone?",
+   "antworten": [
+    "Luzern",
+    "Basel",
+    "Bern",
+    "Zürich"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Toblerone",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Toblerone",
+   "quelle_id": "Q215707"
+  },
+  {
+   "id": "wp-5af7b37af9",
+   "kategorie": "schweiz",
+   "frage": "Welcher weltberühmte Geiger begründete 1957 in Gstaad ein bis heute bekanntes Musikfestival?",
+   "antworten": [
+    "David Oistrach",
+    "Yehudi Menuhin",
+    "Isaac Stern",
+    "Jascha Heifetz"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gstaad",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gstaad",
+   "quelle_id": "Q37149"
+  },
+  {
+   "id": "wp-5c5fc47f7d",
+   "kategorie": "schweiz",
+   "frage": "Was bedeutet der französische Name des panierten Schnitzels «Cordon bleu» wörtlich?",
+   "antworten": [
+    "Blaue Blume",
+    "Blauer Himmel",
+    "Blaues Herz",
+    "Blaues Band"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schnitzel_Cordon_bleu",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schnitzel Cordon bleu",
+   "quelle_id": "Q429518"
   },
   {
    "id": "wp-5d6e1d15af",
@@ -1462,6 +1876,24 @@
    "quelle_id": "Q72"
   },
   {
+   "id": "wp-61647e8478",
+   "kategorie": "schweiz",
+   "frage": "Wie lang ist der Gotthard-Basistunnel ungefähr?",
+   "antworten": [
+    "15 km",
+    "34 km",
+    "57 km",
+    "82 km"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gotthard-Basistunnel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gotthard-Basistunnel",
+   "quelle_id": "Q193002"
+  },
+  {
    "id": "wp-623104bd4f",
    "kategorie": "schweiz",
    "frage": "An welchen dieser Seen grenzt der Kanton Schwyz?",
@@ -1478,6 +1910,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Kanton Schwyz",
    "quelle_id": "Q12433"
+  },
+  {
+   "id": "wp-641a53e3b2",
+   "kategorie": "schweiz",
+   "frage": "In welchem Fachgebiet machte sich Golo Mann, Sohn von Thomas Mann, vor allem einen Namen?",
+   "antworten": [
+    "Philosophie",
+    "Musikwissenschaft",
+    "Theologie",
+    "Geschichtswissenschaft"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Golo_Mann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Golo Mann",
+   "quelle_id": "Q77109"
   },
   {
    "id": "wp-6aa7465487",
@@ -1516,6 +1966,24 @@
    "quelle_id": "Q1426"
   },
   {
+   "id": "wp-6e6dcb9d7a",
+   "kategorie": "schweiz",
+   "frage": "Welchem Herrschergeschlecht gehörten die Gebiete, die man «Vorderösterreich» nannte?",
+   "antworten": [
+    "Den Zähringern",
+    "Den Wittelsbachern",
+    "Den Kyburgern",
+    "Den Habsburgern"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Vorder%C3%B6sterreich",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Vorderösterreich",
+   "quelle_id": "Q660702"
+  },
+  {
    "id": "wp-74a7e2c4d2",
    "kategorie": "schweiz",
    "frage": "Welche markante Bergkette erhebt sich nördlich über dem Walensee?",
@@ -1550,6 +2018,42 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Jura (Gebirge)",
    "quelle_id": "Q178611"
+  },
+  {
+   "id": "wp-76995e8d25",
+   "kategorie": "schweiz",
+   "frage": "Wie nennt man die kulturelle Grenze zwischen der Deutschschweiz und der französischsprachigen Schweiz scherzhaft?",
+   "antworten": [
+    "Röstigraben",
+    "Käsegraben",
+    "Fonduegraben",
+    "Weisswurstäquator"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Romandie",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Romandie",
+   "quelle_id": "Q214086"
+  },
+  {
+   "id": "wp-7d8cb3fcf4",
+   "kategorie": "schweiz",
+   "frage": "Von welcher Schweizer Stadt aus wird das operative Geschäft von Philip Morris International geführt?",
+   "antworten": [
+    "Lausanne",
+    "Genf",
+    "Basel",
+    "Zürich"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Philip_Morris_International",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Philip Morris International",
+   "quelle_id": "Q1852556"
   },
   {
    "id": "wp-7e990e6894",
@@ -1588,6 +2092,24 @@
    "quelle_id": "Q23058"
   },
   {
+   "id": "wp-85c7ddc90e",
+   "kategorie": "schweiz",
+   "frage": "Gegen wen gewann Stan Wawrinka die Finals der French Open 2015 und der US Open 2016?",
+   "antworten": [
+    "Andy Murray",
+    "Rafael Nadal",
+    "Novak Djokovic",
+    "Andy Roddick"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Stan_Wawrinka",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Stan Wawrinka",
+   "quelle_id": "Q193661"
+  },
+  {
    "id": "wp-880b09d461",
    "kategorie": "schweiz",
    "frage": "Welcher Bürgerkrieg ging 1847 der Gründung des Schweizer Bundesstaats voraus?",
@@ -1604,6 +2126,42 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Geschichte der Schweiz",
    "quelle_id": "Q208761"
+  },
+  {
+   "id": "wp-8874790f13",
+   "kategorie": "schweiz",
+   "frage": "An welches Nachbarland grenzt der Kanton Solothurn mit einigen seiner Exklaven?",
+   "antworten": [
+    "Frankreich",
+    "Italien",
+    "Deutschland",
+    "Österreich"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Solothurn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kanton Solothurn",
+   "quelle_id": "Q11929"
+  },
+  {
+   "id": "wp-8ace082ad3",
+   "kategorie": "schweiz",
+   "frage": "In welchem Gebirge liegt der grösste Teil des Kantons Neuenburg?",
+   "antworten": [
+    "Vogesen",
+    "Jura",
+    "Alpen",
+    "Voralpen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Neuenburg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kanton Neuenburg",
+   "quelle_id": "Q12738"
   },
   {
    "id": "wp-8b4197d607",
@@ -1714,6 +2272,42 @@
    "quelle_id": "Q688424"
   },
   {
+   "id": "wp-948283c0db",
+   "kategorie": "schweiz",
+   "frage": "Wie nennt man in der Schweiz die eher runden, kleinen Eierteigwaren, die den Spätzle ähneln?",
+   "antworten": [
+    "Knödli",
+    "Chnöpfli",
+    "Hörnli",
+    "Müscheli"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sp%C3%A4tzle",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Spätzle",
+   "quelle_id": "Q20065"
+  },
+  {
+   "id": "wp-975e149e0c",
+   "kategorie": "schweiz",
+   "frage": "Welchen Spitznamen trägt das Verkehrsflugzeug Junkers Ju 52 im deutschsprachigen Raum?",
+   "antworten": [
+    "Fliegende Festung",
+    "Tante Ju",
+    "Rosinenbomber",
+    "Dicke Berta"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Junkers_Ju_52/3m",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Junkers Ju 52/3m",
+   "quelle_id": "Q15410360"
+  },
+  {
    "id": "wp-9e6d5ee01e",
    "kategorie": "schweiz",
    "frage": "Wie heisst der Genfersee auf Französisch?",
@@ -1732,6 +2326,24 @@
    "quelle_id": "Q6403"
   },
   {
+   "id": "wp-9f5312fe2d",
+   "kategorie": "schweiz",
+   "frage": "Ein Kuraufenthalt seiner Frau in welchem Schweizer Ort inspirierte Thomas Mann zum Roman «Der Zauberberg»?",
+   "antworten": [
+    "St. Moritz",
+    "Montreux",
+    "Arosa",
+    "Davos"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Katia_Mann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Katia Mann",
+   "quelle_id": "Q214999"
+  },
+  {
    "id": "wp-a1bd00b196",
    "kategorie": "schweiz",
    "frage": "Zu welcher Melodie wurde die frühere Schweizer Hymne «Rufst du, mein Vaterland» gesungen?",
@@ -1748,6 +2360,42 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Schweizerpsalm",
    "quelle_id": "Q182536"
+  },
+  {
+   "id": "wp-a2567197e2",
+   "kategorie": "schweiz",
+   "frage": "Welche heutige Schweizer Stadt gehörte im Mittelalter zum Herzogtum Schwaben?",
+   "antworten": [
+    "Zürich",
+    "Lausanne",
+    "Sitten",
+    "Genf"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Herzogtum_Schwaben",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Herzogtum Schwaben",
+   "quelle_id": "Q693980"
+  },
+  {
+   "id": "wp-a3370b43dc",
+   "kategorie": "schweiz",
+   "frage": "Welches Wort benutzt man in der Westschweiz für die Zahl 90, anders als in Frankreich?",
+   "antworten": [
+    "septante",
+    "neuvante",
+    "nonante",
+    "huitante"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Romandie",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Romandie",
+   "quelle_id": "Q214086"
   },
   {
    "id": "wp-a9f2a67823",
@@ -1786,6 +2434,24 @@
    "quelle_id": "Q14444"
   },
   {
+   "id": "wp-aee32f8f2a",
+   "kategorie": "schweiz",
+   "frage": "Was war ein Vogt im Mittelalter, etwa der Landvogt aus der Tell-Sage?",
+   "antworten": [
+    "Ein Beamter eines Landesherrn",
+    "Ein Vorsteher einer Zunft",
+    "Ein reisender Fernhändler",
+    "Ein Abt eines Klosters"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Vogt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Vogt",
+   "quelle_id": "Q4122737"
+  },
+  {
    "id": "wp-b38e8bfbd3",
    "kategorie": "schweiz",
    "frage": "Welcher Kanton gab dem ganzen Land im deutschen Sprachraum seinen Namen?",
@@ -1822,6 +2488,24 @@
    "quelle_id": "Q1675"
   },
   {
+   "id": "wp-b9cf285e9f",
+   "kategorie": "schweiz",
+   "frage": "Welcher Kanton ist flächenmässig der kleinste, der zwei Sitze im Ständerat hat?",
+   "antworten": [
+    "Glarus",
+    "Zug",
+    "Genf",
+    "Schaffhausen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Zug",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kanton Zug",
+   "quelle_id": "Q11933"
+  },
+  {
    "id": "wp-bbd0d126f9",
    "kategorie": "schweiz",
    "frage": "Wie nennt man die traditionelle Verteilung der Schweizer Bundesratssitze auf die grossen Parteien?",
@@ -1838,6 +2522,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Bundesrat (Schweiz)",
    "quelle_id": "Q30917"
+  },
+  {
+   "id": "wp-bbdbaa14b9",
+   "kategorie": "schweiz",
+   "frage": "In welchem Land ausser der Schweiz wird Rivella hergestellt und hat dort seinen grössten Auslandsmarkt?",
+   "antworten": [
+    "Niederlande",
+    "Italien",
+    "Österreich",
+    "Deutschland"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rivella",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rivella",
+   "quelle_id": "Q689134"
   },
   {
    "id": "wp-bee81f760c",
@@ -1930,6 +2632,24 @@
    "quelle_id": "Q650521"
   },
   {
+   "id": "wp-c647750863",
+   "kategorie": "schweiz",
+   "frage": "Welcher grosse Versicherungskonzern hat seinen Schweizer Sitz in Winterthur?",
+   "antworten": [
+    "Helvetia",
+    "Swiss Life",
+    "Baloise",
+    "AXA"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Winterthur",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Winterthur",
+   "quelle_id": "Q9125"
+  },
+  {
    "id": "wp-c6ac171fb0",
    "kategorie": "schweiz",
    "frage": "Welcher Fluss aus den Glarner Alpen ist der Hauptzufluss des Zürichsees?",
@@ -2002,6 +2722,42 @@
    "quelle_id": "Q584"
   },
   {
+   "id": "wp-d0bccdf1ee",
+   "kategorie": "schweiz",
+   "frage": "Welcher Gletscher, der grösste der Alpen, hat beim Jungfraujoch einen seiner Ursprünge?",
+   "antworten": [
+    "Rhonegletscher",
+    "Morteratschgletscher",
+    "Gornergletscher",
+    "Aletschgletscher"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jungfraujoch",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jungfraujoch",
+   "quelle_id": "Q665676"
+  },
+  {
+   "id": "wp-d150e49792",
+   "kategorie": "schweiz",
+   "frage": "Womit werden klassische Meringues in der Schweiz traditionell serviert?",
+   "antworten": [
+    "Mit Schlagrahm",
+    "Mit Vanillesauce",
+    "Mit Schokoladensauce",
+    "Mit Apfelmus"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Baiser",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Baiser",
+   "quelle_id": "Q276276"
+  },
+  {
    "id": "wp-d42c2dca90",
    "kategorie": "schweiz",
    "frage": "Was war Alberich Zwyssig, der Komponist des Schweizerpsalms, von Beruf?",
@@ -2018,6 +2774,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Schweizerpsalm",
    "quelle_id": "Q182536"
+  },
+  {
+   "id": "wp-d42f9186a1",
+   "kategorie": "schweiz",
+   "frage": "Welche Gemeinde ist der Regierungs- und Parlamentssitz des Kantons Appenzell Ausserrhoden?",
+   "antworten": [
+    "Urnäsch",
+    "Teufen",
+    "Herisau",
+    "Appenzell"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Appenzell_Ausserrhoden",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kanton Appenzell Ausserrhoden",
+   "quelle_id": "Q12079"
   },
   {
    "id": "wp-d69864dc87",
@@ -2038,6 +2812,24 @@
    "quelle_id": "Q14369"
   },
   {
+   "id": "wp-d84ab79306",
+   "kategorie": "schweiz",
+   "frage": "In welcher Region der Schweiz liegt der noble Ski- und Ferienort Gstaad?",
+   "antworten": [
+    "Oberwallis",
+    "Berner Oberland",
+    "Prättigau",
+    "Engadin"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gstaad",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gstaad",
+   "quelle_id": "Q37149"
+  },
+  {
    "id": "wp-da6777dfd0",
    "kategorie": "schweiz",
    "frage": "Welcher Feldherr zog im Jahr 218 v. Chr. mit seinem Heer über die Alpen?",
@@ -2054,6 +2846,78 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Alpen",
    "quelle_id": "Q1286"
+  },
+  {
+   "id": "wp-dfac0ad08c",
+   "kategorie": "schweiz",
+   "frage": "Welche Stadt war 1798 für einige Monate die erste Hauptstadt der Helvetischen Republik?",
+   "antworten": [
+    "Aarau",
+    "Zürich",
+    "Bern",
+    "Luzern"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Aarau",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Aarau",
+   "quelle_id": "Q14274"
+  },
+  {
+   "id": "wp-e3affa5a07",
+   "kategorie": "schweiz",
+   "frage": "An welchen grossen See grenzt der Ostschweizer Kanton Thurgau im Norden?",
+   "antworten": [
+    "Bodensee",
+    "Vierwaldstättersee",
+    "Zürichsee",
+    "Walensee"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Thurgau",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kanton Thurgau",
+   "quelle_id": "Q12713"
+  },
+  {
+   "id": "wp-e6675594c4",
+   "kategorie": "schweiz",
+   "frage": "Zu welcher Grossregion der Schweiz gehört der Kanton Luzern?",
+   "antworten": [
+    "Nordwestschweiz",
+    "Ostschweiz",
+    "Espace Mittelland",
+    "Zentralschweiz"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Luzern",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kanton Luzern",
+   "quelle_id": "Q12121"
+  },
+  {
+   "id": "wp-e96c72fc31",
+   "kategorie": "schweiz",
+   "frage": "Welcher besondere Bestandteil steckt im Schweizer Erfrischungsgetränk Rivella Rot?",
+   "antworten": [
+    "Kräuterextrakt",
+    "Holundersirup",
+    "Milchserum",
+    "Malzextrakt"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rivella",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rivella",
+   "quelle_id": "Q689134"
   },
   {
    "id": "wp-ea3663da18",
@@ -2128,6 +2992,42 @@
    "quelle_id": "Q27494"
   },
   {
+   "id": "wp-f1ce959f62",
+   "kategorie": "schweiz",
+   "frage": "Welchen berühmten Fussballclub gründete der Schweizer Hans Gamper im Jahr 1899?",
+   "antworten": [
+    "FC Barcelona",
+    "FC Sevilla",
+    "FC Valencia",
+    "Real Madrid"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schweizer_Fussballnationalmannschaft",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schweizer Fussballnationalmannschaft",
+   "quelle_id": "Q165141"
+  },
+  {
+   "id": "wp-f1d93d06ed",
+   "kategorie": "schweiz",
+   "frage": "In der Nähe welcher Zürcher Gemeinde stürzte im November 2001 der Crossair-Flug 3597 ab?",
+   "antworten": [
+    "Wallisellen",
+    "Bassersdorf",
+    "Dübendorf",
+    "Regensdorf"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Crossair-Flug_3597",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Crossair-Flug 3597",
+   "quelle_id": "Q569392"
+  },
+  {
    "id": "wp-f28a3ad93e",
    "kategorie": "schweiz",
    "frage": "In welches Meer mündet der Fluss, der am Rhonegletscher im Wallis entspringt?",
@@ -2144,6 +3044,60 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Rhone",
    "quelle_id": "Q602"
+  },
+  {
+   "id": "wp-f2e67fb347",
+   "kategorie": "schweiz",
+   "frage": "Das Jungfraujoch ist ein Sattel zwischen der Jungfrau und welchem anderen Berner Gipfel?",
+   "antworten": [
+    "Eiger",
+    "Mönch",
+    "Schreckhorn",
+    "Finsteraarhorn"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jungfraujoch",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jungfraujoch",
+   "quelle_id": "Q665676"
+  },
+  {
+   "id": "wp-f42a885f68",
+   "kategorie": "schweiz",
+   "frage": "Welcher Berg gilt laut verbreiteter Legende als Vorbild für die dreieckige Form der Toblerone?",
+   "antworten": [
+    "Jungfrau",
+    "Pilatus",
+    "Matterhorn",
+    "Eiger"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Toblerone",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Toblerone",
+   "quelle_id": "Q215707"
+  },
+  {
+   "id": "wp-faf4c50326",
+   "kategorie": "schweiz",
+   "frage": "In welchem Jahr wurde der Kanton Basel in Basel-Stadt und Basel-Landschaft aufgeteilt?",
+   "antworten": [
+    "1848",
+    "1803",
+    "1833",
+    "1815"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Basel-Landschaft",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kanton Basel-Landschaft",
+   "quelle_id": "Q12146"
   },
   {
    "id": "wp-fc91c0a44c",
