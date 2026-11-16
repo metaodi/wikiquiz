@@ -1,8 +1,134 @@
 {
  "version": 1,
  "kategorie": "geschichte",
- "generiert_am": "2026-11-16T05:36:48Z",
+ "generiert_am": "2026-11-16T07:54:25Z",
  "fragen": [
+  {
+   "id": "wp-0098785dd9",
+   "kategorie": "geschichte",
+   "frage": "Wo verteidigte Mustafa Kemal 1915 als Offizier eine Halbinsel erfolgreich gegen alliierte Truppen?",
+   "antworten": [
+    "Peloponnes",
+    "Sinai",
+    "Gallipoli",
+    "Krim"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mustafa Kemal Atatürk",
+   "quelle_id": "Q5152"
+  },
+  {
+   "id": "wp-011d0ebffa",
+   "kategorie": "geschichte",
+   "frage": "Seit welchem Jahr war Bismarck erster Reichskanzler des von ihm mitbegründeten Deutschen Reiches?",
+   "antworten": [
+    "1848",
+    "1871",
+    "1866",
+    "1890"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Otto_von_Bismarck",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Otto von Bismarck",
+   "quelle_id": "Q8442"
+  },
+  {
+   "id": "wp-038e30d294",
+   "kategorie": "geschichte",
+   "frage": "Für welche Stadt als Hauptstadt der jungen Bundesrepublik setzte sich Konrad Adenauer ein?",
+   "antworten": [
+    "Kassel",
+    "Bonn",
+    "Frankfurt am Main",
+    "Stuttgart"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Konrad_Adenauer",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Konrad Adenauer",
+   "quelle_id": "Q2492"
+  },
+  {
+   "id": "wp-05b37c0002",
+   "kategorie": "geschichte",
+   "frage": "In welcher französischen Region landeten die Westalliierten am D-Day 1944?",
+   "antworten": [
+    "Picardie",
+    "Normandie",
+    "Provence",
+    "Bretagne"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Operation_Overlord",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Operation Overlord",
+   "quelle_id": "Q8641370"
+  },
+  {
+   "id": "wp-06b0e57ab8",
+   "kategorie": "geschichte",
+   "frage": "Ein U-Boot welches Landes versenkte im Januar 1945 das Flüchtlingsschiff Wilhelm Gustloff?",
+   "antworten": [
+    "Grossbritannien",
+    "Sowjetunion",
+    "Polen",
+    "USA"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wilhelm_Gustloff_(Schiff)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Wilhelm Gustloff (Schiff)",
+   "quelle_id": "Q155014"
+  },
+  {
+   "id": "wp-06d34dba54",
+   "kategorie": "geschichte",
+   "frage": "In welcher Region Europas gründete der Deutsche Orden ab dem späten 13. Jahrhundert einen eigenen Staat?",
+   "antworten": [
+    "Auf der Iberischen Halbinsel",
+    "Auf dem Balkan",
+    "Im Baltikum",
+    "In Skandinavien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Deutscher_Orden",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Deutscher Orden",
+   "quelle_id": "Q48189"
+  },
+  {
+   "id": "wp-06f3fe6588",
+   "kategorie": "geschichte",
+   "frage": "Welche Krise von 1962 brachte die USA und die Sowjetunion gefährlich nahe an einen offenen Krieg?",
+   "antworten": [
+    "Kubakrise",
+    "Suezkrise",
+    "Berlin-Blockade",
+    "Koreakrise"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kalter_Krieg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kalter Krieg",
+   "quelle_id": "Q8683"
+  },
   {
    "id": "wp-0cc912c042",
    "kategorie": "geschichte",
@@ -20,6 +146,186 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Codex Hammurapi",
    "quelle_id": "Q93304"
+  },
+  {
+   "id": "wp-0ccb159b14",
+   "kategorie": "geschichte",
+   "frage": "Im Gebiet welches heutigen Landes lag das Zentrum von Attilas Machtbereich?",
+   "antworten": [
+    "Polen",
+    "Rumänien",
+    "Österreich",
+    "Ungarn"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Attila",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Attila",
+   "quelle_id": "Q36724"
+  },
+  {
+   "id": "wp-0e6830a0dc",
+   "kategorie": "geschichte",
+   "frage": "Welcher Partei trat der Staatsrechtler Carl Schmitt im Jahr 1933 bei?",
+   "antworten": [
+    "KPD",
+    "SPD",
+    "NSDAP",
+    "Zentrumspartei"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Carl_Schmitt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Carl Schmitt",
+   "quelle_id": "Q77148"
+  },
+  {
+   "id": "wp-118d5e1f55",
+   "kategorie": "geschichte",
+   "frage": "In welchem Jahr erlitten drei römische Legionen in der Schlacht im Teutoburger Wald eine vernichtende Niederlage?",
+   "antworten": [
+    "15 v. Chr.",
+    "16 n. Chr.",
+    "9 n. Chr.",
+    "44 n. Chr."
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Varusschlacht",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Varusschlacht",
+   "quelle_id": "Q87779"
+  },
+  {
+   "id": "wp-11c304d867",
+   "kategorie": "geschichte",
+   "frage": "Truppen welches Landes erreichten im April 1945 das KZ Buchenwald?",
+   "antworten": [
+    "Sowjetunion",
+    "Frankreich",
+    "USA",
+    "Grossbritannien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/KZ_Buchenwald",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "KZ Buchenwald",
+   "quelle_id": "Q152802"
+  },
+  {
+   "id": "wp-13cd420ac7",
+   "kategorie": "geschichte",
+   "frage": "Welche ölreiche Region war 1942 das eigentliche Ziel der deutschen Sommeroffensive im Süden der Sowjetunion?",
+   "antworten": [
+    "Donbass",
+    "Krim",
+    "Kaukasus",
+    "Ural"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schlacht_von_Stalingrad",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schlacht von Stalingrad",
+   "quelle_id": "Q38789"
+  },
+  {
+   "id": "wp-150f582333",
+   "kategorie": "geschichte",
+   "frage": "Gegen welchen Herrscher richteten sich die Kriege, für die das Eiserne Kreuz 1813 gestiftet wurde?",
+   "antworten": [
+    "Kaiser Franz II.",
+    "Zar Alexander I.",
+    "Napoleon",
+    "König Ludwig XVI."
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Eisernes_Kreuz",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Eisernes Kreuz",
+   "quelle_id": "Q154554"
+  },
+  {
+   "id": "wp-198fa62de1",
+   "kategorie": "geschichte",
+   "frage": "Welcher britische König verlor im Amerikanischen Unabhängigkeitskrieg einen Grossteil seiner Kolonien?",
+   "antworten": [
+    "Georg II.",
+    "Georg I.",
+    "Wilhelm IV.",
+    "Georg III."
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Georg_III._(Vereinigtes_K%C3%B6nigreich)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Georg III. (Vereinigtes Königreich)",
+   "quelle_id": "Q127318"
+  },
+  {
+   "id": "wp-1a49d576e2",
+   "kategorie": "geschichte",
+   "frage": "Aus welchem Land stammte die als Mata Hari bekannte Tänzerin?",
+   "antworten": [
+    "Niederlande",
+    "Belgien",
+    "Dänemark",
+    "Indonesien"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mata_Hari",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mata Hari",
+   "quelle_id": "Q82180"
+  },
+  {
+   "id": "wp-1bcb7300fd",
+   "kategorie": "geschichte",
+   "frage": "Gegen wen gewann Donald Trump die US-Präsidentschaftswahl 2016?",
+   "antworten": [
+    "Joe Biden",
+    "Bernie Sanders",
+    "Hillary Clinton",
+    "Kamala Harris"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Donald_Trump",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Donald Trump",
+   "quelle_id": "Q22686"
+  },
+  {
+   "id": "wp-1d4b71715e",
+   "kategorie": "geschichte",
+   "frage": "Was bedeutet der italienische Beiname «Barbarossa» von Kaiser Friedrich I.?",
+   "antworten": [
+    "Schwarzbart",
+    "Langbart",
+    "Rotbart",
+    "Graubart"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Friedrich_I._(HRR)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Friedrich I. (HRR)",
+   "quelle_id": "Q79789"
   },
   {
    "id": "wp-1f1f31558d",
@@ -40,6 +346,438 @@
    "quelle_id": "Q9554"
   },
   {
+   "id": "wp-1f8dce38c3",
+   "kategorie": "geschichte",
+   "frage": "Welche Aufgabe hatte die Gestapo im nationalsozialistischen Deutschland?",
+   "antworten": [
+    "Propagandabehörde",
+    "Militärischer Geheimdienst",
+    "Grenzschutz der Armee",
+    "Politische Polizei"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Geheime_Staatspolizei",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Geheime Staatspolizei",
+   "quelle_id": "Q43250"
+  },
+  {
+   "id": "wp-208d7ee0e7",
+   "kategorie": "geschichte",
+   "frage": "Welche Stadt war die Hauptresidenz von Karl dem Grossen?",
+   "antworten": [
+    "Paris",
+    "Köln",
+    "Trier",
+    "Aachen"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Karl_der_Gro%C3%9Fe",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Karl der Große",
+   "quelle_id": "Q3044"
+  },
+  {
+   "id": "wp-23f6f3b454",
+   "kategorie": "geschichte",
+   "frage": "Unter welchem Beinamen ist der französische König Ludwig XIV. vor allem bekannt?",
+   "antworten": [
+    "Märchenkönig",
+    "Soldatenkönig",
+    "Bürgerkönig",
+    "Sonnenkönig"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ludwig_XIV.",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ludwig XIV.",
+   "quelle_id": "Q7742"
+  },
+  {
+   "id": "wp-2803a659cd",
+   "kategorie": "geschichte",
+   "frage": "Auf welcher Ostseeinsel steht der kilometerlange Bau des ehemaligen KdF-Seebads Prora?",
+   "antworten": [
+    "Fehmarn",
+    "Hiddensee",
+    "Usedom",
+    "Rügen"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Prora",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Prora",
+   "quelle_id": "Q685448"
+  },
+  {
+   "id": "wp-29e66bf46a",
+   "kategorie": "geschichte",
+   "frage": "Wie heisst das berühmte militärtheoretische Hauptwerk von Carl von Clausewitz?",
+   "antworten": [
+    "Über die Kriegskunst",
+    "Der Fürst",
+    "Die Kunst des Krieges",
+    "Vom Kriege"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Carl_von_Clausewitz",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Carl von Clausewitz",
+   "quelle_id": "Q76430"
+  },
+  {
+   "id": "wp-2b7b829180",
+   "kategorie": "geschichte",
+   "frage": "In welchem Gebirge schläft Kaiser Friedrich Barbarossa der Sage nach und wartet auf bessere Zeiten?",
+   "antworten": [
+    "Erzgebirge",
+    "Thüringer Wald",
+    "Fichtelgebirge",
+    "Kyffhäuser"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Friedrich_I._(HRR)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Friedrich I. (HRR)",
+   "quelle_id": "Q79789"
+  },
+  {
+   "id": "wp-2d0998bfb5",
+   "kategorie": "geschichte",
+   "frage": "Aus welchem Land stammten die UNO-Blauhelmsoldaten, die 1995 in Srebrenica stationiert waren?",
+   "antworten": [
+    "Frankreich",
+    "Dänemark",
+    "Belgien",
+    "Niederlande"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Massaker_von_Srebrenica",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Massaker von Srebrenica",
+   "quelle_id": "Q170334"
+  },
+  {
+   "id": "wp-3122fb83b4",
+   "kategorie": "geschichte",
+   "frage": "An welchem Ort in Ägypten wurde 1922 das Grab des Pharaos Tutanchamun gefunden?",
+   "antworten": [
+    "Plateau von Gizeh",
+    "Abu Simbel",
+    "Tal der Könige",
+    "Sakkara"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tutanchamun",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tutanchamun",
+   "quelle_id": "Q12154"
+  },
+  {
+   "id": "wp-316a16d9fa",
+   "kategorie": "geschichte",
+   "frage": "Welcher Staatschef gab 1990 offiziell zu, dass sein Land das Massaker von Katyn verübt hatte?",
+   "antworten": [
+    "Nikita Chruschtschow",
+    "Michail Gorbatschow",
+    "Leonid Breschnew",
+    "Boris Jelzin"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Massaker_von_Katyn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Massaker von Katyn",
+   "quelle_id": "Q134301"
+  },
+  {
+   "id": "wp-329c9cc7ac",
+   "kategorie": "geschichte",
+   "frage": "Welches Reitervolk führte Attila im 5. Jahrhundert als Herrscher an?",
+   "antworten": [
+    "Die Vandalen",
+    "Die Goten",
+    "Die Awaren",
+    "Die Hunnen"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Attila",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Attila",
+   "quelle_id": "Q36724"
+  },
+  {
+   "id": "wp-369119879c",
+   "kategorie": "geschichte",
+   "frage": "Welcher spätere deutsche Kaiser war der älteste Sohn von Victoria, der Tochter der britischen Queen Victoria?",
+   "antworten": [
+    "Wilhelm II.",
+    "Friedrich Wilhelm IV.",
+    "Wilhelm I.",
+    "Friedrich III."
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Victoria_von_Gro%C3%9Fbritannien_und_Irland_(1840%E2%80%931901)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Victoria von Großbritannien und Irland (1840–1901)",
+   "quelle_id": "Q116728"
+  },
+  {
+   "id": "wp-387a9b2f00",
+   "kategorie": "geschichte",
+   "frage": "Welche NS-Organisation liess ab 1936 in Prora ein riesiges Seebad für 20'000 Urlauber bauen?",
+   "antworten": [
+    "Reichsarbeitsdienst",
+    "Kraft durch Freude",
+    "Hitlerjugend",
+    "Winterhilfswerk"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Prora",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Prora",
+   "quelle_id": "Q685448"
+  },
+  {
+   "id": "wp-3a93d67f6c",
+   "kategorie": "geschichte",
+   "frage": "In welchem Jahr verübte Georg Elser sein Sprengstoffattentat auf Adolf Hitler?",
+   "antworten": [
+    "1944",
+    "1934",
+    "1939",
+    "1941"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Georg_Elser",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Georg Elser",
+   "quelle_id": "Q77269"
+  },
+  {
+   "id": "wp-3aa0ceae63",
+   "kategorie": "geschichte",
+   "frage": "Welches Land beendete 1979 mit einem Krieg die Schreckensherrschaft Pol Pots in Kambodscha?",
+   "antworten": [
+    "Vietnam",
+    "China",
+    "Laos",
+    "Thailand"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pol_Pot",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Pol Pot",
+   "quelle_id": "Q39464"
+  },
+  {
+   "id": "wp-3b3c6ed70a",
+   "kategorie": "geschichte",
+   "frage": "In welchem Fach erwarb Angela Merkel ihren Doktortitel, bevor sie in die Politik ging?",
+   "antworten": [
+    "Biologie",
+    "Physik",
+    "Medizin",
+    "Mathematik"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Angela_Merkel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Angela Merkel",
+   "quelle_id": "Q567"
+  },
+  {
+   "id": "wp-3f861e7b7a",
+   "kategorie": "geschichte",
+   "frage": "Wen heiratete die spätere Königin Elisabeth II. im Jahr 1947?",
+   "antworten": [
+    "Prinz Philip",
+    "Prinz Rainier",
+    "Prinz Bernhard",
+    "Prinz Henrik"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Elisabeth_II.",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Elisabeth II.",
+   "quelle_id": "Q9682"
+  },
+  {
+   "id": "wp-4108662edb",
+   "kategorie": "geschichte",
+   "frage": "Welchen Beruf übte Ronald Reagan aus, bevor er in die Politik ging?",
+   "antworten": [
+    "Rechtsanwalt",
+    "Erdnussfarmer",
+    "Berufsoffizier",
+    "Schauspieler"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ronald_Reagan",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ronald Reagan",
+   "quelle_id": "Q9960"
+  },
+  {
+   "id": "wp-466a5e356c",
+   "kategorie": "geschichte",
+   "frage": "Welcher deutsche Bundeskanzler gilt als «Kanzler der Einheit»?",
+   "antworten": [
+    "Gerhard Schröder",
+    "Helmut Kohl",
+    "Helmut Schmidt",
+    "Willy Brandt"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Helmut_Kohl",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Helmut Kohl",
+   "quelle_id": "Q2518"
+  },
+  {
+   "id": "wp-46b007b492",
+   "kategorie": "geschichte",
+   "frage": "Über welches Meer brachte die Wilhelm Gustloff 1945 Flüchtlinge, bevor sie versenkt wurde?",
+   "antworten": [
+    "Nordsee",
+    "Mittelmeer",
+    "Schwarzes Meer",
+    "Ostsee"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wilhelm_Gustloff_(Schiff)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Wilhelm Gustloff (Schiff)",
+   "quelle_id": "Q155014"
+  },
+  {
+   "id": "wp-484430cfbf",
+   "kategorie": "geschichte",
+   "frage": "Gegen welchen späteren römischen Kaiser verlor Antonius, was das Ende von Kleopatras Herrschaft bedeutete?",
+   "antworten": [
+    "Augustus",
+    "Tiberius",
+    "Caligula",
+    "Claudius"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kleopatra_VII.",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kleopatra VII.",
+   "quelle_id": "Q635"
+  },
+  {
+   "id": "wp-48685798d3",
+   "kategorie": "geschichte",
+   "frage": "Welche Auszeichnung erhielt der britische Staatsmann Winston Churchill im Jahr 1953?",
+   "antworten": [
+    "Booker Prize",
+    "Friedensnobelpreis",
+    "Nobelpreis für Literatur",
+    "Pulitzer-Preis"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Winston_Churchill",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Winston Churchill",
+   "quelle_id": "Q8016"
+  },
+  {
+   "id": "wp-49e48e8122",
+   "kategorie": "geschichte",
+   "frage": "Welches Land eroberte der Irak im August 1990 und löste damit den Zweiten Golfkrieg aus?",
+   "antworten": [
+    "Iran",
+    "Kuwait",
+    "Saudi-Arabien",
+    "Jordanien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Zweiter_Golfkrieg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Zweiter Golfkrieg",
+   "quelle_id": "Q37643"
+  },
+  {
+   "id": "wp-4b74a79dbc",
+   "kategorie": "geschichte",
+   "frage": "In welchem Jahr fand der Angriff auf Pearl Harbor statt, der zum Kriegseintritt der USA führte?",
+   "antworten": [
+    "1939",
+    "1944",
+    "1941",
+    "1943"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Angriff_auf_Pearl_Harbor",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Angriff auf Pearl Harbor",
+   "quelle_id": "Q52418"
+  },
+  {
+   "id": "wp-4c1b2f7b73",
+   "kategorie": "geschichte",
+   "frage": "Wer deponierte am 20. Juli 1944 die Sprengladung, die Adolf Hitler töten sollte?",
+   "antworten": [
+    "Henning von Tresckow",
+    "Claus Schenk Graf von Stauffenberg",
+    "Ludwig Beck",
+    "Erwin von Witzleben"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Attentat_vom_20._Juli_1944",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Attentat vom 20. Juli 1944",
+   "quelle_id": "Q105570"
+  },
+  {
    "id": "wp-4c43317216",
    "kategorie": "geschichte",
    "frage": "In welchem Museum ist die Steinstele mit dem Codex Hammurapi heute ausgestellt?",
@@ -56,6 +794,456 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Codex Hammurapi",
    "quelle_id": "Q93304"
+  },
+  {
+   "id": "wp-4c6553509d",
+   "kategorie": "geschichte",
+   "frage": "In welchem Jahr wurde die antike Stadt Pompeji durch einen Vulkanausbruch verschüttet?",
+   "antworten": [
+    "117 n. Chr.",
+    "44 v. Chr.",
+    "64 n. Chr.",
+    "79 n. Chr."
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pompeji",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Pompeji",
+   "quelle_id": "Q43332"
+  },
+  {
+   "id": "wp-4c968ca44e",
+   "kategorie": "geschichte",
+   "frage": "Wie alt sind die ältesten Steinanlagen von Göbekli Tepe ungefähr?",
+   "antworten": [
+    "Rund 4500 Jahre",
+    "Rund 30 000 Jahre",
+    "Rund 7000 Jahre",
+    "Rund 12 000 Jahre"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/G%C3%B6bekli_Tepe",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Göbekli Tepe",
+   "quelle_id": "Q214944"
+  },
+  {
+   "id": "wp-4cef7cc18f",
+   "kategorie": "geschichte",
+   "frage": "In welchem Zeitraum war Ronald Reagan Präsident der USA?",
+   "antworten": [
+    "1981–1989",
+    "1973–1981",
+    "1977–1985",
+    "1985–1993"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ronald_Reagan",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ronald Reagan",
+   "quelle_id": "Q9960"
+  },
+  {
+   "id": "wp-58b2d9f1f0",
+   "kategorie": "geschichte",
+   "frage": "Unter welchem Schlagwort wurden Franklin D. Roosevelts Reformen gegen die Weltwirtschaftskrise bekannt?",
+   "antworten": [
+    "New Deal",
+    "Great Society",
+    "Fair Deal",
+    "New Frontier"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Franklin_D._Roosevelt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Franklin D. Roosevelt",
+   "quelle_id": "Q8007"
+  },
+  {
+   "id": "wp-5d07b43b0b",
+   "kategorie": "geschichte",
+   "frage": "Welcher Römer wurde nach der Ermordung Caesars zum Geliebten von Kleopatra?",
+   "antworten": [
+    "Gnaeus Pompeius",
+    "Marcus Antonius",
+    "Marcus Brutus",
+    "Marcus Crassus"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kleopatra_VII.",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kleopatra VII.",
+   "quelle_id": "Q635"
+  },
+  {
+   "id": "wp-5f818aadfb",
+   "kategorie": "geschichte",
+   "frage": "Welche Supermacht führte im Kalten Krieg den sogenannten Ostblock an?",
+   "antworten": [
+    "Sowjetunion",
+    "Volksrepublik China",
+    "Jugoslawien",
+    "Polen"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kalter_Krieg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kalter Krieg",
+   "quelle_id": "Q8683"
+  },
+  {
+   "id": "wp-6243727f9c",
+   "kategorie": "geschichte",
+   "frage": "Welche Auszeichnung erhielt der frühere US-Präsident Jimmy Carter im Jahr 2002?",
+   "antworten": [
+    "Karlspreis",
+    "Pulitzer-Preis",
+    "Literaturnobelpreis",
+    "Friedensnobelpreis"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jimmy_Carter",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jimmy Carter",
+   "quelle_id": "Q23685"
+  },
+  {
+   "id": "wp-6365f07820",
+   "kategorie": "geschichte",
+   "frage": "Wie lautete der ursprüngliche Name von Dschingis Khan?",
+   "antworten": [
+    "Kublai",
+    "Tamerlan",
+    "Temüdschin",
+    "Attila"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dschingis_Khan",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Dschingis Khan",
+   "quelle_id": "Q720"
+  },
+  {
+   "id": "wp-646ba6efee",
+   "kategorie": "geschichte",
+   "frage": "Welcher berühmte Schüler des Sokrates überlieferte dessen Denken in schriftlichen Dialogen?",
+   "antworten": [
+    "Aristoteles",
+    "Epikur",
+    "Pythagoras",
+    "Platon"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sokrates",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sokrates",
+   "quelle_id": "Q913"
+  },
+  {
+   "id": "wp-67137dbc7a",
+   "kategorie": "geschichte",
+   "frage": "Für welche Politik erhielt Bundeskanzler Willy Brandt 1971 den Friedensnobelpreis?",
+   "antworten": [
+    "Wiederbewaffnung",
+    "Westbindung",
+    "Ostpolitik",
+    "Sozialpolitik"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Willy_Brandt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Willy Brandt",
+   "quelle_id": "Q2514"
+  },
+  {
+   "id": "wp-6726253212",
+   "kategorie": "geschichte",
+   "frage": "Welchen Beinamen erhielt Englands Königin Maria I. wegen der Hinrichtung vieler Protestanten?",
+   "antworten": [
+    "Die Blutige",
+    "Die Eiserne",
+    "Die Grausame",
+    "Die Schreckliche"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Maria_I._(England)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Maria I. (England)",
+   "quelle_id": "Q82674"
+  },
+  {
+   "id": "wp-69b311a200",
+   "kategorie": "geschichte",
+   "frage": "In welcher Stadt kniete Bundeskanzler Willy Brandt in einer berühmten Geste der Versöhnung nieder?",
+   "antworten": [
+    "Prag",
+    "Moskau",
+    "Warschau",
+    "Budapest"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Willy_Brandt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Willy Brandt",
+   "quelle_id": "Q2514"
+  },
+  {
+   "id": "wp-6d082e8278",
+   "kategorie": "geschichte",
+   "frage": "In welchem Bundesland war Oskar Lafontaine von 1985 bis 1998 Ministerpräsident?",
+   "antworten": [
+    "Rheinland-Pfalz",
+    "Baden-Württemberg",
+    "Saarland",
+    "Hessen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Oskar_Lafontaine",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Oskar Lafontaine",
+   "quelle_id": "Q110719"
+  },
+  {
+   "id": "wp-6f251d061c",
+   "kategorie": "geschichte",
+   "frage": "Welcher Politiker gilt als Vater des deutschen «Wirtschaftswunders» nach dem Zweiten Weltkrieg?",
+   "antworten": [
+    "Ludwig Erhard",
+    "Konrad Adenauer",
+    "Willy Brandt",
+    "Kurt Georg Kiesinger"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ludwig_Erhard",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ludwig Erhard",
+   "quelle_id": "Q2496"
+  },
+  {
+   "id": "wp-6f34aa4a7f",
+   "kategorie": "geschichte",
+   "frage": "In welchem Bundesland war Kurt Georg Kiesinger Ministerpräsident, bevor er Bundeskanzler wurde?",
+   "antworten": [
+    "Bayern",
+    "Rheinland-Pfalz",
+    "Baden-Württemberg",
+    "Hessen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kurt_Georg_Kiesinger",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kurt Georg Kiesinger",
+   "quelle_id": "Q2512"
+  },
+  {
+   "id": "wp-702338c8df",
+   "kategorie": "geschichte",
+   "frage": "Welche spätere Königin von England war die Tochter von Anne Boleyn?",
+   "antworten": [
+    "Maria Stuart",
+    "Maria I.",
+    "Jane Grey",
+    "Elisabeth I."
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Anne_Boleyn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Anne Boleyn",
+   "quelle_id": "Q80823"
+  },
+  {
+   "id": "wp-7367df314f",
+   "kategorie": "geschichte",
+   "frage": "In welchem Jahr bestieg Elisabeth II. den britischen Thron?",
+   "antworten": [
+    "1960",
+    "1936",
+    "1945",
+    "1952"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Elisabeth_II.",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Elisabeth II.",
+   "quelle_id": "Q9682"
+  },
+  {
+   "id": "wp-757df2c6d1",
+   "kategorie": "geschichte",
+   "frage": "Wer war während beider Amtszeiten von Barack Obama Vizepräsident der USA?",
+   "antworten": [
+    "Mike Pence",
+    "Dick Cheney",
+    "Al Gore",
+    "Joe Biden"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Barack_Obama",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Barack Obama",
+   "quelle_id": "Q76"
+  },
+  {
+   "id": "wp-7a784da27d",
+   "kategorie": "geschichte",
+   "frage": "Gegen welche Bevölkerungsminderheit richtete sich der Völkermord in Ruanda hauptsächlich?",
+   "antworten": [
+    "Massai",
+    "Hutu",
+    "Tutsi",
+    "Twa"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/V%C3%B6lkermord_in_Ruanda",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Völkermord in Ruanda",
+   "quelle_id": "Q131297"
+  },
+  {
+   "id": "wp-7aaa9120dc",
+   "kategorie": "geschichte",
+   "frage": "Welcher preussische Staatsmann gehörte zu den entschiedensten politischen Gegnern von Kaiserin Victoria?",
+   "antworten": [
+    "Otto von Bismarck",
+    "Helmuth von Moltke",
+    "Ludwig Windthorst",
+    "Albrecht von Roon"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Victoria_von_Gro%C3%9Fbritannien_und_Irland_(1840%E2%80%931901)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Victoria von Großbritannien und Irland (1840–1901)",
+   "quelle_id": "Q116728"
+  },
+  {
+   "id": "wp-7c7d0ed290",
+   "kategorie": "geschichte",
+   "frage": "Wie hiess der Plan der Verschwörer vom 20. Juli 1944 für den Staatsstreich nach Hitlers Tod?",
+   "antworten": [
+    "Operation Walküre",
+    "Operation Seelöwe",
+    "Operation Barbarossa",
+    "Operation Zitadelle"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Attentat_vom_20._Juli_1944",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Attentat vom 20. Juli 1944",
+   "quelle_id": "Q105570"
+  },
+  {
+   "id": "wp-7f8c1cdb50",
+   "kategorie": "geschichte",
+   "frage": "Welcher Cheruskerfürst führte die Germanen in der Varusschlacht gegen die Römer an?",
+   "antworten": [
+    "Marbod",
+    "Ambiorix",
+    "Arminius",
+    "Vercingetorix"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Varusschlacht",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Varusschlacht",
+   "quelle_id": "Q87779"
+  },
+  {
+   "id": "wp-8658c9fc87",
+   "kategorie": "geschichte",
+   "frage": "In welchem Land starb der NS-Kriegsverbrecher Josef Mengele 1979, ohne je gefasst worden zu sein?",
+   "antworten": [
+    "Brasilien",
+    "Chile",
+    "Argentinien",
+    "Paraguay"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Josef_Mengele",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Josef Mengele",
+   "quelle_id": "Q57109"
+  },
+  {
+   "id": "wp-870322919c",
+   "kategorie": "geschichte",
+   "frage": "Mit welchem Ereignis begann der Zweite Weltkrieg in Europa am 1. September 1939?",
+   "antworten": [
+    "Deutsche Besetzung Norwegens",
+    "Deutscher Überfall auf Polen",
+    "Deutscher Einmarsch in Frankreich",
+    "Deutscher Angriff auf die Sowjetunion"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Zweiter_Weltkrieg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Zweiter Weltkrieg",
+   "quelle_id": "Q362"
+  },
+  {
+   "id": "wp-8b4e651e4d",
+   "kategorie": "geschichte",
+   "frage": "Wie viele Jüdinnen und Juden wurden im Holocaust schätzungsweise ermordet?",
+   "antworten": [
+    "Rund zwölf Millionen",
+    "Rund eine Million",
+    "Rund drei Millionen",
+    "Rund sechs Millionen"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Konzentrationslager",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Konzentrationslager",
+   "quelle_id": "Q328468"
   },
   {
    "id": "wp-8d8acc4b4b",
@@ -76,6 +1264,60 @@
    "quelle_id": "Q76358"
   },
   {
+   "id": "wp-90ebe4e206",
+   "kategorie": "geschichte",
+   "frage": "Unter welchem Beinamen ist Otto von Bismarck bis heute bekannt?",
+   "antworten": [
+    "Der Grosse Kurfürst",
+    "Der Eiserne Kanzler",
+    "Der Soldatenkönig",
+    "Der Alte Fritz"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Otto_von_Bismarck",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Otto von Bismarck",
+   "quelle_id": "Q8442"
+  },
+  {
+   "id": "wp-915887b72e",
+   "kategorie": "geschichte",
+   "frage": "In welchem Jahr fand der Falklandkrieg statt?",
+   "antworten": [
+    "1982",
+    "1991",
+    "1968",
+    "1976"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Falklandkrieg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Falklandkrieg",
+   "quelle_id": "Q48249"
+  },
+  {
+   "id": "wp-92dc826c3c",
+   "kategorie": "geschichte",
+   "frage": "In welchem Jahr verübten bosnisch-serbische Truppen das Massaker von Srebrenica?",
+   "antworten": [
+    "1993",
+    "1995",
+    "1991",
+    "1999"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Massaker_von_Srebrenica",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Massaker von Srebrenica",
+   "quelle_id": "Q170334"
+  },
+  {
    "id": "wp-9648585178",
    "kategorie": "geschichte",
    "frage": "Gegen welches Regime leistete Dietrich Bonhoeffer Widerstand?",
@@ -94,6 +1336,366 @@
    "quelle_id": "Q76326"
   },
   {
+   "id": "wp-9a5583da8b",
+   "kategorie": "geschichte",
+   "frage": "In welcher Stadt versteckte sich Anne Frank mit ihrer Familie von 1942 bis 1944 in einem Hinterhaus?",
+   "antworten": [
+    "Utrecht",
+    "Rotterdam",
+    "Amsterdam",
+    "Den Haag"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Anne_Frank",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Anne Frank",
+   "quelle_id": "Q4583"
+  },
+  {
+   "id": "wp-a0c0581647",
+   "kategorie": "geschichte",
+   "frage": "Welcher Geistliche war die Symbolfigur der Islamischen Revolution im Iran und wurde danach Staatsoberhaupt?",
+   "antworten": [
+    "Ali Chamenei",
+    "Mohammad Mossadegh",
+    "Ruhollah Chomeini",
+    "Akbar Rafsandschani"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Islamische_Revolution",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Islamische Revolution",
+   "quelle_id": "Q126065"
+  },
+  {
+   "id": "wp-a228847a0a",
+   "kategorie": "geschichte",
+   "frage": "In welcher österreichischen Stadt wurde Adolf Hitler 1889 geboren?",
+   "antworten": [
+    "Linz",
+    "Braunau am Inn",
+    "Wien",
+    "Salzburg"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Adolf_Hitler",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Adolf Hitler",
+   "quelle_id": "Q352"
+  },
+  {
+   "id": "wp-a6fecba7e6",
+   "kategorie": "geschichte",
+   "frage": "In welchem Jahr fand die Seeschlacht um Midway im Pazifik statt?",
+   "antworten": [
+    "1945",
+    "1940",
+    "1944",
+    "1942"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schlacht_um_Midway",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schlacht um Midway",
+   "quelle_id": "Q173034"
+  },
+  {
+   "id": "wp-a76cca7729",
+   "kategorie": "geschichte",
+   "frage": "Welchem NS-Politiker war die Gestapo bei ihrer Gründung 1933 in Preussen direkt unterstellt?",
+   "antworten": [
+    "Joseph Goebbels",
+    "Rudolf Hess",
+    "Martin Bormann",
+    "Hermann Göring"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Geheime_Staatspolizei",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Geheime Staatspolizei",
+   "quelle_id": "Q43250"
+  },
+  {
+   "id": "wp-a7ba68b0f0",
+   "kategorie": "geschichte",
+   "frage": "Wer stiftete 1939 das Ritterkreuz des Eisernen Kreuzes neu?",
+   "antworten": [
+    "Heinrich Himmler",
+    "Joseph Goebbels",
+    "Adolf Hitler",
+    "Hermann Göring"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ritterkreuz_des_Eisernen_Kreuzes",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ritterkreuz des Eisernen Kreuzes",
+   "quelle_id": "Q165558"
+  },
+  {
+   "id": "wp-a902b11731",
+   "kategorie": "geschichte",
+   "frage": "Welcher US-Präsident amtierte als einziger länger als zwei Wahlperioden?",
+   "antworten": [
+    "Woodrow Wilson",
+    "Franklin D. Roosevelt",
+    "Harry S. Truman",
+    "Dwight D. Eisenhower"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Franklin_D._Roosevelt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Franklin D. Roosevelt",
+   "quelle_id": "Q8007"
+  },
+  {
+   "id": "wp-ac64b2cffb",
+   "kategorie": "geschichte",
+   "frage": "Gegen welchen Republikaner gewann John F. Kennedy 1960 die US-Präsidentschaftswahl?",
+   "antworten": [
+    "Barry Goldwater",
+    "Dwight D. Eisenhower",
+    "Richard Nixon",
+    "Gerald Ford"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/John_F._Kennedy",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "John F. Kennedy",
+   "quelle_id": "Q9696"
+  },
+  {
+   "id": "wp-ad40dd7404",
+   "kategorie": "geschichte",
+   "frage": "In welcher Stadt verübte der Widerstandskämpfer Georg Elser 1939 ein Bombenattentat auf Hitler?",
+   "antworten": [
+    "Berlin",
+    "Nürnberg",
+    "München",
+    "Wien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Georg_Elser",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Georg Elser",
+   "quelle_id": "Q77269"
+  },
+  {
+   "id": "wp-af86690afa",
+   "kategorie": "geschichte",
+   "frage": "In welchem Konzentrationslager war der NS-Arzt Josef Mengele als Lagerarzt tätig?",
+   "antworten": [
+    "Bergen-Belsen",
+    "Auschwitz-Birkenau",
+    "Dachau",
+    "Buchenwald"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Josef_Mengele",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Josef Mengele",
+   "quelle_id": "Q57109"
+  },
+  {
+   "id": "wp-b0628a1952",
+   "kategorie": "geschichte",
+   "frage": "Unter welchem Namen wurde der Germanenfürst Arminius ab dem 18. Jahrhundert zur deutschen Nationalfigur?",
+   "antworten": [
+    "Widukind der Sachse",
+    "Heinrich der Löwe",
+    "Hermann der Cherusker",
+    "Siegfried der Franke"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Arminius",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Arminius",
+   "quelle_id": "Q68880"
+  },
+  {
+   "id": "wp-b13734fe58",
+   "kategorie": "geschichte",
+   "frage": "Seit welchem Jahr gibt es den Euro als Bargeld in Form von Münzen und Banknoten?",
+   "antworten": [
+    "2002",
+    "1995",
+    "2010",
+    "2005"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Europ%C3%A4ische_Union",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Europäische Union",
+   "quelle_id": "Q458"
+  },
+  {
+   "id": "wp-b2c6688839",
+   "kategorie": "geschichte",
+   "frage": "Welcher US-Präsident war im Zweiten Weltkrieg Oberbefehlshaber der alliierten Streitkräfte in Europa?",
+   "antworten": [
+    "Harry S. Truman",
+    "Dwight D. Eisenhower",
+    "Richard Nixon",
+    "John F. Kennedy"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dwight_D._Eisenhower",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Dwight D. Eisenhower",
+   "quelle_id": "Q9916"
+  },
+  {
+   "id": "wp-baa7ff7d38",
+   "kategorie": "geschichte",
+   "frage": "Welcher US-Präsident wurde 1881 nur wenige Monate nach Amtsantritt bei einem Attentat tödlich verletzt?",
+   "antworten": [
+    "James A. Garfield",
+    "William McKinley",
+    "Chester A. Arthur",
+    "Abraham Lincoln"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/James_A._Garfield",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "James A. Garfield",
+   "quelle_id": "Q34597"
+  },
+  {
+   "id": "wp-bcccfb2698",
+   "kategorie": "geschichte",
+   "frage": "Auf welcher Mittelmeerinsel wurde Napoleon geboren?",
+   "antworten": [
+    "Sizilien",
+    "Elba",
+    "Korsika",
+    "Sardinien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Napoleon_Bonaparte",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Napoleon Bonaparte",
+   "quelle_id": "Q517"
+  },
+  {
+   "id": "wp-bd2f0b9db0",
+   "kategorie": "geschichte",
+   "frage": "In welchem Jahr fand der Völkermord in Ruanda statt, bei dem in rund 100 Tagen Hunderttausende getötet wurden?",
+   "antworten": [
+    "2004",
+    "1989",
+    "1999",
+    "1994"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/V%C3%B6lkermord_in_Ruanda",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Völkermord in Ruanda",
+   "quelle_id": "Q131297"
+  },
+  {
+   "id": "wp-bfa4c3d410",
+   "kategorie": "geschichte",
+   "frage": "An welchem Tag begann die Landung der Westalliierten in Nordfrankreich, der sogenannte D-Day?",
+   "antworten": [
+    "6. Juni 1943",
+    "20. Juli 1944",
+    "6. Juni 1944",
+    "6. Juni 1945"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Operation_Overlord",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Operation Overlord",
+   "quelle_id": "Q8641370"
+  },
+  {
+   "id": "wp-c19e8c1345",
+   "kategorie": "geschichte",
+   "frage": "Zwischen welchen beiden Ländern vermittelte US-Präsident Jimmy Carter mit dem Camp-David-Abkommen Frieden?",
+   "antworten": [
+    "Jordanien und Israel",
+    "Syrien und Israel",
+    "Libanon und Israel",
+    "Ägypten und Israel"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jimmy_Carter",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jimmy Carter",
+   "quelle_id": "Q23685"
+  },
+  {
+   "id": "wp-c508208da5",
+   "kategorie": "geschichte",
+   "frage": "Welcher Staat war 1940 für das Massaker an Tausenden polnischen Offizieren im Wald bei Katyn verantwortlich?",
+   "antworten": [
+    "Ungarn",
+    "Deutsches Reich",
+    "Sowjetunion",
+    "Rumänien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Massaker_von_Katyn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Massaker von Katyn",
+   "quelle_id": "Q134301"
+  },
+  {
+   "id": "wp-c57eebffb1",
+   "kategorie": "geschichte",
+   "frage": "Welche kommunistische Bewegung führte der Diktator Pol Pot an?",
+   "antworten": [
+    "Rote Khmer",
+    "Pathet Lao",
+    "Leuchtender Pfad",
+    "Vietcong"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pol_Pot",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Pol Pot",
+   "quelle_id": "Q39464"
+  },
+  {
    "id": "wp-cd0ca45657",
    "kategorie": "geschichte",
    "frage": "Welche Zeitschrift gab der Pazifist Carl von Ossietzky in der Weimarer Republik heraus?",
@@ -110,6 +1712,528 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Carl von Ossietzky",
    "quelle_id": "Q76358"
+  },
+  {
+   "id": "wp-cd87dcba36",
+   "kategorie": "geschichte",
+   "frage": "Aus welchem südamerikanischen Land wurde Klaus Barbie 1983 nach Frankreich ausgeliefert?",
+   "antworten": [
+    "Bolivien",
+    "Brasilien",
+    "Paraguay",
+    "Argentinien"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Klaus_Barbie",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Klaus Barbie",
+   "quelle_id": "Q77088"
+  },
+  {
+   "id": "wp-ce16b56dca",
+   "kategorie": "geschichte",
+   "frage": "Unter welchem Namen führte die US-geführte Koalition 1991 ihre Offensive gegen den Irak?",
+   "antworten": [
+    "Operation Desert Storm",
+    "Operation Enduring Freedom",
+    "Operation Iraqi Freedom",
+    "Operation Rolling Thunder"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Zweiter_Golfkrieg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Zweiter Golfkrieg",
+   "quelle_id": "Q37643"
+  },
+  {
+   "id": "wp-ceabc8bf3b",
+   "kategorie": "geschichte",
+   "frage": "In welchem Land wurde Adolf Eichmann öffentlich der Prozess gemacht und 1962 hingerichtet?",
+   "antworten": [
+    "Deutschland",
+    "Israel",
+    "Österreich",
+    "Polen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Adolf_Eichmann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Adolf Eichmann",
+   "quelle_id": "Q28085"
+  },
+  {
+   "id": "wp-cfc59307f7",
+   "kategorie": "geschichte",
+   "frage": "Auf welche Weise wurde der Philosoph Sokrates 399 v. Chr. in Athen hingerichtet?",
+   "antworten": [
+    "Durch das Schwert",
+    "Durch Steinigung",
+    "Durch den Schierlingsbecher",
+    "Durch Kreuzigung"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sokrates",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sokrates",
+   "quelle_id": "Q913"
+  },
+  {
+   "id": "wp-d08e655237",
+   "kategorie": "geschichte",
+   "frage": "Mit welcher Sagengestalt werden die Geschichten um Richard Löwenherz seit dem 16. Jahrhundert verknüpft?",
+   "antworten": [
+    "Sir Lancelot",
+    "Wilhelm Tell",
+    "Robin Hood",
+    "König Artus"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Richard_L%C3%B6wenherz",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Richard Löwenherz",
+   "quelle_id": "Q42305"
+  },
+  {
+   "id": "wp-d0c770dc0e",
+   "kategorie": "geschichte",
+   "frage": "Mit welcher Reality-TV-Sendung wurde Donald Trump ab 2004 als Gastgeber populär?",
+   "antworten": [
+    "American Idol",
+    "Big Brother",
+    "Survivor",
+    "The Apprentice"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Donald_Trump",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Donald Trump",
+   "quelle_id": "Q22686"
+  },
+  {
+   "id": "wp-d0e3852280",
+   "kategorie": "geschichte",
+   "frage": "Welches Land trat 1917 als Folge des deutschen U-Boot-Kriegs in den Ersten Weltkrieg ein?",
+   "antworten": [
+    "Spanien",
+    "Kanada",
+    "Schweden",
+    "USA"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Erster_Weltkrieg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Erster Weltkrieg",
+   "quelle_id": "Q361"
+  },
+  {
+   "id": "wp-d3f81938b2",
+   "kategorie": "geschichte",
+   "frage": "In welcher französischen Stadt war der NS-Kriegsverbrecher Klaus Barbie von 1942 bis 1944 Gestapo-Chef?",
+   "antworten": [
+    "Bordeaux",
+    "Marseille",
+    "Lyon",
+    "Toulouse"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Klaus_Barbie",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Klaus Barbie",
+   "quelle_id": "Q77088"
+  },
+  {
+   "id": "wp-d4e37fe5ab",
+   "kategorie": "geschichte",
+   "frage": "In welcher US-Stadt wurde Martin Luther King 1968 bei einem Attentat erschossen?",
+   "antworten": [
+    "Atlanta",
+    "Montgomery",
+    "Memphis",
+    "Birmingham"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Martin_Luther_King",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Martin Luther King",
+   "quelle_id": "Q8027"
+  },
+  {
+   "id": "wp-d4f4e71157",
+   "kategorie": "geschichte",
+   "frage": "Welches Königreich im Mittelmeer regierte Kaiser Friedrich II. bereits ab 1198?",
+   "antworten": [
+    "Mallorca",
+    "Zypern",
+    "Sizilien",
+    "Sardinien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Friedrich_II._(HRR)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Friedrich II. (HRR)",
+   "quelle_id": "Q130221"
+  },
+  {
+   "id": "wp-d7914c380a",
+   "kategorie": "geschichte",
+   "frage": "In der Nähe welcher deutschen Stadt befand sich das Konzentrationslager Buchenwald?",
+   "antworten": [
+    "Gotha",
+    "Erfurt",
+    "Jena",
+    "Weimar"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/KZ_Buchenwald",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "KZ Buchenwald",
+   "quelle_id": "Q152802"
+  },
+  {
+   "id": "wp-d9e843f4c6",
+   "kategorie": "geschichte",
+   "frage": "Unter welchem Spitznamen wurde die britische Premierministerin Margaret Thatcher bekannt?",
+   "antworten": [
+    "Stählerne Lady",
+    "Eiskönigin",
+    "Graue Lady",
+    "Eiserne Lady"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Margaret_Thatcher",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Margaret Thatcher",
+   "quelle_id": "Q7416"
+  },
+  {
+   "id": "wp-db15cbf5ee",
+   "kategorie": "geschichte",
+   "frage": "Welcher spätere römische Kaiser war Caesars Grossneffe und Haupterbe?",
+   "antworten": [
+    "Caligula",
+    "Nero",
+    "Augustus",
+    "Tiberius"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gaius_Iulius_Caesar",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gaius Iulius Caesar",
+   "quelle_id": "Q1048"
+  },
+  {
+   "id": "wp-dde168e03b",
+   "kategorie": "geschichte",
+   "frage": "In wessen Kriegsgefangenschaft verbrachte der deutsche Generalfeldmarschall Friedrich Paulus die Jahre 1943 bis 1953?",
+   "antworten": [
+    "Amerikanische",
+    "Sowjetische",
+    "Britische",
+    "Französische"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Friedrich_Paulus",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Friedrich Paulus",
+   "quelle_id": "Q57160"
+  },
+  {
+   "id": "wp-e45c635742",
+   "kategorie": "geschichte",
+   "frage": "Welchen Premierminister löste Winston Churchill im Mai 1940 an der Spitze der britischen Regierung ab?",
+   "antworten": [
+    "Neville Chamberlain",
+    "Anthony Eden",
+    "Stanley Baldwin",
+    "Clement Attlee"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Winston_Churchill",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Winston Churchill",
+   "quelle_id": "Q8016"
+  },
+  {
+   "id": "wp-e47f1fb937",
+   "kategorie": "geschichte",
+   "frage": "Aus welchem südamerikanischen Land wurde der NS-Verbrecher Adolf Eichmann 1960 entführt?",
+   "antworten": [
+    "Chile",
+    "Argentinien",
+    "Brasilien",
+    "Paraguay"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Adolf_Eichmann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Adolf Eichmann",
+   "quelle_id": "Q28085"
+  },
+  {
+   "id": "wp-e902915672",
+   "kategorie": "geschichte",
+   "frage": "Welcher Thronfolger Österreich-Ungarns wurde am 28. Juni 1914 in Sarajevo ermordet?",
+   "antworten": [
+    "Erzherzog Karl",
+    "Kronprinz Rudolf",
+    "Erzherzog Franz Ferdinand",
+    "Erzherzog Otto"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Attentat_von_Sarajevo",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Attentat von Sarajevo",
+   "quelle_id": "Q192050"
+  },
+  {
+   "id": "wp-ed44e1e383",
+   "kategorie": "geschichte",
+   "frage": "Welchen Beruf übte der Widerstandskämpfer Dietrich Bonhoeffer aus?",
+   "antworten": [
+    "Offizier",
+    "Psychiater",
+    "Jurist",
+    "Theologe"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dietrich_Bonhoeffer",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Dietrich Bonhoeffer",
+   "quelle_id": "Q76326"
+  },
+  {
+   "id": "wp-f35342e044",
+   "kategorie": "geschichte",
+   "frage": "Welches berühmte philosophische Werk schrieb der römische Kaiser Mark Aurel?",
+   "antworten": [
+    "Selbstbetrachtungen",
+    "Bekenntnisse",
+    "Vom glücklichen Leben",
+    "Der Staat"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mark_Aurel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mark Aurel",
+   "quelle_id": "Q1430"
+  },
+  {
+   "id": "wp-f535271c9f",
+   "kategorie": "geschichte",
+   "frage": "In welchem Zeitraum bestand das System der Konzentrationslager im nationalsozialistischen Deutschland?",
+   "antworten": [
+    "1939 bis 1945",
+    "1933 bis 1945",
+    "1941 bis 1949",
+    "1919 bis 1933"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Konzentrationslager",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Konzentrationslager",
+   "quelle_id": "Q328468"
+  },
+  {
+   "id": "wp-f7bddcc0ef",
+   "kategorie": "geschichte",
+   "frage": "Welches Land verurteilte die Tänzerin und Spionin Mata Hari 1917 zum Tod?",
+   "antworten": [
+    "Grossbritannien",
+    "Belgien",
+    "Frankreich",
+    "Deutschland"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mata_Hari",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mata Hari",
+   "quelle_id": "Q82180"
+  },
+  {
+   "id": "wp-fa91a6e2ac",
+   "kategorie": "geschichte",
+   "frage": "Welcher bekannte Philosoph war der Lehrer des späteren Kaisers Nero?",
+   "antworten": [
+    "Seneca",
+    "Cicero",
+    "Mark Aurel",
+    "Plutarch"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Nero",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Nero",
+   "quelle_id": "Q1413"
+  },
+  {
+   "id": "wp-facfdf2f12",
+   "kategorie": "geschichte",
+   "frage": "In welchem Jahr wurde Karl der Grosse in Rom zum Kaiser gekrönt?",
+   "antworten": [
+    "800",
+    "814",
+    "774",
+    "843"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Karl_der_Gro%C3%9Fe",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Karl der Große",
+   "quelle_id": "Q3044"
+  },
+  {
+   "id": "wp-faeb5f4423",
+   "kategorie": "geschichte",
+   "frage": "In welchem Winter wurde die deutsche 6. Armee in der Schlacht von Stalingrad vernichtet?",
+   "antworten": [
+    "1943/1944",
+    "1942/1943",
+    "1941/1942",
+    "1944/1945"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schlacht_von_Stalingrad",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schlacht von Stalingrad",
+   "quelle_id": "Q38789"
+  },
+  {
+   "id": "wp-fb315f5239",
+   "kategorie": "geschichte",
+   "frage": "In welcher Stadt wurde Jesus gekreuzigt?",
+   "antworten": [
+    "Kapernaum",
+    "Jerusalem",
+    "Nazareth",
+    "Bethlehem"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jesus_von_Nazaret",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jesus von Nazaret",
+   "quelle_id": "Q51666"
+  },
+  {
+   "id": "wp-fccce861c1",
+   "kategorie": "geschichte",
+   "frage": "In welcher Stadt wurde US-Präsident John F. Kennedy im November 1963 bei einem Attentat getötet?",
+   "antworten": [
+    "Atlanta",
+    "Dallas",
+    "Chicago",
+    "Houston"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/John_F._Kennedy",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "John F. Kennedy",
+   "quelle_id": "Q9696"
+  },
+  {
+   "id": "wp-fd66f3dfc1",
+   "kategorie": "geschichte",
+   "frage": "In welchem Zeitraum fand der Amerikanische Bürgerkrieg zwischen Nord- und Südstaaten statt?",
+   "antworten": [
+    "1841–1845",
+    "1861–1865",
+    "1871–1875",
+    "1851–1855"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sezessionskrieg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sezessionskrieg",
+   "quelle_id": "Q8676"
+  },
+  {
+   "id": "wp-fe4851104a",
+   "kategorie": "geschichte",
+   "frage": "Welches Regierungsbündnis führte Kurt Georg Kiesinger als erster deutscher Bundeskanzler an?",
+   "antworten": [
+    "Grosse Koalition",
+    "Allparteienregierung",
+    "Schwarz-gelbe Koalition",
+    "Sozialliberale Koalition"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kurt_Georg_Kiesinger",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kurt Georg Kiesinger",
+   "quelle_id": "Q2512"
+  },
+  {
+   "id": "wp-ff535c843f",
+   "kategorie": "geschichte",
+   "frage": "Welches Land griff 1941 überraschend die US-Pazifikflotte in Pearl Harbor an?",
+   "antworten": [
+    "Deutschland",
+    "Italien",
+    "Japan",
+    "Sowjetunion"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Angriff_auf_Pearl_Harbor",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Angriff auf Pearl Harbor",
+   "quelle_id": "Q52418"
   }
  ]
 }

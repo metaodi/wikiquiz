@@ -5,6 +5,8 @@ Beispiele:
   python -m wikiquiz_gen generate --kategorie kunst --quelle wikipedia --nur-kandidaten
   python -m wikiquiz_gen generate --kategorie geografie --quelle wikidata --modus ersetzen
   python -m wikiquiz_gen review --kategorie kunst --n 30
+  python -m wikiquiz_gen verschieben --nach naturwissenschaften --id wp-…
+  python -m wikiquiz_gen entfernen --id wp-… --id wp-…
   python -m wikiquiz_gen stats
 """
 from __future__ import annotations
@@ -140,6 +142,17 @@ def cmd_verschieben(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_entfernen(args: argparse.Namespace) -> int:
+    try:
+        entfernt = output.entfernen(args.id)
+    except ValueError as e:
+        print(f"Fehler: {e}", file=sys.stderr)
+        return 1
+    for f in entfernt:
+        print(f"{f['id']} entfernt ({f['kategorie']}): {f['frage']}")
+    return 0
+
+
 def cmd_bereinigen(args: argparse.Namespace) -> int:
     """Anführungszeichen und Schweizer Rechtschreibung in bestehenden Fragen vereinheitlichen.
     Die IDs ändern sich dadurch nicht (Satzzeichen fliessen nicht in die ID ein)."""
@@ -216,6 +229,10 @@ def main(argv: list[str] | None = None) -> int:
     v.add_argument("--id", action="append", required=True, help="Frage-ID (mehrfach möglich)")
     v.add_argument("--nach", required=True, choices=list(KATEGORIEN))
     v.set_defaults(func=cmd_verschieben)
+
+    e = sub.add_parser("entfernen", help="Fragen per ID löschen (Artikel bleibt als verarbeitet vermerkt)")
+    e.add_argument("--id", action="append", required=True, help="Frage-ID (mehrfach möglich)")
+    e.set_defaults(func=cmd_entfernen)
 
     b = sub.add_parser("bereinigen", help="Anführungszeichen/Rechtschreibung vereinheitlichen")
     b.add_argument("--kategorie", action="append", choices=list(KATEGORIEN))

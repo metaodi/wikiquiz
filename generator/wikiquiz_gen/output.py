@@ -87,6 +87,23 @@ def verschieben(ids: list[str], nach: str, verzeichnis: Path | None = None) -> l
     return verschoben
 
 
+def entfernen(ids: list[str], verzeichnis: Path | None = None) -> list[dict]:
+    """Löscht Fragen per ID aus allen Kategorien. Gibt die entfernten Fragen zurück.
+    Der Artikel bleibt in data/verarbeitet/ vermerkt, damit er nicht erneut verarbeitet wird."""
+    gesucht = set(ids)
+    entfernt: list[dict] = []
+    for kat in KATEGORIEN:
+        fragen = lade_kategorie(kat, verzeichnis)
+        bleiben = [f for f in fragen if f["id"] not in gesucht]
+        if len(bleiben) != len(fragen):
+            entfernt += [f for f in fragen if f["id"] in gesucht]
+            speichere_kategorie(kat, bleiben, verzeichnis)
+    fehlend = gesucht - {f["id"] for f in entfernt}
+    if fehlend:
+        raise ValueError(f"Nicht gefunden: {', '.join(sorted(fehlend))}")
+    return entfernt
+
+
 class Protokoll:
     """Verworfene Kandidaten/Fragen mit Grund → out/rejected.jsonl"""
 
