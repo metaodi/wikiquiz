@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "starwars",
- "generiert_am": "2026-11-16T10:29:08Z",
+ "generiert_am": "2026-11-16T13:31:04Z",
  "fragen": [
   {
    "id": "wp-046467db36",
@@ -74,6 +74,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Jar Jar Binks",
    "quelle_id": "Q51793"
+  },
+  {
+   "id": "wp-0b7a3e4dd3",
+   "kategorie": "starwars",
+   "frage": "Welcher Schauspieler verkörperte Han Solo in den ursprünglichen Star-Wars-Filmen ab 1977?",
+   "antworten": [
+    "Jeff Bridges",
+    "Harrison Ford",
+    "Mark Hamill",
+    "Kurt Russell"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Han_Solo",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Han Solo",
+   "quelle_id": "Q51802"
   },
   {
    "id": "wp-0e987f6444",
@@ -274,6 +292,24 @@
    "quelle_id": "Q12206942"
   },
   {
+   "id": "wp-27f507faf6",
+   "kategorie": "starwars",
+   "frage": "Welche Figur wird im Film «Der Aufstieg Skywalkers» als Reys Grossvater enthüllt?",
+   "antworten": [
+    "Darth Vader",
+    "Graf Dooku",
+    "Imperator Palpatine",
+    "Obi-Wan Kenobi"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Rey_(Star_Wars)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rey (Star Wars)",
+   "quelle_id": "Q21772117"
+  },
+  {
    "id": "wp-2b5f743872",
    "kategorie": "starwars",
    "frage": "Welche Stadt verwaltet Lando Calrissian, als er in «Das Imperium schlägt zurück» erstmals auftritt?",
@@ -308,6 +344,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Das Buch von Boba Fett",
    "quelle_id": "Q104396610"
+  },
+  {
+   "id": "wp-2dc462035a",
+   "kategorie": "starwars",
+   "frage": "Welcher Schauspieler spielt Kylo Ren in den Star-Wars-Filmen ab 2015?",
+   "antworten": [
+    "John Boyega",
+    "Oscar Isaac",
+    "Domhnall Gleeson",
+    "Adam Driver"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Kylo_Ren",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kylo Ren",
+   "quelle_id": "Q21515016"
   },
   {
    "id": "wp-30ade09311",
@@ -562,6 +616,24 @@
    "quelle_id": "Q725902"
   },
   {
+   "id": "wp-5749b7400d",
+   "kategorie": "starwars",
+   "frage": "Welche Schauspielerin verkörperte Prinzessin Leia in den ursprünglichen Star-Wars-Filmen?",
+   "antworten": [
+    "Natalie Portman",
+    "Sigourney Weaver",
+    "Daisy Ridley",
+    "Carrie Fisher"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Princess_Leia",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Princess Leia",
+   "quelle_id": "Q51797"
+  },
+  {
    "id": "wp-58dfe4388b",
    "kategorie": "starwars",
    "frage": "Welchen Namen trug Darth Vader, bevor er der dunklen Seite der Macht verfiel?",
@@ -650,6 +722,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Hutt (Star Wars)",
    "quelle_id": "Q340152"
+  },
+  {
+   "id": "wp-6b7a872c40",
+   "kategorie": "starwars",
+   "frage": "Welche Schauspielerin spielt Rey in der Star-Wars-Trilogie ab «Das Erwachen der Macht»?",
+   "antworten": [
+    "Keira Knightley",
+    "Emilia Clarke",
+    "Daisy Ridley",
+    "Felicity Jones"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Rey_(Star_Wars)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rey (Star Wars)",
+   "quelle_id": "Q21772117"
   },
   {
    "id": "wp-6bcd10b93d",
@@ -848,6 +938,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Lightsaber",
    "quelle_id": "Q19873"
+  },
+  {
+   "id": "wp-84033ce656",
+   "kategorie": "starwars",
+   "frage": "Welche Körperform hat der Droide BB-8 aus den neueren Star-Wars-Filmen?",
+   "antworten": [
+    "Zylinder",
+    "Kugel",
+    "Kegel",
+    "Würfel"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/BB-8",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "BB-8",
+   "quelle_id": "Q21541731"
   },
   {
    "id": "wp-87e6282bd2",
@@ -1228,6 +1336,24 @@
    "quelle_id": "Q20501234"
   },
   {
+   "id": "wp-c1385a5310",
+   "kategorie": "starwars",
+   "frage": "Welcher Star-Wars-Held ist der Vater des Bösewichts Kylo Ren?",
+   "antworten": [
+    "Lando Calrissian",
+    "Obi-Wan Kenobi",
+    "Han Solo",
+    "Luke Skywalker"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Kylo_Ren",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kylo Ren",
+   "quelle_id": "Q21515016"
+  },
+  {
    "id": "wp-c749d3b0e4",
    "kategorie": "starwars",
    "frage": "Auf welchem Streamingdienst startete 2024 die Star-Wars-Serie «The Acolyte»?",
@@ -1246,6 +1372,24 @@
    "quelle_id": "Q104161310"
   },
   {
+   "id": "wp-c7cb8bddd4",
+   "kategorie": "starwars",
+   "frage": "Welcher Schauspieler verkörpert den Droiden C-3PO in allen Filmen der Star-Wars-Skywalker-Saga?",
+   "antworten": [
+    "Kenny Baker",
+    "Anthony Daniels",
+    "Warwick Davis",
+    "Peter Mayhew"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/C-3PO",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "C-3PO",
+   "quelle_id": "Q51787"
+  },
+  {
    "id": "wp-c7e200533a",
    "kategorie": "starwars",
    "frage": "Welche typische Waffe benutzen die Jedi-Ritter in Star Wars?",
@@ -1262,6 +1406,42 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Jedi",
    "quelle_id": "Q51724"
+  },
+  {
+   "id": "wp-cbb133e1e9",
+   "kategorie": "starwars",
+   "frage": "Wie heisst der haarige Wookiee, der Han Solo als treuer Freund und Copilot begleitet?",
+   "antworten": [
+    "Yoda",
+    "Jabba",
+    "Lando",
+    "Chewbacca"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Han_Solo",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Han Solo",
+   "quelle_id": "Q51802"
+  },
+  {
+   "id": "wp-cf341d8254",
+   "kategorie": "starwars",
+   "frage": "Für wen arbeitet Boba Fett im Film «Die Rückkehr der Jedi-Ritter» (1983)?",
+   "antworten": [
+    "Grand Moff Tarkin",
+    "Jabba der Hutte",
+    "Lando Calrissian",
+    "Graf Dooku"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Boba_Fett",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Boba Fett",
+   "quelle_id": "Q51790"
   },
   {
    "id": "wp-cf3bb3f312",
@@ -1336,6 +1516,24 @@
    "quelle_id": "Q51795"
   },
   {
+   "id": "wp-d33705ee5e",
+   "kategorie": "starwars",
+   "frage": "Welcher Schauspieler steckte in den ersten drei Star-Wars-Filmen im Kostüm von R2-D2?",
+   "antworten": [
+    "Warwick Davis",
+    "Anthony Daniels",
+    "Peter Mayhew",
+    "Kenny Baker"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/R2-D2",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "R2-D2",
+   "quelle_id": "Q51788"
+  },
+  {
    "id": "wp-d5624b03a0",
    "kategorie": "starwars",
    "frage": "Wie viele Sonnen hat der Wüstenplanet Tatooine aus Star Wars?",
@@ -1388,6 +1586,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Rebel Alliance",
    "quelle_id": "Q52316"
+  },
+  {
+   "id": "wp-dd25017b7d",
+   "kategorie": "starwars",
+   "frage": "Wer erwürgt in «Die Rückkehr der Jedi-Ritter» den Verbrecherboss Jabba the Hutt?",
+   "antworten": [
+    "Luke Skywalker",
+    "Chewbacca",
+    "Lando Calrissian",
+    "Prinzessin Leia"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Jabba_the_Hutt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jabba the Hutt",
+   "quelle_id": "Q51794"
   },
   {
    "id": "wp-dfd7e242df",
@@ -1604,6 +1820,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Palpatine",
    "quelle_id": "Q51770"
+  },
+  {
+   "id": "wp-fa6c58e51e",
+   "kategorie": "starwars",
+   "frage": "Welcher Schauspieler spielt den jungen Obi-Wan Kenobi in den Star-Wars-Prequel-Filmen ab 1999?",
+   "antworten": [
+    "Ewan McGregor",
+    "Hayden Christensen",
+    "Liam Neeson",
+    "Jude Law"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Obi-Wan_Kenobi",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Obi-Wan Kenobi",
+   "quelle_id": "Q51740"
   }
  ]
 }
