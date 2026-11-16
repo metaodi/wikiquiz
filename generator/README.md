@@ -73,10 +73,39 @@ Einmalig nötig:
     konfiguriert ist.
 - optional Variablen `WIKIQUIZ_GEN_MODEL` / `WIKIQUIZ_CHECK_MODEL` (sonst `claude-opus-5-5`)
 
+## Eigene Artikel (Nischenwissen der Spielrunde)
+
+In `generator/eigene_artikel.toml` lassen sich pro Kategorie einige Wikipedia-Artikel (ca. 5–10) von Hand
+eintragen, deren Themen die eigene Spielrunde kennt, auch wenn sie sonst nie den Bekanntheitsfilter bestehen:
+
+```toml
+schweiz = ["Zibelemärit", "Chesslete"]
+starwars = ["en:Grogu"]   # englische Wikipedia mit Präfix „en:“
+```
+
+- Titel wie in der deutschsprachigen Wikipedia; Weiterleitungen werden aufgelöst. Fehlende Artikel,
+  Begriffsklärungen und Artikel ohne Wikidata-Objekt werden im Log gemeldet und übersprungen
+  (`rejected.jsonl`, Stufe `eigene`). Unbekannte Kategorien in der Datei brechen den Lauf ab.
+- **Ohne Bekanntheitsfilter:** Sitelinks, Seitenaufrufe, Artikellänge und Kategorie-Abgleich gelten nicht.
+  Der Textauszug braucht wie immer mind. 800 Zeichen.
+- **Vorrang und ausserhalb des Ziels:** Eigene Artikel werden vor allen anderen verarbeitet, auch wenn der
+  Zielbestand (`--ziel`) schon erreicht ist; ihre Fragen zählen nicht gegen den Bedarf, die Artikel aber
+  gegen `--max-artikel`. Ist das Ziel erreicht und sind alle eigenen Artikel verarbeitet, läuft nichts.
+- **LLM:** An die USER-Nachricht wird ein Hinweis angehängt (`GENERIERUNG_ZUSATZ_EIGEN`, wörtlich in `SPEC.md`),
+  dass das Thema bewusst ausgewählt wurde. Die Schwellen „Bekanntheit des Themas ≥ 3“ und „Allgemeinwissen ≥ 3“
+  entfallen; Belegstelle, unabhängige Prüfung, Eindeutigkeit, formale Regeln und Deduplizierung gelten weiter.
+- Jeder eigene Artikel wird einmal als eigener verarbeitet (`"eigen": true` in `data/verarbeitet/`). Ein früher
+  automatisch verarbeiteter Artikel (z. B. ohne Fragen wegen Bekanntheit < 3) kommt dabei einmal erneut dran.
+  Weiterhin übersprungen werden Artikel mit schon 2 Fragen, amtierende Personen und Artikel, zu denen eine
+  andere Kategorie schon Fragen hat.
+- Ausprobieren ohne Kosten: `python -m wikiquiz_gen generate --kategorie schweiz --quelle wikipedia --ziel 0 --nur-kandidaten`
+  listet nur die eigenen Artikel auf.
+
 ## LLM-Pipeline (Wikipedia)
 
 1. **Artikelauswahl:** Startkategorien pro Quizkategorie (`wikipedia/quellen.py`) sowie exzellente und
-   lesenswerte Artikel, die über ihre Wikipedia-Kategorien per Stichwort zugeordnet werden.
+   lesenswerte Artikel, die über ihre Wikipedia-Kategorien per Stichwort zugeordnet werden. Dazu kommen
+   vorab die eigenen Artikel aus `eigene_artikel.toml` (siehe oben), ohne Bekanntheitsfilter.
    Danach der Bekanntheitsfilter; die bekanntesten Artikel werden zuerst verarbeitet.
    **Kategorie-Abgleich:** Zeigen die Wikipedia-Kategorien und die Wikidata-Berufe (P106) eines Artikels
    eindeutig auf eine andere Quizkategorie, wird er übersprungen (z. B. Friedrich II. aus „Komponist (Klassik)“
@@ -112,8 +141,8 @@ Einmalig nötig:
 3. **Generierung:** Prompt wörtlich aus `SPEC.md` (`llm/prompts.py`, ein Test prüft die Übereinstimmung),
    strukturierte JSON-Ausgabe erzwungen.
 4. **Prüfung:** zweiter, unabhängiger Aufruf mit gemischten Antworten, ohne Hinweis auf die richtige.
-5. **Aufnahme** nur, wenn: Bekanntheit des Themas ≥ 3, Belegstelle steht im Text (ß/ss und
-   Anführungszeichen normalisiert), Prüfer wählt dieselbe Antwort, eindeutig, Allgemeinwissen ≥ 3,
+5. **Aufnahme** nur, wenn: Bekanntheit des Themas ≥ 3 (nicht bei eigenen Artikeln), Belegstelle steht im Text (ß/ss und
+   Anführungszeichen normalisiert), Prüfer wählt dieselbe Antwort, eindeutig, Allgemeinwissen ≥ 3 (nicht bei eigenen Artikeln),
    formale Regeln eingehalten. Danach Deduplizierung gegen den Bestand: fast gleicher Wortlaut, dieselbe
    Tatsache mit leicht anderer Antwort („Überfall auf Polen“ / „Deutscher Überfall auf Polen“, gewichtete
    Wortüberschneidung ≥ 0.6) und Fragen, die sich gegenseitig verraten („Wer war Obamas Vizepräsident?“ ↔
@@ -137,6 +166,7 @@ also rund 5–15 USD für 150 Fragen einer Kategorie. Der Lauf protokolliert die
 | `WIKIQUIZ_CACHE_DIR` | HTTP-Cache (Standard `generator/cache/`) |
 | `WIKIQUIZ_OUT_DIR` | Protokolle und Reviews (Standard `generator/out/`) |
 | `WIKIQUIZ_DATA_DIR` | Fragenablage (Standard `data/fragen/`) |
+| `WIKIQUIZ_EIGENE_ARTIKEL` | Liste eigener Artikel pro Kategorie (Standard `generator/eigene_artikel.toml`) |
 | `ANTHROPIC_API_KEY` | API-Key für die LLM-Pipeline (nur im Generator, nie in der App) |
 | `WIKIQUIZ_GEN_MODEL`, `WIKIQUIZ_CHECK_MODEL` | Modelle für Generierung und Prüfung (Standard `claude-opus-5-5`) |
 | `WIKIQUIZ_EFFORT` | Denkaufwand `low`/`medium`/`high` (Standard `medium`) |

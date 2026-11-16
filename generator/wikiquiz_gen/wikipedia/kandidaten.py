@@ -238,3 +238,54 @@ def sammeln_englisch(http: Http, kategorie: str, min_sitelinks: int, max_pro_que
     log.info("%s (en): %d Artikel gefunden, %d mit mind. %d Sitelinks", kategorie, len(roh), len(kandidaten),
              min_sitelinks)
     return kandidaten
+
+
+def eigene_kandidaten(http: Http, titel_liste: list[str]) -> tuple[list[Kandidat], list[tuple[str, str]]]:
+    """Von Hand gepflegte Artikel (config.lade_eigene_artikel) als Kandidaten, ohne Bekanntheitsfilter.
+    Titel mit Präfix „en:“ stammen aus der englischen Wikipedia. Weiterleitungen werden aufgelöst.
+    Gibt (Kandidaten, [(Titel, Fehler)]) zurück: fehlende Artikel, Begriffsklärungen, ohne Wikidata-Objekt."""
+    nach_sprache: dict[str, list[str]] = {}
+    for t in titel_liste:
+        sprache, titel = ("en", t[3:].strip()) if t.startswith("en:") else ("de", t)
+        nach_sprache.setdefault(sprache, []).append(titel)
+
+    gefunden: list[tuple[str, str, str]] = []  # (Sprache, aufgelöster Titel, QID)
+    fehler: list[tuple[str, str]] = []
+    for sprache, titel in nach_sprache.items():
+        for i in range(0, len(titel), 50):
+            block = titel[i : i + 50]
+            res = http.json(api_url(sprache), params={
+                "action": "query", "format": "json", "formatversion": "2", "redirects": "1",
+                "prop": "pageprops", "ppprop": "wikibase_item|disambiguation", "titles": "|".join(block),
+            }, ttl=TAG)
+            q = res.get("query", {})
+            # Eingabe → normalisierter Titel → Weiterleitungsziel
+            ziel = {t: t for t in block}
+            for schritt in ("normalized", "redirects"):
+                abb = {n["from"]: n["to"] for n in q.get(schritt, [])}
+                ziel = {t: abb.get(z, z) for t, z in ziel.items()}
+            seiten = {p["title"]: p for p in q.get("pages", [])}
+            praefix = "en:" if sprache == "en" else ""
+            for t in block:
+                p = seiten.get(ziel[t], {})
+                props = p.get("pageprops", {})
+                if not p or p.get("missing") or p.get("invalid"):
+                    fehler.append((praefix + t, "artikel fehlt"))
+                elif "disambiguation" in props:
+                    fehler.append((praefix + t, "begriffsklaerung"))
+                elif not props.get("wikibase_item"):
+                    fehler.append((praefix + t, "kein wikidata-objekt"))
+                else:
+                    gefunden.append((sprache, p["title"], props["wikibase_item"]))
+
+    links = sitelinks(http, [q for _, _, q in gefunden])
+    kandidaten: list[Kandidat] = []
+    gesehen: set[str] = set()
+    for sprache, titel, q in gefunden:
+        if q in gesehen:
+            continue  # zwei Einträge, die auf denselben Artikel weiterleiten
+        gesehen.add(q)
+        k = Kandidat(qid=q, label=titel, titel=titel, sitelinks=links.get(q, 0), sprache=sprache)
+        k.extra.update({"quelle": "eigene Liste", "eigen": True})
+        kandidaten.append(k)
+    return kandidaten, fehler
