@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "geschichte",
- "generiert_am": "2026-11-16T08:35:53Z",
+ "generiert_am": "2026-11-16T11:49:01Z",
  "fragen": [
   {
    "id": "wp-0098785dd9",
@@ -74,6 +74,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Konrad Adenauer",
    "quelle_id": "Q2492"
+  },
+  {
+   "id": "wp-04b20b5ea1",
+   "kategorie": "geschichte",
+   "frage": "In welchen Jahren tagte der Wiener Kongress, der Europa nach Napoleons Niederlage neu ordnete?",
+   "antworten": [
+    "1814–1815",
+    "1848–1849",
+    "1789–1790",
+    "1870–1871"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wiener_Kongress",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Wiener Kongress",
+   "quelle_id": "Q46362"
   },
   {
    "id": "wp-05b37c0002",
@@ -382,6 +400,24 @@
    "quelle_id": "Q79789"
   },
   {
+   "id": "wp-1df2ed58e9",
+   "kategorie": "geschichte",
+   "frage": "Welche Forderungen der aufständischen Bauern von 1525 gelten als frühe Formulierung von Menschenrechten?",
+   "antworten": [
+    "Die 95 Thesen von Wittenberg",
+    "Die Goldene Bulle von Nürnberg",
+    "Die Zwölf Artikel von Memmingen",
+    "Der Ewige Landfriede von Worms"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Deutscher_Bauernkrieg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Deutscher Bauernkrieg",
+   "quelle_id": "Q154031"
+  },
+  {
    "id": "wp-1f1f31558d",
    "kategorie": "geschichte",
    "frage": "In welcher Stadt wurde der Reformator Martin Luther geboren?",
@@ -560,6 +596,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Massaker von Srebrenica",
    "quelle_id": "Q170334"
+  },
+  {
+   "id": "wp-3103d94c97",
+   "kategorie": "geschichte",
+   "frage": "Welcher Philosoph schrieb das Werk «Also sprach Zarathustra»?",
+   "antworten": [
+    "Georg W. F. Hegel",
+    "Immanuel Kant",
+    "Friedrich Nietzsche",
+    "Arthur Schopenhauer"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Friedrich_Nietzsche",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Friedrich Nietzsche",
+   "quelle_id": "Q9358"
   },
   {
    "id": "wp-3122fb83b4",
@@ -1046,6 +1100,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Kleopatra VII.",
    "quelle_id": "Q635"
+  },
+  {
+   "id": "wp-5f6b55e441",
+   "kategorie": "geschichte",
+   "frage": "In welchem Jahr brachen die ersten Aufstände des Deutschen Bauernkriegs aus?",
+   "antworten": [
+    "1618",
+    "1499",
+    "1524",
+    "1555"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Deutscher_Bauernkrieg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Deutscher Bauernkrieg",
+   "quelle_id": "Q154031"
   },
   {
    "id": "wp-5f818aadfb",

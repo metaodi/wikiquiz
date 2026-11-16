@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "schweiz",
- "generiert_am": "2026-11-16T11:08:21Z",
+ "generiert_am": "2026-11-16T11:49:02Z",
  "fragen": [
   {
    "id": "wd-04c83cba32",
@@ -1084,24 +1084,6 @@
    "quelle_id": "Q12724"
   },
   {
-   "id": "wp-04b20b5ea1",
-   "kategorie": "schweiz",
-   "frage": "In welchen Jahren tagte der Wiener Kongress, der Europa nach Napoleons Niederlage neu ordnete?",
-   "antworten": [
-    "1814–1815",
-    "1848–1849",
-    "1789–1790",
-    "1870–1871"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Wiener_Kongress",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Wiener Kongress",
-   "quelle_id": "Q46362"
-  },
-  {
    "id": "wp-05d26f2670",
    "kategorie": "schweiz",
    "frage": "In welchem Zeitraum war Christoph Blocher Mitglied des Schweizer Bundesrats?",
@@ -1118,24 +1100,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Christoph Blocher",
    "quelle_id": "Q123857"
-  },
-  {
-   "id": "wp-06ba047e90",
-   "kategorie": "schweiz",
-   "frage": "Zu welcher Wurstart zählt der Fleischkäse?",
-   "antworten": [
-    "Rohwurst",
-    "Dauerwurst",
-    "Brühwurst",
-    "Kochwurst"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Fleischk%C3%A4se",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Fleischkäse",
-   "quelle_id": "Q681841"
   },
   {
    "id": "wp-0e93696611",
@@ -1228,78 +1192,6 @@
    "quelle_id": "Q688557"
   },
   {
-   "id": "wp-1d94b2f255",
-   "kategorie": "schweiz",
-   "frage": "Welches Restprodukt aus der Herstellung anderer Käse ist der Hauptrohstoff von Ricotta?",
-   "antworten": [
-    "Buttermilch",
-    "Sauerrahm",
-    "Magermilch",
-    "Molke"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Ricotta",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Ricotta",
-   "quelle_id": "Q216781"
-  },
-  {
-   "id": "wp-1df2ed58e9",
-   "kategorie": "schweiz",
-   "frage": "Welche Forderungen der aufständischen Bauern von 1525 gelten als frühe Formulierung von Menschenrechten?",
-   "antworten": [
-    "Die 95 Thesen von Wittenberg",
-    "Die Goldene Bulle von Nürnberg",
-    "Die Zwölf Artikel von Memmingen",
-    "Der Ewige Landfriede von Worms"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Deutscher_Bauernkrieg",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Deutscher Bauernkrieg",
-   "quelle_id": "Q154031"
-  },
-  {
-   "id": "wp-20e6fd43d1",
-   "kategorie": "schweiz",
-   "frage": "Welcher Kanton hat nach Basel-Stadt die zweitkleinste Fläche der Schweiz?",
-   "antworten": [
-    "Zug",
-    "Schaffhausen",
-    "Appenzell Ausserrhoden",
-    "Appenzell Innerrhoden"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Appenzell_Innerrhoden",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Kanton Appenzell Innerrhoden",
-   "quelle_id": "Q12094"
-  },
-  {
-   "id": "wp-2263d05ca0",
-   "kategorie": "schweiz",
-   "frage": "Aus welcher Gebirgsregion stammt der als Neophyt gefürchtete Riesen-Bärenklau ursprünglich?",
-   "antworten": [
-    "Kaukasus",
-    "Ural",
-    "Himalaya",
-    "Karpaten"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Riesen-B%C3%A4renklau",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Riesen-Bärenklau",
-   "quelle_id": "Q826602"
-  },
-  {
    "id": "wp-245f98df3c",
    "kategorie": "schweiz",
    "frage": "Welche Sportart gilt neben Schwingen und Steinstossen als inoffizieller Nationalsport der Schweiz?",
@@ -1354,24 +1246,6 @@
    "quelle_id": "Q68097"
   },
   {
-   "id": "wp-3103d94c97",
-   "kategorie": "schweiz",
-   "frage": "Welcher Philosoph schrieb das Werk «Also sprach Zarathustra»?",
-   "antworten": [
-    "Georg W. F. Hegel",
-    "Immanuel Kant",
-    "Friedrich Nietzsche",
-    "Arthur Schopenhauer"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Friedrich_Nietzsche",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Friedrich Nietzsche",
-   "quelle_id": "Q9358"
-  },
-  {
    "id": "wp-32a5c0a0da",
    "kategorie": "schweiz",
    "frage": "Welcher Reformator machte Zürich ab 1519 zu einem Zentrum der Reformation?",
@@ -1424,24 +1298,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Luganersee",
    "quelle_id": "Q14418"
-  },
-  {
-   "id": "wp-3d0c15a673",
-   "kategorie": "schweiz",
-   "frage": "Woraus besteht die weiche, weisse Füllung eines Schokokusses hauptsächlich?",
-   "antworten": [
-    "Marzipanmasse",
-    "Gezuckerter Eiweissschaum",
-    "Nougatcreme",
-    "Vanillecreme"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Schokokuss",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Schokokuss",
-   "quelle_id": "Q1578239"
   },
   {
    "id": "wp-3d256d6c62",
@@ -1570,42 +1426,6 @@
    "quelle_id": "Q693078"
   },
   {
-   "id": "wp-53b6ce8617",
-   "kategorie": "schweiz",
-   "frage": "Aus welcher Getreideart wird der Griess für Polenta meist hergestellt?",
-   "antworten": [
-    "Hirse",
-    "Gerste",
-    "Mais",
-    "Weizen"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Polenta",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Polenta",
-   "quelle_id": "Q131607"
-  },
-  {
-   "id": "wp-53e0ace94c",
-   "kategorie": "schweiz",
-   "frage": "Worauf geht der Name der Waldohreule zurück?",
-   "antworten": [
-    "Ihr ausgezeichnetes Gehör",
-    "Zwei Federbüschel am Kopf",
-    "Besonders grosse Ohröffnungen",
-    "Ihr ohrenbetäubender Ruf"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Waldohreule",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Waldohreule",
-   "quelle_id": "Q25384"
-  },
-  {
    "id": "wp-59343782b5",
    "kategorie": "schweiz",
    "frage": "Wofür sind die bekanntesten Skulpturen des Schweizer Künstlers Alberto Giacometti berühmt?",
@@ -1622,24 +1442,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Alberto Giacometti",
    "quelle_id": "Q157194"
-  },
-  {
-   "id": "wp-5a53e15eb6",
-   "kategorie": "schweiz",
-   "frage": "Was muss beim Hautkontakt mit dem Riesen-Bärenklau hinzukommen, damit schmerzhafte Blasen entstehen?",
-   "antworten": [
-    "Kälte",
-    "Sonnenlicht",
-    "Regenwasser",
-    "Schweiss"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Riesen-B%C3%A4renklau",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Riesen-Bärenklau",
-   "quelle_id": "Q826602"
   },
   {
    "id": "wp-5d6e1d15af",
@@ -1660,42 +1462,6 @@
    "quelle_id": "Q72"
   },
   {
-   "id": "wp-5d84262873",
-   "kategorie": "schweiz",
-   "frage": "Welcher US-Kampfpanzer entstand wie der Leopard 2 aus einem gescheiterten deutsch-amerikanischen Gemeinschaftsprojekt?",
-   "antworten": [
-    "M1 Abrams",
-    "M4 Sherman",
-    "M60 Patton",
-    "M26 Pershing"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Leopard_2",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Leopard 2",
-   "quelle_id": "Q151968"
-  },
-  {
-   "id": "wp-5f6b55e441",
-   "kategorie": "schweiz",
-   "frage": "In welchem Jahr brachen die ersten Aufstände des Deutschen Bauernkriegs aus?",
-   "antworten": [
-    "1618",
-    "1499",
-    "1524",
-    "1555"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Deutscher_Bauernkrieg",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Deutscher Bauernkrieg",
-   "quelle_id": "Q154031"
-  },
-  {
    "id": "wp-623104bd4f",
    "kategorie": "schweiz",
    "frage": "An welchen dieser Seen grenzt der Kanton Schwyz?",
@@ -1712,42 +1478,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Kanton Schwyz",
    "quelle_id": "Q12433"
-  },
-  {
-   "id": "wp-6625ad0502",
-   "kategorie": "schweiz",
-   "frage": "Unter welchem weiteren Namen ist der Stieglitz bekannt?",
-   "antworten": [
-    "Distelfink",
-    "Buchfink",
-    "Grünfink",
-    "Bergfink"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Stieglitz",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Stieglitz",
-   "quelle_id": "Q25418"
-  },
-  {
-   "id": "wp-69a99b2969",
-   "kategorie": "schweiz",
-   "frage": "In welchem Teil Italiens ist Polenta traditionell besonders beliebt?",
-   "antworten": [
-    "Sardinien",
-    "Norditalien",
-    "Sizilien",
-    "Süditalien"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Polenta",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Polenta",
-   "quelle_id": "Q131607"
   },
   {
    "id": "wp-6aa7465487",
@@ -1822,24 +1552,6 @@
    "quelle_id": "Q178611"
   },
   {
-   "id": "wp-7622d7a758",
-   "kategorie": "schweiz",
-   "frage": "Unter welchem Namen ist der Schokokuss in Österreich bekannt?",
-   "antworten": [
-    "Tirolerkuss",
-    "Wiener Kugel",
-    "Dänenkrapfen",
-    "Schwedenbombe"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Schokokuss",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Schokokuss",
-   "quelle_id": "Q1578239"
-  },
-  {
    "id": "wp-7e990e6894",
    "kategorie": "schweiz",
    "frage": "Welche internationale Hilfsorganisation geht auf den Genfer Henry Dunant zurück?",
@@ -1874,24 +1586,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Kanton (Schweiz)",
    "quelle_id": "Q23058"
-  },
-  {
-   "id": "wp-86c0b34047",
-   "kategorie": "schweiz",
-   "frage": "Durch welchen grossen See fliesst die Rhone, bevor sie die Schweiz bei Genf verlässt?",
-   "antworten": [
-    "Neuenburgersee",
-    "Bodensee",
-    "Lago Maggiore",
-    "Genfersee"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Rhone",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Rhone",
-   "quelle_id": "Q602"
   },
   {
    "id": "wp-880b09d461",
@@ -1966,24 +1660,6 @@
    "quelle_id": "Q693078"
   },
   {
-   "id": "wp-92383941c9",
-   "kategorie": "schweiz",
-   "frage": "Woher stammt der Wortteil «Käse» im Namen Fleischkäse bzw. Leberkäse?",
-   "antworten": [
-    "Von der hellgelben Farbe",
-    "Von der Form der Laibe",
-    "Von der Reifung im Käsekeller",
-    "Vom beigemischten Bergkäse"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Fleischk%C3%A4se",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Fleischkäse",
-   "quelle_id": "Q681841"
-  },
-  {
    "id": "wp-93298e97de",
    "kategorie": "schweiz",
    "frage": "In welchen grossen Fluss mündet der Inn, der im Engadin entspringt?",
@@ -2036,24 +1712,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Maggi",
    "quelle_id": "Q688424"
-  },
-  {
-   "id": "wp-9beff9362f",
-   "kategorie": "schweiz",
-   "frage": "Welcher Fluss verlässt den Zürichsee in der Stadt Zürich als Hauptabfluss?",
-   "antworten": [
-    "Sihl",
-    "Reuss",
-    "Glatt",
-    "Limmat"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Z%C3%BCrichsee",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Zürichsee",
-   "quelle_id": "Q14407"
   },
   {
    "id": "wp-9e6d5ee01e",
@@ -2162,24 +1820,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Aare",
    "quelle_id": "Q1675"
-  },
-  {
-   "id": "wp-bb38928255",
-   "kategorie": "schweiz",
-   "frage": "Was bedeutet der italienische Käsename «Ricotta» wörtlich übersetzt?",
-   "antworten": [
-    "Nochmals gekocht",
-    "Frisch gemolken",
-    "Kleiner Laib",
-    "Weisser Käse"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Ricotta",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Ricotta",
-   "quelle_id": "Q216781"
   },
   {
    "id": "wp-bbd0d126f9",
@@ -2362,24 +2002,6 @@
    "quelle_id": "Q584"
   },
   {
-   "id": "wp-d02a0ec122",
-   "kategorie": "schweiz",
-   "frage": "Aus welchem Land stammt der Kampfpanzer Leopard 2?",
-   "antworten": [
-    "Frankreich",
-    "Grossbritannien",
-    "Deutschland",
-    "USA"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Leopard_2",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Leopard 2",
-   "quelle_id": "Q151968"
-  },
-  {
    "id": "wp-d42c2dca90",
    "kategorie": "schweiz",
    "frage": "Was war Alberich Zwyssig, der Komponist des Schweizerpsalms, von Beruf?",
@@ -2432,78 +2054,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Alpen",
    "quelle_id": "Q1286"
-  },
-  {
-   "id": "wp-dd6061870c",
-   "kategorie": "schweiz",
-   "frage": "Welche Farbe hat die auffällige Binde auf den Flügeln des Stieglitzes?",
-   "antworten": [
-    "Weiss",
-    "Rot",
-    "Blau",
-    "Gelb"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Stieglitz",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Stieglitz",
-   "quelle_id": "Q25418"
-  },
-  {
-   "id": "wp-e14be12326",
-   "kategorie": "schweiz",
-   "frage": "Welches Flusstal in Deutschland wurde beim Hochwasser im Sommer 2021 besonders schwer verwüstet?",
-   "antworten": [
-    "Das Moseltal",
-    "Das Siegtal",
-    "Das Ahrtal",
-    "Das Lahntal"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Hochwasser_in_West-_und_Mitteleuropa_2021",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Hochwasser in West- und Mitteleuropa 2021",
-   "quelle_id": "Q107529288"
-  },
-  {
-   "id": "wp-e511594020",
-   "kategorie": "schweiz",
-   "frage": "Aus welchem Gestein besteht das Mittelgebirge Schwäbische Alb hauptsächlich?",
-   "antworten": [
-    "Basalt",
-    "Kalkstein",
-    "Granit",
-    "Sandstein"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Schw%C3%A4bische_Alb",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Schwäbische Alb",
-   "quelle_id": "Q159589"
-  },
-  {
-   "id": "wp-e9d32f332a",
-   "kategorie": "schweiz",
-   "frage": "Welcher deutlich grösseren Eulenart sieht die Waldohreule wegen Federohren und Gefieder ähnlich?",
-   "antworten": [
-    "Steinkauz",
-    "Schneeeule",
-    "Waldkauz",
-    "Uhu"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Waldohreule",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Waldohreule",
-   "quelle_id": "Q25384"
   },
   {
    "id": "wp-ea3663da18",
@@ -2596,42 +2146,6 @@
    "quelle_id": "Q602"
   },
   {
-   "id": "wp-f615969c9a",
-   "kategorie": "schweiz",
-   "frage": "Welches politische Kabarett gründete Erika Mann 1933?",
-   "antworten": [
-    "Die Katakombe",
-    "Die Pfeffermühle",
-    "Die Distel",
-    "Cabaret Voltaire"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Erika_Mann",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Erika Mann",
-   "quelle_id": "Q61597"
-  },
-  {
-   "id": "wp-f6eb24ecfa",
-   "kategorie": "schweiz",
-   "frage": "In welchem Land forderte das Hochwasser in West- und Mitteleuropa 2021 die meisten Todesopfer?",
-   "antworten": [
-    "Österreich",
-    "Belgien",
-    "Schweiz",
-    "Deutschland"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Hochwasser_in_West-_und_Mitteleuropa_2021",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Hochwasser in West- und Mitteleuropa 2021",
-   "quelle_id": "Q107529288"
-  },
-  {
    "id": "wp-fc91c0a44c",
    "kategorie": "schweiz",
    "frage": "In welchem Jahr wurde die Schweiz mit der Annahme einer Bundesverfassung zum Bundesstaat?",
@@ -2648,24 +2162,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Geschichte der Schweiz",
    "quelle_id": "Q208761"
-  },
-  {
-   "id": "wp-fd6be2628e",
-   "kategorie": "schweiz",
-   "frage": "Welcher Fluss fliesst durch den Bodensee?",
-   "antworten": [
-    "Aare",
-    "Rhein",
-    "Donau",
-    "Inn"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Bodensee",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Bodensee",
-   "quelle_id": "Q4127"
   },
   {
    "id": "wp-fe4d04cb04",
