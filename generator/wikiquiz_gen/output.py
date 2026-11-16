@@ -50,6 +50,12 @@ def schreibe_kategorie(
     return speichere_kategorie(kategorie, alte + [f for f in neue if f["id"] not in vorhandene], verzeichnis)
 
 
+def ersetzbare_quellen(modus: str, quellen: set[str]) -> set[str]:
+    """Welche Quellen ein Lauf ersetzen darf. Nur Wikidata-Fragen (deterministisch neu erzeugbar);
+    Wikipedia-Fragen werden immer nur ergänzt, sonst gingen bereits bezahlte Fragen verloren."""
+    return quellen & {"wikidata"} if modus == "ersetzen" else set()
+
+
 def speichere_kategorie(kategorie: str, fragen: list[dict], verzeichnis: Path | None = None) -> list[dict]:
     """Schreibt alle Fragen einer Kategorie (sortiert, damit Diffs klein bleiben)."""
     fragen = sorted(fragen, key=lambda f: (f["quelle_typ"], f["id"]))

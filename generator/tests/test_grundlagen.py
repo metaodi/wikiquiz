@@ -160,3 +160,22 @@ def test_verschieben(tmp_path):
     assert ziel[0]["id"] == a["id"] and ziel[0]["kategorie"] == "naturwissenschaften"
     with pytest.raises(ValueError):
         verschieben(["wp-gibtsnicht"], "geschichte", verzeichnis=tmp_path)
+
+
+def test_ersetzen_loescht_nie_wikipedia_fragen(tmp_path):
+    from wikiquiz_gen.output import ersetzbare_quellen, lade_kategorie, schreibe_kategorie
+
+    assert ersetzbare_quellen("ersetzen", {"wikidata", "wikipedia"}) == {"wikidata"}
+    assert ersetzbare_quellen("ersetzen", {"wikipedia"}) == set()
+    assert ersetzbare_quellen("ergaenzen", {"wikidata"}) == set()
+
+    alt_wd = frage().to_json()
+    alt_wp = frage(quelle_typ="wikipedia", frage="Welche Sprache spricht man in Kanada?", richtig="Englisch",
+                   falsch=["Spanisch", "Russisch", "Arabisch"]).to_json()
+    schreibe_kategorie("geografie", [alt_wd, alt_wp], set(), verzeichnis=tmp_path)
+    neu_wd = frage(frage="Auf welchem Kontinent liegt Kanada?", richtig="Nordamerika",
+                   falsch=["Europa", "Asien", "Afrika"]).to_json()
+    # Lauf mit Quelle „alle“ und Modus „ersetzen“: alte Wikidata-Frage weg, Wikipedia-Frage bleibt
+    ersetzen = ersetzbare_quellen("ersetzen", {"wikidata", "wikipedia"})
+    schreibe_kategorie("geografie", [neu_wd], ersetzen, modus="ersetzen", verzeichnis=tmp_path)
+    assert {f["id"] for f in lade_kategorie("geografie", tmp_path)} == {neu_wd["id"], alt_wp["id"]}
