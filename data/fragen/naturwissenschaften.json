@@ -4,6 +4,1266 @@
  "generiert_am": "2026-11-16T07:54:25Z",
  "fragen": [
   {
+   "id": "wd-022fe2cd6f",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Symbol hat das Element Arsen?",
+   "antworten": [
+    "Al",
+    "Ag",
+    "As",
+    "At"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Arsen",
+   "lizenz": "CC0",
+   "quelle_titel": "Arsen",
+   "quelle_id": "Q871"
+  },
+  {
+   "id": "wd-057104db29",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol Na?",
+   "antworten": [
+    "Stickstoff",
+    "Natrium",
+    "Nickel",
+    "Neptunium"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Natrium",
+   "lizenz": "CC0",
+   "quelle_titel": "Natrium",
+   "quelle_id": "Q658"
+  },
+  {
+   "id": "wd-09f1db4afa",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Albert Einstein den Nobelpreis?",
+   "antworten": [
+    "Literatur",
+    "Physik",
+    "Medizin",
+    "Chemie"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Albert_Einstein",
+   "lizenz": "CC0",
+   "quelle_titel": "Albert Einstein",
+   "quelle_id": "Q937"
+  },
+  {
+   "id": "wd-10b3871576",
+   "kategorie": "naturwissenschaften",
+   "frage": "Wer entdeckte das Proton?",
+   "antworten": [
+    "Ernest Rutherford",
+    "David Hilbert",
+    "Guglielmo Marconi",
+    "Albert Einstein"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Proton",
+   "lizenz": "CC0",
+   "quelle_titel": "Proton",
+   "quelle_id": "Q2294"
+  },
+  {
+   "id": "wd-1101bd0561",
+   "kategorie": "naturwissenschaften",
+   "frage": "Wer entdeckte den Jupitermond Io?",
+   "antworten": [
+    "Nikolaus Kopernikus",
+    "Leonardo da Vinci",
+    "Leonhard Euler",
+    "Galileo Galilei"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Io_(Mond)",
+   "lizenz": "CC0",
+   "quelle_titel": "Io (Mond)",
+   "quelle_id": "Q3123"
+  },
+  {
+   "id": "wd-1993827bc2",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol Cu?",
+   "antworten": [
+    "Chlor",
+    "Chrom",
+    "Calcium",
+    "Kupfer"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kupfer",
+   "lizenz": "CC0",
+   "quelle_titel": "Kupfer",
+   "quelle_id": "Q753"
+  },
+  {
+   "id": "wd-21a4fcea6a",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Symbol hat das Element Tantal?",
+   "antworten": [
+    "Ta",
+    "Th",
+    "Ti",
+    "Tc"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tantal",
+   "lizenz": "CC0",
+   "quelle_titel": "Tantal",
+   "quelle_id": "Q1123"
+  },
+  {
+   "id": "wd-22748969a1",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol Bi?",
+   "antworten": [
+    "Bor",
+    "Brom",
+    "Bismut",
+    "Beryllium"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bismut",
+   "lizenz": "CC0",
+   "quelle_titel": "Bismut",
+   "quelle_id": "Q942"
+  },
+  {
+   "id": "wd-2435200ba6",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Werner Heisenberg den Nobelpreis?",
+   "antworten": [
+    "Frieden",
+    "Physik",
+    "Medizin",
+    "Chemie"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Werner_Heisenberg",
+   "lizenz": "CC0",
+   "quelle_titel": "Werner Heisenberg",
+   "quelle_id": "Q40904"
+  },
+  {
+   "id": "wd-2478b2134f",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Enrico Fermi den Nobelpreis?",
+   "antworten": [
+    "Medizin",
+    "Literatur",
+    "Physik",
+    "Chemie"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Enrico_Fermi",
+   "lizenz": "CC0",
+   "quelle_titel": "Enrico Fermi",
+   "quelle_id": "Q8753"
+  },
+  {
+   "id": "wd-24f60e86bd",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welche physikalische Grösse wird in der Einheit Watt angegeben?",
+   "antworten": [
+    "Kraft",
+    "Temperatur",
+    "Leistung",
+    "Masse"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Watt_(Einheit)",
+   "lizenz": "CC0",
+   "quelle_titel": "Watt (Einheit)",
+   "quelle_id": "Q25236"
+  },
+  {
+   "id": "wd-259b6980b6",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Wilhelm Conrad Röntgen den Nobelpreis?",
+   "antworten": [
+    "Chemie",
+    "Medizin",
+    "Physik",
+    "Frieden"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wilhelm_Conrad_R%C3%B6ntgen",
+   "lizenz": "CC0",
+   "quelle_titel": "Wilhelm Conrad Röntgen",
+   "quelle_id": "Q35149"
+  },
+  {
+   "id": "wd-26524da337",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Symbol hat das Element Gold?",
+   "antworten": [
+    "As",
+    "Ge",
+    "Au",
+    "Ar"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gold",
+   "lizenz": "CC0",
+   "quelle_titel": "Gold",
+   "quelle_id": "Q897"
+  },
+  {
+   "id": "wd-271f78476b",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Emil von Behring den Nobelpreis?",
+   "antworten": [
+    "Chemie",
+    "Physik",
+    "Literatur",
+    "Medizin"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Emil_von_Behring",
+   "lizenz": "CC0",
+   "quelle_titel": "Emil von Behring",
+   "quelle_id": "Q76425"
+  },
+  {
+   "id": "wd-275c7da164",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welcher Einheit wird die elektrische Spannung angegeben?",
+   "antworten": [
+    "Ohm",
+    "Mol",
+    "Ampere",
+    "Volt"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Volt",
+   "lizenz": "CC0",
+   "quelle_titel": "Volt",
+   "quelle_id": "Q25250"
+  },
+  {
+   "id": "wd-3ac3d84ea2",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol Pu?",
+   "antworten": [
+    "Plutonium",
+    "Phosphor",
+    "Platin",
+    "Palladium"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Plutonium",
+   "lizenz": "CC0",
+   "quelle_titel": "Plutonium",
+   "quelle_id": "Q1102"
+  },
+  {
+   "id": "wd-3b462d1ac5",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Irène Joliot-Curie den Nobelpreis?",
+   "antworten": [
+    "Chemie",
+    "Physik",
+    "Literatur",
+    "Medizin"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ir%C3%A8ne_Joliot-Curie",
+   "lizenz": "CC0",
+   "quelle_titel": "Irène Joliot-Curie",
+   "quelle_id": "Q7504"
+  },
+  {
+   "id": "wd-3ebee21d72",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Symbol hat das Element Silber?",
+   "antworten": [
+    "Au",
+    "Ar",
+    "S",
+    "Ag"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Silber",
+   "lizenz": "CC0",
+   "quelle_titel": "Silber",
+   "quelle_id": "Q1090"
+  },
+  {
+   "id": "wd-4075af4d64",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol Pd?",
+   "antworten": [
+    "Plutonium",
+    "Palladium",
+    "Promethium",
+    "Platin"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Palladium",
+   "lizenz": "CC0",
+   "quelle_titel": "Palladium",
+   "quelle_id": "Q1089"
+  },
+  {
+   "id": "wd-46c2c1920e",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Symbol hat das Element Cer?",
+   "antworten": [
+    "Ce",
+    "Cu",
+    "C",
+    "Cr"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Cer",
+   "lizenz": "CC0",
+   "quelle_titel": "Cer",
+   "quelle_id": "Q1385"
+  },
+  {
+   "id": "wd-48df593a54",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol K?",
+   "antworten": [
+    "Kohlenstoff",
+    "Kupfer",
+    "Kalium",
+    "Krypton"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kalium",
+   "lizenz": "CC0",
+   "quelle_titel": "Kalium",
+   "quelle_id": "Q703"
+  },
+  {
+   "id": "wd-540e9cd0b6",
+   "kategorie": "naturwissenschaften",
+   "frage": "Wer entdeckte den Jupitermond Ganymed?",
+   "antworten": [
+    "Robert Hooke",
+    "Nikolaus Kopernikus",
+    "Galileo Galilei",
+    "Christiaan Huygens"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ganymed_(Mond)",
+   "lizenz": "CC0",
+   "quelle_titel": "Ganymed (Mond)",
+   "quelle_id": "Q3169"
+  },
+  {
+   "id": "wd-546f89a06a",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Erwin Schrödinger den Nobelpreis?",
+   "antworten": [
+    "Medizin",
+    "Physik",
+    "Literatur",
+    "Chemie"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger",
+   "lizenz": "CC0",
+   "quelle_titel": "Erwin Schrödinger",
+   "quelle_id": "Q9130"
+  },
+  {
+   "id": "wd-5786d49d5c",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol Ti?",
+   "antworten": [
+    "Technetium",
+    "Titan",
+    "Thallium",
+    "Tellur"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Titan_(Element)",
+   "lizenz": "CC0",
+   "quelle_titel": "Titan (Element)",
+   "quelle_id": "Q716"
+  },
+  {
+   "id": "wd-5847e96097",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Symbol hat das Element Uran?",
+   "antworten": [
+    "Ca",
+    "Hg",
+    "U",
+    "Ne"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Uran",
+   "lizenz": "CC0",
+   "quelle_titel": "Uran",
+   "quelle_id": "Q1098"
+  },
+  {
+   "id": "wd-5a03586fe6",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Fritz Haber den Nobelpreis?",
+   "antworten": [
+    "Literatur",
+    "Medizin",
+    "Chemie",
+    "Physik"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fritz_Haber",
+   "lizenz": "CC0",
+   "quelle_titel": "Fritz Haber",
+   "quelle_id": "Q57075"
+  },
+  {
+   "id": "wd-5a5085d39c",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welcher Einheit wird die elektrische Stromstärke angegeben?",
+   "antworten": [
+    "Joule",
+    "Ampere",
+    "Kilogramm",
+    "Lumen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ampere",
+   "lizenz": "CC0",
+   "quelle_titel": "Ampere",
+   "quelle_id": "Q25272"
+  },
+  {
+   "id": "wd-5fd5ec4012",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol He?",
+   "antworten": [
+    "Helium",
+    "Wasserstoff",
+    "Quecksilber",
+    "Hafnium"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Helium",
+   "lizenz": "CC0",
+   "quelle_titel": "Helium",
+   "quelle_id": "Q560"
+  },
+  {
+   "id": "wd-623bc2c4a8",
+   "kategorie": "naturwissenschaften",
+   "frage": "Wer entdeckte das Neutron?",
+   "antworten": [
+    "Irène Joliot-Curie",
+    "James Chadwick",
+    "C. V. Raman",
+    "Max Born"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Neutron",
+   "lizenz": "CC0",
+   "quelle_titel": "Neutron",
+   "quelle_id": "Q2348"
+  },
+  {
+   "id": "wd-66e835e786",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol Po?",
+   "antworten": [
+    "Palladium",
+    "Plutonium",
+    "Polonium",
+    "Phosphor"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Polonium",
+   "lizenz": "CC0",
+   "quelle_titel": "Polonium",
+   "quelle_id": "Q979"
+  },
+  {
+   "id": "wd-675e49d52a",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welcher Einheit wird die Masse angegeben?",
+   "antworten": [
+    "Kelvin",
+    "Hertz",
+    "Watt",
+    "Kilogramm"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kilogramm",
+   "lizenz": "CC0",
+   "quelle_titel": "Kilogramm",
+   "quelle_id": "Q11570"
+  },
+  {
+   "id": "wd-7197615fb9",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol Pb?",
+   "antworten": [
+    "Phosphor",
+    "Plutonium",
+    "Promethium",
+    "Blei"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Blei",
+   "lizenz": "CC0",
+   "quelle_titel": "Blei",
+   "quelle_id": "Q708"
+  },
+  {
+   "id": "wd-7703b9f396",
+   "kategorie": "naturwissenschaften",
+   "frage": "Wer entdeckte Pluto?",
+   "antworten": [
+    "Clyde Tombaugh",
+    "Edwin Hubble",
+    "Carl Sagan",
+    "Svante Arrhenius"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pluto",
+   "lizenz": "CC0",
+   "quelle_titel": "Pluto",
+   "quelle_id": "Q339"
+  },
+  {
+   "id": "wd-7e963a9ad5",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol N?",
+   "antworten": [
+    "Neptunium",
+    "Neon",
+    "Niob",
+    "Stickstoff"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Stickstoff",
+   "lizenz": "CC0",
+   "quelle_titel": "Stickstoff",
+   "quelle_id": "Q627"
+  },
+  {
+   "id": "wd-83122d3321",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Paul Ehrlich den Nobelpreis?",
+   "antworten": [
+    "Frieden",
+    "Chemie",
+    "Physik",
+    "Medizin"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Paul_Ehrlich",
+   "lizenz": "CC0",
+   "quelle_titel": "Paul Ehrlich",
+   "quelle_id": "Q57089"
+  },
+  {
+   "id": "wd-848b2f63f2",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol Li?",
+   "antworten": [
+    "Silber",
+    "Lutetium",
+    "Lithium",
+    "Lanthan"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Lithium",
+   "lizenz": "CC0",
+   "quelle_titel": "Lithium",
+   "quelle_id": "Q568"
+  },
+  {
+   "id": "wd-85aa46dbb1",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welcher Einheit wird die Kraft angegeben?",
+   "antworten": [
+    "Kelvin",
+    "Newton",
+    "Joule",
+    "Volt"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Newton_(Einheit)",
+   "lizenz": "CC0",
+   "quelle_titel": "Newton (Einheit)",
+   "quelle_id": "Q12438"
+  },
+  {
+   "id": "wd-8f55b481e5",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welcher Einheit wird die Stoffmenge angegeben?",
+   "antworten": [
+    "Mol",
+    "Volt",
+    "Pascal",
+    "Newton"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mol",
+   "lizenz": "CC0",
+   "quelle_titel": "Mol",
+   "quelle_id": "Q41509"
+  },
+  {
+   "id": "wd-9d85532112",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welcher Einheit wird der Lichtstrom angegeben?",
+   "antworten": [
+    "Meter",
+    "Ampere",
+    "Ohm",
+    "Lumen"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Lumen_(Einheit)",
+   "lizenz": "CC0",
+   "quelle_titel": "Lumen (Einheit)",
+   "quelle_id": "Q484092"
+  },
+  {
+   "id": "wd-a3325d99a4",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welche physikalische Grösse wird in der Einheit Ohm angegeben?",
+   "antworten": [
+    "Stoffmenge",
+    "elektrischer Widerstand",
+    "Kraft",
+    "Masse"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ohm",
+   "lizenz": "CC0",
+   "quelle_titel": "Ohm",
+   "quelle_id": "Q47083"
+  },
+  {
+   "id": "wd-a4ca8a8396",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welcher Einheit wird die Frequenz angegeben?",
+   "antworten": [
+    "Watt",
+    "Meter",
+    "Hertz",
+    "Kilogramm"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hertz_(Einheit)",
+   "lizenz": "CC0",
+   "quelle_titel": "Hertz (Einheit)",
+   "quelle_id": "Q39369"
+  },
+  {
+   "id": "wd-abaaf4f83a",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welche physikalische Grösse wird in der Einheit Kelvin angegeben?",
+   "antworten": [
+    "Druck",
+    "Lichtstrom",
+    "Temperatur",
+    "Energie"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kelvin",
+   "lizenz": "CC0",
+   "quelle_titel": "Kelvin",
+   "quelle_id": "Q11579"
+  },
+  {
+   "id": "wd-ad7e4e78f5",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Symbol hat das Element Magnesium?",
+   "antworten": [
+    "Mo",
+    "Mg",
+    "Zn",
+    "Mn"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Magnesium",
+   "lizenz": "CC0",
+   "quelle_titel": "Magnesium",
+   "quelle_id": "Q660"
+  },
+  {
+   "id": "wd-ad89124b0c",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol Hg?",
+   "antworten": [
+    "Hafnium",
+    "Holmium",
+    "Wasserstoff",
+    "Quecksilber"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Quecksilber",
+   "lizenz": "CC0",
+   "quelle_titel": "Quecksilber",
+   "quelle_id": "Q925"
+  },
+  {
+   "id": "wd-b106ae0b2e",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Symbol hat das Element Wasserstoff?",
+   "antworten": [
+    "Hf",
+    "H",
+    "He",
+    "W"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wasserstoff",
+   "lizenz": "CC0",
+   "quelle_titel": "Wasserstoff",
+   "quelle_id": "Q556"
+  },
+  {
+   "id": "wd-b6e9a5d597",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Wolfgang Pauli den Nobelpreis?",
+   "antworten": [
+    "Chemie",
+    "Physik",
+    "Literatur",
+    "Medizin"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wolfgang_Pauli",
+   "lizenz": "CC0",
+   "quelle_titel": "Wolfgang Pauli",
+   "quelle_id": "Q65989"
+  },
+  {
+   "id": "wd-b7d2a28fd6",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Konrad Lorenz den Nobelpreis?",
+   "antworten": [
+    "Physik",
+    "Chemie",
+    "Medizin",
+    "Literatur"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Konrad_Lorenz",
+   "lizenz": "CC0",
+   "quelle_titel": "Konrad Lorenz",
+   "quelle_id": "Q78496"
+  },
+  {
+   "id": "wd-b999f54c4e",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Symbol hat das Element Sauerstoff?",
+   "antworten": [
+    "Sc",
+    "Sr",
+    "Si",
+    "O"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sauerstoff",
+   "lizenz": "CC0",
+   "quelle_titel": "Sauerstoff",
+   "quelle_id": "Q629"
+  },
+  {
+   "id": "wd-bb0bf0efd6",
+   "kategorie": "naturwissenschaften",
+   "frage": "Wer entdeckte Ceres?",
+   "antworten": [
+    "Giuseppe Piazzi",
+    "Pierre-Simon Laplace",
+    "Wilhelm Herschel",
+    "Joseph-Louis Lagrange"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/(1)_Ceres",
+   "lizenz": "CC0",
+   "quelle_titel": "(1) Ceres",
+   "quelle_id": "Q596"
+  },
+  {
+   "id": "wd-c677b77fb3",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Symbol hat das Element Wolfram?",
+   "antworten": [
+    "W",
+    "Fe",
+    "Hg",
+    "Ne"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wolfram",
+   "lizenz": "CC0",
+   "quelle_titel": "Wolfram",
+   "quelle_id": "Q743"
+  },
+  {
+   "id": "wd-c85e6e16fa",
+   "kategorie": "naturwissenschaften",
+   "frage": "Wer entdeckte Uranus?",
+   "antworten": [
+    "Wilhelm Herschel",
+    "Pierre-Simon Laplace",
+    "Joseph-Louis Lagrange",
+    "Jean-Baptiste Le Rond d’Alembert"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Uranus_(Planet)",
+   "lizenz": "CC0",
+   "quelle_titel": "Uranus (Planet)",
+   "quelle_id": "Q324"
+  },
+  {
+   "id": "wd-c87e4a02d0",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welche physikalische Grösse wird in der Einheit Joule angegeben?",
+   "antworten": [
+    "Druck",
+    "Energie",
+    "Frequenz",
+    "elektrischer Widerstand"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Joule",
+   "lizenz": "CC0",
+   "quelle_titel": "Joule",
+   "quelle_id": "Q25269"
+  },
+  {
+   "id": "wd-d4be7dd758",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Symbol hat das Element Aluminium?",
+   "antworten": [
+    "Ar",
+    "Al",
+    "Au",
+    "Ag"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Aluminium",
+   "lizenz": "CC0",
+   "quelle_titel": "Aluminium",
+   "quelle_id": "Q663"
+  },
+  {
+   "id": "wd-d5a8f7cdcb",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Max Planck den Nobelpreis?",
+   "antworten": [
+    "Physik",
+    "Frieden",
+    "Chemie",
+    "Medizin"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Max_Planck",
+   "lizenz": "CC0",
+   "quelle_titel": "Max Planck",
+   "quelle_id": "Q9021"
+  },
+  {
+   "id": "wd-d7dd9d0314",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Max Born den Nobelpreis?",
+   "antworten": [
+    "Physik",
+    "Medizin",
+    "Chemie",
+    "Literatur"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Max_Born",
+   "lizenz": "CC0",
+   "quelle_titel": "Max Born",
+   "quelle_id": "Q58978"
+  },
+  {
+   "id": "wd-dba310b0cb",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Symbol hat das Element Zink?",
+   "antworten": [
+    "Zr",
+    "Zn",
+    "Cu",
+    "Na"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Zink",
+   "lizenz": "CC0",
+   "quelle_titel": "Zink",
+   "quelle_id": "Q758"
+  },
+  {
+   "id": "wd-dca2f09d1f",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Robert Koch den Nobelpreis?",
+   "antworten": [
+    "Physik",
+    "Chemie",
+    "Literatur",
+    "Medizin"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Robert_Koch",
+   "lizenz": "CC0",
+   "quelle_titel": "Robert Koch",
+   "quelle_id": "Q37193"
+  },
+  {
+   "id": "wd-dd3bdf1708",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt James Watson den Nobelpreis?",
+   "antworten": [
+    "Medizin",
+    "Literatur",
+    "Physik",
+    "Chemie"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/James_Watson",
+   "lizenz": "CC0",
+   "quelle_titel": "James Watson",
+   "quelle_id": "Q83333"
+  },
+  {
+   "id": "wd-e12bbed726",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Otto Hahn den Nobelpreis?",
+   "antworten": [
+    "Physik",
+    "Medizin",
+    "Chemie",
+    "Literatur"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Otto_Hahn",
+   "lizenz": "CC0",
+   "quelle_titel": "Otto Hahn",
+   "quelle_id": "Q57065"
+  },
+  {
+   "id": "wd-e40108aefa",
+   "kategorie": "naturwissenschaften",
+   "frage": "Wer entdeckte das Elektron?",
+   "antworten": [
+    "Max Planck",
+    "Joseph John Thomson",
+    "Heinrich Hertz",
+    "Svante Arrhenius"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Elektron",
+   "lizenz": "CC0",
+   "quelle_titel": "Elektron",
+   "quelle_id": "Q2225"
+  },
+  {
+   "id": "wd-e9f7a3e635",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welcher Einheit wird die Länge angegeben?",
+   "antworten": [
+    "Volt",
+    "Hertz",
+    "Meter",
+    "Newton"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Meter",
+   "lizenz": "CC0",
+   "quelle_titel": "Meter",
+   "quelle_id": "Q11573"
+  },
+  {
+   "id": "wd-eb17d6d51d",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Symbol hat das Element Phosphor?",
+   "antworten": [
+    "Pb",
+    "P",
+    "Pd",
+    "Pm"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Phosphor",
+   "lizenz": "CC0",
+   "quelle_titel": "Phosphor",
+   "quelle_id": "Q674"
+  },
+  {
+   "id": "wd-ebc0cd6eb7",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welche physikalische Grösse wird in der Einheit Pascal angegeben?",
+   "antworten": [
+    "Frequenz",
+    "Druck",
+    "Kraft",
+    "elektrischer Widerstand"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pascal_(Einheit)",
+   "lizenz": "CC0",
+   "quelle_titel": "Pascal (Einheit)",
+   "quelle_id": "Q44395"
+  },
+  {
+   "id": "wd-edc7bd6482",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol S?",
+   "antworten": [
+    "Silicium",
+    "Silber",
+    "Stickstoff",
+    "Schwefel"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schwefel",
+   "lizenz": "CC0",
+   "quelle_titel": "Schwefel",
+   "quelle_id": "Q682"
+  },
+  {
+   "id": "wd-f16e401f98",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Richard Feynman den Nobelpreis?",
+   "antworten": [
+    "Chemie",
+    "Literatur",
+    "Physik",
+    "Medizin"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Richard_Feynman",
+   "lizenz": "CC0",
+   "quelle_titel": "Richard Feynman",
+   "quelle_id": "Q39246"
+  },
+  {
+   "id": "wd-f23f7920db",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Roger Penrose den Nobelpreis?",
+   "antworten": [
+    "Physik",
+    "Chemie",
+    "Frieden",
+    "Medizin"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Roger_Penrose",
+   "lizenz": "CC0",
+   "quelle_titel": "Roger Penrose",
+   "quelle_id": "Q193803"
+  },
+  {
+   "id": "wd-f25f774bfe",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Fachgebiet erhielt Alexander Fleming den Nobelpreis?",
+   "antworten": [
+    "Literatur",
+    "Physik",
+    "Medizin",
+    "Chemie"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Alexander_Fleming",
+   "lizenz": "CC0",
+   "quelle_titel": "Alexander Fleming",
+   "quelle_id": "Q37064"
+  },
+  {
+   "id": "wd-f298292ee3",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol C?",
+   "antworten": [
+    "Chrom",
+    "Kohlenstoff",
+    "Chlor",
+    "Calcium"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kohlenstoff",
+   "lizenz": "CC0",
+   "quelle_titel": "Kohlenstoff",
+   "quelle_id": "Q623"
+  },
+  {
+   "id": "wd-f89c306a73",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol Si?",
+   "antworten": [
+    "Sauerstoff",
+    "Silber",
+    "Silicium",
+    "Schwefel"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Silicium",
+   "lizenz": "CC0",
+   "quelle_titel": "Silicium",
+   "quelle_id": "Q670"
+  },
+  {
+   "id": "wd-fbf6674e47",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches chemische Element hat das Symbol Fe?",
+   "antworten": [
+    "Francium",
+    "Eisen",
+    "Fluor",
+    "Zinn"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Eisen",
+   "lizenz": "CC0",
+   "quelle_titel": "Eisen",
+   "quelle_id": "Q677"
+  },
+  {
    "id": "wp-0f9c65a412",
    "kategorie": "naturwissenschaften",
    "frage": "Welchem Zahlenwert entspricht das Teilungsverhältnis des Goldenen Schnitts ungefähr?",
