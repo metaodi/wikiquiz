@@ -129,6 +129,9 @@ STARTKATEGORIEN: dict[str, list[tuple[str, int]]] = {
     "starwars": [
         ("Star Wars", 2),
     ],
+    "harrypotter": [
+        ("Harry Potter", 1),
+    ],
 }
 
 # Englische Wikipedia (config.EN_SCHWELLEN): Kategorien ohne „Category:“-Präfix, mit Suchtiefe.
@@ -140,6 +143,10 @@ EN_STARTKATEGORIEN: dict[str, list[tuple[str, int]]] = {
         ("Star Wars locations", 1),
         ("Star Wars technology", 1),
     ],
+    "harrypotter": [
+        ("Harry Potter characters", 1),
+        ("Fictional universe of Harry Potter", 1),
+    ],
 }
 
 QUALITAETSKATEGORIEN = ["Wikipedia:Exzellent", "Wikipedia:Lesenswert"]
@@ -150,6 +157,7 @@ QUALITAETSKATEGORIEN = ["Wikipedia:Exzellent", "Wikipedia:Lesenswert"]
 THEMEN_STICHWORTE: dict[str, list[str]] = {
     "schweiz": ["(schweiz)", "in der schweiz", "schweizer"],
     "starwars": ["star wars", "star-wars"],
+    "harrypotter": ["harry potter", "harry-potter"],
 }
 
 

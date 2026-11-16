@@ -67,9 +67,9 @@ app/                 (Schritt 4)
 
 - `id`: Präfix (`wd-`/`wp-`) + SHA-1 aus `quelle_id` und Fragetext → stabil über Läufe.
 - Kategorie-Slugs: `naturwissenschaften`, `kunst`, `geschichte`, `sport`, `geografie`, `essen`, `natur`,
-  `schweiz`, `starwars`. Der Slug `geschichte` heisst in der App „Geschichte & Gesellschaft“.
+  `schweiz`, `starwars`, `harrypotter`. Der Slug `geschichte` heisst in der App „Geschichte & Gesellschaft“.
 - `quelle_url` zeigt auf den deutschen Wikipedia-Artikel; nur bei Fragen aus der englischen Wikipedia
-  (bisher Star Wars, Themen ohne bekannten deutschen Artikel) auf `https://en.wikipedia.org/wiki/…`.
+  (bisher Star Wars und Harry Potter, Themen ohne bekannten deutschen Artikel) auf `https://en.wikipedia.org/wiki/…`.
   Die App erkennt das an der URL und schreibt „Mehr auf Wikipedia (englisch)“.
 
 ## Spielstand (localStorage)
@@ -94,9 +94,9 @@ Schwellen pro Kategorie in `config.py`, per CLI übersteuerbar.
 | Hosting | GitHub Pages; die Fragen (`data/fragen/`) werden committet |
 | Rechtschreibung | Alle Texte werden auf „ss“ normalisiert (kein „ß“) |
 | Fragenablage | Eine Datei pro Kategorie (`data/fragen/`), der App-Build fügt sie zu `questions.json` zusammen |
-| Themenkategorien | Schweiz und Star Wars liegen quer zu den Fachkategorien: kein Kategorie-Abgleich, tiefere Bekanntheitsschwellen; ein Artikel darf Fragen in einer Fach- und einer Themenkategorie liefern |
+| Themenkategorien | Schweiz, Star Wars und Harry Potter liegen quer zu den Fachkategorien: kein Kategorie-Abgleich, tiefere Bekanntheitsschwellen; ein Artikel darf Fragen in einer Fach- und einer Themenkategorie liefern |
 | Allgemeinwissen aufgelöst | Zu unscharf: Essen → „Essen & Genuss“, Tiere/Pflanzen → „Tiere & Natur“, Religion/Bräuche/Feiertage/Philosophie → „Geschichte & Gesellschaft“ (Slug `geschichte` bleibt), Spiele → Sport & Unterhaltung, Sprachen → Geografie. Bestehende Fragen behalten ihre ID |
-| Englische Wikipedia | Ergänzende Quelle pro Kategorie (`EN_SCHWELLEN`, bisher nur Star Wars), nur für Themen, zu denen kein deutscher Artikel den Bekanntheitsfilter besteht. Das LLM formuliert die Fragen auf Deutsch, die Belegstelle bleibt englisch. Eigene Bekanntheitsschwellen, weil en.wikipedia viel mehr Seitenaufrufe hat |
+| Englische Wikipedia | Ergänzende Quelle pro Kategorie (`EN_SCHWELLEN`, bisher Star Wars und Harry Potter), nur für Themen, zu denen kein deutscher Artikel den Bekanntheitsfilter besteht. Das LLM formuliert die Fragen auf Deutsch, die Belegstelle bleibt englisch. Eigene Bekanntheitsschwellen, weil en.wikipedia viel mehr Seitenaufrufe hat |
 | Neue Kategorien | Gespeicherte Auswahl „alle“ wird um neue Kategorien ergänzt (`bekannteKategorien`), Schlüsselversion bleibt `v1` |
 | Automatisierung | GitHub Action „Fragen generieren“: pro Kategorie ein Pull Request im Modus „ergänzen“ mit Stichprobe |
 | Themenvielfalt | Wikipedia-Artikel werden reihum nach Thema verarbeitet (Geschichte: Epoche aus Jahreszahlen der Wikipedia-Kategorien, sonst Startkategorie), statt nur nach Seitenaufrufen |

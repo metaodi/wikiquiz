@@ -19,6 +19,7 @@ export const KATEGORIEN: Kategorie[] = [
   { id: 'natur', name: 'Tiere & Natur', farbe: '#00796b', text: '#fff', icon: '🐾' },
   { id: 'schweiz', name: 'Schweiz', farbe: '#d52b1e', text: '#fff', icon: '🇨🇭' },
   { id: 'starwars', name: 'Star Wars', farbe: '#1b1b1b', text: '#ffe81f', icon: '🌌' },
+  { id: 'harrypotter', name: 'Harry Potter', farbe: '#7b1e2b', text: '#f6d36b', icon: '⚡' },
 ];
 
 /**

@@ -194,7 +194,7 @@ def test_themenkategorien_ohne_abgleich(monkeypatch):
 
     monkeypatch.setattr(kand, "artikel_kategorien", lambda http, titel: pytest.fail("kein Abgleich erwartet"))
     ks = [Kandidat("Q1", "Ueli Maurer", "Ueli Maurer", 40)]
-    for thema in ("schweiz", "starwars"):
+    for thema in ("schweiz", "starwars", "harrypotter"):
         behalten, verworfen = kand.passende_kategorie(None, ks, thema)
         assert behalten == ks and verworfen == []
 
@@ -207,5 +207,6 @@ def test_zum_thema():
     assert zum_thema(["Kategorie:Star-Wars-Film", "Kategorie:Science-Fiction-Film"], "starwars")
     assert not zum_thema(["Kategorie:Science-Fiction-Film"], "starwars")
     assert not zum_thema(["Kategorie:Fluss in Europa"], "schweiz")
+    assert zum_thema(["Kategorie:Harry Potter", "Kategorie:Fiktiver Ort"], "harrypotter")
     # Themen beeinflussen die Zuordnung zu Fachkategorien nicht
     assert zuordnen(["Kategorie:Bundesrat (Schweiz)", "Kategorie:Politiker (20. Jahrhundert)"]) == "geschichte"

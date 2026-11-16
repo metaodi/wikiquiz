@@ -7,7 +7,8 @@ export type KategorieId =
   | 'essen'
   | 'natur'
   | 'schweiz'
-  | 'starwars';
+  | 'starwars'
+  | 'harrypotter';
 
 export interface Frage {
   id: string;

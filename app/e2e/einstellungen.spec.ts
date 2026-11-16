@@ -89,7 +89,7 @@ test('Neue Kategorien: bei früher „alle“ automatisch gewählt, Allgemeinwis
     sessionStorage.setItem('init', '1');
   }, gespeichert(alteSechs));
   await oeffnen(page);
-  for (const name of [/Schweiz/, /Star Wars/, /Essen & Genuss/, /Tiere & Natur/, KAT_NAME.kunst]) {
+  for (const name of [/Schweiz/, /Star Wars/, /Harry Potter/, /Essen & Genuss/, /Tiere & Natur/, KAT_NAME.kunst]) {
     await expect(page.getByRole('button', { name })).toHaveAttribute('aria-pressed', 'true');
   }
   await expect(page.getByRole('button', { name: /Allgemeinwissen/ })).toHaveCount(0);
