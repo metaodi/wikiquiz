@@ -1,0 +1,1051 @@
+{
+ "version": 1,
+ "kategorie": "essen",
+ "generiert_am": "2026-11-16T09:57:12Z",
+ "fragen": [
+  {
+   "id": "wp-0154938482",
+   "kategorie": "essen",
+   "frage": "Aus welchem Land stammt die Avocado ursprünglich?",
+   "antworten": [
+    "Mexiko",
+    "Brasilien",
+    "Spanien",
+    "Indien"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Avocado",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Avocado",
+   "quelle_id": "Q37153"
+  },
+  {
+   "id": "wp-02af7e2dfe",
+   "kategorie": "essen",
+   "frage": "Arabica ist eine der zwei wichtigsten Kaffeearten. Wie heisst die andere?",
+   "antworten": [
+    "Excelsa",
+    "Liberica",
+    "Robusta",
+    "Bourbon"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kaffee",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kaffee",
+   "quelle_id": "Q8486"
+  },
+  {
+   "id": "wp-0b4c2dbaaf",
+   "kategorie": "essen",
+   "frage": "Vor der Küste welches Landes liegt die Insel, nach der der Likör Curaçao benannt ist?",
+   "antworten": [
+    "Mexiko",
+    "Honduras",
+    "Brasilien",
+    "Venezuela"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Cura%C3%A7ao_(Lik%C3%B6r)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Curaçao (Likör)",
+   "quelle_id": "Q10223"
+  },
+  {
+   "id": "wp-0ebcf3f8aa",
+   "kategorie": "essen",
+   "frage": "Welche Dip-Creme wird traditionell aus Avocados zubereitet?",
+   "antworten": [
+    "Guacamole",
+    "Hummus",
+    "Tapenade",
+    "Tzatziki"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Avocado",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Avocado",
+   "quelle_id": "Q37153"
+  },
+  {
+   "id": "wp-15d131c605",
+   "kategorie": "essen",
+   "frage": "Welches süsse Gebäck aus dünnen Teigschichten mit Nussfüllung wird in Honig oder Zuckersirup eingelegt?",
+   "antworten": [
+    "Churros",
+    "Apfelstrudel",
+    "Baklava",
+    "Cannoli"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Baklava",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Baklava",
+   "quelle_id": "Q187495"
+  },
+  {
+   "id": "wp-1f7e322573",
+   "kategorie": "essen",
+   "frage": "Wie heisst Kohlendioxid in fester Form, das oft zum Kühlen verwendet wird?",
+   "antworten": [
+    "Kühleis",
+    "Trockeneis",
+    "Schwarzeis",
+    "Kunsteis"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kohlenstoffdioxid",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kohlenstoffdioxid",
+   "quelle_id": "Q1997"
+  },
+  {
+   "id": "wp-2222552e0a",
+   "kategorie": "essen",
+   "frage": "Aus welchem Körperteil von Wiederkäuern werden Kutteln hauptsächlich zubereitet?",
+   "antworten": [
+    "Leber",
+    "Lunge",
+    "Magen (Pansen)",
+    "Zunge"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kutteln",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kutteln",
+   "quelle_id": "Q470873"
+  },
+  {
+   "id": "wp-2405d90627",
+   "kategorie": "essen",
+   "frage": "Aus welcher italienischen Stadt stammt das traditionelle Hefegebäck Panettone?",
+   "antworten": [
+    "Verona",
+    "Turin",
+    "Neapel",
+    "Mailand"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Panettone",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Panettone",
+   "quelle_id": "Q854342"
+  },
+  {
+   "id": "wp-3333077cf4",
+   "kategorie": "essen",
+   "frage": "Als welches Milchprodukt gilt Skyr in Deutschland lebensmittelrechtlich, obwohl er oft für Joghurt gehalten wird?",
+   "antworten": [
+    "Sauerrahm",
+    "Frischkäse",
+    "Dickmilch",
+    "Buttermilch"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Skyr",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Skyr",
+   "quelle_id": "Q742127"
+  },
+  {
+   "id": "wp-34adba3eba",
+   "kategorie": "essen",
+   "frage": "Welcher Teil der Artischocke wird als Gemüse gegessen?",
+   "antworten": [
+    "Der knospige Blütenstand",
+    "Die verdickte Wurzel",
+    "Die reifen Samen",
+    "Die jungen Blattstiele"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Artischocke",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Artischocke",
+   "quelle_id": "Q23041430"
+  },
+  {
+   "id": "wp-3a6833710b",
+   "kategorie": "essen",
+   "frage": "Welche bekannte mexikanische Spirituose ist streng genommen eine Sorte Mezcal?",
+   "antworten": [
+    "Pisco",
+    "Cachaça",
+    "Rum",
+    "Tequila"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mezcal",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mezcal",
+   "quelle_id": "Q726413"
+  },
+  {
+   "id": "wp-3b031cdfb3",
+   "kategorie": "essen",
+   "frage": "Welche Beeren geben Gin seinen typischen, charakteristischen Geschmack?",
+   "antworten": [
+    "Vogelbeeren",
+    "Johannisbeeren",
+    "Holunderbeeren",
+    "Wacholderbeeren"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gin",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gin",
+   "quelle_id": "Q959362"
+  },
+  {
+   "id": "wp-3c0b126035",
+   "kategorie": "essen",
+   "frage": "Aus welcher Pflanze wird die mexikanische Spirituose Mezcal hergestellt?",
+   "antworten": [
+    "Feigenkaktus",
+    "Agave",
+    "Zuckerrohr",
+    "Mais"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mezcal",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mezcal",
+   "quelle_id": "Q726413"
+  },
+  {
+   "id": "wp-3c23902354",
+   "kategorie": "essen",
+   "frage": "Unter welchem anderen Namen ist die Futterpflanze Luzerne bekannt, etwa bei Sprossen im Salat?",
+   "antworten": [
+    "Alfalfa",
+    "Lupine",
+    "Esparsette",
+    "Wicke"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Luzerne",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Luzerne",
+   "quelle_id": "Q156106"
+  },
+  {
+   "id": "wp-3c29b4e1db",
+   "kategorie": "essen",
+   "frage": "Aus welchem Mehl werden die japanischen Udon-Nudeln hergestellt?",
+   "antworten": [
+    "Buchweizenmehl",
+    "Maismehl",
+    "Weizenmehl",
+    "Reismehl"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Udon",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Udon",
+   "quelle_id": "Q471861"
+  },
+  {
+   "id": "wp-3c88be688b",
+   "kategorie": "essen",
+   "frage": "Aus welcher Hülsenfrucht wird die japanische Würzpaste Miso hauptsächlich hergestellt?",
+   "antworten": [
+    "Kidneybohnen",
+    "Linsen",
+    "Erbsen",
+    "Sojabohnen"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Miso",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Miso",
+   "quelle_id": "Q235169"
+  },
+  {
+   "id": "wp-3cbd31ad48",
+   "kategorie": "essen",
+   "frage": "Hagebutten sind die Früchte welcher Pflanzen?",
+   "antworten": [
+    "Schlehen",
+    "Rosen",
+    "Holunder",
+    "Berberitzen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hagebutte",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hagebutte",
+   "quelle_id": "Q46740"
+  },
+  {
+   "id": "wp-436328c1e0",
+   "kategorie": "essen",
+   "frage": "Welches äussere Merkmal ist typisch für Hüttenkäse?",
+   "antworten": [
+    "Seine rote Wachsrinde",
+    "Seine körnige Struktur",
+    "Seine blauen Schimmeladern",
+    "Seine grossen Löcher"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/H%C3%BCttenk%C3%A4se",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hüttenkäse",
+   "quelle_id": "Q13221624"
+  },
+  {
+   "id": "wp-44eabfbbb6",
+   "kategorie": "essen",
+   "frage": "Von welchem Kontinent stammt der Kakibaum ursprünglich?",
+   "antworten": [
+    "Südamerika",
+    "Asien",
+    "Australien",
+    "Afrika"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kaki",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kaki",
+   "quelle_id": "Q158482"
+  },
+  {
+   "id": "wp-4612caebd3",
+   "kategorie": "essen",
+   "frage": "Was ist bei Kefir, anders als bei Joghurt, neben Milchsäurebakterien an der Gärung beteiligt?",
+   "antworten": [
+    "Algen",
+    "Schimmelpilze",
+    "Hefen",
+    "Labferment"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kefir",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kefir",
+   "quelle_id": "Q185749"
+  },
+  {
+   "id": "wp-5b5721a531",
+   "kategorie": "essen",
+   "frage": "Aus welcher Sprache wurde das deutsche Wort «Tee» im 17. Jahrhundert übernommen?",
+   "antworten": [
+    "Englisch",
+    "Französisch",
+    "Portugiesisch",
+    "Niederländisch"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tee",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tee",
+   "quelle_id": "Q6097"
+  },
+  {
+   "id": "wp-772f183fb6",
+   "kategorie": "essen",
+   "frage": "Zu welcher Obstgruppe gehört die Quitte?",
+   "antworten": [
+    "Schalenobst",
+    "Kernobst",
+    "Steinobst",
+    "Beerenobst"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Quitte",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Quitte",
+   "quelle_id": "Q43300"
+  },
+  {
+   "id": "wp-7982481293",
+   "kategorie": "essen",
+   "frage": "Welcher bekannte Cocktail wird klassisch mit dem roten Bitterlikör Campari zubereitet?",
+   "antworten": [
+    "Negroni",
+    "Piña Colada",
+    "Mojito",
+    "Caipirinha"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Campari",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Campari",
+   "quelle_id": "Q899150"
+  },
+  {
+   "id": "wp-7c7e683561",
+   "kategorie": "essen",
+   "frage": "Unter welchem Alltagsnamen ist der Einfachzucker Glucose bekannt?",
+   "antworten": [
+    "Fruchtzucker",
+    "Milchzucker",
+    "Rohrzucker",
+    "Traubenzucker"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Glucose",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Glucose",
+   "quelle_id": "Q37525"
+  },
+  {
+   "id": "wp-866e25afd1",
+   "kategorie": "essen",
+   "frage": "Welcher Fisch gilt als grösster reiner Süsswasserfisch Europas?",
+   "antworten": [
+    "Hecht",
+    "Wels",
+    "Karpfen",
+    "Zander"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Europ%C3%A4ischer_Wels",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Europäischer Wels",
+   "quelle_id": "Q159323"
+  },
+  {
+   "id": "wp-878a18a78f",
+   "kategorie": "essen",
+   "frage": "An welches Gewürz erinnert der typische Geruch von Fenchel?",
+   "antworten": [
+    "Zimt",
+    "Anis",
+    "Gewürznelke",
+    "Muskatnuss"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fenchel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Fenchel",
+   "quelle_id": "Q43511"
+  },
+  {
+   "id": "wp-88142b044e",
+   "kategorie": "essen",
+   "frage": "Von welchem Tier stammen die meisten Kutteln, die gegessen werden?",
+   "antworten": [
+    "Pferd",
+    "Huhn",
+    "Rind",
+    "Schwein"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kutteln",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kutteln",
+   "quelle_id": "Q470873"
+  },
+  {
+   "id": "wp-8eaafa00c0",
+   "kategorie": "essen",
+   "frage": "Wie alt können Olivenbäume werden?",
+   "antworten": [
+    "Höchstens 30 Jahre",
+    "Rund 80 Jahre",
+    "Etwa 50 Jahre",
+    "Mehrere hundert Jahre"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olivenbaum",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Olivenbaum",
+   "quelle_id": "Q37083"
+  },
+  {
+   "id": "wp-958db5e6ce",
+   "kategorie": "essen",
+   "frage": "Aus welchem Land stammt das Unternehmen hinter den bekannten Tupperware-Dosen?",
+   "antworten": [
+    "Deutschland",
+    "Schweden",
+    "USA",
+    "Grossbritannien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tupperware",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tupperware",
+   "quelle_id": "Q1129117"
+  },
+  {
+   "id": "wp-967a8b2874",
+   "kategorie": "essen",
+   "frage": "Wann werden die Früchte der Mispel reif?",
+   "antworten": [
+    "Ende Oktober bis Anfang November",
+    "Ende Juni bis Anfang Juli",
+    "Ende Mai bis Anfang Juni",
+    "Ende Juli bis Anfang August"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mispel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mispel",
+   "quelle_id": "Q146186"
+  },
+  {
+   "id": "wp-999630f789",
+   "kategorie": "essen",
+   "frage": "Aus der Wurzel welcher Pflanze wird Lakritz gewonnen?",
+   "antworten": [
+    "Rhabarber",
+    "Enzian",
+    "Süssholz",
+    "Ingwer"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Lakritz",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Lakritz",
+   "quelle_id": "Q138811"
+  },
+  {
+   "id": "wp-9a177dc35a",
+   "kategorie": "essen",
+   "frage": "Nach welcher Frucht schmeckt der Likör Curaçao, den man etwa als blaue Variante aus Cocktails kennt?",
+   "antworten": [
+    "Orange",
+    "Kirsche",
+    "Kokosnuss",
+    "Zitrone"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Cura%C3%A7ao_(Lik%C3%B6r)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Curaçao (Likör)",
+   "quelle_id": "Q10223"
+  },
+  {
+   "id": "wp-9a39ec3b9c",
+   "kategorie": "essen",
+   "frage": "Wofür wird verdünnter Essig im Haushalt neben dem Würzen von Speisen häufig eingesetzt?",
+   "antworten": [
+    "Zum Entkalken",
+    "Zum Schmieren",
+    "Zum Bleichen",
+    "Zum Enteisen"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Essigs%C3%A4ure",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Essigsäure",
+   "quelle_id": "Q47512"
+  },
+  {
+   "id": "wp-9d0c0cfa88",
+   "kategorie": "essen",
+   "frage": "Zu welcher Pflanzenfamilie gehört der Fenchel?",
+   "antworten": [
+    "Kreuzblütler",
+    "Doldenblütler",
+    "Korbblütler",
+    "Lippenblütler"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fenchel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Fenchel",
+   "quelle_id": "Q43511"
+  },
+  {
+   "id": "wp-a1c9422f14",
+   "kategorie": "essen",
+   "frage": "Aus welchem heutigen Land stammt die Kaffeepflanze ursprünglich?",
+   "antworten": [
+    "Jemen",
+    "Äthiopien",
+    "Brasilien",
+    "Kolumbien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kaffee",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kaffee",
+   "quelle_id": "Q8486"
+  },
+  {
+   "id": "wp-a459cdc41b",
+   "kategorie": "essen",
+   "frage": "Zu welcher Obstgruppe gehört die Yuzu, die in der feinen Küche beliebt ist?",
+   "antworten": [
+    "Steinobst",
+    "Kernobst",
+    "Beerenobst",
+    "Zitrusfrüchte"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Yuzu",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Yuzu",
+   "quelle_id": "Q867776"
+  },
+  {
+   "id": "wp-a79c6bf7d4",
+   "kategorie": "essen",
+   "frage": "Welcher Teil des Kapernstrauchs wird als Kaper gegessen?",
+   "antworten": [
+    "Die Wurzelknolle",
+    "Die Blattspitze",
+    "Die Blütenknospe",
+    "Das Samenkorn"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Echter_Kapernstrauch",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Echter Kapernstrauch",
+   "quelle_id": "Q156251"
+  },
+  {
+   "id": "wp-aa3ea5f8d3",
+   "kategorie": "essen",
+   "frage": "Aus welcher Sprache stammt das Wort «Alkohol» ursprünglich?",
+   "antworten": [
+    "Griechisch",
+    "Persisch",
+    "Arabisch",
+    "Lateinisch"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ethanol",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ethanol",
+   "quelle_id": "Q153"
+  },
+  {
+   "id": "wp-b1975ec561",
+   "kategorie": "essen",
+   "frage": "In welcher heutigen Stadt entstand die moderne Form des Sushi, wie man sie heute kennt?",
+   "antworten": [
+    "Nagasaki",
+    "Kyoto",
+    "Osaka",
+    "Tokio"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sushi",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sushi",
+   "quelle_id": "Q46383"
+  },
+  {
+   "id": "wp-bb4bffd7bc",
+   "kategorie": "essen",
+   "frage": "Aus welchem Land stammt das Milchprodukt Skyr ursprünglich?",
+   "antworten": [
+    "Dänemark",
+    "Finnland",
+    "Norwegen",
+    "Island"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Skyr",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Skyr",
+   "quelle_id": "Q742127"
+  },
+  {
+   "id": "wp-c0a0696a3e",
+   "kategorie": "essen",
+   "frage": "In welchem heutigen Schweizer Kanton wurde Absinth im 18. Jahrhundert ursprünglich hergestellt?",
+   "antworten": [
+    "Tessin",
+    "Graubünden",
+    "Wallis",
+    "Neuenburg"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Absinth",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Absinth",
+   "quelle_id": "Q170210"
+  },
+  {
+   "id": "wp-c61225fd1a",
+   "kategorie": "essen",
+   "frage": "Welcher Käse behält beim Erhitzen seine Form und wird deshalb oft «Grillkäse» genannt?",
+   "antworten": [
+    "Mozzarella",
+    "Brie",
+    "Feta",
+    "Halloumi"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Halloumi",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Halloumi",
+   "quelle_id": "Q549793"
+  },
+  {
+   "id": "wp-c67386fb31",
+   "kategorie": "essen",
+   "frage": "Aus welchem Grundstoff wird Whisky hergestellt?",
+   "antworten": [
+    "Getreide",
+    "Zuckerrohr",
+    "Weintrauben",
+    "Kartoffeln"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Whisky",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Whisky",
+   "quelle_id": "Q281"
+  },
+  {
+   "id": "wp-c7c12ea01f",
+   "kategorie": "essen",
+   "frage": "Aus welchem Land muss Käse seit 2021 stammen, damit er in der EU als Halloumi verkauft werden darf?",
+   "antworten": [
+    "Türkei",
+    "Malta",
+    "Zypern",
+    "Griechenland"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Halloumi",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Halloumi",
+   "quelle_id": "Q549793"
+  },
+  {
+   "id": "wp-c9590e2a92",
+   "kategorie": "essen",
+   "frage": "Unter welchem anderen Namen ist der Wels im deutschsprachigen Raum regional auch bekannt?",
+   "antworten": [
+    "Schleie",
+    "Rutte",
+    "Barbe",
+    "Waller"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Europ%C3%A4ischer_Wels",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Europäischer Wels",
+   "quelle_id": "Q159323"
+  },
+  {
+   "id": "wp-cc9a2be6c1",
+   "kategorie": "essen",
+   "frage": "Durch welches Verfahren entsteht die japanische Würzpaste Miso aus Sojabohnen und Salz?",
+   "antworten": [
+    "Fermentation",
+    "Destillation",
+    "Räucherung",
+    "Karamellisierung"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Miso",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Miso",
+   "quelle_id": "Q235169"
+  },
+  {
+   "id": "wp-cfafcd50f9",
+   "kategorie": "essen",
+   "frage": "Wie heisst die kernlose Zuchtform der Kaki, die man schon im harten Zustand essen kann?",
+   "antworten": [
+    "Physalis",
+    "Sharonfrucht",
+    "Kumquat",
+    "Litschi"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kaki",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kaki",
+   "quelle_id": "Q158482"
+  },
+  {
+   "id": "wp-d1898da18f",
+   "kategorie": "essen",
+   "frage": "Aus welchem Getreide wird das japanische Getränk Sake gebraut?",
+   "antworten": [
+    "Reis",
+    "Hirse",
+    "Weizen",
+    "Gerste"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sake",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sake",
+   "quelle_id": "Q170219"
+  },
+  {
+   "id": "wp-d2bc571bb9",
+   "kategorie": "essen",
+   "frage": "Aus welchem Land stammt der rote Bitterlikör Campari?",
+   "antworten": [
+    "Frankreich",
+    "Italien",
+    "Spanien",
+    "Portugal"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Campari",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Campari",
+   "quelle_id": "Q899150"
+  },
+  {
+   "id": "wp-da02031037",
+   "kategorie": "essen",
+   "frage": "Unter welchem Spitznamen ist die Spirituose Absinth bekannt?",
+   "antworten": [
+    "Die weisse Dame",
+    "Die grüne Fee",
+    "Der rote Teufel",
+    "Der blaue Engel"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Absinth",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Absinth",
+   "quelle_id": "Q170210"
+  },
+  {
+   "id": "wp-dd5f4c38bf",
+   "kategorie": "essen",
+   "frage": "In welchem Land war die Teepflanze ursprünglich als einzigem bekannt?",
+   "antworten": [
+    "Sri Lanka",
+    "China",
+    "Japan",
+    "Indien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tee",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tee",
+   "quelle_id": "Q6097"
+  },
+  {
+   "id": "wp-dfcb0a4f59",
+   "kategorie": "essen",
+   "frage": "Weshalb ist Hüttenkäse bei Sportlern zum Muskelaufbau beliebt?",
+   "antworten": [
+    "Hoher Proteingehalt",
+    "Hoher Ballaststoffgehalt",
+    "Hoher Fettgehalt",
+    "Hoher Zuckergehalt"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/H%C3%BCttenk%C3%A4se",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hüttenkäse",
+   "quelle_id": "Q13221624"
+  },
+  {
+   "id": "wp-e1d3ccad68",
+   "kategorie": "essen",
+   "frage": "Zu welchem alkoholischen Getränk werden die sauren Früchte des Schlehdorns besonders gern verarbeitet?",
+   "antworten": [
+    "Whisky",
+    "Rum",
+    "Bier",
+    "Likör"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schlehdorn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schlehdorn",
+   "quelle_id": "Q129018"
+  },
+  {
+   "id": "wp-e3a1db6b0b",
+   "kategorie": "essen",
+   "frage": "Das Wort «Marmelade» stammt über das Portugiesische vom Namen welcher Frucht ab?",
+   "antworten": [
+    "Aprikose",
+    "Feige",
+    "Quitte",
+    "Orange"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Quitte",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Quitte",
+   "quelle_id": "Q43300"
+  },
+  {
+   "id": "wp-ea09f45b82",
+   "kategorie": "essen",
+   "frage": "Was bedeutet der gälische Ausdruck, von dem das Wort «Whisky» abstammt?",
+   "antworten": [
+    "Feuer der Berge",
+    "Wasser des Lebens",
+    "Geist des Korns",
+    "Gold der Gerste"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Whisky",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Whisky",
+   "quelle_id": "Q281"
+  },
+  {
+   "id": "wp-eda4608460",
+   "kategorie": "essen",
+   "frage": "Wie heissen die getrockneten und gerösteten Algenblätter, in die Sushi oft eingerollt wird?",
+   "antworten": [
+    "Kombu",
+    "Hijiki",
+    "Wakame",
+    "Nori"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sushi",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sushi",
+   "quelle_id": "Q46383"
+  },
+  {
+   "id": "wp-ee4b6ad848",
+   "kategorie": "essen",
+   "frage": "Sake wird oft «Reiswein» genannt. Welchem Getränk ähnelt er aber in der Herstellung eher?",
+   "antworten": [
+    "Apfelwein",
+    "Bier",
+    "Met",
+    "Traubenwein"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sake",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sake",
+   "quelle_id": "Q170219"
+  },
+  {
+   "id": "wp-f22ebca909",
+   "kategorie": "essen",
+   "frage": "Aus welcher Region stammt das Sauermilchgetränk Kefir ursprünglich?",
+   "antworten": [
+    "Skandinavien",
+    "Kaukasus",
+    "Balkan",
+    "Alpenraum"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kefir",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kefir",
+   "quelle_id": "Q185749"
+  }
+ ]
+}
