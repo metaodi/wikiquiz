@@ -1,0 +1,1051 @@
+{
+ "version": 1,
+ "kategorie": "harrypotter",
+ "generiert_am": "2026-11-16T10:25:43Z",
+ "fragen": [
+  {
+   "id": "wp-009a6194db",
+   "kategorie": "harrypotter",
+   "frage": "Welcher Schauspieler verkörperte Draco Malfoy in allen Harry-Potter-Filmen?",
+   "antworten": [
+    "Tom Felton",
+    "Matthew Lewis",
+    "Daniel Radcliffe",
+    "Rupert Grint"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Draco_Malfoy",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Draco Malfoy",
+   "quelle_id": "Q179641"
+  },
+  {
+   "id": "wp-0137006ad1",
+   "kategorie": "harrypotter",
+   "frage": "Von welchem der vier Gründer der Zauberschule Hogwarts stammt Lord Voldemort ab?",
+   "antworten": [
+    "Godric Gryffindor",
+    "Salazar Slytherin",
+    "Rowena Ravenclaw",
+    "Helga Hufflepuff"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Voldemort",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Voldemort",
+   "quelle_id": "Q176132"
+  },
+  {
+   "id": "wp-07c7065efd",
+   "kategorie": "harrypotter",
+   "frage": "Welche Schauspielerin spielte die Todesserin Bellatrix Lestrange in den Harry-Potter-Filmen?",
+   "antworten": [
+    "Julie Walters",
+    "Helena Bonham Carter",
+    "Emma Thompson",
+    "Imelda Staunton"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Bellatrix_Lestrange",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Bellatrix Lestrange",
+   "quelle_id": "Q1057918"
+  },
+  {
+   "id": "wp-0d5d3bd203",
+   "kategorie": "harrypotter",
+   "frage": "In welcher Form erschien die Harry-Potter-Fortsetzung «Das verwunschene Kind» ursprünglich?",
+   "antworten": [
+    "Als Hörspiel",
+    "Als Kinofilm",
+    "Als Roman",
+    "Als Theaterstück"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_das_verwunschene_Kind",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und das verwunschene Kind",
+   "quelle_id": "Q20711488"
+  },
+  {
+   "id": "wp-0e9e013d5a",
+   "kategorie": "harrypotter",
+   "frage": "Welche Art Wesen ist Dobby, der Harry im zweiten Harry-Potter-Band vor der Rückkehr nach Hogwarts warnt?",
+   "antworten": [
+    "Ein Kobold",
+    "Ein Hauself",
+    "Ein Zwerg",
+    "Ein Gnom"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Chamber_of_Secrets",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter and the Chamber of Secrets",
+   "quelle_id": "Q47209"
+  },
+  {
+   "id": "wp-0f8c2bb388",
+   "kategorie": "harrypotter",
+   "frage": "Welcher Schauspieler verkörperte Severus Snape in allen acht Harry-Potter-Filmen?",
+   "antworten": [
+    "Gary Oldman",
+    "Alan Rickman",
+    "Ralph Fiennes",
+    "Jason Isaacs"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Severus_Snape",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Severus Snape",
+   "quelle_id": "Q176772"
+  },
+  {
+   "id": "wp-1c533f829b",
+   "kategorie": "harrypotter",
+   "frage": "Welche Figur ruft in Harry Potter die Geheimorganisation «Orden des Phönix» gegen Voldemort wieder ins Leben?",
+   "antworten": [
+    "Remus Lupin",
+    "Albus Dumbledore",
+    "Sirius Black",
+    "Alastor Moody"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Orden_des_Ph%C3%B6nix",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und der Orden des Phönix",
+   "quelle_id": "Q80817"
+  },
+  {
+   "id": "wp-1e5f25c420",
+   "kategorie": "harrypotter",
+   "frage": "Wer schrieb das Drehbuch zum Film «Phantastische Tierwesen und wo sie zu finden sind» (2016)?",
+   "antworten": [
+    "Joanne K. Rowling",
+    "Philip Pullman",
+    "Steve Kloves",
+    "Neil Gaiman"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Phantastische_Tierwesen_und_wo_sie_zu_finden_sind_(Film)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Phantastische Tierwesen und wo sie zu finden sind (Film)",
+   "quelle_id": "Q18199330"
+  },
+  {
+   "id": "wp-26d301a12c",
+   "kategorie": "harrypotter",
+   "frage": "In welchem Landesteil Grossbritanniens liegt die Zauberschule Hogwarts?",
+   "antworten": [
+    "Schottland",
+    "Wales",
+    "England",
+    "Nordirland"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Hogwarts",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hogwarts",
+   "quelle_id": "Q174097"
+  },
+  {
+   "id": "wp-29bf3e8581",
+   "kategorie": "harrypotter",
+   "frage": "Wer bricht im dritten Harry-Potter-Band aus dem Zauberergefängnis Askaban aus?",
+   "antworten": [
+    "Sirius Black",
+    "Lucius Malfoy",
+    "Remus Lupin",
+    "Severus Snape"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Prisoner_of_Azkaban",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter and the Prisoner of Azkaban",
+   "quelle_id": "Q47598"
+  },
+  {
+   "id": "wp-2b9e8458c3",
+   "kategorie": "harrypotter",
+   "frage": "In welcher Beziehung steht Sirius Black zu Harry Potter?",
+   "antworten": [
+    "Er ist sein Taufpate",
+    "Er ist sein Onkel",
+    "Er ist sein Halbbruder",
+    "Er ist sein Grossvater"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Gefangene_von_Askaban_(Film)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und der Gefangene von Askaban (Film)",
+   "quelle_id": "Q102448"
+  },
+  {
+   "id": "wp-3a809ded33",
+   "kategorie": "harrypotter",
+   "frage": "Welche Harry-Potter-Figur zog die Riesenspinne Aragog als Schüler heimlich in Hogwarts auf?",
+   "antworten": [
+    "Argus Filch",
+    "Albus Dumbledore",
+    "Severus Snape",
+    "Rubeus Hagrid"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tiere_der_Harry-Potter-Romane",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tiere der Harry-Potter-Romane",
+   "quelle_id": "Q110660"
+  },
+  {
+   "id": "wp-3fc2ee3867",
+   "kategorie": "harrypotter",
+   "frage": "Wie lautet der eigentliche Name des dunklen Zauberers Lord Voldemort aus den Harry-Potter-Büchern?",
+   "antworten": [
+    "Regulus Black",
+    "Tom Riddle",
+    "Barty Crouch",
+    "Gellert Grindelwald"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Voldemort",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Voldemort",
+   "quelle_id": "Q176132"
+  },
+  {
+   "id": "wp-44d09f4aea",
+   "kategorie": "harrypotter",
+   "frage": "Für welche Zauberschule tritt Viktor Krum beim Trimagischen Turnier an?",
+   "antworten": [
+    "Ilvermorny",
+    "Beauxbatons",
+    "Hogwarts",
+    "Durmstrang"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Feuerkelch_(Film)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und der Feuerkelch (Film)",
+   "quelle_id": "Q102225"
+  },
+  {
+   "id": "wp-4ba5de613b",
+   "kategorie": "harrypotter",
+   "frage": "Welchem Hogwarts-Haus gehört Neville Longbottom an?",
+   "antworten": [
+    "Gryffindor",
+    "Slytherin",
+    "Ravenclaw",
+    "Hufflepuff"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Neville_Longbottom",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Neville Longbottom",
+   "quelle_id": "Q190366"
+  },
+  {
+   "id": "wp-51b996f84f",
+   "kategorie": "harrypotter",
+   "frage": "Welche Tiere überbringen in der Zaubererwelt von Harry Potter Briefe und Nachrichten?",
+   "antworten": [
+    "Fledermäuse",
+    "Brieftauben",
+    "Raben",
+    "Eulen"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Fictional_universe_of_Harry_Potter",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Fictional universe of Harry Potter",
+   "quelle_id": "Q5410773"
+  },
+  {
+   "id": "wp-52f72a5698",
+   "kategorie": "harrypotter",
+   "frage": "Wie werden in den Harry-Potter-Romanen Menschen ohne magische Fähigkeiten genannt?",
+   "antworten": [
+    "Hauselfen",
+    "Muggel",
+    "Kobolde",
+    "Schlammblüter"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Fictional_universe_of_Harry_Potter",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Fictional universe of Harry Potter",
+   "quelle_id": "Q5410773"
+  },
+  {
+   "id": "wp-52f9bef77f",
+   "kategorie": "harrypotter",
+   "frage": "In welchem Harry-Potter-Band tritt die Figur Luna Lovegood zum ersten Mal auf?",
+   "antworten": [
+    "Der Halbblutprinz",
+    "Der Gefangene von Askaban",
+    "Der Orden des Phönix",
+    "Der Feuerkelch"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Luna_Lovegood",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Luna Lovegood",
+   "quelle_id": "Q190282"
+  },
+  {
+   "id": "wp-556b2d1c08",
+   "kategorie": "harrypotter",
+   "frage": "Der wievielte Band der Harry-Potter-Reihe ist «Harry Potter und der Halbblutprinz»?",
+   "antworten": [
+    "Der siebte",
+    "Der vierte",
+    "Der sechste",
+    "Der fünfte"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Half-Blood_Prince",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter and the Half-Blood Prince",
+   "quelle_id": "Q46887"
+  },
+  {
+   "id": "wp-5bc7db5010",
+   "kategorie": "harrypotter",
+   "frage": "In welches Tier kann sich Professorin McGonagall in den Harry-Potter-Büchern jederzeit verwandeln?",
+   "antworten": [
+    "Fuchs",
+    "Katze",
+    "Eule",
+    "Hund"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Minerva_McGonagall",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Minerva McGonagall",
+   "quelle_id": "Q192179"
+  },
+  {
+   "id": "wp-5c0499fbae",
+   "kategorie": "harrypotter",
+   "frage": "Wer unterrichtet im fünften Harry-Potter-Film im Auftrag des Zaubereiministeriums Verteidigung gegen die dunklen Künste?",
+   "antworten": [
+    "Remus Lupin",
+    "Dolores Umbridge",
+    "Quirinus Quirrell",
+    "Gilderoy Lockhart"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Orden_des_Ph%C3%B6nix_(Film)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und der Orden des Phönix (Film)",
+   "quelle_id": "Q102235"
+  },
+  {
+   "id": "wp-5c609106e8",
+   "kategorie": "harrypotter",
+   "frage": "Welchem Haus der Zauberschule Hogwarts wird Harry Potter zugeteilt?",
+   "antworten": [
+    "Hufflepuff",
+    "Slytherin",
+    "Ravenclaw",
+    "Gryffindor"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Figuren_der_Harry-Potter-Romane",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Figuren der Harry-Potter-Romane",
+   "quelle_id": "Q208255"
+  },
+  {
+   "id": "wp-5d1136ff2a",
+   "kategorie": "harrypotter",
+   "frage": "Vor welchem Wesen fürchten sich die Riesenspinnen bei Harry Potter so sehr, dass sie seinen Namen nicht aussprechen?",
+   "antworten": [
+    "Basilisk",
+    "Werwolf",
+    "Drache",
+    "Dementor"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tiere_der_Harry-Potter-Romane",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tiere der Harry-Potter-Romane",
+   "quelle_id": "Q110660"
+  },
+  {
+   "id": "wp-5d50fcf2b2",
+   "kategorie": "harrypotter",
+   "frage": "Das TV-Special «Rückkehr nach Hogwarts» (2022) feierte das 20-Jahr-Jubiläum welches Harry-Potter-Films?",
+   "antworten": [
+    "Der Stein der Weisen",
+    "Die Kammer des Schreckens",
+    "Der Gefangene von Askaban",
+    "Der Feuerkelch"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_20th_Anniversary:_Return_to_Hogwarts",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter 20th Anniversary: Return to Hogwarts",
+   "quelle_id": "Q110207138"
+  },
+  {
+   "id": "wp-60fbce716b",
+   "kategorie": "harrypotter",
+   "frage": "Welcher Schauspieler spielt Ron Weasley in allen acht Harry-Potter-Filmen?",
+   "antworten": [
+    "Tom Felton",
+    "Daniel Radcliffe",
+    "Matthew Lewis",
+    "Rupert Grint"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Ron_Weasley",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ron Weasley",
+   "quelle_id": "Q173998"
+  },
+  {
+   "id": "wp-615facca2d",
+   "kategorie": "harrypotter",
+   "frage": "Wie heissen die magischen Objekte, in denen Voldemort Teile seiner Seele aufbewahrt?",
+   "antworten": [
+    "Denkariums",
+    "Portschlüssel",
+    "Heiligtümer des Todes",
+    "Horkruxe"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Halbblutprinz_(Film)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und der Halbblutprinz (Film)",
+   "quelle_id": "Q161687"
+  },
+  {
+   "id": "wp-617d6d9297",
+   "kategorie": "harrypotter",
+   "frage": "In welchem Jahr erschien das Harry-Potter-Videospiel «Hogwarts Legacy»?",
+   "antworten": [
+    "2019",
+    "2021",
+    "2025",
+    "2023"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hogwarts_Legacy",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hogwarts Legacy",
+   "quelle_id": "Q99397854"
+  },
+  {
+   "id": "wp-72138b64ea",
+   "kategorie": "harrypotter",
+   "frage": "Welche Schauspielerin spielte Hermine Granger in allen acht Harry-Potter-Filmen?",
+   "antworten": [
+    "Evanna Lynch",
+    "Emma Watson",
+    "Emma Thompson",
+    "Bonnie Wright"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Hermione_Granger",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hermione Granger",
+   "quelle_id": "Q174009"
+  },
+  {
+   "id": "wp-7483eab983",
+   "kategorie": "harrypotter",
+   "frage": "In welchem Jahr kam der letzte Film der Harry-Potter-Reihe in die Kinos?",
+   "antworten": [
+    "2007",
+    "2013",
+    "2009",
+    "2011"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_die_Heiligt%C3%BCmer_des_Todes_%E2%80%93_Teil_2",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und die Heiligtümer des Todes – Teil 2",
+   "quelle_id": "Q232009"
+  },
+  {
+   "id": "wp-759ef1cdde",
+   "kategorie": "harrypotter",
+   "frage": "Wer unterrichtet im «Feuerkelch» in Hogwarts Verteidigung gegen die dunklen Künste?",
+   "antworten": [
+    "Remus Lupin",
+    "Quirinus Quirrell",
+    "Gilderoy Lockhart",
+    "Alastor «Mad-Eye» Moody"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Feuerkelch",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und der Feuerkelch",
+   "quelle_id": "Q46751"
+  },
+  {
+   "id": "wp-7d07438768",
+   "kategorie": "harrypotter",
+   "frage": "Welchen Beruf haben die nichtmagischen Eltern von Hermine Granger in den Harry-Potter-Büchern?",
+   "antworten": [
+    "Lehrer",
+    "Buchhändler",
+    "Zahnärzte",
+    "Apotheker"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Hermione_Granger",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hermione Granger",
+   "quelle_id": "Q174009"
+  },
+  {
+   "id": "wp-8033661fd3",
+   "kategorie": "harrypotter",
+   "frage": "Wie heisst Harrys Schneeeule, die in «Harry Potter und die Heiligtümer des Todes – Teil 1» stirbt?",
+   "antworten": [
+    "Hermes",
+    "Errol",
+    "Hedwig",
+    "Fawkes"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_die_Heiligt%C3%BCmer_des_Todes_%E2%80%93_Teil_1",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und die Heiligtümer des Todes – Teil 1",
+   "quelle_id": "Q161678"
+  },
+  {
+   "id": "wp-83bfa73785",
+   "kategorie": "harrypotter",
+   "frage": "Wo kam J. K. Rowling nach eigenen Angaben 1990 die Idee zur Figur Harry Potter?",
+   "antworten": [
+    "Auf einem Flug",
+    "In einem Café",
+    "Auf einer Schiffsreise",
+    "Auf einer Zugfahrt"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Joanne_K._Rowling",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Joanne K. Rowling",
+   "quelle_id": "Q34660"
+  },
+  {
+   "id": "wp-842a7c71d7",
+   "kategorie": "harrypotter",
+   "frage": "Welche Form hat die Narbe auf Harry Potters Stirn?",
+   "antworten": [
+    "Kreuz",
+    "Stern",
+    "Halbmond",
+    "Blitz"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Figuren_der_Harry-Potter-Romane",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Figuren der Harry-Potter-Romane",
+   "quelle_id": "Q208255"
+  },
+  {
+   "id": "wp-846523f3f1",
+   "kategorie": "harrypotter",
+   "frage": "In welchem Schulfach ist Neville Longbottom in den Harry-Potter-Romanen besonders begabt?",
+   "antworten": [
+    "Kräuterkunde",
+    "Zaubertränke",
+    "Verwandlung",
+    "Astronomie"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Neville_Longbottom",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Neville Longbottom",
+   "quelle_id": "Q190366"
+  },
+  {
+   "id": "wp-85a3e651b1",
+   "kategorie": "harrypotter",
+   "frage": "Wer führte Regie beim dritten Harry-Potter-Film «Der Gefangene von Askaban» (2004)?",
+   "antworten": [
+    "Chris Columbus",
+    "Mike Newell",
+    "Alfonso Cuarón",
+    "David Yates"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Gefangene_von_Askaban_(Film)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und der Gefangene von Askaban (Film)",
+   "quelle_id": "Q102448"
+  },
+  {
+   "id": "wp-93ba58982c",
+   "kategorie": "harrypotter",
+   "frage": "Wer führte Regie beim Film «Harry Potter und die Heiligtümer des Todes – Teil 1» (2010)?",
+   "antworten": [
+    "Chris Columbus",
+    "David Yates",
+    "Mike Newell",
+    "Alfonso Cuarón"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_die_Heiligt%C3%BCmer_des_Todes_%E2%80%93_Teil_1",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und die Heiligtümer des Todes – Teil 1",
+   "quelle_id": "Q161678"
+  },
+  {
+   "id": "wp-985fd3f6b2",
+   "kategorie": "harrypotter",
+   "frage": "Wo muss Harry Potter im Haus seiner Tante und seines Onkels schlafen?",
+   "antworten": [
+    "Im kalten Keller",
+    "Im Schrank unter der Treppe",
+    "In der Garage",
+    "Auf dem Dachboden"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Stein_der_Weisen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und der Stein der Weisen",
+   "quelle_id": "Q43361"
+  },
+  {
+   "id": "wp-9dd5ca41eb",
+   "kategorie": "harrypotter",
+   "frage": "Welches Fach unterrichtet Professor Snape im sechsten Harry-Potter-Film neu in Hogwarts?",
+   "antworten": [
+    "Verwandlung",
+    "Pflege magischer Geschöpfe",
+    "Zaubertränke",
+    "Verteidigung gegen die Dunklen Künste"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Halbblutprinz_(Film)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und der Halbblutprinz (Film)",
+   "quelle_id": "Q161687"
+  },
+  {
+   "id": "wp-9edd16266a",
+   "kategorie": "harrypotter",
+   "frage": "Welcher Hogwarts-Schüler ist der Neffe der Todesserin Bellatrix Lestrange?",
+   "antworten": [
+    "Neville Longbottom",
+    "Draco Malfoy",
+    "Gregory Goyle",
+    "Vincent Crabbe"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Bellatrix_Lestrange",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Bellatrix Lestrange",
+   "quelle_id": "Q1057918"
+  },
+  {
+   "id": "wp-a65f6b3397",
+   "kategorie": "harrypotter",
+   "frage": "Wer führt bei Harry Potter die Erstklässler bei ihrer Ankunft mit Booten über den See zur Schule?",
+   "antworten": [
+    "Rubeus Hagrid",
+    "Albus Dumbledore",
+    "Argus Filch",
+    "Minerva McGonagall"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Handlungsorte_der_Harry-Potter-Romane",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Handlungsorte der Harry-Potter-Romane",
+   "quelle_id": "Q208361"
+  },
+  {
+   "id": "wp-b2c7b7f6f7",
+   "kategorie": "harrypotter",
+   "frage": "Welchen magischen Gegenstand stehlen Albus und Scorpius in «Das verwunschene Kind», um die Vergangenheit zu ändern?",
+   "antworten": [
+    "Den Elderstab",
+    "Einen Tarnumhang",
+    "Einen Zeitumkehrer",
+    "Den Stein der Weisen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_das_verwunschene_Kind",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und das verwunschene Kind",
+   "quelle_id": "Q20711488"
+  },
+  {
+   "id": "wp-b867fb3599",
+   "kategorie": "harrypotter",
+   "frage": "Welcher magische Gegenstand wählt im vierten Harry-Potter-Film die Teilnehmer des Trimagischen Turniers aus?",
+   "antworten": [
+    "Der Feuerkelch",
+    "Der Spiegel Nerhegeb",
+    "Das Denkarium",
+    "Der Sprechende Hut"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Feuerkelch_(Film)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und der Feuerkelch (Film)",
+   "quelle_id": "Q102225"
+  },
+  {
+   "id": "wp-b9202a87a3",
+   "kategorie": "harrypotter",
+   "frage": "Welcher Schauspieler verkörperte Hagrid in allen acht Harry-Potter-Filmen?",
+   "antworten": [
+    "Robbie Coltrane",
+    "Alan Rickman",
+    "Brendan Gleeson",
+    "Michael Gambon"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Hagrid",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hagrid",
+   "quelle_id": "Q177439"
+  },
+  {
+   "id": "wp-c11ba644e9",
+   "kategorie": "harrypotter",
+   "frage": "Wer führte beim Harry-Potter-Film von 2002 wie schon beim ersten Teil Regie?",
+   "antworten": [
+    "Chris Columbus",
+    "Mike Newell",
+    "David Yates",
+    "Alfonso Cuarón"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_die_Kammer_des_Schreckens_(Film)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter und die Kammer des Schreckens (Film)",
+   "quelle_id": "Q102244"
+  },
+  {
+   "id": "wp-c58b76ef7f",
+   "kategorie": "harrypotter",
+   "frage": "Welche Schauspielerin spielte Professorin McGonagall in den Harry-Potter-Filmen?",
+   "antworten": [
+    "Judi Dench",
+    "Emma Thompson",
+    "Maggie Smith",
+    "Helen Mirren"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Minerva_McGonagall",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Minerva McGonagall",
+   "quelle_id": "Q192179"
+  },
+  {
+   "id": "wp-cce93e9147",
+   "kategorie": "harrypotter",
+   "frage": "Welchen magischen Gegenstand schenken Fred und George Harry Potter im dritten Band?",
+   "antworten": [
+    "Die Karte des Rumtreibers",
+    "Den Zeitumkehrer",
+    "Den Tarnumhang",
+    "Das Denkarium"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Fred_and_George_Weasley",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Fred and George Weasley",
+   "quelle_id": "Q1251049"
+  },
+  {
+   "id": "wp-d060c1e849",
+   "kategorie": "harrypotter",
+   "frage": "Auf welcher Position spielt Harry Potter im Quidditch-Team seines Hogwarts-Hauses?",
+   "antworten": [
+    "Treiber",
+    "Jäger",
+    "Sucher",
+    "Hüter"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Quidditch",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Quidditch",
+   "quelle_id": "Q305561"
+  },
+  {
+   "id": "wp-d4b2bb3e35",
+   "kategorie": "harrypotter",
+   "frage": "Welche Schauspielerin verkörpert Ginny Weasley in allen acht Kinofilmen?",
+   "antworten": [
+    "Emma Watson",
+    "Katie Leung",
+    "Bonnie Wright",
+    "Evanna Lynch"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Ginny_Weasley",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ginny Weasley",
+   "quelle_id": "Q187923"
+  },
+  {
+   "id": "wp-dfcbb9074d",
+   "kategorie": "harrypotter",
+   "frage": "Unter welchem männlichen Pseudonym ist die Harry-Potter-Autorin J. K. Rowling ebenfalls bekannt?",
+   "antworten": [
+    "Robert Gilmore",
+    "Edward Blackwood",
+    "Robert Galbraith",
+    "Richard Bachman"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Joanne_K._Rowling",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Joanne K. Rowling",
+   "quelle_id": "Q34660"
+  },
+  {
+   "id": "wp-e1f2a8d169",
+   "kategorie": "harrypotter",
+   "frage": "Welche Zeitschrift gibt Lunas Vater Xenophilius Lovegood in den Harry-Potter-Büchern heraus?",
+   "antworten": [
+    "Verwandlung heute",
+    "Der Klitterer",
+    "Die Hexenwoche",
+    "Der Tagesprophet"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Luna_Lovegood",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Luna Lovegood",
+   "quelle_id": "Q190282"
+  },
+  {
+   "id": "wp-e22759689e",
+   "kategorie": "harrypotter",
+   "frage": "Welches Fach unterrichtet Severus Snape in den ersten fünf Harry-Potter-Bänden in Hogwarts?",
+   "antworten": [
+    "Kräuterkunde",
+    "Zaubertränke",
+    "Verwandlung",
+    "Astronomie"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Severus_Snape",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Severus Snape",
+   "quelle_id": "Q176772"
+  },
+  {
+   "id": "wp-e83ad09adf",
+   "kategorie": "harrypotter",
+   "frage": "Wen heiratet Ginny Weasley am Ende der Romanreihe von J. K. Rowling?",
+   "antworten": [
+    "Harry Potter",
+    "Neville Longbottom",
+    "Dean Thomas",
+    "Draco Malfoy"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Ginny_Weasley",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ginny Weasley",
+   "quelle_id": "Q187923"
+  },
+  {
+   "id": "wp-e990fc78ca",
+   "kategorie": "harrypotter",
+   "frage": "Welchem Haus der Zauberschule Hogwarts gehört Draco Malfoy in den Harry-Potter-Büchern an?",
+   "antworten": [
+    "Slytherin",
+    "Ravenclaw",
+    "Hufflepuff",
+    "Gryffindor"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Draco_Malfoy",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Draco Malfoy",
+   "quelle_id": "Q179641"
+  },
+  {
+   "id": "wp-ee8f0b301a",
+   "kategorie": "harrypotter",
+   "frage": "Welcher Zaubereiminister will bei Harry Potter lange nicht wahrhaben, dass Voldemort zurückgekehrt ist?",
+   "antworten": [
+    "Cornelius Fudge",
+    "Rufus Scrimgeour",
+    "Kingsley Shacklebolt",
+    "Bartemius Crouch"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Ministry_of_Magic",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ministry of Magic",
+   "quelle_id": "Q193584"
+  },
+  {
+   "id": "wp-ef4062cab3",
+   "kategorie": "harrypotter",
+   "frage": "Wer verbirgt sich in Harry Potters drittem Schuljahr hinter Rons Haustier-Ratte Krätze?",
+   "antworten": [
+    "Sirius Black",
+    "Remus Lupin",
+    "Barty Crouch junior",
+    "Peter Pettigrew"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Prisoner_of_Azkaban",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter and the Prisoner of Azkaban",
+   "quelle_id": "Q47598"
+  },
+  {
+   "id": "wp-f3cf0ac723",
+   "kategorie": "harrypotter",
+   "frage": "In welches Wesen verwandelt sich Remus Lupin aus den Harry-Potter-Büchern bei Vollmond?",
+   "antworten": [
+    "Vampir",
+    "Kobold",
+    "Hippogreif",
+    "Werwolf"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Remus_Lupin",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Remus Lupin",
+   "quelle_id": "Q208657"
+  },
+  {
+   "id": "wp-f5b7d2298a",
+   "kategorie": "harrypotter",
+   "frage": "Welcher Schauspieler spielte Harry Potter in allen acht Kinofilmen?",
+   "antworten": [
+    "Rupert Grint",
+    "Daniel Radcliffe",
+    "Eddie Redmayne",
+    "Tom Felton"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Harry_Potter_(character)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harry Potter (character)",
+   "quelle_id": "Q3244512"
+  }
+ ]
+}
