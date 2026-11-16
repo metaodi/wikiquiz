@@ -12,6 +12,8 @@ CACHE_DIR = Path(os.environ.get("WIKIQUIZ_CACHE_DIR", GENERATOR_DIR / "cache"))
 OUT_DIR = Path(os.environ.get("WIKIQUIZ_OUT_DIR", GENERATOR_DIR / "out"))
 # Fragen pro Kategorie (committet); der App-Build fügt sie zu questions.json zusammen
 DATA_DIR = Path(os.environ.get("WIKIQUIZ_DATA_DIR", REPO_DIR / "data" / "fragen"))
+# Von Hand gepflegte Artikel pro Kategorie (Nischenwissen der eigenen Spielrunde), siehe lade_eigene_artikel()
+EIGENE_ARTIKEL_DATEI = Path(os.environ.get("WIKIQUIZ_EIGENE_ARTIKEL", GENERATOR_DIR / "eigene_artikel.toml"))
 
 USER_AGENT = os.environ.get(
     "WIKIQUIZ_USER_AGENT",
@@ -83,3 +85,26 @@ EN_SCHWELLEN: dict[str, Schwellen] = {
     # Harry Potter: Nebenfiguren (Dumbledore, Snape, Ron) stehen auf de.wikipedia nur in Sammelartikeln
     "harrypotter": Schwellen(min_sitelinks=20, min_pageviews=100.0),
 }
+
+
+def lade_eigene_artikel(pfad: Path | None = None) -> dict[str, list[str]]:
+    """Eigene Artikel pro Kategorie aus `eigene_artikel.toml` (Titel; englische mit Präfix „en:“).
+    Fehlt die Datei, gibt es keine. Unbekannte Kategorien oder falsche Typen sind ein Fehler,
+    damit sich Tippfehler nicht still verlieren."""
+    import tomllib
+
+    pfad = pfad or EIGENE_ARTIKEL_DATEI
+    if not pfad.exists():
+        return {}
+    with pfad.open("rb") as f:
+        roh = tomllib.load(f)
+    ergebnis: dict[str, list[str]] = {}
+    for kat, titel in roh.items():
+        if kat not in KATEGORIEN:
+            raise ValueError(f"{pfad.name}: unbekannte Kategorie „{kat}“ (erlaubt: {', '.join(KATEGORIEN)})")
+        if not isinstance(titel, list) or not all(isinstance(t, str) for t in titel):
+            raise ValueError(f"{pfad.name}: „{kat}“ muss eine Liste von Artikeltiteln sein")
+        eindeutig = list(dict.fromkeys(t.strip() for t in titel if t.strip()))
+        if eindeutig:
+            ergebnis[kat] = eindeutig
+    return ergebnis

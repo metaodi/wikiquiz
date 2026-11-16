@@ -8,6 +8,9 @@ GENERIERUNG_SYSTEM = 'Du bist Redaktor:in für eine Quiz-App für Familien und F
 
 GENERIERUNG_USER = 'Kategorie: {kategorie}\nGewünschte Anzahl Fragen: bis zu {n} (Standard: 2)\nBereits vorhandene Fragen zu diesem Thema (nicht wiederholen):\n{bestehende_fragen}\n\nArtikeltitel: {titel}\nArtikeltext (Einleitung und erste Abschnitte):\n"""\n{text}\n"""'
 
+# Wird bei eigenen Artikeln (eigene_artikel.toml) nach einer Leerzeile an GENERIERUNG_USER angehängt
+GENERIERUNG_ZUSATZ_EIGEN = 'Hinweis: Dieser Artikel wurde von Hand ausgewählt, weil die Spielrunde\ndas Thema kennt. Bewerte bekanntheit_thema wie gewohnt, erstelle die\nFragen aber auch dann, wenn es unter 3 liegt. Frage nach dem, wofür\ndas Thema bekannt ist; die übrigen Grundsätze gelten weiterhin.'
+
 PRUEFUNG = 'Du prüfst eine Quizfrage. Du siehst NICHT, welche Antwort als richtig\nmarkiert ist.\n\nFrage: {frage}\nAntworten (gemischt): {a}, {b}, {c}, {d}\nArtikelauszug: """{text}"""\n\nAntworte als JSON:\n{\n  "deine_antwort": "string",\n  "eindeutig": true/false,\n  "allgemeinwissen": 1-5,\n  "probleme": ["string"]\n}'
 
 

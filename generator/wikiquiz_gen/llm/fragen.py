@@ -11,7 +11,7 @@ from ..models import Frage, swiss, text_bereinigen
 from ..sparql import artikel_url
 from ..validate import pruefe_formal
 from .client import LLM
-from .prompts import GENERIERUNG_SYSTEM, GENERIERUNG_USER, PRUEFUNG, fuellen
+from .prompts import GENERIERUNG_SYSTEM, GENERIERUNG_USER, GENERIERUNG_ZUSATZ_EIGEN, PRUEFUNG, fuellen
 
 MIN_BEKANNTHEIT_THEMA = 3
 MIN_ALLGEMEINWISSEN = 3
@@ -115,20 +115,26 @@ def artikel_verarbeiten(
     n: int = 2,
     rng: random.Random | None = None,
     sprache: str = "de",
+    eigen: bool = False,
 ) -> ArtikelErgebnis:
-    """`sprache`: Wikipedia des Artikeltexts. Fragen sind immer deutsch (auch bei englischem Text)."""
+    """`sprache`: Wikipedia des Artikeltexts. Fragen sind immer deutsch (auch bei englischem Text).
+    `eigen`: Artikel aus eigene_artikel.toml (Nischenwissen der Spielrunde). Das LLM erhält einen Hinweis
+    (GENERIERUNG_ZUSATZ_EIGEN); die Schwellen für Bekanntheit des Themas und Allgemeinwissen entfallen."""
     rng = rng or random.Random(titel)
     erg = ArtikelErgebnis(titel)
+    nachricht = fuellen(GENERIERUNG_USER, kategorie=KATEGORIEN[kategorie], n=n,
+                        bestehende_fragen=bestehende_als_text(bestehende), titel=titel, text=text)
+    if eigen:
+        nachricht += "\n\n" + GENERIERUNG_ZUSATZ_EIGEN
     antwort = gen.json(
-        fuellen(GENERIERUNG_USER, kategorie=KATEGORIEN[kategorie], n=n,
-                bestehende_fragen=bestehende_als_text(bestehende), titel=titel, text=text),
+        nachricht,
         SCHEMA_GENERIERUNG,
         system=GENERIERUNG_SYSTEM,
     )
     erg.bekanntheit_thema = antwort["bekanntheit_thema"]
     for roh in antwort["fragen"][:n]:
         daten = {"titel": titel, **roh}
-        if erg.bekanntheit_thema < MIN_BEKANNTHEIT_THEMA:
+        if not eigen and erg.bekanntheit_thema < MIN_BEKANNTHEIT_THEMA:
             erg.verworfen.append((daten, f"bekanntheit_thema {erg.bekanntheit_thema} < {MIN_BEKANNTHEIT_THEMA}"))
             continue
         f = Frage(
@@ -143,7 +149,7 @@ def artikel_verarbeiten(
             quelle_id=qid,
             template="llm",
             meta={"belegstelle": roh["belegstelle"], "begruendung": roh["begruendung_bekanntheit"],
-                  "bekanntheit_thema": erg.bekanntheit_thema},
+                  "bekanntheit_thema": erg.bekanntheit_thema, "eigen": eigen},
         )
         fehler = pruefe_formal(f)
         if fehler:
@@ -167,7 +173,7 @@ def artikel_verarbeiten(
             erg.verworfen.append((daten, f"pruefer antwortet anders: {p['deine_antwort']!r}"))
         elif not p["eindeutig"]:
             erg.verworfen.append((daten, "nicht eindeutig: " + "; ".join(p["probleme"])[:200]))
-        elif p["allgemeinwissen"] < MIN_ALLGEMEINWISSEN:
+        elif not eigen and p["allgemeinwissen"] < MIN_ALLGEMEINWISSEN:
             erg.verworfen.append((daten, f"allgemeinwissen {p['allgemeinwissen']} < {MIN_ALLGEMEINWISSEN}"))
         else:
             erg.angenommen.append(f)

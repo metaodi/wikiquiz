@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "geografie",
- "generiert_am": "2026-11-15T15:34:01Z",
+ "generiert_am": "2026-11-16T11:49:01Z",
  "fragen": [
   {
    "id": "wd-002a9cdcc4",
@@ -3602,6 +3602,24 @@
    "lizenz": "CC0",
    "quelle_titel": "Mumbai",
    "quelle_id": "Q1156"
+  },
+  {
+   "id": "wp-e511594020",
+   "kategorie": "geografie",
+   "frage": "Aus welchem Gestein besteht das Mittelgebirge Schwäbische Alb hauptsächlich?",
+   "antworten": [
+    "Basalt",
+    "Kalkstein",
+    "Granit",
+    "Sandstein"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schw%C3%A4bische_Alb",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schwäbische Alb",
+   "quelle_id": "Q159589"
   }
  ]
 }

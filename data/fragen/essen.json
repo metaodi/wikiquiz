@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "essen",
- "generiert_am": "2026-11-16T10:32:54Z",
+ "generiert_am": "2026-11-16T11:49:01Z",
  "fragen": [
   {
    "id": "wp-0154938482",
@@ -38,6 +38,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Kaffee",
    "quelle_id": "Q8486"
+  },
+  {
+   "id": "wp-06ba047e90",
+   "kategorie": "essen",
+   "frage": "Zu welcher Wurstart zählt der Fleischkäse?",
+   "antworten": [
+    "Rohwurst",
+    "Dauerwurst",
+    "Brühwurst",
+    "Kochwurst"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fleischk%C3%A4se",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Fleischkäse",
+   "quelle_id": "Q681841"
   },
   {
    "id": "wp-0b4c2dbaaf",
@@ -92,6 +110,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Baklava",
    "quelle_id": "Q187495"
+  },
+  {
+   "id": "wp-1d94b2f255",
+   "kategorie": "essen",
+   "frage": "Welches Restprodukt aus der Herstellung anderer Käse ist der Hauptrohstoff von Ricotta?",
+   "antworten": [
+    "Buttermilch",
+    "Sauerrahm",
+    "Magermilch",
+    "Molke"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ricotta",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ricotta",
+   "quelle_id": "Q216781"
   },
   {
    "id": "wp-2222552e0a",
@@ -274,6 +310,24 @@
    "quelle_id": "Q46740"
   },
   {
+   "id": "wp-3d0c15a673",
+   "kategorie": "essen",
+   "frage": "Woraus besteht die weiche, weisse Füllung eines Schokokusses hauptsächlich?",
+   "antworten": [
+    "Marzipanmasse",
+    "Gezuckerter Eiweissschaum",
+    "Nougatcreme",
+    "Vanillecreme"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schokokuss",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schokokuss",
+   "quelle_id": "Q1578239"
+  },
+  {
    "id": "wp-436328c1e0",
    "kategorie": "essen",
    "frage": "Welches äussere Merkmal ist typisch für Hüttenkäse?",
@@ -328,6 +382,24 @@
    "quelle_id": "Q185749"
   },
   {
+   "id": "wp-53b6ce8617",
+   "kategorie": "essen",
+   "frage": "Aus welcher Getreideart wird der Griess für Polenta meist hergestellt?",
+   "antworten": [
+    "Hirse",
+    "Gerste",
+    "Mais",
+    "Weizen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Polenta",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Polenta",
+   "quelle_id": "Q131607"
+  },
+  {
    "id": "wp-5b5721a531",
    "kategorie": "essen",
    "frage": "Aus welcher Sprache wurde das deutsche Wort «Tee» im 17. Jahrhundert übernommen?",
@@ -344,6 +416,42 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Tee",
    "quelle_id": "Q6097"
+  },
+  {
+   "id": "wp-69a99b2969",
+   "kategorie": "essen",
+   "frage": "In welchem Teil Italiens ist Polenta traditionell besonders beliebt?",
+   "antworten": [
+    "Sardinien",
+    "Norditalien",
+    "Sizilien",
+    "Süditalien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Polenta",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Polenta",
+   "quelle_id": "Q131607"
+  },
+  {
+   "id": "wp-7622d7a758",
+   "kategorie": "essen",
+   "frage": "Unter welchem Namen ist der Schokokuss in Österreich bekannt?",
+   "antworten": [
+    "Tirolerkuss",
+    "Wiener Kugel",
+    "Dänenkrapfen",
+    "Schwedenbombe"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schokokuss",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schokokuss",
+   "quelle_id": "Q1578239"
   },
   {
    "id": "wp-772f183fb6",
@@ -452,6 +560,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Olivenbaum",
    "quelle_id": "Q37083"
+  },
+  {
+   "id": "wp-92383941c9",
+   "kategorie": "essen",
+   "frage": "Woher stammt der Wortteil «Käse» im Namen Fleischkäse bzw. Leberkäse?",
+   "antworten": [
+    "Von der hellgelben Farbe",
+    "Von der Form der Laibe",
+    "Von der Reifung im Käsekeller",
+    "Vom beigemischten Bergkäse"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fleischk%C3%A4se",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Fleischkäse",
+   "quelle_id": "Q681841"
   },
   {
    "id": "wp-958db5e6ce",
@@ -632,6 +758,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Sushi",
    "quelle_id": "Q46383"
+  },
+  {
+   "id": "wp-bb38928255",
+   "kategorie": "essen",
+   "frage": "Was bedeutet der italienische Käsename «Ricotta» wörtlich übersetzt?",
+   "antworten": [
+    "Nochmals gekocht",
+    "Frisch gemolken",
+    "Kleiner Laib",
+    "Weisser Käse"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ricotta",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ricotta",
+   "quelle_id": "Q216781"
   },
   {
    "id": "wp-bb4bffd7bc",

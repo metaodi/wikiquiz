@@ -56,6 +56,7 @@ def cmd_generate(args: argparse.Namespace) -> int:
         ktx = Kontext(kat, http, bekanntheit, schwellen, protokoll,
                       max_kandidaten=args.max_kandidaten, seed=args.seed)
         bestand = output.lade_kategorie(kat)
+        andere = [f for k in KATEGORIEN if k != kat for f in output.lade_kategorie(k)]
         neue: list[dict] = []
         quellen: set[str] = set()
         zeilen = [f"### {KATEGORIEN[kat]}", "", f"Bestand vorher: {len(bestand)} Fragen"]
@@ -71,7 +72,7 @@ def cmd_generate(args: argparse.Namespace) -> int:
             verarbeitet = output.lade_verarbeitet(kat)
             fragen, neu_verarbeitet, verbrauch = pipeline.wikipedia(
                 ktx, args.ziel, args.max_artikel, bestand, verarbeitet,
-                threads=args.threads, nur_kandidaten=args.nur_kandidaten,
+                threads=args.threads, nur_kandidaten=args.nur_kandidaten, andere=andere,
             )
             neue += [f.to_json() for f in fragen]
             quellen.add("wikipedia")
@@ -83,6 +84,11 @@ def cmd_generate(args: argparse.Namespace) -> int:
                 )
             if not args.dry_run and neu_verarbeitet:
                 output.schreibe_verarbeitet(kat, {**verarbeitet, **neu_verarbeitet})
+
+        neue, doppelt = pipeline.ohne_fremde_ids(neue, andere)
+        for f in doppelt:
+            protokoll.verwerfen(kat, "dedupe", f"id schon in anderer kategorie: {f['id']}",
+                                {"frage": f["frage"], "titel": f.get("quelle_titel", "")})
 
         if not args.dry_run and not args.nur_kandidaten and neue:
             # „ersetzen“ gilt nur für Wikidata-Fragen (deterministisch neu erzeugbar). Wikipedia-Fragen

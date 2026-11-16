@@ -391,3 +391,18 @@ def test_urheber_pool_ohne_unbekannte_geburtsjahre():
         {"person": "P2", "pl": "Unbekannt", "geboren": "http://www.wikidata.org/.well-known/genid/x"},
     ]
     assert urheber_pool(rows) == [("James Cameron", 1954)]
+
+
+def test_artikel_aus_anderen_kategorien():
+    from wikiquiz_gen.pipeline import ohne_fremde_ids, themen_anderer_kategorien
+    from wikiquiz_gen.popularity import Kandidat
+
+    andere = [{"id": "wp-44eabfbbb6", "kategorie": "essen", "quelle_id": "Q29506"},
+              {"id": "wp-f942ddca42", "kategorie": "kunst", "quelle_id": "Q25973"}]
+    kaki, eiche = Kandidat("Q29506", "Kaki", "Kaki", 80), Kandidat("Q12004", "Eichen", "Eichen", 90)
+    behalten, verworfen = themen_anderer_kategorien([kaki, eiche], andere)
+    assert behalten == [eiche] and verworfen == [(kaki, "schon in kategorie essen")]
+
+    neu = [{"id": "wp-f942ddca42", "frage": "Hesse?"}, {"id": "wp-neu", "frage": "Eiche?"}]
+    ok, doppelt = ohne_fremde_ids(neu, andere)
+    assert [f["id"] for f in ok] == ["wp-neu"] and [f["id"] for f in doppelt] == ["wp-f942ddca42"]
