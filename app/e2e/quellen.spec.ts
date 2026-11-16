@@ -43,3 +43,20 @@ test('zwei Fragen zum selben Artikel kommen nicht nacheinander, solange es ander
   expect(gesehen[1].split('-')[0]).not.toBe(gesehen[0].split('-')[0]);
   expect(new Set(gesehen).size).toBe(3);
 });
+
+test('Quellenlink zeigt Artikeltitel ohne „ß“, URL bleibt unverändert', async ({ page }) => {
+  const url = 'https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2022';
+  const daten = pool();
+  daten.fragen = [{ ...daten.fragen[0], quelle_url: url, quelle_titel: 'Fußball-Weltmeisterschaft 2022' } as never];
+  await page.clock.install({ time: new Date('2026-11-15T10:00:00Z') });
+  await page.clock.pauseAt(new Date('2026-11-15T10:00:01Z'));
+  await page.route('**/questions.json', (route) => route.fulfill({ json: daten }));
+  await page.goto('./');
+  await setup(page, ['Solo'], 5);
+  await frageOeffnen(page, 'geografie');
+  await beantworten(page, { typ: 'richtig' });
+  const link = page.getByRole('link', { name: 'Mehr auf Wikipedia: Fussball-Weltmeisterschaft 2022' });
+  await expect(link).toBeVisible();
+  await expect(link).toHaveAttribute('href', url);
+  expect(await page.locator('body').innerText()).not.toContain('ß');
+});

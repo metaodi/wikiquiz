@@ -39,7 +39,8 @@ npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für Git
 - **Erschöpfte Kategorien** sind ausgegraut („keine Fragen mehr“ bzw. „bald verfügbar“); beim Antippen erscheint ein Hinweis.
   „Zufall“ wählt nur unter Kategorien mit verbleibenden Fragen. Sind alle erschöpft, endet das Spiel.
 - **Quellenlink** im Feedback: „Mehr auf Wikipedia: Titel“, bei Fragen aus der englischen Wikipedia
-  „Mehr auf Wikipedia (englisch): Titel“ (`src/lib/quelle.ts`).
+  „Mehr auf Wikipedia (englisch): Titel“ (`src/lib/quelle.ts`). Der Titel wird mit „ss“ statt „ß“ angezeigt
+  („Fussball-Weltmeisterschaft 2022“), der Link zeigt weiter auf den Originalartikel.
 - **Zwischenstand** nach jeder Runde (bei mehreren Spielern); bei einem Spieler zeigt das Feedback den Punktestand.
 
 ## End-to-End-Tests (`e2e/`)

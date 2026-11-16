@@ -246,7 +246,7 @@ ihre deutsche Bezeichnung auf die Landessprache abgebildet. Kantone selbst durch
 | `olympia` | In welcher Stadt fanden die Olympischen {Sommerspiele 1972} statt? | Gastgeberstädte zeitlich naher Spiele derselben Art |
 | `wm_land` | In welchem Land fand die {Fussball-Weltmeisterschaft 2006} statt? | Gastgeberländer zeitlich naher Turniere |
 | `wm_sieger` | Welches Land gewann die {Fussball-Weltmeisterschaft 2014}? | andere Weltmeister |
-| `film` | Wer führte Regie beim Film «{Der Pate}»? | Regisseure anderer bekannter Filme mit ähnlichem Geburtsjahr (nicht nach Beruf: Dort stehen auch Schauspieler wie Whoopi Goldberg); höchstens 2 Filme pro Person |
+| `film` | Wer führte Regie beim Film «{Der Pate}»? | Regisseure anderer bekannter Filme mit ähnlichem Geburtsjahr (nicht nach Beruf: Dort stehen auch Schauspieler wie Whoopi Goldberg); höchstens 2 Filme pro Person, davon nie zwei aus derselben Reihe (Wikidata P179 oder Titelanfang: «Der Pate» / «Der Pate – Teil II») |
 
 - Gastgeberstädte der Olympischen Spiele sind kuratiert (`SOMMER_ORTE`, `WINTER_ORTE`): Wikidata erfasst sie
   uneinheitlich (P131 nur bei wenigen Spielen, P276 meist mit Stadien). Spiele mit mehreren Gastgebern fehlen.
@@ -274,7 +274,10 @@ ihre deutsche Bezeichnung auf die Landessprache abgebildet. Kantone selbst durch
 - Jedes Tier ist nur in einem Template die richtige Antwort.
 
 Wikidata-Fragen werden gegen die bestehenden Wikipedia-Fragen der Kategorie dedupliziert (dieselbe Tatsache,
-gegenseitiges Verraten, höchstens 2 Fragen pro Thema).
+dasselbe Werk, gegenseitiges Verraten, höchstens 2 Fragen pro Thema). „Dasselbe Werk“: gleiche Antwort und der
+Titel in «» der Templatefrage steht auch in der anderen Frage („Wer schrieb «Buddenbrooks»?“ ↔ „Welcher
+Schriftsteller veröffentlichte 1901 den Familienroman «Buddenbrooks»?“) – die Wortüberlappung allein erkennt
+das bei kurzen Templatefragen nicht. Werke in `AUSSCHLUSS` (`templates/kunst.py`) werden nie gefragt.
 
 ## Allgemein
 

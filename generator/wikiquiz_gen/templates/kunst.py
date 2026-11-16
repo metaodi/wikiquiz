@@ -41,8 +41,9 @@ WERKARTEN: dict[str, Werkart] = {
     "oper": Werkart("?item wdt:P136 wd:Q1344.", "P86", ("Q36834",),          # Genre Oper; Komponist
                     "Wer komponierte die Oper «{titel}»?", 20),
 }
-# Für ein Familienquiz ungeeignet
-AUSSCHLUSS = {"Der Ursprung der Welt"}
+# Für ein Familienquiz ungeeignet, kein eigenständiges Werk (Höhlengleichnis: Teil der Politeia) oder
+# mit umstrittener Zuschreibung (Salvator Mundi: Leonardo nur „zugeschrieben“)
+AUSSCHLUSS = {"Der Ursprung der Welt", "Höhlengleichnis", "Salvator Mundi", "Salvator mundi"}
 # Höchstens so viele Werke pro Urheber, sonst heisst die Antwort ständig Shakespeare oder Verdi
 MAX_PRO_URHEBER = 2
 # Werke werden seltener aufgerufen als ihre Urheber (Die Nachtwache ≈ 150/Tag, Woyzeck ≈ 120/Tag)

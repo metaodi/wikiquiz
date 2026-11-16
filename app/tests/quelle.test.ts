@@ -19,4 +19,13 @@ describe('Quellenlink', () => {
       'Mehr auf Wikipedia (englisch)',
     );
   });
+
+  it('zeigt den Titel ohne „ß“', () => {
+    expect(
+      quellenLinkText({
+        quelle_url: 'https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2022',
+        quelle_titel: 'Fußball-Weltmeisterschaft 2022',
+      }),
+    ).toBe('Mehr auf Wikipedia: Fussball-Weltmeisterschaft 2022');
+  });
 });

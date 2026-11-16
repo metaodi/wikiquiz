@@ -447,3 +447,42 @@ def test_natur_klassen_bestimmen():
         natur.abfrage = alt
     assert ergebnis == {"Q1": "Säugetiere", "Q2": "Fische"}
     assert {"Q10", "Q11"} <= vorfahren["Q1"]  # für die Erkennung überraschender Taxa (z. B. Wale)
+
+
+def test_dedupe_gleiches_werk_wikidata_gegen_bestand():
+    def wp(text, richtig, qid):
+        return frage(frage=text, richtig=richtig, falsch=["A B", "C D", "E F"], quelle_id=qid, quelle_typ="wikipedia")
+
+    def wd(text, richtig, qid):
+        return frage(frage=text, richtig=richtig, falsch=["A B", "C D", "E F"], quelle_id=qid, template="x")
+
+    # Lauf 30 (kunst): Wortüberlappung nur 0.14–0.36, trotzdem dieselbe Tatsache
+    bestand = [
+        wp("Welcher Maler schuf das berühmte Gemälde «Die Nachtwache»?", "Rembrandt", "Q1"),
+        wp("Welcher italienische Komponist schrieb die Opern «Tosca» und «Madama Butterfly»?", "Giacomo Puccini", "Q2"),
+    ]
+    neu = [
+        wd("Wer malte das Gemälde «Die Nachtwache»?", "Rembrandt van Rijn", "Q3"),
+        wd("Wer komponierte die Oper «Tosca»?", "Giacomo Puccini", "Q4"),
+        wd("Wer komponierte die Oper «Aida»?", "Giuseppe Verdi", "Q5"),
+        # gleicher Titel, andere Antwort: bleibt
+        wd("Wer schrieb «Tosca»?", "Victorien Sardou", "Q6"),
+    ]
+    behalten, verworfen = deduplizieren([*bestand, *neu])
+    assert behalten == [*bestand, *neu[2:]]
+    assert [g for _, g in verworfen] == [f"gleiches werk wie {bestand[0].id}", f"gleiches werk wie {bestand[1].id}"]
+
+
+def test_film_gleiche_reihe():
+    from wikiquiz_gen.templates.sport import gleiche_reihe
+
+    # Titelanfang (P179 fehlt in Wikidata oft)
+    assert gleiche_reihe(("Der Pate", set()), ("Der Pate – Teil II", set()))
+    assert gleiche_reihe(("Terminator 2 – Tag der Abrechnung", set()), ("Terminator", set()))
+    # gemeinsame Reihe in Wikidata
+    assert gleiche_reihe(("Harry Potter und der Stein der Weisen", {"Q1"}),
+                         ("Harry Potter und die Kammer des Schreckens", {"Q1"}))
+    # verschiedene Filme, auch bei ähnlichem Anfang nur ganze Wörter
+    assert not gleiche_reihe(("Psycho", set()), ("Rebecca", set()))
+    assert not gleiche_reihe(("Alien", set()), ("Aliens – Die Rückkehr", set()))
+    assert not gleiche_reihe(("Der Pate", {"Q1"}), ("Schindlers Liste", {"Q2"}))
