@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "sport",
- "generiert_am": "2026-11-16T12:40:21Z",
+ "generiert_am": "2026-11-16T13:08:13Z",
  "fragen": [
   {
    "id": "wd-01714e78bd",
@@ -1424,6 +1424,1176 @@
    "lizenz": "CC0",
    "quelle_titel": "Fußball-Weltmeisterschaft 1950",
    "quelle_id": "Q132515"
+  },
+  {
+   "id": "wp-011922069d",
+   "kategorie": "sport",
+   "frage": "Wie viele Grand-Slam-Turniere gewann Tennisspielerin Steffi Graf im Einzel insgesamt?",
+   "antworten": [
+    "24",
+    "22",
+    "18",
+    "20"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Steffi_Graf",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Steffi Graf",
+   "quelle_id": "Q11662"
+  },
+  {
+   "id": "wp-055f23a925",
+   "kategorie": "sport",
+   "frage": "Welche Firma hat das weltweit erfolgreiche Videospiel Fortnite (mit)entwickelt?",
+   "antworten": [
+    "Ubisoft",
+    "Electronic Arts",
+    "Epic Games",
+    "Activision"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fortnite",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Fortnite",
+   "quelle_id": "Q349375"
+  },
+  {
+   "id": "wp-07e7bc98e4",
+   "kategorie": "sport",
+   "frage": "Woher stammt der Sänger Bad Bunny?",
+   "antworten": [
+    "Kolumbien",
+    "Kuba",
+    "Dominikanische Republik",
+    "Puerto Rico"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bad_Bunny",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Bad Bunny",
+   "quelle_id": "Q44333953"
+  },
+  {
+   "id": "wp-0a69a0cfcf",
+   "kategorie": "sport",
+   "frage": "Aus welchem Land stammte der Filmregisseur Alfred Hitchcock ursprünglich?",
+   "antworten": [
+    "Grossbritannien",
+    "Irland",
+    "USA",
+    "Kanada"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Alfred_Hitchcock",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Alfred Hitchcock",
+   "quelle_id": "Q7374"
+  },
+  {
+   "id": "wp-0eadbfb2e1",
+   "kategorie": "sport",
+   "frage": "Welche berühmte Country-Sängerin ist die Patentante von Miley Cyrus?",
+   "antworten": [
+    "Dolly Parton",
+    "Loretta Lynn",
+    "Shania Twain",
+    "Reba McEntire"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Miley_Cyrus",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Miley Cyrus",
+   "quelle_id": "Q4235"
+  },
+  {
+   "id": "wp-10db049b49",
+   "kategorie": "sport",
+   "frage": "Welchen Konflikt thematisiert der bekannte Song «Zombie» der Band The Cranberries?",
+   "antworten": [
+    "Den Falklandkrieg",
+    "Den Bosnienkrieg",
+    "Den Golfkrieg",
+    "Den Nordirlandkonflikt"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/The_Cranberries",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "The Cranberries",
+   "quelle_id": "Q483810"
+  },
+  {
+   "id": "wp-1369e2405c",
+   "kategorie": "sport",
+   "frage": "Welchen Beinamen trägt der Zehnkampf wegen seiner Vielseitigkeit in der Leichtathletik?",
+   "antworten": [
+    "Kaiserdisziplin",
+    "Meisterdisziplin",
+    "Kronendisziplin",
+    "Königsdisziplin"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Zehnkampf",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Zehnkampf",
+   "quelle_id": "Q184654"
+  },
+  {
+   "id": "wp-184c33f89c",
+   "kategorie": "sport",
+   "frage": "Womit handeln die Spielenden beim Brettspiel Monopoly hauptsächlich?",
+   "antworten": [
+    "Aktien",
+    "Edelsteine",
+    "Rohstoffe",
+    "Grundstücke"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Monopoly",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Monopoly",
+   "quelle_id": "Q17243"
+  },
+  {
+   "id": "wp-18cfc65a29",
+   "kategorie": "sport",
+   "frage": "Wie heisst das französische Ballspiel, das als Vorläufer des heutigen Tennis gilt?",
+   "antworten": [
+    "Jeu de Paume",
+    "Croquet",
+    "Pelota",
+    "Jeu de Boules"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tennis",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tennis",
+   "quelle_id": "Q847"
+  },
+  {
+   "id": "wp-1f6b0ade17",
+   "kategorie": "sport",
+   "frage": "Wie viele Hauptfiguren steuert man in «GTA V» erstmals in der Geschichte der Spielreihe?",
+   "antworten": [
+    "Vier",
+    "Fünf",
+    "Zwei",
+    "Drei"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Grand_Theft_Auto_V",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Grand Theft Auto V",
+   "quelle_id": "Q17452"
+  },
+  {
+   "id": "wp-20eb60b84f",
+   "kategorie": "sport",
+   "frage": "Welcher Song brachte der Rockband Dire Straits Ende der 1970er-Jahre den Durchbruch?",
+   "antworten": [
+    "Sultans of Swing",
+    "Walk of Life",
+    "Money for Nothing",
+    "Brothers in Arms"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dire_Straits",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Dire Straits",
+   "quelle_id": "Q50040"
+  },
+  {
+   "id": "wp-20fd56d9ae",
+   "kategorie": "sport",
+   "frage": "Welches Duo schrieb die meisten Songs der Beatles?",
+   "antworten": [
+    "McCartney und Starr",
+    "Lennon und McCartney",
+    "Harrison und Starr",
+    "Lennon und Harrison"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/The_Beatles",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "The Beatles",
+   "quelle_id": "Q1299"
+  },
+  {
+   "id": "wp-24364b2954",
+   "kategorie": "sport",
+   "frage": "Wie viele Spieler stehen beim Cricket pro Mannschaft im Spiel?",
+   "antworten": [
+    "Elf",
+    "Zwölf",
+    "Neun",
+    "Zehn"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Cricket",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Cricket",
+   "quelle_id": "Q5375"
+  },
+  {
+   "id": "wp-244268fdb2",
+   "kategorie": "sport",
+   "frage": "Wie lautet der Vorname der Hauptfigur Dr. Grey in der Serie «Grey’s Anatomy»?",
+   "antworten": [
+    "Meredith",
+    "Miranda",
+    "Cristina",
+    "Izzie"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Grey%E2%80%99s_Anatomy",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Grey’s Anatomy",
+   "quelle_id": "Q438406"
+  },
+  {
+   "id": "wp-2e87df628a",
+   "kategorie": "sport",
+   "frage": "Aus welcher Sprache stammt das Wort «Schach», das ursprünglich «König» bedeutet?",
+   "antworten": [
+    "Arabisch",
+    "Griechisch",
+    "Sanskrit",
+    "Persisch"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schach",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schach",
+   "quelle_id": "Q718"
+  },
+  {
+   "id": "wp-2f3e77b779",
+   "kategorie": "sport",
+   "frage": "Wie heisst der Kontinent, auf dem die sieben Königreiche in «Game of Thrones» liegen?",
+   "antworten": [
+    "Essos",
+    "Westeros",
+    "Narnia",
+    "Mittelerde"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Game_of_Thrones",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Game of Thrones",
+   "quelle_id": "Q23572"
+  },
+  {
+   "id": "wp-32e6eba149",
+   "kategorie": "sport",
+   "frage": "Welche Band machte den ursprünglich von Fleetwood Mac stammenden Song «Black Magic Woman» weltweit berühmt?",
+   "antworten": [
+    "Deep Purple",
+    "Santana",
+    "The Doors",
+    "Led Zeppelin"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fleetwood_Mac",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Fleetwood Mac",
+   "quelle_id": "Q106648"
+  },
+  {
+   "id": "wp-33ca979e70",
+   "kategorie": "sport",
+   "frage": "Seit welchem Jahr finden die Olympischen Winterspiele um zwei Jahre versetzt zu den Sommerspielen statt?",
+   "antworten": [
+    "1984",
+    "2000",
+    "1992",
+    "1994"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Winterspiele",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Olympische Winterspiele",
+   "quelle_id": "Q82414"
+  },
+  {
+   "id": "wp-37a63f3762",
+   "kategorie": "sport",
+   "frage": "Welche Form haben die Platten, mit denen Prominente auf dem Hollywood Walk of Fame geehrt werden?",
+   "antworten": [
+    "Herzen",
+    "Sterne",
+    "Rauten",
+    "Kreise"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hollywood_Walk_of_Fame",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hollywood Walk of Fame",
+   "quelle_id": "Q71719"
+  },
+  {
+   "id": "wp-385dd229d2",
+   "kategorie": "sport",
+   "frage": "Mit welcher Disney-Fernsehserie, in der sie die Hauptrolle spielte, gelang Miley Cyrus 2006 der Durchbruch?",
+   "antworten": [
+    "Hannah Montana",
+    "Hotel Zack & Cody",
+    "Die Zauberer vom Waverly Place",
+    "Sonny Munroe"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Miley_Cyrus",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Miley Cyrus",
+   "quelle_id": "Q4235"
+  },
+  {
+   "id": "wp-3dcb84086c",
+   "kategorie": "sport",
+   "frage": "Wie viele Feldspieler stehen pro Eishockeymannschaft neben dem Torwart gleichzeitig auf dem Eis?",
+   "antworten": [
+    "Vier",
+    "Fünf",
+    "Sechs",
+    "Sieben"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Eishockey",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Eishockey",
+   "quelle_id": "Q41466"
+  },
+  {
+   "id": "wp-42f1939a09",
+   "kategorie": "sport",
+   "frage": "Zu Ehren welches Gottes wurden die Olympischen Spiele in der Antike abgehalten?",
+   "antworten": [
+    "Zeus",
+    "Apollon",
+    "Poseidon",
+    "Hermes"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Spiele",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Olympische Spiele",
+   "quelle_id": "Q5389"
+  },
+  {
+   "id": "wp-4bba83f373",
+   "kategorie": "sport",
+   "frage": "Seit welchem Jahr werden die Olympischen Winterspiele ausgetragen?",
+   "antworten": [
+    "1936",
+    "1924",
+    "1912",
+    "1948"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Winterspiele",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Olympische Winterspiele",
+   "quelle_id": "Q82414"
+  },
+  {
+   "id": "wp-4dc1a19d22",
+   "kategorie": "sport",
+   "frage": "Welches Unternehmen machte Podcasts 2005 einem Massenpublikum zugänglich?",
+   "antworten": [
+    "Apple",
+    "Sony",
+    "Microsoft",
+    "Google"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Podcast",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Podcast",
+   "quelle_id": "Q20899"
+  },
+  {
+   "id": "wp-5f96729521",
+   "kategorie": "sport",
+   "frage": "Mit welcher Musikrichtung wurde Bad Bunny neben Latin Trap vor allem bekannt?",
+   "antworten": [
+    "Salsa",
+    "Flamenco",
+    "Tango",
+    "Reggaeton"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bad_Bunny",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Bad Bunny",
+   "quelle_id": "Q44333953"
+  },
+  {
+   "id": "wp-65b62c8a69",
+   "kategorie": "sport",
+   "frage": "Aus welcher englischen Stadt stammte die Band The Beatles?",
+   "antworten": [
+    "London",
+    "Birmingham",
+    "Manchester",
+    "Liverpool"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/The_Beatles",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "The Beatles",
+   "quelle_id": "Q1299"
+  },
+  {
+   "id": "wp-661c643bcd",
+   "kategorie": "sport",
+   "frage": "Welche Kampfsportart der antiken Olympischen Spiele gilt als Vorläufer von Mixed Martial Arts?",
+   "antworten": [
+    "Hoplitodromos",
+    "Pygmachia",
+    "Pankration",
+    "Pentathlon"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mixed_Martial_Arts",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mixed Martial Arts",
+   "quelle_id": "Q114466"
+  },
+  {
+   "id": "wp-6e3e5a40ff",
+   "kategorie": "sport",
+   "frage": "Aus welchem Land stammte die Rockband The Cranberries?",
+   "antworten": [
+    "Schottland",
+    "Irland",
+    "Wales",
+    "England"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/The_Cranberries",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "The Cranberries",
+   "quelle_id": "Q483810"
+  },
+  {
+   "id": "wp-72b5c3c06a",
+   "kategorie": "sport",
+   "frage": "In welcher US-Stadt spielt die Arztserie «Grey’s Anatomy»?",
+   "antworten": [
+    "Chicago",
+    "Seattle",
+    "Boston",
+    "San Francisco"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Grey%E2%80%99s_Anatomy",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Grey’s Anatomy",
+   "quelle_id": "Q438406"
+  },
+  {
+   "id": "wp-74e55db804",
+   "kategorie": "sport",
+   "frage": "Im Film «Interstellar» reist eine Crew durch ein Wurmloch. In der Nähe welches Planeten liegt es?",
+   "antworten": [
+    "Mars",
+    "Saturn",
+    "Neptun",
+    "Jupiter"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Interstellar",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Interstellar",
+   "quelle_id": "Q13417189"
+  },
+  {
+   "id": "wp-78174c2268",
+   "kategorie": "sport",
+   "frage": "Aus welchem Land stammt das Unternehmen, das das Kino-System IMAX entwickelt hat?",
+   "antworten": [
+    "USA",
+    "Japan",
+    "Grossbritannien",
+    "Kanada"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/IMAX",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "IMAX",
+   "quelle_id": "Q188575"
+  },
+  {
+   "id": "wp-782bda2b56",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt befindet sich der berühmte Gehweg «Hollywood Walk of Fame»?",
+   "antworten": [
+    "San Diego",
+    "San Francisco",
+    "Los Angeles",
+    "Las Vegas"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hollywood_Walk_of_Fame",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hollywood Walk of Fame",
+   "quelle_id": "Q71719"
+  },
+  {
+   "id": "wp-78e73a68af",
+   "kategorie": "sport",
+   "frage": "In welcher fiktiven Kleinstadt spielt die Fernsehserie «Gilmore Girls»?",
+   "antworten": [
+    "Twin Peaks",
+    "Sunnydale",
+    "Capeside",
+    "Stars Hollow"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gilmore_Girls",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gilmore Girls",
+   "quelle_id": "Q193462"
+  },
+  {
+   "id": "wp-813759988b",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden 1877 die ersten Tennismeisterschaften von Wimbledon statt?",
+   "antworten": [
+    "Edinburgh",
+    "Manchester",
+    "Paris",
+    "London"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tennis",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tennis",
+   "quelle_id": "Q847"
+  },
+  {
+   "id": "wp-861209fbdb",
+   "kategorie": "sport",
+   "frage": "Backgammon gilt als Mischung aus Strategiespiel und welcher anderen Spielart?",
+   "antworten": [
+    "Kartenspiel",
+    "Glücksspiel",
+    "Geschicklichkeitsspiel",
+    "Rollenspiel"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Backgammon",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Backgammon",
+   "quelle_id": "Q11411"
+  },
+  {
+   "id": "wp-8a5faf7d06",
+   "kategorie": "sport",
+   "frage": "Wie viele Spieler einer Mannschaft stehen im American Football gleichzeitig auf dem Feld?",
+   "antworten": [
+    "15",
+    "9",
+    "11",
+    "13"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/American_Football",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "American Football",
+   "quelle_id": "Q41323"
+  },
+  {
+   "id": "wp-8bdb39af51",
+   "kategorie": "sport",
+   "frage": "Das Wort «Podcast» verbindet «broadcast» (Ausstrahlung) mit dem Namen welches Geräts?",
+   "antworten": [
+    "iPod",
+    "Discman",
+    "Walkman",
+    "iPhone"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Podcast",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Podcast",
+   "quelle_id": "Q20899"
+  },
+  {
+   "id": "wp-96bdf6e29d",
+   "kategorie": "sport",
+   "frage": "Welche Horrorfigur spielte Tim Curry 1990 in der Stephen-King-Verfilmung «Es»?",
+   "antworten": [
+    "Michael Myers",
+    "Freddy Krueger",
+    "Chucky",
+    "Pennywise"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tim_Curry",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tim Curry",
+   "quelle_id": "Q52392"
+  },
+  {
+   "id": "wp-9800b5372c",
+   "kategorie": "sport",
+   "frage": "Aus welchem Land stammt Markus «Notch» Persson, der ursprüngliche Entwickler von Minecraft?",
+   "antworten": [
+    "Dänemark",
+    "Norwegen",
+    "Finnland",
+    "Schweden"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Minecraft",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Minecraft",
+   "quelle_id": "Q49740"
+  },
+  {
+   "id": "wp-985a727b77",
+   "kategorie": "sport",
+   "frage": "Wie gewinnt man eine Partie Backgammon?",
+   "antworten": [
+    "Als Erster alle Felder besetzen",
+    "Den gegnerischen Hauptstein einkreisen",
+    "Alle gegnerischen Steine schlagen",
+    "Als Erster alle eigenen Steine abtragen"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Backgammon",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Backgammon",
+   "quelle_id": "Q11411"
+  },
+  {
+   "id": "wp-9979498ebe",
+   "kategorie": "sport",
+   "frage": "In welchem Jahr fanden die ersten Olympischen Spiele der Neuzeit statt?",
+   "antworten": [
+    "1900",
+    "1896",
+    "1888",
+    "1912"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Olympische Sommerspiele",
+   "quelle_id": "Q159821"
+  },
+  {
+   "id": "wp-9a84889209",
+   "kategorie": "sport",
+   "frage": "Welchen Musikstil aus den USA hat Adriano Celentano in Italien eingeführt?",
+   "antworten": [
+    "Disco",
+    "Jazz",
+    "Country",
+    "Rock ’n’ Roll"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Adriano_Celentano",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Adriano Celentano",
+   "quelle_id": "Q199943"
+  },
+  {
+   "id": "wp-9bb74467fa",
+   "kategorie": "sport",
+   "frage": "Wie viele Spieler einer Mannschaft stehen beim Handball regulär gleichzeitig auf dem Feld (inkl. Torwart)?",
+   "antworten": [
+    "Fünf",
+    "Sieben",
+    "Elf",
+    "Sechs"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Handball",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Handball",
+   "quelle_id": "Q8418"
+  },
+  {
+   "id": "wp-a2637a8873",
+   "kategorie": "sport",
+   "frage": "Mit welcher Rockband wurde Phil Collins neben seiner Solokarriere weltberühmt?",
+   "antworten": [
+    "Genesis",
+    "Supertramp",
+    "Yes",
+    "Pink Floyd"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Phil_Collins",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Phil Collins",
+   "quelle_id": "Q144622"
+  },
+  {
+   "id": "wp-a2cdb704f7",
+   "kategorie": "sport",
+   "frage": "Wie lange dauert ein Handballspiel bei Erwachsenen regulär?",
+   "antworten": [
+    "2 × 45 Minuten",
+    "3 × 20 Minuten",
+    "2 × 30 Minuten",
+    "4 × 15 Minuten"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Handball",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Handball",
+   "quelle_id": "Q8418"
+  },
+  {
+   "id": "wp-a4939c4db2",
+   "kategorie": "sport",
+   "frage": "Welcher italienische Sänger landete 1968 mit dem Lied «Azzurro» einen internationalen Hit?",
+   "antworten": [
+    "Eros Ramazzotti",
+    "Al Bano",
+    "Adriano Celentano",
+    "Toto Cutugno"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Adriano_Celentano",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Adriano Celentano",
+   "quelle_id": "Q199943"
+  },
+  {
+   "id": "wp-aaf0e135c9",
+   "kategorie": "sport",
+   "frage": "In welchem Jahr sank die Titanic nach dem Zusammenstoss mit einem Eisberg?",
+   "antworten": [
+    "1905",
+    "1912",
+    "1931",
+    "1921"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Titanic_(Schiff)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Titanic (Schiff)",
+   "quelle_id": "Q25173"
+  },
+  {
+   "id": "wp-b602a3836d",
+   "kategorie": "sport",
+   "frage": "Welcher Konzern kaufte 2014 das Entwicklerstudio Mojang samt dem Spiel Minecraft?",
+   "antworten": [
+    "Sony",
+    "Nintendo",
+    "Microsoft",
+    "Electronic Arts"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Minecraft",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Minecraft",
+   "quelle_id": "Q49740"
+  },
+  {
+   "id": "wp-bb437caf91",
+   "kategorie": "sport",
+   "frage": "Welcher Sänger und Gitarrist war der Kopf der britischen Rockband Dire Straits?",
+   "antworten": [
+    "Phil Collins",
+    "Eric Clapton",
+    "Sting",
+    "Mark Knopfler"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dire_Straits",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Dire Straits",
+   "quelle_id": "Q50040"
+  },
+  {
+   "id": "wp-c089a6b06b",
+   "kategorie": "sport",
+   "frage": "In welchem Jahr gewann Steffi Graf alle vier Grand-Slam-Turniere und dazu Olympia-Gold?",
+   "antworten": [
+    "1995",
+    "1988",
+    "1985",
+    "1991"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Steffi_Graf",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Steffi Graf",
+   "quelle_id": "Q11662"
+  },
+  {
+   "id": "wp-c3e372d953",
+   "kategorie": "sport",
+   "frage": "Aus welchem Metall besteht eine olympische Goldmedaille unter ihrem Goldüberzug hauptsächlich?",
+   "antworten": [
+    "Messing",
+    "Silber",
+    "Kupfer",
+    "Bronze"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Olympische Sommerspiele",
+   "quelle_id": "Q159821"
+  },
+  {
+   "id": "wp-cf8e8b2978",
+   "kategorie": "sport",
+   "frage": "Wie heisst in der Serie «Gilmore Girls» die Tochter der alleinerziehenden Lorelai?",
+   "antworten": [
+    "Lane",
+    "Sookie",
+    "Rory",
+    "Paris"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gilmore_Girls",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gilmore Girls",
+   "quelle_id": "Q193462"
+  },
+  {
+   "id": "wp-d1adf51b0f",
+   "kategorie": "sport",
+   "frage": "Welches 1977 erschienene Album der Rockband Fleetwood Mac zählt zu den meistverkauften der Musikgeschichte?",
+   "antworten": [
+    "Tango in the Night",
+    "Tusk",
+    "Mirage",
+    "Rumours"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fleetwood_Mac",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Fleetwood Mac",
+   "quelle_id": "Q106648"
+  },
+  {
+   "id": "wp-d36420bb79",
+   "kategorie": "sport",
+   "frage": "Welcher Schriftsteller schrieb die Romanreihe, auf der die Serie «Game of Thrones» basiert?",
+   "antworten": [
+    "George R. R. Martin",
+    "J. R. R. Tolkien",
+    "C. S. Lewis",
+    "Terry Pratchett"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Game_of_Thrones",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Game of Thrones",
+   "quelle_id": "Q23572"
+  },
+  {
+   "id": "wp-e4be6bab77",
+   "kategorie": "sport",
+   "frage": "Aus welchem Land stammt das Brettspiel Go ursprünglich?",
+   "antworten": [
+    "Japan",
+    "Indien",
+    "Korea",
+    "China"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Go_(Spiel)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Go (Spiel)",
+   "quelle_id": "Q11413"
+  },
+  {
+   "id": "wp-e8c2b3679d",
+   "kategorie": "sport",
+   "frage": "In welchem Land ist die Sportart Cricket entstanden?",
+   "antworten": [
+    "Australien",
+    "Indien",
+    "Irland",
+    "England"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Cricket",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Cricket",
+   "quelle_id": "Q5375"
+  },
+  {
+   "id": "wp-e8d97542af",
+   "kategorie": "sport",
+   "frage": "Wie ist die reguläre Spielzeit eines Eishockeyspiels üblicherweise eingeteilt?",
+   "antworten": [
+    "4 × 15 Minuten",
+    "2 × 30 Minuten",
+    "2 × 45 Minuten",
+    "3 × 20 Minuten"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Eishockey",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Eishockey",
+   "quelle_id": "Q41466"
+  },
+  {
+   "id": "wp-ebe7352aaf",
+   "kategorie": "sport",
+   "frage": "Welche Kultfigur spielte Tim Curry 1975 in der «Rocky Horror Picture Show»?",
+   "antworten": [
+    "Dr. Everett Scott",
+    "Riff Raff",
+    "Brad Majors",
+    "Dr. Frank N. Furter"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tim_Curry",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tim Curry",
+   "quelle_id": "Q52392"
+  },
+  {
+   "id": "wp-f0f5b0fe47",
+   "kategorie": "sport",
+   "frage": "In welcher fiktiven Stadt spielt das Computerspiel «Grand Theft Auto V»?",
+   "antworten": [
+    "San Fierro",
+    "Liberty City",
+    "Los Santos",
+    "Vice City"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Grand_Theft_Auto_V",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Grand Theft Auto V",
+   "quelle_id": "Q17452"
+  },
+  {
+   "id": "wp-f1b32033b5",
+   "kategorie": "sport",
+   "frage": "Aus welchem Land stammt das Brettspiel Monopoly ursprünglich?",
+   "antworten": [
+    "Deutschland",
+    "England",
+    "USA",
+    "Kanada"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Monopoly",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Monopoly",
+   "quelle_id": "Q17243"
+  },
+  {
+   "id": "wp-f201217545",
+   "kategorie": "sport",
+   "frage": "Welchen Beruf übt Walter White, die Hauptfigur der Serie «Breaking Bad», zu Beginn aus?",
+   "antworten": [
+    "Physiklehrer",
+    "Biologielehrer",
+    "Chemielehrer",
+    "Mathematiklehrer"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Breaking_Bad",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Breaking Bad",
+   "quelle_id": "Q1079"
+  },
+  {
+   "id": "wp-f5d89f8d38",
+   "kategorie": "sport",
+   "frage": "Welcher Schauspieler spielt in der Serie «Breaking Bad» die Hauptfigur Walter White?",
+   "antworten": [
+    "Kevin Spacey",
+    "Bryan Cranston",
+    "James Gandolfini",
+    "Jon Hamm"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Breaking_Bad",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Breaking Bad",
+   "quelle_id": "Q1079"
+  },
+  {
+   "id": "wp-f92840a83a",
+   "kategorie": "sport",
+   "frage": "In welchem Jahr wurde die Spieleplattform Roblox offiziell veröffentlicht?",
+   "antworten": [
+    "2016",
+    "2001",
+    "2006",
+    "2011"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Roblox",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Roblox",
+   "quelle_id": "Q692989"
+  },
+  {
+   "id": "wp-fa5605fa85",
+   "kategorie": "sport",
+   "frage": "Welcher Mehrkampf wird bei grossen Leichtathletik-Meisterschaften für Frauen anstelle des Zehnkampfs ausgetragen?",
+   "antworten": [
+    "Sechskampf",
+    "Fünfkampf",
+    "Siebenkampf",
+    "Achtkampf"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Zehnkampf",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Zehnkampf",
+   "quelle_id": "Q184654"
+  },
+  {
+   "id": "wp-feeede8e9f",
+   "kategorie": "sport",
+   "frage": "Welches Instrument spielte Phil Collins in seiner Band, bevor er dort auch Sänger wurde?",
+   "antworten": [
+    "Leadgitarre",
+    "Bassgitarre",
+    "Schlagzeug",
+    "Keyboard"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Phil_Collins",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Phil Collins",
+   "quelle_id": "Q144622"
   }
  ]
 }
