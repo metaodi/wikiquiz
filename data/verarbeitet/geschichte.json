@@ -27,6 +27,13 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Alamannen": {
+  "qid": "Q132990",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Alexander Gauland": {
   "qid": "Q1670311",
   "datum": "2026-11-16",
@@ -47,6 +54,13 @@
   "bekanntheit_thema": 4,
   "angenommen": 2,
   "verworfen": 0
+ },
+ "Alte Eidgenossenschaft": {
+  "qid": "Q435583",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
  },
  "Angela Merkel": {
   "qid": "Q567",
@@ -118,6 +132,13 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Bessarabien": {
+  "qid": "Q174994",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
  "Bill Clinton": {
   "qid": "Q1124",
   "datum": "2026-11-16",
@@ -173,6 +194,20 @@
   "bekanntheit_thema": 4,
   "angenommen": 0,
   "verworfen": 2
+ },
+ "Deutsche Revolution 1848/1849": {
+  "qid": "Q3699",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Deutscher Bauernkrieg": {
+  "qid": "Q154031",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
  },
  "Deutscher Kaiser": {
   "qid": "Q501503",
@@ -257,6 +292,13 @@
   "bekanntheit_thema": 4,
   "angenommen": 1,
   "verworfen": 1
+ },
+ "Flughafen Berlin-Tegel": {
+  "qid": "Q9688",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
  },
  "Franklin D. Roosevelt": {
   "qid": "Q8007",
@@ -363,11 +405,25 @@
   "angenommen": 0,
   "verworfen": 2
  },
+ "Germanen": {
+  "qid": "Q22633",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
  "Grumman F-14": {
   "qid": "Q34945",
   "datum": "2026-11-16",
   "bekanntheit_thema": 3,
   "angenommen": 2,
+  "verworfen": 0
+ },
+ "Guillotine": {
+  "qid": "Q128015",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
   "verworfen": 0
  },
  "Göbekli Tepe": {
@@ -384,12 +440,26 @@
   "angenommen": 0,
   "verworfen": 0
  },
+ "Hanse": {
+  "qid": "Q42908",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Heiliges Römisches Reich": {
   "qid": "Q12548",
   "datum": "2026-11-16",
   "bekanntheit_thema": 5,
   "angenommen": 0,
   "verworfen": 2
+ },
+ "Heinrich VIII. (England)": {
+  "qid": "Q38370",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
  },
  "Helmut Kohl": {
   "qid": "Q2518",
@@ -475,6 +545,13 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Kaiser": {
+  "qid": "Q39018",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
  "Kalter Krieg": {
   "qid": "Q8683",
   "datum": "2026-11-16",
@@ -482,10 +559,38 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Karl V. (HRR)": {
+  "qid": "Q32500",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
  "Karl der Große": {
   "qid": "Q3044",
   "datum": "2026-11-16",
   "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Karolinger": {
+  "qid": "Q133602",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Kernwaffe": {
+  "qid": "Q12802",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Kiewer Rus": {
+  "qid": "Q1108445",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
   "angenommen": 2,
   "verworfen": 0
  },
@@ -524,6 +629,13 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Kurfürst": {
+  "qid": "Q22722",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
  "Kurt Georg Kiesinger": {
   "qid": "Q2512",
   "datum": "2026-11-16",
@@ -552,6 +664,20 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "MKULTRA": {
+  "qid": "Q815614",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Marco Polo": {
+  "qid": "Q6101",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Margaret Thatcher": {
   "qid": "Q7416",
   "datum": "2026-11-16",
@@ -563,6 +689,13 @@
   "qid": "Q82674",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Marie Thérèse Charlotte de Bourbon": {
+  "qid": "Q659488",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
   "angenommen": 1,
   "verworfen": 1
  },
@@ -600,6 +733,13 @@
   "bekanntheit_thema": 4,
   "angenommen": 2,
   "verworfen": 0
+ },
+ "Merowinger": {
+  "qid": "Q59488",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 0,
+  "verworfen": 2
  },
  "Mustafa Kemal Atatürk": {
   "qid": "Q5152",
@@ -720,6 +860,13 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Römische Zahlschrift": {
+  "qid": "Q38918",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
  "Schlacht um Midway": {
   "qid": "Q173034",
   "datum": "2026-11-16",
@@ -755,12 +902,26 @@
   "angenommen": 0,
   "verworfen": 2
  },
+ "Staufer": {
+  "qid": "Q130875",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
  "Theodore Roosevelt": {
   "qid": "Q33866",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
   "angenommen": 0,
   "verworfen": 2
+ },
+ "Thomas Morus": {
+  "qid": "Q42544",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
  },
  "Tutanchamun": {
   "qid": "Q12154",
@@ -789,6 +950,13 @@
   "bekanntheit_thema": 4,
   "angenommen": 2,
   "verworfen": 0
+ },
+ "Wikinger": {
+  "qid": "Q12567",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
  },
  "Wilhelm Gustloff (Schiff)": {
   "qid": "Q155014",
