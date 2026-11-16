@@ -73,10 +73,15 @@ export function speichereLetzteSpieler(l: LetzteSpieler): void {
   schreiben(KEY_LETZTE_SPIELER, l);
 }
 
+/** Übertragungsweg eines Raums: WebRTC (`netz`) oder Tabs im selben Browser (`tabs`, Tests und Entwicklung) */
+export type KanalArt = 'netz' | 'tabs';
+
 /** Raum, in dem dieser Tab mitspielt – übersteht ein Neuladen. Der Host merkt sich auch Teilnehmer und Spiel. */
 export interface RaumSitzung {
   code: string;
   rolle: 'host' | 'gast';
+  /** Fehlt bei Sitzungen aus der Vorschau-Zeit → `netz` */
+  kanal?: KanalArt;
   name: string;
   teilnehmer?: Teilnehmer[];
   spiel?: Spielstand | null;

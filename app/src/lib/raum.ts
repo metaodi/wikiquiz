@@ -50,25 +50,28 @@ export function darf(s: Spielstand, teilnehmer: Teilnehmer[], hostGeraet: string
   return z === HOST ? von === hostGeraet : teilnehmer[z]?.geraet === von;
 }
 
-export type BeitrittsFehler = 'laeuft' | 'voll' | 'name';
+export type BeitrittsFehler = 'laeuft' | 'voll' | 'name' | 'fragen';
 
 export const BEITRITTS_FEHLER: Record<BeitrittsFehler, string> = {
   laeuft: 'In diesem Raum läuft bereits ein Spiel.',
   voll: `Der Raum ist voll (höchstens ${MAX_SPIELER} Spieler).`,
   name: 'Dieser Name ist im Raum schon vergeben.',
+  fragen: 'Dieses Gerät und der Host haben nicht dieselben Fragen. Bitte auf beiden Geräten die App neu laden.',
 };
 
 /**
- * Gerät tritt dem Raum bei. Bekannte Geräte (z. B. nach Neuladen) sind immer willkommen;
- * neue nur, solange kein Spiel läuft, Platz frei ist und der Name noch nicht vergeben ist.
- * Die Farbe vergibt der Host: die erste noch freie.
+ * Gerät tritt dem Raum bei. Voraussetzung ist derselbe Fragenstand wie beim Host (`gleicheFragen`).
+ * Bekannte Geräte (z. B. nach Neuladen) sind dann immer willkommen; neue nur, solange kein Spiel läuft,
+ * Platz frei ist und der Name noch nicht vergeben ist. Die Farbe vergibt der Host: die erste noch freie.
  */
 export function beitreten(
   teilnehmer: Teilnehmer[],
   geraet: string,
   name: string,
   spielLaeuft: boolean,
+  gleicheFragen = true,
 ): { ok: true; teilnehmer: Teilnehmer[] } | { ok: false; fehler: BeitrittsFehler } {
+  if (!gleicheFragen) return { ok: false, fehler: 'fragen' };
   if (teilnehmer.some((t) => t.geraet === geraet)) return { ok: true, teilnehmer };
   if (spielLaeuft) return { ok: false, fehler: 'laeuft' };
   if (teilnehmer.length >= MAX_SPIELER) return { ok: false, fehler: 'voll' };

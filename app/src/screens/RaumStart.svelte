@@ -3,12 +3,15 @@
 
   let {
     name: startName,
+    code: startCode = '',
     fehler,
     onEroeffnen,
     onBeitreten,
     onZurueck,
   }: {
     name: string;
+    /** Aus einem Beitrittslink */
+    code?: string;
     fehler: string | null;
     onEroeffnen: (name: string) => void;
     onBeitreten: (code: string, name: string) => void;
@@ -17,7 +20,8 @@
 
   // svelte-ignore state_referenced_locally
   let name = $state(startName);
-  let code = $state('');
+  // svelte-ignore state_referenced_locally
+  let code = $state(startCode);
   const nameOk = $derived(name.trim().length > 0);
   const codeOk = $derived(codeNormalisieren(code).length === CODE_LAENGE);
 
@@ -31,9 +35,10 @@
   <header>
     <h1>Mit mehreren Geräten</h1>
     <p class="muted">
-      Jedes Gerät ist ein Spieler. Ein Gerät eröffnet einen Raum, die anderen treten mit dem Code bei.
+      Jedes Gerät ist ein Spieler – am selben Tisch oder unterwegs. Ein Gerät eröffnet einen Raum, die anderen treten
+      mit Code, QR-Code oder Link bei.
     </p>
-    <p class="muted klein">Vorschau: funktioniert vorerst nur zwischen Tabs im selben Browser.</p>
+    <p class="muted klein">Beta: Alle Geräte brauchen eine Internetverbindung.</p>
   </header>
 
   <section class="karte">
@@ -43,28 +48,41 @@
     </label>
   </section>
 
-  <section class="karte">
-    <h2>Raum eröffnen</h2>
-    <button class="btn" disabled={!nameOk} onclick={() => onEroeffnen(name.trim())}>Raum eröffnen</button>
-  </section>
+  {#snippet eroeffnen()}
+    <section class="karte">
+      <h2>Raum eröffnen</h2>
+      <button class="btn" disabled={!nameOk} onclick={() => onEroeffnen(name.trim())}>Raum eröffnen</button>
+    </section>
+  {/snippet}
 
-  <form class="karte" onsubmit={beitreten}>
-    <h2>Raum beitreten</h2>
-    <label class="feld">
-      <span>Raumcode</span>
-      <input
-        class="code"
-        type="text"
-        bind:value={code}
-        maxlength={CODE_LAENGE + 2}
-        autocomplete="off"
-        autocapitalize="characters"
-        spellcheck="false"
-        placeholder="ABCD"
-      />
-    </label>
-    <button class="btn sekundaer" type="submit" disabled={!nameOk || !codeOk}>Beitreten</button>
-  </form>
+  {#snippet beitretenForm()}
+    <form class="karte" onsubmit={beitreten}>
+      <h2>Raum beitreten</h2>
+      <label class="feld">
+        <span>Raumcode</span>
+        <input
+          class="code"
+          type="text"
+          bind:value={code}
+          maxlength={CODE_LAENGE + 2}
+          autocomplete="off"
+          autocapitalize="characters"
+          spellcheck="false"
+          placeholder="ABCD"
+        />
+      </label>
+      <button class="btn sekundaer" type="submit" disabled={!nameOk || !codeOk}>Beitreten</button>
+    </form>
+  {/snippet}
+
+  <!-- Über einen Beitrittslink gekommen: Beitreten zuerst -->
+  {#if startCode}
+    {@render beitretenForm()}
+    {@render eroeffnen()}
+  {:else}
+    {@render eroeffnen()}
+    {@render beitretenForm()}
+  {/if}
 
   {#if fehler}
     <p class="fehler" role="alert">{fehler}</p>

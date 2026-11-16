@@ -85,7 +85,7 @@ Reihenfolge (günstig → teuer): Sitelinks (aus SPARQL) → Titel „Liste …�
 (Begriffsklärung, fehlend, Länge). Für richtige Antworten gilt eine eigene, tiefere Pageview-Schwelle.
 Schwellen pro Kategorie in `config.py`, per CLI übersteuerbar.
 
-## Mehrere Geräte (Konzept, teilweise umgesetzt)
+## Mehrere Geräte
 
 Ziel: Spiel zwischen Spielern mit eigenen Geräten, am selben Tisch wie auch remote, weiterhin ohne eigenes Backend
 (statische Seite auf GitHub Pages).
@@ -95,7 +95,8 @@ Ziel: Spiel zwischen Spielern mit eigenen Geräten, am selben Tisch wie auch rem
   Änderung den ganzen Spielstand.
 - **Keine Fragen übertragen:** Alle Geräte laden dieselbe `questions.json`; übertragen werden nur `frageId` und
   `reihenfolge`. Beim Beitritt wird eine Prüfsumme der Fragen verglichen (PWA-Cache kann veraltet sein).
-- **Antwortzeit misst der Gast lokal** ab Anzeige der Frage; der Host prüft nur auf `ZEITLIMIT_S` plus Toleranz.
+- **Antwortzeit misst das Gerät** (Host-Uhr geschätzt über den Zeitstempel im Spielstand); der Host übernimmt sie,
+  wenn sie höchstens `NETZ_TOLERANZ_S` kürzer ist als bei ihm gemessen, und wartet mit dem Timeout dieselbe Toleranz ab.
   Kein Schutz gegen Schummeln (die Lösung steht ohnehin in `questions.json`).
 - **Reconnect:** Raum, Teilnehmer und (beim Host) Spielstand liegen pro Tab im `sessionStorage` (`wikiquiz:raum:v1`,
   Geräte-ID `wikiquiz:geraet:v1`) – so bleiben mehrere Tabs im selben Browser getrennte Geräte, und ein Spiel im Raum
@@ -118,12 +119,17 @@ Etappen:
    und `Kanal`-Schnittstelle (`app/src/lib/kanal.ts`); Pass-and-Play läuft unverändert über den lokalen Kanal.
 2. ✅ Raum, Lobby und Host-Logik über `BroadcastChannel` (`app/src/lib/raum.ts`, `broadcastKanal`), reihum gespielt;
    E2E-Tests mit zwei Tabs und gemeinsamer Fake-Clock (`app/e2e/mehrgeraete.spec.ts`). Vorschau hinter `?mehrgeraete`.
-   Antwortzeit misst vorerst der Host (im selben Browser gleichwertig).
+   Antwortzeit mass in dieser Etappe noch der Host.
 3. ✅ Ablauf „Alle gleichzeitig“ (`Einstellungen.ablauf`, nur im Raum, dort Standard): Eine Runde ist eine Frage für alle,
    `Zug.alle` hält die Antwort pro Spieler; Feedback, sobald alle geantwortet haben oder die Zeit abläuft. Welcher Spieler
    antwortet, bestimmt der Host aus dem Gerät (`Kontext.spieler`), nie aus der Nachricht. Frage bedienen alle (`ALLE`),
    Feedback der Host. Gespeicherte Spielstände ohne `ablauf` gelten als „reihum“ (Schlüssel bleibt `v1`).
-4. Trystero, Raumcode/QR/Link; Antwortzeit misst der Gast, Prüfsumme der Fragen beim Beitritt; Einstieg ohne `?mehrgeraete`.
+4. ✅ WebRTC über Trystero 0.27 (`netzKanal`, Nostr-Relays, `identity: 'none'`, Passwort aus dem Code, Chunk erst beim
+   Raum geladen); Beitritt per Code, QR-Code (`uqr`) oder Link `?raum=CODE`; Antwortzeit misst das Gerät (Toleranz
+   `NETZ_TOLERANZ_S`, Uhrabweichung über den Zeitstempel im Spielstand); Kennung des Fragenstands beim Beitritt;
+   Einstieg ohne Parameter, `?kanal=tabs` für Tests. Erneuter Stand bei (Wieder-)Verbindung, Hinweis bei Verbindungsverlust.
+   Nicht automatisch getestet: echte Verbindungen über Relays (in CI und Testumgebung nicht erreichbar) – manuell auf
+   Geräten prüfen.
 5. Nur falls es in der Praxis hakt (Mobilfunk mit CGNAT): TURN-Server ergänzen oder auf ein kleines Backend
    (Cloudflare Durable Object / PartyKit) wechseln – dank `Kanal` ein Austausch an einer Stelle.
 
@@ -150,4 +156,4 @@ Verworfen bzw. zurückgestellt: SDP-Austausch per QR-Code (zwei Scans pro Gast, 
 | Aktuelle Politik | Lebende Personen mit laufendem Amt (Wikidata P39 ohne Enddatum, Beginn ≤ 20 Jahre) werden nicht verarbeitet |
 | Gleiche Quelle | Die App stellt Fragen zum selben Artikel (`quelle_url`) im selben Spiel erst, wenn keine anderen mehr übrig sind; so verraten sich Fragen zum selben Thema nicht gegenseitig |
 | Nischenwissen | Pro Kategorie eine von Hand gepflegte Artikelliste (`generator/eigene_artikel.toml`): ohne Bekanntheitsfilter, vor allen anderen und auch bei erreichtem Ziel verarbeitet; das LLM erhält einen Hinweis, die Schwellen für Bekanntheit und Allgemeinwissen entfallen, Beleg und unabhängige Prüfung bleiben |
-| Mehrere Geräte | Ohne eigenes Backend: Host-Gerät hält den Spielstand, Übertragung per WebRTC (Trystero, öffentliche Signalisierung) hinter einer `Kanal`-Schnittstelle; kleines Backend erst, wenn Verbindungen in der Praxis scheitern. Details im Abschnitt „Mehrere Geräte“ |
+| Mehrere Geräte | Ohne eigenes Backend: Host-Gerät hält den Spielstand, Übertragung per WebRTC (Trystero, öffentliche Nostr-Relays für den Verbindungsaufbau) hinter einer `Kanal`-Schnittstelle; Antwortzeit misst das Gerät, der Host begrenzt sie mit einer Toleranz. Kleines Backend oder TURN-Server erst, wenn Verbindungen in der Praxis scheitern. Details im Abschnitt „Mehrere Geräte“ |

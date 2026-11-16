@@ -15,6 +15,7 @@
     zuschauen = false,
     eigeneWahl,
     warteText,
+    versatz = 0,
   }: {
     frage: Frage;
     reihenfolge: number[];
@@ -28,10 +29,13 @@
     eigeneWahl?: number | null;
     /** Erscheint, sobald man selbst geantwortet hat (z. B. „Warte auf die anderen …“) */
     warteText?: string;
+    /** Mehrere Geräte: Unterschied Host-Uhr minus eigene Uhr (ms); `timerStart` ist eine Zeit des Hosts */
+    versatz?: number;
   } = $props();
 
   const kat = $derived(KATEGORIE_MAP[frage.kategorie]);
-  let jetzt = $state(Date.now());
+  // svelte-ignore state_referenced_locally
+  let jetzt = $state(Date.now() + versatz);
   const rest = $derived(
     timerStart === null ? ZEITLIMIT_S : Math.min(ZEITLIMIT_S, Math.max(0, ZEITLIMIT_S - (jetzt - timerStart) / 1000)),
   );
@@ -47,7 +51,7 @@
     const start = timerStart === null && !zuschauen ? setTimeout(onTimerStart, EINBLENDEN_MS) : undefined;
     let raf = 0;
     const tick = () => {
-      jetzt = Date.now();
+      jetzt = Date.now() + versatz;
       if (timerStart !== null && rest <= 0 && !gesendet) {
         gesendet = true;
         onTimeout();
