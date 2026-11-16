@@ -6,12 +6,40 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Ananas": {
+  "qid": "Q1493",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Apfelbeeren": {
+  "qid": "Q158983",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Aprikose": {
+  "qid": "Q37453",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Artischocke": {
   "qid": "Q23041430",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
   "angenommen": 1,
   "verworfen": 1
+ },
+ "Ascorbinsäure": {
+  "qid": "Q193598",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
  },
  "Avocado": {
   "qid": "Q37153",
@@ -27,6 +55,27 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Bergamotte (Zitrusfrüchte)": {
+  "qid": "Q109196",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Bitterorange": {
+  "qid": "Q147096",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Blasenkirschen": {
+  "qid": "Q158663",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Campari": {
   "qid": "Q899150",
   "datum": "2026-11-16",
@@ -36,6 +85,13 @@
  },
  "Curaçao (Likör)": {
   "qid": "Q10223",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Drachenfrucht": {
+  "qid": "Q232755",
   "datum": "2026-11-16",
   "bekanntheit_thema": 3,
   "angenommen": 2,
@@ -54,6 +110,27 @@
   "bekanntheit_thema": 3,
   "angenommen": 0,
   "verworfen": 2
+ },
+ "Erdbeeren": {
+  "qid": "Q745",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Erdmandel": {
+  "qid": "Q1165724",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Erdnuss": {
+  "qid": "Q37383",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
  },
  "Essigsäure": {
   "qid": "Q47512",
@@ -76,12 +153,33 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Euterpe oleracea": {
+  "qid": "Q33943",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Fenchel": {
   "qid": "Q43511",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
   "angenommen": 2,
   "verworfen": 0
+ },
+ "Gemeine Hasel": {
+  "qid": "Q124969",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Gewöhnliche Traubenkirsche": {
+  "qid": "Q165424",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 0,
+  "verworfen": 1
  },
  "Gin": {
   "qid": "Q959362",
@@ -92,6 +190,13 @@
  },
  "Glucose": {
   "qid": "Q37525",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Granatapfel": {
+  "qid": "Q13188",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
   "angenommen": 1,
@@ -110,6 +215,27 @@
   "bekanntheit_thema": 3,
   "angenommen": 2,
   "verworfen": 0
+ },
+ "Harnstoff": {
+  "qid": "Q48318",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Heidelbeere": {
+  "qid": "Q5413585",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Holunder": {
+  "qid": "Q131448",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
  },
  "Hüttenkäse": {
   "qid": "Q13221624",
@@ -139,6 +265,13 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Kirschpflaume": {
+  "qid": "Q146951",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Kohlenstoffdioxid": {
   "qid": "Q1997",
   "datum": "2026-11-16",
@@ -160,12 +293,26 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Lorbeerkirsche": {
+  "qid": "Q157508",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
  "Luzerne": {
   "qid": "Q156106",
   "datum": "2026-11-16",
   "bekanntheit_thema": 3,
   "angenommen": 1,
   "verworfen": 1
+ },
+ "Maulbeeren": {
+  "qid": "Q44789",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
  },
  "Mezcal": {
   "qid": "Q726413",
@@ -188,6 +335,34 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Moltebeere": {
+  "qid": "Q160092",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Nashi-Birne": {
+  "qid": "Q838963",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Nattō": {
+  "qid": "Q505711",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Neckarsulm": {
+  "qid": "Q488708",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 0,
+  "verworfen": 2
+ },
  "Olivenbaum": {
   "qid": "Q37083",
   "datum": "2026-11-16",
@@ -195,12 +370,40 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Orange (Frucht)": {
+  "qid": "Q13191",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Panettone": {
   "qid": "Q854342",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
   "angenommen": 1,
   "verworfen": 1
+ },
+ "Paprika": {
+  "qid": "Q201959",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Passiflora edulis": {
+  "qid": "Q156790",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Preiselbeere": {
+  "qid": "Q93235",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
  },
  "Quark (Milchprodukt)": {
   "qid": "Q259642",
@@ -223,8 +426,43 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Sanddorn": {
+  "qid": "Q165378",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Schlehdorn": {
   "qid": "Q129018",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Schwarzer Holunder": {
+  "qid": "Q22701",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Schwarzer Nachtschatten": {
+  "qid": "Q146400",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Schwefelsäure": {
+  "qid": "Q4118",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "Scoville-Skala": {
+  "qid": "Q207047",
   "datum": "2026-11-16",
   "bekanntheit_thema": 3,
   "angenommen": 1,
@@ -251,6 +489,13 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Tequila": {
+  "qid": "Q122195",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
  "Tupperware": {
   "qid": "Q1129117",
   "datum": "2026-11-16",
@@ -265,8 +510,22 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Weißdorne": {
+  "qid": "Q132557",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
  "Whisky": {
   "qid": "Q281",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Wodka": {
+  "qid": "Q374",
   "datum": "2026-11-16",
   "bekanntheit_thema": 5,
   "angenommen": 2,
