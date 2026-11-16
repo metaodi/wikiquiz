@@ -2290,6 +2290,24 @@
    "quelle_id": "Q20065"
   },
   {
+   "id": "wp-975e149e0c",
+   "kategorie": "schweiz",
+   "frage": "Welchen Spitznamen trägt das Verkehrsflugzeug Junkers Ju 52 im deutschsprachigen Raum?",
+   "antworten": [
+    "Fliegende Festung",
+    "Tante Ju",
+    "Rosinenbomber",
+    "Dicke Berta"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Junkers_Ju_52/3m",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Junkers Ju 52/3m",
+   "quelle_id": "Q15410360"
+  },
+  {
    "id": "wp-9e6d5ee01e",
    "kategorie": "schweiz",
    "frage": "Wie heisst der Genfersee auf Französisch?",
