@@ -23,7 +23,8 @@
     <p>
       Bis zu 4 Spieler beantworten abwechselnd Fragen auf einem Gerät. Pro Frage gibt es 15 Sekunden. Eine richtige
       Antwort bringt bis zu 100 Punkte – je schneller, desto mehr (mindestens 10). Falsche Antworten und abgelaufene
-      Zeit geben 0 Punkte.
+      Zeit geben 0 Punkte. Jeder Spieler wählt vor dem Start seine Schwierigkeit (leicht, mittel oder schwer), auf Wunsch auch pro Kategorie; sind
+      in einer Kategorie keine Fragen dieser Stufe mehr übrig, kommt die nächstliegende Stufe dran.
     </p>
     <p>
       Mit mehreren Geräten (Beta) spielt jeder auf seinem eigenen: am selben Tisch oder an verschiedenen Orten, reihum

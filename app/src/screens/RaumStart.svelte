@@ -1,8 +1,12 @@
 <script lang="ts">
-  import { CODE_LAENGE, codeNormalisieren } from '../lib/raum';
+  import SchwierigkeitWahl from '../components/SchwierigkeitWahl.svelte';
+  import { ALLE_KATEGORIEN } from '../lib/game';
+  import { CODE_LAENGE, codeNormalisieren, stufenWahlPruefen } from '../lib/raum';
+  import type { ProKategorie, Schwierigkeit, StufenWahl } from '../lib/types';
 
   let {
     name: startName,
+    wahl: startWahl,
     code: startCode = '',
     fehler,
     onEroeffnen,
@@ -10,11 +14,13 @@
     onZurueck,
   }: {
     name: string;
+    /** Zuletzt gewählte Schwierigkeit */
+    wahl?: Partial<StufenWahl>;
     /** Aus einem Beitrittslink */
     code?: string;
     fehler: string | null;
-    onEroeffnen: (name: string) => void;
-    onBeitreten: (code: string, name: string) => void;
+    onEroeffnen: (name: string, wahl: StufenWahl) => void;
+    onBeitreten: (code: string, name: string, wahl: StufenWahl) => void;
     onZurueck: () => void;
   } = $props();
 
@@ -22,12 +28,17 @@
   let name = $state(startName);
   // svelte-ignore state_referenced_locally
   let code = $state(startCode);
+  // svelte-ignore state_referenced_locally
+  const w0 = stufenWahlPruefen(startWahl);
+  let schwierigkeit = $state<Schwierigkeit>(w0.schwierigkeit);
+  let proKategorie = $state<ProKategorie>(w0.proKategorie ?? {});
+  const wahl = (): StufenWahl => stufenWahlPruefen({ schwierigkeit, proKategorie: { ...proKategorie } });
   const nameOk = $derived(name.trim().length > 0);
   const codeOk = $derived(codeNormalisieren(code).length === CODE_LAENGE);
 
   function beitreten(e: SubmitEvent) {
     e.preventDefault();
-    if (nameOk && codeOk) onBeitreten(codeNormalisieren(code), name.trim());
+    if (nameOk && codeOk) onBeitreten(codeNormalisieren(code), name.trim(), wahl());
   }
 </script>
 
@@ -46,12 +57,17 @@
       <span>Dein Name</span>
       <input type="text" bind:value={name} maxlength="20" autocomplete="off" placeholder="Name" />
     </label>
+    <div class="feld">
+      <span id="stufe-titel">Deine Schwierigkeit</span>
+      <SchwierigkeitWahl bind:wert={schwierigkeit} bind:pro={proKategorie} kategorien={ALLE_KATEGORIEN} />
+      <span class="muted klein normal">Gilt, wenn reihum gespielt wird. Bei „Alle gleichzeitig“ wählt der Host eine Stufe für alle.</span>
+    </div>
   </section>
 
   {#snippet eroeffnen()}
     <section class="karte">
       <h2>Raum eröffnen</h2>
-      <button class="btn" disabled={!nameOk} onclick={() => onEroeffnen(name.trim())}>Raum eröffnen</button>
+      <button class="btn" disabled={!nameOk} onclick={() => onEroeffnen(name.trim(), wahl())}>Raum eröffnen</button>
     </section>
   {/snippet}
 
@@ -128,6 +144,9 @@
     letter-spacing: 0.3em;
     text-transform: uppercase;
     font-weight: 700;
+  }
+  .normal {
+    font-weight: 400;
   }
   .fehler {
     color: var(--bad);

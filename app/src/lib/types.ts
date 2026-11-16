@@ -10,13 +10,16 @@ export type KategorieId =
   | 'starwars'
   | 'harrypotter';
 
+/** 1 = leicht, 2 = mittel, 3 = schwer */
+export type Schwierigkeit = 1 | 2 | 3;
+
 export interface Frage {
   id: string;
   kategorie: KategorieId;
   frage: string;
   antworten: string[];
   korrekt_index: number;
-  schwierigkeit: 1 | 2 | 3;
+  schwierigkeit: Schwierigkeit;
   quelle_typ: 'wikidata' | 'wikipedia';
   quelle_url: string;
   lizenz: string;
@@ -34,6 +37,18 @@ export interface Spieler {
   name: string;
   farbe: string;
   punkte: number;
+  /** Bevorzugte Schwierigkeit der Fragen für diesen Spieler */
+  schwierigkeit: Schwierigkeit;
+  /** Abweichende Schwierigkeit für einzelne Kategorien (fehlende Kategorien folgen `schwierigkeit`) */
+  proKategorie?: ProKategorie;
+}
+
+export type ProKategorie = Partial<Record<KategorieId, Schwierigkeit>>;
+
+/** Schwierigkeitswahl eines Spielers (z. B. von einem Gerät beim Beitreten übermittelt) */
+export interface StufenWahl {
+  schwierigkeit: Schwierigkeit;
+  proKategorie?: ProKategorie;
 }
 
 /** Antwort eines Spielers im Ablauf „Alle gleichzeitig“ */

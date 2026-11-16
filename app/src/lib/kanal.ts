@@ -6,7 +6,7 @@
  */
 import type { Aktion } from './aktionen';
 import type { Teilnehmer } from './raum';
-import type { Spielstand } from './types';
+import type { ProKategorie, Schwierigkeit, Spielstand } from './types';
 
 /** Jede Nachricht trägt die ID des sendenden Geräts (`von`). */
 export type Nachricht =
@@ -25,7 +25,7 @@ export type Nachricht =
       jetzt: number;
     }
   /** Gast → Host: beitreten bzw. nach Neuladen wieder anmelden; `fragen` = Kennung des Fragenstands */
-  | { typ: 'hallo'; von: string; name: string; fragen: string }
+  | { typ: 'hallo'; von: string; name: string; fragen: string; schwierigkeit?: Schwierigkeit; proKategorie?: ProKategorie }
   /** Gast verlässt den Raum bzw. Host schliesst ihn */
   | { typ: 'tschuess'; von: string }
   /** Host → ein Gast: Beitritt abgelehnt */

@@ -1,6 +1,7 @@
 /** Fragenauswahl: nie doppelt im Spiel, zuletzt gestellte Fragen bevorzugt vermeiden. */
 import { KATEGORIEN } from './categories';
-import type { Frage, KategorieId } from './types';
+import { SCHWIERIGKEIT_REIHENFOLGE, SCHWIERIGKEIT_STANDARD } from './config';
+import type { Frage, KategorieId, Schwierigkeit } from './types';
 
 export type Rng = () => number;
 
@@ -36,8 +37,26 @@ export function andereQuellen(kandidaten: Frage[], pool: Frage[], gestellt: stri
   return neu.length > 0 ? neu : kandidaten;
 }
 
+/** Gültige Schwierigkeit oder Standard (fehlende/ungültige Werte, z. B. aus älteren Speicherständen) */
+export function stufe(wert: unknown): Schwierigkeit {
+  return wert === 1 || wert === 2 || wert === 3 ? wert : SCHWIERIGKEIT_STANDARD;
+}
+
 /**
- * Wählt eine Frage der Kategorie, möglichst zu einem Artikel, der im Spiel noch nicht vorkam.
+ * Kandidaten der gewünschten Schwierigkeit; gibt es keine, die der nächstliegenden Stufe
+ * (siehe SCHWIERIGKEIT_REIHENFOLGE). Ohne Wunsch bleiben alle Kandidaten.
+ */
+export function nachSchwierigkeit(kandidaten: Frage[], wunsch?: Schwierigkeit): Frage[] {
+  if (!wunsch) return kandidaten;
+  for (const s of SCHWIERIGKEIT_REIHENFOLGE[wunsch]) {
+    const treffer = kandidaten.filter((f) => stufe(f.schwierigkeit) === s);
+    if (treffer.length > 0) return treffer;
+  }
+  return kandidaten;
+}
+
+/**
+ * Wählt eine Frage der Kategorie, bevorzugt in der gewünschten Schwierigkeit, möglichst zu einem Artikel, der im Spiel noch nicht vorkam.
  * Fragen, die nicht in der History stehen, werden bevorzugt; sind alle schon einmal gestellt
  * worden, kommt die am längsten zurückliegende dran.
  */
@@ -47,8 +66,9 @@ export function waehleFrage(
   gestellt: string[],
   history: string[],
   rng: Rng = Math.random,
+  schwierigkeit?: Schwierigkeit,
 ): Frage | null {
-  const offen = verfuegbar(pool, kategorie, gestellt);
+  const offen = nachSchwierigkeit(verfuegbar(pool, kategorie, gestellt), schwierigkeit);
   if (offen.length === 0) return null;
   const kandidaten = andereQuellen(offen, pool, gestellt);
   const pos = new Map(history.map((id, i) => [id, i]));

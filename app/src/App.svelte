@@ -2,7 +2,7 @@
   import { onDestroy, onMount, untrack } from 'svelte';
   import Kopf from './components/Kopf.svelte';
   import { aktionAnwenden, type Aktion } from './lib/aktionen';
-  import { NETZ_TOLERANZ_S, SPIELER_FARBEN, ZEITLIMIT_S } from './lib/config';
+  import { NETZ_TOLERANZ_S, RUNDEN_STANDARD, SCHWIERIGKEIT_STANDARD, SPIELER_FARBEN, ZEITLIMIT_S } from './lib/config';
   import * as game from './lib/game';
   import { haptik } from './lib/haptics';
   import { broadcastKanal, lokalerKanal, netzKanal, type Kanal, type Nachricht } from './lib/kanal';
@@ -18,11 +18,12 @@
     HOST,
     verlassen,
     zufallsCode,
+    stufenWahlPruefen,
     zustaendig,
     type Teilnehmer,
   } from './lib/raum';
   import * as storage from './lib/storage';
-  import type { Einstellungen, Pool, Spielstand } from './lib/types';
+  import type { Einstellungen, Pool, Spielstand, StufenWahl } from './lib/types';
   import Feedback from './screens/Feedback.svelte';
   import Frage from './screens/Frage.svelte';
   import Info from './screens/Info.svelte';
@@ -48,6 +49,8 @@
     rolle: 'host' | 'gast';
     kanal: storage.KanalArt;
     name: string;
+    /** Eigene Schwierigkeitswahl dieses Geräts */
+    wahl: StufenWahl;
     teilnehmer: Teilnehmer[];
     /** Gerät des Hosts (bei Gästen bekannt, sobald der erste Spielstand eintrifft) */
     hostGeraet: string | null;
@@ -185,6 +188,7 @@
       rolle: 'host',
       kanal: raum.kanal,
       name: raum.name,
+      wahl: $state.snapshot(raum.wahl),
       teilnehmer: n.teilnehmer,
       spiel: n.stand,
     });
@@ -259,7 +263,7 @@
     if (raum.rolle === 'host') {
       if (n.typ === 'aktion') anwenden(n.von, n.aktion);
       else if (n.von === geraet) return; // eigene Nachrichten
-      else if (n.typ === 'hallo') gastBegruessen(n.von, n.name, n.fragen);
+      else if (n.typ === 'hallo') gastBegruessen(n.von, n.name, n.fragen, n);
       else if (n.typ === 'tschuess' && !spiel) raum.teilnehmer = verlassen(raum.teilnehmer, n.von);
       return;
     }
@@ -292,9 +296,9 @@
   }
 
   /** Host: Gast aufnehmen (oder nach Neuladen wieder begrüssen) */
-  function gastBegruessen(von: string, name: string, fragen: string) {
+  function gastBegruessen(von: string, name: string, fragen: string, wahl: Partial<StufenWahl>) {
     if (!raum) return;
-    const r = beitreten(raum.teilnehmer, von, name, spiel !== null, fragen === fragenKennung);
+    const r = beitreten(raum.teilnehmer, von, name, spiel !== null, fragen === fragenKennung, wahl);
     if (!r.ok) {
       kanal.senden({ typ: 'abgelehnt', von: geraet, an: von, grund: BEITRITTS_FEHLER[r.fehler] });
       return;
@@ -304,10 +308,26 @@
     kanal.senden(standNachricht());
   }
 
-  function raumEroeffnen(name: string) {
+  /** Eigene Schwierigkeitswahl fürs nächste Mal merken */
+  function raumWahlMerken(wahl: StufenWahl) {
+    letzte = { ...(letzte ?? { namen: [], farben: [], runden: RUNDEN_STANDARD }), raumWahl: wahl };
+    storage.speichereLetzteSpieler(letzte);
+  }
+
+  function raumEroeffnen(name: string, wahl: StufenWahl) {
     const code = zufallsCode(Math.random);
     const farbe = letzte?.farben[0] ?? SPIELER_FARBEN[0];
-    raum = { code, rolle: 'host', kanal: kanalArt, name, teilnehmer: [{ geraet, name, farbe }], hostGeraet: geraet };
+    const w = stufenWahlPruefen(wahl);
+    raumWahlMerken(w);
+    raum = {
+      code,
+      rolle: 'host',
+      kanal: kanalArt,
+      name,
+      wahl: w,
+      teilnehmer: [{ geraet, name, farbe, ...w }],
+      hostGeraet: geraet,
+    };
     spiel = null;
     meldung = null;
     raumFehler = null;
@@ -315,15 +335,17 @@
     kanalWechseln(raumKanal(code, kanalArt));
   }
 
-  function raumBeitreten(code: string, name: string) {
-    raum = { code, rolle: 'gast', kanal: kanalArt, name, teilnehmer: [], hostGeraet: null };
+  function raumBeitreten(code: string, name: string, wahl: StufenWahl) {
+    const w = stufenWahlPruefen(wahl);
+    raumWahlMerken(w);
+    raum = { code, rolle: 'gast', kanal: kanalArt, name, wahl: w, teilnehmer: [], hostGeraet: null };
     spiel = null;
     meldung = null;
     raumFehler = null;
     raumStartOffen = false;
     linkCode = '';
     versatzBekannt = false;
-    storage.speichereRaum({ code, rolle: 'gast', kanal: kanalArt, name });
+    storage.speichereRaum({ code, rolle: 'gast', kanal: kanalArt, name, wahl: w });
     kanalWechseln(raumKanal(code, kanalArt));
     halloStarten();
   }
@@ -335,6 +357,7 @@
       rolle: s.rolle,
       kanal: s.kanal ?? 'netz',
       name: s.name,
+      wahl: stufenWahlPruefen(s.wahl),
       teilnehmer: s.teilnehmer ?? [],
       hostGeraet: s.rolle === 'host' ? geraet : null,
     };
@@ -346,7 +369,7 @@
   /** Gast: beim Host anklopfen (nur solange er uns noch nicht aufgenommen hat) */
   function halloSenden() {
     if (raum?.rolle === 'gast' && ich < 0) {
-      kanal.senden({ typ: 'hallo', von: geraet, name: raum.name, fragen: fragenKennung });
+      kanal.senden({ typ: 'hallo', von: geraet, name: raum.name, fragen: fragenKennung, ...$state.snapshot(raum.wahl) });
     }
   }
 
@@ -381,11 +404,18 @@
     versatzBekannt = false;
   }
 
-  function starten(spieler: { name: string; farbe: string }[], runden: number, einstellungen: Einstellungen) {
+  function starten(spieler: game.NeuerSpieler[], runden: number, einstellungen: Einstellungen) {
     letzte = {
       // Im Raum stammen die Spieler von den Geräten – die Namen fürs Spiel auf einem Gerät bleiben
       namen: raum ? (letzte?.namen ?? []) : spieler.map((p) => p.name),
       farben: raum ? (letzte?.farben ?? []) : spieler.map((p) => p.farbe),
+      schwierigkeiten: raum
+        ? letzte?.schwierigkeiten
+        : spieler.map((p) => p.schwierigkeit ?? SCHWIERIGKEIT_STANDARD),
+      proKategorie: raum ? letzte?.proKategorie : spieler.map((p) => p.proKategorie),
+      raumSchwierigkeit:
+        raum && einstellungen.ablauf === 'gleichzeitig' ? spieler[0]?.schwierigkeit : letzte?.raumSchwierigkeit,
+      raumWahl: letzte?.raumWahl,
       runden,
       ...einstellungen,
       bekannteKategorien: [...game.ALLE_KATEGORIEN],
@@ -436,6 +466,7 @@
 {:else if raumStartOffen}
   <RaumStart
     name={letzte?.namen[0] ?? ''}
+    wahl={letzte?.raumWahl ?? { schwierigkeit: letzte?.schwierigkeiten?.[0] ?? SCHWIERIGKEIT_STANDARD, proKategorie: letzte?.proKategorie?.[0] }}
     code={linkCode}
     fehler={raumFehler}
     onEroeffnen={raumEroeffnen}

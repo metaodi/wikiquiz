@@ -1,4 +1,5 @@
 /** Zentrale, konfigurierbare Spielparameter. */
+import type { Schwierigkeit } from './types';
 
 /** Zeitlimit pro Frage in Sekunden */
 export const ZEITLIMIT_S = 15;
@@ -21,6 +22,23 @@ export function punkteFuerZeit(t: number, limit = ZEITLIMIT_S): number {
 export const RUNDEN_OPTIONEN = [5, 10, 15] as const;
 export const RUNDEN_STANDARD = 10;
 export const MAX_SPIELER = 4;
+
+/** Schwierigkeitsstufen, wählbar pro Spieler im Setup */
+export const SCHWIERIGKEITEN: { wert: Schwierigkeit; name: string }[] = [
+  { wert: 1, name: 'Leicht' },
+  { wert: 2, name: 'Mittel' },
+  { wert: 3, name: 'Schwer' },
+];
+export const SCHWIERIGKEIT_STANDARD: Schwierigkeit = 2;
+/**
+ * Reihenfolge, in der Stufen gezogen werden: zuerst die gewählte, sind dort in der Kategorie keine Fragen
+ * mehr offen, die nächstliegende. So bleibt jede Kategorie spielbar, solange sie überhaupt Fragen hat.
+ */
+export const SCHWIERIGKEIT_REIHENFOLGE: Record<Schwierigkeit, Schwierigkeit[]> = {
+  1: [1, 2, 3],
+  2: [2, 1, 3],
+  3: [3, 2, 1],
+};
 
 export const SPIELER_FARBEN = ['#e53935', '#1e88e5', '#43a047', '#fb8c00', '#8e24aa', '#00897b'];
 export const FARB_NAMEN: Record<string, string> = {

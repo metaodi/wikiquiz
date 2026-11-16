@@ -4,15 +4,22 @@
  */
 import type { Aktion } from './aktionen';
 import { MAX_SPIELER, SPIELER_FARBEN } from './config';
-import { waehler } from './game';
-import type { Rng } from './picker';
-import type { Spielstand } from './types';
+import { proKategoriePruefen, waehler } from './game';
+import { stufe, type Rng } from './picker';
+import type { Spielstand, StufenWahl } from './types';
 
-export interface Teilnehmer {
+export interface Teilnehmer extends Partial<StufenWahl> {
   /** Zufällige ID des Geräts (pro Browser-Tab) */
   geraet: string;
   name: string;
   farbe: string;
+}
+
+/** Schwierigkeitswahl aus einer Nachricht bereinigen (fehlt bei älteren Versionen → Standard) */
+export function stufenWahlPruefen(w: { schwierigkeit?: unknown; proKategorie?: unknown } | undefined): StufenWahl {
+  const schwierigkeit = stufe(w?.schwierigkeit);
+  const proKategorie = proKategoriePruefen(w?.proKategorie, schwierigkeit);
+  return proKategorie ? { schwierigkeit, proKategorie } : { schwierigkeit };
 }
 
 /** Kein Spieler, sondern der Host bedient die aktuelle Phase */
@@ -63,6 +70,7 @@ export const BEITRITTS_FEHLER: Record<BeitrittsFehler, string> = {
  * Gerät tritt dem Raum bei. Voraussetzung ist derselbe Fragenstand wie beim Host (`gleicheFragen`).
  * Bekannte Geräte (z. B. nach Neuladen) sind dann immer willkommen; neue nur, solange kein Spiel läuft,
  * Platz frei ist und der Name noch nicht vergeben ist. Die Farbe vergibt der Host: die erste noch freie.
+ * Die Schwierigkeit wählt das Gerät selbst (`wahl`), der Host prüft sie.
  */
 export function beitreten(
   teilnehmer: Teilnehmer[],
@@ -70,6 +78,7 @@ export function beitreten(
   name: string,
   spielLaeuft: boolean,
   gleicheFragen = true,
+  wahl?: { schwierigkeit?: unknown; proKategorie?: unknown },
 ): { ok: true; teilnehmer: Teilnehmer[] } | { ok: false; fehler: BeitrittsFehler } {
   if (!gleicheFragen) return { ok: false, fehler: 'fragen' };
   if (teilnehmer.some((t) => t.geraet === geraet)) return { ok: true, teilnehmer };
@@ -78,7 +87,7 @@ export function beitreten(
   const n = name.trim();
   if (teilnehmer.some((t) => t.name.toLowerCase() === n.toLowerCase())) return { ok: false, fehler: 'name' };
   const farbe = SPIELER_FARBEN.find((f) => !teilnehmer.some((t) => t.farbe === f)) ?? SPIELER_FARBEN[0];
-  return { ok: true, teilnehmer: [...teilnehmer, { geraet, name: n, farbe }] };
+  return { ok: true, teilnehmer: [...teilnehmer, { geraet, name: n, farbe, ...stufenWahlPruefen(wahl) }] };
 }
 
 export function verlassen(teilnehmer: Teilnehmer[], geraet: string): Teilnehmer[] {

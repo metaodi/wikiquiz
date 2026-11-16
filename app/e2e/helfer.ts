@@ -37,11 +37,11 @@ export function fixturePool() {
 }
 
 /** Uhr installieren, Fixture-Pool ausliefern, App öffnen. */
-export async function oeffnen(page: Page) {
+export async function oeffnen(page: Page, pool = fixturePool()) {
   // Uhr anhalten: Zeit vergeht nur über runFor/fastForward → exakte Punkte und Timeouts
   await page.clock.install({ time: new Date('2026-11-15T10:00:00Z') });
   await page.clock.pauseAt(new Date('2026-11-15T10:00:01Z'));
-  await page.route('**/questions.json', (route) => route.fulfill({ json: fixturePool() }));
+  await page.route('**/questions.json', (route) => route.fulfill({ json: pool }));
   await page.goto('./');
   await expect(page.getByRole('button', { name: 'Spiel starten' })).toBeVisible();
 }

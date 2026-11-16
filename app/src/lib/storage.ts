@@ -1,7 +1,7 @@
 /** localStorage- und sessionStorage-Zugriffe, alle in try/catch (privater Modus, gesperrter Speicher …). */
 import { HISTORY_MAX } from './config';
 import type { Teilnehmer } from './raum';
-import type { Einstellungen, KategorieId, Spielstand } from './types';
+import type { Einstellungen, KategorieId, ProKategorie, Schwierigkeit, Spielstand, StufenWahl } from './types';
 
 const KEY_SPIEL = 'wikiquiz:game:v1';
 const KEY_HISTORY = 'wikiquiz:history:v1';
@@ -60,6 +60,14 @@ export function merkeFrage(id: string): string[] {
 export interface LetzteSpieler extends Partial<Einstellungen> {
   namen: string[];
   farben: string[];
+  /** Schwierigkeit pro Spieler (fehlt in älteren Speicherständen) */
+  schwierigkeiten?: Schwierigkeit[];
+  /** Abweichende Schwierigkeit pro Kategorie, pro Spieler */
+  proKategorie?: (ProKategorie | undefined)[];
+  /** Gemeinsame Stufe im Raum beim Ablauf „Alle gleichzeitig“ */
+  raumSchwierigkeit?: Schwierigkeit;
+  /** Eigene Schwierigkeitswahl beim Spielen mit mehreren Geräten */
+  raumWahl?: StufenWahl;
   runden: number;
   /** Alle Kategorien, die es beim Speichern gab (um neue später automatisch zu wählen) */
   bekannteKategorien?: KategorieId[];
@@ -83,6 +91,8 @@ export interface RaumSitzung {
   /** Fehlt bei Sitzungen aus der Vorschau-Zeit → `netz` */
   kanal?: KanalArt;
   name: string;
+  /** Eigene Schwierigkeitswahl (Gast: wird nach dem Neuladen erneut mit `hallo` geschickt) */
+  wahl?: StufenWahl;
   teilnehmer?: Teilnehmer[];
   spiel?: Spielstand | null;
 }

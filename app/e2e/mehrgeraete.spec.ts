@@ -6,10 +6,10 @@ import { beantworten, fixturePool, frageOeffnen, KAT_NAME, warteAufFrage, weiter
  * WebRTC (kein Netzwerk nötig, Raum-Logik identisch).
  * Uhr und Fragen-Route gelten für den ganzen Kontext: Alle Tabs teilen dieselbe Fake-Zeit.
  */
-async function vorbereiten(context: BrowserContext) {
+async function vorbereiten(context: BrowserContext, pool = fixturePool()) {
   await context.clock.install({ time: new Date('2026-11-15T10:00:00Z') });
   await context.clock.pauseAt(new Date('2026-11-15T10:00:01Z'));
-  await context.route('**/questions.json', (route) => route.fulfill({ json: fixturePool() }));
+  await context.route('**/questions.json', (route) => route.fulfill({ json: pool }));
 }
 
 async function geraetOeffnen(context: BrowserContext): Promise<Page> {
@@ -19,18 +19,22 @@ async function geraetOeffnen(context: BrowserContext): Promise<Page> {
   return page;
 }
 
-async function raumEroeffnen(context: BrowserContext, name: string) {
+type Stufe = 'Leicht' | 'Mittel' | 'Schwer';
+
+async function raumEroeffnen(context: BrowserContext, name: string, stufe?: Stufe) {
   const host = await geraetOeffnen(context);
   await host.getByLabel('Dein Name').fill(name);
+  if (stufe) await host.getByRole('radiogroup', { name: 'Schwierigkeit', exact: true }).getByRole('radio', { name: stufe }).click();
   await host.getByRole('button', { name: 'Raum eröffnen' }).click();
   const code = (await host.getByLabel('Raumcode').textContent())!.trim();
   expect(code).toMatch(/^[A-Z0-9]{4}$/);
   return { host, code };
 }
 
-async function beitreten(context: BrowserContext, code: string, name: string) {
+async function beitreten(context: BrowserContext, code: string, name: string, stufe?: Stufe) {
   const gast = await geraetOeffnen(context);
   await gast.getByLabel('Dein Name').fill(name);
+  if (stufe) await gast.getByRole('radiogroup', { name: 'Schwierigkeit', exact: true }).getByRole('radio', { name: stufe }).click();
   await gast.getByLabel('Raumcode').fill(code.toLowerCase());
   await gast.getByRole('button', { name: 'Beitreten' }).click();
   return gast;
@@ -266,4 +270,52 @@ test('Beitritt abgelehnt, wenn das Gerät andere Fragen hat als der Host', async
     'Dieses Gerät und der Host haben nicht dieselben Fragen. Bitte auf beiden Geräten die App neu laden.',
   );
   await expect(spielerImRaum(host).getByRole('listitem')).toHaveCount(1);
+});
+
+/** Geografie 1–2 leicht, 3–6 schwer */
+function stufenPool() {
+  const pool = fixturePool();
+  for (const f of pool.fragen) {
+    if (f.kategorie === 'geografie') f.schwierigkeit = Number(f.id.split('-')[1]) <= 2 ? 1 : 3;
+  }
+  return pool;
+}
+
+test('Schwierigkeit reihum: jedes Gerät wählt seine Stufe beim Beitreten', async ({ context }) => {
+  await vorbereiten(context, stufenPool());
+  const { host: anna, code } = await raumEroeffnen(context, 'Anna', 'Leicht');
+  const ben = await beitreten(context, code, 'Ben', 'Schwer');
+  await expect(spielerImRaum(anna)).toContainText('Ben');
+
+  await anna.getByRole('radio', { name: /^(✓ )?Reihum/ }).click();
+  const liste = anna.getByRole('list', { name: 'Schwierigkeit pro Spieler' });
+  await expect(liste).toContainText('Anna: Leicht');
+  await expect(liste).toContainText('Ben: Schwer');
+  await anna.getByRole('radio', { name: '5', exact: true }).click();
+  await anna.getByRole('button', { name: 'Spiel starten' }).click();
+
+  await anna.getByRole('button', { name: 'Bereit' }).click();
+  expect(await frageOeffnen(anna, 'geografie')).toMatch(/Testfrage geografie [12]:/);
+  await beantworten(anna, { typ: 'falsch' });
+  await weiter(anna);
+
+  await ben.getByRole('button', { name: 'Bereit' }).click();
+  expect(await frageOeffnen(ben, 'geografie')).toMatch(/Testfrage geografie [3-6]:/);
+});
+
+test('Schwierigkeit „Alle gleichzeitig“: eine Stufe für alle, vom Host gewählt', async ({ context }) => {
+  await vorbereiten(context, stufenPool());
+  const { host: anna, code } = await raumEroeffnen(context, 'Anna', 'Leicht');
+  const ben = await beitreten(context, code, 'Ben', 'Leicht');
+  await expect(spielerImRaum(anna)).toContainText('Ben');
+
+  await expect(anna.getByText('deshalb gilt eine Stufe für alle')).toBeVisible();
+  await anna.getByRole('radiogroup', { name: 'Schwierigkeit', exact: true }).getByRole('radio', { name: 'Schwer' }).click();
+  await anna.getByRole('radio', { name: '5', exact: true }).click();
+  await anna.getByRole('button', { name: 'Spiel starten' }).click();
+
+  // Trotz persönlicher Wahl „Leicht“ kommen schwere Fragen
+  const frage = await frageOeffnen(anna, 'geografie');
+  expect(frage).toMatch(/Testfrage geografie [3-6]:/);
+  await expect(ben.getByRole('heading', { level: 1 })).toHaveText(frage);
 });

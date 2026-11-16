@@ -1,11 +1,27 @@
 <script lang="ts">
   import RaumKarte from '../components/RaumKarte.svelte';
   import { KATEGORIEN } from '../lib/categories';
-  import { FARB_NAMEN, MAX_SPIELER, RUNDEN_OPTIONEN, RUNDEN_STANDARD, SPIELER_FARBEN } from '../lib/config';
-  import { ALLE_KATEGORIEN, einstellungenPruefen, neueKategorienErgaenzen } from '../lib/game';
+  import SchwierigkeitWahl from '../components/SchwierigkeitWahl.svelte';
+  import {
+    FARB_NAMEN,
+    MAX_SPIELER,
+    RUNDEN_OPTIONEN,
+    RUNDEN_STANDARD,
+    SCHWIERIGKEIT_STANDARD,
+    SCHWIERIGKEITEN,
+    SPIELER_FARBEN,
+  } from '../lib/config';
+  import {
+    ALLE_KATEGORIEN,
+    einstellungenPruefen,
+    neueKategorienErgaenzen,
+    proKategoriePruefen,
+    type NeuerSpieler,
+  } from '../lib/game';
+  import { stufe } from '../lib/picker';
   import type { Teilnehmer } from '../lib/raum';
   import type { LetzteSpieler } from '../lib/storage';
-  import type { Ablauf, Einstellungen, KategorieId, KategorieModus } from '../lib/types';
+  import type { Ablauf, Einstellungen, KategorieId, KategorieModus, ProKategorie, Schwierigkeit } from '../lib/types';
 
   let {
     letzte,
@@ -20,7 +36,7 @@
     letzte: LetzteSpieler | null;
     /** Fragen pro Kategorie im Pool */
     gesamt: Record<KategorieId, number>;
-    onStart: (spieler: { name: string; farbe: string }[], runden: number, einstellungen: Einstellungen) => void;
+    onStart: (spieler: NeuerSpieler[], runden: number, einstellungen: Einstellungen) => void;
     onInfo: () => void;
     /** Mehrere Geräte: Lobby des Hosts – die Spieler sind die beigetretenen Geräte */
     raum?: { code: string; teilnehmer: Teilnehmer[]; ich: string };
@@ -46,12 +62,22 @@
     { id: 'zufall', titel: 'Immer Zufall', text: 'Die Kategorie wird jedes Mal ausgelost.' },
   ];
 
+  type SetupSpieler = { name: string; farbe: string; schwierigkeit: Schwierigkeit; proKategorie: ProKategorie };
+
   // svelte-ignore state_referenced_locally
   const start = letzte;
-  let spieler = $state(
+  let spieler = $state<SetupSpieler[]>(
     start?.namen.length
-      ? start.namen.map((name, i) => ({ name, farbe: start.farben[i] ?? SPIELER_FARBEN[i] }))
-      : [{ name: '', farbe: SPIELER_FARBEN[0] }],
+      ? start.namen.map((name, i) => {
+          const schwierigkeit = stufe(start.schwierigkeiten?.[i]);
+          return {
+            name,
+            farbe: start.farben[i] ?? SPIELER_FARBEN[i],
+            schwierigkeit,
+            proKategorie: proKategoriePruefen(start.proKategorie?.[i], schwierigkeit) ?? {},
+          };
+        })
+      : [{ name: '', farbe: SPIELER_FARBEN[0], schwierigkeit: SCHWIERIGKEIT_STANDARD, proKategorie: {} }],
   );
   // svelte-ignore state_referenced_locally
   let runden = $state(start?.runden ?? RUNDEN_STANDARD);
@@ -67,6 +93,10 @@
   const ablaufEffektiv = $derived<Ablauf>(raum ? ablauf : 'reihum');
   const gleichzeitig = $derived(ablaufEffektiv === 'gleichzeitig');
   let kategorien = $state<KategorieId[]>(startEinst.kategorien);
+  /** Gemeinsame Stufe im Raum bei „Alle gleichzeitig“ */
+  // svelte-ignore state_referenced_locally
+  let raumStufe = $state<Schwierigkeit>(stufe(start?.raumSchwierigkeit));
+  const stufenName = (w: Schwierigkeit | undefined) => SCHWIERIGKEITEN.find((x) => x.wert === stufe(w))!.name;
 
   const anzahlSpieler = $derived(raum ? raum.teilnehmer.length : spieler.length);
   // „Vorheriger Spieler“ braucht mindestens 2 Spieler
@@ -87,7 +117,7 @@
 
   function hinzufuegen() {
     const frei = SPIELER_FARBEN.find((f) => !spieler.some((p) => p.farbe === f)) ?? SPIELER_FARBEN[0];
-    spieler.push({ name: '', farbe: frei });
+    spieler.push({ name: '', farbe: frei, schwierigkeit: SCHWIERIGKEIT_STANDARD, proKategorie: {} });
   }
 
   function entfernen(i: number) {
@@ -99,8 +129,18 @@
     if (doppelt || fragenGewaehlt === 0) return;
     onStart(
       raum
-        ? raum.teilnehmer.map((t) => ({ name: t.name, farbe: t.farbe }))
-        : spieler.map((p, i) => ({ name: namen[i], farbe: p.farbe })),
+        ? raum.teilnehmer.map((t) =>
+            // „Alle gleichzeitig“: eine Frage für alle → gemeinsame Stufe; reihum gilt die Wahl jedes Geräts
+            gleichzeitig
+              ? { name: t.name, farbe: t.farbe, schwierigkeit: raumStufe }
+              : { name: t.name, farbe: t.farbe, schwierigkeit: t.schwierigkeit, proKategorie: t.proKategorie },
+          )
+        : spieler.map((p, i) => ({
+            name: namen[i],
+            farbe: p.farbe,
+            schwierigkeit: p.schwierigkeit,
+            proKategorie: proKategoriePruefen({ ...p.proKategorie }, p.schwierigkeit),
+          })),
       runden,
       { modus: modusEffektiv, kategorien: [...kategorien], ablauf: ablaufEffektiv },
     );
@@ -120,6 +160,7 @@
   {:else}
   <section class="karte" aria-labelledby="spieler-titel">
     <h2 id="spieler-titel">Spieler</h2>
+    <p class="muted klein-text">Name, Farbe und Schwierigkeit der Fragen – für jeden Spieler einzeln.</p>
     <ol class="liste">
       {#each spieler as p, i (i)}
         <li class="zeile">
@@ -149,6 +190,9 @@
                 onclick={() => (p.farbe = f)}
               ></button>
             {/each}
+          </div>
+          <div class="stufen">
+            <SchwierigkeitWahl bind:wert={p.schwierigkeit} bind:pro={p.proKategorie} {kategorien} wer={`Spieler ${i + 1}`} />
           </div>
         </li>
       {/each}
@@ -183,6 +227,34 @@
           </button>
         {/each}
       </div>
+    </section>
+
+    <section class="karte" aria-labelledby="schwierigkeit-titel">
+      <h2 id="schwierigkeit-titel">Schwierigkeit</h2>
+      {#if gleichzeitig}
+        <p class="muted klein-text">Alle beantworten dieselbe Frage – deshalb gilt eine Stufe für alle.</p>
+        <div class="segment" role="radiogroup" aria-labelledby="schwierigkeit-titel">
+          {#each SCHWIERIGKEITEN as st (st.wert)}
+            <button
+              type="button"
+              role="radio"
+              aria-checked={raumStufe === st.wert}
+              class:aktiv={raumStufe === st.wert}
+              onclick={() => (raumStufe = st.wert)}
+            >
+              {st.name}
+            </button>
+          {/each}
+        </div>
+      {:else}
+        <p class="muted klein-text">Reihum bekommt jeder Fragen in der Stufe, die er beim Beitreten gewählt hat.</p>
+        <ul class="stufen-liste" aria-label="Schwierigkeit pro Spieler">
+          {#each raum.teilnehmer as t (t.geraet)}
+            {@const n = Object.keys(t.proKategorie ?? {}).length}
+            <li><strong>{t.name}</strong>: {stufenName(t.schwierigkeit)}{n > 0 ? ` (${n} Kategorien angepasst)` : ''}</li>
+          {/each}
+        </ul>
+      {/if}
     </section>
   {/if}
 
@@ -349,6 +421,16 @@
     background: var(--bg);
     font-weight: 700;
     font-size: 1.1rem;
+  }
+  .stufen {
+    grid-column: 1 / -1;
+  }
+  .stufen-liste {
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
   }
   .segment button.aktiv {
     background: var(--accent);

@@ -39,6 +39,20 @@ npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für Git
   Neu hinzugekommene Kategorien (z. B. Schweiz, Star Wars, Harry Potter) werden automatisch gewählt, wenn zuvor alle gewählt waren;
   eine bewusste Auswahl bleibt unverändert (`bekannteKategorien` in `wikiquiz:players:v1`). Die entfernte Kategorie
   „Allgemeinwissen“ fällt aus gespeicherten Auswahlen weg.
+- **Schwierigkeit** (im Setup, pro Spieler): *Leicht*, *Mittel* (Standard) oder *Schwer* – entspricht `schwierigkeit`
+  1/2/3 der Fragen. Gezogen wird zuerst aus der gewählten Stufe; ist sie in der Kategorie aufgebraucht, aus der
+  nächstliegenden (leicht → mittel → schwer, mittel → leicht → schwer, schwer → mittel → leicht,
+  `SCHWIERIGKEIT_REIHENFOLGE` in `config.ts`). Eine Kategorie bleibt so spielbar, solange sie überhaupt Fragen hat.
+  Unter „Pro Kategorie anpassen“ lässt sich die Stufe pro Spieler für einzelne (gewählte) Kategorien abweichend
+  setzen; ohne Anpassung gilt die Gesamtstufe. Gespeichert werden nur Abweichungen (`proKategorie` am Spieler);
+  wird die Gesamtstufe geändert, fallen Abweichungen weg, die ihr nun entsprechen.
+  Punkte hängen nicht von der Schwierigkeit ab. Die Wahl wird mit den Namen gemerkt (`schwierigkeiten` und
+  `proKategorie` in `wikiquiz:players:v1`); ältere Spielstände ohne Wahl gelten als *Mittel*.
+  Mit mehreren Geräten wählt jeder seine Stufe (inkl. „Pro Kategorie anpassen“) beim Eröffnen bzw. Beitreten
+  (`SchwierigkeitWahl.svelte`); sie geht mit `hallo` an den Host, der sie prüft (`stufenWahlPruefen`) und beim
+  Teilnehmer ablegt. *Reihum* gilt diese Wahl, der Host sieht sie im Setup. Bei *Alle gleichzeitig* beantworten alle
+  dieselbe Frage, deshalb wählt der Host eine gemeinsame Stufe (`raumSchwierigkeit`, gemerkt); die persönliche Wahl
+  ruht dann. Ältere Geräte ohne Wahl gelten als *Mittel*.
 - **Erschöpfte Kategorien** sind ausgegraut („keine Fragen mehr“ bzw. „bald verfügbar“); beim Antippen erscheint ein Hinweis.
   „Zufall“ wählt nur unter Kategorien mit verbleibenden Fragen. Sind alle erschöpft, endet das Spiel.
 - **Quellenlink** im Feedback: „Mehr auf Wikipedia: Titel“, bei Fragen aus der englischen Wikipedia
@@ -84,11 +98,11 @@ und steuern die Zeit über Playwrights Fake-Clock – Punkte und Timeouts werden
 |---|---|
 | 1 Spieler | kein Übergabe-Screen, 100 P. sofort, 55 P. nach 7.5 s, falsche Antwort, Timeout, Wikipedia-Link, keine Doppelfragen, erschöpfte Kategorie mit Hinweis, Zufall nur aus offenen Kategorien, vorzeitiges Spielende, „Nochmals spielen“ |
 | 4 Spieler | Übergabe an jeden Spieler, Zwischenstand mit geteilten Rängen, Zufall, Rangliste „Gleichstand“, „Neues Spiel“ mit vorbelegten Namen |
-| Einstellungen | neue Kategorien bei früher „alle“ automatisch gewählt, Kategorienauswahl (Start gesperrt ohne Kategorie mit Fragen), „Immer Zufall“ ohne Kategorie-Screen und nur aus gewählten Kategorien, „Vorheriger Spieler wählt“ inkl. Zufall nach der Übergabe, Zwischenstand und Neuladen, Einstellungen gemerkt |
+| Einstellungen | neue Kategorien bei früher „alle“ automatisch gewählt, Kategorienauswahl (Start gesperrt ohne Kategorie mit Fragen), „Immer Zufall“ ohne Kategorie-Screen und nur aus gewählten Kategorien, „Vorheriger Spieler wählt“ inkl. Zufall nach der Übergabe, Zwischenstand und Neuladen, Einstellungen gemerkt, Schwierigkeit pro Spieler (Fragen der gewählten Stufe, Ausweichen auf die nächste, gemerkt) |
 | Neuladen | mitten in der Frage (gleiche Frage und Reihenfolge, Timer läuft weiter, Punkte gemäss Gesamtzeit), nach Ablauf (Timeout), auf Feedback- und Übergabe-Screen |
 | Timer | startet erst nach dem Einblenden, Warnfarbe ab 5 s Restzeit |
 | UX | kein horizontales Scrollen bei 320 px, alle Touch-Targets ≥ 48 px, Info-Seite mit Lizenzen, kein „ß“ |
-| Mehrere Geräte | alles mit `?kanal=tabs` (WebRTC selbst wird nicht automatisch getestet). Beitritt per Link/QR-Code (Code vorausgefüllt, Parameter verschwindet aus der Adresse), Ablehnung bei anderem Fragenstand; drei Tabs „Alle gleichzeitig“ (Timeout erst nach der Netz-Toleranz): Standard-Ablauf, gleiche Frage überall, Warten mit Zähler, Timeout für fehlende Antwort, eigene und alle Ergebnisse, Kategoriewahl reihum, eigene Punkte oben, Rangliste, „Nochmals“; zwei Tabs in einem Browser-Kontext (gemeinsame Fake-Clock): Lobby, Züge reihum mit Zuschauen, Neuladen von Gast und Host, Spiel beenden → zurück in den Raum, Raum verlassen; Beitritt mit vergebenem Namen abgelehnt, Host schliesst den Raum; Einstieg nur mit `?mehrgeraete`, 320 px |
+| Mehrere Geräte | alles mit `?kanal=tabs` (WebRTC selbst wird nicht automatisch getestet). Beitritt per Link/QR-Code (Code vorausgefüllt, Parameter verschwindet aus der Adresse), Ablehnung bei anderem Fragenstand; drei Tabs „Alle gleichzeitig“ (Timeout erst nach der Netz-Toleranz): Standard-Ablauf, gleiche Frage überall, Warten mit Zähler, Timeout für fehlende Antwort, eigene und alle Ergebnisse, Kategoriewahl reihum, eigene Punkte oben, Rangliste, „Nochmals“; Schwierigkeit reihum pro Gerät und gemeinsam bei „Alle gleichzeitig“; zwei Tabs in einem Browser-Kontext (gemeinsame Fake-Clock): Lobby, Züge reihum mit Zuschauen, Neuladen von Gast und Host, Spiel beenden → zurück in den Raum, Raum verlassen; Beitritt mit vergebenem Namen abgelehnt, Host schliesst den Raum; Einstieg nur mit `?mehrgeraete`, 320 px |
 
 ## Deployment
 

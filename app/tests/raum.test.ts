@@ -70,7 +70,14 @@ describe('darf', () => {
 describe('beitreten', () => {
   it('vergibt die erste freie Farbe und kürzt den Namen', () => {
     const r = beitreten([T[0], T[2]], 'neu', '  Dario ', false);
-    expect(r).toEqual({ ok: true, teilnehmer: [T[0], T[2], { geraet: 'neu', name: 'Dario', farbe: SPIELER_FARBEN[1] }] });
+    expect(r).toEqual({ ok: true, teilnehmer: [T[0], T[2], { geraet: 'neu', name: 'Dario', farbe: SPIELER_FARBEN[1], schwierigkeit: 2 }] });
+  });
+
+  it('übernimmt die Schwierigkeit des Geräts, bereinigt', () => {
+    const r = beitreten([T[0]], 'neu', 'Dario', false, true, { schwierigkeit: 1, proKategorie: { kunst: 3, sport: 1, x: 2 } });
+    expect(r.ok && r.teilnehmer[1]).toMatchObject({ schwierigkeit: 1, proKategorie: { kunst: 3 } });
+    const kaputt = beitreten([T[0]], 'neu', 'Dario', false, true, { schwierigkeit: 9, proKategorie: 'x' });
+    expect(kaputt.ok && kaputt.teilnehmer[1]).toEqual({ geraet: 'neu', name: 'Dario', farbe: SPIELER_FARBEN[1], schwierigkeit: 2 });
   });
 
   it('erkennt bekannte Geräte wieder, auch während des Spiels', () => {

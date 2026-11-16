@@ -3,9 +3,9 @@
  * Zeit (`jetzt`) und Zufall (`rng`) werden hereingereicht → testbar und reload-fest.
  */
 import { ZEITLIMIT_S, punkteFuerZeit } from './config';
-import { mischen, verfuegbareKategorien, waehleFrage, type Rng } from './picker';
+import { mischen, stufe, verfuegbareKategorien, waehleFrage, type Rng } from './picker';
 import { KATEGORIEN, URSPRUENGLICHE_KATEGORIEN } from './categories';
-import type { Antwort, Einstellungen, Frage, KategorieId, Phase, Spieler, Spielstand } from './types';
+import type { Antwort, Einstellungen, Frage, KategorieId, Phase, ProKategorie, Schwierigkeit, Spieler, Spielstand } from './types';
 
 export type Wahl = KategorieId | 'zufall';
 
@@ -65,15 +65,51 @@ export function startPhase(s: Pick<Spielstand, 'spieler' | 'modus'> & Partial<Pi
   return s.spieler.length > 1 ? 'uebergabe' : 'kategorie';
 }
 
+export type NeuerSpieler = Pick<Spieler, 'name' | 'farbe'> & { schwierigkeit?: Schwierigkeit; proKategorie?: ProKategorie };
+
+/**
+ * Abweichungen pro Kategorie bereinigen: unbekannte Kategorien, ungültige Stufen und Werte, die der
+ * Gesamtstufe entsprechen, fallen weg. Ohne Abweichung → undefined.
+ */
+export function proKategoriePruefen(pro: unknown, gesamt: Schwierigkeit): ProKategorie | undefined {
+  if (!pro || typeof pro !== 'object') return undefined;
+  const res: ProKategorie = {};
+  for (const k of ALLE_KATEGORIEN) {
+    const w = (pro as Record<string, unknown>)[k];
+    if ((w === 1 || w === 2 || w === 3) && w !== gesamt) res[k] = w;
+  }
+  return Object.keys(res).length > 0 ? res : undefined;
+}
+
+/** Schwierigkeit eines Spielers in einer Kategorie: Abweichung, sonst Gesamtstufe */
+export function schwierigkeitFuer(p: Pick<Spieler, 'schwierigkeit' | 'proKategorie'>, kategorie: KategorieId): Schwierigkeit {
+  return p.proKategorie?.[kategorie] ?? p.schwierigkeit;
+}
+
+/** Schwierigkeit und Abweichungen eines Spielers bereinigen (auch für ältere Spielstände) */
+function spielerPruefen({ proKategorie, ...p }: Omit<Spieler, 'schwierigkeit'> & { schwierigkeit?: unknown }): Spieler {
+  const schwierigkeit = stufe(p.schwierigkeit);
+  const pro = proKategoriePruefen(proKategorie, schwierigkeit);
+  return { ...p, schwierigkeit, ...(pro ? { proKategorie: pro } : {}) };
+}
+
 export function neuesSpiel(
-  spieler: Omit<Spieler, 'punkte'>[],
+  spieler: NeuerSpieler[],
   runden: number,
   einstellungen?: Partial<Einstellungen>,
 ): Spielstand {
   const s: Spielstand = {
     version: 1,
     phase: 'setup',
-    spieler: spieler.map((p) => ({ name: p.name.trim(), farbe: p.farbe, punkte: 0 })),
+    spieler: spieler.map((p) =>
+      spielerPruefen({
+        name: p.name.trim(),
+        farbe: p.farbe,
+        punkte: 0,
+        schwierigkeit: p.schwierigkeit,
+        proKategorie: p.proKategorie,
+      }),
+    ),
     runden,
     ...einstellungenPruefen(einstellungen, spieler.length),
     runde: 1,
@@ -117,7 +153,7 @@ export function kategorieWaehlen(
     if (s.modus === 'zufall' || !s.kategorien.includes(wahl)) return { ok: false, grund: 'erschoepft' };
     kategorie = wahl;
   }
-  const frage = waehleFrage(pool, kategorie, s.gestellt, history, rng);
+  const frage = waehleFrage(pool, kategorie, s.gestellt, history, rng, schwierigkeitFuer(s.spieler[s.aktiverSpieler], kategorie));
   if (!frage) return { ok: false, grund: 'erschoepft' };
   return {
     ok: true,
@@ -260,7 +296,12 @@ export function rangliste(spieler: Spieler[]): Platz[] {
  * Ist die Frage verschwunden (neuer Pool), wird der Zug verworfen und neu gewählt.
  */
 export function wiederherstellen(gespeichert: Spielstand, pool: Frage[], jetzt: number): Spielstand {
-  const s: Spielstand = { ...gespeichert, ...einstellungenPruefen(gespeichert, gespeichert.spieler.length) };
+  const s: Spielstand = {
+    ...gespeichert,
+    ...einstellungenPruefen(gespeichert, gespeichert.spieler.length),
+    // Spielstände ohne Schwierigkeit (vor Einführung der Wahl) → Standard
+    spieler: gespeichert.spieler.map(spielerPruefen),
+  };
   if (s.phase === 'setup') return s;
   if (s.zug && ['uebergabe', 'zufall', 'frage', 'feedback'].includes(s.phase)) {
     const frage = pool.find((f) => f.id === s.zug!.frageId);
