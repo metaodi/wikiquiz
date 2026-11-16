@@ -31,6 +31,12 @@ python -m wikiquiz_gen review --kategorie kunst --n 30
 
 # Übersicht
 python -m wikiquiz_gen stats
+
+# Fragen per ID in eine andere Kategorie verschieben (IDs bleiben gleich)
+python -m wikiquiz_gen verschieben --nach geschichte --id wp-0cc912c042 --id wp-4c43317216
+
+# Anführungszeichen («…») und Schweizer Rechtschreibung in bestehenden Fragen vereinheitlichen
+python -m wikiquiz_gen bereinigen --dry-run
 ```
 
 Standard ist `--modus ergaenzen`: Bestehende Fragen bleiben unverändert, nur neue IDs kommen dazu.
@@ -65,8 +71,11 @@ Einmalig nötig:
 1. **Artikelauswahl:** Startkategorien pro Quizkategorie (`wikipedia/quellen.py`) sowie exzellente und
    lesenswerte Artikel, die über ihre Wikipedia-Kategorien per Stichwort zugeordnet werden.
    Danach der Bekanntheitsfilter; die bekanntesten Artikel werden zuerst verarbeitet.
-   **Kategorie-Abgleich:** Zeigen die Wikipedia-Kategorien eines Artikels per Stichwort eindeutig auf eine
-   andere Quizkategorie, wird er übersprungen (z. B. Friedrich II. aus „Komponist (Klassik)“ → Geschichte).
+   **Kategorie-Abgleich:** Zeigen die Wikipedia-Kategorien und die Wikidata-Berufe (P106) eines Artikels
+   eindeutig auf eine andere Quizkategorie, wird er übersprungen (z. B. Friedrich II. aus „Komponist (Klassik)“
+   → Geschichte, Johannes Kepler → Naturwissenschaften). Stichworte zählen nur am Wortanfang („Verdichter“ ist
+   kein „Dichter“); „Literatur (…)“ zählt nicht, weil Wikipedia so alle einordnet, die etwas veröffentlicht haben.
+   Stichworte und Berufe stehen in `wikipedia/quellen.py`.
 2. **Textauszug:** Einleitung und erste Abschnitte, ca. 4000 Zeichen Klartext; Abschnitte wie
    Literatur, Weblinks oder Rezeption werden übersprungen.
 3. **Generierung:** Prompt wörtlich aus `SPEC.md` (`llm/prompts.py`, ein Test prüft die Übereinstimmung),

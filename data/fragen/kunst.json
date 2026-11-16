@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "kunst",
- "generiert_am": "2026-11-16T05:20:31Z",
+ "generiert_am": "2026-11-16T05:36:48Z",
  "fragen": [
   {
    "id": "wp-075a875048",
@@ -74,42 +74,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Margaret Atwood",
    "quelle_id": "Q183492"
-  },
-  {
-   "id": "wp-0cc912c042",
-   "kategorie": "kunst",
-   "frage": "Was enthält der berühmte Codex Hammurapi aus dem alten Babylon?",
-   "antworten": [
-    "Eine Sammlung von Rechtssätzen",
-    "Eine Liste der Könige Babylons",
-    "Ein Heldenepos über Gilgamesch",
-    "Eine Sammlung von Götterhymnen"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Codex_Hammurapi",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Codex Hammurapi",
-   "quelle_id": "Q93304"
-  },
-  {
-   "id": "wp-0f9c65a412",
-   "kategorie": "kunst",
-   "frage": "Welchem Zahlenwert entspricht das Teilungsverhältnis des Goldenen Schnitts ungefähr?",
-   "antworten": [
-    "2,718",
-    "1,732",
-    "1,414",
-    "1,618"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Goldener_Schnitt",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Goldener Schnitt",
-   "quelle_id": "Q41690"
   },
   {
    "id": "wp-1270f54800",
@@ -204,7 +168,7 @@
   {
    "id": "wp-1b3eadbdb7",
    "kategorie": "kunst",
-   "frage": "Welcher Komponist schrieb die Oper ‚Rigoletto‘?",
+   "frage": "Welcher Komponist schrieb die Oper «Rigoletto»?",
    "antworten": [
     "Gaetano Donizetti",
     "Giuseppe Verdi",
@@ -292,24 +256,6 @@
    "quelle_id": "Q151883"
   },
   {
-   "id": "wp-1f1f31558d",
-   "kategorie": "kunst",
-   "frage": "In welcher Stadt wurde der Reformator Martin Luther geboren?",
-   "antworten": [
-    "Wittenberg",
-    "Erfurt",
-    "Eisenach",
-    "Eisleben"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Martin_Luther",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Martin Luther",
-   "quelle_id": "Q9554"
-  },
-  {
    "id": "wp-1fe5a311ab",
    "kategorie": "kunst",
    "frage": "Aus welchem heutigen Land stammte der Maler Hieronymus Bosch?",
@@ -344,24 +290,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Caspar David Friedrich",
    "quelle_id": "Q104884"
-  },
-  {
-   "id": "wp-219b4691b0",
-   "kategorie": "kunst",
-   "frage": "Mit welchem dänischen Astronomen arbeitete Johannes Kepler in Prag zusammen, bevor er dessen Nachfolger wurde?",
-   "antworten": [
-    "Nikolaus Kopernikus",
-    "Ole Rømer",
-    "Galileo Galilei",
-    "Tycho Brahe"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Johannes_Kepler",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Johannes Kepler",
-   "quelle_id": "Q8963"
   },
   {
    "id": "wp-2472395c5c",
@@ -472,24 +400,6 @@
    "quelle_id": "Q254"
   },
   {
-   "id": "wp-2bc823fbbf",
-   "kategorie": "kunst",
-   "frage": "Welche Schulpädagogik geht auf den österreichischen Denker Rudolf Steiner zurück?",
-   "antworten": [
-    "Waldorfpädagogik",
-    "Montessoripädagogik",
-    "Jenaplan-Pädagogik",
-    "Reggio-Pädagogik"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Rudolf_Steiner",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Rudolf Steiner",
-   "quelle_id": "Q78484"
-  },
-  {
    "id": "wp-2be3316fe5",
    "kategorie": "kunst",
    "frage": "In welcher Stadt starb der deutsche Schriftsteller und Revolutionär Georg Büchner 1837?",
@@ -524,24 +434,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Die Leiden des jungen Werthers",
    "quelle_id": "Q151883"
-  },
-  {
-   "id": "wp-3339bb6608",
-   "kategorie": "kunst",
-   "frage": "Welcher Astronom entdeckte die Gesetze, nach denen sich die Planeten um die Sonne bewegen?",
-   "antworten": [
-    "Nikolaus Kopernikus",
-    "Tycho Brahe",
-    "Galileo Galilei",
-    "Johannes Kepler"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Johannes_Kepler",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Johannes Kepler",
-   "quelle_id": "Q8963"
   },
   {
    "id": "wp-35532ec616",
@@ -724,24 +616,6 @@
    "quelle_id": "Q40909"
   },
   {
-   "id": "wp-4c43317216",
-   "kategorie": "kunst",
-   "frage": "In welchem Museum ist die Steinstele mit dem Codex Hammurapi heute ausgestellt?",
-   "antworten": [
-    "Pergamonmuseum in Berlin",
-    "Metropolitan Museum in New York",
-    "Louvre in Paris",
-    "British Museum in London"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Codex_Hammurapi",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Codex Hammurapi",
-   "quelle_id": "Q93304"
-  },
-  {
    "id": "wp-4d4b4691e3",
    "kategorie": "kunst",
    "frage": "Mit welchem Schweizer Schriftsteller hatte Ingeborg Bachmann eine fast fünfjährige Liebesbeziehung?",
@@ -848,24 +722,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Paula Modersohn-Becker",
    "quelle_id": "Q234370"
-  },
-  {
-   "id": "wp-55f9c54745",
-   "kategorie": "kunst",
-   "frage": "Nach welchem Mathematiker ist die Zahlenfolge benannt, die eng mit dem Goldenen Schnitt verbunden ist?",
-   "antworten": [
-    "Gauss",
-    "Euler",
-    "Fibonacci",
-    "Pascal"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Goldener_Schnitt",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Goldener Schnitt",
-   "quelle_id": "Q41690"
   },
   {
    "id": "wp-56423cbd7a",
@@ -1104,7 +960,7 @@
   {
    "id": "wp-6c1fecdf5c",
    "kategorie": "kunst",
-   "frage": "Welche Stellung hat die Titelfigur in Verdis Oper ‚Rigoletto‘ am Hof des Herzogs von Mantua?",
+   "frage": "Welche Stellung hat die Titelfigur in Verdis Oper «Rigoletto» am Hof des Herzogs von Mantua?",
    "antworten": [
     "Kammerdiener",
     "Hofmusiker",
@@ -1320,7 +1176,7 @@
   {
    "id": "wp-89f0058db0",
    "kategorie": "kunst",
-   "frage": "Was wünscht sich der Blechmann im Kinderbuch ‚Der Zauberer von Oz‘ am meisten?",
+   "frage": "Was wünscht sich der Blechmann im Kinderbuch «Der Zauberer von Oz» am meisten?",
    "antworten": [
     "Ein Herz",
     "Mut",
@@ -1334,42 +1190,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Der Zauberer von Oz",
    "quelle_id": "Q130295"
-  },
-  {
-   "id": "wp-8d8acc4b4b",
-   "kategorie": "kunst",
-   "frage": "Welche Auszeichnung erhielt der von den Nazis inhaftierte Journalist Carl von Ossietzky im Jahr 1936?",
-   "antworten": [
-    "Pulitzer-Preis",
-    "Georg-Büchner-Preis",
-    "Friedensnobelpreis",
-    "Literaturnobelpreis"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Carl_von_Ossietzky",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Carl von Ossietzky",
-   "quelle_id": "Q76358"
-  },
-  {
-   "id": "wp-925203cb7f",
-   "kategorie": "kunst",
-   "frage": "Aus welchem Land stammte Alfred Büchi, der 1905 das Prinzip des Turboladers patentieren liess?",
-   "antworten": [
-    "Deutschland",
-    "Schweiz",
-    "Österreich",
-    "Frankreich"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Turbolader",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Turbolader",
-   "quelle_id": "Q185525"
   },
   {
    "id": "wp-9256a8bca8",
@@ -1460,42 +1280,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Wilhelm Busch",
    "quelle_id": "Q109540"
-  },
-  {
-   "id": "wp-9648585178",
-   "kategorie": "kunst",
-   "frage": "Gegen welches Regime leistete Dietrich Bonhoeffer Widerstand?",
-   "antworten": [
-    "Wilhelminisches Kaiserreich",
-    "DDR-Regime",
-    "Stalinismus",
-    "Nationalsozialismus"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Dietrich_Bonhoeffer",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Dietrich Bonhoeffer",
-   "quelle_id": "Q76326"
-  },
-  {
-   "id": "wp-9782941aef",
-   "kategorie": "kunst",
-   "frage": "Welchem Philosophen der Aufklärung wird der Aufruf «Zurück zur Natur!» zugeschrieben?",
-   "antworten": [
-    "Denis Diderot",
-    "Jean-Jacques Rousseau",
-    "Immanuel Kant",
-    "Charles de Montesquieu"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Jean-Jacques_Rousseau",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Jean-Jacques Rousseau",
-   "quelle_id": "Q6527"
   },
   {
    "id": "wp-98032b15b2",
@@ -2180,24 +1964,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Anselm Kiefer",
    "quelle_id": "Q170344"
-  },
-  {
-   "id": "wp-cd0ca45657",
-   "kategorie": "kunst",
-   "frage": "Welche Zeitschrift gab der Pazifist Carl von Ossietzky in der Weimarer Republik heraus?",
-   "antworten": [
-    "Simplicissimus",
-    "Die Weltbühne",
-    "Der Sturm",
-    "Die Fackel"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Carl_von_Ossietzky",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Carl von Ossietzky",
-   "quelle_id": "Q76358"
   },
   {
    "id": "wp-cd1ac827a8",

@@ -124,6 +124,43 @@ def cmd_review(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_verschieben(args: argparse.Namespace) -> int:
+    try:
+        verschoben = output.verschieben(args.id, args.nach)
+    except ValueError as e:
+        print(f"Fehler: {e}", file=sys.stderr)
+        return 1
+    for f in verschoben:
+        print(f"{f['id']} → {args.nach}: {f['frage']}")
+    return 0
+
+
+def cmd_bereinigen(args: argparse.Namespace) -> int:
+    """Anführungszeichen und Schweizer Rechtschreibung in bestehenden Fragen vereinheitlichen.
+    Die IDs ändern sich dadurch nicht (Satzzeichen fliessen nicht in die ID ein)."""
+    from .models import text_bereinigen
+
+    geaendert = 0
+    for kat in args.kategorie or list(KATEGORIEN):
+        fragen = output.lade_kategorie(kat)
+        if not fragen:
+            continue
+        neu, geaendert_kat = [], 0
+        for f in fragen:
+            g = {**f, "frage": text_bereinigen(f["frage"]),
+                 "antworten": [text_bereinigen(a) for a in f["antworten"]]}
+            if g != f:
+                geaendert_kat += 1
+                print(f"{f['id']}: {f['frage']}  →  {g['frage']}")
+            neu.append(g)
+        geaendert += geaendert_kat
+        # Nur Dateien mit Änderungen schreiben (sonst ändert sich unnötig der Zeitstempel)
+        if geaendert_kat and not args.dry_run:
+            output.speichere_kategorie(kat, neu)
+    print(f"{geaendert} Fragen angepasst" + (" (Trockenlauf)" if args.dry_run else ""))
+    return 0
+
+
 def cmd_stats(args: argparse.Namespace) -> int:
     fragen = output.lade_alle()
     c = Counter((f["kategorie"], f["quelle_typ"]) for f in fragen)
@@ -168,6 +205,16 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--n", type=int, default=30)
     r.add_argument("--seed", type=int, default=1)
     r.set_defaults(func=cmd_review)
+
+    v = sub.add_parser("verschieben", help="Fragen per ID in eine andere Kategorie verschieben")
+    v.add_argument("--id", action="append", required=True, help="Frage-ID (mehrfach möglich)")
+    v.add_argument("--nach", required=True, choices=list(KATEGORIEN))
+    v.set_defaults(func=cmd_verschieben)
+
+    b = sub.add_parser("bereinigen", help="Anführungszeichen/Rechtschreibung vereinheitlichen")
+    b.add_argument("--kategorie", action="append", choices=list(KATEGORIEN))
+    b.add_argument("--dry-run", action="store_true")
+    b.set_defaults(func=cmd_bereinigen)
 
     s = sub.add_parser("stats", help="Anzahl Fragen pro Kategorie")
     s.set_defaults(func=cmd_stats)

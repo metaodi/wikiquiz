@@ -7,7 +7,7 @@ import unicodedata
 from dataclasses import dataclass, field
 
 from ..config import KATEGORIEN
-from ..models import Frage, swiss
+from ..models import Frage, swiss, text_bereinigen
 from ..sparql import artikel_url
 from ..validate import pruefe_formal
 from .client import LLM
@@ -131,9 +131,9 @@ def artikel_verarbeiten(
             continue
         f = Frage(
             kategorie=kategorie,
-            frage=swiss(roh["frage"].strip()),
-            richtig=swiss(roh["richtige_antwort"].strip()),
-            falsch=[swiss(x.strip()) for x in roh["falsche_antworten"]],
+            frage=text_bereinigen(roh["frage"]),
+            richtig=text_bereinigen(roh["richtige_antwort"]),
+            falsch=[text_bereinigen(x) for x in roh["falsche_antworten"]],
             schwierigkeit=roh["schwierigkeit"],
             quelle_typ="wikipedia",
             quelle_url=artikel_url(titel),

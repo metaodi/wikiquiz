@@ -1,0 +1,115 @@
+{
+ "version": 1,
+ "kategorie": "geschichte",
+ "generiert_am": "2026-11-16T05:36:48Z",
+ "fragen": [
+  {
+   "id": "wp-0cc912c042",
+   "kategorie": "geschichte",
+   "frage": "Was enthält der berühmte Codex Hammurapi aus dem alten Babylon?",
+   "antworten": [
+    "Eine Sammlung von Rechtssätzen",
+    "Eine Liste der Könige Babylons",
+    "Ein Heldenepos über Gilgamesch",
+    "Eine Sammlung von Götterhymnen"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Codex_Hammurapi",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Codex Hammurapi",
+   "quelle_id": "Q93304"
+  },
+  {
+   "id": "wp-1f1f31558d",
+   "kategorie": "geschichte",
+   "frage": "In welcher Stadt wurde der Reformator Martin Luther geboren?",
+   "antworten": [
+    "Wittenberg",
+    "Erfurt",
+    "Eisenach",
+    "Eisleben"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Martin_Luther",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Martin Luther",
+   "quelle_id": "Q9554"
+  },
+  {
+   "id": "wp-4c43317216",
+   "kategorie": "geschichte",
+   "frage": "In welchem Museum ist die Steinstele mit dem Codex Hammurapi heute ausgestellt?",
+   "antworten": [
+    "Pergamonmuseum in Berlin",
+    "Metropolitan Museum in New York",
+    "Louvre in Paris",
+    "British Museum in London"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Codex_Hammurapi",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Codex Hammurapi",
+   "quelle_id": "Q93304"
+  },
+  {
+   "id": "wp-8d8acc4b4b",
+   "kategorie": "geschichte",
+   "frage": "Welche Auszeichnung erhielt der von den Nazis inhaftierte Journalist Carl von Ossietzky im Jahr 1936?",
+   "antworten": [
+    "Pulitzer-Preis",
+    "Georg-Büchner-Preis",
+    "Friedensnobelpreis",
+    "Literaturnobelpreis"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Carl_von_Ossietzky",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Carl von Ossietzky",
+   "quelle_id": "Q76358"
+  },
+  {
+   "id": "wp-9648585178",
+   "kategorie": "geschichte",
+   "frage": "Gegen welches Regime leistete Dietrich Bonhoeffer Widerstand?",
+   "antworten": [
+    "Wilhelminisches Kaiserreich",
+    "DDR-Regime",
+    "Stalinismus",
+    "Nationalsozialismus"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dietrich_Bonhoeffer",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Dietrich Bonhoeffer",
+   "quelle_id": "Q76326"
+  },
+  {
+   "id": "wp-cd0ca45657",
+   "kategorie": "geschichte",
+   "frage": "Welche Zeitschrift gab der Pazifist Carl von Ossietzky in der Weimarer Republik heraus?",
+   "antworten": [
+    "Simplicissimus",
+    "Die Weltbühne",
+    "Der Sturm",
+    "Die Fackel"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Carl_von_Ossietzky",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Carl von Ossietzky",
+   "quelle_id": "Q76358"
+  }
+ ]
+}

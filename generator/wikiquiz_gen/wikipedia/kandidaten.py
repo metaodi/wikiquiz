@@ -91,15 +91,28 @@ def artikel_kategorien(http: Http, titel: list[str]) -> dict[str, list[str]]:
     return ergebnis
 
 
+def berufe(http: Http, qids: list[str]) -> dict[str, list[str]]:
+    """Berufe (Wikidata P106) pro Objekt, 200 Objekte pro SPARQL-Abfrage."""
+    ergebnis: dict[str, list[str]] = {}
+    eindeutig = sorted(set(qids))
+    for i in range(0, len(eindeutig), 200):
+        werte = " ".join(f"wd:{q}" for q in eindeutig[i : i + 200])
+        for r in abfrage(http, f"SELECT ?item ?beruf WHERE {{ VALUES ?item {{ {werte} }} ?item wdt:P106 ?beruf. }}",
+                         ttl=30 * TAG):
+            ergebnis.setdefault(r["item"].rsplit("/", 1)[-1], []).append(r["beruf"].rsplit("/", 1)[-1])
+    return ergebnis
+
+
 def passende_kategorie(http: Http, kandidaten: list[Kandidat], kategorie: str
                        ) -> tuple[list[Kandidat], list[tuple[Kandidat, str]]]:
-    """Kategorie-Abgleich: Zeigen die Wikipedia-Kategorien eines Artikels eindeutig auf eine andere
-    Quizkategorie, wird er übersprungen (z. B. Friedrich II. aus „Komponist (Klassik)“ → Geschichte).
-    Artikel ohne eindeutige Zuordnung bleiben drin."""
+    """Kategorie-Abgleich: Zeigen Wikipedia-Kategorien und Wikidata-Berufe eines Artikels eindeutig
+    auf eine andere Quizkategorie, wird er übersprungen (z. B. Friedrich II. aus „Komponist (Klassik)“
+    → Geschichte, Johannes Kepler → Naturwissenschaften). Artikel ohne eindeutige Zuordnung bleiben drin."""
     kats = artikel_kategorien(http, [k.titel for k in kandidaten])
+    b = berufe(http, [k.qid for k in kandidaten])
     behalten, verworfen = [], []
     for k in kandidaten:
-        zuordnung = zuordnen(kats.get(k.titel, []))
+        zuordnung = zuordnen(kats.get(k.titel, []), b.get(k.qid, []))
         if zuordnung is not None and zuordnung != kategorie:
             verworfen.append((k, f"kategorie passt nicht: {zuordnung}"))
         else:
