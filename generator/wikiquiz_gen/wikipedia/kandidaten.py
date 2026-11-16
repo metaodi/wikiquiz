@@ -120,6 +120,28 @@ def passende_kategorie(http: Http, kandidaten: list[Kandidat], kategorie: str
     return behalten, verworfen
 
 
+def amtierende(http: Http, qids: list[str], heute: date | None = None, jahre: int = 20) -> set[str]:
+    """Lebende Personen, die laut Wikidata gerade ein Amt innehaben: eine Aussage „Position“ (P39)
+    mit Beginn in den letzten `jahre` Jahren und ohne Enddatum (z. B. Bundeskanzler seit 2025).
+    Fragen zu ihnen veralten schnell, der Generierungs-Prompt schliesst sie ohnehin aus.
+    Ohne Beginn zählt eine Aussage nicht, weil ältere Ämter oft ohne Enddatum erfasst sind."""
+    seit = (heute or date.today()).year - jahre
+    ergebnis: set[str] = set()
+    eindeutig = sorted(set(qids))
+    for i in range(0, len(eindeutig), 200):
+        werte = " ".join(f"wd:{q}" for q in eindeutig[i : i + 200])
+        for r in abfrage(http, f"""
+SELECT DISTINCT ?item WHERE {{
+  VALUES ?item {{ {werte} }}
+  ?item wdt:P31 wd:Q5. FILTER NOT EXISTS {{ ?item wdt:P570 ?tod }}
+  ?item p:P39 ?aussage. ?aussage wikibase:rank ?rang; pq:P580 ?beginn.
+  FILTER(?rang != wikibase:DeprecatedRank && YEAR(?beginn) >= {seit})
+  FILTER NOT EXISTS {{ ?aussage pq:P582 ?ende }}
+}}""", ttl=7 * TAG):
+            ergebnis.add(r["item"].rsplit("/", 1)[-1])
+    return ergebnis
+
+
 def sitelinks(http: Http, qids: list[str]) -> dict[str, int]:
     """Anzahl Sprachversionen pro Wikidata-Objekt (SPARQL, 300 Objekte pro Abfrage)."""
     anzahl: dict[str, int] = {}

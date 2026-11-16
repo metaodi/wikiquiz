@@ -35,6 +35,9 @@ python -m wikiquiz_gen stats
 # Fragen per ID in eine andere Kategorie verschieben (IDs bleiben gleich)
 python -m wikiquiz_gen verschieben --nach geschichte --id wp-0cc912c042 --id wp-4c43317216
 
+# Fragen per ID löschen (der Artikel bleibt in data/verarbeitet/ vermerkt und wird nicht erneut verarbeitet)
+python -m wikiquiz_gen entfernen --id wp-0e431a70e4 --id wp-4690569104
+
 # Anführungszeichen («…») und Schweizer Rechtschreibung in bestehenden Fragen vereinheitlichen
 python -m wikiquiz_gen bereinigen --dry-run
 ```
@@ -79,7 +82,17 @@ Einmalig nötig:
    eindeutig auf eine andere Quizkategorie, wird er übersprungen (z. B. Friedrich II. aus „Komponist (Klassik)“
    → Geschichte, Johannes Kepler → Naturwissenschaften). Stichworte zählen nur am Wortanfang („Verdichter“ ist
    kein „Dichter“); „Literatur (…)“ zählt nicht, weil Wikipedia so alle einordnet, die etwas veröffentlicht haben.
-   Stichworte und Berufe stehen in `wikipedia/quellen.py`.
+   Stichworte und Berufe stehen in `wikipedia/quellen.py`. Flugzeugtypen (Kategorien „Erstflug …“,
+   „… Flugzeug“) zählen zur Technik, auch militärische.
+   **Amtierende Personen:** Lebende Personen, die laut Wikidata gerade ein Amt innehaben (Position P39 mit
+   Beginn in den letzten 20 Jahren, ohne Enddatum), werden übersprungen (z. B. Friedrich Merz). Fragen zu
+   ihnen veralten schnell.
+   **Themenvielfalt:** Jeder Artikel bekommt ein Thema: in der Geschichte die Epoche (Antike, Mittelalter,
+   Frühe Neuzeit, 1789–1914, 1914–1945, seit 1945; geschätzt aus Jahreszahlen in den Wikipedia-Kategorien
+   wie „Geboren 1638“ oder „Herrscher (17. Jahrhundert)“, NS-Zeit und Weltkriege per Stichwort), sonst die
+   Startkategorie. Verarbeitet wird reihum zuerst aus dem Thema mit den bisher wenigsten Fragen (Bestand
+   eingerechnet), innerhalb eines Themas nach Seitenaufrufen (`wikipedia/themen.py`). So überwiegen nicht
+   allein die meistgelesenen Themen (in der Geschichte NS-Zeit und Zweiter Weltkrieg).
 2. **Textauszug:** Einleitung und erste Abschnitte, ca. 4000 Zeichen Klartext; Abschnitte wie
    Literatur, Weblinks oder Rezeption werden übersprungen.
 3. **Generierung:** Prompt wörtlich aus `SPEC.md` (`llm/prompts.py`, ein Test prüft die Übereinstimmung),
@@ -87,7 +100,10 @@ Einmalig nötig:
 4. **Prüfung:** zweiter, unabhängiger Aufruf mit gemischten Antworten, ohne Hinweis auf die richtige.
 5. **Aufnahme** nur, wenn: Bekanntheit des Themas ≥ 3, Belegstelle steht im Text (ß/ss und
    Anführungszeichen normalisiert), Prüfer wählt dieselbe Antwort, eindeutig, Allgemeinwissen ≥ 3,
-   formale Regeln eingehalten. Danach Deduplizierung gegen den Bestand.
+   formale Regeln eingehalten. Danach Deduplizierung gegen den Bestand: fast gleicher Wortlaut, dieselbe
+   Tatsache mit leicht anderer Antwort („Überfall auf Polen“ / „Deutscher Überfall auf Polen“, gewichtete
+   Wortüberschneidung ≥ 0.6) und Fragen, die sich gegenseitig verraten („Wer war Obamas Vizepräsident?“ ↔
+   „Unter wem war Biden Vizepräsident?“). Die neuere Frage wird verworfen.
 
 Kosten (grobe Schätzung mit `claude-opus-5-5`, Denkaufwand `medium`): ca. 0.05–0.10 USD pro Artikel,
 also rund 5–15 USD für 150 Fragen einer Kategorie. Der Lauf protokolliert die tatsächlichen Tokens.

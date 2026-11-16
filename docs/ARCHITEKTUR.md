@@ -92,3 +92,5 @@ Schwellen pro Kategorie in `config.py`, per CLI übersteuerbar.
 | Rechtschreibung | Alle Texte werden auf „ss“ normalisiert (kein „ß“) |
 | Fragenablage | Eine Datei pro Kategorie (`data/fragen/`), der App-Build fügt sie zu `questions.json` zusammen |
 | Automatisierung | GitHub Action „Fragen generieren“: pro Kategorie ein Pull Request im Modus „ergänzen“ mit Stichprobe |
+| Themenvielfalt | Wikipedia-Artikel werden reihum nach Thema verarbeitet (Geschichte: Epoche aus Jahreszahlen der Wikipedia-Kategorien, sonst Startkategorie), statt nur nach Seitenaufrufen |
+| Aktuelle Politik | Lebende Personen mit laufendem Amt (Wikidata P39 ohne Enddatum, Beginn ≤ 20 Jahre) werden nicht verarbeitet |
