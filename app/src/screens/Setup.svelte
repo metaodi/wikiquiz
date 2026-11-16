@@ -13,6 +13,7 @@
     onStart,
     onInfo,
     raum,
+    raumLink,
     onMehrgeraete,
     onRaumSchliessen,
   }: {
@@ -23,6 +24,8 @@
     onInfo: () => void;
     /** Mehrere Geräte: Lobby des Hosts – die Spieler sind die beigetretenen Geräte */
     raum?: { code: string; teilnehmer: Teilnehmer[]; ich: string };
+    /** Link (und QR-Code) zum Beitreten */
+    raumLink?: string;
     /** Einstieg „Mit mehreren Geräten spielen“ (nur sichtbar, wenn gesetzt) */
     onMehrgeraete?: () => void;
     onRaumSchliessen?: () => void;
@@ -108,12 +111,12 @@
   <header class="titel">
     <h1>WikiQuiz</h1>
     <p class="muted">
-      {raum ? 'Spiel mit mehreren Geräten' : 'Wissen aus Wikipedia – für 1 bis 4 Spieler auf einem Gerät.'}
+      {raum ? 'Spiel mit mehreren Geräten' : 'Wissen aus Wikipedia – für 1 bis 4 Spieler, auf einem oder mehreren Geräten.'}
     </p>
   </header>
 
   {#if raum}
-    <RaumKarte code={raum.code} teilnehmer={raum.teilnehmer} ich={raum.ich} />
+    <RaumKarte code={raum.code} teilnehmer={raum.teilnehmer} ich={raum.ich} link={raumLink} />
   {:else}
   <section class="karte" aria-labelledby="spieler-titel">
     <h2 id="spieler-titel">Spieler</h2>

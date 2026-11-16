@@ -2,16 +2,18 @@
   import { onDestroy, onMount, untrack } from 'svelte';
   import Kopf from './components/Kopf.svelte';
   import { aktionAnwenden, type Aktion } from './lib/aktionen';
-  import { SPIELER_FARBEN, ZEITLIMIT_S } from './lib/config';
+  import { NETZ_TOLERANZ_S, SPIELER_FARBEN, ZEITLIMIT_S } from './lib/config';
   import * as game from './lib/game';
   import { haptik } from './lib/haptics';
-  import { broadcastKanal, lokalerKanal, type Kanal, type Nachricht } from './lib/kanal';
+  import { broadcastKanal, lokalerKanal, netzKanal, type Kanal, type Nachricht } from './lib/kanal';
   import { anzahlProKategorie } from './lib/picker';
-  import { ladePool } from './lib/pool';
+  import { ladePool, poolKennung } from './lib/pool';
   import {
     ALLE,
     BEITRITTS_FEHLER,
     beitreten,
+    CODE_LAENGE,
+    codeNormalisieren,
     darf,
     HOST,
     verlassen,
@@ -34,12 +36,17 @@
   import Zufall from './screens/Zufall.svelte';
   import Zwischenstand from './screens/Zwischenstand.svelte';
 
-  /** Mehrere Geräte sind eine Vorschau und nur mit `?mehrgeraete` in der URL sichtbar (siehe app/README.md) */
-  const mehrgeraeteSichtbar = new URLSearchParams(location.search).has('mehrgeraete');
+  /**
+   * Übertragungsweg für Räume: WebRTC über das Internet; `?kanal=tabs` verbindet stattdessen Tabs im selben Browser
+   * (E2E-Tests und Entwicklung, ohne Netzwerk).
+   */
+  const kanalArt: storage.KanalArt = new URLSearchParams(location.search).get('kanal') === 'tabs' ? 'tabs' : 'netz';
+  const TOLERANZ_MS = NETZ_TOLERANZ_S * 1000;
 
   interface Raum {
     code: string;
     rolle: 'host' | 'gast';
+    kanal: storage.KanalArt;
     name: string;
     teilnehmer: Teilnehmer[];
     /** Gerät des Hosts (bei Gästen bekannt, sobald der erste Spielstand eintrifft) */
@@ -56,6 +63,13 @@
   let raum = $state<Raum | null>(null);
   let raumStartOffen = $state(false);
   let raumFehler = $state<string | null>(null);
+  /** Raumcode aus einem Beitrittslink (`?raum=…`), vorausgefüllt im Raum-Einstieg */
+  let linkCode = $state('');
+  /** Gast: geschätzter Unterschied Host-Uhr minus eigene Uhr (ms) */
+  let versatz = $state(0);
+  let versatzBekannt = false;
+  /** Netz: Anzahl verbundener anderer Geräte (null = nicht bekannt, z. B. Tabs) */
+  let verbindungen = $state<number | null>(null);
   const geraet = storage.geraetId(() => zufallsCode(Math.random, 12));
 
   const fragen = $derived(pool?.fragen ?? []);
@@ -83,6 +97,8 @@
   const ichSpieler = $derived(gleichzeitig && spiel && ich >= 0 ? spiel.spieler[ich] : undefined);
   const eigeneAntwort = $derived(ich >= 0 ? (spiel?.zug?.alle?.[ich] ?? null) : null);
   const beantwortet = $derived(spiel?.zug?.alle?.filter((a) => a !== null).length ?? 0);
+  const fragenKennung = $derived(pool ? poolKennung(pool) : '');
+  const verbindungWeg = $derived(!!raum && verbindungen === 0 && (spiel !== null || (istGast && ich >= 0)));
 
   // Spielzüge laufen als Aktionen über einen Kanal. Ohne Raum ist das Gerät zugleich Host und empfängt
   // seine eigenen Aktionen (Pass-and-Play); im Raum wendet nur der Host Aktionen an. Siehe docs/ARCHITEKTUR.md.
@@ -94,7 +110,25 @@
     abmelden();
     kanal.schliessen();
     kanal = neu;
-    abmelden = kanal.beiEmpfang(empfangen);
+    const empfangAb = kanal.beiEmpfang(empfangen);
+    const verbindungAb = kanal.beiVerbindung?.(verbindungGeaendert);
+    abmelden = () => {
+      empfangAb();
+      verbindungAb?.();
+    };
+    verbindungen = kanal.beiVerbindung ? 0 : null;
+  }
+
+  function raumKanal(code: string, art: storage.KanalArt): Kanal {
+    return art === 'tabs' ? broadcastKanal(code) : netzKanal(code);
+  }
+
+  /** Netz: Ein Gerät ist (wieder) verbunden → Host schickt den Stand, ein wartender Gast klopft an */
+  function verbindungGeaendert(anzahl: number, neu: boolean) {
+    verbindungen = anzahl;
+    if (!neu || !raum) return;
+    if (raum.rolle === 'host') kanal.senden(standNachricht());
+    else halloSenden();
   }
 
   onDestroy(() => {
@@ -109,6 +143,18 @@
         const sitzung = storage.ladeRaum();
         if (sitzung) {
           raumWiederaufnehmen(sitzung, p);
+          return;
+        }
+        // Beitrittslink …/?raum=CODE: Raum-Einstieg mit vorausgefülltem Code; Parameter aus der Adresse entfernen
+        const url = new URL(location.href);
+        const code = codeNormalisieren(url.searchParams.get('raum') ?? '');
+        if (url.searchParams.has('raum')) {
+          url.searchParams.delete('raum');
+          window.history.replaceState(window.history.state, '', url);
+        }
+        if (code.length === CODE_LAENGE) {
+          linkCode = code;
+          raumStartOffen = true;
           return;
         }
         const gespeichert = storage.ladeSpiel();
@@ -134,14 +180,22 @@
       return;
     }
     const n = standNachricht();
-    storage.speichereRaum({ code: raum.code, rolle: 'host', name: raum.name, teilnehmer: n.teilnehmer, spiel: n.stand });
+    storage.speichereRaum({
+      code: raum.code,
+      rolle: 'host',
+      kanal: raum.kanal,
+      name: raum.name,
+      teilnehmer: n.teilnehmer,
+      spiel: n.stand,
+    });
     untrack(() => kanal.senden(n));
   });
 
-  // Host: Zeitablauf selbst überwachen – auch wenn das Gerät des Spielers nicht mehr antwortet
+  // Host: Zeitablauf selbst überwachen – auch wenn das Gerät des Spielers nicht mehr antwortet.
+  // Mit Toleranz, damit unterwegs befindliche Antworten noch zählen.
   $effect(() => {
     if (!raum || istGast || spiel?.phase !== 'frage' || !spiel.zug || spiel.zug.timerStart === null) return;
-    const ms = spiel.zug.timerStart + ZEITLIMIT_S * 1000 - Date.now() + 50;
+    const ms = spiel.zug.timerStart + ZEITLIMIT_S * 1000 + TOLERANZ_MS - Date.now() + 50;
     const t = setTimeout(() => ausfuehren({ typ: 'zeitPruefen' }), Math.max(0, ms));
     return () => clearTimeout(t);
   });
@@ -163,13 +217,29 @@
     kanal.senden({ typ: 'aktion', von: geraet, aktion });
   }
 
+  /** Antwort senden; im Raum mit der selbst gemessenen Zeit (Host-Uhr geschätzt über `versatz`) */
+  function antwortGeben(index: number) {
+    const start = spiel?.zug?.timerStart;
+    if (!raum || start === null || start === undefined) {
+      ausfuehren({ typ: 'antworten', index });
+      return;
+    }
+    ausfuehren({ typ: 'antworten', index, zeit: (Date.now() + versatz - start) / 1000 });
+  }
+
   /** Host: Aktion auf den Spielstand anwenden */
   function anwenden(von: string, aktion: Aktion) {
     if (!spiel) return;
     if (raum && !darf(spiel, raum.teilnehmer, geraet, von, aktion)) return;
     // Wer antwortet? Im Raum bestimmt der Host das aus dem Gerät, nie aus der Nachricht
     const spieler = raum ? raum.teilnehmer.findIndex((t) => t.geraet === von) : spiel.aktiverSpieler;
-    const r = aktionAnwenden(spiel, aktion, { pool: fragen, history, jetzt: Date.now(), spieler });
+    const r = aktionAnwenden(spiel, aktion, {
+      pool: fragen,
+      history,
+      jetzt: Date.now(),
+      spieler,
+      toleranzMs: raum ? TOLERANZ_MS : 0,
+    });
     if (r.fehler) {
       // Sind alle Fragen aufgebraucht, zeigt der Kategorie-Screen das Spielende bereits an
       meldung =
@@ -189,12 +259,16 @@
     if (raum.rolle === 'host') {
       if (n.typ === 'aktion') anwenden(n.von, n.aktion);
       else if (n.von === geraet) return; // eigene Nachrichten
-      else if (n.typ === 'hallo') gastBegruessen(n.von, n.name);
+      else if (n.typ === 'hallo') gastBegruessen(n.von, n.name, n.fragen);
       else if (n.typ === 'tschuess' && !spiel) raum.teilnehmer = verlassen(raum.teilnehmer, n.von);
       return;
     }
     // Gast
     if (n.typ === 'stand' && n.von !== geraet && n.teilnehmer.some((t) => t.geraet === geraet)) {
+      // Uhrabweichung zum Host: Die Übertragungszeit lässt sie kleiner erscheinen, also das Maximum nehmen
+      const d = n.jetzt - Date.now();
+      versatz = versatzBekannt ? Math.max(versatz, d) : d;
+      versatzBekannt = true;
       raum.hostGeraet = n.von;
       raum.teilnehmer = n.teilnehmer;
       spiel = n.stand;
@@ -213,13 +287,14 @@
       stand: spiel ? $state.snapshot(spiel) : null,
       teilnehmer: $state.snapshot(raum?.teilnehmer ?? []),
       meldung,
+      jetzt: Date.now(),
     };
   }
 
   /** Host: Gast aufnehmen (oder nach Neuladen wieder begrüssen) */
-  function gastBegruessen(von: string, name: string) {
+  function gastBegruessen(von: string, name: string, fragen: string) {
     if (!raum) return;
-    const r = beitreten(raum.teilnehmer, von, name, spiel !== null);
+    const r = beitreten(raum.teilnehmer, von, name, spiel !== null, fragen === fragenKennung);
     if (!r.ok) {
       kanal.senden({ typ: 'abgelehnt', von: geraet, an: von, grund: BEITRITTS_FEHLER[r.fehler] });
       return;
@@ -232,22 +307,24 @@
   function raumEroeffnen(name: string) {
     const code = zufallsCode(Math.random);
     const farbe = letzte?.farben[0] ?? SPIELER_FARBEN[0];
-    raum = { code, rolle: 'host', name, teilnehmer: [{ geraet, name, farbe }], hostGeraet: geraet };
+    raum = { code, rolle: 'host', kanal: kanalArt, name, teilnehmer: [{ geraet, name, farbe }], hostGeraet: geraet };
     spiel = null;
     meldung = null;
     raumFehler = null;
     raumStartOffen = false;
-    kanalWechseln(broadcastKanal(code));
+    kanalWechseln(raumKanal(code, kanalArt));
   }
 
   function raumBeitreten(code: string, name: string) {
-    raum = { code, rolle: 'gast', name, teilnehmer: [], hostGeraet: null };
+    raum = { code, rolle: 'gast', kanal: kanalArt, name, teilnehmer: [], hostGeraet: null };
     spiel = null;
     meldung = null;
     raumFehler = null;
     raumStartOffen = false;
-    storage.speichereRaum({ code, rolle: 'gast', name });
-    kanalWechseln(broadcastKanal(code));
+    linkCode = '';
+    versatzBekannt = false;
+    storage.speichereRaum({ code, rolle: 'gast', kanal: kanalArt, name });
+    kanalWechseln(raumKanal(code, kanalArt));
     halloStarten();
   }
 
@@ -256,23 +333,36 @@
     raum = {
       code: s.code,
       rolle: s.rolle,
+      kanal: s.kanal ?? 'netz',
       name: s.name,
       teilnehmer: s.teilnehmer ?? [],
       hostGeraet: s.rolle === 'host' ? geraet : null,
     };
     if (s.rolle === 'host' && s.spiel) spiel = game.wiederherstellen(s.spiel, p.fragen, Date.now());
-    kanalWechseln(broadcastKanal(s.code));
+    kanalWechseln(raumKanal(s.code, s.kanal ?? 'netz'));
     if (s.rolle === 'gast') halloStarten();
+  }
+
+  /** Gast: beim Host anklopfen (nur solange er uns noch nicht aufgenommen hat) */
+  function halloSenden() {
+    if (raum?.rolle === 'gast' && ich < 0) {
+      kanal.senden({ typ: 'hallo', von: geraet, name: raum.name, fragen: fragenKennung });
+    }
   }
 
   /** Gast: so lange anklopfen, bis der Host antwortet */
   function halloStarten() {
-    const hallo = () => {
-      if (raum?.rolle === 'gast' && ich < 0) kanal.senden({ typ: 'hallo', von: geraet, name: raum.name });
-    };
     clearInterval(halloTimer);
-    hallo();
-    halloTimer = setInterval(hallo, 2000);
+    halloSenden();
+    halloTimer = setInterval(halloSenden, 2000);
+  }
+
+  /** Link zum Beitreten (auch als QR-Code); im Tab-Modus mit `?kanal=tabs` */
+  function raumLink(code: string): string {
+    const url = new URL(import.meta.env.BASE_URL, location.origin);
+    if (kanalArt === 'tabs') url.searchParams.set('kanal', 'tabs');
+    url.searchParams.set('raum', code);
+    return url.toString();
   }
 
   /** Raum verlassen (Gast) bzw. schliessen (Host); mit `fehler` zurück zum Raum-Einstieg */
@@ -287,6 +377,8 @@
     meldung = null;
     raumFehler = fehler ?? null;
     raumStartOffen = !!fehler;
+    versatz = 0;
+    versatzBekannt = false;
   }
 
   function starten(spieler: { name: string; farbe: string }[], runden: number, einstellungen: Einstellungen) {
@@ -327,6 +419,10 @@
   }
 </script>
 
+{#if verbindungWeg}
+  <p class="verbindung" role="status">Keine Verbindung zu den anderen Geräten – wird erneut versucht …</p>
+{/if}
+
 {#if ladefehler}
   <div class="screen">
     <h1>Fehler</h1>
@@ -340,17 +436,25 @@
 {:else if raumStartOffen}
   <RaumStart
     name={letzte?.namen[0] ?? ''}
+    code={linkCode}
     fehler={raumFehler}
     onEroeffnen={raumEroeffnen}
     onBeitreten={raumBeitreten}
     onZurueck={() => {
       raumStartOffen = false;
       raumFehler = null;
+      linkCode = '';
     }}
   />
 {:else if !spiel}
   {#if raum && istGast}
-    <Lobby code={raum.code} teilnehmer={raum.teilnehmer} ich={geraet} onVerlassen={() => raumVerlassen()} />
+    <Lobby
+      code={raum.code}
+      link={raumLink(raum.code)}
+      teilnehmer={raum.teilnehmer}
+      ich={geraet}
+      onVerlassen={() => raumVerlassen()}
+    />
   {:else}
     <Setup
       {letzte}
@@ -358,7 +462,8 @@
       onStart={starten}
       onInfo={() => (infoOffen = true)}
       raum={raum ? { code: raum.code, teilnehmer: raum.teilnehmer, ich: geraet } : undefined}
-      onMehrgeraete={mehrgeraeteSichtbar && !raum ? () => (raumStartOffen = true) : undefined}
+      raumLink={raum ? raumLink(raum.code) : undefined}
+      onMehrgeraete={raum ? undefined : () => (raumStartOffen = true)}
       onRaumSchliessen={() => raumVerlassen()}
     />
   {/if}
@@ -442,7 +547,8 @@
           eigeneWahl={gleichzeitig ? (eigeneAntwort?.gewaehlt ?? null) : undefined}
           warteText={gleichzeitig ? `Warte auf die anderen … (${beantwortet}/${spiel.spieler.length})` : undefined}
           onTimerStart={() => ausfuehren({ typ: 'timerStarten' })}
-          onAntwort={(i) => ausfuehren({ typ: 'antworten', index: i })}
+          onAntwort={antwortGeben}
+          {versatz}
           onTimeout={zeitPruefen}
         />
       {/key}
@@ -475,5 +581,19 @@
 <style>
   .laden {
     margin: auto;
+  }
+  .verbindung {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin: 0;
+    padding: calc(env(safe-area-inset-top) + 8px) 16px 8px;
+    background: var(--warn);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-align: center;
   }
 </style>

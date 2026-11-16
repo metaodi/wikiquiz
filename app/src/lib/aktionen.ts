@@ -12,7 +12,8 @@ export type Aktion =
   | { typ: 'kategorie'; wahl: game.Wahl }
   | { typ: 'zufallFertig' }
   | { typ: 'timerStarten' }
-  | { typ: 'antworten'; index: number }
+  /** `zeit`: Antwortzeit in Sekunden, wie sie das antwortende Gerät gemessen hat (nur mit mehreren Geräten) */
+  | { typ: 'antworten'; index: number; zeit?: number }
   | { typ: 'zeitPruefen' }
   | { typ: 'weiter' }
   | { typ: 'zwischenstandWeiter' }
@@ -27,6 +28,8 @@ export interface Kontext {
   rng?: Rng;
   /** Spieler, der die Aktion auslöst (bestimmt der Host aus dem Gerät); nötig für „Alle gleichzeitig“ */
   spieler?: number;
+  /** Mehrere Geräte: Spielraum für die Übertragung (`NETZ_TOLERANZ_S`), sonst 0 */
+  toleranzMs?: number;
 }
 
 export interface Ergebnis {
@@ -35,6 +38,18 @@ export interface Ergebnis {
   neueFrage?: Frage;
   /** Kategoriewahl gescheitert, Spielstand unverändert */
   fehler?: 'erschoepft' | 'alle_erschoepft';
+}
+
+/**
+ * Zeitpunkt (Host-Uhr), zu dem die Antwort zählt. Ohne gemeldete Zeit: Eingang beim Host.
+ * Mit gemeldeter Zeit (das Gerät misst ohne Übertragungsverzögerung): `timerStart + zeit`, aber nicht später als der
+ * Eingang und höchstens `toleranzMs` früher – so lässt sich keine schnellere Antwort vortäuschen.
+ */
+export function antwortZeitpunkt(s: Spielstand, zeit: number | undefined, jetzt: number, toleranzMs: number): number {
+  const start = s.zug?.timerStart;
+  if (zeit === undefined || !Number.isFinite(zeit) || start === null || start === undefined) return jetzt;
+  const gemeldet = start + Math.max(0, zeit) * 1000;
+  return Math.min(jetzt, Math.max(gemeldet, jetzt - toleranzMs));
 }
 
 function aktuelleFrage(s: Spielstand, pool: Frage[]): Frage | undefined {
@@ -57,11 +72,14 @@ export function aktionAnwenden(s: Spielstand, aktion: Aktion, k: Kontext): Ergeb
       return { stand: game.timerStarten(s, k.jetzt) };
     case 'antworten': {
       const frage = aktuelleFrage(s, k.pool);
-      return { stand: frage ? game.antworten(s, frage, aktion.index, k.jetzt, k.spieler ?? s.aktiverSpieler) : s };
+      if (!frage) return { stand: s };
+      const zeitpunkt = antwortZeitpunkt(s, aktion.zeit, k.jetzt, k.toleranzMs ?? 0);
+      return { stand: game.antworten(s, frage, aktion.index, zeitpunkt, k.spieler ?? s.aktiverSpieler) };
     }
     case 'zeitPruefen': {
       const frage = aktuelleFrage(s, k.pool);
-      return { stand: frage ? game.pruefeTimeout(s, frage, k.jetzt) : s };
+      // Mit Toleranz: Antworten, die noch unterwegs sind, sollen nicht verloren gehen
+      return { stand: frage ? game.pruefeTimeout(s, frage, k.jetzt - (k.toleranzMs ?? 0)) : s };
     }
     case 'weiter':
       return { stand: game.weiter(s) };

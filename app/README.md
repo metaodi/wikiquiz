@@ -45,9 +45,14 @@ npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für Git
   „Mehr auf Wikipedia (englisch): Titel“ (`src/lib/quelle.ts`). Der Titel wird mit „ss“ statt „ß“ angezeigt
   („Fussball-Weltmeisterschaft 2022“), der Link zeigt weiter auf den Originalartikel.
 - **Zwischenstand** nach jeder Runde (bei mehreren Spielern); bei einem Spieler zeigt das Feedback den Punktestand.
-- **Mehrere Geräte (Vorschau):** nur sichtbar mit `?mehrgeraete` in der URL und vorerst nur zwischen Tabs im selben
-  Browser (`BroadcastChannel`). Ein Gerät eröffnet einen Raum (4-stelliger Code) und leitet das Spiel (Host), bis zu
-  drei weitere treten mit dem Code bei; jedes Gerät ist ein Spieler, die Farbe vergibt der Host. Der Host wählt Ablauf,
+- **Mehrere Geräte (Beta):** „Mit mehreren Geräten spielen“ im Setup. Die Geräte verbinden sich über WebRTC
+  (Trystero, `src/lib/kanal.ts` → `netzKanal`); den Verbindungsaufbau vermitteln öffentliche Nostr-Relays, Trystero wird
+  erst dann als eigener Chunk geladen. Ein Gerät eröffnet einen Raum (4-stelliger Code) und leitet das Spiel (Host), bis
+  zu drei weitere treten bei – per Code, per QR-Code oder Link `…/?raum=CODE` (öffnet den Beitritt mit vorausgefülltem
+  Code; „Link teilen“ nutzt das Teilen-Menü bzw. die Zwischenablage). Jedes Gerät ist ein Spieler, die Farbe vergibt der
+  Host. Beitreten kann nur, wer denselben Fragenstand hat (`poolKennung`), sonst erscheint die Bitte, neu zu laden.
+  `?kanal=tabs` verbindet stattdessen Tabs im selben Browser (`BroadcastChannel`, für E2E-Tests und Entwicklung ohne
+  Netzwerk). Der Host wählt Ablauf,
   Runden, Modus und Kategorien und startet. Zwei Abläufe:
   - *Alle gleichzeitig* (Standard im Raum): Eine Runde ist eine Frage für alle. Die Kategorie wählt reihum ein Spieler
     für alle (bzw. Zufall; „Vorheriger Spieler wählt“ ist gesperrt), keine Übergabe. Jeder antwortet auf seinem Gerät,
@@ -59,8 +64,13 @@ npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für Git
     ist bzw. wählt, und schauen bei der Frage zu (Antworten gesperrt). Feedback sehen alle, „Weiter“ hat nur, wer dran
     war; Zwischenstand und Rangliste bedient der Host.
 
-  Der Host prüft jede
-  Aktion (`darf`) und überwacht den Timer selbst. Neuladen: Raum und Geräte-ID liegen pro Tab im `sessionStorage`
+  Der Host prüft jede Aktion (`darf`) und überwacht den Timer selbst. **Zeit:** Jedes Gerät misst die Antwortzeit selbst
+  und meldet sie mit; der Host übernimmt sie, solange sie höchstens `NETZ_TOLERANZ_S` (1.5 s) kürzer ist als bei ihm
+  gemessen. Eine Frage schliesst er erst nach Zeitlimit plus Toleranz ab, damit unterwegs befindliche Antworten zählen.
+  Die Gäste schätzen den Unterschied ihrer Uhr zum Host aus dem Zeitstempel jedes Spielstands (Maximum über alle
+  Nachrichten) und zeigen den Timer danach an. **Verbindung:** Kommt ein Gerät (wieder) dazu, schickt ihm der Host den
+  Stand; ohne Verbindung zu anderen Geräten erscheint ein Hinweisbalken, und in der Lobby nach 15 s ein Hinweis zur
+  Fehlersuche. Neuladen: Raum und Geräte-ID liegen pro Tab im `sessionStorage`
   (`wikiquiz:raum:v1`, `wikiquiz:geraet:v1`); Gäste werden wiedererkannt, der Host führt das Spiel weiter. Neue Geräte
   können nur in der Lobby beitreten. Beendet der Host das Spiel, sind alle wieder im Raum; schliesst er den Raum, werden
   die Gäste informiert. Spiele im Raum berühren den gespeicherten Spielstand und die Spielernamen des Spiels auf einem Gerät nicht.
@@ -78,7 +88,7 @@ und steuern die Zeit über Playwrights Fake-Clock – Punkte und Timeouts werden
 | Neuladen | mitten in der Frage (gleiche Frage und Reihenfolge, Timer läuft weiter, Punkte gemäss Gesamtzeit), nach Ablauf (Timeout), auf Feedback- und Übergabe-Screen |
 | Timer | startet erst nach dem Einblenden, Warnfarbe ab 5 s Restzeit |
 | UX | kein horizontales Scrollen bei 320 px, alle Touch-Targets ≥ 48 px, Info-Seite mit Lizenzen, kein „ß“ |
-| Mehrere Geräte | drei Tabs „Alle gleichzeitig“: Standard-Ablauf, gleiche Frage überall, Warten mit Zähler, Timeout für fehlende Antwort, eigene und alle Ergebnisse, Kategoriewahl reihum, eigene Punkte oben, Rangliste, „Nochmals“; zwei Tabs in einem Browser-Kontext (gemeinsame Fake-Clock): Lobby, Züge reihum mit Zuschauen, Neuladen von Gast und Host, Spiel beenden → zurück in den Raum, Raum verlassen; Beitritt mit vergebenem Namen abgelehnt, Host schliesst den Raum; Einstieg nur mit `?mehrgeraete`, 320 px |
+| Mehrere Geräte | alles mit `?kanal=tabs` (WebRTC selbst wird nicht automatisch getestet). Beitritt per Link/QR-Code (Code vorausgefüllt, Parameter verschwindet aus der Adresse), Ablehnung bei anderem Fragenstand; drei Tabs „Alle gleichzeitig“ (Timeout erst nach der Netz-Toleranz): Standard-Ablauf, gleiche Frage überall, Warten mit Zähler, Timeout für fehlende Antwort, eigene und alle Ergebnisse, Kategoriewahl reihum, eigene Punkte oben, Rangliste, „Nochmals“; zwei Tabs in einem Browser-Kontext (gemeinsame Fake-Clock): Lobby, Züge reihum mit Zuschauen, Neuladen von Gast und Host, Spiel beenden → zurück in den Raum, Raum verlassen; Beitritt mit vergebenem Namen abgelehnt, Host schliesst den Raum; Einstieg nur mit `?mehrgeraete`, 320 px |
 
 ## Deployment
 

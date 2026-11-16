@@ -25,6 +25,10 @@
       Antwort bringt bis zu 100 Punkte – je schneller, desto mehr (mindestens 10). Falsche Antworten und abgelaufene
       Zeit geben 0 Punkte.
     </p>
+    <p>
+      Mit mehreren Geräten (Beta) spielt jeder auf seinem eigenen: am selben Tisch oder an verschiedenen Orten, reihum
+      oder alle gleichzeitig dieselbe Frage.
+    </p>
   </section>
 
   <section class="karte">
@@ -66,6 +70,11 @@
     <p>
       WikiQuiz läuft vollständig auf deinem Gerät. Spielstand und zuletzt gestellte Fragen werden nur lokal im Browser
       gespeichert.
+    </p>
+    <p>
+      Beim Spiel mit mehreren Geräten verbinden sich die Geräte direkt miteinander (WebRTC, verschlüsselt). Den
+      Verbindungsaufbau vermitteln öffentliche Nostr-Relays; sie sehen dabei die IP-Adresse, aber dank Verschlüsselung
+      weder Namen noch Spielinhalte. Übertragen werden nur Namen, Antworten und Spielstand.
     </p>
   </section>
 

@@ -35,6 +35,13 @@ export const FARB_NAMEN: Record<string, string> = {
 /** Anzahl Frage-IDs, die über Spiele hinweg gemerkt und bevorzugt vermieden werden */
 export const HISTORY_MAX = 300;
 
+/**
+ * Mehrere Geräte: Spielraum für Übertragungszeit. Eine Antwort zählt, wenn sie beim Host höchstens so viel später als
+ * nach Ablauf der Zeit eintrifft; die Antwortzeit, die das Gerät meldet, darf höchstens so viel kürzer sein, als der Host
+ * misst. Erst danach schliesst der Host eine Frage als Timeout ab.
+ */
+export const NETZ_TOLERANZ_S = 1.5;
+
 /** Dauer der Zufalls-Animation (ms) */
 export const ZUFALL_ANIMATION_MS = 1600;
 /** Einblende-Animation der Antworten (ms); erst danach startet der Timer */

@@ -2,7 +2,8 @@ import { expect, test, type BrowserContext, type Page } from '@playwright/test';
 import { beantworten, fixturePool, frageOeffnen, KAT_NAME, warteAufFrage, weiter } from './helfer';
 
 /**
- * Mehrere Geräte = mehrere Tabs im selben Browser-Kontext (BroadcastChannel).
+ * Mehrere Geräte = mehrere Tabs im selben Browser-Kontext: `?kanal=tabs` verbindet sie über BroadcastChannel statt
+ * WebRTC (kein Netzwerk nötig, Raum-Logik identisch).
  * Uhr und Fragen-Route gelten für den ganzen Kontext: Alle Tabs teilen dieselbe Fake-Zeit.
  */
 async function vorbereiten(context: BrowserContext) {
@@ -13,7 +14,7 @@ async function vorbereiten(context: BrowserContext) {
 
 async function geraetOeffnen(context: BrowserContext): Promise<Page> {
   const page = await context.newPage();
-  await page.goto('./?mehrgeraete');
+  await page.goto('./?kanal=tabs');
   await page.getByRole('button', { name: 'Mit mehreren Geräten spielen' }).click();
   return page;
 }
@@ -120,14 +121,11 @@ test('Beitritt abgelehnt bei vergebenem Namen; Host schliesst den Raum', async (
   await expect(host.getByRole('button', { name: 'Mit mehreren Geräten spielen' })).toBeVisible();
 });
 
-test('Mehrere Geräte: ohne ?mehrgeraete nicht sichtbar; bei 320 px kein horizontales Scrollen', async ({
-  context,
-}) => {
+test('Mehrere Geräte: Einstieg sichtbar; bei 320 px kein horizontales Scrollen', async ({ context }) => {
   await vorbereiten(context);
   const normal = await context.newPage();
   await normal.goto('./');
-  await expect(normal.getByRole('button', { name: 'Spiel starten' })).toBeVisible();
-  await expect(normal.getByRole('button', { name: 'Mit mehreren Geräten spielen' })).toHaveCount(0);
+  await expect(normal.getByRole('button', { name: 'Mit mehreren Geräten spielen' })).toBeVisible();
 
   const { host } = await raumEroeffnen(context, 'Ein ziemlich langer Name');
   await host.setViewportSize({ width: 320, height: 640 });
@@ -181,7 +179,10 @@ test('drei Geräte „Alle gleichzeitig“: gleiche Frage, Warten, Timeout, Erge
   await anna.locator('.antwort', { hasText: 'Falsch A' }).click();
   await expect(anna.getByText('Warte auf die anderen … (2/3)')).toBeVisible();
   await expect(cleo.locator('.antwort').first()).toBeEnabled();
-  await anna.clock.runFor(12_500);
+  // Cleos Zeit läuft nach 15 s ab; der Host wartet noch die Netz-Toleranz ab (1.5 s), dann Feedback
+  await anna.clock.runFor(12_100);
+  await expect(anna.getByRole('heading', { name: 'Leider falsch' })).toHaveCount(0);
+  await anna.clock.runFor(1_500);
 
   // Feedback: jeder sieht sein eigenes Ergebnis und alle Ergebnisse
   await expect(ben.getByRole('heading', { name: 'Richtig!' })).toBeVisible();
@@ -221,4 +222,48 @@ test('drei Geräte „Alle gleichzeitig“: gleiche Frage, Warten, Timeout, Erge
   await anna.getByRole('button', { name: 'Nochmals spielen' }).click();
   await expect(anna.getByRole('heading', { name: 'Wähle eine Kategorie für alle' })).toBeVisible();
   await expect(cleo.getByText('Runde 1/5 · 0 P.')).toBeVisible();
+});
+
+test('Beitritt per Link (QR-Code): Code vorausgefüllt, Beitreten zuerst', async ({ context }) => {
+  await vorbereiten(context);
+  const { host, code } = await raumEroeffnen(context, 'Anna');
+  await expect(host.getByRole('img', { name: 'QR-Code zum Beitreten' }).locator('svg')).toBeVisible();
+  const link = (await host.getByLabel('Link zum Beitreten').textContent())!.trim();
+  expect(link).toMatch(new RegExp(`\\?kanal=tabs&raum=${code}$`));
+
+  const gast = await context.newPage();
+  await gast.goto(link);
+  await expect(gast.getByRole('heading', { name: 'Raum beitreten' })).toBeVisible();
+  await expect(gast.getByLabel('Raumcode')).toHaveValue(code);
+  // Der Raum-Parameter verschwindet aus der Adresse (Neuladen öffnet nicht erneut den Beitritt)
+  expect(new URL(gast.url()).searchParams.has('raum')).toBe(false);
+  // „Raum beitreten“ steht vor „Raum eröffnen“
+  const titel = await gast.getByRole('heading', { level: 2 }).allTextContents();
+  expect(titel.indexOf('Raum beitreten')).toBeLessThan(titel.indexOf('Raum eröffnen'));
+  await gast.getByLabel('Dein Name').fill('Ben');
+  await gast.getByRole('button', { name: 'Beitreten' }).click();
+  await expect(gast.getByText('Warte, bis Anna das Spiel startet …')).toBeVisible();
+  // Gäste sehen den Link auch und können ihn weitergeben
+  await expect(gast.getByLabel('Link zum Beitreten')).toHaveText(link);
+});
+
+test('Beitritt abgelehnt, wenn das Gerät andere Fragen hat als der Host', async ({ context }) => {
+  await vorbereiten(context);
+  const { host, code } = await raumEroeffnen(context, 'Anna');
+  const gast = await context.newPage();
+  // Veralteter Fragenstand nur auf diesem Gerät
+  await gast.route('**/questions.json', (route) => {
+    const pool = fixturePool();
+    pool.fragen.pop();
+    return route.fulfill({ json: pool });
+  });
+  await gast.goto('./?kanal=tabs');
+  await gast.getByRole('button', { name: 'Mit mehreren Geräten spielen' }).click();
+  await gast.getByLabel('Dein Name').fill('Ben');
+  await gast.getByLabel('Raumcode').fill(code);
+  await gast.getByRole('button', { name: 'Beitreten' }).click();
+  await expect(gast.getByRole('alert')).toHaveText(
+    'Dieses Gerät und der Host haben nicht dieselben Fragen. Bitte auf beiden Geräten die App neu laden.',
+  );
+  await expect(spielerImRaum(host).getByRole('listitem')).toHaveCount(1);
 });
