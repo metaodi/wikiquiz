@@ -255,7 +255,10 @@ ihre deutsche Bezeichnung auf die Landessprache abgebildet. Kantone selbst durch
 - Eigene Schwellen: Turniere 40 Sitelinks / 50 Aufrufe pro Tag, Filme 60 Sitelinks / 100 Aufrufe pro Tag.
 
 Wikidata-Fragen werden gegen die bestehenden Wikipedia-Fragen der Kategorie dedupliziert (dieselbe Tatsache,
-gegenseitiges Verraten, höchstens 2 Fragen pro Thema).
+dasselbe Werk, gegenseitiges Verraten, höchstens 2 Fragen pro Thema). „Dasselbe Werk“: gleiche Antwort und der
+Titel in «» der Templatefrage steht auch in der anderen Frage („Wer schrieb «Buddenbrooks»?“ ↔ „Welcher
+Schriftsteller veröffentlichte 1901 den Familienroman «Buddenbrooks»?“) – die Wortüberlappung allein erkennt
+das bei kurzen Templatefragen nicht. Werke in `AUSSCHLUSS` (`templates/kunst.py`) werden nie gefragt.
 
 ## Allgemein
 

@@ -5,6 +5,10 @@ Neben fast gleichem Wortlaut erkennt sie zwei weitere Fälle, die im selben Spie
   Polen“) und ähnlichem Inhalt der Fragen,
 - **gegenseitiges Verraten**: Die Antwort der einen Frage steht in der anderen und umgekehrt
   („Wer war Obamas Vizepräsident?“ ↔ „Unter wem war Biden Vizepräsident?“),
+- **dasselbe Werk**: Eine Wikidata-Templatefrage („Wer schrieb «Buddenbrooks»?“) und eine andere
+  Frage mit derselben Antwort, in der der Titel in «» ebenfalls vorkommt („Welcher Schriftsteller
+  veröffentlichte 1901 den Familienroman «Buddenbrooks»?“). Die Wortüberlappung bleibt dort wegen der
+  kurzen Templatefragen unter `GLEICHE_TATSACHE` (Lauf 30: 0.14–0.36),
 - **dieselbe Antwort zu oft**: Pro Kategorie höchstens `MAX_GLEICHE_ANTWORT` Fragen mit derselben
   richtigen Antwort. In Themenkategorien kommen sonst Hogwarts, Muggel oder George Lucas immer wieder
   vor, oft mit anders formulierten Fragen zur selben Tatsache.
@@ -12,6 +16,7 @@ Neben fast gleichem Wortlaut erkennt sie zwei weitere Fälle, die im selben Spie
 from __future__ import annotations
 
 import math
+import re
 from collections import Counter, defaultdict
 from difflib import SequenceMatcher
 from functools import lru_cache
@@ -111,6 +116,23 @@ def verraten_sich(a: Frage, b: Frage) -> bool:
     return kommt_vor(a.richtig, b.frage) and kommt_vor(b.richtig, a.frage)
 
 
+def werktitel(frage: str) -> list[str]:
+    """Titel in «» („Wer komponierte die Oper «Tosca»?“ → ["tosca"]), normalisiert."""
+    return [n for t in re.findall(r"«([^»]+)»", frage) if (n := normalisiere(t))]
+
+
+def gleiches_werk(a: Frage, b: Frage) -> bool:
+    """Gleiche Antwort und der Werktitel der Wikidata-Frage steht auch in der anderen Frage."""
+    if not antwort_enthalten(a.richtig, b.richtig):
+        return False
+    for w, andere in ((a, b), (b, a)):
+        if w.quelle_typ == "wikidata" and any(
+            f" {t} " in f" {normalisiere(andere.frage)} " for t in werktitel(w.frage)
+        ):
+            return True
+    return False
+
+
 def beide_wikidata(a: Frage, b: Frage) -> bool:
     """Template-Fragen unterscheiden sich per Konstruktion im Subjekt; ähnlicher Wortlaut ist dort normal.
     Mehrfachfragen zum selben Subjekt begrenzt bereits `max_pro_quelle`."""
@@ -148,6 +170,8 @@ def deduplizieren(
                 grund = f"aehnlich zu {g.id}"
             elif gleiche_tatsache(f, g, gewichte):
                 grund = f"gleiche tatsache wie {g.id}"
+            elif gleiches_werk(f, g):
+                grund = f"gleiches werk wie {g.id}"
             elif verraten_sich(f, g):
                 grund = f"verraet sich gegenseitig mit {g.id}"
             if grund:
