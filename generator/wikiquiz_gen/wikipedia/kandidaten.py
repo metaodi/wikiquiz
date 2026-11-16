@@ -6,19 +6,22 @@ from datetime import date
 
 from ..config import THEMENKATEGORIEN
 from ..http import TAG, Http
-from ..popularity import API_URL, Kandidat
+from ..popularity import API_URL, Kandidat, api_url
 from ..sparql import abfrage
-from .quellen import QUALITAETSKATEGORIEN, STARTKATEGORIEN, zum_thema, zuordnen
+from .quellen import EN_STARTKATEGORIEN, QUALITAETSKATEGORIEN, STARTKATEGORIEN, zum_thema, zuordnen
+
+KATEGORIE_PRAEFIX = {"de": "Kategorie:", "en": "Category:"}
 
 log = logging.getLogger(__name__)
 
 
-def _abfrage_mit_fortsetzung(http: Http, params: dict, max_seiten: int = 10_000) -> dict[int, dict]:
+def _abfrage_mit_fortsetzung(http: Http, params: dict, max_seiten: int = 10_000,
+                            api: str = API_URL) -> dict[int, dict]:
     """MediaWiki-Query mit generator + continue; Seitendaten werden über alle Antworten zusammengeführt."""
     seiten: dict[int, dict] = {}
     fortsetzung: dict = {}
     while True:
-        res = http.json(API_URL, params={**params, **fortsetzung}, ttl=14 * TAG)
+        res = http.json(api, params={**params, **fortsetzung}, ttl=14 * TAG)
         for p in res.get("query", {}).get("pages", []):
             ziel = seiten.setdefault(p["pageid"], {"title": p["title"], "ns": p.get("ns")})
             for k, v in p.items():
@@ -35,22 +38,24 @@ def _abfrage_mit_fortsetzung(http: Http, params: dict, max_seiten: int = 10_000)
         fortsetzung = res["continue"]
 
 
-def _mitglieder(http: Http, kategorie: str, extra_props: str = "", max_artikel: int = 1500) -> dict[int, dict]:
+def _mitglieder(http: Http, kategorie: str, extra_props: str = "", max_artikel: int = 1500,
+                sprache: str = "de") -> dict[int, dict]:
     # Keine Seitenaufrufe hier: PageViewInfo liefert nur ca. 7 Titel pro Request.
     # Die holt der Bekanntheitsfilter später nur für Artikel mit genügend Sitelinks.
     props = "pageprops" + (f"|{extra_props}" if extra_props else "")
     params = {
         "action": "query", "format": "json", "formatversion": "2",
-        "generator": "categorymembers", "gcmtitle": f"Kategorie:{kategorie}",
+        "generator": "categorymembers", "gcmtitle": f"{KATEGORIE_PRAEFIX[sprache]}{kategorie}",
         "gcmtype": "page|subcat", "gcmlimit": "50",
         "prop": props, "ppprop": "wikibase_item|disambiguation",
     }
     if "categories" in props:
         params.update({"clshow": "!hidden", "cllimit": "max"})
-    return _abfrage_mit_fortsetzung(http, params, max_seiten=max_artikel)
+    return _abfrage_mit_fortsetzung(http, params, max_seiten=max_artikel, api=api_url(sprache))
 
 
-def kategorie_artikel(http: Http, kategorie: str, tiefe: int, max_artikel: int = 1500) -> list[dict]:
+def kategorie_artikel(http: Http, kategorie: str, tiefe: int, max_artikel: int = 1500,
+                      sprache: str = "de") -> list[dict]:
     """Artikel (ns 0) einer Kategorie inkl. Unterkategorien bis `tiefe`."""
     artikel: dict[str, dict] = {}
     gesehen: set[str] = set()
@@ -60,9 +65,9 @@ def kategorie_artikel(http: Http, kategorie: str, tiefe: int, max_artikel: int =
         if kat in gesehen:
             continue
         gesehen.add(kat)
-        for p in _mitglieder(http, kat, max_artikel=max_artikel).values():
+        for p in _mitglieder(http, kat, max_artikel=max_artikel, sprache=sprache).values():
             if p.get("ns") == 14 and t < tiefe:
-                offen.append((p["title"].removeprefix("Kategorie:"), t + 1))
+                offen.append((p["title"].split(":", 1)[1], t + 1))
             elif p.get("ns") == 0:
                 artikel.setdefault(p["title"], p)
     return list(artikel.values())
@@ -147,6 +152,19 @@ SELECT DISTINCT ?item WHERE {{
     return ergebnis
 
 
+def deutsche_artikel(http: Http, qids: list[str]) -> set[str]:
+    """QIDs, zu denen es einen Artikel auf de.wikipedia gibt (SPARQL, 300 Objekte pro Abfrage)."""
+    vorhanden: set[str] = set()
+    eindeutig = sorted(set(qids))
+    for i in range(0, len(eindeutig), 300):
+        werte = " ".join(f"wd:{q}" for q in eindeutig[i : i + 300])
+        for r in abfrage(http, f"SELECT ?item WHERE {{ VALUES ?item {{ {werte} }} "
+                               f"?a schema:about ?item; schema:isPartOf <https://de.wikipedia.org/>. }}",
+                         ttl=30 * TAG):
+            vorhanden.add(r["item"].rsplit("/", 1)[-1])
+    return vorhanden
+
+
 def sitelinks(http: Http, qids: list[str]) -> dict[str, int]:
     """Anzahl Sprachversionen pro Wikidata-Objekt (SPARQL, 300 Objekte pro Abfrage)."""
     anzahl: dict[str, int] = {}
@@ -204,4 +222,33 @@ def sammeln(http: Http, kategorie: str, min_sitelinks: int, max_pro_quelle: int 
         kandidaten.append(k)
     log.info("%s: %d Artikel gefunden, %d mit mind. %d Sitelinks", kategorie, len(roh), len(kandidaten),
              min_sitelinks)
+    return kandidaten
+
+
+def sammeln_englisch(http: Http, kategorie: str, min_sitelinks: int, max_pro_quelle: int = 1500) -> list[Kandidat]:
+    """Kandidaten aus der englischen Wikipedia (EN_STARTKATEGORIEN), nur Artikel ohne deutsches Pendant
+    und mit mind. `min_sitelinks`. Seitenaufrufe usw. prüft danach der Bekanntheitsfilter (sprache="en")."""
+    roh: dict[str, dict] = {}
+    for kat, tiefe in EN_STARTKATEGORIEN.get(kategorie, []):
+        artikel = kategorie_artikel(http, kat, tiefe, max_artikel=max_pro_quelle, sprache="en")
+        if not artikel:
+            log.warning("%s: englische Startkategorie „%s“ ist leer oder existiert nicht", kategorie, kat)
+        for p in artikel:
+            roh.setdefault(p["title"], {**p, "quelle": f"en:Category:{kat}"})
+    mit_qid = {t: p for t, p in roh.items()
+               if p.get("pageprops", {}).get("wikibase_item") and "disambiguation" not in p.get("pageprops", {})}
+    qids = [p["pageprops"]["wikibase_item"] for p in mit_qid.values()]
+    links = sitelinks(http, qids)
+    bekannt = {t: p for t, p in mit_qid.items() if links.get(p["pageprops"]["wikibase_item"], 0) >= min_sitelinks}
+    deutsch = deutsche_artikel(http, [p["pageprops"]["wikibase_item"] for p in bekannt.values()])
+    ohne_de = {t: p for t, p in bekannt.items() if p["pageprops"]["wikibase_item"] not in deutsch}
+    daten = ereignisdaten(http, [p["pageprops"]["wikibase_item"] for p in ohne_de.values()])
+    kandidaten = []
+    for titel, p in ohne_de.items():
+        q = p["pageprops"]["wikibase_item"]
+        k = Kandidat(qid=q, label=titel, titel=titel, sitelinks=links[q], datum=daten.get(q), sprache="en")
+        k.extra["quelle"] = p["quelle"]
+        kandidaten.append(k)
+    log.info("%s (en): %d Artikel gefunden, %d mit mind. %d Sitelinks, davon %d ohne deutschen Artikel",
+             kategorie, len(roh), len(bekannt), min_sitelinks, len(kandidaten))
     return kandidaten

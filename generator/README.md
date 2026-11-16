@@ -99,6 +99,13 @@ Einmalig nötig:
    Themen-Stichwort enthält (`THEMEN_STICHWORTE`, z. B. „(Schweiz)“, „in der Schweiz“, „Star Wars“). Dieselben
    Artikel können zusätzlich Fragen in ihrer Fachkategorie liefern. Für Themenkategorien gibt es (noch) keine
    Wikidata-Templates. Leere oder nicht existierende Startkategorien werden im Log gemeldet.
+   **Englische Wikipedia** (ergänzend, pro Kategorie in `EN_SCHWELLEN` in `config.py`, bisher nur Star Wars):
+   Startkategorien in `EN_STARTKATEGORIEN` (`wikipedia/quellen.py`). Übernommen werden nur Artikel, zu denen
+   es keinen deutschen Artikel gibt (Wikidata-Sitelink), z. B. Star-Wars-Figuren. Seitenaufrufe und Länge
+   werden auf en.wikipedia gemessen (Star Wars: mind. 500 Aufrufe/Tag, 20 Sitelinks). Das LLM erhält den
+   englischen Text und formuliert die Frage auf Deutsch; die Belegstelle bleibt ein englisches Zitat.
+   `quelle_url` zeigt auf en.wikipedia, in `data/verarbeitet/` stehen solche Artikel als `en:Titel`.
+   Braucht Netzwerkzugriff auf `en.wikipedia.org`.
 2. **Textauszug:** Einleitung und erste Abschnitte, ca. 4000 Zeichen Klartext; Abschnitte wie
    Literatur, Weblinks oder Rezeption werden übersprungen.
 3. **Generierung:** Prompt wörtlich aus `SPEC.md` (`llm/prompts.py`, ein Test prüft die Übereinstimmung),

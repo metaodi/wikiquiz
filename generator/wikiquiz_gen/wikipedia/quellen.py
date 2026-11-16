@@ -131,6 +131,17 @@ STARTKATEGORIEN: dict[str, list[tuple[str, int]]] = {
     ],
 }
 
+# Englische Wikipedia (config.EN_SCHWELLEN): Kategorien ohne „Category:“-Präfix, mit Suchtiefe.
+# Übernommen werden nur Artikel ohne deutsches Pendant.
+EN_STARTKATEGORIEN: dict[str, list[tuple[str, int]]] = {
+    "starwars": [
+        ("Star Wars characters", 2),
+        ("Star Wars concepts", 1),
+        ("Star Wars locations", 1),
+        ("Star Wars technology", 1),
+    ],
+}
+
 QUALITAETSKATEGORIEN = ["Wikipedia:Exzellent", "Wikipedia:Lesenswert"]
 
 # Themenkategorien: Exzellente/Lesenswerte Artikel, deren Wikipedia-Kategorien eines dieser

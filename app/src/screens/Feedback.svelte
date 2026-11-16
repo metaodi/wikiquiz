@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { haptik } from '../lib/haptics';
+  import { quellenLinkText } from '../lib/quelle';
   import type { Frage, Spieler, Zug } from '../lib/types';
 
   let {
@@ -49,7 +50,7 @@
 </ul>
 
 <a class="wiki" href={frage.quelle_url} target="_blank" rel="noopener noreferrer">
-  Mehr auf Wikipedia{frage.quelle_titel ? `: ${frage.quelle_titel}` : ''} ↗
+  {quellenLinkText(frage)} ↗
 </a>
 
 <div class="unten">

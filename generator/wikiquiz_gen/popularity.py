@@ -16,9 +16,16 @@ log = logging.getLogger(__name__)
 
 PAGEVIEWS_URL = (
     "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/"
-    "de.wikipedia/all-access/user/{titel}/monthly/{start}/{ende}"
+    "{sprache}.wikipedia/all-access/user/{titel}/monthly/{start}/{ende}"
 )
-API_URL = "https://de.wikipedia.org/w/api.php"
+
+
+def api_url(sprache: str = "de") -> str:
+    """MediaWiki-API der Wikipedia in `sprache` (de, en)."""
+    return f"https://{sprache}.wikipedia.org/w/api.php"
+
+
+API_URL = api_url("de")
 # Klartext ≈ 60 % des Wikitexts (Markup, Vorlagen, Einzelnachweise). Volltexte über TextExtracts
 # werden stark gedrosselt; für den Stub-Filter genügt die Länge aus prop=info (50 Titel/Request).
 KLARTEXT_ANTEIL = 0.6
@@ -31,12 +38,18 @@ GRAUBEREICH = (0.5, 2.0)
 class Kandidat:
     qid: str
     label: str
-    titel: str  # Titel des de.wikipedia-Artikels
+    titel: str  # Titel des Wikipedia-Artikels (in `sprache`)
     sitelinks: int
     datum: date | None = None  # Ereignisdatum (P585/P580), falls vorhanden
     pageviews: float | None = None
     zeichen: int | None = None
     extra: dict = field(default_factory=dict)
+    sprache: str = "de"  # Wikipedia, aus der der Artikel stammt
+
+    @property
+    def schluessel(self) -> str:
+        """Eindeutiger Schlüssel über Sprachen hinweg (für data/verarbeitet/): „Titel“ bzw. „en:Titel“."""
+        return self.titel if self.sprache == "de" else f"{self.sprache}:{self.titel}"
 
 
 def zeitraum_12_monate(heute: date) -> tuple[date, date]:
@@ -53,8 +66,10 @@ def ist_listentitel(titel: str) -> bool:
 
 
 class Bekanntheit:
-    def __init__(self, http: Http, heute: date | None = None, exakt: bool = False) -> None:
+    def __init__(self, http: Http, heute: date | None = None, exakt: bool = False, sprache: str = "de") -> None:
         self.http = http
+        self.sprache = sprache
+        self.api = api_url(sprache)
         self.exakt = exakt  # immer 12-Monats-Werte abfragen
         self.heute = heute or date.today()
         self._start, self._ende = zeitraum_12_monate(self.heute)
@@ -63,6 +78,7 @@ class Bekanntheit:
     def pageviews(self, titel: str) -> float:
         """Durchschnittliche Seitenaufrufe pro Tag (nur Menschen) über 12 Monate."""
         url = PAGEVIEWS_URL.format(
+            sprache=self.sprache,
             titel=quote(titel.replace(" ", "_"), safe=""),
             start=self._start.strftime("%Y%m%d00"),
             ende=self._ende.strftime("%Y%m%d00"),
@@ -82,7 +98,7 @@ class Bekanntheit:
             fortsetzung: dict = {}
             while True:
                 res = self.http.json(
-                    API_URL,
+                    self.api,
                     params={"action": "query", "format": "json", "formatversion": "2",
                             "prop": "pageviews", "pvipdays": "60", "titles": "|".join(block),
                             **fortsetzung},
@@ -106,7 +122,7 @@ class Bekanntheit:
         for i in range(0, len(titel_liste), 50):
             block = titel_liste[i : i + 50]
             res = self.http.json(
-                API_URL,
+                self.api,
                 params={
                     "action": "query",
                     "format": "json",
@@ -141,7 +157,7 @@ class Bekanntheit:
         }
         if nur_einleitung:
             params["exintro"] = "1"
-        res = self.http.json(API_URL, params=params, ttl=30 * TAG)
+        res = self.http.json(self.api, params=params, ttl=30 * TAG)
         seiten = res.get("query", {}).get("pages", [])
         return seiten[0].get("extract", "") if seiten else ""
 

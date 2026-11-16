@@ -87,7 +87,9 @@ def wikipedia(
     from .llm.fragen import artikel_verarbeiten
     from .output import jetzt_iso
     from .wikipedia.auszug import auszug, klartext
-    from .wikipedia.kandidaten import amtierende, passende_kategorie, sammeln
+    from .config import EN_SCHWELLEN
+    from .popularity import Bekanntheit
+    from .wikipedia.kandidaten import amtierende, passende_kategorie, sammeln, sammeln_englisch
 
     vorhanden = sum(1 for f in bestand if f["quelle_typ"] == "wikipedia")
     bedarf = ziel - vorhanden
@@ -105,7 +107,7 @@ def wikipedia(
         log.info("Anmeldung bei Anthropic ok (Generierung: %s, Prüfung: %s)", gen.modell, pruefer.modell)
 
     roh = sammeln(ktx.http, ktx.kategorie, ktx.schwellen.min_sitelinks)
-    kandidaten = ktx.filtern([k for k in roh if k.titel not in verarbeitet], "artikel")
+    kandidaten = ktx.filtern([k for k in roh if k.schluessel not in verarbeitet], "artikel")
     kandidaten, falsche_kategorie = passende_kategorie(ktx.http, kandidaten, ktx.kategorie)
     for k, grund in falsche_kategorie:
         ktx.protokoll.verwerfen(ktx.kategorie, "kategorie", grund, {"titel": k.titel})
@@ -113,6 +115,17 @@ def wikipedia(
         log.info("%s: %d Artikel passen thematisch zu einer anderen Kategorie, z. B. %s",
                  ktx.kategorie, len(falsche_kategorie),
                  ", ".join(f"{k.titel} ({g.split(': ')[1]})" for k, g in falsche_kategorie[:5]))
+    schwelle = {"de": ktx.schwellen.min_pageviews}
+    en_schwellen = EN_SCHWELLEN.get(ktx.kategorie)
+    if en_schwellen:
+        # Ergänzend englische Artikel ohne deutsches Pendant (eigene Bekanntheitsschwellen)
+        schwelle["en"] = en_schwellen.min_pageviews
+        de_qids = {k.qid for k in roh}
+        en_roh = [k for k in sammeln_englisch(ktx.http, ktx.kategorie, en_schwellen.min_sitelinks)
+                  if k.qid not in de_qids and k.schluessel not in verarbeitet]
+        en_bekanntheit = Bekanntheit(ktx.http, heute=ktx.bekanntheit.heute, exakt=ktx.bekanntheit.exakt,
+                                     sprache="en")
+        kandidaten += ktx.filtern(en_roh, "artikel-en", bekanntheit=en_bekanntheit, schwellen=en_schwellen)
     aktiv = amtierende(ktx.http, [k.qid for k in kandidaten])
     for k in kandidaten:
         if k.qid in aktiv:
@@ -121,7 +134,8 @@ def wikipedia(
         log.info("%s: %d amtierende Personen übersprungen: %s", ktx.kategorie, len(aktiv),
                  ", ".join(k.titel for k in kandidaten if k.qid in aktiv))
     kandidaten = [k for k in kandidaten if k.qid not in aktiv]
-    kandidaten.sort(key=lambda k: -(k.pageviews or 0))
+    # Bekannteste zuerst, gemessen an der Schwelle der jeweiligen Sprache
+    kandidaten.sort(key=lambda k: -(k.pageviews or 0) / schwelle[k.sprache])
     pro_quelle: dict[str, list[dict]] = {}
     for f in bestand:
         pro_quelle.setdefault(f.get("quelle_id", ""), []).append(f)
@@ -132,7 +146,7 @@ def wikipedia(
     kandidaten = kandidaten[:max_artikel]
     if nur_kandidaten:
         for k in kandidaten:
-            print(f"  {k.titel:45} sitelinks {k.sitelinks:4}  pv/Tag {k.pageviews:7.0f}  [{k.extra['quelle']}]")
+            print(f"  {k.schluessel:45} sitelinks {k.sitelinks:4}  pv/Tag {k.pageviews:7.0f}  [{k.extra['quelle']}]")
         return [], {}, None
 
     neue: list[Frage] = []
@@ -140,12 +154,12 @@ def wikipedia(
     fehler: list[str] = []
 
     def bearbeiten(k):
-        text = auszug(klartext(ktx.http, k.titel))
+        text = auszug(klartext(ktx.http, k.titel, k.sprache))
         if len(text) < 800:
             return k, None, "auszug zu kurz"
         best = pro_quelle.get(k.qid, [])
         return k, artikel_verarbeiten(gen, pruefer, ktx.kategorie, k.titel, k.qid, text, best,
-                                      n=2 - len(best), rng=ktx.rng("llm", k.titel)), None
+                                      n=2 - len(best), rng=ktx.rng("llm", k.titel), sprache=k.sprache), None
 
     offen = iter(kandidaten)
     with ThreadPoolExecutor(threads) as ex:
@@ -173,7 +187,7 @@ def wikipedia(
                 eintrag = {"qid": k.qid, "datum": jetzt_iso()[:10]}
                 if erg is None:
                     eintrag["grund"] = grund
-                    ktx.protokoll.verwerfen(ktx.kategorie, "artikel", grund, {"titel": k.titel})
+                    ktx.protokoll.verwerfen(ktx.kategorie, "artikel", grund, {"titel": k.schluessel})
                 else:
                     eintrag.update({"bekanntheit_thema": erg.bekanntheit_thema,
                                     "angenommen": len(erg.angenommen), "verworfen": len(erg.verworfen)})
@@ -183,7 +197,7 @@ def wikipedia(
                     log.info("%-40s bekanntheit %s · %d angenommen · %d verworfen · total %d/%d · %.2f USD",
                              k.titel[:40], erg.bekanntheit_thema, len(erg.angenommen), len(erg.verworfen),
                              len(neue), bedarf, verbrauch.kosten_usd)
-                neu_verarbeitet[k.titel] = eintrag
+                neu_verarbeitet[k.schluessel] = eintrag
 
     # Scheitern alle Artikel am LLM, liegt ein grundsätzliches Problem vor (Modellname, Konfiguration)
     if fehler and not neu_verarbeitet:

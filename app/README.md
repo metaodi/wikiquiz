@@ -38,6 +38,8 @@ npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für Git
   „Allgemeinwissen“ fällt aus gespeicherten Auswahlen weg.
 - **Erschöpfte Kategorien** sind ausgegraut („keine Fragen mehr“ bzw. „bald verfügbar“); beim Antippen erscheint ein Hinweis.
   „Zufall“ wählt nur unter Kategorien mit verbleibenden Fragen. Sind alle erschöpft, endet das Spiel.
+- **Quellenlink** im Feedback: „Mehr auf Wikipedia: Titel“, bei Fragen aus der englischen Wikipedia
+  „Mehr auf Wikipedia (englisch): Titel“ (`src/lib/quelle.ts`).
 - **Zwischenstand** nach jeder Runde (bei mehreren Spielern); bei einem Spieler zeigt das Feedback den Punktestand.
 
 ## End-to-End-Tests (`e2e/`)

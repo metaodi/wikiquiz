@@ -69,3 +69,10 @@ SCHWELLEN["schweiz"] = Schwellen(min_sitelinks=15, min_pageviews=100.0)
 # Star Wars: Filme und Serien sind weltweit bekannt; Figuren haben auf de.wikipedia meist keinen
 # eigenen Artikel. Bei 50 Aufrufen/Tag kommen u. a. „Jedi“, „Todesstern“ und die Spiele dazu (31 statt 22 Artikel)
 SCHWELLEN["starwars"] = Schwellen(min_sitelinks=20, min_pageviews=50.0)
+
+# Englische Wikipedia als ergänzende Quelle, pro Kategorie einschaltbar: nur Artikel, zu denen es
+# keinen deutschen Artikel gibt (z. B. Star-Wars-Figuren). Startkategorien in wikipedia/quellen.py.
+# Seitenaufrufe auf en.wikipedia sind etwa 5–10× höher als auf de.wikipedia → eigene Schwellen.
+EN_SCHWELLEN: dict[str, Schwellen] = {
+    "starwars": Schwellen(min_sitelinks=20, min_pageviews=500.0),
+}
