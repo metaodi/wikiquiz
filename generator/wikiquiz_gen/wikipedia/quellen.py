@@ -115,7 +115,9 @@ STARTKATEGORIEN: dict[str, list[tuple[str, int]]] = {
     "schweiz": [
         ("Bundesratsmitglied (Schweiz)", 1),
         ("Kanton (Schweiz)", 0),
-        ("Ort in der Schweiz", 1),
+        # Nicht „Ort in der Schweiz“: liefert Hunderte Gemeinden knapp an der Schwelle, deren Seitenaufrufe
+        # einzeln abgefragt werden müssen (Kandidatensuche > 2 h). Bekannte Städte kommen über
+        # „Geographie (Schweiz)“, Kantone und Hauptorte über die Wikidata-Templates.
         ("Schweizerische Geschichte", 1),
         ("Politik (Schweiz)", 1),
         ("Geographie (Schweiz)", 1),
