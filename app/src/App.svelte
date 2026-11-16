@@ -2,6 +2,7 @@
   import { onMount, untrack } from 'svelte';
   import Kopf from './components/Kopf.svelte';
   import * as game from './lib/game';
+  import { SCHWIERIGKEIT_STANDARD } from './lib/config';
   import { haptik } from './lib/haptics';
   import { anzahlProKategorie } from './lib/picker';
   import { ladePool } from './lib/pool';
@@ -74,10 +75,11 @@
     spiel = neu;
   }
 
-  function starten(spieler: { name: string; farbe: string }[], runden: number, einstellungen: Einstellungen) {
+  function starten(spieler: game.NeuerSpieler[], runden: number, einstellungen: Einstellungen) {
     letzte = {
       namen: spieler.map((p) => p.name),
       farben: spieler.map((p) => p.farbe),
+      schwierigkeiten: spieler.map((p) => p.schwierigkeit ?? SCHWIERIGKEIT_STANDARD),
       runden,
       ...einstellungen,
       bekannteKategorien: [...game.ALLE_KATEGORIEN],

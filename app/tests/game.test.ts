@@ -140,10 +140,10 @@ describe('Spielablauf', () => {
 describe('Rangliste', () => {
   it('teilt Ränge bei Gleichstand', () => {
     const r = rangliste([
-      { name: 'A', farbe: '', punkte: 50 },
-      { name: 'B', farbe: '', punkte: 80 },
-      { name: 'C', farbe: '', punkte: 50 },
-      { name: 'D', farbe: '', punkte: 10 },
+      { name: 'A', farbe: '', schwierigkeit: 2, punkte: 50 },
+      { name: 'B', farbe: '', schwierigkeit: 2, punkte: 80 },
+      { name: 'C', farbe: '', schwierigkeit: 2, punkte: 50 },
+      { name: 'D', farbe: '', schwierigkeit: 2, punkte: 10 },
     ]);
     expect(r.map((p) => [p.spieler.name, p.rang])).toEqual([['B', 1], ['A', 2], ['C', 2], ['D', 4]]);
   });
@@ -157,6 +157,50 @@ describe('History', () => {
   it('nimmt sonst die am längsten zurückliegende', () => {
     const f = waehleFrage(POOL, 'geografie', [], ['g2', 'g3', 'g1'], () => 0);
     expect(f!.id).toBe('g2');
+  });
+});
+
+describe('Schwierigkeit', () => {
+  const mitStufe = (id: string, schwierigkeit: 1 | 2 | 3): Frage => ({
+    ...frage(id), schwierigkeit, quelle_url: `https://de.wikipedia.org/wiki/${id}`,
+  });
+  const pool = [mitStufe('l1', 1), mitStufe('m1', 2), mitStufe('s1', 3)];
+
+  it('zieht Fragen der gewählten Stufe', () => {
+    expect(waehleFrage(pool, 'geografie', [], [], () => 0, 1)!.id).toBe('l1');
+    expect(waehleFrage(pool, 'geografie', [], [], () => 0, 2)!.id).toBe('m1');
+    expect(waehleFrage(pool, 'geografie', [], [], () => 0, 3)!.id).toBe('s1');
+  });
+  it('weicht auf die nächstliegende Stufe aus', () => {
+    expect(waehleFrage(pool, 'geografie', ['l1'], [], () => 0, 1)!.id).toBe('m1');
+    expect(waehleFrage(pool, 'geografie', ['m1'], [], () => 0, 2)!.id).toBe('l1');
+    expect(waehleFrage(pool, 'geografie', ['s1'], [], () => 0, 3)!.id).toBe('m1');
+    expect(waehleFrage(pool, 'geografie', ['l1', 'm1'], [], () => 0, 1)!.id).toBe('s1');
+    expect(waehleFrage(pool, 'geografie', ['l1', 'm1', 's1'], [], () => 0, 1)).toBeNull();
+  });
+  it('gilt pro Spieler', () => {
+    let s = neuesSpiel(
+      [{ name: 'Kind', farbe: '#f00', schwierigkeit: 1 }, { name: 'Profi', farbe: '#00f', schwierigkeit: 3 }],
+      2,
+    );
+    expect(s.spieler.map((p) => p.schwierigkeit)).toEqual([1, 3]);
+    s = bereit(s);
+    let r = kategorieWaehlen(s, pool, 'geografie', [], rng);
+    expect(r.ok && r.frage.id).toBe('l1');
+    if (!r.ok) return;
+    s = weiter(antworten(timerStarten(r.stand, 0), r.frage, 0, 1000));
+    r = kategorieWaehlen(bereit(s), pool, 'geografie', [], rng);
+    expect(r.ok && r.frage.id).toBe('s1');
+  });
+  it('setzt fehlende Werte auf Mittel (auch in alten Spielständen)', () => {
+    expect(neuesSpiel([{ name: 'A', farbe: '#f00' }], 5).spieler[0].schwierigkeit).toBe(2);
+    const alt = neuesSpiel([{ name: 'A', farbe: '#f00' }], 5);
+    const ohne = { ...alt, spieler: alt.spieler.map(({ schwierigkeit: _, ...p }) => p) } as unknown as Spielstand;
+    expect(wiederherstellen(ohne, pool, 0).spieler[0].schwierigkeit).toBe(2);
+  });
+  it('bleibt bei „Nochmals spielen“ erhalten', () => {
+    const s = neuesSpiel([{ name: 'A', farbe: '#f00', schwierigkeit: 3 }], 5);
+    expect(nochmals(s).spieler[0].schwierigkeit).toBe(3);
   });
 });
 

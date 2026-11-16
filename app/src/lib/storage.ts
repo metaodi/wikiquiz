@@ -1,6 +1,6 @@
 /** localStorage-Zugriffe, alle in try/catch (privater Modus, gesperrter Speicher …). */
 import { HISTORY_MAX } from './config';
-import type { Einstellungen, KategorieId, Spielstand } from './types';
+import type { Einstellungen, KategorieId, Schwierigkeit, Spielstand } from './types';
 
 const KEY_SPIEL = 'wikiquiz:game:v1';
 const KEY_HISTORY = 'wikiquiz:history:v1';
@@ -50,6 +50,8 @@ export function merkeFrage(id: string): string[] {
 export interface LetzteSpieler extends Partial<Einstellungen> {
   namen: string[];
   farben: string[];
+  /** Schwierigkeit pro Spieler (fehlt in älteren Speicherständen) */
+  schwierigkeiten?: Schwierigkeit[];
   runden: number;
   /** Alle Kategorien, die es beim Speichern gab (um neue später automatisch zu wählen) */
   bekannteKategorien?: KategorieId[];

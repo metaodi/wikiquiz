@@ -3,9 +3,9 @@
  * Zeit (`jetzt`) und Zufall (`rng`) werden hereingereicht → testbar und reload-fest.
  */
 import { ZEITLIMIT_S, punkteFuerZeit } from './config';
-import { mischen, verfuegbareKategorien, waehleFrage, type Rng } from './picker';
+import { mischen, stufe, verfuegbareKategorien, waehleFrage, type Rng } from './picker';
 import { KATEGORIEN, URSPRUENGLICHE_KATEGORIEN } from './categories';
-import type { Einstellungen, Frage, KategorieId, Phase, Spieler, Spielstand } from './types';
+import type { Einstellungen, Frage, KategorieId, Phase, Schwierigkeit, Spieler, Spielstand } from './types';
 
 export type Wahl = KategorieId | 'zufall';
 
@@ -60,15 +60,17 @@ export function startPhase(s: Pick<Spielstand, 'spieler' | 'modus'>): Phase {
   return s.spieler.length > 1 ? 'uebergabe' : 'kategorie';
 }
 
+export type NeuerSpieler = Pick<Spieler, 'name' | 'farbe'> & { schwierigkeit?: Schwierigkeit };
+
 export function neuesSpiel(
-  spieler: Omit<Spieler, 'punkte'>[],
+  spieler: NeuerSpieler[],
   runden: number,
   einstellungen?: Partial<Einstellungen>,
 ): Spielstand {
   const s: Spielstand = {
     version: 1,
     phase: 'setup',
-    spieler: spieler.map((p) => ({ name: p.name.trim(), farbe: p.farbe, punkte: 0 })),
+    spieler: spieler.map((p) => ({ name: p.name.trim(), farbe: p.farbe, punkte: 0, schwierigkeit: stufe(p.schwierigkeit) })),
     runden,
     ...einstellungenPruefen(einstellungen, spieler.length),
     runde: 1,
@@ -112,7 +114,7 @@ export function kategorieWaehlen(
     if (s.modus === 'zufall' || !s.kategorien.includes(wahl)) return { ok: false, grund: 'erschoepft' };
     kategorie = wahl;
   }
-  const frage = waehleFrage(pool, kategorie, s.gestellt, history, rng);
+  const frage = waehleFrage(pool, kategorie, s.gestellt, history, rng, s.spieler[s.aktiverSpieler].schwierigkeit);
   if (!frage) return { ok: false, grund: 'erschoepft' };
   return {
     ok: true,
@@ -220,7 +222,12 @@ export function rangliste(spieler: Spieler[]): Platz[] {
  * Ist die Frage verschwunden (neuer Pool), wird der Zug verworfen und neu gewählt.
  */
 export function wiederherstellen(gespeichert: Spielstand, pool: Frage[], jetzt: number): Spielstand {
-  const s: Spielstand = { ...gespeichert, ...einstellungenPruefen(gespeichert, gespeichert.spieler.length) };
+  const s: Spielstand = {
+    ...gespeichert,
+    ...einstellungenPruefen(gespeichert, gespeichert.spieler.length),
+    // Spielstände ohne Schwierigkeit (vor Einführung der Wahl) → Standard
+    spieler: gespeichert.spieler.map((p) => ({ ...p, schwierigkeit: stufe(p.schwierigkeit) })),
+  };
   if (s.phase === 'setup') return s;
   if (s.zug && ['uebergabe', 'zufall', 'frage', 'feedback'].includes(s.phase)) {
     const frage = pool.find((f) => f.id === s.zug!.frageId);

@@ -10,13 +10,16 @@ export type KategorieId =
   | 'starwars'
   | 'harrypotter';
 
+/** 1 = leicht, 2 = mittel, 3 = schwer */
+export type Schwierigkeit = 1 | 2 | 3;
+
 export interface Frage {
   id: string;
   kategorie: KategorieId;
   frage: string;
   antworten: string[];
   korrekt_index: number;
-  schwierigkeit: 1 | 2 | 3;
+  schwierigkeit: Schwierigkeit;
   quelle_typ: 'wikidata' | 'wikipedia';
   quelle_url: string;
   lizenz: string;
@@ -34,6 +37,8 @@ export interface Spieler {
   name: string;
   farbe: string;
   punkte: number;
+  /** Bevorzugte Schwierigkeit der Fragen für diesen Spieler */
+  schwierigkeit: Schwierigkeit;
 }
 
 export interface Zug {

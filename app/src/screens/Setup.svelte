@@ -1,7 +1,16 @@
 <script lang="ts">
   import { KATEGORIEN } from '../lib/categories';
-  import { FARB_NAMEN, MAX_SPIELER, RUNDEN_OPTIONEN, RUNDEN_STANDARD, SPIELER_FARBEN } from '../lib/config';
-  import { ALLE_KATEGORIEN, einstellungenPruefen, neueKategorienErgaenzen } from '../lib/game';
+  import {
+    FARB_NAMEN,
+    MAX_SPIELER,
+    RUNDEN_OPTIONEN,
+    RUNDEN_STANDARD,
+    SCHWIERIGKEIT_STANDARD,
+    SCHWIERIGKEITEN,
+    SPIELER_FARBEN,
+  } from '../lib/config';
+  import { ALLE_KATEGORIEN, einstellungenPruefen, neueKategorienErgaenzen, type NeuerSpieler } from '../lib/game';
+  import { stufe } from '../lib/picker';
   import type { LetzteSpieler } from '../lib/storage';
   import type { Einstellungen, KategorieId, KategorieModus } from '../lib/types';
 
@@ -14,7 +23,7 @@
     letzte: LetzteSpieler | null;
     /** Fragen pro Kategorie im Pool */
     gesamt: Record<KategorieId, number>;
-    onStart: (spieler: { name: string; farbe: string }[], runden: number, einstellungen: Einstellungen) => void;
+    onStart: (spieler: NeuerSpieler[], runden: number, einstellungen: Einstellungen) => void;
     onInfo: () => void;
   } = $props();
 
@@ -28,8 +37,12 @@
   const start = letzte;
   let spieler = $state(
     start?.namen.length
-      ? start.namen.map((name, i) => ({ name, farbe: start.farben[i] ?? SPIELER_FARBEN[i] }))
-      : [{ name: '', farbe: SPIELER_FARBEN[0] }],
+      ? start.namen.map((name, i) => ({
+          name,
+          farbe: start.farben[i] ?? SPIELER_FARBEN[i],
+          schwierigkeit: stufe(start.schwierigkeiten?.[i]),
+        }))
+      : [{ name: '', farbe: SPIELER_FARBEN[0], schwierigkeit: SCHWIERIGKEIT_STANDARD }],
   );
   // svelte-ignore state_referenced_locally
   let runden = $state(start?.runden ?? RUNDEN_STANDARD);
@@ -57,7 +70,7 @@
 
   function hinzufuegen() {
     const frei = SPIELER_FARBEN.find((f) => !spieler.some((p) => p.farbe === f)) ?? SPIELER_FARBEN[0];
-    spieler.push({ name: '', farbe: frei });
+    spieler.push({ name: '', farbe: frei, schwierigkeit: SCHWIERIGKEIT_STANDARD });
   }
 
   function entfernen(i: number) {
@@ -68,7 +81,7 @@
     e.preventDefault();
     if (doppelt || fragenGewaehlt === 0) return;
     onStart(
-      spieler.map((p, i) => ({ name: namen[i], farbe: p.farbe })),
+      spieler.map((p, i) => ({ name: namen[i], farbe: p.farbe, schwierigkeit: p.schwierigkeit })),
       runden,
       { modus: modusEffektiv, kategorien: [...kategorien] },
     );
@@ -83,6 +96,7 @@
 
   <section class="karte" aria-labelledby="spieler-titel">
     <h2 id="spieler-titel">Spieler</h2>
+    <p class="muted klein-text">Name, Farbe und Schwierigkeit der Fragen – für jeden Spieler einzeln.</p>
     <ol class="liste">
       {#each spieler as p, i (i)}
         <li class="zeile">
@@ -111,6 +125,19 @@
                 aria-label={FARB_NAMEN[f] ?? f}
                 onclick={() => (p.farbe = f)}
               ></button>
+            {/each}
+          </div>
+          <div class="segment stufen" role="radiogroup" aria-label={`Schwierigkeit Spieler ${i + 1}`}>
+            {#each SCHWIERIGKEITEN as st (st.wert)}
+              <button
+                type="button"
+                role="radio"
+                aria-checked={p.schwierigkeit === st.wert}
+                class:aktiv={p.schwierigkeit === st.wert}
+                onclick={() => (p.schwierigkeit = st.wert)}
+              >
+                {st.name}
+              </button>
             {/each}
           </div>
         </li>
@@ -273,6 +300,13 @@
     background: var(--bg);
     font-weight: 700;
     font-size: 1.1rem;
+  }
+  .stufen {
+    grid-column: 1 / -1;
+  }
+  .stufen button {
+    font-size: 1rem;
+    min-height: 48px;
   }
   .segment button.aktiv {
     background: var(--accent);
