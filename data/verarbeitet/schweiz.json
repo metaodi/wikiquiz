@@ -1,4 +1,11 @@
 {
+ "Aarau": {
+  "qid": "Q14274",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 0
+ },
  "Aare": {
   "qid": "Q1675",
   "datum": "2026-11-16",
@@ -17,6 +24,13 @@
   "qid": "Q1286",
   "datum": "2026-11-16",
   "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Baiser": {
+  "qid": "Q276276",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
   "angenommen": 1,
   "verworfen": 1
  },
@@ -69,6 +83,13 @@
   "angenommen": 1,
   "verworfen": 0
  },
+ "Crossair-Flug 3597": {
+  "qid": "Q569392",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Davos": {
   "qid": "Q68097",
   "datum": "2026-11-16",
@@ -78,6 +99,20 @@
  },
  "Deutscher Bauernkrieg": {
   "qid": "Q154031",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Einsiedeln": {
+  "qid": "Q68950",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Eisvogel": {
+  "qid": "Q79915",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
   "angenommen": 2,
@@ -118,8 +153,36 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Golo Mann": {
+  "qid": "Q77109",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Gotthard-Basistunnel": {
+  "qid": "Q193002",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Grappa": {
   "qid": "Q693078",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Grindelwald": {
+  "qid": "Q64004",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 1
+ },
+ "Gstaad": {
+  "qid": "Q37149",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
   "angenommen": 2,
@@ -139,6 +202,13 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Herzogtum Schwaben": {
+  "qid": "Q693980",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Hochrhein": {
   "qid": "Q650521",
   "datum": "2026-11-16",
@@ -157,6 +227,27 @@
   "qid": "Q14369",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Intercity-Express": {
+  "qid": "Q129172",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Jungfraujoch": {
+  "qid": "Q665676",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Junkers Ju 52/3m": {
+  "qid": "Q15410360",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
   "angenommen": 2,
   "verworfen": 0
  },
@@ -181,11 +272,25 @@
   "angenommen": 0,
   "verworfen": 1
  },
+ "Kanton Appenzell Ausserrhoden": {
+  "qid": "Q12079",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
  "Kanton Appenzell Innerrhoden": {
   "qid": "Q12094",
   "datum": "2026-11-16",
   "bekanntheit_thema": 3,
   "angenommen": 2,
+  "verworfen": 0
+ },
+ "Kanton Basel-Landschaft": {
+  "qid": "Q12146",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
   "verworfen": 0
  },
  "Kanton Bern": {
@@ -195,8 +300,36 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Kanton Freiburg": {
+  "qid": "Q12640",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Kanton Luzern": {
+  "qid": "Q12121",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Kanton Neuenburg": {
+  "qid": "Q12738",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 0
+ },
  "Kanton Schwyz": {
   "qid": "Q12433",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Kanton Solothurn": {
+  "qid": "Q11929",
   "datum": "2026-11-16",
   "bekanntheit_thema": 3,
   "angenommen": 2,
@@ -209,6 +342,20 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Kanton Thurgau": {
+  "qid": "Q12713",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Kanton Uri": {
+  "qid": "Q12404",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 0
+ },
  "Kanton Wallis": {
   "qid": "Q834",
   "datum": "2026-11-16",
@@ -216,10 +363,24 @@
   "angenommen": 0,
   "verworfen": 1
  },
+ "Kanton Zug": {
+  "qid": "Q11933",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Kanton Zürich": {
   "qid": "Q11943",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Katia Mann": {
+  "qid": "Q214999",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
   "angenommen": 1,
   "verworfen": 1
  },
@@ -272,8 +433,36 @@
   "angenommen": 1,
   "verworfen": 0
  },
+ "Ovomaltine": {
+  "qid": "Q685005",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Philip Morris International": {
+  "qid": "Q1852556",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Pilatus (Bergmassiv)": {
+  "qid": "Q15265",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Polenta": {
   "qid": "Q131607",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Raclette": {
+  "qid": "Q20748",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
   "angenommen": 2,
@@ -307,10 +496,24 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Rivella": {
+  "qid": "Q689134",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Roger Federer": {
   "qid": "Q1426",
   "datum": "2026-11-16",
   "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Romandie": {
+  "qid": "Q214086",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
   "angenommen": 2,
   "verworfen": 0
  },
@@ -321,8 +524,29 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Samnaun": {
+  "qid": "Q69358",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Schnitzel Cordon bleu": {
+  "qid": "Q429518",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Schokokuss": {
   "qid": "Q1578239",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Schweizer Fussballnationalmannschaft": {
+  "qid": "Q165141",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
   "angenommen": 2,
@@ -349,12 +573,33 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Sonderbundskrieg": {
+  "qid": "Q688297",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Spätzle": {
+  "qid": "Q20065",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "St. Moritz": {
   "qid": "Q68986",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
   "angenommen": 0,
   "verworfen": 1
+ },
+ "Stan Wawrinka": {
+  "qid": "Q193661",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
  },
  "Stieglitz": {
   "qid": "Q25418",
@@ -369,6 +614,34 @@
   "bekanntheit_thema": 3,
   "angenommen": 1,
   "verworfen": 1
+ },
+ "Toblerone": {
+  "qid": "Q215707",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Tête de Moine": {
+  "qid": "Q687579",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Vogt": {
+  "qid": "Q4122737",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Vorderösterreich": {
+  "qid": "Q660702",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
  },
  "Waldohreule": {
   "qid": "Q25384",
@@ -397,6 +670,13 @@
   "bekanntheit_thema": 4,
   "angenommen": 1,
   "verworfen": 1
+ },
+ "Winterthur": {
+  "qid": "Q9125",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 0
  },
  "Zermatt": {
   "qid": "Q27494",
