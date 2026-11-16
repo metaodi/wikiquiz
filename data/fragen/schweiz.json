@@ -1,0 +1,1087 @@
+{
+ "version": 1,
+ "kategorie": "schweiz",
+ "generiert_am": "2026-11-16T10:36:47Z",
+ "fragen": [
+  {
+   "id": "wd-04c83cba32",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde La Chaux-de-Fonds?",
+   "antworten": [
+    "Neuenburg",
+    "Freiburg",
+    "Waadt",
+    "Jura"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/La_Chaux-de-Fonds",
+   "lizenz": "CC0",
+   "quelle_titel": "La Chaux-de-Fonds",
+   "quelle_id": "Q68124"
+  },
+  {
+   "id": "wd-09a9da0889",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Bürgenstock?",
+   "antworten": [
+    "Nidwalden",
+    "Uri",
+    "Bern",
+    "Luzern"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/B%C3%BCrgenstock",
+   "lizenz": "CC0",
+   "quelle_titel": "Bürgenstock",
+   "quelle_id": "Q43246"
+  },
+  {
+   "id": "wd-11bf8c21c0",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Eiger?",
+   "antworten": [
+    "Neuenburg",
+    "Luzern",
+    "Bern",
+    "Solothurn"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Eiger",
+   "lizenz": "CC0",
+   "quelle_titel": "Eiger",
+   "quelle_id": "Q4425"
+  },
+  {
+   "id": "wd-134886eb5b",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Grindelwald?",
+   "antworten": [
+    "Nidwalden",
+    "Jura",
+    "Bern",
+    "Obwalden"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Grindelwald",
+   "lizenz": "CC0",
+   "quelle_titel": "Grindelwald",
+   "quelle_id": "Q64004"
+  },
+  {
+   "id": "wd-158b80b3c9",
+   "kategorie": "schweiz",
+   "frage": "Welche Amtssprache hat der Kanton Tessin?",
+   "antworten": [
+    "Rätoromanisch",
+    "Französisch",
+    "Italienisch",
+    "Deutsch"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Tessin",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Tessin",
+   "quelle_id": "Q12724"
+  },
+  {
+   "id": "wd-18d7a03389",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Piz Palü?",
+   "antworten": [
+    "Graubünden",
+    "St. Gallen",
+    "Uri",
+    "Glarus"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Piz_Pal%C3%BC",
+   "lizenz": "CC0",
+   "quelle_titel": "Piz Palü",
+   "quelle_id": "Q665042"
+  },
+  {
+   "id": "wd-18ee96470e",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Uetliberg?",
+   "antworten": [
+    "Schwyz",
+    "Zürich",
+    "St. Gallen",
+    "Thurgau"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Uetliberg",
+   "lizenz": "CC0",
+   "quelle_titel": "Uetliberg",
+   "quelle_id": "Q16524"
+  },
+  {
+   "id": "wd-1acdbbc486",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Breithorn?",
+   "antworten": [
+    "Wallis",
+    "Uri",
+    "Tessin",
+    "Bern"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Breithorn_(Zermatt)",
+   "lizenz": "CC0",
+   "quelle_titel": "Breithorn (Zermatt)",
+   "quelle_id": "Q16540"
+  },
+  {
+   "id": "wd-20a6ed56f2",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Locarno?",
+   "antworten": [
+    "Uri",
+    "Tessin",
+    "Wallis",
+    "Graubünden"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Locarno",
+   "lizenz": "CC0",
+   "quelle_titel": "Locarno",
+   "quelle_id": "Q11935"
+  },
+  {
+   "id": "wd-212e42c4a9",
+   "kategorie": "schweiz",
+   "frage": "Welcher Kanton hat drei Amtssprachen?",
+   "antworten": [
+    "Freiburg",
+    "Bern",
+    "Graubünden",
+    "Wallis"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Graub%C3%BCnden",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Graubünden",
+   "quelle_id": "Q11925"
+  },
+  {
+   "id": "wd-25df11681b",
+   "kategorie": "schweiz",
+   "frage": "Wie heisst der Hauptort des Kantons Basel-Landschaft?",
+   "antworten": [
+    "Liestal",
+    "Reinach",
+    "Muttenz",
+    "Pratteln"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Basel-Landschaft",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Basel-Landschaft",
+   "quelle_id": "Q12146"
+  },
+  {
+   "id": "wd-28b7aa655a",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Dom?",
+   "antworten": [
+    "Uri",
+    "Wallis",
+    "Tessin",
+    "Bern"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dom_(Berg)",
+   "lizenz": "CC0",
+   "quelle_titel": "Dom (Berg)",
+   "quelle_id": "Q15117"
+  },
+  {
+   "id": "wd-2e33a2a403",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Einsiedeln?",
+   "antworten": [
+    "Obwalden",
+    "Zug",
+    "Schwyz",
+    "Luzern"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Einsiedeln",
+   "lizenz": "CC0",
+   "quelle_titel": "Einsiedeln",
+   "quelle_id": "Q68950"
+  },
+  {
+   "id": "wd-2eb6b256c9",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Piz Bernina?",
+   "antworten": [
+    "Graubünden",
+    "St. Gallen",
+    "Uri",
+    "Glarus"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Piz_Bernina",
+   "lizenz": "CC0",
+   "quelle_titel": "Piz Bernina",
+   "quelle_id": "Q15132"
+  },
+  {
+   "id": "wd-315df9eef0",
+   "kategorie": "schweiz",
+   "frage": "Welche Amtssprache hat der Kanton Neuenburg?",
+   "antworten": [
+    "Französisch",
+    "Rätoromanisch",
+    "Deutsch",
+    "Italienisch"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Neuenburg",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Neuenburg",
+   "quelle_id": "Q12738"
+  },
+  {
+   "id": "wd-32fdea3b7c",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Klein Matterhorn?",
+   "antworten": [
+    "Tessin",
+    "Wallis",
+    "Uri",
+    "Bern"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Klein_Matterhorn",
+   "lizenz": "CC0",
+   "quelle_titel": "Klein Matterhorn",
+   "quelle_id": "Q675446"
+  },
+  {
+   "id": "wd-330cf9aa5d",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde St. Moritz?",
+   "antworten": [
+    "Tessin",
+    "St. Gallen",
+    "Graubünden",
+    "Glarus"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/St._Moritz",
+   "lizenz": "CC0",
+   "quelle_titel": "St. Moritz",
+   "quelle_id": "Q68986"
+  },
+  {
+   "id": "wd-38d849f273",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Olten?",
+   "antworten": [
+    "Aargau",
+    "Solothurn",
+    "Basel-Landschaft",
+    "Bern"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olten",
+   "lizenz": "CC0",
+   "quelle_titel": "Olten",
+   "quelle_id": "Q68129"
+  },
+  {
+   "id": "wd-4785273b61",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Schilthorn?",
+   "antworten": [
+    "Luzern",
+    "Neuenburg",
+    "Bern",
+    "Solothurn"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schilthorn",
+   "lizenz": "CC0",
+   "quelle_titel": "Schilthorn",
+   "quelle_id": "Q674801"
+  },
+  {
+   "id": "wd-49e37dbbe3",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Baden?",
+   "antworten": [
+    "Bern",
+    "Luzern",
+    "Aargau",
+    "Zug"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Baden_AG",
+   "lizenz": "CC0",
+   "quelle_titel": "Baden AG",
+   "quelle_id": "Q63939"
+  },
+  {
+   "id": "wd-4d318fec5d",
+   "kategorie": "schweiz",
+   "frage": "Welche Amtssprache hat der Kanton Waadt?",
+   "antworten": [
+    "Französisch",
+    "Deutsch",
+    "Rätoromanisch",
+    "Italienisch"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Waadt",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Waadt",
+   "quelle_id": "Q12771"
+  },
+  {
+   "id": "wd-4ef9e3fced",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Davos?",
+   "antworten": [
+    "Tessin",
+    "St. Gallen",
+    "Glarus",
+    "Graubünden"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Davos",
+   "lizenz": "CC0",
+   "quelle_titel": "Davos",
+   "quelle_id": "Q68097"
+  },
+  {
+   "id": "wd-5034893519",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Schynige Platte?",
+   "antworten": [
+    "Solothurn",
+    "Bern",
+    "Neuenburg",
+    "Luzern"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schynige_Platte",
+   "lizenz": "CC0",
+   "quelle_titel": "Schynige Platte",
+   "quelle_id": "Q661856"
+  },
+  {
+   "id": "wd-503ab6e8bf",
+   "kategorie": "schweiz",
+   "frage": "Wie heisst der Hauptort des Kantons Obwalden?",
+   "antworten": [
+    "Sachseln",
+    "Sarnen",
+    "Engelberg",
+    "Kerns"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Obwalden",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Obwalden",
+   "quelle_id": "Q12573"
+  },
+  {
+   "id": "wd-556067f45a",
+   "kategorie": "schweiz",
+   "frage": "Wie heisst der Hauptort des Kantons Nidwalden?",
+   "antworten": [
+    "Stans",
+    "Ennetbürgen",
+    "Stansstad",
+    "Hergiswil"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Nidwalden",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Nidwalden",
+   "quelle_id": "Q12592"
+  },
+  {
+   "id": "wd-57075a864a",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Brienzersee?",
+   "antworten": [
+    "Jura",
+    "Uri",
+    "Waadt",
+    "Bern"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Brienzersee",
+   "lizenz": "CC0",
+   "quelle_titel": "Brienzersee",
+   "quelle_id": "Q14442"
+  },
+  {
+   "id": "wd-5793401e63",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Zermatt?",
+   "antworten": [
+    "Waadt",
+    "Tessin",
+    "Uri",
+    "Wallis"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Zermatt",
+   "lizenz": "CC0",
+   "quelle_titel": "Zermatt",
+   "quelle_id": "Q27494"
+  },
+  {
+   "id": "wd-57b16de26a",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Kreuzlingen?",
+   "antworten": [
+    "Zürich",
+    "St. Gallen",
+    "Schaffhausen",
+    "Thurgau"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kreuzlingen",
+   "lizenz": "CC0",
+   "quelle_titel": "Kreuzlingen",
+   "quelle_id": "Q63905"
+  },
+  {
+   "id": "wd-6153ae6d8d",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Lugano?",
+   "antworten": [
+    "Wallis",
+    "Graubünden",
+    "Tessin",
+    "Uri"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Lugano",
+   "lizenz": "CC0",
+   "quelle_titel": "Lugano",
+   "quelle_id": "Q7024"
+  },
+  {
+   "id": "wd-668867bc3f",
+   "kategorie": "schweiz",
+   "frage": "Wie heisst der Hauptort des Kantons Wallis?",
+   "antworten": [
+    "Siders",
+    "Sitten",
+    "Brig-Glis",
+    "Monthey"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Wallis",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Wallis",
+   "quelle_id": "Q834"
+  },
+  {
+   "id": "wd-6b92f98c6b",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Weisshorn?",
+   "antworten": [
+    "Bern",
+    "Uri",
+    "Wallis",
+    "Tessin"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Weisshorn_(Wallis)",
+   "lizenz": "CC0",
+   "quelle_titel": "Weisshorn (Wallis)",
+   "quelle_id": "Q15122"
+  },
+  {
+   "id": "wd-6f13398deb",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Matterhorn?",
+   "antworten": [
+    "Bern",
+    "Tessin",
+    "Uri",
+    "Wallis"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Matterhorn",
+   "lizenz": "CC0",
+   "quelle_titel": "Matterhorn",
+   "quelle_id": "Q1374"
+  },
+  {
+   "id": "wd-6f5d6a6c79",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Samnaun?",
+   "antworten": [
+    "St. Gallen",
+    "Glarus",
+    "Tessin",
+    "Graubünden"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Samnaun",
+   "lizenz": "CC0",
+   "quelle_titel": "Samnaun",
+   "quelle_id": "Q69358"
+  },
+  {
+   "id": "wd-73819860e2",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Interlaken?",
+   "antworten": [
+    "Nidwalden",
+    "Jura",
+    "Bern",
+    "Obwalden"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Interlaken",
+   "lizenz": "CC0",
+   "quelle_titel": "Interlaken",
+   "quelle_id": "Q68103"
+  },
+  {
+   "id": "wd-744fdcf322",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Thun?",
+   "antworten": [
+    "Bern",
+    "Jura",
+    "Obwalden",
+    "Nidwalden"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Thun",
+   "lizenz": "CC0",
+   "quelle_titel": "Thun",
+   "quelle_id": "Q68978"
+  },
+  {
+   "id": "wd-83bfee4303",
+   "kategorie": "schweiz",
+   "frage": "Wie heisst der Hauptort des Kantons Graubünden?",
+   "antworten": [
+    "Ilanz/Glion",
+    "Chur",
+    "Domat/Ems",
+    "Landquart"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Graub%C3%BCnden",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Graubünden",
+   "quelle_id": "Q11925"
+  },
+  {
+   "id": "wd-875851f67c",
+   "kategorie": "schweiz",
+   "frage": "Wie heisst der Hauptort des Kantons Uri?",
+   "antworten": [
+    "Flüelen",
+    "Schattdorf",
+    "Erstfeld",
+    "Altdorf"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Uri",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Uri",
+   "quelle_id": "Q12404"
+  },
+  {
+   "id": "wd-875d3fcc67",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Grosser Piz Buin?",
+   "antworten": [
+    "Graubünden",
+    "Glarus",
+    "Uri",
+    "St. Gallen"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Piz_Buin",
+   "lizenz": "CC0",
+   "quelle_titel": "Piz Buin",
+   "quelle_id": "Q16588"
+  },
+  {
+   "id": "wd-8ea05590d4",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Crans-Montana?",
+   "antworten": [
+    "Waadt",
+    "Uri",
+    "Tessin",
+    "Wallis"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Crans-Montana",
+   "lizenz": "CC0",
+   "quelle_titel": "Crans-Montana",
+   "quelle_id": "Q688557"
+  },
+  {
+   "id": "wd-a27dc78636",
+   "kategorie": "schweiz",
+   "frage": "Wie heisst der Hauptort des Kantons Thurgau?",
+   "antworten": [
+    "Kreuzlingen",
+    "Frauenfeld",
+    "Amriswil",
+    "Romanshorn"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Thurgau",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Thurgau",
+   "quelle_id": "Q12713"
+  },
+  {
+   "id": "wd-a565145aad",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Lago Maggiore?",
+   "antworten": [
+    "Uri",
+    "Tessin",
+    "Graubünden",
+    "Wallis"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Lago_Maggiore",
+   "lizenz": "CC0",
+   "quelle_titel": "Lago Maggiore",
+   "quelle_id": "Q14379"
+  },
+  {
+   "id": "wd-a5bd7ca1bd",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Caumasee?",
+   "antworten": [
+    "Tessin",
+    "St. Gallen",
+    "Graubünden",
+    "Uri"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Caumasee",
+   "lizenz": "CC0",
+   "quelle_titel": "Caumasee",
+   "quelle_id": "Q692270"
+  },
+  {
+   "id": "wd-a75f26352a",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Tomasee?",
+   "antworten": [
+    "Uri",
+    "Graubünden",
+    "St. Gallen",
+    "Tessin"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tomasee",
+   "lizenz": "CC0",
+   "quelle_titel": "Tomasee",
+   "quelle_id": "Q690343"
+  },
+  {
+   "id": "wd-c0c00f7a60",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Biel/Bienne?",
+   "antworten": [
+    "Obwalden",
+    "Jura",
+    "Bern",
+    "Nidwalden"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Biel/Bienne",
+   "lizenz": "CC0",
+   "quelle_titel": "Biel/Bienne",
+   "quelle_id": "Q1034"
+  },
+  {
+   "id": "wd-c6d6d9ba40",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Dufourspitze?",
+   "antworten": [
+    "Tessin",
+    "Wallis",
+    "Bern",
+    "Uri"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dufourspitze",
+   "lizenz": "CC0",
+   "quelle_titel": "Dufourspitze",
+   "quelle_id": "Q3403"
+  },
+  {
+   "id": "wd-c71050ec7c",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Thunersee?",
+   "antworten": [
+    "Jura",
+    "Waadt",
+    "Bern",
+    "Uri"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Thunersee",
+   "lizenz": "CC0",
+   "quelle_titel": "Thunersee",
+   "quelle_id": "Q14426"
+  },
+  {
+   "id": "wd-ce2718937e",
+   "kategorie": "schweiz",
+   "frage": "Wie heisst der Hauptort des Kantons Waadt?",
+   "antworten": [
+    "Yverdon-les-Bains",
+    "Lausanne",
+    "Nyon",
+    "Montreux"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Waadt",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Waadt",
+   "quelle_id": "Q12771"
+  },
+  {
+   "id": "wd-d16a704741",
+   "kategorie": "schweiz",
+   "frage": "Welche Amtssprache hat der Kanton Jura?",
+   "antworten": [
+    "Italienisch",
+    "Deutsch",
+    "Rätoromanisch",
+    "Französisch"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Jura",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Jura",
+   "quelle_id": "Q12755"
+  },
+  {
+   "id": "wd-d70ff16534",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Luganersee?",
+   "antworten": [
+    "Uri",
+    "Tessin",
+    "Wallis",
+    "Graubünden"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Luganersee",
+   "lizenz": "CC0",
+   "quelle_titel": "Luganersee",
+   "quelle_id": "Q14418"
+  },
+  {
+   "id": "wd-d821f96672",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Winterthur?",
+   "antworten": [
+    "Zürich",
+    "St. Gallen",
+    "Schwyz",
+    "Aargau"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Winterthur",
+   "lizenz": "CC0",
+   "quelle_titel": "Winterthur",
+   "quelle_id": "Q9125"
+  },
+  {
+   "id": "wd-d8676ae055",
+   "kategorie": "schweiz",
+   "frage": "Wie heisst der Hauptort des Kantons Jura?",
+   "antworten": [
+    "Courrendlin",
+    "Haute-Sorne",
+    "Delsberg",
+    "Pruntrut"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Jura",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Jura",
+   "quelle_id": "Q12755"
+  },
+  {
+   "id": "wd-d8702553c8",
+   "kategorie": "schweiz",
+   "frage": "Wie heisst der Hauptort des Kantons Aargau?",
+   "antworten": [
+    "Aarau",
+    "Baden",
+    "Oftringen",
+    "Wohlen"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Aargau",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Aargau",
+   "quelle_id": "Q11972"
+  },
+  {
+   "id": "wd-d876edb279",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Mattmarksee?",
+   "antworten": [
+    "Waadt",
+    "Wallis",
+    "Uri",
+    "Bern"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Stausee_Mattmark",
+   "lizenz": "CC0",
+   "quelle_titel": "Stausee Mattmark",
+   "quelle_id": "Q680976"
+  },
+  {
+   "id": "wd-ef77deeea2",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Engelberg?",
+   "antworten": [
+    "Obwalden",
+    "Uri",
+    "Nidwalden",
+    "Schwyz"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Engelberg",
+   "lizenz": "CC0",
+   "quelle_titel": "Engelberg",
+   "quelle_id": "Q64108"
+  },
+  {
+   "id": "wd-f02dc17ac0",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Berg Schesaplana?",
+   "antworten": [
+    "Uri",
+    "Graubünden",
+    "Glarus",
+    "St. Gallen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schesaplana",
+   "lizenz": "CC0",
+   "quelle_titel": "Schesaplana",
+   "quelle_id": "Q15241"
+  },
+  {
+   "id": "wd-f188998792",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Oeschinensee?",
+   "antworten": [
+    "Jura",
+    "Waadt",
+    "Uri",
+    "Bern"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Oeschinensee",
+   "lizenz": "CC0",
+   "quelle_titel": "Oeschinensee",
+   "quelle_id": "Q14533"
+  },
+  {
+   "id": "wd-f677dbcf05",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt die Gemeinde Montreux?",
+   "antworten": [
+    "Waadt",
+    "Bern",
+    "Genf",
+    "Neuenburg"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Montreux",
+   "lizenz": "CC0",
+   "quelle_titel": "Montreux",
+   "quelle_id": "Q69354"
+  },
+  {
+   "id": "wd-f6ca701d77",
+   "kategorie": "schweiz",
+   "frage": "In welchem Kanton liegt der Seealpsee?",
+   "antworten": [
+    "Appenzell Ausserrhoden",
+    "Basel-Landschaft",
+    "St. Gallen",
+    "Appenzell Innerrhoden"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Seealpsee_(Appenzeller_Alpen)",
+   "lizenz": "CC0",
+   "quelle_titel": "Seealpsee (Appenzeller Alpen)",
+   "quelle_id": "Q870267"
+  },
+  {
+   "id": "wd-f97ff55541",
+   "kategorie": "schweiz",
+   "frage": "Welche Amtssprache hat der Kanton Genf?",
+   "antworten": [
+    "Italienisch",
+    "Französisch",
+    "Rätoromanisch",
+    "Deutsch"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Genf",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Genf",
+   "quelle_id": "Q11917"
+  },
+  {
+   "id": "wd-fa590d6b6c",
+   "kategorie": "schweiz",
+   "frage": "Wie heisst der Hauptort des Kantons Tessin?",
+   "antworten": [
+    "Locarno",
+    "Bellinzona",
+    "Mendrisio",
+    "Chiasso"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanton_Tessin",
+   "lizenz": "CC0",
+   "quelle_titel": "Kanton Tessin",
+   "quelle_id": "Q12724"
+  }
+ ]
+}
