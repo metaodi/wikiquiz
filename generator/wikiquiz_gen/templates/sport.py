@@ -50,6 +50,10 @@ LAND_ANZEIGE = {"Vereinigtes Königreich": "England"}
 MAX_PRO_TEMPLATE = {"olympia": 25, "wm_land": 12, "wm_sieger": 12, "film": 30}
 # Filme: nur sehr bekannte (viele Sprachversionen); ältere Klassiker werden selten aufgerufen
 SCHWELLEN_FILM = Schwellen(min_sitelinks=60, min_pageviews=100.0, min_zeichen=2000)
+# Filme, die eine Themenkategorie schon gleich abfragt (Harry Potter: „Wer führte Regie beim dritten
+# Harry-Potter-Film «Der Gefangene von Askaban» (2004)?“). Wikidata-QIDs, damit ein entfernter Film
+# im Modus „ergaenzen“ nicht wieder dazukommt.
+AUSSCHLUSS_FILM = {"Q102448"}
 # Spiele und Turniere: Ältere Ausgaben (Olympia 1936, WM 1954) werden selten aufgerufen,
 # sind aber Allgemeinwissen. Die Sitelinks sind dort hoch.
 SCHWELLEN_TURNIER = Schwellen(min_sitelinks=40, min_pageviews=50.0, min_zeichen=2000)
@@ -196,7 +200,8 @@ SELECT ?item ?label ?article ?sl ?person ?pl ?geboren (COUNT(DISTINCT ?p2) AS ?n
   ?item rdfs:label ?label. FILTER(LANG(?label) = "de")
   ?article schema:about ?item; schema:isPartOf <https://de.wikipedia.org/>.
 }} GROUP BY ?item ?label ?article ?sl ?person ?pl ?geboren""", ttl=30 * 86400)
-    eindeutig = {qid(r["item"]): r for r in rows if r["n"] == "1" and geburtsjahr(r["geboren"]) is not None}
+    eindeutig = {qid(r["item"]): r for r in rows if r["n"] == "1" and geburtsjahr(r["geboren"]) is not None
+                 and qid(r["item"]) not in AUSSCHLUSS_FILM}
     regie = {q: (swiss(r["pl"]), geburtsjahr(r["geboren"])) for q, r in eindeutig.items()}
     bekannt = ktx.filtern([_kandidat(r) for r in eindeutig.values()], "film", schwellen=SCHWELLEN_FILM)
     # Regisseure bekannter Filme (60+ Sprachversionen), nicht alle Personen mit Beruf „Filmregisseur“
