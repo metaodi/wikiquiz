@@ -1,0 +1,1429 @@
+{
+ "version": 1,
+ "kategorie": "sport",
+ "generiert_am": "2026-11-16T12:40:21Z",
+ "fragen": [
+  {
+   "id": "wd-01714e78bd",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Harry Potter und der Stein der Weisen»?",
+   "antworten": [
+    "Luc Besson",
+    "Chris Columbus",
+    "Oliver Hirschbiegel",
+    "Tim Burton"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Stein_der_Weisen_(Film)",
+   "lizenz": "CC0",
+   "quelle_titel": "Harry Potter und der Stein der Weisen (Film)",
+   "quelle_id": "Q102438"
+  },
+  {
+   "id": "wd-07dbc734c7",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 1984 statt?",
+   "antworten": [
+    "Montreal",
+    "Moskau",
+    "Los Angeles",
+    "München"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1984",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 1984",
+   "quelle_id": "Q8456"
+  },
+  {
+   "id": "wd-0d4676e2e2",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 1976 statt?",
+   "antworten": [
+    "Montreal",
+    "München",
+    "Moskau",
+    "Mexiko-Stadt"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1976",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 1976",
+   "quelle_id": "Q8444"
+  },
+  {
+   "id": "wd-0fbe591a04",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Winterspiele 1984 statt?",
+   "antworten": [
+    "Innsbruck",
+    "Lillehammer",
+    "Lake Placid",
+    "Sarajevo"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1984",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Winterspiele 1984",
+   "quelle_id": "Q9657"
+  },
+  {
+   "id": "wd-0fdfac72f5",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Die Tribute von Panem – The Hunger Games»?",
+   "antworten": [
+    "Peter Farrelly",
+    "Larry Charles",
+    "Gary Ross",
+    "Richard Curtis"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_Tribute_von_Panem_%E2%80%93_The_Hunger_Games",
+   "lizenz": "CC0",
+   "quelle_titel": "Die Tribute von Panem – The Hunger Games",
+   "quelle_id": "Q212965"
+  },
+  {
+   "id": "wd-116a3768af",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 2016 statt?",
+   "antworten": [
+    "Rio de Janeiro",
+    "Paris",
+    "Athen",
+    "Sydney"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2016",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 2016",
+   "quelle_id": "Q8613"
+  },
+  {
+   "id": "wd-132268bae0",
+   "kategorie": "sport",
+   "frage": "Welches Land gewann die Fussball-Weltmeisterschaft 1986?",
+   "antworten": [
+    "Deutschland",
+    "Argentinien",
+    "England",
+    "Italien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_1986",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 1986",
+   "quelle_id": "Q46938"
+  },
+  {
+   "id": "wd-134df8208d",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Harry Potter und der Feuerkelch»?",
+   "antworten": [
+    "Martin Campbell",
+    "Terry Jones",
+    "Mike Newell",
+    "Martin Scorsese"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Feuerkelch_(Film)",
+   "lizenz": "CC0",
+   "quelle_titel": "Harry Potter und der Feuerkelch (Film)",
+   "quelle_id": "Q102225"
+  },
+  {
+   "id": "wd-1352e8868b",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Winterspiele 1976 statt?",
+   "antworten": [
+    "Sapporo",
+    "Lake Placid",
+    "Innsbruck",
+    "Grenoble"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1976",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Winterspiele 1976",
+   "quelle_id": "Q9651"
+  },
+  {
+   "id": "wd-16325ed24f",
+   "kategorie": "sport",
+   "frage": "Welches Land gewann die Fussball-Weltmeisterschaft 2006?",
+   "antworten": [
+    "Frankreich",
+    "Italien",
+    "Brasilien",
+    "Spanien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2006",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 2006",
+   "quelle_id": "Q37285"
+  },
+  {
+   "id": "wd-176e6a3fbd",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Der Untergang»?",
+   "antworten": [
+    "Chris Columbus",
+    "Mel Gibson",
+    "Peter Farrelly",
+    "Oliver Hirschbiegel"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Untergang",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Untergang",
+   "quelle_id": "Q152857"
+  },
+  {
+   "id": "wd-17faa0972f",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 1988 statt?",
+   "antworten": [
+    "Seoul",
+    "Montreal",
+    "Los Angeles",
+    "Barcelona"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1988",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 1988",
+   "quelle_id": "Q8470"
+  },
+  {
+   "id": "wd-19839f7b34",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Winterspiele 1994 statt?",
+   "antworten": [
+    "Nagano",
+    "Salt Lake City",
+    "Lillehammer",
+    "Turin"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1994",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Winterspiele 1994",
+   "quelle_id": "Q9663"
+  },
+  {
+   "id": "wd-1a0412267c",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «The Sixth Sense»?",
+   "antworten": [
+    "M. Night Shyamalan",
+    "Brett Ratner",
+    "Todd Phillips",
+    "Chris Weitz"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/The_Sixth_Sense",
+   "lizenz": "CC0",
+   "quelle_titel": "The Sixth Sense",
+   "quelle_id": "Q183063"
+  },
+  {
+   "id": "wd-1ee50cbd81",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «The Revenant – Der Rückkehrer»?",
+   "antworten": [
+    "Alejandro González Iñárritu",
+    "David Yates",
+    "Baz Luhrmann",
+    "James Mangold"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/The_Revenant_%E2%80%93_Der_R%C3%BCckkehrer",
+   "lizenz": "CC0",
+   "quelle_titel": "The Revenant – Der Rückkehrer",
+   "quelle_id": "Q18002795"
+  },
+  {
+   "id": "wd-23521125f8",
+   "kategorie": "sport",
+   "frage": "In welchem Land fand die Fussball-Weltmeisterschaft 2010 statt?",
+   "antworten": [
+    "Südafrika",
+    "Vereinigte Staaten",
+    "Brasilien",
+    "Frankreich"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2010",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 2010",
+   "quelle_id": "Q176883"
+  },
+  {
+   "id": "wd-25802d5cf2",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Rebecca»?",
+   "antworten": [
+    "Carol Reed",
+    "Alfred Hitchcock",
+    "Billy Wilder",
+    "Frank Capra"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rebecca_(1940)",
+   "lizenz": "CC0",
+   "quelle_titel": "Rebecca (1940)",
+   "quelle_id": "Q204212"
+  },
+  {
+   "id": "wd-2626cbbf3b",
+   "kategorie": "sport",
+   "frage": "In welchem Land fand die Fussball-Weltmeisterschaft 1934 statt?",
+   "antworten": [
+    "Italien",
+    "Frankreich",
+    "Schweden",
+    "Schweiz"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_1934",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 1934",
+   "quelle_id": "Q1477177"
+  },
+  {
+   "id": "wd-27ddd30a4a",
+   "kategorie": "sport",
+   "frage": "In welchem Land fand die Fussball-Weltmeisterschaft 2018 statt?",
+   "antworten": [
+    "Frankreich",
+    "Südafrika",
+    "Russland",
+    "Vereinigte Staaten"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2018",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 2018",
+   "quelle_id": "Q170645"
+  },
+  {
+   "id": "wd-37ea0771ff",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Das fünfte Element»?",
+   "antworten": [
+    "Sam Raimi",
+    "Luc Besson",
+    "Rob Marshall",
+    "Frank Darabont"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Das_f%C3%BCnfte_Element",
+   "lizenz": "CC0",
+   "quelle_titel": "Das fünfte Element",
+   "quelle_id": "Q106506"
+  },
+  {
+   "id": "wd-3f9930f4f7",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Königreich der Himmel»?",
+   "antworten": [
+    "William Friedkin",
+    "Francis Ford Coppola",
+    "Richard Marquand",
+    "Ridley Scott"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/K%C3%B6nigreich_der_Himmel",
+   "lizenz": "CC0",
+   "quelle_titel": "Königreich der Himmel",
+   "quelle_id": "Q207698"
+  },
+  {
+   "id": "wd-44ab2b0975",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Harry Potter und der Gefangene von Askaban»?",
+   "antworten": [
+    "Alfonso Cuarón",
+    "Baz Luhrmann",
+    "Rob Marshall",
+    "Jonathan Mostow"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Gefangene_von_Askaban_(Film)",
+   "lizenz": "CC0",
+   "quelle_titel": "Harry Potter und der Gefangene von Askaban (Film)",
+   "quelle_id": "Q102448"
+  },
+  {
+   "id": "wd-47afda9d68",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 1936 statt?",
+   "antworten": [
+    "Los Angeles",
+    "Amsterdam",
+    "Berlin",
+    "London"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1936",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 1936",
+   "quelle_id": "Q8150"
+  },
+  {
+   "id": "wd-4a35ea0ff3",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 2004 statt?",
+   "antworten": [
+    "Athen",
+    "London",
+    "Rio de Janeiro",
+    "Atlanta"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2004",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 2004",
+   "quelle_id": "Q8558"
+  },
+  {
+   "id": "wd-4aa7219ee2",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Shining»?",
+   "antworten": [
+    "Sergio Leone",
+    "Clint Eastwood",
+    "Irvin Kershner",
+    "Stanley Kubrick"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Shining_(1980)",
+   "lizenz": "CC0",
+   "quelle_titel": "Shining (1980)",
+   "quelle_id": "Q186341"
+  },
+  {
+   "id": "wd-4bcbb4c8f7",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 2008 statt?",
+   "antworten": [
+    "Athen",
+    "London",
+    "Tokio",
+    "Peking"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2008",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 2008",
+   "quelle_id": "Q8567"
+  },
+  {
+   "id": "wd-4e46dc115f",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «James Bond 007: Keine Zeit zu sterben»?",
+   "antworten": [
+    "Louis Leterrier",
+    "Cary Joji Fukunaga",
+    "Len Wiseman",
+    "James Wan"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/James_Bond_007:_Keine_Zeit_zu_sterben",
+   "lizenz": "CC0",
+   "quelle_titel": "James Bond 007: Keine Zeit zu sterben",
+   "quelle_id": "Q21534241"
+  },
+  {
+   "id": "wd-5269a547f7",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Winterspiele 2018 statt?",
+   "antworten": [
+    "Vancouver",
+    "Pyeongchang",
+    "Sotschi",
+    "Peking"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2018",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Winterspiele 2018",
+   "quelle_id": "Q9680"
+  },
+  {
+   "id": "wd-592da89041",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 1896 statt?",
+   "antworten": [
+    "St. Louis",
+    "London",
+    "Amsterdam",
+    "Athen"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1896",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 1896",
+   "quelle_id": "Q8080"
+  },
+  {
+   "id": "wd-5b24bc0006",
+   "kategorie": "sport",
+   "frage": "In welchem Land fand die Fussball-Weltmeisterschaft 1966 statt?",
+   "antworten": [
+    "Deutschland",
+    "England",
+    "Schweden",
+    "Argentinien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_1966",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 1966",
+   "quelle_id": "Q134202"
+  },
+  {
+   "id": "wd-5cb1d591c4",
+   "kategorie": "sport",
+   "frage": "In welchem Land fand die Fussball-Weltmeisterschaft 1930 statt?",
+   "antworten": [
+    "Uruguay",
+    "Schweiz",
+    "Italien",
+    "Frankreich"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_1930",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 1930",
+   "quelle_id": "Q48432"
+  },
+  {
+   "id": "wd-5db57a703a",
+   "kategorie": "sport",
+   "frage": "In welchem Land fand die Fussball-Weltmeisterschaft 1986 statt?",
+   "antworten": [
+    "Italien",
+    "Vereinigte Staaten",
+    "Argentinien",
+    "Mexiko"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_1986",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 1986",
+   "quelle_id": "Q46938"
+  },
+  {
+   "id": "wd-60f257efa8",
+   "kategorie": "sport",
+   "frage": "Welches Land gewann die Fussball-Weltmeisterschaft 1934?",
+   "antworten": [
+    "Brasilien",
+    "Italien",
+    "Deutschland",
+    "Argentinien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_1934",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 1934",
+   "quelle_id": "Q1477177"
+  },
+  {
+   "id": "wd-7371eb025a",
+   "kategorie": "sport",
+   "frage": "In welchem Land fand die Fussball-Weltmeisterschaft 1998 statt?",
+   "antworten": [
+    "Frankreich",
+    "Italien",
+    "Mexiko",
+    "Vereinigte Staaten"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_1998",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 1998",
+   "quelle_id": "Q101730"
+  },
+  {
+   "id": "wd-79e7dd40b2",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Winterspiele 2014 statt?",
+   "antworten": [
+    "Sotschi",
+    "Salt Lake City",
+    "Turin",
+    "Peking"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2014",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Winterspiele 2014",
+   "quelle_id": "Q9678"
+  },
+  {
+   "id": "wd-7cd817dfc6",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Die Brücke am Kwai»?",
+   "antworten": [
+    "David Lean",
+    "Carol Reed",
+    "Billy Wilder",
+    "John Sturges"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_Br%C3%BCcke_am_Kwai",
+   "lizenz": "CC0",
+   "quelle_titel": "Die Brücke am Kwai",
+   "quelle_id": "Q188718"
+  },
+  {
+   "id": "wd-7defa64f41",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 2012 statt?",
+   "antworten": [
+    "Sydney",
+    "Rio de Janeiro",
+    "London",
+    "Tokio"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2012",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 2012",
+   "quelle_id": "Q8577"
+  },
+  {
+   "id": "wd-8212d3e612",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Winterspiele 1988 statt?",
+   "antworten": [
+    "Albertville",
+    "Calgary",
+    "Innsbruck",
+    "Sarajevo"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1988",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Winterspiele 1988",
+   "quelle_id": "Q9658"
+  },
+  {
+   "id": "wd-8521086ec5",
+   "kategorie": "sport",
+   "frage": "Welches Land gewann die Fussball-Weltmeisterschaft 2010?",
+   "antworten": [
+    "Spanien",
+    "Argentinien",
+    "England",
+    "Frankreich"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2010",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 2010",
+   "quelle_id": "Q176883"
+  },
+  {
+   "id": "wd-89655f71c0",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Schindlers Liste»?",
+   "antworten": [
+    "Harold Ramis",
+    "Steven Spielberg",
+    "Ivan Reitman",
+    "Roger Spottiswoode"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schindlers_Liste",
+   "lizenz": "CC0",
+   "quelle_titel": "Schindlers Liste",
+   "quelle_id": "Q483941"
+  },
+  {
+   "id": "wd-8f7a0831e3",
+   "kategorie": "sport",
+   "frage": "Welches Land gewann die Fussball-Weltmeisterschaft 2018?",
+   "antworten": [
+    "Italien",
+    "Uruguay",
+    "Frankreich",
+    "Argentinien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2018",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 2018",
+   "quelle_id": "Q170645"
+  },
+  {
+   "id": "wd-905fb0a16b",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Der Pate»?",
+   "antworten": [
+    "James L. Brooks",
+    "Richard Marquand",
+    "Michael Apted",
+    "Francis Ford Coppola"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Pate_(Film)",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Pate (Film)",
+   "quelle_id": "Q47703"
+  },
+  {
+   "id": "wd-91b0da2f0b",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Ghostbusters – Die Geisterjäger»?",
+   "antworten": [
+    "Harold Ramis",
+    "Ivan Reitman",
+    "George Miller",
+    "Roger Spottiswoode"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ghostbusters_%E2%80%93_Die_Geisterj%C3%A4ger",
+   "lizenz": "CC0",
+   "quelle_titel": "Ghostbusters – Die Geisterjäger",
+   "quelle_id": "Q108745"
+  },
+  {
+   "id": "wd-9413afdc7a",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 2024 statt?",
+   "antworten": [
+    "Sydney",
+    "Paris",
+    "Peking",
+    "Tokio"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2024",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 2024",
+   "quelle_id": "Q995653"
+  },
+  {
+   "id": "wd-9450a215f8",
+   "kategorie": "sport",
+   "frage": "Welches Land gewann die Fussball-Weltmeisterschaft 2002?",
+   "antworten": [
+    "Uruguay",
+    "Brasilien",
+    "Deutschland",
+    "Spanien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2002",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 2002",
+   "quelle_id": "Q47735"
+  },
+  {
+   "id": "wd-94b89df73a",
+   "kategorie": "sport",
+   "frage": "Welches Land gewann die Fussball-Weltmeisterschaft 2022?",
+   "antworten": [
+    "Italien",
+    "Uruguay",
+    "Argentinien",
+    "Brasilien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2022",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 2022",
+   "quelle_id": "Q284163"
+  },
+  {
+   "id": "wd-953020f106",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Winterspiele 2022 statt?",
+   "antworten": [
+    "Vancouver",
+    "Peking",
+    "Sotschi",
+    "Nagano"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2022",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Winterspiele 2022",
+   "quelle_id": "Q193074"
+  },
+  {
+   "id": "wd-976e556255",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Der Herr der Ringe: Die Rückkehr des Königs»?",
+   "antworten": [
+    "Peter Jackson",
+    "David Fincher",
+    "Shane Black",
+    "Alfonso Cuarón"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Herr_der_Ringe:_Die_R%C3%BCckkehr_des_K%C3%B6nigs_(Film)",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Herr der Ringe: Die Rückkehr des Königs (Film)",
+   "quelle_id": "Q131074"
+  },
+  {
+   "id": "wd-9921a8366d",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Der Herr der Ringe: Die Gefährten»?",
+   "antworten": [
+    "Baz Luhrmann",
+    "Rob Marshall",
+    "Alfonso Cuarón",
+    "Peter Jackson"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Herr_der_Ringe:_Die_Gef%C3%A4hrten_(Film)",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Herr der Ringe: Die Gefährten (Film)",
+   "quelle_id": "Q127367"
+  },
+  {
+   "id": "wd-996ecf4181",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Terminator»?",
+   "antworten": [
+    "Bill Condon",
+    "James Cameron",
+    "Ron Howard",
+    "Ang Lee"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Terminator_(Film)",
+   "lizenz": "CC0",
+   "quelle_titel": "Terminator (Film)",
+   "quelle_id": "Q162255"
+  },
+  {
+   "id": "wd-a229c5c784",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Halloween – Die Nacht des Grauens»?",
+   "antworten": [
+    "John Carpenter",
+    "Lee Tamahori",
+    "David Lynch",
+    "Steven Spielberg"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Halloween_%E2%80%93_Die_Nacht_des_Grauens",
+   "lizenz": "CC0",
+   "quelle_titel": "Halloween – Die Nacht des Grauens",
+   "quelle_id": "Q221103"
+  },
+  {
+   "id": "wd-a2bc00d289",
+   "kategorie": "sport",
+   "frage": "In welchem Land fand die Fussball-Weltmeisterschaft 1950 statt?",
+   "antworten": [
+    "Brasilien",
+    "Chile",
+    "Frankreich",
+    "Schweden"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_1950",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 1950",
+   "quelle_id": "Q132515"
+  },
+  {
+   "id": "wd-abadc60fa3",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Winterspiele 2006 statt?",
+   "antworten": [
+    "Nagano",
+    "Turin",
+    "Sotschi",
+    "Lillehammer"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2006",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Winterspiele 2006",
+   "quelle_id": "Q9672"
+  },
+  {
+   "id": "wd-ac9377213d",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 1980 statt?",
+   "antworten": [
+    "Barcelona",
+    "Mexiko-Stadt",
+    "Montreal",
+    "Moskau"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1980",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 1980",
+   "quelle_id": "Q8450"
+  },
+  {
+   "id": "wd-ad843925ee",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Das Schweigen der Lämmer»?",
+   "antworten": [
+    "Martin Campbell",
+    "George Lucas",
+    "Jonathan Demme",
+    "Harold Ramis"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Das_Schweigen_der_L%C3%A4mmer_(Film)",
+   "lizenz": "CC0",
+   "quelle_titel": "Das Schweigen der Lämmer (Film)",
+   "quelle_id": "Q133654"
+  },
+  {
+   "id": "wd-ae4e541bfe",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 1992 statt?",
+   "antworten": [
+    "Sydney",
+    "Barcelona",
+    "Seoul",
+    "Athen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1992",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 1992",
+   "quelle_id": "Q8488"
+  },
+  {
+   "id": "wd-aeef461c43",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 2000 statt?",
+   "antworten": [
+    "Peking",
+    "London",
+    "Seoul",
+    "Sydney"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2000",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 2000",
+   "quelle_id": "Q8544"
+  },
+  {
+   "id": "wd-b0016dce81",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «2001: Odyssee im Weltraum»?",
+   "antworten": [
+    "Clint Eastwood",
+    "Sidney Lumet",
+    "Irvin Kershner",
+    "Stanley Kubrick"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/2001:_Odyssee_im_Weltraum",
+   "lizenz": "CC0",
+   "quelle_titel": "2001: Odyssee im Weltraum",
+   "quelle_id": "Q103474"
+  },
+  {
+   "id": "wd-b0da88eacc",
+   "kategorie": "sport",
+   "frage": "In welchem Land fand die Fussball-Weltmeisterschaft 1990 statt?",
+   "antworten": [
+    "Vereinigte Staaten",
+    "Argentinien",
+    "Spanien",
+    "Italien"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_1990",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 1990",
+   "quelle_id": "Q132529"
+  },
+  {
+   "id": "wd-b3ae70dba4",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Psycho»?",
+   "antworten": [
+    "Sergei Michailowitsch Eisenstein",
+    "Alfred Hitchcock",
+    "George Cukor",
+    "Frank Capra"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Psycho_(1960)",
+   "lizenz": "CC0",
+   "quelle_titel": "Psycho (1960)",
+   "quelle_id": "Q163038"
+  },
+  {
+   "id": "wd-c12a1e692c",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 1996 statt?",
+   "antworten": [
+    "Peking",
+    "Athen",
+    "Seoul",
+    "Atlanta"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1996",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 1996",
+   "quelle_id": "Q8531"
+  },
+  {
+   "id": "wd-c187567274",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Der Pate – Teil II»?",
+   "antworten": [
+    "Michael Apted",
+    "Michael Cimino",
+    "Francis Ford Coppola",
+    "Brian De Palma"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Pate_%E2%80%93_Teil_II",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Pate – Teil II",
+   "quelle_id": "Q184768"
+  },
+  {
+   "id": "wd-c4a39a0761",
+   "kategorie": "sport",
+   "frage": "Welches Land gewann die Fussball-Weltmeisterschaft 1930?",
+   "antworten": [
+    "Uruguay",
+    "Frankreich",
+    "Deutschland",
+    "Brasilien"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_1930",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 1930",
+   "quelle_id": "Q48432"
+  },
+  {
+   "id": "wd-c55ee804ea",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Fluch der Karibik»?",
+   "antworten": [
+    "Guillermo del Toro",
+    "Alejandro González Iñárritu",
+    "Alan Taylor",
+    "Gore Verbinski"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fluch_der_Karibik",
+   "lizenz": "CC0",
+   "quelle_titel": "Fluch der Karibik",
+   "quelle_id": "Q46717"
+  },
+  {
+   "id": "wd-c5c6478d8c",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Winterspiele 2010 statt?",
+   "antworten": [
+    "Salt Lake City",
+    "Pyeongchang",
+    "Nagano",
+    "Vancouver"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2010",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Winterspiele 2010",
+   "quelle_id": "Q9674"
+  },
+  {
+   "id": "wd-cd5588813b",
+   "kategorie": "sport",
+   "frage": "Welches Land gewann die Fussball-Weltmeisterschaft 1998?",
+   "antworten": [
+    "Frankreich",
+    "England",
+    "Italien",
+    "Spanien"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_1998",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 1998",
+   "quelle_id": "Q101730"
+  },
+  {
+   "id": "wd-cda8f54ddf",
+   "kategorie": "sport",
+   "frage": "In welchem Land fand die Fussball-Weltmeisterschaft 2006 statt?",
+   "antworten": [
+    "Frankreich",
+    "Vereinigte Staaten",
+    "Südafrika",
+    "Deutschland"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2006",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 2006",
+   "quelle_id": "Q37285"
+  },
+  {
+   "id": "wd-d01585a2f8",
+   "kategorie": "sport",
+   "frage": "In welchem Land fand die Fussball-Weltmeisterschaft 2014 statt?",
+   "antworten": [
+    "Brasilien",
+    "Südafrika",
+    "Vereinigte Staaten",
+    "Deutschland"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2014",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 2014",
+   "quelle_id": "Q79859"
+  },
+  {
+   "id": "wd-d7b1468a31",
+   "kategorie": "sport",
+   "frage": "Welches Land gewann die Fussball-Weltmeisterschaft 2014?",
+   "antworten": [
+    "England",
+    "Deutschland",
+    "Argentinien",
+    "Italien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2014",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 2014",
+   "quelle_id": "Q79859"
+  },
+  {
+   "id": "wd-d80c9eb77e",
+   "kategorie": "sport",
+   "frage": "In welchem Land fand die Fussball-Weltmeisterschaft 2022 statt?",
+   "antworten": [
+    "Frankreich",
+    "Katar",
+    "Brasilien",
+    "Südafrika"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2022",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 2022",
+   "quelle_id": "Q284163"
+  },
+  {
+   "id": "wd-da0b1a783b",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 1972 statt?",
+   "antworten": [
+    "München",
+    "Mexiko-Stadt",
+    "Tokio",
+    "Moskau"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1972",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 1972",
+   "quelle_id": "Q8438"
+  },
+  {
+   "id": "wd-dc332c11d9",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Der Soldat James Ryan»?",
+   "antworten": [
+    "David Lynch",
+    "Roger Spottiswoode",
+    "George Miller",
+    "Steven Spielberg"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Soldat_James_Ryan",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Soldat James Ryan",
+   "quelle_id": "Q165817"
+  },
+  {
+   "id": "wd-e1ad30eb43",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Sieben»?",
+   "antworten": [
+    "Stephen Sommers",
+    "Alfonso Cuarón",
+    "David Fincher",
+    "Alejandro González Iñárritu"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sieben_(Film)",
+   "lizenz": "CC0",
+   "quelle_titel": "Sieben (Film)",
+   "quelle_id": "Q190908"
+  },
+  {
+   "id": "wd-eaf55c51bc",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Terminator 2 – Tag der Abrechnung»?",
+   "antworten": [
+    "James Cameron",
+    "Anthony Minghella",
+    "Bill Condon",
+    "Gil Junger"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Terminator_2_%E2%80%93_Tag_der_Abrechnung",
+   "lizenz": "CC0",
+   "quelle_titel": "Terminator 2 – Tag der Abrechnung",
+   "quelle_id": "Q170564"
+  },
+  {
+   "id": "wd-f47296bc4a",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Harry Potter und die Kammer des Schreckens»?",
+   "antworten": [
+    "Frank Darabont",
+    "Sam Raimi",
+    "Chris Columbus",
+    "Tim Burton"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_die_Kammer_des_Schreckens_(Film)",
+   "lizenz": "CC0",
+   "quelle_titel": "Harry Potter und die Kammer des Schreckens (Film)",
+   "quelle_id": "Q102244"
+  },
+  {
+   "id": "wd-fb2149854e",
+   "kategorie": "sport",
+   "frage": "Welches Land gewann die Fussball-Weltmeisterschaft 2026?",
+   "antworten": [
+    "England",
+    "Uruguay",
+    "Italien",
+    "Spanien"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2026",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 2026",
+   "quelle_id": "Q5020214"
+  },
+  {
+   "id": "wd-fbdd701fb5",
+   "kategorie": "sport",
+   "frage": "Wer führte Regie beim Film «Scream – Schrei!»?",
+   "antworten": [
+    "James L. Brooks",
+    "Wes Craven",
+    "Francis Ford Coppola",
+    "Michael Apted"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Scream_%E2%80%93_Schrei!",
+   "lizenz": "CC0",
+   "quelle_titel": "Scream – Schrei!",
+   "quelle_id": "Q27411"
+  },
+  {
+   "id": "wd-fbf2422ecd",
+   "kategorie": "sport",
+   "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 2020 statt?",
+   "antworten": [
+    "Rio de Janeiro",
+    "Tokio",
+    "Athen",
+    "Paris"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2020",
+   "lizenz": "CC0",
+   "quelle_titel": "Olympische Sommerspiele 2020",
+   "quelle_id": "Q181278"
+  },
+  {
+   "id": "wd-ff7e8cabee",
+   "kategorie": "sport",
+   "frage": "Welches Land gewann die Fussball-Weltmeisterschaft 1950?",
+   "antworten": [
+    "Argentinien",
+    "Uruguay",
+    "Italien",
+    "Spanien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_1950",
+   "lizenz": "CC0",
+   "quelle_titel": "Fußball-Weltmeisterschaft 1950",
+   "quelle_id": "Q132515"
+  }
+ ]
+}
