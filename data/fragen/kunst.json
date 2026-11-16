@@ -1,8 +1,1196 @@
 {
  "version": 1,
  "kategorie": "kunst",
- "generiert_am": "2026-11-16T05:36:48Z",
+ "generiert_am": "2026-11-16T12:14:27Z",
  "fragen": [
+  {
+   "id": "wd-04979d0e68",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Mona Lisa»?",
+   "antworten": [
+    "Leonardo da Vinci",
+    "Jan van Eyck",
+    "Rembrandt van Rijn",
+    "Diego Velázquez"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mona_Lisa",
+   "lizenz": "CC0",
+   "quelle_titel": "Mona Lisa",
+   "quelle_id": "Q12418"
+  },
+  {
+   "id": "wd-06e3876e74",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Das Parfum»?",
+   "antworten": [
+    "Ken Follett",
+    "Patrick Süskind",
+    "Salman Rushdie",
+    "Ian McEwan"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Das_Parfum",
+   "lizenz": "CC0",
+   "quelle_titel": "Das Parfum",
+   "quelle_id": "Q459303"
+  },
+  {
+   "id": "wd-06eb8ef246",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Carrie»?",
+   "antworten": [
+    "Salman Rushdie",
+    "Patrick Süskind",
+    "Stephen King",
+    "Paulo Coelho"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Carrie_(Roman)",
+   "lizenz": "CC0",
+   "quelle_titel": "Carrie (Roman)",
+   "quelle_id": "Q623394"
+  },
+  {
+   "id": "wd-0b769ba34f",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Die Verwandlung»?",
+   "antworten": [
+    "Franz Kafka",
+    "Jaroslav Hašek",
+    "Virginia Woolf",
+    "Oswald Spengler"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_Verwandlung",
+   "lizenz": "CC0",
+   "quelle_titel": "Die Verwandlung",
+   "quelle_id": "Q184222"
+  },
+  {
+   "id": "wd-0b8e434abf",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Alice im Wunderland»?",
+   "antworten": [
+    "Alexandre Dumas der Jüngere",
+    "Mark Twain",
+    "Johanna Spyri",
+    "Lewis Carroll"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Alice_im_Wunderland",
+   "lizenz": "CC0",
+   "quelle_titel": "Alice im Wunderland",
+   "quelle_id": "Q92640"
+  },
+  {
+   "id": "wd-0f5dd8f553",
+   "kategorie": "kunst",
+   "frage": "Wer komponierte die Oper «Aida»?",
+   "antworten": [
+    "Gaetano Donizetti",
+    "Giuseppe Verdi",
+    "Gioachino Rossini",
+    "Richard Wagner"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Aida_(Oper)",
+   "lizenz": "CC0",
+   "quelle_titel": "Aida (Oper)",
+   "quelle_id": "Q171277"
+  },
+  {
+   "id": "wd-1a06d7a107",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Impression, Sonnenaufgang»?",
+   "antworten": [
+    "John Everett Millais",
+    "Eugène Delacroix",
+    "Gustav Klimt",
+    "Claude Monet"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Impression,_Sonnenaufgang",
+   "lizenz": "CC0",
+   "quelle_titel": "Impression, Sonnenaufgang",
+   "quelle_id": "Q328523"
+  },
+  {
+   "id": "wd-1df1996702",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Die drei Musketiere»?",
+   "antworten": [
+    "Mary Shelley",
+    "Heinrich Hoffmann",
+    "Elias Lönnrot",
+    "Alexandre Dumas der Ältere"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_drei_Musketiere",
+   "lizenz": "CC0",
+   "quelle_titel": "Die drei Musketiere",
+   "quelle_id": "Q140527"
+  },
+  {
+   "id": "wd-1f91ef520f",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Die Freiheit führt das Volk»?",
+   "antworten": [
+    "Claude Monet",
+    "Eugène Delacroix",
+    "Théodore Géricault",
+    "Gustav Klimt"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_Freiheit_f%C3%BChrt_das_Volk",
+   "lizenz": "CC0",
+   "quelle_titel": "Die Freiheit führt das Volk",
+   "quelle_id": "Q29530"
+  },
+  {
+   "id": "wd-24438e780b",
+   "kategorie": "kunst",
+   "frage": "Wer komponierte die Oper «Die Entführung aus dem Serail»?",
+   "antworten": [
+    "Carl Maria von Weber",
+    "Wolfgang Amadeus Mozart",
+    "Gaetano Donizetti",
+    "Vincenzo Bellini"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_Entf%C3%BChrung_aus_dem_Serail",
+   "lizenz": "CC0",
+   "quelle_titel": "Die Entführung aus dem Serail",
+   "quelle_id": "Q210711"
+  },
+  {
+   "id": "wd-25d07abed6",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Wanderer über dem Nebelmeer»?",
+   "antworten": [
+    "Caspar David Friedrich",
+    "Théodore Géricault",
+    "John Everett Millais",
+    "Eugène Delacroix"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Wanderer_%C3%BCber_dem_Nebelmeer",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Wanderer über dem Nebelmeer",
+   "quelle_id": "Q311243"
+  },
+  {
+   "id": "wd-2a600ca0c7",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Der Wüstenplanet»?",
+   "antworten": [
+    "Frank Herbert",
+    "Joseph Heller",
+    "Stanisław Lem",
+    "Ray Bradbury"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dune_%E2%80%93_die_erste_Trilogie",
+   "lizenz": "CC0",
+   "quelle_titel": "Dune – die erste Trilogie",
+   "quelle_id": "Q190192"
+  },
+  {
+   "id": "wd-2b731928c1",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Der Garten der Lüste»?",
+   "antworten": [
+    "Diego Velázquez",
+    "Hieronymus Bosch",
+    "Sandro Botticelli",
+    "Jan van Eyck"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Garten_der_L%C3%BCste_(Bosch)",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Garten der Lüste (Bosch)",
+   "quelle_id": "Q321303"
+  },
+  {
+   "id": "wd-2bfeacf811",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «American Gothic»?",
+   "antworten": [
+    "Salvador Dalí",
+    "Vincent van Gogh",
+    "Grant Wood",
+    "Gustav Klimt"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/American_Gothic",
+   "lizenz": "CC0",
+   "quelle_titel": "American Gothic",
+   "quelle_id": "Q464782"
+  },
+  {
+   "id": "wd-32f14597dd",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Struwwelpeter»?",
+   "antworten": [
+    "Heinrich Hoffmann",
+    "Alexandre Dumas der Ältere",
+    "Edgar Allan Poe",
+    "Harriet Beecher Stowe"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Struwwelpeter",
+   "lizenz": "CC0",
+   "quelle_titel": "Struwwelpeter",
+   "quelle_id": "Q27912"
+  },
+  {
+   "id": "wd-34a3ca9b2a",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Die Geburt der Venus»?",
+   "antworten": [
+    "Sandro Botticelli",
+    "Leonardo da Vinci",
+    "Jan van Eyck",
+    "Diego Velázquez"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_Geburt_der_Venus_(Botticelli)",
+   "lizenz": "CC0",
+   "quelle_titel": "Die Geburt der Venus (Botticelli)",
+   "quelle_id": "Q151047"
+  },
+  {
+   "id": "wd-39cf2fa423",
+   "kategorie": "kunst",
+   "frage": "Wer komponierte die Oper «Tosca»?",
+   "antworten": [
+    "Georges Bizet",
+    "Pietro Mascagni",
+    "Giacomo Puccini",
+    "Giuseppe Verdi"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tosca",
+   "lizenz": "CC0",
+   "quelle_titel": "Tosca",
+   "quelle_id": "Q192941"
+  },
+  {
+   "id": "wd-3a5ed03103",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Momo»?",
+   "antworten": [
+    "Philip K. Dick",
+    "Sylvia Plath",
+    "Michael Ende",
+    "Gabriel García Márquez"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Momo_(Roman)",
+   "lizenz": "CC0",
+   "quelle_titel": "Momo (Roman)",
+   "quelle_id": "Q874381"
+  },
+  {
+   "id": "wd-3b0889cc2f",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Der Report der Magd»?",
+   "antworten": [
+    "Margaret Atwood",
+    "Paulo Coelho",
+    "Michael Ende",
+    "Thomas Harris"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Report_der_Magd",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Report der Magd",
+   "quelle_id": "Q1541914"
+  },
+  {
+   "id": "wd-3e2dc60b6d",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Frankenstein»?",
+   "antworten": [
+    "Hans Christian Andersen",
+    "Mary Shelley",
+    "Alexandre Dumas der Ältere",
+    "Edgar Allan Poe"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Frankenstein_(Roman)",
+   "lizenz": "CC0",
+   "quelle_titel": "Frankenstein (Roman)",
+   "quelle_id": "Q150827"
+  },
+  {
+   "id": "wd-42a2da33e6",
+   "kategorie": "kunst",
+   "frage": "Wer komponierte die Oper «Der Freischütz»?",
+   "antworten": [
+    "Gioachino Rossini",
+    "Vincenzo Bellini",
+    "Carl Maria von Weber",
+    "Giuseppe Verdi"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Freisch%C3%BCtz",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Freischütz",
+   "quelle_id": "Q156435"
+  },
+  {
+   "id": "wd-444c85e4ce",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Der Herr der Ringe»?",
+   "antworten": [
+    "J. R. R. Tolkien",
+    "Boris Leonidowitsch Pasternak",
+    "Giuseppe Tomasi di Lampedusa",
+    "Aldous Huxley"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Herr_der_Ringe",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Herr der Ringe",
+   "quelle_id": "Q15228"
+  },
+  {
+   "id": "wd-4684445359",
+   "kategorie": "kunst",
+   "frage": "Wer komponierte die Oper «Der fliegende Holländer»?",
+   "antworten": [
+    "Gioachino Rossini",
+    "Gaetano Donizetti",
+    "Richard Wagner",
+    "Giuseppe Verdi"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_fliegende_Holl%C3%A4nder",
+   "lizenz": "CC0",
+   "quelle_titel": "Der fliegende Holländer",
+   "quelle_id": "Q114640"
+  },
+  {
+   "id": "wd-4aac704374",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Ilias»?",
+   "antworten": [
+    "Gaius Iulius Caesar",
+    "Apollonios von Rhodos",
+    "Homer",
+    "Platon"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ilias",
+   "lizenz": "CC0",
+   "quelle_titel": "Ilias",
+   "quelle_id": "Q8275"
+  },
+  {
+   "id": "wd-4d0ede9553",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Jenseits von Eden»?",
+   "antworten": [
+    "Dr. Seuss",
+    "Antoine de Saint-Exupéry",
+    "John Steinbeck",
+    "Ayn Rand"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jenseits_von_Eden",
+   "lizenz": "CC0",
+   "quelle_titel": "Jenseits von Eden",
+   "quelle_id": "Q849701"
+  },
+  {
+   "id": "wd-4ef9e9fa38",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «1984»?",
+   "antworten": [
+    "Samuel Beckett",
+    "George Orwell",
+    "Margaret Mitchell",
+    "Antoine de Saint-Exupéry"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/1984_(Roman)",
+   "lizenz": "CC0",
+   "quelle_titel": "1984 (Roman)",
+   "quelle_id": "Q208460"
+  },
+  {
+   "id": "wd-5a392324b9",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Las Meninas»?",
+   "antworten": [
+    "Raffael",
+    "Diego Velázquez",
+    "Rembrandt van Rijn",
+    "Jan Vermeer"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Las_Meninas",
+   "lizenz": "CC0",
+   "quelle_titel": "Las Meninas",
+   "quelle_id": "Q208758"
+  },
+  {
+   "id": "wd-5d7f1885c0",
+   "kategorie": "kunst",
+   "frage": "Wer komponierte die Oper «Die Bohème»?",
+   "antworten": [
+    "Jacques Offenbach",
+    "Giacomo Puccini",
+    "Giuseppe Verdi",
+    "Vincenzo Bellini"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/La_Boh%C3%A8me",
+   "lizenz": "CC0",
+   "quelle_titel": "La Bohème",
+   "quelle_id": "Q188621"
+  },
+  {
+   "id": "wd-5e1bcc25bb",
+   "kategorie": "kunst",
+   "frage": "Wer komponierte die Oper «Norma»?",
+   "antworten": [
+    "Vincenzo Bellini",
+    "Jacques Offenbach",
+    "Richard Wagner",
+    "Gioachino Rossini"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Norma_(Oper)",
+   "lizenz": "CC0",
+   "quelle_titel": "Norma (Oper)",
+   "quelle_id": "Q320353"
+  },
+  {
+   "id": "wd-5e9abc3658",
+   "kategorie": "kunst",
+   "frage": "Wer komponierte die Oper «Rienzi»?",
+   "antworten": [
+    "Gioachino Rossini",
+    "Jacques Offenbach",
+    "Richard Wagner",
+    "Gaetano Donizetti"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rienzi",
+   "lizenz": "CC0",
+   "quelle_titel": "Rienzi",
+   "quelle_id": "Q689441"
+  },
+  {
+   "id": "wd-5fe62436ff",
+   "kategorie": "kunst",
+   "frage": "Wer komponierte die Oper «Nabucco»?",
+   "antworten": [
+    "Gaetano Donizetti",
+    "Jacques Offenbach",
+    "Giuseppe Verdi",
+    "Gioachino Rossini"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Nabucco",
+   "lizenz": "CC0",
+   "quelle_titel": "Nabucco",
+   "quelle_id": "Q202230"
+  },
+  {
+   "id": "wd-68e9e38ea4",
+   "kategorie": "kunst",
+   "frage": "Wer komponierte die Oper «Il barbiere di Siviglia»?",
+   "antworten": [
+    "Gaetano Donizetti",
+    "Giuseppe Verdi",
+    "Gioachino Rossini",
+    "Carl Maria von Weber"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Il_barbiere_di_Siviglia",
+   "lizenz": "CC0",
+   "quelle_titel": "Il barbiere di Siviglia",
+   "quelle_id": "Q208659"
+  },
+  {
+   "id": "wd-6ec82d7f02",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Odyssee»?",
+   "antworten": [
+    "Vergil",
+    "Homer",
+    "Mark Aurel",
+    "Ovid"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Odyssee",
+   "lizenz": "CC0",
+   "quelle_titel": "Odyssee",
+   "quelle_id": "Q35160"
+  },
+  {
+   "id": "wd-73465420b4",
+   "kategorie": "kunst",
+   "frage": "Wer komponierte die Oper «Hoffmanns Erzählungen»?",
+   "antworten": [
+    "Gaetano Donizetti",
+    "Richard Wagner",
+    "Giuseppe Verdi",
+    "Jacques Offenbach"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hoffmanns_Erz%C3%A4hlungen",
+   "lizenz": "CC0",
+   "quelle_titel": "Hoffmanns Erzählungen",
+   "quelle_id": "Q335012"
+  },
+  {
+   "id": "wd-73fb8b6fe3",
+   "kategorie": "kunst",
+   "frage": "Wer komponierte die Oper «Cavalleria rusticana»?",
+   "antworten": [
+    "Vincenzo Bellini",
+    "Jacques Offenbach",
+    "Georges Bizet",
+    "Pietro Mascagni"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Cavalleria_rusticana",
+   "lizenz": "CC0",
+   "quelle_titel": "Cavalleria rusticana",
+   "quelle_id": "Q221806"
+  },
+  {
+   "id": "wd-7bfa1d385b",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Sixtinische Madonna»?",
+   "antworten": [
+    "Jan van Eyck",
+    "Sandro Botticelli",
+    "Raffael",
+    "Rembrandt van Rijn"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sixtinische_Madonna",
+   "lizenz": "CC0",
+   "quelle_titel": "Sixtinische Madonna",
+   "quelle_id": "Q328079"
+  },
+  {
+   "id": "wd-8630a5d7f4",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Krieg und Frieden»?",
+   "antworten": [
+    "Fjodor Michailowitsch Dostojewski",
+    "Lew Nikolajewitsch Tolstoi",
+    "Louisa May Alcott",
+    "Jules Verne"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Krieg_und_Frieden",
+   "lizenz": "CC0",
+   "quelle_titel": "Krieg und Frieden",
+   "quelle_id": "Q161531"
+  },
+  {
+   "id": "wd-88e06431bf",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Sternennacht»?",
+   "antworten": [
+    "Claude Monet",
+    "John Everett Millais",
+    "Vincent van Gogh",
+    "Edward Hopper"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sternennacht",
+   "lizenz": "CC0",
+   "quelle_titel": "Sternennacht",
+   "quelle_id": "Q45585"
+  },
+  {
+   "id": "wd-8b6725b8f3",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Die Nachtwache»?",
+   "antworten": [
+    "Diego Velázquez",
+    "Sandro Botticelli",
+    "Jan Vermeer",
+    "Rembrandt van Rijn"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_Nachtwache",
+   "lizenz": "CC0",
+   "quelle_titel": "Die Nachtwache",
+   "quelle_id": "Q219831"
+  },
+  {
+   "id": "wd-8b8a771c18",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Das Floss der Medusa»?",
+   "antworten": [
+    "Vincent van Gogh",
+    "Caspar David Friedrich",
+    "Théodore Géricault",
+    "Gustav Klimt"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Das_Flo%C3%9F_der_Medusa",
+   "lizenz": "CC0",
+   "quelle_titel": "Das Floß der Medusa",
+   "quelle_id": "Q212616"
+  },
+  {
+   "id": "wd-96b851a099",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Sturmhöhe»?",
+   "antworten": [
+    "Emily Brontë",
+    "Henry David Thoreau",
+    "Karl Marx",
+    "Herman Melville"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sturmh%C3%B6he",
+   "lizenz": "CC0",
+   "quelle_titel": "Sturmhöhe",
+   "quelle_id": "Q202975"
+  },
+  {
+   "id": "wd-9ba39e39cc",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Dracula»?",
+   "antworten": [
+    "Bram Stoker",
+    "Joseph Conrad",
+    "Selma Lagerlöf",
+    "Lyman Frank Baum"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dracula_(Roman)",
+   "lizenz": "CC0",
+   "quelle_titel": "Dracula (Roman)",
+   "quelle_id": "Q41542"
+  },
+  {
+   "id": "wd-a12e00a1f7",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Moby-Dick»?",
+   "antworten": [
+    "Henry David Thoreau",
+    "Gustave Flaubert",
+    "Fjodor Michailowitsch Dostojewski",
+    "Herman Melville"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Moby-Dick",
+   "lizenz": "CC0",
+   "quelle_titel": "Moby-Dick",
+   "quelle_id": "Q174596"
+  },
+  {
+   "id": "wd-a85adb9342",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Rebecca»?",
+   "antworten": [
+    "George Orwell",
+    "Astrid Lindgren",
+    "Daphne du Maurier",
+    "Samuel Beckett"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rebecca_(Roman)",
+   "lizenz": "CC0",
+   "quelle_titel": "Rebecca (Roman)",
+   "quelle_id": "Q1334940"
+  },
+  {
+   "id": "wd-a8e0b1548f",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Das Mädchen mit dem Perlenohrgehänge»?",
+   "antworten": [
+    "Eugène Delacroix",
+    "Caspar David Friedrich",
+    "Raffael",
+    "Jan Vermeer"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Das_M%C3%A4dchen_mit_dem_Perlenohrring",
+   "lizenz": "CC0",
+   "quelle_titel": "Das Mädchen mit dem Perlenohrring",
+   "quelle_id": "Q185372"
+  },
+  {
+   "id": "wd-b221f33e94",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Im Westen nichts Neues»?",
+   "antworten": [
+    "F. Scott Fitzgerald",
+    "Giuseppe Tomasi di Lampedusa",
+    "Erich Maria Remarque",
+    "Vladimir Nabokov"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Im_Westen_nichts_Neues",
+   "lizenz": "CC0",
+   "quelle_titel": "Im Westen nichts Neues",
+   "quelle_id": "Q207332"
+  },
+  {
+   "id": "wd-b5334057a3",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Arnolfini-Porträt»?",
+   "antworten": [
+    "Rembrandt van Rijn",
+    "Hieronymus Bosch",
+    "Sandro Botticelli",
+    "Jan van Eyck"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Arnolfini-Hochzeit",
+   "lizenz": "CC0",
+   "quelle_titel": "Arnolfini-Hochzeit",
+   "quelle_id": "Q220859"
+  },
+  {
+   "id": "wd-b77cd6b05b",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Adele Bloch-Bauer I»?",
+   "antworten": [
+    "Gustav Klimt",
+    "John Everett Millais",
+    "Claude Monet",
+    "Vincent van Gogh"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Adele_Bloch-Bauer_I",
+   "lizenz": "CC0",
+   "quelle_titel": "Adele Bloch-Bauer I",
+   "quelle_id": "Q354396"
+  },
+  {
+   "id": "wd-b8bcd65f59",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Don Quijote»?",
+   "antworten": [
+    "Daniel Defoe",
+    "Wu Cheng’en",
+    "Niccolò Machiavelli",
+    "Miguel de Cervantes"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Don_Quijote",
+   "lizenz": "CC0",
+   "quelle_titel": "Don Quijote",
+   "quelle_id": "Q480"
+  },
+  {
+   "id": "wd-b9200a10b3",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Der Kuss»?",
+   "antworten": [
+    "Salvador Dalí",
+    "Claude Monet",
+    "Grant Wood",
+    "Gustav Klimt"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Kuss_(Klimt)",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Kuss (Klimt)",
+   "quelle_id": "Q698487"
+  },
+  {
+   "id": "wd-bbd7a42983",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Schachnovelle»?",
+   "antworten": [
+    "Stefan Zweig",
+    "Robert Musil",
+    "James Joyce",
+    "Franz Kafka"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schachnovelle",
+   "lizenz": "CC0",
+   "quelle_titel": "Schachnovelle",
+   "quelle_id": "Q1513820"
+  },
+  {
+   "id": "wd-c36427c95b",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Buddenbrooks»?",
+   "antworten": [
+    "Robert Musil",
+    "Marcel Proust",
+    "Thomas Mann",
+    "Hermann Hesse"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Buddenbrooks",
+   "lizenz": "CC0",
+   "quelle_titel": "Buddenbrooks",
+   "quelle_id": "Q326909"
+  },
+  {
+   "id": "wd-c3e0685267",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Kamasutra»?",
+   "antworten": [
+    "Mark Aurel",
+    "Apuleius",
+    "Vatsyayana Mallanaga",
+    "Vergil"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kamasutra",
+   "lizenz": "CC0",
+   "quelle_titel": "Kamasutra",
+   "quelle_id": "Q47228"
+  },
+  {
+   "id": "wd-d1af6da00f",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Der Graf von Monte Christo»?",
+   "antworten": [
+    "Mary Shelley",
+    "Heinrich Hoffmann",
+    "Alexandre Dumas der Ältere",
+    "Victor Hugo"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Graf_von_Monte_Christo",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Graf von Monte Christo",
+   "quelle_id": "Q191838"
+  },
+  {
+   "id": "wd-d2d9c96431",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Göttliche Komödie»?",
+   "antworten": [
+    "Wu Cheng’en",
+    "Niccolò Machiavelli",
+    "Giovanni Boccaccio",
+    "Dante Alighieri"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/G%C3%B6ttliche_Kom%C3%B6die",
+   "lizenz": "CC0",
+   "quelle_titel": "Göttliche Komödie",
+   "quelle_id": "Q40185"
+  },
+  {
+   "id": "wd-d401b8ca48",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Höhlengleichnis»?",
+   "antworten": [
+    "Ovid",
+    "Vergil",
+    "Mark Aurel",
+    "Platon"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/H%C3%B6hlengleichnis",
+   "lizenz": "CC0",
+   "quelle_titel": "Höhlengleichnis",
+   "quelle_id": "Q22738"
+  },
+  {
+   "id": "wd-d4c5b23d8d",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Ophelia»?",
+   "antworten": [
+    "Théodore Géricault",
+    "John Everett Millais",
+    "Edward Hopper",
+    "Claude Monet"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ophelia_(Millais)",
+   "lizenz": "CC0",
+   "quelle_titel": "Ophelia (Millais)",
+   "quelle_id": "Q1065493"
+  },
+  {
+   "id": "wd-d5eba3d6e6",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Die Beständigkeit der Erinnerung»?",
+   "antworten": [
+    "Gustav Klimt",
+    "Claude Monet",
+    "Edward Hopper",
+    "Salvador Dalí"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Die_Best%C3%A4ndigkeit_der_Erinnerung",
+   "lizenz": "CC0",
+   "quelle_titel": "Die Beständigkeit der Erinnerung",
+   "quelle_id": "Q25729"
+  },
+  {
+   "id": "wd-d6875573a8",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Der Zauberberg»?",
+   "antworten": [
+    "Thomas Mann",
+    "Oswald Spengler",
+    "Robert Musil",
+    "Marcel Proust"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_Zauberberg",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Zauberberg",
+   "quelle_id": "Q212898"
+  },
+  {
+   "id": "wd-da65101510",
+   "kategorie": "kunst",
+   "frage": "Wer komponierte die Oper «Lucia di Lammermoor»?",
+   "antworten": [
+    "Vincenzo Bellini",
+    "Gaetano Donizetti",
+    "Gioachino Rossini",
+    "Jacques Offenbach"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Lucia_di_Lammermoor",
+   "lizenz": "CC0",
+   "quelle_titel": "Lucia di Lammermoor",
+   "quelle_id": "Q244209"
+  },
+  {
+   "id": "wd-e4c1b434ae",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Nighthawks»?",
+   "antworten": [
+    "Vincent van Gogh",
+    "Edward Hopper",
+    "Claude Monet",
+    "John Everett Millais"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Nighthawks",
+   "lizenz": "CC0",
+   "quelle_titel": "Nighthawks",
+   "quelle_id": "Q83872"
+  },
+  {
+   "id": "wd-e79ab0e090",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Der Fänger im Roggen»?",
+   "antworten": [
+    "Joseph Heller",
+    "J. D. Salinger",
+    "Alexander Issajewitsch Solschenizyn",
+    "Arthur Miller"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_F%C3%A4nger_im_Roggen",
+   "lizenz": "CC0",
+   "quelle_titel": "Der Fänger im Roggen",
+   "quelle_id": "Q183883"
+  },
+  {
+   "id": "wd-eb9f5b8ebf",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Finnegans Wake»?",
+   "antworten": [
+    "Franz Kafka",
+    "Oswald Spengler",
+    "Virginia Woolf",
+    "James Joyce"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Finnegans_Wake",
+   "lizenz": "CC0",
+   "quelle_titel": "Finnegans Wake",
+   "quelle_id": "Q6507"
+  },
+  {
+   "id": "wd-ecd4618254",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Stolz und Vorurteil»?",
+   "antworten": [
+    "Friedrich Schiller",
+    "Robert Southey",
+    "Johann Wolfgang von Goethe",
+    "Jane Austen"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Stolz_und_Vorurteil",
+   "lizenz": "CC0",
+   "quelle_titel": "Stolz und Vorurteil",
+   "quelle_id": "Q170583"
+  },
+  {
+   "id": "wd-f979592fdb",
+   "kategorie": "kunst",
+   "frage": "Wer malte das Gemälde «Salvator Mundi»?",
+   "antworten": [
+    "Rembrandt van Rijn",
+    "Leonardo da Vinci",
+    "Raffael",
+    "Diego Velázquez"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Salvator_mundi_(Gem%C3%A4lde)",
+   "lizenz": "CC0",
+   "quelle_titel": "Salvator mundi (Gemälde)",
+   "quelle_id": "Q1892745"
+  },
+  {
+   "id": "wd-fc31b5c71a",
+   "kategorie": "kunst",
+   "frage": "Wer schrieb «Der kleine Prinz»?",
+   "antworten": [
+    "Erich Maria Remarque",
+    "Vladimir Nabokov",
+    "Antoine de Saint-Exupéry",
+    "John Steinbeck"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Der_kleine_Prinz",
+   "lizenz": "CC0",
+   "quelle_titel": "Der kleine Prinz",
+   "quelle_id": "Q25338"
+  },
   {
    "id": "wp-075a875048",
    "kategorie": "kunst",
