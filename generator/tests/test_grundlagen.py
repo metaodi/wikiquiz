@@ -355,6 +355,44 @@ def test_dedupe_gleiche_antwort_nicht_fuer_wikidata():
     assert deduplizieren(fragen)[0] == fragen
 
 
+def test_zeitgenossen_und_geburtsjahr():
+    from wikiquiz_gen.templates.base import zeitgenossen
+    from wikiquiz_gen.templates.kunst import geburtsjahr
+
+    assert geburtsjahr("1564-04-23T00:00:00Z") == 1564
+    assert geburtsjahr("-0496-01-01T00:00:00Z") == -496
+    pool = [("Goethe", 1749), ("Schiller", 1759), ("Kleist", 1777), ("Novalis", 1772), ("Brecht", 1898),
+            ("Lessing", 1729), ("Homer", -800)]
+    gew = zeitgenossen(pool, 1749, {"Goethe"}, random.Random(1), n=3, aus=4)
+    assert len(gew) == 3 and "Goethe" not in gew and not {"Brecht", "Homer"} & set(gew)
+    assert zeitgenossen(pool[:3], 1749, {"Goethe"}, random.Random(1)) == []  # zu wenige
+
+
+def test_sport_wm_name_und_olympia_orte():
+    from wikiquiz_gen.templates.sport import SOMMER_ORTE, WINTER_ORTE, _jahr, _wm_name
+
+    assert _wm_name("Fußball-Weltmeisterschaft 2014") == "Fussball-Weltmeisterschaft 2014"
+    assert _wm_name("Fußball-Weltmeisterschaft 2018/Qualifikation (UEFA)/Gruppe C") is None
+    assert _wm_name("Fußball-Weltmeisterschaft der Frauen 2019") is None
+    assert _jahr("Olympische Sommerspiele 1972") == 1972
+    assert SOMMER_ORTE[1972] == "München" and WINTER_ORTE[1928] == "St. Moritz"
+    # Ausgefallene Spiele (Weltkriege) und Spiele mit mehreren Gastgebern fehlen
+    assert not {1916, 1940, 1944} & SOMMER_ORTE.keys() and 2026 not in WINTER_ORTE
+
+
+def test_urheber_pool_ohne_unbekannte_geburtsjahre():
+    from wikiquiz_gen.templates.kunst import geburtsjahr, urheber_pool
+
+    assert geburtsjahr("http://www.wikidata.org/.well-known/genid/abc") is None
+    assert geburtsjahr(None) is None
+    rows = [
+        {"person": "P1", "pl": "James Cameron", "geboren": "1954-08-16T00:00:00Z"},
+        {"person": "P1", "pl": "James Cameron", "geboren": "1954-08-16T00:00:00Z"},  # zwei Filme
+        {"person": "P2", "pl": "Unbekannt", "geboren": "http://www.wikidata.org/.well-known/genid/x"},
+    ]
+    assert urheber_pool(rows) == [("James Cameron", 1954)]
+
+
 def test_artikel_aus_anderen_kategorien():
     from wikiquiz_gen.pipeline import ohne_fremde_ids, themen_anderer_kategorien
     from wikiquiz_gen.popularity import Kandidat
