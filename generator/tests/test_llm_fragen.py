@@ -1,4 +1,5 @@
 import random
+import pytest
 
 from wikiquiz_gen.llm.fragen import artikel_verarbeiten, beleg_vorhanden, zuordnen_antwort
 from wikiquiz_gen.wikipedia.auszug import auszug
@@ -177,3 +178,27 @@ def test_kategorie_abgleich(monkeypatch):
     behalten, verworfen = kand.passende_kategorie(None, ks, "kunst")
     assert [k.titel for k in behalten] == ["Mozart", "Unklar"]
     assert verworfen[0][1] == "kategorie passt nicht: geschichte"
+
+
+def test_themenkategorien_ohne_abgleich(monkeypatch):
+    """Schweiz und Star Wars liegen quer zu den Fachkategorien: ein Bundesrat bleibt drin."""
+    from wikiquiz_gen.popularity import Kandidat
+    from wikiquiz_gen.wikipedia import kandidaten as kand
+
+    monkeypatch.setattr(kand, "artikel_kategorien", lambda http, titel: pytest.fail("kein Abgleich erwartet"))
+    ks = [Kandidat("Q1", "Ueli Maurer", "Ueli Maurer", 40)]
+    for thema in ("schweiz", "starwars"):
+        behalten, verworfen = kand.passende_kategorie(None, ks, thema)
+        assert behalten == ks and verworfen == []
+
+
+def test_zum_thema():
+    from wikiquiz_gen.wikipedia.quellen import zum_thema
+
+    assert zum_thema(["Kategorie:Bundesrat (Schweiz)", "Kategorie:Politiker (20. Jahrhundert)"], "schweiz")
+    assert zum_thema(["Kategorie:See in der Schweiz"], "schweiz")
+    assert zum_thema(["Kategorie:Star-Wars-Film", "Kategorie:Science-Fiction-Film"], "starwars")
+    assert not zum_thema(["Kategorie:Science-Fiction-Film"], "starwars")
+    assert not zum_thema(["Kategorie:Fluss in Europa"], "schweiz")
+    # Themen beeinflussen die Zuordnung zu Fachkategorien nicht
+    assert zuordnen(["Kategorie:Bundesrat (Schweiz)", "Kategorie:Politiker (20. Jahrhundert)"]) == "geschichte"

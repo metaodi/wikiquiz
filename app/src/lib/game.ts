@@ -4,7 +4,7 @@
  */
 import { ZEITLIMIT_S, punkteFuerZeit } from './config';
 import { mischen, verfuegbareKategorien, waehleFrage, type Rng } from './picker';
-import { KATEGORIEN } from './categories';
+import { KATEGORIEN, URSPRUENGLICHE_KATEGORIEN } from './categories';
 import type { Einstellungen, Frage, KategorieId, Phase, Spieler, Spielstand } from './types';
 
 export type Wahl = KategorieId | 'zufall';
@@ -21,6 +21,20 @@ export function einstellungenPruefen(e: Partial<Einstellungen> | undefined, anza
   // Reihenfolge wie in KATEGORIEN, unbekannte IDs verwerfen
   const gewaehlt = ALLE_KATEGORIEN.filter((id) => e?.kategorien?.includes(id));
   return { modus, kategorien: gewaehlt.length > 0 ? gewaehlt : [...ALLE_KATEGORIEN] };
+}
+
+/**
+ * Gespeicherte Kategorienauswahl um seither neu hinzugekommene Kategorien ergänzen – aber nur, wenn
+ * damals alle bekannten Kategorien gewählt waren (Standard „alle“). Eine bewusste Auswahl bleibt.
+ * Ohne `bekannt` (ältere Speicherstände) gelten die ursprünglichen sechs Kategorien als bekannt.
+ */
+export function neueKategorienErgaenzen(
+  gewaehlt: KategorieId[] | undefined,
+  bekannt: KategorieId[] | undefined,
+): KategorieId[] | undefined {
+  const alt = bekannt ?? URSPRUENGLICHE_KATEGORIEN;
+  if (!gewaehlt || !alt.every((k) => gewaehlt.includes(k))) return gewaehlt;
+  return [...gewaehlt, ...ALLE_KATEGORIEN.filter((k) => !alt.includes(k) && !gewaehlt.includes(k))];
 }
 
 /** Wählt der vorherige Spieler die Kategorie für den aktiven Spieler? */

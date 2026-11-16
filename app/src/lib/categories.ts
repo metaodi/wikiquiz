@@ -16,6 +16,13 @@ export const KATEGORIEN: Kategorie[] = [
   { id: 'sport', name: 'Sport & Unterhaltung', farbe: '#e65100', text: '#fff', icon: '⚽' },
   { id: 'geografie', name: 'Geografie', farbe: '#2e7d32', text: '#fff', icon: '🌍' },
   { id: 'allgemeinwissen', name: 'Allgemeinwissen', farbe: '#f9a825', text: '#1f2a44', icon: '💡' },
+  { id: 'schweiz', name: 'Schweiz', farbe: '#d52b1e', text: '#fff', icon: '🇨🇭' },
+  { id: 'starwars', name: 'Star Wars', farbe: '#1b1b1b', text: '#ffe81f', icon: '🌌' },
+];
+
+/** Kategorien, die es seit der ersten Version gibt. Wer damals alle gewählt hatte, bekommt neue dazu. */
+export const URSPRUENGLICHE_KATEGORIEN: KategorieId[] = [
+  'naturwissenschaften', 'kunst', 'geschichte', 'sport', 'geografie', 'allgemeinwissen',
 ];
 
 export const KATEGORIE_MAP: Record<KategorieId, Kategorie> = Object.fromEntries(

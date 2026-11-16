@@ -4,10 +4,11 @@ from __future__ import annotations
 import logging
 from datetime import date
 
+from ..config import THEMENKATEGORIEN
 from ..http import TAG, Http
 from ..popularity import API_URL, Kandidat
 from ..sparql import abfrage
-from .quellen import QUALITAETSKATEGORIEN, STARTKATEGORIEN, zuordnen
+from .quellen import QUALITAETSKATEGORIEN, STARTKATEGORIEN, zum_thema, zuordnen
 
 log = logging.getLogger(__name__)
 
@@ -74,6 +75,7 @@ def qualitaets_artikel(http: Http) -> list[dict]:
         for p in _mitglieder(http, kat, extra_props="categories", max_artikel=10_000).values():
             if p.get("ns") == 0:
                 p["zuordnung"] = zuordnen(p.get("categories", []))
+                p["themen"] = [t for t in sorted(THEMENKATEGORIEN) if zum_thema(p.get("categories", []), t)]
                 ergebnis.append(p)
     return ergebnis
 
@@ -107,7 +109,10 @@ def passende_kategorie(http: Http, kandidaten: list[Kandidat], kategorie: str
                        ) -> tuple[list[Kandidat], list[tuple[Kandidat, str]]]:
     """Kategorie-Abgleich: Zeigen Wikipedia-Kategorien und Wikidata-Berufe eines Artikels eindeutig
     auf eine andere Quizkategorie, wird er übersprungen (z. B. Friedrich II. aus „Komponist (Klassik)“
-    → Geschichte, Johannes Kepler → Naturwissenschaften). Artikel ohne eindeutige Zuordnung bleiben drin."""
+    → Geschichte, Johannes Kepler → Naturwissenschaften). Artikel ohne eindeutige Zuordnung bleiben drin.
+    Themenkategorien (Schweiz, Star Wars) liegen quer zu den Fachkategorien: dort kein Abgleich."""
+    if kategorie in THEMENKATEGORIEN:
+        return list(kandidaten), []
     kats = artikel_kategorien(http, [k.titel for k in kandidaten])
     b = berufe(http, [k.qid for k in kandidaten])
     behalten, verworfen = [], []
@@ -178,10 +183,13 @@ def sammeln(http: Http, kategorie: str, min_sitelinks: int, max_pro_quelle: int 
     Seitenaufrufe, Länge usw. prüft danach der Bekanntheitsfilter."""
     roh: dict[str, dict] = {}
     for kat, tiefe in STARTKATEGORIEN.get(kategorie, []):
-        for p in kategorie_artikel(http, kat, tiefe, max_artikel=max_pro_quelle):
+        artikel = kategorie_artikel(http, kat, tiefe, max_artikel=max_pro_quelle)
+        if not artikel:
+            log.warning("%s: Startkategorie „%s“ ist leer oder existiert nicht", kategorie, kat)
+        for p in artikel:
             roh.setdefault(p["title"], {**p, "quelle": f"Kategorie:{kat}"})
     for p in qualitaets_artikel(http):
-        if p.get("zuordnung") == kategorie:
+        if p.get("zuordnung") == kategorie or kategorie in p.get("themen", []):
             roh.setdefault(p["title"], {**p, "quelle": "Exzellent/Lesenswert"})
     mit_qid = {t: p for t, p in roh.items()
                if p.get("pageprops", {}).get("wikibase_item") and "disambiguation" not in p.get("pageprops", {})}

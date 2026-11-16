@@ -93,6 +93,12 @@ Einmalig nötig:
    Startkategorie. Verarbeitet wird reihum zuerst aus dem Thema mit den bisher wenigsten Fragen (Bestand
    eingerechnet), innerhalb eines Themas nach Seitenaufrufen (`wikipedia/themen.py`). So überwiegen nicht
    allein die meistgelesenen Themen (in der Geschichte NS-Zeit und Zweiter Weltkrieg).
+   **Themenkategorien** (`schweiz`, `starwars`; `THEMENKATEGORIEN` in `config.py`) liegen quer zu den
+   Fachkategorien: Für sie entfällt der Kategorie-Abgleich (ein Bundesrat bleibt in „Schweiz“, obwohl er sonst
+   „Geschichte“ wäre). Exzellente und lesenswerte Artikel kommen dazu, wenn eine ihrer Wikipedia-Kategorien ein
+   Themen-Stichwort enthält (`THEMEN_STICHWORTE`, z. B. „(Schweiz)“, „in der Schweiz“, „Star Wars“). Dieselben
+   Artikel können zusätzlich Fragen in ihrer Fachkategorie liefern. Für Themenkategorien gibt es (noch) keine
+   Wikidata-Templates. Leere oder nicht existierende Startkategorien werden im Log gemeldet.
 2. **Textauszug:** Einleitung und erste Abschnitte, ca. 4000 Zeichen Klartext; Abschnitte wie
    Literatur, Weblinks oder Rezeption werden übersprungen.
 3. **Generierung:** Prompt wörtlich aus `SPEC.md` (`llm/prompts.py`, ein Test prüft die Übereinstimmung),
@@ -126,8 +132,8 @@ Schwellen pro Kategorie in `wikiquiz_gen/config.py` (per CLI übersteuerbar):
 
 | Schwelle | Standard | Bemerkung |
 |---|---|---|
-| `min_sitelinks` | 30 (Sport, Kunst: 50) | wichtigster Indikator, direkt aus SPARQL. Höher, wo Seitenaufrufe kurzlebig sind (Sport, zeitgenössische Kunst und Literatur) |
-| `min_pageviews` | 200/Tag (Naturwissenschaften: 100) | abgefragtes Thema, Ø der letzten 12 vollen Monate auf de.wikipedia. Naturwissenschaftliche Artikel werden deutlich seltener aufgerufen (Niels Bohr, Enrico Fermi, Elektron < 200) |
+| `min_sitelinks` | 30 (Sport, Kunst: 50; Schweiz: 15; Star Wars: 20) | wichtigster Indikator, direkt aus SPARQL. Höher, wo Seitenaufrufe kurzlebig sind (Sport, zeitgenössische Kunst und Literatur); tiefer bei Schweizer Themen, die in wenigen Sprachen beschrieben sind |
+| `min_pageviews` | 200/Tag (Naturwissenschaften, Schweiz, Star Wars: 100) | abgefragtes Thema, Ø der letzten 12 vollen Monate auf de.wikipedia. Naturwissenschaftliche Artikel werden deutlich seltener aufgerufen (Niels Bohr, Enrico Fermi, Elektron < 200) |
 | `min_pageviews_antwort` | 100/Tag | richtige Antwort (z. B. Hauptstadt) – Städteartikel werden seltener aufgerufen als Länderartikel (Ankara ≈ 170, Nairobi ≈ 150) |
 | `min_zeichen` | 3000 | Klartext, geschätzt als 60 % der Wikitext-Länge (`prop=info`, 50 Titel/Request) |
 

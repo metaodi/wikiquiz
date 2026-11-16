@@ -66,7 +66,8 @@ app/                 (Schritt 4)
 ```
 
 - `id`: Präfix (`wd-`/`wp-`) + SHA-1 aus `quelle_id` und Fragetext → stabil über Läufe.
-- Kategorie-Slugs: `naturwissenschaften`, `kunst`, `geschichte`, `sport`, `geografie`, `allgemeinwissen`.
+- Kategorie-Slugs: `naturwissenschaften`, `kunst`, `geschichte`, `sport`, `geografie`, `allgemeinwissen`,
+  `schweiz`, `starwars`.
 - `quelle_url` zeigt immer auf den deutschen Wikipedia-Artikel.
 
 ## Spielstand (localStorage)
@@ -91,6 +92,8 @@ Schwellen pro Kategorie in `config.py`, per CLI übersteuerbar.
 | Hosting | GitHub Pages; die Fragen (`data/fragen/`) werden committet |
 | Rechtschreibung | Alle Texte werden auf „ss“ normalisiert (kein „ß“) |
 | Fragenablage | Eine Datei pro Kategorie (`data/fragen/`), der App-Build fügt sie zu `questions.json` zusammen |
+| Themenkategorien | Schweiz und Star Wars liegen quer zu den Fachkategorien: kein Kategorie-Abgleich, tiefere Bekanntheitsschwellen; ein Artikel darf Fragen in einer Fach- und einer Themenkategorie liefern |
+| Neue Kategorien | Gespeicherte Auswahl „alle“ wird um neue Kategorien ergänzt (`bekannteKategorien`), Schlüsselversion bleibt `v1` |
 | Automatisierung | GitHub Action „Fragen generieren“: pro Kategorie ein Pull Request im Modus „ergänzen“ mit Stichprobe |
 | Themenvielfalt | Wikipedia-Artikel werden reihum nach Thema verarbeitet (Geschichte: Epoche aus Jahreszahlen der Wikipedia-Kategorien, sonst Startkategorie), statt nur nach Seitenaufrufen |
 | Aktuelle Politik | Lebende Personen mit laufendem Amt (Wikidata P39 ohne Enddatum, Beginn ≤ 20 Jahre) werden nicht verarbeitet |

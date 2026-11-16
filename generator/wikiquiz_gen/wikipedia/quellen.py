@@ -89,9 +89,43 @@ STARTKATEGORIEN: dict[str, list[tuple[str, int]]] = {
         ("Spiel", 1),
         ("Sprache", 0),
     ],
+    # Themenkategorien (config.THEMENKATEGORIEN): kein Kategorie-Abgleich
+    "schweiz": [
+        ("Bundesrat (Schweiz)", 0),
+        ("Kanton (Schweiz)", 0),
+        ("Hauptort eines Schweizer Kantons", 0),
+        ("Geschichte der Schweiz", 1),
+        ("Politik (Schweiz)", 1),
+        ("Alpenpass", 0),
+        ("See in der Schweiz", 1),
+        ("Fluss in der Schweiz", 1),
+        ("Berg in den Alpen", 0),
+        ("Schweizer Küche", 1),
+        ("Brauchtum (Schweiz)", 1),
+        ("Unternehmen (Schweiz)", 0),
+        ("Erfindung (Schweiz)", 0),
+    ],
+    "starwars": [
+        ("Star Wars", 2),
+    ],
 }
 
 QUALITAETSKATEGORIEN = ["Wikipedia:Exzellent", "Wikipedia:Lesenswert"]
+
+# Themenkategorien: Exzellente/Lesenswerte Artikel, deren Wikipedia-Kategorien eines dieser
+# Stichworte enthalten (Gross-/Kleinschreibung egal). Unabhängig von `zuordnen`, weil ein
+# Artikel thematisch und fachlich zugleich passt (Gotthardpass: Schweiz und Geografie).
+THEMEN_STICHWORTE: dict[str, list[str]] = {
+    "schweiz": ["(schweiz)", "in der schweiz", "schweizer"],
+    "starwars": ["star wars", "star-wars"],
+}
+
+
+def zum_thema(kategorien: list[str], thema: str) -> bool:
+    """Gehört ein Artikel laut seinen Wikipedia-Kategorien zur Themenkategorie `thema`?"""
+    namen = [k.lower().removeprefix("kategorie:") for k in kategorien]
+    return any(w in n for n in namen for w in THEMEN_STICHWORTE.get(thema, []))
+
 
 # Stichworte in den (nicht versteckten) Kategorien eines Artikels → Quizkategorie.
 # Ein Stichwort zählt nur am Wortanfang: „Dichter (Deutsch)“ ja, „Verdichter“ oder
