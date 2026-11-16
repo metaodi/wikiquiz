@@ -121,6 +121,10 @@ Einmalig nötig:
    Kategorie (`MAX_GLEICHE_ANTWORT` in `dedupe.py`; Artikel wie „Der Todesstern“ zählen nicht, Jahreszahlen
    und Wikidata-Templatefragen sind ausgenommen). Sonst wiederholen sich vor allem in Themenkategorien
    Antworten wie George Lucas, Hogwarts oder Muggel. Die neuere Frage wird verworfen, der Bestand bleibt.
+   **Über Kategorien hinweg:** Artikel, zu denen eine andere Kategorie schon Fragen hat (gleiche Wikidata-QID),
+   werden vor dem LLM übersprungen (z. B. Kaki in Natur, wenn Essen schon Kaki-Fragen hat; Hermann Hesse in
+   Schweiz, wenn Kunst ihn schon hat). Vor dem Schreiben fallen ausserdem neue Fragen weg, deren ID es in einer
+   anderen Kategorie schon gibt; sonst bricht das Zusammenführen zu `questions.json` ab.
 
 Kosten (grobe Schätzung mit `claude-opus-5-5`, Denkaufwand `medium`): ca. 0.05–0.10 USD pro Artikel,
 also rund 5–15 USD für 150 Fragen einer Kategorie. Der Lauf protokolliert die tatsächlichen Tokens.
