@@ -25,6 +25,7 @@ HOST_INTERVALL = {
     "query.wikidata.org": 1.0,  # SPARQL: seriell und zurückhaltend
     "www.wikidata.org": 0.2,
     "de.wikipedia.org": 0.1,
+    "en.wikipedia.org": 0.1,
     "wikimedia.org": 0.25,  # Pageviews-API (drosselt bei Parallelität mit 429)
 }
 STANDARD_INTERVALL = 0.2

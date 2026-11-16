@@ -4,7 +4,10 @@ export type KategorieId =
   | 'geschichte'
   | 'sport'
   | 'geografie'
-  | 'allgemeinwissen';
+  | 'essen'
+  | 'natur'
+  | 'schweiz'
+  | 'starwars';
 
 export interface Frage {
   id: string;

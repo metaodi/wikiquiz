@@ -25,18 +25,20 @@ class Kontext:
         """Deterministischer Zufall pro Frage → stabile Ausgabe über Läufe."""
         return random.Random(f"{self.seed}|" + "|".join(schluessel))
 
-    def filtern(self, kandidaten: list[Kandidat], stufe: str, antwort: bool = False) -> list[Kandidat]:
-        """antwort=True: Schwelle für richtige Antworten (min_pageviews_antwort) verwenden."""
-        schwellen = self.schwellen
+    def filtern(self, kandidaten: list[Kandidat], stufe: str, antwort: bool = False,
+                bekanntheit: Bekanntheit | None = None, schwellen: Schwellen | None = None) -> list[Kandidat]:
+        """antwort=True: Schwelle für richtige Antworten (min_pageviews_antwort) verwenden.
+        `bekanntheit`/`schwellen` übersteuern die Standardwerte (z. B. für en.wikipedia)."""
+        schwellen = schwellen or self.schwellen
         if antwort:
             schwellen = replace(schwellen, min_pageviews=schwellen.min_pageviews_antwort)
-        bestanden, abgelehnt = self.bekanntheit.filtern(kandidaten, schwellen)
+        bestanden, abgelehnt = (bekanntheit or self.bekanntheit).filtern(kandidaten, schwellen)
         for k, grund in abgelehnt:
             self.protokoll.verwerfen(
                 self.kategorie,
                 f"bekanntheit:{stufe}",
                 grund,
-                {"qid": k.qid, "label": k.label, "titel": k.titel, "sitelinks": k.sitelinks,
+                {"qid": k.qid, "label": k.label, "titel": k.schluessel, "sitelinks": k.sitelinks,
                  "pageviews": None if k.pageviews is None else round(k.pageviews)},
             )
         return bestanden

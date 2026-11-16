@@ -4,7 +4,7 @@ from __future__ import annotations
 import re
 
 from ..http import TAG, Http
-from ..popularity import API_URL
+from ..popularity import api_url
 
 MAX_ZEICHEN = 4000
 # Abschnitte ohne Fliesstext bzw. mit Nebeninformationen
@@ -12,12 +12,16 @@ UEBERSPRINGEN = {
     "literatur", "weblinks", "einzelnachweise", "anmerkungen", "siehe auch", "quellen",
     "filmografie", "diskografie", "werke", "werkverzeichnis", "auszeichnungen", "rezeption",
     "trivia", "weiterführende literatur", "fussnoten", "fußnoten", "galerie", "liste",
+    # englische Wikipedia
+    "references", "external links", "see also", "notes", "further reading", "bibliography",
+    "sources", "citations", "footnotes", "filmography", "discography", "works", "awards",
+    "reception", "gallery", "in popular culture", "merchandising", "appearances", "explanatory notes",
 }
 _UEBERSCHRIFT = re.compile(r"^(={2,6})\s*(.+?)\s*\1\s*$")
 
 
-def klartext(http: Http, titel: str) -> str:
-    res = http.json(API_URL, params={
+def klartext(http: Http, titel: str, sprache: str = "de") -> str:
+    res = http.json(api_url(sprache), params={
         "action": "query", "format": "json", "formatversion": "2", "prop": "extracts",
         "explaintext": "1", "exsectionformat": "wiki", "redirects": "1", "titles": titel,
     }, ttl=30 * TAG)

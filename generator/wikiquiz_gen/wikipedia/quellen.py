@@ -57,6 +57,12 @@ STARTKATEGORIEN: dict[str, list[tuple[str, int]]] = {
         ("Kalter Krieg", 0),
         ("Schweizerische Geschichte", 1),
         ("Person (Schweizer Geschichte)", 0),
+        # Gesellschaft: Religion, Bräuche, Feiertage, Philosophie
+        ("Feiertag", 0),
+        ("Weltreligion", 0),
+        ("Brauch", 1),
+        ("Philosoph (Antike)", 0),
+        ("Philosoph (18. Jahrhundert)", 0),
     ],
     "sport": [
         ("Olympische Sportart", 0),
@@ -69,6 +75,8 @@ STARTKATEGORIEN: dict[str, list[tuple[str, int]]] = {
         ("Fernsehserie (Vereinigte Staaten)", 0),
         ("Film", 1),
         ("Computerspiel", 1),
+        ("Brettspiel", 0),
+        ("Kartenspiel", 0),
     ],
     "geografie": [
         ("Hauptstadt in Europa", 0),
@@ -76,22 +84,80 @@ STARTKATEGORIEN: dict[str, list[tuple[str, int]]] = {
         ("Gebirge", 1),
         ("Insel", 1),
         ("See", 1),
+        ("Sprache", 0),
     ],
-    "allgemeinwissen": [
-        ("Feiertag", 0),
-        ("Weltreligion", 0),
+    "essen": [
         ("Lebensmittel", 1),
         ("Getränk", 1),
+        ("Küche", 1),
+        ("Obst", 1),
+        ("Gemüse", 1),
+        ("Gewürz", 0),
+        ("Käsesorte", 0),
+        ("Spirituose", 1),
+        ("Biersorte", 0),
+        ("Backware", 1),
+    ],
+    "natur": [
         ("Haustier", 1),
         ("Nutztier", 1),
         ("Säugetiere", 0),
-        ("Brauch", 1),
-        ("Spiel", 1),
-        ("Sprache", 0),
+        ("Vögel", 0),
+        ("Schildkröten", 0),
+        ("Krokodile", 0),
+        ("Schlangen", 0),
+        ("Insekten", 0),
+        ("Hunderasse", 0),
+        ("Nutzpflanze", 1),
+        ("Baum", 0),
+    ],
+    # Themenkategorien (config.THEMENKATEGORIEN): kein Kategorie-Abgleich
+    "schweiz": [
+        ("Bundesratsmitglied (Schweiz)", 1),
+        ("Kanton (Schweiz)", 0),
+        ("Ort in der Schweiz", 1),
+        ("Schweizerische Geschichte", 1),
+        ("Politik (Schweiz)", 1),
+        ("Geographie (Schweiz)", 1),
+        ("See in der Schweiz", 1),
+        ("Fluss in der Schweiz", 1),
+        ("Essen und Trinken (Schweiz)", 1),
+        ("Feste und Brauchtum (Schweiz)", 1),
+        ("Volksfest in der Schweiz", 0),
+        ("UNESCO-Kultur- und -Naturerbe in der Schweiz", 1),
+    ],
+    "starwars": [
+        ("Star Wars", 2),
+    ],
+}
+
+# Englische Wikipedia (config.EN_SCHWELLEN): Kategorien ohne „Category:“-Präfix, mit Suchtiefe.
+# Übernommen werden nur Artikel ohne deutsches Pendant.
+EN_STARTKATEGORIEN: dict[str, list[tuple[str, int]]] = {
+    "starwars": [
+        ("Star Wars characters", 2),
+        ("Star Wars concepts", 1),
+        ("Star Wars locations", 1),
+        ("Star Wars technology", 1),
     ],
 }
 
 QUALITAETSKATEGORIEN = ["Wikipedia:Exzellent", "Wikipedia:Lesenswert"]
+
+# Themenkategorien: Exzellente/Lesenswerte Artikel, deren Wikipedia-Kategorien eines dieser
+# Stichworte enthalten (Gross-/Kleinschreibung egal). Unabhängig von `zuordnen`, weil ein
+# Artikel thematisch und fachlich zugleich passt (Gotthardpass: Schweiz und Geografie).
+THEMEN_STICHWORTE: dict[str, list[str]] = {
+    "schweiz": ["(schweiz)", "in der schweiz", "schweizer"],
+    "starwars": ["star wars", "star-wars"],
+}
+
+
+def zum_thema(kategorien: list[str], thema: str) -> bool:
+    """Gehört ein Artikel laut seinen Wikipedia-Kategorien zur Themenkategorie `thema`?"""
+    namen = [k.lower().removeprefix("kategorie:") for k in kategorien]
+    return any(w in n for n in namen for w in THEMEN_STICHWORTE.get(thema, []))
+
 
 # Stichworte in den (nicht versteckten) Kategorien eines Artikels → Quizkategorie.
 # Ein Stichwort zählt nur am Wortanfang: „Dichter (Deutsch)“ ja, „Verdichter“ oder
@@ -125,22 +191,27 @@ STICHWORTE: dict[str, dict[str, int]] = {
         "nationalsozialismus": 2, "holocaust": 2, "opfer des": 2, "nsdap": 2, "häftling": 2,
         "hingerichtete person": 2, "friedensnobelpreisträger": 2, "historisches dokument": 2,
         "rechtsquelle": 2, "antike rechtsquelle": 2,
+        # Gesellschaft
+        "feiertag": 2, "religion": 1, "brauch": 2, "philosoph": 2, "theolog": 1, "pädagog": 2,
+        "anthroposoph": 2,
     },
     "sport": {
         "sport": 2, "fußball": 2, "olympi": 2, "tennis": 2, "film": 2, "fernseh": 2,
         "serie": 1, "schauspieler": 2, "popmusik": 2, "rockmusik": 2, "rockband": 2, "sänger": 1,
-        "computerspiel": 2, "comic": 2, "weltmeister": 2,
+        "computerspiel": 2, "comic": 2, "weltmeister": 2, "brettspiel": 2, "kartenspiel": 2, "spiel": 1,
     },
     "geografie": {
         "fluss": 2, "gebirge": 2, "berg in": 2, "insel": 2, "see in": 2, "hauptstadt": 2,
         "geographie": 2, "geografie": 2, "nationalpark": 2, "wüste": 2, "landschaft": 1,
-        "staat in": 2, "ort in": 1, "stadt in": 1,
+        "staat in": 2, "ort in": 1, "stadt in": 1, "sprache": 1,
     },
-    "allgemeinwissen": {
-        "lebensmittel": 2, "getränk": 2, "feiertag": 2, "religion": 1, "sprache": 1,
-        "säugetier": 1, "haustier": 2, "nutztier": 2, "pflanze": 1, "brauch": 2, "spiel": 1,
-        "kleidung": 2, "speise": 2, "küche": 1, "philosoph": 2, "theolog": 1, "pädagog": 2,
-        "anthroposoph": 2,
+    "essen": {
+        "lebensmittel": 2, "getränk": 2, "speise": 2, "küche": 2, "obst": 2, "gemüse": 2, "gewürz": 2,
+        "käse": 2, "bier": 2, "wein": 1, "spirituose": 2, "backware": 2, "süßware": 2, "kochen": 2,
+    },
+    "natur": {
+        "säugetier": 2, "haustier": 2, "nutztier": 2, "hunderasse": 2, "vögel": 2, "reptil": 2,
+        "insekt": 2, "fische": 1, "tierart": 2, "pflanze": 1, "nutzpflanze": 2, "baum": 1,
     },
 }
 
@@ -191,10 +262,10 @@ BERUFE: dict[str, tuple[str, int]] = {
     "Q1397808": ("geschichte", 2), # Widerstandskämpfer
     "Q201788": ("geschichte", 1),  # Historiker
     "Q16533": ("geschichte", 1),   # Richter
-    # Allgemeinwissen
-    "Q4964182": ("allgemeinwissen", 2),  # Philosoph
-    "Q1234713": ("allgemeinwissen", 2),  # Theologe
-    "Q250867": ("allgemeinwissen", 1),   # katholischer Priester
+    # Geschichte & Gesellschaft (früher Allgemeinwissen)
+    "Q4964182": ("geschichte", 2),  # Philosoph
+    "Q1234713": ("geschichte", 2),  # Theologe
+    "Q250867": ("geschichte", 1),   # katholischer Priester
 }
 
 _MUSTER = {kat: [(re.compile(r"(?<!\w)" + re.escape(w)), g) for w, g in woerter.items()]

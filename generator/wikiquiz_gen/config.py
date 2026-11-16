@@ -21,11 +21,19 @@ USER_AGENT = os.environ.get(
 KATEGORIEN: dict[str, str] = {
     "naturwissenschaften": "Naturwissenschaften & Technik",
     "kunst": "Kunst, Musik & Literatur",
-    "geschichte": "Geschichte",
+    "geschichte": "Geschichte & Gesellschaft",
     "sport": "Sport & Unterhaltung",
     "geografie": "Geografie",
-    "allgemeinwissen": "Allgemeinwissen",
+    "essen": "Essen & Genuss",
+    "natur": "Tiere & Natur",
+    "schweiz": "Schweiz",
+    "starwars": "Star Wars",
 }
+
+# Themenkategorien liegen quer zu den Fachkategorien (ein Bundesrat wäre sonst „Geschichte“,
+# ein Star-Wars-Film „Sport & Unterhaltung“). Für sie entfällt der Kategorie-Abgleich, und
+# Exzellente/Lesenswerte Artikel werden ihnen nicht per Stichwort zugeordnet.
+THEMENKATEGORIEN: frozenset[str] = frozenset({"schweiz", "starwars"})
 
 LIZENZ = {"wikidata": "CC0", "wikipedia": "CC BY-SA 4.0"}
 
@@ -55,3 +63,17 @@ SCHWELLEN["kunst"] = Schwellen(min_sitelinks=50)
 # Naturwissenschaften & Technik: Fachartikel werden auf de.wikipedia deutlich seltener aufgerufen
 # (Niels Bohr, Enrico Fermi, Elektron < 200/Tag), sind aber Allgemeinwissen
 SCHWELLEN["naturwissenschaften"] = Schwellen(min_pageviews=100.0)
+# Schweiz: Schweizer Themen haben weniger Sprachversionen und Aufrufe als weltweit bekannte
+# (Bundesräte, Kantone, Pässe). Die Bekanntheit prüft zusätzlich das LLM (Allgemeinwissen ≥ 3).
+SCHWELLEN["schweiz"] = Schwellen(min_sitelinks=15, min_pageviews=100.0)
+# Star Wars: Filme und Serien sind weltweit bekannt; Figuren haben auf de.wikipedia meist keinen
+# eigenen Artikel. Bei 50 Aufrufen/Tag kommen u. a. „Jedi“, „Todesstern“ und die Spiele dazu (31 statt 22 Artikel)
+SCHWELLEN["starwars"] = Schwellen(min_sitelinks=20, min_pageviews=50.0)
+
+# Englische Wikipedia als ergänzende Quelle, pro Kategorie einschaltbar: für Themen, zu denen kein
+# deutscher Artikel den Bekanntheitsfilter besteht (Star-Wars-Figuren haben oft nur kurze, kaum
+# aufgerufene deutsche Artikel). Startkategorien in wikipedia/quellen.py. Eigene Schwellen, gemessen
+# auf en.wikipedia (Tatooine ≈ 220, The Force ≈ 150, BB-8 ≈ 120 Aufrufe/Tag).
+EN_SCHWELLEN: dict[str, Schwellen] = {
+    "starwars": Schwellen(min_sitelinks=20, min_pageviews=100.0),
+}

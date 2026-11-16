@@ -75,7 +75,13 @@
   }
 
   function starten(spieler: { name: string; farbe: string }[], runden: number, einstellungen: Einstellungen) {
-    letzte = { namen: spieler.map((p) => p.name), farben: spieler.map((p) => p.farbe), runden, ...einstellungen };
+    letzte = {
+      namen: spieler.map((p) => p.name),
+      farben: spieler.map((p) => p.farbe),
+      runden,
+      ...einstellungen,
+      bekannteKategorien: [...game.ALLE_KATEGORIEN],
+    };
     storage.speichereLetzteSpieler(letzte);
     meldung = null;
     setzen(game.neuesSpiel(spieler, runden, einstellungen));

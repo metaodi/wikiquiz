@@ -77,3 +77,27 @@ test('„Vorheriger Spieler wählt“: Wahl vor der Übergabe, auch per Zufall',
   await uebergabe(page, 'Anna');
   expect(await warteAufFrage(page)).toMatch(/Testfrage kunst/);
 });
+
+test('Neue Kategorien: bei früher „alle“ automatisch gewählt, Allgemeinwissen entfällt', async ({ page }) => {
+  const alteSechs = ['naturwissenschaften', 'kunst', 'geschichte', 'sport', 'geografie', 'allgemeinwissen'];
+  const gespeichert = (kategorien: string[]) =>
+    JSON.stringify({ namen: ['Anna'], farben: ['#e53935'], runden: 5, modus: 'selbst', kategorien });
+
+  // Älterer Speicherstand (vor Schweiz/Star Wars) mit allen sechs Kategorien
+  await page.addInitScript((wert) => {
+    if (!sessionStorage.getItem('init')) localStorage.setItem('wikiquiz:players:v1', wert);
+    sessionStorage.setItem('init', '1');
+  }, gespeichert(alteSechs));
+  await oeffnen(page);
+  for (const name of [/Schweiz/, /Star Wars/, /Essen & Genuss/, /Tiere & Natur/, KAT_NAME.kunst]) {
+    await expect(page.getByRole('button', { name })).toHaveAttribute('aria-pressed', 'true');
+  }
+  await expect(page.getByRole('button', { name: /Allgemeinwissen/ })).toHaveCount(0);
+
+  // Bewusste Auswahl (nur Kunst) bleibt erhalten
+  await page.evaluate((wert) => localStorage.setItem('wikiquiz:players:v1', wert), gespeichert(['kunst']));
+  await page.reload();
+  await expect(page.getByRole('button', { name: KAT_NAME.kunst })).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.getByRole('button', { name: /Schweiz/ })).toHaveAttribute('aria-pressed', 'false');
+  await expect(page.getByRole('button', { name: /Star Wars/ })).toHaveAttribute('aria-pressed', 'false');
+});

@@ -33,8 +33,13 @@ npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für Git
   „Zufall“, sieht die Animation erst der Nächste) oder *Immer Zufall* (kein Kategorie-Screen, es wird sofort gelost).
 - **Kategorien** (im Setup): standardmässig alle; Abwahl einzelner Kategorien schränkt Kategorie-Screen, „Zufall“ und
   Zufalls-Animation auf die Auswahl ein. Modus und Auswahl werden wie die Spielernamen für das nächste Spiel gemerkt.
+  Neu hinzugekommene Kategorien (z. B. Schweiz, Star Wars) werden automatisch gewählt, wenn zuvor alle gewählt waren;
+  eine bewusste Auswahl bleibt unverändert (`bekannteKategorien` in `wikiquiz:players:v1`). Die entfernte Kategorie
+  „Allgemeinwissen“ fällt aus gespeicherten Auswahlen weg.
 - **Erschöpfte Kategorien** sind ausgegraut („keine Fragen mehr“ bzw. „bald verfügbar“); beim Antippen erscheint ein Hinweis.
   „Zufall“ wählt nur unter Kategorien mit verbleibenden Fragen. Sind alle erschöpft, endet das Spiel.
+- **Quellenlink** im Feedback: „Mehr auf Wikipedia: Titel“, bei Fragen aus der englischen Wikipedia
+  „Mehr auf Wikipedia (englisch): Titel“ (`src/lib/quelle.ts`).
 - **Zwischenstand** nach jeder Runde (bei mehreren Spielern); bei einem Spieler zeigt das Feedback den Punktestand.
 
 ## End-to-End-Tests (`e2e/`)
@@ -46,7 +51,7 @@ und steuern die Zeit über Playwrights Fake-Clock – Punkte und Timeouts werden
 |---|---|
 | 1 Spieler | kein Übergabe-Screen, 100 P. sofort, 55 P. nach 7.5 s, falsche Antwort, Timeout, Wikipedia-Link, keine Doppelfragen, erschöpfte Kategorie mit Hinweis, Zufall nur aus offenen Kategorien, vorzeitiges Spielende, „Nochmals spielen“ |
 | 4 Spieler | Übergabe an jeden Spieler, Zwischenstand mit geteilten Rängen, Zufall, Rangliste „Gleichstand“, „Neues Spiel“ mit vorbelegten Namen |
-| Einstellungen | Kategorienauswahl (Start gesperrt ohne Kategorie mit Fragen), „Immer Zufall“ ohne Kategorie-Screen und nur aus gewählten Kategorien, „Vorheriger Spieler wählt“ inkl. Zufall nach der Übergabe, Zwischenstand und Neuladen, Einstellungen gemerkt |
+| Einstellungen | neue Kategorien bei früher „alle“ automatisch gewählt, Kategorienauswahl (Start gesperrt ohne Kategorie mit Fragen), „Immer Zufall“ ohne Kategorie-Screen und nur aus gewählten Kategorien, „Vorheriger Spieler wählt“ inkl. Zufall nach der Übergabe, Zwischenstand und Neuladen, Einstellungen gemerkt |
 | Neuladen | mitten in der Frage (gleiche Frage und Reihenfolge, Timer läuft weiter, Punkte gemäss Gesamtzeit), nach Ablauf (Timeout), auf Feedback- und Übergabe-Screen |
 | Timer | startet erst nach dem Einblenden, Warnfarbe ab 5 s Restzeit |
 | UX | kein horizontales Scrollen bei 320 px, alle Touch-Targets ≥ 48 px, Info-Seite mit Lizenzen, kein „ß“ |

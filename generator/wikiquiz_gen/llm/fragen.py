@@ -114,7 +114,9 @@ def artikel_verarbeiten(
     bestehende: list[dict],
     n: int = 2,
     rng: random.Random | None = None,
+    sprache: str = "de",
 ) -> ArtikelErgebnis:
+    """`sprache`: Wikipedia des Artikeltexts. Fragen sind immer deutsch (auch bei englischem Text)."""
     rng = rng or random.Random(titel)
     erg = ArtikelErgebnis(titel)
     antwort = gen.json(
@@ -136,7 +138,7 @@ def artikel_verarbeiten(
             falsch=[text_bereinigen(x) for x in roh["falsche_antworten"]],
             schwierigkeit=roh["schwierigkeit"],
             quelle_typ="wikipedia",
-            quelle_url=artikel_url(titel),
+            quelle_url=artikel_url(titel, sprache),
             quelle_titel=titel,
             quelle_id=qid,
             template="llm",

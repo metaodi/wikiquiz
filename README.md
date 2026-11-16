@@ -32,8 +32,8 @@ und jede neue Fragenserie wird in einem Pull Request geprüft, bevor sie live ge
 ### Spielablauf in Kürze
 
 - Setup: 1–4 Spieler mit Namen und Farbe, 5/10/15 Runden, Kategorie-Wahl-Modus und Kategorienauswahl
-- Kategorien: Naturwissenschaften & Technik, Kunst/Musik/Literatur, Geschichte, Sport & Unterhaltung, Geografie,
-  Allgemeinwissen – oder „Zufall“
+- Kategorien: Naturwissenschaften & Technik, Kunst/Musik/Literatur, Geschichte & Gesellschaft, Sport & Unterhaltung,
+  Geografie, Essen & Genuss, Tiere & Natur sowie die Themenkategorien Schweiz und Star Wars – oder „Zufall“
 - Pro Frage 4 Antworten und 15 Sekunden; Punkte `round(100 − 90 × t/15)` für richtige Antworten
 - Feedback mit Link zum Wikipedia-Artikel, Zwischenstand nach jeder Runde, Rangliste am Ende
 

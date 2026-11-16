@@ -27,5 +27,6 @@ def titel_aus_url(url: str) -> str:
     return unquote(url.removeprefix(DE_WIKI)).replace("_", " ")
 
 
-def artikel_url(titel: str) -> str:
-    return DE_WIKI + quote(titel.replace(" ", "_"), safe=":/(),'!*")
+def artikel_url(titel: str, sprache: str = "de") -> str:
+    basis = DE_WIKI if sprache == "de" else f"https://{sprache}.wikipedia.org/wiki/"
+    return basis + quote(titel.replace(" ", "_"), safe=":/(),'!*")

@@ -145,6 +145,9 @@ Fragen, die schwieriger als 3 wären, nicht erstellen.
 ## Sprache
 Deutsch mit Schweizer Rechtschreibung (immer „ss“, nie „ß“),
 neutral und ohne Fachjargon.
+Ist der Artikeltext englisch, formuliere Frage und Antworten trotzdem
+auf Deutsch (mit den im deutschsprachigen Raum üblichen Namen und
+Titeln). Die Belegstelle zitierst du wörtlich im englischen Original.
 
 ## Ausgabe
 Antworte ausschliesslich mit gültigem JSON nach diesem Schema:

@@ -2234,6 +2234,42 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Angriff auf Pearl Harbor",
    "quelle_id": "Q52418"
+  },
+  {
+   "id": "wp-2bc823fbbf",
+   "kategorie": "geschichte",
+   "frage": "Welche Schulpädagogik geht auf den österreichischen Denker Rudolf Steiner zurück?",
+   "antworten": [
+    "Waldorfpädagogik",
+    "Montessoripädagogik",
+    "Jenaplan-Pädagogik",
+    "Reggio-Pädagogik"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rudolf_Steiner",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rudolf Steiner",
+   "quelle_id": "Q78484"
+  },
+  {
+   "id": "wp-9782941aef",
+   "kategorie": "geschichte",
+   "frage": "Welchem Philosophen der Aufklärung wird der Aufruf «Zurück zur Natur!» zugeschrieben?",
+   "antworten": [
+    "Denis Diderot",
+    "Jean-Jacques Rousseau",
+    "Immanuel Kant",
+    "Charles de Montesquieu"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jean-Jacques_Rousseau",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jean-Jacques Rousseau",
+   "quelle_id": "Q6527"
   }
  ]
 }

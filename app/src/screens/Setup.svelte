@@ -1,7 +1,7 @@
 <script lang="ts">
   import { KATEGORIEN } from '../lib/categories';
   import { FARB_NAMEN, MAX_SPIELER, RUNDEN_OPTIONEN, RUNDEN_STANDARD, SPIELER_FARBEN } from '../lib/config';
-  import { ALLE_KATEGORIEN, einstellungenPruefen } from '../lib/game';
+  import { ALLE_KATEGORIEN, einstellungenPruefen, neueKategorienErgaenzen } from '../lib/game';
   import type { LetzteSpieler } from '../lib/storage';
   import type { Einstellungen, KategorieId, KategorieModus } from '../lib/types';
 
@@ -34,7 +34,10 @@
   // svelte-ignore state_referenced_locally
   let runden = $state(start?.runden ?? RUNDEN_STANDARD);
   // svelte-ignore state_referenced_locally
-  const startEinst = einstellungenPruefen(start ?? undefined, MAX_SPIELER);
+  const startEinst = einstellungenPruefen(
+    start ? { ...start, kategorien: neueKategorienErgaenzen(start.kategorien, start.bekannteKategorien) } : undefined,
+    MAX_SPIELER,
+  );
   let modus = $state<KategorieModus>(startEinst.modus);
   let kategorien = $state<KategorieId[]>(startEinst.kategorien);
 

@@ -32,8 +32,10 @@
     <p>
       Alle Fragen stammen aus der deutschsprachigen
       <a href="https://de.wikipedia.org/" target="_blank" rel="noopener noreferrer">Wikipedia</a> und aus
-      <a href="https://www.wikidata.org/" target="_blank" rel="noopener noreferrer">Wikidata</a>. Nach jeder Frage
-      führt der Link „Mehr auf Wikipedia“ zum Quellartikel.
+      <a href="https://www.wikidata.org/" target="_blank" rel="noopener noreferrer">Wikidata</a>, einzelne
+      Star-Wars-Fragen aus der
+      <a href="https://en.wikipedia.org/" target="_blank" rel="noopener noreferrer">englischsprachigen Wikipedia</a>.
+      Nach jeder Frage führt der Link „Mehr auf Wikipedia“ zum Quellartikel.
     </p>
     <ul class="zahlen">
       {#each KATEGORIEN as k (k.id)}
