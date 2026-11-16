@@ -255,6 +255,72 @@ def test_flugzeuge_sind_technik():
                      "Kategorie:Militärluftfahrzeug (Iran)", "Kategorie:Trägergestütztes Flugzeug"]) == "naturwissenschaften"
 
 
+def _schweiz_testdaten():
+    from wikiquiz_gen.config import SCHWELLEN
+    from wikiquiz_gen.output import Protokoll
+    from wikiquiz_gen.popularity import Kandidat
+    from wikiquiz_gen.templates.base import Kontext
+    from wikiquiz_gen.templates.schweiz import Kanton
+
+    ktx = Kontext("schweiz", None, None, SCHWELLEN["schweiz"], Protokoll(aktiv=False))
+
+    def kanton(q, name, sprachen, hauptort=None):
+        return Kanton(k=Kandidat(qid=q, label=f"Kanton {name}", titel=f"Kanton {name}", sitelinks=100),
+                      hauptorte={hauptort} if hauptort else set(), sprachen=set(sprachen))
+
+    kantone = {
+        "K1": kanton("K1", "Tessin", ["Italienisch"], "G1"),
+        "K2": kanton("K2", "Bern", ["Deutsch", "Französisch"], "G5"),
+        "K3": kanton("K3", "Graubünden", ["Deutsch", "Italienisch", "Rätoromanisch"]),
+        "K4": kanton("K4", "Freiburg", ["Deutsch", "Französisch"]),
+        "K5": kanton("K5", "Wallis", ["Deutsch", "Französisch"]),
+        "K6": kanton("K6", "Uri", ["Deutsch"]),
+        "K7": kanton("K7", "Zug", ["Deutsch"], "G6"),
+    }
+    return ktx, kantone
+
+
+def test_schweiz_hauptort_mit_gemeinden_des_kantons():
+    from wikiquiz_gen.templates.schweiz import hauptort
+
+    ktx, kantone = _schweiz_testdaten()
+    gemeinden = [
+        {"item": f"http://www.wikidata.org/entity/{q}", "label": n, "kantone": k, "einwohner": str(e)}
+        for q, n, k, e in [("G1", "Bellinzona", "K1", 45000), ("G2", "Lugano", "K1", 63000),
+                           ("G3", "Locarno", "K1", 16000), ("G4", "Mendrisio", "K1", 15000),
+                           ("G5", "Bern", "K2", 134000), ("G6", "Zug", "K7", 31000), ("G7", "Baar", "K7", 25000),
+                           ("G8", "Cham", "K7", 17000), ("G9", "Risch", "K7", 11000)]
+    ]
+    fragen = hauptort(ktx, kantone, gemeinden)
+    # Bern: zu wenige Gemeinden im Test; Zug: Hauptort steckt im Namen; die übrigen ohne Hauptort
+    assert len(fragen) == 1
+    f = fragen[0]
+    assert f.frage == "Wie heisst der Hauptort des Kantons Tessin?" and f.richtig == "Bellinzona"
+    assert sorted(f.falsch) == ["Locarno", "Lugano", "Mendrisio"]
+
+
+def test_schweiz_sprache():
+    from wikiquiz_gen.templates.schweiz import sprache
+
+    ktx, kantone = _schweiz_testdaten()
+    fragen = {f.frage: f for f in sprache(ktx, kantone)}
+    tessin = fragen["Welche Amtssprache hat der Kanton Tessin?"]
+    assert tessin.richtig == "Italienisch" and sorted(tessin.falsch) == ["Deutsch", "Französisch", "Rätoromanisch"]
+    drei = fragen["Welcher Kanton hat drei Amtssprachen?"]
+    assert drei.richtig == "Graubünden" and sorted(drei.falsch) == ["Bern", "Freiburg", "Wallis"]
+    assert len(fragen) == 2  # Uri (deutschsprachig) wird nicht gefragt
+
+
+def test_landessprache():
+    from wikiquiz_gen.templates.schweiz import landessprache
+
+    assert landessprache("Schweizer Hochdeutsch") == "Deutsch"
+    assert landessprache("Schweizer Französisch") == "Französisch"
+    assert landessprache("Bündnerromanisch") == "Rätoromanisch"
+    assert landessprache("Italienisch") == "Italienisch"
+    assert landessprache("Latein") is None
+
+
 def test_dedupe_gleiche_antwort_hoechstens_zweimal():
     from wikiquiz_gen.dedupe import antwort_schluessel
 

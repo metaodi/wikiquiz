@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "naturwissenschaften",
- "generiert_am": "2026-11-16T07:54:25Z",
+ "generiert_am": "2026-11-16T10:32:54Z",
  "fragen": [
   {
    "id": "wd-022fe2cd6f",
@@ -1280,6 +1280,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Goldener Schnitt",
    "quelle_id": "Q41690"
+  },
+  {
+   "id": "wp-1f7e322573",
+   "kategorie": "naturwissenschaften",
+   "frage": "Wie heisst Kohlendioxid in fester Form, das oft zum Kühlen verwendet wird?",
+   "antworten": [
+    "Kühleis",
+    "Trockeneis",
+    "Schwarzeis",
+    "Kunsteis"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kohlenstoffdioxid",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kohlenstoffdioxid",
+   "quelle_id": "Q1997"
   },
   {
    "id": "wp-219b4691b0",
