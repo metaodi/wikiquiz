@@ -1,0 +1,282 @@
+{
+ "Albert Einstein": {
+  "qid": "Q937",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Angelman-Syndrom": {
+  "qid": "Q535364",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 2,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "Apollo-Programm": {
+  "qid": "Q46611",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Artemis-Programm": {
+  "qid": "Q63819987",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Aufmerksamkeitsdefizit-/Hyperaktivitätsstörung": {
+  "qid": "Q181923",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Bill Gates": {
+  "qid": "Q5284",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Carl Friedrich Gauß": {
+  "qid": "Q6722",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Emil von Behring": {
+  "qid": "Q76425",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Erde": {
+  "qid": "Q2",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Europäische Weltraumorganisation": {
+  "qid": "Q42262",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Francis Halzen": {
+  "qid": "Q20942818",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 2,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "Fritz Haber": {
+  "qid": "Q57075",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 1
+ },
+ "Georg Nagel (Biophysiker)": {
+  "qid": "Q1247068",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 2,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "Gold": {
+  "qid": "Q897",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 1
+ },
+ "Henri Kagan": {
+  "qid": "Q354979",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 2,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "Infantile Zerebralparese": {
+  "qid": "Q210427",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Jeff Bezos": {
+  "qid": "Q312556",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Johannes Gutenberg": {
+  "qid": "Q8958",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Jupiter (Planet)": {
+  "qid": "Q319",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Karl Deisseroth": {
+  "qid": "Q935993",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 2,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "Kohlenstoff": {
+  "qid": "Q623",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 1
+ },
+ "Linus Pauling": {
+  "qid": "Q48983",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Margaret Hamilton (Informatikerin)": {
+  "qid": "Q11628",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Marie Curie": {
+  "qid": "Q7186",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Mars (Planet)": {
+  "qid": "Q111",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Multiple Sklerose": {
+  "qid": "Q8277",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Myalgische Enzephalomyelitis/Chronisches Fatigue-Syndrom": {
+  "qid": "Q209733",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Neptun (Planet)": {
+  "qid": "Q332",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Niels Bohr": {
+  "qid": "Q7085",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Otto Hahn": {
+  "qid": "Q57065",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 1
+ },
+ "Pest": {
+  "qid": "Q133780",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Peter Hegemann": {
+  "qid": "Q2075526",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 2,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "Quecksilber": {
+  "qid": "Q925",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 1
+ },
+ "Robert Koch": {
+  "qid": "Q37193",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 1
+ },
+ "Tantal": {
+  "qid": "Q1123",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Venus (Planet)": {
+  "qid": "Q313",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Verschwörungstheorien zur Mondlandung": {
+  "qid": "Q190706",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Wasserstoff": {
+  "qid": "Q556",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 1
+ },
+ "Werner Heisenberg": {
+  "qid": "Q40904",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Wernher von Braun": {
+  "qid": "Q57384",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ }
+}

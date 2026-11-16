@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "naturwissenschaften",
- "generiert_am": "2026-11-16T10:32:54Z",
+ "generiert_am": "2026-11-16T13:04:43Z",
  "fragen": [
   {
    "id": "wd-022fe2cd6f",
@@ -1264,6 +1264,78 @@
    "quelle_id": "Q677"
   },
   {
+   "id": "wp-0363111527",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welcher Planet wird im Volksmund auch «Morgenstern» oder «Abendstern» genannt?",
+   "antworten": [
+    "Merkur",
+    "Mars",
+    "Jupiter",
+    "Venus"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Venus_(Planet)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Venus (Planet)",
+   "quelle_id": "Q313"
+  },
+  {
+   "id": "wp-041190cfbe",
+   "kategorie": "naturwissenschaften",
+   "frage": "Für welche Weltraumbehörde leitete Wernher von Braun später den Bau von Trägerraketen?",
+   "antworten": [
+    "Roskosmos",
+    "DLR",
+    "NASA",
+    "ESA"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wernher_von_Braun",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Wernher von Braun",
+   "quelle_id": "Q57384"
+  },
+  {
+   "id": "wp-059e967114",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches Gas macht den Grossteil der Atmosphäre der Venus aus?",
+   "antworten": [
+    "Methan",
+    "Kohlenstoffdioxid",
+    "Sauerstoff",
+    "Stickstoff"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Venus_(Planet)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Venus (Planet)",
+   "quelle_id": "Q313"
+  },
+  {
+   "id": "wp-078312b78c",
+   "kategorie": "naturwissenschaften",
+   "frage": "Mit welcher Raumfahrtmission landeten im Juli 1969 erstmals Menschen auf dem Mond?",
+   "antworten": [
+    "Apollo 8",
+    "Apollo 13",
+    "Apollo 12",
+    "Apollo 11"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Apollo-Programm",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Apollo-Programm",
+   "quelle_id": "Q46611"
+  },
+  {
    "id": "wp-0f9c65a412",
    "kategorie": "naturwissenschaften",
    "frage": "Welchem Zahlenwert entspricht das Teilungsverhältnis des Goldenen Schnitts ungefähr?",
@@ -1280,6 +1352,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Goldener Schnitt",
    "quelle_id": "Q41690"
+  },
+  {
+   "id": "wp-16834c21fb",
+   "kategorie": "naturwissenschaften",
+   "frage": "Der Planet Mars ist nach einem römischen Gott benannt. Wofür war dieser Gott zuständig?",
+   "antworten": [
+    "Für den Krieg",
+    "Für das Meer",
+    "Für die Liebe",
+    "Für den Handel"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mars_(Planet)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mars (Planet)",
+   "quelle_id": "Q111"
   },
   {
    "id": "wp-1f7e322573",
@@ -1318,6 +1408,60 @@
    "quelle_id": "Q8963"
   },
   {
+   "id": "wp-256055d63f",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welcher Mathematiker galt schon zu Lebzeiten als «Fürst der Mathematiker»?",
+   "antworten": [
+    "Bernhard Riemann",
+    "Leonhard Euler",
+    "Gottfried Wilhelm Leibniz",
+    "Carl Friedrich Gauss"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Carl_Friedrich_Gau%C3%9F",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Carl Friedrich Gauß",
+   "quelle_id": "Q6722"
+  },
+  {
+   "id": "wp-26fe20c329",
+   "kategorie": "naturwissenschaften",
+   "frage": "An welcher US-Hochschule leitete Margaret Hamilton die Softwareabteilung für die Mondflüge der NASA?",
+   "antworten": [
+    "Harvard University",
+    "Caltech",
+    "MIT",
+    "Stanford University"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Margaret_Hamilton_(Informatikerin)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Margaret Hamilton (Informatikerin)",
+   "quelle_id": "Q11628"
+  },
+  {
+   "id": "wp-2f77f81d7a",
+   "kategorie": "naturwissenschaften",
+   "frage": "Der Planet Neptun trägt den Namen eines römischen Gottes. Wofür war dieser Gott zuständig?",
+   "antworten": [
+    "Für den Krieg",
+    "Für die Unterwelt",
+    "Für den Ackerbau",
+    "Für das Meer"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Neptun_(Planet)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Neptun (Planet)",
+   "quelle_id": "Q332"
+  },
+  {
    "id": "wp-3339bb6608",
    "kategorie": "naturwissenschaften",
    "frage": "Welcher Astronom entdeckte die Gesetze, nach denen sich die Planeten um die Sonne bewegen?",
@@ -1334,6 +1478,42 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Johannes Kepler",
    "quelle_id": "Q8963"
+  },
+  {
+   "id": "wp-34bb8141ca",
+   "kategorie": "naturwissenschaften",
+   "frage": "Das NASA-Programm Artemis ist nach der Zwillingsschwester welches griechischen Gottes benannt?",
+   "antworten": [
+    "Dionysos",
+    "Poseidon",
+    "Apollon",
+    "Hermes"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Artemis-Programm",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Artemis-Programm",
+   "quelle_id": "Q63819987"
+  },
+  {
+   "id": "wp-397ec1eef0",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches berühmte physikalische Prinzip formulierte Werner Heisenberg im Jahr 1927?",
+   "antworten": [
+    "Die Unschärferelation",
+    "Das Relativitätsprinzip",
+    "Das Komplementaritätsprinzip",
+    "Das Ausschlussprinzip"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Werner_Heisenberg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Werner Heisenberg",
+   "quelle_id": "Q40904"
   },
   {
    "id": "wp-3ba25829ea",
@@ -1354,6 +1534,42 @@
    "quelle_id": "Q179"
   },
   {
+   "id": "wp-3bbcf1a46b",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welche Forscherin erhielt wie Linus Pauling zwei Nobelpreise in unterschiedlichen Kategorien?",
+   "antworten": [
+    "Marie Curie",
+    "Rosalind Franklin",
+    "Dorothy Hodgkin",
+    "Lise Meitner"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Linus_Pauling",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Linus Pauling",
+   "quelle_id": "Q48983"
+  },
+  {
+   "id": "wp-441134da36",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welcher Universitätsstadt wirkte Carl Friedrich Gauss ab 1807 als Professor und Sternwartendirektor?",
+   "antworten": [
+    "Marburg",
+    "Göttingen",
+    "Heidelberg",
+    "Tübingen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Carl_Friedrich_Gau%C3%9F",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Carl Friedrich Gauß",
+   "quelle_id": "Q6722"
+  },
+  {
    "id": "wp-48a6c33b62",
    "kategorie": "naturwissenschaften",
    "frage": "Welche Weltregion erforschte Alexander von Humboldt auf einer seiner berühmten mehrjährigen Forschungsreisen?",
@@ -1370,6 +1586,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Alexander von Humboldt",
    "quelle_id": "Q6694"
+  },
+  {
+   "id": "wp-4f511fbd51",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welcher Unternehmer gründete 1994 den Onlineversandhändler Amazon?",
+   "antworten": [
+    "Bill Gates",
+    "Jeff Bezos",
+    "Elon Musk",
+    "Mark Zuckerberg"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jeff_Bezos",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jeff Bezos",
+   "quelle_id": "Q312556"
   },
   {
    "id": "wp-55f319a5f4",
@@ -1408,6 +1642,60 @@
    "quelle_id": "Q41690"
   },
   {
+   "id": "wp-6f0614edb1",
+   "kategorie": "naturwissenschaften",
+   "frage": "Gegen welche Krankheit entwickelte Emil von Behring ein Heilserum, das ihn als «Retter der Kinder» bekannt machte?",
+   "antworten": [
+    "Pocken",
+    "Diphtherie",
+    "Masern",
+    "Cholera"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Emil_von_Behring",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Emil von Behring",
+   "quelle_id": "Q76425"
+  },
+  {
+   "id": "wp-6fc647e11e",
+   "kategorie": "naturwissenschaften",
+   "frage": "Worauf geht die rötliche Farbe des Planeten Mars zurück?",
+   "antworten": [
+    "Eisenoxid-Staub (Rost)",
+    "Kupferoxid-Staub",
+    "Schwefelstaub",
+    "Rotes Methaneis"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mars_(Planet)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mars (Planet)",
+   "quelle_id": "Q111"
+  },
+  {
+   "id": "wp-736d5646b8",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welcher US-Präsident rief 1961 das Ziel aus, noch im selben Jahrzehnt einen Menschen auf den Mond zu bringen?",
+   "antworten": [
+    "Dwight D. Eisenhower",
+    "Lyndon B. Johnson",
+    "Richard Nixon",
+    "John F. Kennedy"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Apollo-Programm",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Apollo-Programm",
+   "quelle_id": "Q46611"
+  },
+  {
    "id": "wp-925203cb7f",
    "kategorie": "naturwissenschaften",
    "frage": "Aus welchem Land stammte Alfred Büchi, der 1905 das Prinzip des Turboladers patentieren liess?",
@@ -1426,6 +1714,168 @@
    "quelle_id": "Q185525"
   },
   {
+   "id": "wp-9caeba9753",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welcher geheimen Militärbasis sollen laut einer bekannten Verschwörungstheorie die Mondszenen gefilmt worden sein?",
+   "antworten": [
+    "Cape Canaveral",
+    "Los Alamos",
+    "Area 51",
+    "Fort Knox"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Verschw%C3%B6rungstheorien_zur_Mondlandung",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Verschwörungstheorien zur Mondlandung",
+   "quelle_id": "Q190706"
+  },
+  {
+   "id": "wp-a0865c92b9",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchem Jahr wurde die Europäische Weltraumorganisation ESA gegründet?",
+   "antworten": [
+    "1975",
+    "1957",
+    "1969",
+    "1991"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Europ%C3%A4ische_Weltraumorganisation",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Europäische Weltraumorganisation",
+   "quelle_id": "Q42262"
+  },
+  {
+   "id": "wp-a6095564ac",
+   "kategorie": "naturwissenschaften",
+   "frage": "Zu welcher Art von Krankheiten zählt die Multiple Sklerose?",
+   "antworten": [
+    "Infektionskrankheit",
+    "Autoimmunerkrankung",
+    "Krebserkrankung",
+    "Erbkrankheit"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Multiple_Sklerose",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Multiple Sklerose",
+   "quelle_id": "Q8277"
+  },
+  {
+   "id": "wp-a69a20b9d4",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches Tier überträgt die Beulenpest klassischerweise durch seinen Biss von Ratten auf Menschen?",
+   "antworten": [
+    "Zecke",
+    "Bettwanze",
+    "Stechmücke",
+    "Floh"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pest",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Pest",
+   "quelle_id": "Q133780"
+  },
+  {
+   "id": "wp-a9c56bf622",
+   "kategorie": "naturwissenschaften",
+   "frage": "Aus welchem Land stammte der Physiker und Nobelpreisträger Niels Bohr?",
+   "antworten": [
+    "Schweden",
+    "Dänemark",
+    "Niederlande",
+    "Norwegen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Niels_Bohr",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Niels Bohr",
+   "quelle_id": "Q7085"
+  },
+  {
+   "id": "wp-bec4fe08d7",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welchen beiden Fachgebieten erhielt Marie Curie je einen Nobelpreis?",
+   "antworten": [
+    "Physik und Chemie",
+    "Physik und Medizin",
+    "Chemie und Medizin",
+    "Chemie und Frieden"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Marie_Curie",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Marie Curie",
+   "quelle_id": "Q7186"
+  },
+  {
+   "id": "wp-c14b136d7f",
+   "kategorie": "naturwissenschaften",
+   "frage": "Wohin will die NASA mit dem Artemis-Programm erstmals seit 1972 wieder Astronauten bringen?",
+   "antworten": [
+    "Zur Venus",
+    "Auf einen Asteroiden",
+    "Auf den Mond",
+    "Auf den Mars"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Artemis-Programm",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Artemis-Programm",
+   "quelle_id": "Q63819987"
+  },
+  {
+   "id": "wp-cffc4d9ab7",
+   "kategorie": "naturwissenschaften",
+   "frage": "Wofür wird das seltene Metall Tantal vor allem verwendet?",
+   "antworten": [
+    "Für Akku-Elektroden",
+    "Für Dauermagnete",
+    "Für kleine Kondensatoren",
+    "Für Solarzellen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Tantal",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Tantal",
+   "quelle_id": "Q1123"
+  },
+  {
+   "id": "wp-d0efc91b86",
+   "kategorie": "naturwissenschaften",
+   "frage": "Unter welchem Namen ist die verheerende Pestpandemie des 14. Jahrhunderts bekannt?",
+   "antworten": [
+    "Schwarzer Tod",
+    "Roter Tod",
+    "Englischer Schweiss",
+    "Spanische Grippe"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pest",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Pest",
+   "quelle_id": "Q133780"
+  },
+  {
    "id": "wp-de81fa10f8",
    "kategorie": "naturwissenschaften",
    "frage": "Als Mitbegründer welcher Wissenschaft als Erfahrungswissenschaft gilt Alexander von Humboldt?",
@@ -1442,6 +1892,150 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Alexander von Humboldt",
    "quelle_id": "Q6694"
+  },
+  {
+   "id": "wp-e5ed6f84dd",
+   "kategorie": "naturwissenschaften",
+   "frage": "Für welches Raumfahrtprogramm leitete Margaret Hamilton die Entwicklung der Bordsoftware?",
+   "antworten": [
+    "Gemini",
+    "Apollo",
+    "Voyager",
+    "Mercury"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Margaret_Hamilton_(Informatikerin)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Margaret Hamilton (Informatikerin)",
+   "quelle_id": "Q11628"
+  },
+  {
+   "id": "wp-e638358f32",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welcher Planet ist der äusserste bekannte Planet unseres Sonnensystems?",
+   "antworten": [
+    "Saturn",
+    "Uranus",
+    "Jupiter",
+    "Neptun"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Neptun_(Planet)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Neptun (Planet)",
+   "quelle_id": "Q332"
+  },
+  {
+   "id": "wp-e671a2cb7e",
+   "kategorie": "naturwissenschaften",
+   "frage": "Wofür erhielt der Chemiker Linus Pauling den Friedensnobelpreis?",
+   "antworten": [
+    "Vermittlung im Koreakrieg",
+    "Kampf gegen den Welthunger",
+    "Hilfe für Kriegsflüchtlinge",
+    "Einsatz gegen Kernwaffentests"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Linus_Pauling",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Linus Pauling",
+   "quelle_id": "Q48983"
+  },
+  {
+   "id": "wp-e68bbaf51a",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welche Rakete entwickelte Wernher von Braun während des Zweiten Weltkriegs in Peenemünde?",
+   "antworten": [
+    "Katjuscha",
+    "V2",
+    "V1",
+    "Nebelwerfer"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wernher_von_Braun",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Wernher von Braun",
+   "quelle_id": "Q57384"
+  },
+  {
+   "id": "wp-e72e2721df",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welche Theorie gilt als Albert Einsteins Hauptwerk und machte ihn weltweit berühmt?",
+   "antworten": [
+    "Urknalltheorie",
+    "Relativitätstheorie",
+    "Evolutionstheorie",
+    "Chaostheorie"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Albert_Einstein",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Albert Einstein",
+   "quelle_id": "Q937"
+  },
+  {
+   "id": "wp-eef61cb2f5",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welches private Raumfahrtunternehmen gründete Amazon-Gründer Jeff Bezos im Jahr 2000?",
+   "antworten": [
+    "Blue Origin",
+    "Virgin Galactic",
+    "Rocket Lab",
+    "SpaceX"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jeff_Bezos",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jeff Bezos",
+   "quelle_id": "Q312556"
+  },
+  {
+   "id": "wp-f780072f09",
+   "kategorie": "naturwissenschaften",
+   "frage": "Wofür steht das «H» in der Abkürzung ADHS?",
+   "antworten": [
+    "Hyperaktivität",
+    "Hochbegabung",
+    "Hypersensibilität",
+    "Hirnschädigung"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Aufmerksamkeitsdefizit-/Hyperaktivit%C3%A4tsst%C3%B6rung",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Aufmerksamkeitsdefizit-/Hyperaktivitätsstörung",
+   "quelle_id": "Q181923"
+  },
+  {
+   "id": "wp-fc7eae6cc6",
+   "kategorie": "naturwissenschaften",
+   "frage": "In welcher Stadt hat die Europäische Weltraumorganisation ESA ihren Hauptsitz?",
+   "antworten": [
+    "Wien",
+    "Genf",
+    "Brüssel",
+    "Paris"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Europ%C3%A4ische_Weltraumorganisation",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Europäische Weltraumorganisation",
+   "quelle_id": "Q42262"
   }
  ]
 }
