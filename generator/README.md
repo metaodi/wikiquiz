@@ -191,6 +191,38 @@ Erfindungen deckt die LLM-Pipeline mit unabhängiger Prüfung ab.
 Sprachvarietäten in Wikidata (Schweizer Hochdeutsch, Schweizer Französisch, Bündnerromanisch) werden über
 ihre deutsche Bezeichnung auf die Landessprache abgebildet. Kantone selbst durchlaufen keinen Bekanntheitsfilter, sie gelten als Allgemeinwissen.
 
+## Kunst-Templates (Wikidata)
+
+| Template | Frage | Distraktoren |
+|---|---|---|
+| `literatur` | Wer schrieb «{Der kleine Prinz}»? | bekannte Schriftsteller, Romanciers, Dramatiker oder Dichter (≥ 100 Sitelinks) mit ähnlichem Geburtsjahr |
+| `gemaelde` | Wer malte das Gemälde «{Die Nachtwache}»? | bekannte Maler mit ähnlichem Geburtsjahr |
+| `oper` | Wer komponierte die Oper «{Carmen}»? | bekannte Komponisten mit ähnlichem Geburtsjahr |
+
+- Nur Werke mit genau einem Urheber, und dieser muss den passenden Beruf (P106) haben. Das schliesst u. a.
+  Bibelbücher aus („Römer“ → Paulus), die Wikidata ebenfalls als literarische Werke führt.
+- Wikidata modelliert Romane und Dramen als „literarisches Werk“ (Q7725634) mit Form (P7937), Opern als
+  „dramatisch-musikalisches Werk“ mit Genre (P136) Oper. Literarische Werke werden ohne Gattung gefragt.
+- Höchstens 2 Werke pro Urheber; eigene Schwellen für Werke (30 Sitelinks, 80 Aufrufe pro Tag, 2000 Zeichen).
+
+## Sport-Templates (Wikidata)
+
+| Template | Frage | Distraktoren |
+|---|---|---|
+| `olympia` | In welcher Stadt fanden die Olympischen {Sommerspiele 1972} statt? | Gastgeberstädte zeitlich naher Spiele derselben Art |
+| `wm_land` | In welchem Land fand die {Fussball-Weltmeisterschaft 2006} statt? | Gastgeberländer zeitlich naher Turniere |
+| `wm_sieger` | Welches Land gewann die {Fussball-Weltmeisterschaft 2014}? | andere Weltmeister |
+| `film` | Wer führte Regie beim Film «{Der Pate}»? | bekannte Regisseure mit ähnlichem Geburtsjahr; höchstens 2 Filme pro Person |
+
+- Gastgeberstädte der Olympischen Spiele sind kuratiert (`SOMMER_ORTE`, `WINTER_ORTE`): Wikidata erfasst sie
+  uneinheitlich (P131 nur bei wenigen Spielen, P276 meist mit Stadien). Spiele mit mehreren Gastgebern fehlen.
+- Fussball-WM: nur Männer-WM mit bekanntem Sieger (ausgetragen); WM mit mehreren Gastgebern (2002, 2026)
+  nur als Sieger-Frage. Gastgeber 1966 wird als England angezeigt.
+- Eigene Schwellen: Turniere 40 Sitelinks / 50 Aufrufe pro Tag, Filme 60 Sitelinks / 100 Aufrufe pro Tag.
+
+Wikidata-Fragen werden gegen die bestehenden Wikipedia-Fragen der Kategorie dedupliziert (dieselbe Tatsache,
+gegenseitiges Verraten, höchstens 2 Fragen pro Thema).
+
 ## Allgemein
 
 Schwierigkeit: Rang nach Seitenaufrufen innerhalb des Templates (bekanntestes Drittel = 1).

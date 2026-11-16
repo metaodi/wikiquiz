@@ -61,7 +61,7 @@ def cmd_generate(args: argparse.Namespace) -> int:
         zeilen = [f"### {KATEGORIEN[kat]}", "", f"Bestand vorher: {len(bestand)} Fragen"]
 
         if args.quelle in ("wikidata", "alle") and kat in pipeline.WIKIDATA_TEMPLATES:
-            fragen = pipeline.wikidata(ktx, args.ziel)
+            fragen = pipeline.wikidata(ktx, args.ziel, bestand)
             neue += [f.to_json() for f in fragen]
             quellen.add("wikidata")
             vorlagen = Counter(f.template for f in fragen)

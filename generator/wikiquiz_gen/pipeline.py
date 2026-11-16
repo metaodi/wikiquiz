@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING
 
 from .dedupe import deduplizieren
 from .models import Frage
-from .templates import geografie, naturwissenschaften, schweiz
+from .templates import geografie, kunst, naturwissenschaften, schweiz, sport
 from .templates.base import Kontext
 from .validate import pruefe_formal
 
@@ -20,6 +20,8 @@ WIKIDATA_TEMPLATES: dict[str, Callable[[Kontext], dict[str, list[Frage]]]] = {
     "geografie": geografie.generiere,
     "naturwissenschaften": naturwissenschaften.generiere,
     "schweiz": schweiz.generiere,
+    "kunst": kunst.generiere,
+    "sport": sport.generiere,
 }
 
 
@@ -34,7 +36,10 @@ def reissverschluss(gruppen: dict[str, list[Frage]]) -> list[Frage]:
     return ergebnis
 
 
-def wikidata(ktx: Kontext, ziel: int | None) -> list[Frage]:
+def wikidata(ktx: Kontext, ziel: int | None, bestand: list[dict] = ()) -> list[Frage]:
+    """Fragen aus den Wikidata-Templates der Kategorie. `bestand`: bestehende Fragen der Kategorie;
+    neue Templatefragen werden gegen deren Wikipedia-Fragen dedupliziert (in Kunst gibt es z. B.
+    schon „Welcher Schriftsteller schrieb «Faust»?“ aus der LLM-Pipeline)."""
     gen = WIKIDATA_TEMPLATES.get(ktx.kategorie)
     if gen is None:
         log.warning("Keine Wikidata-Templates für %s", ktx.kategorie)
@@ -56,7 +61,11 @@ def wikidata(ktx: Kontext, ziel: int | None) -> list[Frage]:
                 gueltig[name].append(f)
 
     sortiert = reissverschluss(gueltig)
-    behalten, verworfen = deduplizieren(sortiert)
+    vorher = [_aus_json(f) for f in bestand if f["quelle_typ"] != "wikidata"]
+    ids_vorher = {f.id for f in vorher}
+    behalten, verworfen = deduplizieren([*vorher, *sortiert])
+    behalten = [f for f in behalten if f.id not in ids_vorher]
+    verworfen = [(f, g) for f, g in verworfen if f.id not in ids_vorher]
     for f, grund in verworfen:
         ktx.protokoll.verwerfen(ktx.kategorie, "dedupe", grund,
                                 {"frage": f.frage, "richtig": f.richtig, "quelle_id": f.quelle_id})
