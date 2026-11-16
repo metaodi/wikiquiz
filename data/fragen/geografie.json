@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "geografie",
- "generiert_am": "2026-11-16T11:49:01Z",
+ "generiert_am": "2026-11-16T13:09:48Z",
  "fragen": [
   {
    "id": "wd-002a9cdcc4",
@@ -3604,6 +3604,870 @@
    "quelle_id": "Q1156"
   },
   {
+   "id": "wp-05375a71ec",
+   "kategorie": "geografie",
+   "frage": "Welche Stadt ist die Hauptstadt Australiens?",
+   "antworten": [
+    "Sydney",
+    "Melbourne",
+    "Perth",
+    "Canberra"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Australien",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Australien",
+   "quelle_id": "Q408"
+  },
+  {
+   "id": "wp-073b4f16b1",
+   "kategorie": "geografie",
+   "frage": "In welchem Land entspringt die Mosel, bevor sie nach Deutschland fliesst?",
+   "antworten": [
+    "Luxemburg",
+    "Schweiz",
+    "Frankreich",
+    "Belgien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mosel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mosel",
+   "quelle_id": "Q1667"
+  },
+  {
+   "id": "wp-0ce10eaf97",
+   "kategorie": "geografie",
+   "frage": "In welchem Bundesland liegt der Nordseebadeort Büsum?",
+   "antworten": [
+    "Bremen",
+    "Hamburg",
+    "Niedersachsen",
+    "Schleswig-Holstein"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/B%C3%BCsum",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Büsum",
+   "quelle_id": "Q20768"
+  },
+  {
+   "id": "wp-1378ffa0ea",
+   "kategorie": "geografie",
+   "frage": "Das Kilimandscharo-Massiv trägt den höchsten Berg welches Kontinents?",
+   "antworten": [
+    "Asien",
+    "Australien",
+    "Südamerika",
+    "Afrika"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kilimandscharo",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kilimandscharo",
+   "quelle_id": "Q7296"
+  },
+  {
+   "id": "wp-1cce74e062",
+   "kategorie": "geografie",
+   "frage": "Welcher Staat ist als einziger der Welt flächenmässig noch kleiner als Monaco?",
+   "antworten": [
+    "Andorra",
+    "San Marino",
+    "Vatikanstadt",
+    "Liechtenstein"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Monaco",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Monaco",
+   "quelle_id": "Q235"
+  },
+  {
+   "id": "wp-1cd03c6efb",
+   "kategorie": "geografie",
+   "frage": "Zu welcher Inselgruppe gehört Mallorca als grösste Insel?",
+   "antworten": [
+    "Balearen",
+    "Kanaren",
+    "Liparische Inseln",
+    "Azoren"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mallorca",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mallorca",
+   "quelle_id": "Q8828"
+  },
+  {
+   "id": "wp-289ee2276a",
+   "kategorie": "geografie",
+   "frage": "In welchem Meer liegt die Insel Bornholm?",
+   "antworten": [
+    "Barentssee",
+    "Irische See",
+    "Ostsee",
+    "Nordsee"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bornholm",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Bornholm",
+   "quelle_id": "Q769680"
+  },
+  {
+   "id": "wp-29b9989cb0",
+   "kategorie": "geografie",
+   "frage": "An welchem Fluss liegt die österreichische Hauptstadt Wien?",
+   "antworten": [
+    "Donau",
+    "Rhein",
+    "Inn",
+    "Elbe"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wien",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Wien",
+   "quelle_id": "Q1741"
+  },
+  {
+   "id": "wp-2a1c4925b2",
+   "kategorie": "geografie",
+   "frage": "Kanada ist flächenmässig der zweitgrösste Staat der Erde. Welches Land ist noch grösser?",
+   "antworten": [
+    "Brasilien",
+    "China",
+    "Russland",
+    "Vereinigte Staaten"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kanada",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kanada",
+   "quelle_id": "Q16"
+  },
+  {
+   "id": "wp-2b8a96568d",
+   "kategorie": "geografie",
+   "frage": "An welches Land grenzt die Halbinsel Katar im Süden?",
+   "antworten": [
+    "Oman",
+    "Bahrain",
+    "Saudi-Arabien",
+    "Kuwait"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Katar",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Katar",
+   "quelle_id": "Q846"
+  },
+  {
+   "id": "wp-2d9880b268",
+   "kategorie": "geografie",
+   "frage": "Welches ist das höchste und grösste zusammenhängende Mittelgebirge Deutschlands?",
+   "antworten": [
+    "Harz",
+    "Schwarzwald",
+    "Bayerischer Wald",
+    "Erzgebirge"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schwarzwald",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schwarzwald",
+   "quelle_id": "Q4204"
+  },
+  {
+   "id": "wp-3822c59518",
+   "kategorie": "geografie",
+   "frage": "In welchem Land liegt der Kilimandscharo?",
+   "antworten": [
+    "Uganda",
+    "Äthiopien",
+    "Kenia",
+    "Tansania"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kilimandscharo",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kilimandscharo",
+   "quelle_id": "Q7296"
+  },
+  {
+   "id": "wp-38e4c7d451",
+   "kategorie": "geografie",
+   "frage": "In welcher deutschen Stadt mündet die Mosel in den Rhein?",
+   "antworten": [
+    "Köln",
+    "Bonn",
+    "Koblenz",
+    "Mainz"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mosel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mosel",
+   "quelle_id": "Q1667"
+  },
+  {
+   "id": "wp-396f475c77",
+   "kategorie": "geografie",
+   "frage": "Für welche Meeresfrüchte ist der Hafenort Büsum an der Nordsee überregional bekannt?",
+   "antworten": [
+    "Austern",
+    "Krabben",
+    "Hummer",
+    "Miesmuscheln"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/B%C3%BCsum",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Büsum",
+   "quelle_id": "Q20768"
+  },
+  {
+   "id": "wp-3e93e45bf9",
+   "kategorie": "geografie",
+   "frage": "Welcher Fluss führt mit grossem Abstand am meisten Wasser aller Flüsse der Erde?",
+   "antworten": [
+    "Amazonas",
+    "Jangtsekiang",
+    "Nil",
+    "Kongo"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Amazonas",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Amazonas",
+   "quelle_id": "Q3783"
+  },
+  {
+   "id": "wp-46f1fccbcf",
+   "kategorie": "geografie",
+   "frage": "An welchem Fluss liegt die tschechische Hauptstadt Prag?",
+   "antworten": [
+    "Oder",
+    "Moldau",
+    "Elbe",
+    "Donau"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Prag",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Prag",
+   "quelle_id": "Q1085"
+  },
+  {
+   "id": "wp-52dc6031e3",
+   "kategorie": "geografie",
+   "frage": "Japan ist heute der einzige Staat der Welt, dessen Staatsoberhaupt welchen Titel trägt?",
+   "antworten": [
+    "Kaiser",
+    "Sultan",
+    "König",
+    "Emir"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Japan",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Japan",
+   "quelle_id": "Q17"
+  },
+  {
+   "id": "wp-6587c639c5",
+   "kategorie": "geografie",
+   "frage": "Wie viele menschliche Sprachen werden heute weltweit ungefähr gesprochen?",
+   "antworten": [
+    "Rund 2000",
+    "Rund 700",
+    "Rund 70 000",
+    "Rund 7000"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sprache",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sprache",
+   "quelle_id": "Q315"
+  },
+  {
+   "id": "wp-6a8ab4c969",
+   "kategorie": "geografie",
+   "frage": "Welche belgische Grossstadt liegt an der Maas?",
+   "antworten": [
+    "Gent",
+    "Brüssel",
+    "Lüttich",
+    "Antwerpen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Maas",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Maas",
+   "quelle_id": "Q41986"
+  },
+  {
+   "id": "wp-6d84881c73",
+   "kategorie": "geografie",
+   "frage": "In welchen Ozean mündet der grösste Strom Südamerikas, der durch Brasilien fliesst?",
+   "antworten": [
+    "Pazifik",
+    "Südpolarmeer",
+    "Indischer Ozean",
+    "Atlantik"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Amazonas",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Amazonas",
+   "quelle_id": "Q3783"
+  },
+  {
+   "id": "wp-755b11093b",
+   "kategorie": "geografie",
+   "frage": "Welches bekannte Denkmal ist ein touristischer Anziehungspunkt im Teutoburger Wald?",
+   "antworten": [
+    "Kyffhäuserdenkmal",
+    "Niederwalddenkmal",
+    "Völkerschlachtdenkmal",
+    "Hermannsdenkmal"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Teutoburger_Wald",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Teutoburger Wald",
+   "quelle_id": "Q109773"
+  },
+  {
+   "id": "wp-791e8ca3c3",
+   "kategorie": "geografie",
+   "frage": "Welcher Staat ist der einzige der Welt mit Latein als Amtssprache?",
+   "antworten": [
+    "Liechtenstein",
+    "Vatikanstadt",
+    "San Marino",
+    "Monaco"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Vatikanstadt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Vatikanstadt",
+   "quelle_id": "Q237"
+  },
+  {
+   "id": "wp-7b506ad703",
+   "kategorie": "geografie",
+   "frage": "Welche Stadt auf Mallorca ist die Hauptstadt der Balearischen Inseln?",
+   "antworten": [
+    "Sóller",
+    "Palma",
+    "Inca",
+    "Alcúdia"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mallorca",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mallorca",
+   "quelle_id": "Q8828"
+  },
+  {
+   "id": "wp-7d87087527",
+   "kategorie": "geografie",
+   "frage": "Zu welchem grösseren Gebirge gehört der Westerwald?",
+   "antworten": [
+    "Rheinisches Schiefergebirge",
+    "Weserbergland",
+    "Schwäbische Alb",
+    "Erzgebirge"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Westerwald",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Westerwald",
+   "quelle_id": "Q640966"
+  },
+  {
+   "id": "wp-87a1f1bd02",
+   "kategorie": "geografie",
+   "frage": "Zwischen welchen zwei französischen Regionen bildet der Kamm der Vogesen grösstenteils die Grenze?",
+   "antworten": [
+    "Burgund und Franche-Comté",
+    "Elsass und Lothringen",
+    "Elsass und Burgund",
+    "Lothringen und Champagne"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Vogesen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Vogesen",
+   "quelle_id": "Q187843"
+  },
+  {
+   "id": "wp-8accfd9c69",
+   "kategorie": "geografie",
+   "frage": "Welcher Held aus Homers Epen hatte seine Heimat auf der griechischen Insel Ithaka?",
+   "antworten": [
+    "Achilles",
+    "Agamemnon",
+    "Odysseus",
+    "Menelaos"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ithaka",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ithaka",
+   "quelle_id": "Q187471"
+  },
+  {
+   "id": "wp-9188d07b43",
+   "kategorie": "geografie",
+   "frage": "Wie hiess die keltische Siedlung, aus der sich das heutige Paris entwickelte?",
+   "antworten": [
+    "Lutetia",
+    "Lugdunum",
+    "Massilia",
+    "Burdigala"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Paris",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Paris",
+   "quelle_id": "Q90"
+  },
+  {
+   "id": "wp-95e31f257c",
+   "kategorie": "geografie",
+   "frage": "In welchem deutschen Bundesland liegt der Gipfel des Brockens?",
+   "antworten": [
+    "Sachsen",
+    "Thüringen",
+    "Sachsen-Anhalt",
+    "Niedersachsen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harz_(Mittelgebirge)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harz (Mittelgebirge)",
+   "quelle_id": "Q4186"
+  },
+  {
+   "id": "wp-9949634c5e",
+   "kategorie": "geografie",
+   "frage": "Welcher Fluss speist das Tote Meer?",
+   "antworten": [
+    "Jordan",
+    "Euphrat",
+    "Nil",
+    "Tigris"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Totes_Meer",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Totes Meer",
+   "quelle_id": "Q23883"
+  },
+  {
+   "id": "wp-a0f02e3bdd",
+   "kategorie": "geografie",
+   "frage": "Welcher grosse Fluss begrenzt das Mittelgebirge Westerwald im Westen?",
+   "antworten": [
+    "Mosel",
+    "Main",
+    "Rhein",
+    "Neckar"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Westerwald",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Westerwald",
+   "quelle_id": "Q640966"
+  },
+  {
+   "id": "wp-a2bbcec672",
+   "kategorie": "geografie",
+   "frage": "An der Mündung welches Flusses in den Atlantik liegt New York City?",
+   "antworten": [
+    "Delaware River",
+    "Connecticut River",
+    "Hudson River",
+    "Potomac River"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/New_York_City",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "New York City",
+   "quelle_id": "Q60"
+  },
+  {
+   "id": "wp-a4b53514d7",
+   "kategorie": "geografie",
+   "frage": "Welches dieser südamerikanischen Länder grenzt nicht an Brasilien?",
+   "antworten": [
+    "Argentinien",
+    "Chile",
+    "Kolumbien",
+    "Peru"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Brasilien",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Brasilien",
+   "quelle_id": "Q155"
+  },
+  {
+   "id": "wp-ac271120e8",
+   "kategorie": "geografie",
+   "frage": "Zu welchem Staat gehört die beliebte Ferieninsel Bali?",
+   "antworten": [
+    "Indonesien",
+    "Thailand",
+    "Philippinen",
+    "Malaysia"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bali",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Bali",
+   "quelle_id": "Q3125978"
+  },
+  {
+   "id": "wp-b226d748e6",
+   "kategorie": "geografie",
+   "frage": "Von welcher Stadt ist der Vatikanstaat vollständig umgeben?",
+   "antworten": [
+    "Florenz",
+    "Mailand",
+    "Neapel",
+    "Rom"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Vatikanstadt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Vatikanstadt",
+   "quelle_id": "Q237"
+  },
+  {
+   "id": "wp-b8d345ad50",
+   "kategorie": "geografie",
+   "frage": "An welchem Meer liegt Israel mit seiner Westküste?",
+   "antworten": [
+    "Schwarzes Meer",
+    "Mittelmeer",
+    "Kaspisches Meer",
+    "Arabisches Meer"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Israel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Israel",
+   "quelle_id": "Q801"
+  },
+  {
+   "id": "wp-b92a770344",
+   "kategorie": "geografie",
+   "frage": "Welche grosse Insel liegt direkt westlich von Bali, nur durch eine schmale Meeresstrasse getrennt?",
+   "antworten": [
+    "Sulawesi",
+    "Borneo",
+    "Java",
+    "Sumatra"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Bali",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Bali",
+   "quelle_id": "Q3125978"
+  },
+  {
+   "id": "wp-bad278e205",
+   "kategorie": "geografie",
+   "frage": "Von welchem Bundesland ist der Stadtstaat Berlin vollständig umgeben?",
+   "antworten": [
+    "Brandenburg",
+    "Sachsen-Anhalt",
+    "Mecklenburg-Vorpommern",
+    "Sachsen"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Berlin",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Berlin",
+   "quelle_id": "Q64"
+  },
+  {
+   "id": "wp-bc8f3bce4d",
+   "kategorie": "geografie",
+   "frage": "Welchen Beinamen trägt Prag wegen seines prachtvollen Stadtbilds?",
+   "antworten": [
+    "Silberne Stadt",
+    "Ewige Stadt",
+    "Stadt der Liebe",
+    "Goldene Stadt"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Prag",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Prag",
+   "quelle_id": "Q1085"
+  },
+  {
+   "id": "wp-bf32bc0625",
+   "kategorie": "geografie",
+   "frage": "Die Drau ist ein Nebenfluss welches grossen europäischen Stroms?",
+   "antworten": [
+    "Rhein",
+    "Elbe",
+    "Po",
+    "Donau"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Drau",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Drau",
+   "quelle_id": "Q171009"
+  },
+  {
+   "id": "wp-c256a97194",
+   "kategorie": "geografie",
+   "frage": "Das Erzgebirge liegt an der Grenze zwischen Deutschland und welchem Nachbarland?",
+   "antworten": [
+    "Österreich",
+    "Polen",
+    "Tschechien",
+    "Slowakei"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Erzgebirge",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Erzgebirge",
+   "quelle_id": "Q4198"
+  },
+  {
+   "id": "wp-c666282414",
+   "kategorie": "geografie",
+   "frage": "Durch welche drei Länder fliesst die Maas von der Quelle bis zur Mündung?",
+   "antworten": [
+    "Deutschland, Belgien, Niederlande",
+    "Frankreich, Luxemburg, Niederlande",
+    "Frankreich, Belgien, Niederlande",
+    "Frankreich, Deutschland, Niederlande"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Maas",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Maas",
+   "quelle_id": "Q41986"
+  },
+  {
+   "id": "wp-c6aa695c1f",
+   "kategorie": "geografie",
+   "frage": "Zu welcher Inselgruppe vor Griechenland gehört die Insel Ithaka?",
+   "antworten": [
+    "Ionische Inseln",
+    "Dodekanes",
+    "Kykladen",
+    "Sporaden"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ithaka",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ithaka",
+   "quelle_id": "Q187471"
+  },
+  {
+   "id": "wp-c80ae2c509",
+   "kategorie": "geografie",
+   "frage": "Für den Export welches Getränkerohstoffs ist die Insel Sri Lanka besonders berühmt?",
+   "antworten": [
+    "Hopfen",
+    "Kakao",
+    "Mate",
+    "Tee"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sri_Lanka",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sri Lanka",
+   "quelle_id": "Q854"
+  },
+  {
+   "id": "wp-cee9ea997c",
+   "kategorie": "geografie",
+   "frage": "Welche Stadt ist heute die Hauptstadt Japans?",
+   "antworten": [
+    "Osaka",
+    "Kyoto",
+    "Yokohama",
+    "Tokio"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Japan",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Japan",
+   "quelle_id": "Q17"
+  },
+  {
+   "id": "wp-cf186bc2bb",
+   "kategorie": "geografie",
+   "frage": "In welcher Stadt tagte 1814/15 der berühmte Kongress, der Europa nach Napoleon neu ordnete?",
+   "antworten": [
+    "Berlin",
+    "Prag",
+    "Wien",
+    "Paris"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wien",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Wien",
+   "quelle_id": "Q1741"
+  },
+  {
+   "id": "wp-d64e262a77",
+   "kategorie": "geografie",
+   "frage": "Welcher Berg ist der höchste Gipfel des Erzgebirges auf deutscher Seite?",
+   "antworten": [
+    "Brocken",
+    "Grosser Arber",
+    "Fichtelberg",
+    "Feldberg"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Erzgebirge",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Erzgebirge",
+   "quelle_id": "Q4198"
+  },
+  {
+   "id": "wp-dc4488dead",
+   "kategorie": "geografie",
+   "frage": "Welche antike Schlacht zwischen Römern und Germanen wurde lange im Teutoburger Wald vermutet?",
+   "antworten": [
+    "Schlacht bei Cannae",
+    "Schlacht bei Adrianopel",
+    "Varusschlacht",
+    "Schlacht bei Alesia"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Teutoburger_Wald",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Teutoburger Wald",
+   "quelle_id": "Q109773"
+  },
+  {
+   "id": "wp-dc46e5fee2",
+   "kategorie": "geografie",
+   "frage": "Wie heisst der Landstrich am steilen Westrand des Odenwalds zur Oberrheinischen Tiefebene?",
+   "antworten": [
+    "Bergstrasse",
+    "Weinstrasse",
+    "Wetterau",
+    "Kraichgau"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Odenwald",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Odenwald",
+   "quelle_id": "Q8359"
+  },
+  {
    "id": "wp-e511594020",
    "kategorie": "geografie",
    "frage": "Aus welchem Gestein besteht das Mittelgebirge Schwäbische Alb hauptsächlich?",
@@ -3620,6 +4484,78 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Schwäbische Alb",
    "quelle_id": "Q159589"
+  },
+  {
+   "id": "wp-e5ffcf52e7",
+   "kategorie": "geografie",
+   "frage": "In welchem Land entspringt die Drau, die später durch Kärnten fliesst?",
+   "antworten": [
+    "Deutschland",
+    "Italien",
+    "Schweiz",
+    "Slowenien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Drau",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Drau",
+   "quelle_id": "Q171009"
+  },
+  {
+   "id": "wp-eecdd31ea6",
+   "kategorie": "geografie",
+   "frage": "Was bedeutet der lateinische Ausdruck, von dem sich der Ländername «Australien» ableitet?",
+   "antworten": [
+    "Rotes Land",
+    "Fernes Land",
+    "Grosses Land",
+    "Südliches Land"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Australien",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Australien",
+   "quelle_id": "Q408"
+  },
+  {
+   "id": "wp-ef720eef0a",
+   "kategorie": "geografie",
+   "frage": "Wie heisst der höchste Berg des Harzes?",
+   "antworten": [
+    "Fichtelberg",
+    "Brocken",
+    "Wasserkuppe",
+    "Feldberg"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Harz_(Mittelgebirge)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Harz (Mittelgebirge)",
+   "quelle_id": "Q4186"
+  },
+  {
+   "id": "wp-f2959bd5bd",
+   "kategorie": "geografie",
+   "frage": "Welches dieser Länder ist ein direkter Nachbarstaat Israels?",
+   "antworten": [
+    "Irak",
+    "Türkei",
+    "Jordanien",
+    "Saudi-Arabien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Israel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Israel",
+   "quelle_id": "Q801"
   }
  ]
 }
