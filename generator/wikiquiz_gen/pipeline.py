@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING
 
 from .dedupe import deduplizieren
 from .models import Frage
-from .templates import geografie, naturwissenschaften
+from .templates import geografie, naturwissenschaften, schweiz
 from .templates.base import Kontext
 from .validate import pruefe_formal
 
@@ -19,6 +19,7 @@ if TYPE_CHECKING:
 WIKIDATA_TEMPLATES: dict[str, Callable[[Kontext], dict[str, list[Frage]]]] = {
     "geografie": geografie.generiere,
     "naturwissenschaften": naturwissenschaften.generiere,
+    "schweiz": schweiz.generiere,
 }
 
 
