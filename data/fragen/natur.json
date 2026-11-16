@@ -1,8 +1,746 @@
 {
  "version": 1,
  "kategorie": "natur",
- "generiert_am": "2026-11-16T10:32:54Z",
+ "generiert_am": "2026-11-16T11:49:11Z",
  "fragen": [
+  {
+   "id": "wp-0608461a4f",
+   "kategorie": "natur",
+   "frage": "Welche auffällige Färbung hat die Asiatische Tigermücke?",
+   "antworten": [
+    "Schwarz-weiss gemustert",
+    "Orange-schwarz gestreift",
+    "Gelb-schwarz gestreift",
+    "Rotbraun gefleckt"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Asiatische_Tigerm%C3%BCcke",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Asiatische Tigermücke",
+   "quelle_id": "Q477918"
+  },
+  {
+   "id": "wp-0713866339",
+   "kategorie": "natur",
+   "frage": "Was macht den Giersch im Garten so schwer zu bekämpfen?",
+   "antworten": [
+    "Seine giftigen Brennhaare",
+    "Seine kletternden Ranken",
+    "Seine unterirdischen Triebe",
+    "Seine dornigen Stängel"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Giersch",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Giersch",
+   "quelle_id": "Q217778"
+  },
+  {
+   "id": "wp-0d06886f5a",
+   "kategorie": "natur",
+   "frage": "Aus welchem Gebirge stammt das Alpaka ursprünglich?",
+   "antworten": [
+    "Himalaya",
+    "Rocky Mountains",
+    "Anden",
+    "Atlasgebirge"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Alpaka",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Alpaka",
+   "quelle_id": "Q81564"
+  },
+  {
+   "id": "wp-0f524920e3",
+   "kategorie": "natur",
+   "frage": "Auf welchem Kontinent verbringt der Mauersegler, der bei uns brütet, den Winter?",
+   "antworten": [
+    "In Südamerika",
+    "In Afrika",
+    "In Australien",
+    "In Asien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mauersegler",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mauersegler",
+   "quelle_id": "Q25377"
+  },
+  {
+   "id": "wp-10ba107ca6",
+   "kategorie": "natur",
+   "frage": "Mit welcher Pflanze ist der Topinambur so eng verwandt, dass beide zur selben Gattung gehören?",
+   "antworten": [
+    "Ringelblume",
+    "Sonnenblume",
+    "Margerite",
+    "Dahlie"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Topinambur",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Topinambur",
+   "quelle_id": "Q146190"
+  },
+  {
+   "id": "wp-1bd074a8c9",
+   "kategorie": "natur",
+   "frage": "Auf welche Sprache geht das Wort «Pistazie» ursprünglich zurück?",
+   "antworten": [
+    "Hebräisch",
+    "Persisch",
+    "Arabisch",
+    "Türkisch"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pistazie",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Pistazie",
+   "quelle_id": "Q36071"
+  },
+  {
+   "id": "wp-1c09a7382b",
+   "kategorie": "natur",
+   "frage": "Wo bildet der Jackfruchtbaum seine Blütenstände und damit später seine Früchte?",
+   "antworten": [
+    "Direkt am Stamm und an Ästen",
+    "An langen, hängenden Ranken",
+    "Nur an den äussersten Zweigspitzen",
+    "An unterirdischen Wurzelausläufern"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jackfruchtbaum",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jackfruchtbaum",
+   "quelle_id": "Q45757"
+  },
+  {
+   "id": "wp-1ec8573f96",
+   "kategorie": "natur",
+   "frage": "Wofür wird das Alpaka vor allem gezüchtet?",
+   "antworten": [
+    "Wegen seiner Wolle",
+    "Als Lasttier",
+    "Wegen seiner Milch",
+    "Wegen seines Fleisches"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Alpaka",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Alpaka",
+   "quelle_id": "Q81564"
+  },
+  {
+   "id": "wp-24aeef543d",
+   "kategorie": "natur",
+   "frage": "Mit welcher Nutzpflanze ist der Mangold nahe verwandt?",
+   "antworten": [
+    "Zuckerrübe",
+    "Grünkohl",
+    "Rhabarber",
+    "Sellerie"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mangold",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mangold",
+   "quelle_id": "Q157954"
+  },
+  {
+   "id": "wp-2565393fb0",
+   "kategorie": "natur",
+   "frage": "Mit den Blättern welcher Baumgattung werden Platanenblätter leicht verwechselt?",
+   "antworten": [
+    "Buche",
+    "Eiche",
+    "Ahorn",
+    "Linde"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Platanen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Platanen",
+   "quelle_id": "Q163025"
+  },
+  {
+   "id": "wp-25a323d97f",
+   "kategorie": "natur",
+   "frage": "Welchen Körperteil besitzen Schlangen im Gegensatz zu Blindschleichen und anderen Schleichen nicht?",
+   "antworten": [
+    "Zunge",
+    "Augenlider",
+    "Zähne",
+    "Schuppen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schlangen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schlangen",
+   "quelle_id": "Q2102"
+  },
+  {
+   "id": "wp-280570127c",
+   "kategorie": "natur",
+   "frage": "Wie nennt man eine Henne, die ihre Küken führt und umsorgt?",
+   "antworten": [
+    "Glucke",
+    "Junghenne",
+    "Poularde",
+    "Kapaun"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Haushuhn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Haushuhn",
+   "quelle_id": "Q780"
+  },
+  {
+   "id": "wp-29ce667db5",
+   "kategorie": "natur",
+   "frage": "Welche Form haben die Blätter der Rosskastanie typischerweise?",
+   "antworten": [
+    "Einfach und tief gelappt",
+    "Einfach und herzförmig",
+    "Schmal und nadelförmig",
+    "Fingerförmig aus 5 bis 11 Teilblättern"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rosskastanien",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rosskastanien",
+   "quelle_id": "Q158752"
+  },
+  {
+   "id": "wp-2c21435637",
+   "kategorie": "natur",
+   "frage": "Von welchem Wildtier stammt das Frettchen als Haustierform höchstwahrscheinlich ab?",
+   "antworten": [
+    "Steinmarder",
+    "Europäischer Nerz",
+    "Europäischer Iltis",
+    "Hermelin"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Frettchen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Frettchen",
+   "quelle_id": "Q178973"
+  },
+  {
+   "id": "wp-2dd89249de",
+   "kategorie": "natur",
+   "frage": "Von welchem Kontinent stammt die Maniokpflanze ursprünglich?",
+   "antworten": [
+    "Australien",
+    "Südamerika",
+    "Afrika",
+    "Asien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Maniok",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Maniok",
+   "quelle_id": "Q83124"
+  },
+  {
+   "id": "wp-30ee6729f7",
+   "kategorie": "natur",
+   "frage": "Wofür ist die Rinde von Platanen typischerweise bekannt?",
+   "antworten": [
+    "Fleckiges Mosaik, da Borke abblättert",
+    "Weiss mit schwarzen Querstreifen",
+    "Tiefe, dunkle Längsfurchen",
+    "Glatt und silbergrau ohne Flecken"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Platanen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Platanen",
+   "quelle_id": "Q163025"
+  },
+  {
+   "id": "wp-37ab90a1a0",
+   "kategorie": "natur",
+   "frage": "Der Cashewbaum trägt einen Beinamen, der auf die Form seiner Kerne anspielt. Welchem Organ ähneln sie?",
+   "antworten": [
+    "Niere",
+    "Herz",
+    "Leber",
+    "Lunge"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Cashewbaum",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Cashewbaum",
+   "quelle_id": "Q34007"
+  },
+  {
+   "id": "wp-38d4e7ee6c",
+   "kategorie": "natur",
+   "frage": "Aus welchem Protein bestehen die Haare von Säugetieren hauptsächlich?",
+   "antworten": [
+    "Elastin",
+    "Kollagen",
+    "Keratin",
+    "Myosin"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/S%C3%A4ugetiere",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Säugetiere",
+   "quelle_id": "Q7377"
+  },
+  {
+   "id": "wp-3c11d4edc6",
+   "kategorie": "natur",
+   "frage": "Welchen Gegenstand aus Eibenholz trug die Gletschermumie «Ötzi» bei sich?",
+   "antworten": [
+    "Einen Wanderstock",
+    "Einen Bogenstab",
+    "Eine Holzschüssel",
+    "Einen Kamm"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Europ%C3%A4ische_Eibe",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Europäische Eibe",
+   "quelle_id": "Q179729"
+  },
+  {
+   "id": "wp-3cf706277c",
+   "kategorie": "natur",
+   "frage": "Nach welchem Baum wird die Robinie im Volksmund oft fälschlich benannt?",
+   "antworten": [
+    "Linde",
+    "Platane",
+    "Akazie",
+    "Esche"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gew%C3%B6hnliche_Robinie",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gewöhnliche Robinie",
+   "quelle_id": "Q157417"
+  },
+  {
+   "id": "wp-3e15c8c366",
+   "kategorie": "natur",
+   "frage": "Wie nennt man die länglichen, hängenden Blütenstände der Birke?",
+   "antworten": [
+    "Rispen",
+    "Zapfen",
+    "Kätzchen",
+    "Dolden"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Birken",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Birken",
+   "quelle_id": "Q25243"
+  },
+  {
+   "id": "wp-3fce69c6d1",
+   "kategorie": "natur",
+   "frage": "Aus welcher Weltregion stammt die Pampelmuse ursprünglich?",
+   "antworten": [
+    "Mittelmeerraum",
+    "Mittelamerika",
+    "Westafrika",
+    "Südostasien"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pampelmuse",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Pampelmuse",
+   "quelle_id": "Q80024"
+  },
+  {
+   "id": "wp-47566f62f7",
+   "kategorie": "natur",
+   "frage": "In welchem dieser Länder wächst der Pistazienbaum ursprünglich wild?",
+   "antworten": [
+    "Griechenland",
+    "Spanien",
+    "Italien",
+    "Iran"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pistazie",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Pistazie",
+   "quelle_id": "Q36071"
+  },
+  {
+   "id": "wp-4e27eab17f",
+   "kategorie": "natur",
+   "frage": "Welche Wirkung sagte man dem Mönchspfeffer nach, die ihm seinen Namen eingebracht hat?",
+   "antworten": [
+    "Er senkt das Fieber",
+    "Er fördert den Schlaf",
+    "Er dämpft den Geschlechtstrieb",
+    "Er regt die Verdauung an"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/M%C3%B6nchspfeffer",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mönchspfeffer",
+   "quelle_id": "Q259318"
+  },
+  {
+   "id": "wp-5430174590",
+   "kategorie": "natur",
+   "frage": "In welcher Region Südamerikas wird Quinoa schon seit Jahrtausenden als wichtiges Nahrungsmittel angebaut?",
+   "antworten": [
+    "Im Amazonasgebiet",
+    "In der Pampa",
+    "In Patagonien",
+    "In den Andenländern"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Quinoa",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Quinoa",
+   "quelle_id": "Q139925"
+  },
+  {
+   "id": "wp-56350da33d",
+   "kategorie": "natur",
+   "frage": "Auf welchen Baum geht das Adjektiv ‹hanebüchen› (unglaublich, absurd) zurück?",
+   "antworten": [
+    "Buchsbaum",
+    "Hagedorn",
+    "Hainbuche",
+    "Rotbuche"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gemeine_Hainbuche",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gemeine Hainbuche",
+   "quelle_id": "Q158776"
+  },
+  {
+   "id": "wp-579a745660",
+   "kategorie": "natur",
+   "frage": "Von welcher Wildkatzenart stammt unsere Hauskatze ab?",
+   "antworten": [
+    "Ozelot",
+    "Luchs",
+    "Manul",
+    "Falbkatze"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hauskatze",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hauskatze",
+   "quelle_id": "Q146"
+  },
+  {
+   "id": "wp-58ecf1411c",
+   "kategorie": "natur",
+   "frage": "Unter welchem Namen ist die Zirbelkiefer in der Deutschschweiz bekannt?",
+   "antworten": [
+    "Lärche",
+    "Eibe",
+    "Arve",
+    "Föhre"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Zirbelkiefer",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Zirbelkiefer",
+   "quelle_id": "Q147278"
+  },
+  {
+   "id": "wp-5ab8fe9d4d",
+   "kategorie": "natur",
+   "frage": "Unter welchem Namen ist die Kornelkirsche in Österreich verbreitet bekannt?",
+   "antworten": [
+    "Dirndl",
+    "Ribisel",
+    "Marille",
+    "Kriecherl"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kornelkirsche",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kornelkirsche",
+   "quelle_id": "Q158642"
+  },
+  {
+   "id": "wp-5c6e389523",
+   "kategorie": "natur",
+   "frage": "Welche heute lebende Tiergruppe ist am nächsten mit den Krokodilen verwandt?",
+   "antworten": [
+    "Schildkröten",
+    "Vögel",
+    "Eidechsen",
+    "Schlangen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Krokodile",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Krokodile",
+   "quelle_id": "Q25363"
+  },
+  {
+   "id": "wp-5e862a8d24",
+   "kategorie": "natur",
+   "frage": "Wie gelangt der Blütenstaub der Birke zu anderen Blüten?",
+   "antworten": [
+    "Durch Käfer",
+    "Durch den Wind",
+    "Durch Bienen",
+    "Durch Schmetterlinge"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Birken",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Birken",
+   "quelle_id": "Q25243"
+  },
+  {
+   "id": "wp-6318af0ff6",
+   "kategorie": "natur",
+   "frage": "Wo liegt das Hauptverbreitungsgebiet der Elsbeere?",
+   "antworten": [
+    "Mittel- und Südeuropa",
+    "Nordeuropa",
+    "Nordamerika",
+    "Ostasien"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Elsbeere",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Elsbeere",
+   "quelle_id": "Q147459"
+  },
+  {
+   "id": "wp-65109aabd2",
+   "kategorie": "natur",
+   "frage": "Welches wild lebende Tier wird zoologisch ebenfalls zu den Haushunden gezählt?",
+   "antworten": [
+    "Dingo",
+    "Marderhund",
+    "Goldschakal",
+    "Kojote"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Haushund",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Haushund",
+   "quelle_id": "Q144"
+  },
+  {
+   "id": "wp-6e21ed963f",
+   "kategorie": "natur",
+   "frage": "Aus welcher Weltregion stammt der Cashewbaum ursprünglich?",
+   "antworten": [
+    "Südostasien",
+    "Westafrika",
+    "Südamerika",
+    "Indien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Cashewbaum",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Cashewbaum",
+   "quelle_id": "Q34007"
+  },
+  {
+   "id": "wp-78ff74e384",
+   "kategorie": "natur",
+   "frage": "Welche Farbe haben die Blüten der Kornelkirsche, die schon im Vorfrühling erscheinen?",
+   "antworten": [
+    "Violett",
+    "Weiss",
+    "Gelb",
+    "Rosa"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kornelkirsche",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kornelkirsche",
+   "quelle_id": "Q158642"
+  },
+  {
+   "id": "wp-7c335986ed",
+   "kategorie": "natur",
+   "frage": "Welche Schildkrötenart ist als einzige in der Schweiz, in Deutschland und in Österreich einheimisch?",
+   "antworten": [
+    "Maurische Landschildkröte",
+    "Rotwangen-Schmuckschildkröte",
+    "Griechische Landschildkröte",
+    "Europäische Sumpfschildkröte"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schildkr%C3%B6ten",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schildkröten",
+   "quelle_id": "Q223044"
+  },
+  {
+   "id": "wp-7e94e9d111",
+   "kategorie": "natur",
+   "frage": "Von welchem Kontinent stammt die Robinie, die heute in Europa auch wild wächst?",
+   "antworten": [
+    "Asien",
+    "Australien",
+    "Südamerika",
+    "Nordamerika"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gew%C3%B6hnliche_Robinie",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gewöhnliche Robinie",
+   "quelle_id": "Q157417"
+  },
+  {
+   "id": "wp-7fb593cb25",
+   "kategorie": "natur",
+   "frage": "Wie heisst die Stärke, die aus den Wurzelknollen der Maniokpflanze gewonnen wird?",
+   "antworten": [
+    "Maizena",
+    "Tapioka",
+    "Arrowroot",
+    "Sago"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Maniok",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Maniok",
+   "quelle_id": "Q83124"
+  },
+  {
+   "id": "wp-80ee1b5e43",
+   "kategorie": "natur",
+   "frage": "Wie heisst die Zuchtform des Karpfens, die überhaupt keine Schuppen hat?",
+   "antworten": [
+    "Schuppenkarpfen",
+    "Spiegelkarpfen",
+    "Zeilkarpfen",
+    "Lederkarpfen"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Karpfen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Karpfen",
+   "quelle_id": "Q81110"
+  },
+  {
+   "id": "wp-82273dafca",
+   "kategorie": "natur",
+   "frage": "Aus welcher Sprache stammt das Wort «Mangostan» für die tropische Frucht?",
+   "antworten": [
+    "Hindi",
+    "Malaiisch",
+    "Chinesisch",
+    "Thai"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mangostane",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mangostane",
+   "quelle_id": "Q170662"
+  },
+  {
+   "id": "wp-866c5eed58",
+   "kategorie": "natur",
+   "frage": "Welche Form haben die Blätter einer Linde typischerweise?",
+   "antworten": [
+    "Gefiedert",
+    "Nadelförmig",
+    "Handförmig gelappt",
+    "Herzförmig"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Linden_(Gattung)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Linden (Gattung)",
+   "quelle_id": "Q127849"
+  },
   {
    "id": "wp-866e25afd1",
    "kategorie": "natur",
@@ -22,6 +760,348 @@
    "quelle_id": "Q159323"
   },
   {
+   "id": "wp-8974a29b19",
+   "kategorie": "natur",
+   "frage": "Welche Farbe haben die Blüten des Gundermanns meistens?",
+   "antworten": [
+    "Blau-violett",
+    "Weiss",
+    "Gelb",
+    "Orange"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gundermann",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gundermann",
+   "quelle_id": "Q162544"
+  },
+  {
+   "id": "wp-8c7ddad151",
+   "kategorie": "natur",
+   "frage": "Wie das Laub welches Baumes zittert man laut einer bekannten Redewendung, wenn man grosse Angst hat?",
+   "antworten": [
+    "Espe",
+    "Linde",
+    "Eiche",
+    "Birke"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Espe",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Espe",
+   "quelle_id": "Q146110"
+  },
+  {
+   "id": "wp-8d4f0c8fb1",
+   "kategorie": "natur",
+   "frage": "Welche Ernährungsweise ist für Frettchen artgerecht?",
+   "antworten": [
+    "Körnerfresser",
+    "Reine Pflanzenfresser",
+    "Allesfresser",
+    "Reine Fleischfresser"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Frettchen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Frettchen",
+   "quelle_id": "Q178973"
+  },
+  {
+   "id": "wp-91b1d926ee",
+   "kategorie": "natur",
+   "frage": "In welcher Region wird die Echte Feige vor allem angebaut?",
+   "antworten": [
+    "In Mittelamerika",
+    "Im Mittelmeerraum",
+    "In Südostasien",
+    "In Westafrika"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Echte_Feige",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Echte Feige",
+   "quelle_id": "Q36146"
+  },
+  {
+   "id": "wp-9b68d23570",
+   "kategorie": "natur",
+   "frage": "Welche Farbe haben die Blüten der Gemeinen Wegwarte meistens?",
+   "antworten": [
+    "Himmelblau",
+    "Gelb",
+    "Rot",
+    "Orange"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gemeine_Wegwarte",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gemeine Wegwarte",
+   "quelle_id": "Q2544599"
+  },
+  {
+   "id": "wp-9dd45a2fbe",
+   "kategorie": "natur",
+   "frage": "Wofür ist die Durian-Frucht vor allem bekannt und umstritten?",
+   "antworten": [
+    "Ihren scharfen Geschmack",
+    "Ihre leuchtend blaue Schale",
+    "Ihre giftigen Samen",
+    "Ihren starken Geruch"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Durian",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Durian",
+   "quelle_id": "Q134185"
+  },
+  {
+   "id": "wp-a417d75f58",
+   "kategorie": "natur",
+   "frage": "Wie viele Beine hat ein ausgewachsenes Insekt?",
+   "antworten": [
+    "Vier",
+    "Acht",
+    "Zehn",
+    "Sechs"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Insekten",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Insekten",
+   "quelle_id": "Q1390"
+  },
+  {
+   "id": "wp-aa7245fa74",
+   "kategorie": "natur",
+   "frage": "Zu welcher Tiergruppe zählen die Vögel nach moderner wissenschaftlicher Systematik?",
+   "antworten": [
+    "Flugsaurier",
+    "Dinosaurier",
+    "Krokodile",
+    "Eidechsen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/V%C3%B6gel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Vögel",
+   "quelle_id": "Q5113"
+  },
+  {
+   "id": "wp-aede95f53a",
+   "kategorie": "natur",
+   "frage": "Wofür wurden die roten Früchte der Eberesche früher häufig eingesetzt?",
+   "antworten": [
+    "Als Ersatz für Kaffee",
+    "Zum Färben von Wolle",
+    "Zum Gerben von Leder",
+    "Als Köder beim Vogelfang"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Vogelbeere",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Vogelbeere",
+   "quelle_id": "Q146198"
+  },
+  {
+   "id": "wp-afaee47e7f",
+   "kategorie": "natur",
+   "frage": "Welcher Baum gilt als «lebendes Fossil» und wurde zum Baum des Jahrtausends erklärt?",
+   "antworten": [
+    "Ginkgo",
+    "Eiche",
+    "Kastanie",
+    "Linde"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ginkgo",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ginkgo",
+   "quelle_id": "Q43284"
+  },
+  {
+   "id": "wp-b4070ddad9",
+   "kategorie": "natur",
+   "frage": "Wofür ist der Götterbaum, ein aus Asien stammender Laubbaum, in Europa besonders bekannt?",
+   "antworten": [
+    "Sein extrem hartes Holz",
+    "Sein extrem schnelles Wachstum",
+    "Seine essbaren, süssen Früchte",
+    "Sein besonders hohes Alter"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/G%C3%B6tterbaum",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Götterbaum",
+   "quelle_id": "Q159570"
+  },
+  {
+   "id": "wp-b5e0379f4f",
+   "kategorie": "natur",
+   "frage": "Auf welchem Kontinent kommt das Leistenkrokodil neben Asien vor?",
+   "antworten": [
+    "Europa",
+    "Nordamerika",
+    "Südamerika",
+    "Australien"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Leistenkrokodil",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Leistenkrokodil",
+   "quelle_id": "Q182599"
+  },
+  {
+   "id": "wp-b6c72544b9",
+   "kategorie": "natur",
+   "frage": "Zu welcher Pflanzenfamilie gehört die Edelkastanie?",
+   "antworten": [
+    "Rosengewächse",
+    "Buchengewächse",
+    "Birkengewächse",
+    "Walnussgewächse"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Edelkastanie",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Edelkastanie",
+   "quelle_id": "Q22699"
+  },
+  {
+   "id": "wp-bc10f3dfc4",
+   "kategorie": "natur",
+   "frage": "Welchen Vögeln ähnelt der Mauersegler stark, obwohl er mit ihnen nicht näher verwandt ist?",
+   "antworten": [
+    "Den Staren",
+    "Den Schwalben",
+    "Den Lerchen",
+    "Den Spatzen"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mauersegler",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mauersegler",
+   "quelle_id": "Q25377"
+  },
+  {
+   "id": "wp-bd7546b314",
+   "kategorie": "natur",
+   "frage": "Welche Schildkröten werden von allen Schildkröten am grössten?",
+   "antworten": [
+    "Geierschildkröten",
+    "Lederschildkröten",
+    "Galápagos-Riesenschildkröten",
+    "Suppenschildkröten"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schildkr%C3%B6ten",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schildkröten",
+   "quelle_id": "Q223044"
+  },
+  {
+   "id": "wp-c21d0c0415",
+   "kategorie": "natur",
+   "frage": "Welches Tier gilt als das häufigste Haustier des Menschen?",
+   "antworten": [
+    "Schaf",
+    "Schwein",
+    "Huhn",
+    "Rind"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Haushuhn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Haushuhn",
+   "quelle_id": "Q780"
+  },
+  {
+   "id": "wp-c257b71b13",
+   "kategorie": "natur",
+   "frage": "Zu welcher Pflanzenfamilie gehören die Lupinen, wie auch Erbse, Bohne und Erdnuss?",
+   "antworten": [
+    "Korbblütler",
+    "Lippenblütler",
+    "Rosengewächse",
+    "Hülsenfrüchtler"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Lupinen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Lupinen",
+   "quelle_id": "Q156811"
+  },
+  {
+   "id": "wp-c2939f25e5",
+   "kategorie": "natur",
+   "frage": "In welchen Gebirgen ist die Zirbelkiefer ursprünglich heimisch?",
+   "antworten": [
+    "Vogesen und Schwarzwald",
+    "Skanden und Ural",
+    "Pyrenäen und Apenninen",
+    "Alpen und Karpaten"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Zirbelkiefer",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Zirbelkiefer",
+   "quelle_id": "Q147278"
+  },
+  {
+   "id": "wp-c66875e3f0",
+   "kategorie": "natur",
+   "frage": "Auf welchem Kontinent kommen Fledermäuse von Natur aus nicht vor?",
+   "antworten": [
+    "Antarktis",
+    "Australien",
+    "Südamerika",
+    "Afrika"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Flederm%C3%A4use",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Fledermäuse",
+   "quelle_id": "Q971343"
+  },
+  {
    "id": "wp-c9590e2a92",
    "kategorie": "natur",
    "frage": "Unter welchem anderen Namen ist der Wels im deutschsprachigen Raum regional auch bekannt?",
@@ -38,6 +1118,240 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Europäischer Wels",
    "quelle_id": "Q159323"
+  },
+  {
+   "id": "wp-d2f7751c7d",
+   "kategorie": "natur",
+   "frage": "Welche Fellfarbe ist typisch für die Hunderasse Samojede?",
+   "antworten": [
+    "Rotbraun",
+    "Schwarz",
+    "Grau gestromt",
+    "Weiss"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Samojede_(Hunderasse)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Samojede (Hunderasse)",
+   "quelle_id": "Q39002"
+  },
+  {
+   "id": "wp-d3c1259c03",
+   "kategorie": "natur",
+   "frage": "Aus welcher Region stammt die Hunderasse Samojede ursprünglich?",
+   "antworten": [
+    "Sibirien",
+    "Grönland",
+    "Alaska",
+    "Lappland"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Samojede_(Hunderasse)",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Samojede (Hunderasse)",
+   "quelle_id": "Q39002"
+  },
+  {
+   "id": "wp-d832d9f63a",
+   "kategorie": "natur",
+   "frage": "Welches Wildtier gilt als wilde Stammform des Haushundes?",
+   "antworten": [
+    "Rotfuchs",
+    "Schakal",
+    "Wolf",
+    "Kojote"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Haushund",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Haushund",
+   "quelle_id": "Q144"
+  },
+  {
+   "id": "wp-e35a05b4f8",
+   "kategorie": "natur",
+   "frage": "Welches Gemüse ist eine Zuchtform der Gemeinen Wegwarte?",
+   "antworten": [
+    "Rucola",
+    "Spinat",
+    "Mangold",
+    "Chicorée"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gemeine_Wegwarte",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gemeine Wegwarte",
+   "quelle_id": "Q2544599"
+  },
+  {
+   "id": "wp-e82f5294b6",
+   "kategorie": "natur",
+   "frage": "In welcher Region ist der Johannisbrotbaum ursprünglich verbreitet?",
+   "antworten": [
+    "Südostasien",
+    "Südliches Afrika",
+    "Mittelamerika",
+    "Mittelmeerraum"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Johannisbrotbaum",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Johannisbrotbaum",
+   "quelle_id": "Q68763"
+  },
+  {
+   "id": "wp-ec6316af6c",
+   "kategorie": "natur",
+   "frage": "Wofür ist der Karpfen seit der Antike vor allem beliebt?",
+   "antworten": [
+    "Als Köderfisch",
+    "Als Futterfisch",
+    "Als Speisefisch",
+    "Als Aquarienfisch"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Karpfen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Karpfen",
+   "quelle_id": "Q81110"
+  },
+  {
+   "id": "wp-eca993fafc",
+   "kategorie": "natur",
+   "frage": "Unter welchem Namen sind die Früchte der Edelkastanie in der Schweiz bekannt?",
+   "antworten": [
+    "Eicheln",
+    "Bucheckern",
+    "Haselnüsse",
+    "Marroni"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Edelkastanie",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Edelkastanie",
+   "quelle_id": "Q22699"
+  },
+  {
+   "id": "wp-ee5b25e6e9",
+   "kategorie": "natur",
+   "frage": "Unter welchem Namen ist Mangold in der Deutschschweiz bekannt?",
+   "antworten": [
+    "Blattkraut",
+    "Krautstiel",
+    "Federkohl",
+    "Rübstiel"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mangold",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mangold",
+   "quelle_id": "Q157954"
+  },
+  {
+   "id": "wp-f5ec77be01",
+   "kategorie": "natur",
+   "frage": "Welche Farbe hat die Schale einer reifen Mangostanfrucht?",
+   "antworten": [
+    "Orange",
+    "Hellgrün",
+    "Leuchtend gelb",
+    "Purpurrot"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mangostane",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mangostane",
+   "quelle_id": "Q170662"
+  },
+  {
+   "id": "wp-f77e84d634",
+   "kategorie": "natur",
+   "frage": "Von welchem Tier leitet sich der Name der Lupine aus dem Lateinischen ab?",
+   "antworten": [
+    "Fuchs",
+    "Hase",
+    "Bär",
+    "Wolf"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Lupinen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Lupinen",
+   "quelle_id": "Q156811"
+  },
+  {
+   "id": "wp-f85476745b",
+   "kategorie": "natur",
+   "frage": "Welche bekannte Zitrusfrucht entstand durch die Kreuzung von Pampelmuse und Mandarine?",
+   "antworten": [
+    "Orange",
+    "Kumquat",
+    "Zitrone",
+    "Limette"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pampelmuse",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Pampelmuse",
+   "quelle_id": "Q80024"
+  },
+  {
+   "id": "wp-fdd3c42da0",
+   "kategorie": "natur",
+   "frage": "Wovon ernähren sich Gürteltiere hauptsächlich?",
+   "antworten": [
+    "Fische",
+    "Gräser",
+    "Insekten",
+    "Früchte"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/G%C3%BCrteltiere",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gürteltiere",
+   "quelle_id": "Q47867"
+  },
+  {
+   "id": "wp-fe0f22e80c",
+   "kategorie": "natur",
+   "frage": "In welcher Region Europas ist die Gewöhnliche Rosskastanie ursprünglich heimisch?",
+   "antworten": [
+    "Auf den Britischen Inseln",
+    "Auf der Iberischen Halbinsel",
+    "In Skandinavien",
+    "Auf dem Balkan"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rosskastanien",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rosskastanien",
+   "quelle_id": "Q158752"
   }
  ]
 }
