@@ -1336,24 +1336,6 @@
    "quelle_id": "Q123857"
   },
   {
-   "id": "wp-2656087f45",
-   "kategorie": "schweiz",
-   "frage": "Mit welcher Zuggattung der Deutschen Bahn reist man in Deutschland am schnellsten, z. B. ab Basel oder Zürich?",
-   "antworten": [
-    "Eurocity (EC)",
-    "Interregio (IR)",
-    "Intercity (IC)",
-    "Intercity-Express (ICE)"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Intercity-Express",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Intercity-Express",
-   "quelle_id": "Q129172"
-  },
-  {
    "id": "wp-2d1cb3a2d1",
    "kategorie": "schweiz",
    "frage": "Wofür wurde Davos ab Mitte des 19. Jahrhunderts international bekannt?",
@@ -1604,24 +1586,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Hochrhein",
    "quelle_id": "Q650521"
-  },
-  {
-   "id": "wp-4845a3df36",
-   "kategorie": "schweiz",
-   "frage": "Welche auffällige Farbe zeigt das Gefieder auf der Oberseite des Eisvogels?",
-   "antworten": [
-    "Grau bis schwarz",
-    "Braun bis ocker",
-    "Gelb bis olivgrün",
-    "Blau bis türkis"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Eisvogel",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Eisvogel",
-   "quelle_id": "Q79915"
   },
   {
    "id": "wp-48d8aa0cc8",
@@ -2056,24 +2020,6 @@
    "quelle_id": "Q178611"
   },
   {
-   "id": "wp-74d21c7a1f",
-   "kategorie": "schweiz",
-   "frage": "Mit dem Ende welches Herrschergeschlechts ging um 1250 auch das mittelalterliche Herzogtum Schwaben unter?",
-   "antworten": [
-    "Staufer",
-    "Habsburger",
-    "Welfen",
-    "Karolinger"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Herzogtum_Schwaben",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Herzogtum Schwaben",
-   "quelle_id": "Q693980"
-  },
-  {
    "id": "wp-76995e8d25",
    "kategorie": "schweiz",
    "frage": "Wie nennt man die kulturelle Grenze zwischen der Deutschschweiz und der französischsprachigen Schweiz scherzhaft?",
@@ -2344,24 +2290,6 @@
    "quelle_id": "Q20065"
   },
   {
-   "id": "wp-975e149e0c",
-   "kategorie": "schweiz",
-   "frage": "Welchen Spitznamen trägt das Verkehrsflugzeug Junkers Ju 52 im deutschsprachigen Raum?",
-   "antworten": [
-    "Fliegende Festung",
-    "Tante Ju",
-    "Rosinenbomber",
-    "Dicke Berta"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Junkers_Ju_52/3m",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Junkers Ju 52/3m",
-   "quelle_id": "Q15410360"
-  },
-  {
    "id": "wp-9e6d5ee01e",
    "kategorie": "schweiz",
    "frage": "Wie heisst der Genfersee auf Französisch?",
@@ -2470,24 +2398,6 @@
    "quelle_id": "Q1426"
   },
   {
-   "id": "wp-ab5bdb8000",
-   "kategorie": "schweiz",
-   "frage": "Wovon ernährt sich der Eisvogel, der an klaren Bächen und Teichen lebt, vor allem?",
-   "antworten": [
-    "Mäuse und Eidechsen",
-    "Kleine Fische",
-    "Beeren und Früchte",
-    "Samen und Körner"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Eisvogel",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Eisvogel",
-   "quelle_id": "Q79915"
-  },
-  {
    "id": "wp-ac1c6cdbe7",
    "kategorie": "schweiz",
    "frage": "In welchen beiden Kantonen liegt der Walensee?",
@@ -2522,24 +2432,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Vogt",
    "quelle_id": "Q4122737"
-  },
-  {
-   "id": "wp-b1f53e2b60",
-   "kategorie": "schweiz",
-   "frage": "Welche weltbekannte Zigarettenmarke ist das Flaggschiff des Tabakkonzerns Philip Morris International?",
-   "antworten": [
-    "Gauloises",
-    "Marlboro",
-    "Lucky Strike",
-    "Camel"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Philip_Morris_International",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Philip Morris International",
-   "quelle_id": "Q1852556"
   },
   {
    "id": "wp-b38e8bfbd3",
@@ -2578,24 +2470,6 @@
    "quelle_id": "Q1675"
   },
   {
-   "id": "wp-b70eaa2c27",
-   "kategorie": "schweiz",
-   "frage": "Aus welcher süddeutschen Region stammen die Spätzle ursprünglich als traditionelles Leibgericht?",
-   "antworten": [
-    "Sachsen",
-    "Franken",
-    "Schwaben",
-    "Pfalz"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Sp%C3%A4tzle",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Spätzle",
-   "quelle_id": "Q20065"
-  },
-  {
    "id": "wp-b9cf285e9f",
    "kategorie": "schweiz",
    "frage": "Welcher Kanton ist flächenmässig der kleinste, der zwei Sitze im Ständerat hat?",
@@ -2612,24 +2486,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Kanton Zug",
    "quelle_id": "Q11933"
-  },
-  {
-   "id": "wp-bbcc09c64c",
-   "kategorie": "schweiz",
-   "frage": "Welche Landschaft in Sachsen und Thüringen ist nach mittelalterlichen Verwaltungsbeamten benannt?",
-   "antworten": [
-    "Allgäu",
-    "Breisgau",
-    "Vogtland",
-    "Erzgebirge"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Vogt",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Vogt",
-   "quelle_id": "Q4122737"
   },
   {
    "id": "wp-bbd0d126f9",
@@ -2972,24 +2828,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Alpen",
    "quelle_id": "Q1286"
-  },
-  {
-   "id": "wp-dbadebf0c8",
-   "kategorie": "schweiz",
-   "frage": "Wie viele Motoren besitzt die bekannte Ausführung des Wellblech-Flugzeugs Junkers Ju 52?",
-   "antworten": [
-    "Zwei",
-    "Drei",
-    "Sechs",
-    "Vier"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Junkers_Ju_52/3m",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Junkers Ju 52/3m",
-   "quelle_id": "Q15410360"
   },
   {
    "id": "wp-dfac0ad08c",
