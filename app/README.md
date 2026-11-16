@@ -34,7 +34,8 @@ npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für Git
 - **Kategorien** (im Setup): standardmässig alle; Abwahl einzelner Kategorien schränkt Kategorie-Screen, „Zufall“ und
   Zufalls-Animation auf die Auswahl ein. Modus und Auswahl werden wie die Spielernamen für das nächste Spiel gemerkt.
   Neu hinzugekommene Kategorien (z. B. Schweiz, Star Wars) werden automatisch gewählt, wenn zuvor alle gewählt waren;
-  eine bewusste Auswahl bleibt unverändert (`bekannteKategorien` in `wikiquiz:players:v1`).
+  eine bewusste Auswahl bleibt unverändert (`bekannteKategorien` in `wikiquiz:players:v1`). Die entfernte Kategorie
+  „Allgemeinwissen“ fällt aus gespeicherten Auswahlen weg.
 - **Erschöpfte Kategorien** sind ausgegraut („keine Fragen mehr“ bzw. „bald verfügbar“); beim Antippen erscheint ein Hinweis.
   „Zufall“ wählt nur unter Kategorien mit verbleibenden Fragen. Sind alle erschöpft, endet das Spiel.
 - **Zwischenstand** nach jeder Runde (bei mehreren Spielern); bei einem Spieler zeigt das Feedback den Punktestand.

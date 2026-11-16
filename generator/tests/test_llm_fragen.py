@@ -133,7 +133,7 @@ def test_zuordnung_mit_berufen():
 
 def test_zuordnung_personen():
     assert zuordnen(["Kategorie:Politiker (21. Jahrhundert)", "Kategorie:Literatur (Deutsch)", "Kategorie:Autor"]) == "geschichte"
-    assert zuordnen(["Kategorie:Philosoph (18. Jahrhundert)", "Kategorie:Literatur (18. Jahrhundert)"]) == "allgemeinwissen"
+    assert zuordnen(["Kategorie:Philosoph (18. Jahrhundert)", "Kategorie:Literatur (18. Jahrhundert)"]) == "geschichte"
     assert zuordnen(["Kategorie:Komponist (Klassik)", "Kategorie:Literatur (Deutsch)"]) == "kunst"
     assert zuordnen(["Kategorie:Person im Zweiten Weltkrieg", "Kategorie:Schlacht"]) == "geschichte"
 
@@ -178,6 +178,13 @@ def test_kategorie_abgleich(monkeypatch):
     behalten, verworfen = kand.passende_kategorie(None, ks, "kunst")
     assert [k.titel for k in behalten] == ["Mozart", "Unklar"]
     assert verworfen[0][1] == "kategorie passt nicht: geschichte"
+
+
+def test_zuordnung_essen_und_natur():
+    assert zuordnen(["Kategorie:Käsesorte", "Kategorie:Schweizer Küche"]) == "essen"
+    assert zuordnen(["Kategorie:Hunderasse", "Kategorie:FCI-Gruppe 1"]) == "natur"
+    assert zuordnen(["Kategorie:Feiertag", "Kategorie:Christentum"]) == "geschichte"
+    assert zuordnen(["Kategorie:Brettspiel", "Kategorie:Spiel 1950"]) == "sport"
 
 
 def test_themenkategorien_ohne_abgleich(monkeypatch):

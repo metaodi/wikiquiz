@@ -9,7 +9,7 @@ on:
         description: Kategorie
         type: choice
         default: alle
-        options: [alle, naturwissenschaften, kunst, geschichte, sport, geografie, allgemeinwissen, schweiz, starwars]
+        options: [alle, naturwissenschaften, kunst, geschichte, sport, geografie, essen, natur, schweiz, starwars]
       quelle:
         description: Quelle
         type: choice
@@ -47,7 +47,7 @@ jobs:
       - id: liste
         run: |
           if [ "${{ inputs.kategorie }}" = "alle" ]; then
-            echo 'liste=["naturwissenschaften","kunst","geschichte","sport","geografie","allgemeinwissen","schweiz","starwars"]' >> "$GITHUB_OUTPUT"
+            echo 'liste=["naturwissenschaften","kunst","geschichte","sport","geografie","essen","natur","schweiz","starwars"]' >> "$GITHUB_OUTPUT"
           else
             echo 'liste=["${{ inputs.kategorie }}"]' >> "$GITHUB_OUTPUT"
           fi

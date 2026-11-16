@@ -21,10 +21,11 @@ USER_AGENT = os.environ.get(
 KATEGORIEN: dict[str, str] = {
     "naturwissenschaften": "Naturwissenschaften & Technik",
     "kunst": "Kunst, Musik & Literatur",
-    "geschichte": "Geschichte",
+    "geschichte": "Geschichte & Gesellschaft",
     "sport": "Sport & Unterhaltung",
     "geografie": "Geografie",
-    "allgemeinwissen": "Allgemeinwissen",
+    "essen": "Essen & Genuss",
+    "natur": "Tiere & Natur",
     "schweiz": "Schweiz",
     "starwars": "Star Wars",
 }

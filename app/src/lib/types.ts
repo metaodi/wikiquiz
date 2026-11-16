@@ -4,7 +4,8 @@ export type KategorieId =
   | 'geschichte'
   | 'sport'
   | 'geografie'
-  | 'allgemeinwissen'
+  | 'essen'
+  | 'natur'
   | 'schweiz'
   | 'starwars';
 

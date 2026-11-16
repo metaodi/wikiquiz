@@ -12,16 +12,21 @@ export interface Kategorie {
 export const KATEGORIEN: Kategorie[] = [
   { id: 'naturwissenschaften', name: 'Naturwissenschaften & Technik', farbe: '#1565c0', text: '#fff', icon: '🔬' },
   { id: 'kunst', name: 'Kunst, Musik & Literatur', farbe: '#8e24aa', text: '#fff', icon: '🎨' },
-  { id: 'geschichte', name: 'Geschichte', farbe: '#8d5524', text: '#fff', icon: '🏛️' },
+  { id: 'geschichte', name: 'Geschichte & Gesellschaft', farbe: '#8d5524', text: '#fff', icon: '🏛️' },
   { id: 'sport', name: 'Sport & Unterhaltung', farbe: '#e65100', text: '#fff', icon: '⚽' },
   { id: 'geografie', name: 'Geografie', farbe: '#2e7d32', text: '#fff', icon: '🌍' },
-  { id: 'allgemeinwissen', name: 'Allgemeinwissen', farbe: '#f9a825', text: '#1f2a44', icon: '💡' },
+  { id: 'essen', name: 'Essen & Genuss', farbe: '#f9a825', text: '#1f2a44', icon: '🍽️' },
+  { id: 'natur', name: 'Tiere & Natur', farbe: '#00796b', text: '#fff', icon: '🐾' },
   { id: 'schweiz', name: 'Schweiz', farbe: '#d52b1e', text: '#fff', icon: '🇨🇭' },
   { id: 'starwars', name: 'Star Wars', farbe: '#1b1b1b', text: '#ffe81f', icon: '🌌' },
 ];
 
-/** Kategorien, die es seit der ersten Version gibt. Wer damals alle gewählt hatte, bekommt neue dazu. */
-export const URSPRUENGLICHE_KATEGORIEN: KategorieId[] = [
+/**
+ * Kategorien der ersten Version (für Speicherstände ohne `bekannteKategorien`). Wer damals alle gewählt
+ * hatte, bekommt neue dazu. „allgemeinwissen“ gibt es nicht mehr (aufgeteilt auf Geschichte & Gesellschaft,
+ * Essen & Genuss, Tiere & Natur, Sport, Geografie), steht hier aber für alte Speicherstände.
+ */
+export const URSPRUENGLICHE_KATEGORIEN: string[] = [
   'naturwissenschaften', 'kunst', 'geschichte', 'sport', 'geografie', 'allgemeinwissen',
 ];
 

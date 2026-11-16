@@ -27,14 +27,17 @@ export function einstellungenPruefen(e: Partial<Einstellungen> | undefined, anza
  * Gespeicherte Kategorienauswahl um seither neu hinzugekommene Kategorien ergänzen – aber nur, wenn
  * damals alle bekannten Kategorien gewählt waren (Standard „alle“). Eine bewusste Auswahl bleibt.
  * Ohne `bekannt` (ältere Speicherstände) gelten die ursprünglichen sechs Kategorien als bekannt.
+ * Inzwischen entfernte Kategorien (z. B. „allgemeinwissen“) zählen dabei nicht.
  */
 export function neueKategorienErgaenzen(
-  gewaehlt: KategorieId[] | undefined,
-  bekannt: KategorieId[] | undefined,
+  gewaehlt: string[] | undefined,
+  bekannt: string[] | undefined,
 ): KategorieId[] | undefined {
+  if (!gewaehlt) return undefined;
   const alt = bekannt ?? URSPRUENGLICHE_KATEGORIEN;
-  if (!gewaehlt || !alt.every((k) => gewaehlt.includes(k))) return gewaehlt;
-  return [...gewaehlt, ...ALLE_KATEGORIEN.filter((k) => !alt.includes(k) && !gewaehlt.includes(k))];
+  const gueltig = ALLE_KATEGORIEN.filter((k) => gewaehlt.includes(k));
+  if (!alt.filter((k) => (ALLE_KATEGORIEN as string[]).includes(k)).every((k) => gewaehlt.includes(k))) return gueltig;
+  return [...gueltig, ...ALLE_KATEGORIEN.filter((k) => !alt.includes(k) && !gueltig.includes(k))];
 }
 
 /** Wählt der vorherige Spieler die Kategorie für den aktiven Spieler? */

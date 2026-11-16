@@ -181,25 +181,25 @@ describe('Einstellungen', () => {
   it('Standard: selbst wählen, alle Kategorien; ungültige Werte werden ersetzt', () => {
     const s = zweiSpieler();
     expect(s.modus).toBe('selbst');
-    expect(s.kategorien).toHaveLength(8);
+    expect(s.kategorien).toHaveLength(9);
     expect(einstellungenPruefen({ modus: 'vorgaenger' }, 1).modus).toBe('selbst');
-    expect(einstellungenPruefen({ kategorien: [] }, 2).kategorien).toHaveLength(8);
+    expect(einstellungenPruefen({ kategorien: [] }, 2).kategorien).toHaveLength(9);
     expect(einstellungenPruefen({ kategorien: ['sport', 'kunst', 'xyz' as KategorieId] }, 2).kategorien).toEqual([
       'kunst',
       'sport',
     ]);
   });
 
-  it('neue Kategorien (Schweiz, Star Wars) kommen dazu, wenn früher alle gewählt waren', () => {
-    const alteSechs: KategorieId[] = ['naturwissenschaften', 'kunst', 'geschichte', 'sport', 'geografie', 'allgemeinwissen'];
+  it('neue Kategorien kommen dazu, wenn früher alle gewählt waren; Allgemeinwissen entfällt', () => {
+    const alteSechs = ['naturwissenschaften', 'kunst', 'geschichte', 'sport', 'geografie', 'allgemeinwissen'];
     // Älterer Speicherstand ohne `bekannteKategorien`: alle sechs gewählt → neue ergänzt
-    expect(einstellungenPruefen({ kategorien: neueKategorienErgaenzen(alteSechs, undefined) }, 2).kategorien).toEqual([
-      ...alteSechs,
-      'schweiz',
-      'starwars',
-    ]);
-    // Bewusste Auswahl bleibt
-    expect(neueKategorienErgaenzen(['kunst'], undefined)).toEqual(['kunst']);
+    expect(einstellungenPruefen({ kategorien: neueKategorienErgaenzen(alteSechs, undefined) }, 2).kategorien).toEqual(
+      ALLE_KATEGORIEN,
+    );
+    // Nur das entfernte Allgemeinwissen abgewählt → zählt trotzdem als „alle“
+    expect(neueKategorienErgaenzen(alteSechs.slice(0, 5), undefined)).toEqual(ALLE_KATEGORIEN);
+    // Bewusste Auswahl bleibt, entfernte Kategorie fällt weg
+    expect(neueKategorienErgaenzen(['kunst', 'allgemeinwissen'], undefined)).toEqual(['kunst']);
     // Bereits bekannt und abgewählt → bleibt abgewählt
     const ohneStarWars = ALLE_KATEGORIEN.filter((k) => k !== 'starwars');
     expect(neueKategorienErgaenzen(ohneStarWars, ALLE_KATEGORIEN)).toEqual(ohneStarWars);
@@ -270,6 +270,6 @@ describe('Einstellungen', () => {
     delete alt.kategorien;
     const s = wiederherstellen(alt as Spielstand, POOL, 0);
     expect(s.modus).toBe('selbst');
-    expect(s.kategorien).toHaveLength(8);
+    expect(s.kategorien).toHaveLength(9);
   });
 });
