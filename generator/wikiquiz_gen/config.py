@@ -28,12 +28,13 @@ KATEGORIEN: dict[str, str] = {
     "natur": "Tiere & Natur",
     "schweiz": "Schweiz",
     "starwars": "Star Wars",
+    "harrypotter": "Harry Potter",
 }
 
 # Themenkategorien liegen quer zu den Fachkategorien (ein Bundesrat wäre sonst „Geschichte“,
 # ein Star-Wars-Film „Sport & Unterhaltung“). Für sie entfällt der Kategorie-Abgleich, und
 # Exzellente/Lesenswerte Artikel werden ihnen nicht per Stichwort zugeordnet.
-THEMENKATEGORIEN: frozenset[str] = frozenset({"schweiz", "starwars"})
+THEMENKATEGORIEN: frozenset[str] = frozenset({"schweiz", "starwars", "harrypotter"})
 
 LIZENZ = {"wikidata": "CC0", "wikipedia": "CC BY-SA 4.0"}
 
@@ -69,6 +70,9 @@ SCHWELLEN["schweiz"] = Schwellen(min_sitelinks=15, min_pageviews=100.0)
 # Star Wars: Filme und Serien sind weltweit bekannt; Figuren haben auf de.wikipedia meist keinen
 # eigenen Artikel. Bei 50 Aufrufen/Tag kommen u. a. „Jedi“, „Todesstern“ und die Spiele dazu (31 statt 22 Artikel)
 SCHWELLEN["starwars"] = Schwellen(min_sitelinks=20, min_pageviews=50.0)
+# Harry Potter: Bücher und Filme sind weltweit bekannt, Begriffe (Muggel, Quidditch) und Orte werden
+# auf de.wikipedia seltener aufgerufen
+SCHWELLEN["harrypotter"] = Schwellen(min_sitelinks=20, min_pageviews=50.0)
 
 # Englische Wikipedia als ergänzende Quelle, pro Kategorie einschaltbar: für Themen, zu denen kein
 # deutscher Artikel den Bekanntheitsfilter besteht (Star-Wars-Figuren haben oft nur kurze, kaum
@@ -76,4 +80,6 @@ SCHWELLEN["starwars"] = Schwellen(min_sitelinks=20, min_pageviews=50.0)
 # auf en.wikipedia (Tatooine ≈ 220, The Force ≈ 150, BB-8 ≈ 120 Aufrufe/Tag).
 EN_SCHWELLEN: dict[str, Schwellen] = {
     "starwars": Schwellen(min_sitelinks=20, min_pageviews=100.0),
+    # Harry Potter: Nebenfiguren (Dumbledore, Snape, Ron) stehen auf de.wikipedia nur in Sammelartikeln
+    "harrypotter": Schwellen(min_sitelinks=20, min_pageviews=100.0),
 }

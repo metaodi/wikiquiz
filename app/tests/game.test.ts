@@ -198,9 +198,9 @@ describe('Einstellungen', () => {
   it('Standard: selbst wählen, alle Kategorien; ungültige Werte werden ersetzt', () => {
     const s = zweiSpieler();
     expect(s.modus).toBe('selbst');
-    expect(s.kategorien).toHaveLength(9);
+    expect(s.kategorien).toHaveLength(10);
     expect(einstellungenPruefen({ modus: 'vorgaenger' }, 1).modus).toBe('selbst');
-    expect(einstellungenPruefen({ kategorien: [] }, 2).kategorien).toHaveLength(9);
+    expect(einstellungenPruefen({ kategorien: [] }, 2).kategorien).toHaveLength(10);
     expect(einstellungenPruefen({ kategorien: ['sport', 'kunst', 'xyz' as KategorieId] }, 2).kategorien).toEqual([
       'kunst',
       'sport',
@@ -287,6 +287,6 @@ describe('Einstellungen', () => {
     delete alt.kategorien;
     const s = wiederherstellen(alt as Spielstand, POOL, 0);
     expect(s.modus).toBe('selbst');
-    expect(s.kategorien).toHaveLength(9);
+    expect(s.kategorien).toHaveLength(10);
   });
 });

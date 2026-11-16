@@ -93,17 +93,17 @@ Einmalig nötig:
    und Weltkriege per Stichwort; ohne Jahr ein gemeinsamer Topf „ohne Epoche“), sonst die Startkategorie. Verarbeitet wird reihum zuerst aus dem Thema mit den bisher wenigsten Fragen (Bestand
    eingerechnet), innerhalb eines Themas nach Seitenaufrufen (`wikipedia/themen.py`). So überwiegen nicht
    allein die meistgelesenen Themen (in der Geschichte NS-Zeit und Zweiter Weltkrieg).
-   **Themenkategorien** (`schweiz`, `starwars`; `THEMENKATEGORIEN` in `config.py`) liegen quer zu den
+   **Themenkategorien** (`schweiz`, `starwars`, `harrypotter`; `THEMENKATEGORIEN` in `config.py`) liegen quer zu den
    Fachkategorien: Für sie entfällt der Kategorie-Abgleich (ein Bundesrat bleibt in „Schweiz“, obwohl er sonst
    „Geschichte“ wäre). Exzellente und lesenswerte Artikel kommen dazu, wenn eine ihrer Wikipedia-Kategorien ein
-   Themen-Stichwort enthält (`THEMEN_STICHWORTE`, z. B. „(Schweiz)“, „in der Schweiz“, „Star Wars“). Dieselben
+   Themen-Stichwort enthält (`THEMEN_STICHWORTE`, z. B. „(Schweiz)“, „in der Schweiz“, „Star Wars“, „Harry Potter“). Dieselben
    Artikel können zusätzlich Fragen in ihrer Fachkategorie liefern. Für Themenkategorien gibt es (noch) keine
    Wikidata-Templates. Leere oder nicht existierende Startkategorien werden im Log gemeldet.
-   **Englische Wikipedia** (ergänzend, pro Kategorie in `EN_SCHWELLEN` in `config.py`, bisher nur Star Wars):
+   **Englische Wikipedia** (ergänzend, pro Kategorie in `EN_SCHWELLEN` in `config.py`, bisher Star Wars und Harry Potter):
    Startkategorien in `EN_STARTKATEGORIEN` (`wikipedia/quellen.py`). Übernommen werden Themen (Wikidata-QID),
    zu denen kein deutscher Artikel den Bekanntheitsfilter besteht: Tatooine hat keinen deutschen Artikel,
    Darth Vader nur einen kurzen, kaum aufgerufenen. Seitenaufrufe und Länge werden auf en.wikipedia gemessen
-   (Star Wars: mind. 100 Aufrufe/Tag, 20 Sitelinks). Das LLM erhält den
+   (Star Wars, Harry Potter: mind. 100 Aufrufe/Tag, 20 Sitelinks). Das LLM erhält den
    englischen Text und formuliert die Frage auf Deutsch; die Belegstelle bleibt ein englisches Zitat.
    `quelle_url` zeigt auf en.wikipedia, in `data/verarbeitet/` stehen solche Artikel als `en:Titel`.
    Braucht Netzwerkzugriff auf `en.wikipedia.org`.
@@ -140,8 +140,8 @@ Schwellen pro Kategorie in `wikiquiz_gen/config.py` (per CLI übersteuerbar):
 
 | Schwelle | Standard | Bemerkung |
 |---|---|---|
-| `min_sitelinks` | 30 (Sport, Kunst: 50; Schweiz: 15; Star Wars: 20) | wichtigster Indikator, direkt aus SPARQL. Höher, wo Seitenaufrufe kurzlebig sind (Sport, zeitgenössische Kunst und Literatur); tiefer bei Schweizer Themen, die in wenigen Sprachen beschrieben sind |
-| `min_pageviews` | 200/Tag (Naturwissenschaften, Schweiz: 100; Star Wars: 50) | abgefragtes Thema, Ø der letzten 12 vollen Monate auf de.wikipedia. Naturwissenschaftliche Artikel werden deutlich seltener aufgerufen (Niels Bohr, Enrico Fermi, Elektron < 200) |
+| `min_sitelinks` | 30 (Sport, Kunst: 50; Schweiz: 15; Star Wars, Harry Potter: 20) | wichtigster Indikator, direkt aus SPARQL. Höher, wo Seitenaufrufe kurzlebig sind (Sport, zeitgenössische Kunst und Literatur); tiefer bei Schweizer Themen, die in wenigen Sprachen beschrieben sind |
+| `min_pageviews` | 200/Tag (Naturwissenschaften, Schweiz: 100; Star Wars, Harry Potter: 50) | abgefragtes Thema, Ø der letzten 12 vollen Monate auf de.wikipedia. Naturwissenschaftliche Artikel werden deutlich seltener aufgerufen (Niels Bohr, Enrico Fermi, Elektron < 200) |
 | `min_pageviews_antwort` | 100/Tag | richtige Antwort (z. B. Hauptstadt) – Städteartikel werden seltener aufgerufen als Länderartikel (Ankara ≈ 170, Nairobi ≈ 150) |
 | `min_zeichen` | 3000 | Klartext, geschätzt als 60 % der Wikitext-Länge (`prop=info`, 50 Titel/Request) |
 

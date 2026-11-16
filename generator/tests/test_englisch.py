@@ -24,8 +24,8 @@ class FakeLLM:
         return self.antworten.pop(0)
 
 
-def test_nur_star_wars_mit_englischer_quelle():
-    assert set(EN_SCHWELLEN) == {"starwars"} == set(EN_STARTKATEGORIEN)
+def test_englische_quelle_nur_fuer_themenkategorien_mit_figuren():
+    assert set(EN_SCHWELLEN) == {"starwars", "harrypotter"} == set(EN_STARTKATEGORIEN)
     assert set(EN_SCHWELLEN) <= set(KATEGORIEN)
 
 
