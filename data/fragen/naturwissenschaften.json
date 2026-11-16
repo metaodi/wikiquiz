@@ -1696,24 +1696,6 @@
    "quelle_id": "Q46611"
   },
   {
-   "id": "wp-7da5950784",
-   "kategorie": "naturwissenschaften",
-   "frage": "Wie werden Menschen mit infantiler Zerebralparese im Allgemeinen auch genannt?",
-   "antworten": [
-    "Diabetiker",
-    "Autisten",
-    "Epileptiker",
-    "Spastiker"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Infantile_Zerebralparese",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Infantile Zerebralparese",
-   "quelle_id": "Q210427"
-  },
-  {
    "id": "wp-925203cb7f",
    "kategorie": "naturwissenschaften",
    "frage": "Aus welchem Land stammte Alfred Büchi, der 1905 das Prinzip des Turboladers patentieren liess?",
@@ -1856,24 +1838,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Artemis-Programm",
    "quelle_id": "Q63819987"
-  },
-  {
-   "id": "wp-c4c4b82518",
-   "kategorie": "naturwissenschaften",
-   "frage": "Welche Organisation soll laut Verschwörungstheorien die Mondlandungen von 1969 bis 1972 vorgetäuscht haben?",
-   "antworten": [
-    "JAXA",
-    "Roskosmos",
-    "ESA",
-    "NASA"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Verschw%C3%B6rungstheorien_zur_Mondlandung",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Verschwörungstheorien zur Mondlandung",
-   "quelle_id": "Q190706"
   },
   {
    "id": "wp-cffc4d9ab7",
