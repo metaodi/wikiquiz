@@ -406,3 +406,27 @@ def test_artikel_aus_anderen_kategorien():
     neu = [{"id": "wp-f942ddca42", "frage": "Hesse?"}, {"id": "wp-neu", "frage": "Eiche?"}]
     ok, doppelt = ohne_fremde_ids(neu, andere)
     assert [f["id"] for f in ok] == ["wp-neu"] and [f["id"] for f in doppelt] == ["wp-f942ddca42"]
+
+
+def test_dedupe_gleiches_werk_wikidata_gegen_bestand():
+    def wp(text, richtig, qid):
+        return frage(frage=text, richtig=richtig, falsch=["A B", "C D", "E F"], quelle_id=qid, quelle_typ="wikipedia")
+
+    def wd(text, richtig, qid):
+        return frage(frage=text, richtig=richtig, falsch=["A B", "C D", "E F"], quelle_id=qid, template="x")
+
+    # Lauf 30 (kunst): Wortüberlappung nur 0.14–0.36, trotzdem dieselbe Tatsache
+    bestand = [
+        wp("Welcher Maler schuf das berühmte Gemälde «Die Nachtwache»?", "Rembrandt", "Q1"),
+        wp("Welcher italienische Komponist schrieb die Opern «Tosca» und «Madama Butterfly»?", "Giacomo Puccini", "Q2"),
+    ]
+    neu = [
+        wd("Wer malte das Gemälde «Die Nachtwache»?", "Rembrandt van Rijn", "Q3"),
+        wd("Wer komponierte die Oper «Tosca»?", "Giacomo Puccini", "Q4"),
+        wd("Wer komponierte die Oper «Aida»?", "Giuseppe Verdi", "Q5"),
+        # gleicher Titel, andere Antwort: bleibt
+        wd("Wer schrieb «Tosca»?", "Victorien Sardou", "Q6"),
+    ]
+    behalten, verworfen = deduplizieren([*bestand, *neu])
+    assert behalten == [*bestand, *neu[2:]]
+    assert [g for _, g in verworfen] == [f"gleiches werk wie {bestand[0].id}", f"gleiches werk wie {bestand[1].id}"]
