@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "essen",
- "generiert_am": "2026-11-16T09:57:12Z",
+ "generiert_am": "2026-11-16T10:32:54Z",
  "fragen": [
   {
    "id": "wp-0154938482",
@@ -92,24 +92,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Baklava",
    "quelle_id": "Q187495"
-  },
-  {
-   "id": "wp-1f7e322573",
-   "kategorie": "essen",
-   "frage": "Wie heisst Kohlendioxid in fester Form, das oft zum Kühlen verwendet wird?",
-   "antworten": [
-    "Kühleis",
-    "Trockeneis",
-    "Schwarzeis",
-    "Kunsteis"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Kohlenstoffdioxid",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Kohlenstoffdioxid",
-   "quelle_id": "Q1997"
   },
   {
    "id": "wp-2222552e0a",
@@ -274,24 +256,6 @@
    "quelle_id": "Q471861"
   },
   {
-   "id": "wp-3c88be688b",
-   "kategorie": "essen",
-   "frage": "Aus welcher Hülsenfrucht wird die japanische Würzpaste Miso hauptsächlich hergestellt?",
-   "antworten": [
-    "Kidneybohnen",
-    "Linsen",
-    "Erbsen",
-    "Sojabohnen"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Miso",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Miso",
-   "quelle_id": "Q235169"
-  },
-  {
    "id": "wp-3cbd31ad48",
    "kategorie": "essen",
    "frage": "Hagebutten sind die Früchte welcher Pflanzen?",
@@ -436,24 +400,6 @@
    "quelle_id": "Q37525"
   },
   {
-   "id": "wp-866e25afd1",
-   "kategorie": "essen",
-   "frage": "Welcher Fisch gilt als grösster reiner Süsswasserfisch Europas?",
-   "antworten": [
-    "Hecht",
-    "Wels",
-    "Karpfen",
-    "Zander"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Europ%C3%A4ischer_Wels",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Europäischer Wels",
-   "quelle_id": "Q159323"
-  },
-  {
    "id": "wp-878a18a78f",
    "kategorie": "essen",
    "frage": "An welches Gewürz erinnert der typische Geruch von Fenchel?",
@@ -524,24 +470,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Tupperware",
    "quelle_id": "Q1129117"
-  },
-  {
-   "id": "wp-967a8b2874",
-   "kategorie": "essen",
-   "frage": "Wann werden die Früchte der Mispel reif?",
-   "antworten": [
-    "Ende Oktober bis Anfang November",
-    "Ende Juni bis Anfang Juli",
-    "Ende Mai bis Anfang Juni",
-    "Ende Juli bis Anfang August"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 3,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Mispel",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Mispel",
-   "quelle_id": "Q146186"
   },
   {
    "id": "wp-999630f789",
@@ -742,24 +670,6 @@
    "quelle_id": "Q170210"
   },
   {
-   "id": "wp-c61225fd1a",
-   "kategorie": "essen",
-   "frage": "Welcher Käse behält beim Erhitzen seine Form und wird deshalb oft «Grillkäse» genannt?",
-   "antworten": [
-    "Mozzarella",
-    "Brie",
-    "Feta",
-    "Halloumi"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Halloumi",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Halloumi",
-   "quelle_id": "Q549793"
-  },
-  {
    "id": "wp-c67386fb31",
    "kategorie": "essen",
    "frage": "Aus welchem Grundstoff wird Whisky hergestellt?",
@@ -796,24 +706,6 @@
    "quelle_id": "Q549793"
   },
   {
-   "id": "wp-c9590e2a92",
-   "kategorie": "essen",
-   "frage": "Unter welchem anderen Namen ist der Wels im deutschsprachigen Raum regional auch bekannt?",
-   "antworten": [
-    "Schleie",
-    "Rutte",
-    "Barbe",
-    "Waller"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Europ%C3%A4ischer_Wels",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Europäischer Wels",
-   "quelle_id": "Q159323"
-  },
-  {
    "id": "wp-cc9a2be6c1",
    "kategorie": "essen",
    "frage": "Durch welches Verfahren entsteht die japanische Würzpaste Miso aus Sojabohnen und Salz?",
@@ -848,24 +740,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Kaki",
    "quelle_id": "Q158482"
-  },
-  {
-   "id": "wp-d1898da18f",
-   "kategorie": "essen",
-   "frage": "Aus welchem Getreide wird das japanische Getränk Sake gebraut?",
-   "antworten": [
-    "Reis",
-    "Hirse",
-    "Weizen",
-    "Gerste"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Sake",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Sake",
-   "quelle_id": "Q170219"
   },
   {
    "id": "wp-d2bc571bb9",

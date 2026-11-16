@@ -1,0 +1,43 @@
+{
+ "version": 1,
+ "kategorie": "natur",
+ "generiert_am": "2026-11-16T10:32:54Z",
+ "fragen": [
+  {
+   "id": "wp-866e25afd1",
+   "kategorie": "natur",
+   "frage": "Welcher Fisch gilt als grösster reiner Süsswasserfisch Europas?",
+   "antworten": [
+    "Hecht",
+    "Wels",
+    "Karpfen",
+    "Zander"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Europ%C3%A4ischer_Wels",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Europäischer Wels",
+   "quelle_id": "Q159323"
+  },
+  {
+   "id": "wp-c9590e2a92",
+   "kategorie": "natur",
+   "frage": "Unter welchem anderen Namen ist der Wels im deutschsprachigen Raum regional auch bekannt?",
+   "antworten": [
+    "Schleie",
+    "Rutte",
+    "Barbe",
+    "Waller"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Europ%C3%A4ischer_Wels",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Europäischer Wels",
+   "quelle_id": "Q159323"
+  }
+ ]
+}
