@@ -47,10 +47,19 @@ npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für Git
 - **Zwischenstand** nach jeder Runde (bei mehreren Spielern); bei einem Spieler zeigt das Feedback den Punktestand.
 - **Mehrere Geräte (Vorschau):** nur sichtbar mit `?mehrgeraete` in der URL und vorerst nur zwischen Tabs im selben
   Browser (`BroadcastChannel`). Ein Gerät eröffnet einen Raum (4-stelliger Code) und leitet das Spiel (Host), bis zu
-  drei weitere treten mit dem Code bei; jedes Gerät ist ein Spieler, die Farbe vergibt der Host. Der Host wählt Runden,
-  Modus und Kategorien und startet. Gespielt wird reihum wie auf einem Gerät: Wer dran ist, sieht „Du bist dran“,
-  wählt und antwortet; die anderen sehen, wer dran ist bzw. wählt, und schauen bei der Frage zu (Antworten gesperrt).
-  Feedback sehen alle, „Weiter“ hat nur, wer dran war; Zwischenstand und Rangliste bedient der Host. Der Host prüft jede
+  drei weitere treten mit dem Code bei; jedes Gerät ist ein Spieler, die Farbe vergibt der Host. Der Host wählt Ablauf,
+  Runden, Modus und Kategorien und startet. Zwei Abläufe:
+  - *Alle gleichzeitig* (Standard im Raum): Eine Runde ist eine Frage für alle. Die Kategorie wählt reihum ein Spieler
+    für alle (bzw. Zufall; „Vorheriger Spieler wählt“ ist gesperrt), keine Übergabe. Jeder antwortet auf seinem Gerät,
+    Punkte nach der eigenen Antwortzeit; wer geantwortet hat, sieht „Warte auf die anderen … (x/n)“. Das Feedback kommt,
+    sobald alle geantwortet haben oder die Zeit abgelaufen ist (fehlende Antworten = Timeout): oben das eigene Ergebnis,
+    darunter alle Antworten mit Punkten und Zeit. „Weiter“ hat der Host; kein Zwischenstand. Oben zeigt jedes Gerät
+    die eigenen Punkte.
+  - *Reihum* wie auf einem Gerät: Wer dran ist, sieht „Du bist dran“, wählt und antwortet; die anderen sehen, wer dran
+    ist bzw. wählt, und schauen bei der Frage zu (Antworten gesperrt). Feedback sehen alle, „Weiter“ hat nur, wer dran
+    war; Zwischenstand und Rangliste bedient der Host.
+
+  Der Host prüft jede
   Aktion (`darf`) und überwacht den Timer selbst. Neuladen: Raum und Geräte-ID liegen pro Tab im `sessionStorage`
   (`wikiquiz:raum:v1`, `wikiquiz:geraet:v1`); Gäste werden wiedererkannt, der Host führt das Spiel weiter. Neue Geräte
   können nur in der Lobby beitreten. Beendet der Host das Spiel, sind alle wieder im Raum; schliesst er den Raum, werden
@@ -69,7 +78,7 @@ und steuern die Zeit über Playwrights Fake-Clock – Punkte und Timeouts werden
 | Neuladen | mitten in der Frage (gleiche Frage und Reihenfolge, Timer läuft weiter, Punkte gemäss Gesamtzeit), nach Ablauf (Timeout), auf Feedback- und Übergabe-Screen |
 | Timer | startet erst nach dem Einblenden, Warnfarbe ab 5 s Restzeit |
 | UX | kein horizontales Scrollen bei 320 px, alle Touch-Targets ≥ 48 px, Info-Seite mit Lizenzen, kein „ß“ |
-| Mehrere Geräte | zwei Tabs in einem Browser-Kontext (gemeinsame Fake-Clock): Lobby, Züge reihum mit Zuschauen, Neuladen von Gast und Host, Spiel beenden → zurück in den Raum, Raum verlassen; Beitritt mit vergebenem Namen abgelehnt, Host schliesst den Raum; Einstieg nur mit `?mehrgeraete`, 320 px |
+| Mehrere Geräte | drei Tabs „Alle gleichzeitig“: Standard-Ablauf, gleiche Frage überall, Warten mit Zähler, Timeout für fehlende Antwort, eigene und alle Ergebnisse, Kategoriewahl reihum, eigene Punkte oben, Rangliste, „Nochmals“; zwei Tabs in einem Browser-Kontext (gemeinsame Fake-Clock): Lobby, Züge reihum mit Zuschauen, Neuladen von Gast und Host, Spiel beenden → zurück in den Raum, Raum verlassen; Beitritt mit vergebenem Namen abgelehnt, Host schliesst den Raum; Einstieg nur mit `?mehrgeraete`, 320 px |
 
 ## Deployment
 

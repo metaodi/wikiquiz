@@ -119,7 +119,10 @@ Etappen:
 2. ✅ Raum, Lobby und Host-Logik über `BroadcastChannel` (`app/src/lib/raum.ts`, `broadcastKanal`), reihum gespielt;
    E2E-Tests mit zwei Tabs und gemeinsamer Fake-Clock (`app/e2e/mehrgeraete.spec.ts`). Vorschau hinter `?mehrgeraete`.
    Antwortzeit misst vorerst der Host (im selben Browser gleichwertig).
-3. Modus „Alle gleichzeitig“ (eigener Zug mit Antworten pro Spieler, Wartephase bis alle geantwortet haben).
+3. ✅ Ablauf „Alle gleichzeitig“ (`Einstellungen.ablauf`, nur im Raum, dort Standard): Eine Runde ist eine Frage für alle,
+   `Zug.alle` hält die Antwort pro Spieler; Feedback, sobald alle geantwortet haben oder die Zeit abläuft. Welcher Spieler
+   antwortet, bestimmt der Host aus dem Gerät (`Kontext.spieler`), nie aus der Nachricht. Frage bedienen alle (`ALLE`),
+   Feedback der Host. Gespeicherte Spielstände ohne `ablauf` gelten als „reihum“ (Schlüssel bleibt `v1`).
 4. Trystero, Raumcode/QR/Link; Antwortzeit misst der Gast, Prüfsumme der Fragen beim Beitritt; Einstieg ohne `?mehrgeraete`.
 5. Nur falls es in der Praxis hakt (Mobilfunk mit CGNAT): TURN-Server ergänzen oder auf ein kleines Backend
    (Cloudflare Durable Object / PartyKit) wechseln – dank `Kanal` ein Austausch an einer Stelle.

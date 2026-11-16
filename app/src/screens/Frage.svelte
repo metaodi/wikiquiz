@@ -13,6 +13,8 @@
     onAntwort,
     onTimeout,
     zuschauen = false,
+    eigeneWahl,
+    warteText,
   }: {
     frage: Frage;
     reihenfolge: number[];
@@ -22,6 +24,10 @@
     onTimeout: () => void;
     /** Mehrere Geräte: Frage nur anzeigen – jemand anders antwortet und startet den Timer */
     zuschauen?: boolean;
+    /** „Alle gleichzeitig“: bereits gespeicherte eigene Antwort (null = noch keine) */
+    eigeneWahl?: number | null;
+    /** Erscheint, sobald man selbst geantwortet hat (z. B. „Warte auf die anderen …“) */
+    warteText?: string;
   } = $props();
 
   const kat = $derived(KATEGORIE_MAP[frage.kategorie]);
@@ -30,6 +36,10 @@
     timerStart === null ? ZEITLIMIT_S : Math.min(ZEITLIMIT_S, Math.max(0, ZEITLIMIT_S - (jetzt - timerStart) / 1000)),
   );
   let gesendet = false;
+  // Sofort markieren, nicht erst, wenn der Host die Antwort bestätigt
+  let lokaleWahl = $state<number | null>(null);
+  const markiert = $derived(eigeneWahl ?? lokaleWahl);
+  const gesperrt = $derived(timerStart === null || zuschauen || markiert !== null);
 
   onMount(() => {
     // Timer erst starten, wenn Frage und Antworten vollständig eingeblendet sind.
@@ -53,8 +63,9 @@
   });
 
   function waehlen(i: number) {
-    if (timerStart === null || gesendet || zuschauen) return;
+    if (gesperrt || gesendet) return;
     gesendet = true;
+    lokaleWahl = i;
     onAntwort(i);
   }
 </script>
@@ -68,11 +79,15 @@
 
 <div class="unten">
   <TimerBar {rest} />
-  {#if zuschauen}<p class="muted zuschauen">Du schaust zu.</p>{/if}
+  {#if zuschauen}
+    <p class="muted zuschauen">Du schaust zu.</p>
+  {:else if markiert !== null && warteText}
+    <p class="muted zuschauen" role="status">{warteText}</p>
+  {/if}
   <ul class="antworten" aria-label="Antworten">
     {#each reihenfolge as i, pos (i)}
       <li style:--verzoegerung="{pos * 70}ms">
-        <button class="antwort" disabled={timerStart === null || zuschauen} onclick={() => waehlen(i)}>
+        <button class="antwort" class:gewaehlt={markiert === i} disabled={gesperrt} onclick={() => waehlen(i)}>
           <span class="buchstabe" aria-hidden="true">{'ABCD'[pos]}</span>
           <span class="text">{frage.antworten[i]}</span>
         </button>
@@ -134,6 +149,10 @@
   .antwort:disabled {
     cursor: default;
     color: inherit;
+  }
+  .antwort.gewaehlt {
+    border-color: var(--accent);
+    box-shadow: inset 0 0 0 2px var(--accent);
   }
   .antwort:not(:disabled):active {
     transform: scale(0.98);

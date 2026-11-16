@@ -36,6 +36,16 @@ export interface Spieler {
   punkte: number;
 }
 
+/** Antwort eines Spielers im Ablauf „Alle gleichzeitig“ */
+export interface Antwort {
+  /** Index in frage.antworten, null = Zeit abgelaufen */
+  gewaehlt: number | null;
+  /** Antwortzeit in Sekunden ab timerStart */
+  zeit: number;
+  punkte: number;
+  richtig: boolean;
+}
+
 export interface Zug {
   spieler: number;
   kategorie: KategorieId;
@@ -51,6 +61,11 @@ export interface Zug {
   zeit: number | null;
   punkte: number;
   richtig: boolean;
+  /**
+   * Nur im Ablauf „Alle gleichzeitig“: Antwort pro Spieler (null = noch keine).
+   * `spieler` ist dann der Spieler, der die Kategorie gewählt hat; gewaehlt/zeit/punkte/richtig bleiben leer.
+   */
+  alle?: (Antwort | null)[];
 }
 
 export type Phase =
@@ -71,10 +86,18 @@ export type Phase =
  */
 export type KategorieModus = 'selbst' | 'zufall' | 'vorgaenger';
 
+/**
+ * Wie die Fragen verteilt werden:
+ * - `reihum`: jeder Spieler beantwortet seine eigene Frage (auf einem oder mehreren Geräten)
+ * - `gleichzeitig`: alle beantworten dieselbe Frage auf ihrem eigenen Gerät (nur mit mehreren Geräten)
+ */
+export type Ablauf = 'reihum' | 'gleichzeitig';
+
 export interface Einstellungen {
   modus: KategorieModus;
   /** Kategorien, mit denen gespielt wird (mindestens eine) */
   kategorien: KategorieId[];
+  ablauf: Ablauf;
 }
 
 export interface Spielstand extends Einstellungen {

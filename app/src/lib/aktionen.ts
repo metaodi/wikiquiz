@@ -25,6 +25,8 @@ export interface Kontext {
   history: string[];
   jetzt: number;
   rng?: Rng;
+  /** Spieler, der die Aktion auslöst (bestimmt der Host aus dem Gerät); nötig für „Alle gleichzeitig“ */
+  spieler?: number;
 }
 
 export interface Ergebnis {
@@ -55,7 +57,7 @@ export function aktionAnwenden(s: Spielstand, aktion: Aktion, k: Kontext): Ergeb
       return { stand: game.timerStarten(s, k.jetzt) };
     case 'antworten': {
       const frage = aktuelleFrage(s, k.pool);
-      return { stand: frage ? game.antworten(s, frage, aktion.index, k.jetzt) : s };
+      return { stand: frage ? game.antworten(s, frage, aktion.index, k.jetzt, k.spieler ?? s.aktiverSpieler) : s };
     }
     case 'zeitPruefen': {
       const frage = aktuelleFrage(s, k.pool);
