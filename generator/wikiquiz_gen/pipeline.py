@@ -23,6 +23,27 @@ WIKIDATA_TEMPLATES: dict[str, Callable[[Kontext], dict[str, list[Frage]]]] = {
 }
 
 
+def themen_anderer_kategorien(kandidaten: list, andere: list[dict]) -> tuple[list, list[tuple[object, str]]]:
+    """Artikel überspringen, zu denen eine andere Kategorie schon Fragen hat (gleiche Wikidata-QID).
+    Ein Artikel passt oft zu mehreren Kategorien (Kaki: Essen und Natur, Hermann Hesse: Kunst und Schweiz).
+    Das LLM formuliert dann oft wortgleiche Fragen; das kostet doppelt und ergibt doppelte IDs."""
+    kat_von = {f["quelle_id"]: f["kategorie"] for f in andere if f.get("quelle_id")}
+    behalten, verworfen = [], []
+    for k in kandidaten:
+        if k.qid in kat_von:
+            verworfen.append((k, f"schon in kategorie {kat_von[k.qid]}"))
+        else:
+            behalten.append(k)
+    return behalten, verworfen
+
+
+def ohne_fremde_ids(neue: list[dict], andere: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Letzte Sicherung vor dem Schreiben: Fragen, deren ID es in einer anderen Kategorie schon gibt,
+    fallen weg (sonst bricht das Zusammenführen zu questions.json ab)."""
+    ids = {f["id"] for f in andere}
+    return [f for f in neue if f["id"] not in ids], [f for f in neue if f["id"] in ids]
+
+
 def reissverschluss(gruppen: dict[str, list[Frage]]) -> list[Frage]:
     """Abwechselnd aus jedem Template, jeweils die bekanntesten zuerst."""
     listen = [sorted(g, key=lambda f: -f.score) for g in gruppen.values()]
@@ -76,6 +97,7 @@ def wikipedia(
     verarbeitet: dict[str, dict],
     threads: int = 4,
     nur_kandidaten: bool = False,
+    andere: list[dict] = (),
 ) -> tuple[list[Frage], dict[str, dict], "Verbrauch | None"]:
     """Erzeugt bis zu (ziel − vorhandene Wikipedia-Fragen) neue Fragen.
 
@@ -138,6 +160,12 @@ def wikipedia(
         log.info("%s: %d amtierende Personen übersprungen: %s", ktx.kategorie, len(aktiv),
                  ", ".join(k.titel for k in kandidaten if k.qid in aktiv))
     kandidaten = [k for k in kandidaten if k.qid not in aktiv]
+    kandidaten, fremd = themen_anderer_kategorien(kandidaten, list(andere))
+    for k, grund in fremd:
+        ktx.protokoll.verwerfen(ktx.kategorie, "kategorie", grund, {"titel": k.schluessel})
+    if fremd:
+        log.info("%s: %d Artikel haben schon Fragen in einer anderen Kategorie, z. B. %s", ktx.kategorie,
+                 len(fremd), ", ".join(f"{k.titel} ({g.rsplit(' ', 1)[1]})" for k, g in fremd[:5]))
     # Bekannteste zuerst, gemessen an der Schwelle der jeweiligen Sprache
     kandidaten.sort(key=lambda k: -(k.pageviews or 0) / schwelle[k.sprache])
     pro_quelle: dict[str, list[dict]] = {}

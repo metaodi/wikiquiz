@@ -353,3 +353,18 @@ def test_dedupe_gleiche_antwort_nicht_fuer_wikidata():
                     falsch=["Belgien", "Spanien", "Italien"], template="stadt")
               for i, s in enumerate(["Lyon", "Lille", "Nizza"])]
     assert deduplizieren(fragen)[0] == fragen
+
+
+def test_artikel_aus_anderen_kategorien():
+    from wikiquiz_gen.pipeline import ohne_fremde_ids, themen_anderer_kategorien
+    from wikiquiz_gen.popularity import Kandidat
+
+    andere = [{"id": "wp-44eabfbbb6", "kategorie": "essen", "quelle_id": "Q29506"},
+              {"id": "wp-f942ddca42", "kategorie": "kunst", "quelle_id": "Q25973"}]
+    kaki, eiche = Kandidat("Q29506", "Kaki", "Kaki", 80), Kandidat("Q12004", "Eichen", "Eichen", 90)
+    behalten, verworfen = themen_anderer_kategorien([kaki, eiche], andere)
+    assert behalten == [eiche] and verworfen == [(kaki, "schon in kategorie essen")]
+
+    neu = [{"id": "wp-f942ddca42", "frage": "Hesse?"}, {"id": "wp-neu", "frage": "Eiche?"}]
+    ok, doppelt = ohne_fremde_ids(neu, andere)
+    assert [f["id"] for f in ok] == ["wp-neu"] and [f["id"] for f in doppelt] == ["wp-f942ddca42"]
