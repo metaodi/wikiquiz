@@ -2,7 +2,10 @@
 
 Templates (jedes Tier kommt nur in einem davon vor, sonst verrieten sich die Fragen):
 - tierklasse: „Zu welcher Tiergruppe gehört der Blauwal?“ → Säugetiere (Fische, Vögel, Reptilien)
-- welches_tier: „Welches dieser Tiere ist ein Säugetier?“ → Schnabeltier (Waran, Strauss, Hai)
+- welches_tier: „Welches dieser Tiere ist ein Säugetier?“ → Pottwal (Walhai, Weisser Hai, Kaiserpinguin)
+
+Gefragt werden vor allem Tiere, bei denen man sich leicht irrt (UEBERRASCHEND: Wale, Pinguine,
+Seepferdchen, Blindschleiche …), mit der naheliegenden Verwechslung als Distraktor.
 
 Die Klasse wird über die Taxonomie bestimmt: Elterntaxon (P171) paketweise nach oben verfolgen, bis
 eine der bekannten Klassen erreicht ist. Eine Pfadabfrage (P171+) läuft in die Zeitbegrenzung.
@@ -39,13 +42,37 @@ VERWECHSLUNG = {
     "Insekten": ["Spinnentiere", "Amphibien", "Vögel", "Reptilien"],
     "Spinnentiere": ["Insekten", "Reptilien", "Amphibien", "Säugetiere"],
 }
+# Tiergruppen, bei denen man sich leicht irrt: Taxon → naheliegende falsche Tiergruppe.
+# Solche Tiere werden bevorzugt gefragt; „Zu welcher Tiergruppe gehört der Löwe?“ ist zu einfach.
+UEBERRASCHEND = {
+    "Q160": "Fische",          # Wale
+    "Q25431": "Fische",        # Seekühe
+    "Q30263": "Fische",        # Robben
+    "Q971343": "Vögel",        # Fledermäuse
+    "Q21790": "Reptilien",     # Kloakentiere (Schnabeltier legt Eier)
+    "Q9147": "Säugetiere",     # Pinguine
+    "Q840849": "Säugetiere",   # Laufvögel (Strauss, Emu, Kiwi)
+    "Q7372": "Säugetiere",     # Haie
+    "Q6495741": "Säugetiere",  # Rochen
+    "Q128685": "Reptilien",    # Aalartige
+    "Q74363": "Reptilien",     # Seepferdchen
+    "Q183686": "Vögel",        # Fliegende Fische
+    "Q168422": "Amphibien",    # Lungenfische
+    "Q191059": "Amphibien",    # Schleichen (Blindschleiche)
+    "Q53663": "Reptilien",     # Schwanzlurche (Salamander, Molche)
+    "Q4758": "Reptilien",      # Schleichenlurche
+    "Q25363": "Amphibien",     # Krokodile
+    "Q223044": "Amphibien",    # Schildkröten
+}
+# Höchstens so viele Tiere pro überraschendem Taxon (sonst zehn Wale) und gewöhnliche Tiere pro Gruppe
+MAX_PRO_TAXON = 3
+MAX_GEWOEHNLICH_PRO_KLASSE = 1
+
 EINZAHL = {"Säugetiere": "ein Säugetier", "Vögel": "ein Vogel", "Reptilien": "ein Reptil",
            "Amphibien": "eine Amphibie", "Fische": "ein Fisch", "Insekten": "ein Insekt",
            "Spinnentiere": "ein Spinnentier"}
 
 MAX_PRO_TEMPLATE = {"tierklasse": 25, "welches_tier": 15}
-# Höchstens so viele Fragen pro Tiergruppe und Template, sonst fast nur Säugetiere und Vögel
-MAX_PRO_KLASSE = 6
 SCHWELLEN_TIER = Schwellen(min_sitelinks=60, min_pageviews=80.0, min_zeichen=2000)
 _ARTIKEL = re.compile(r"^(Der|Die|Das)\s+(.+?)\s*(\(.*?\))?\s*(?:,[^,]*,)?\s*(ist|war|gehört|zählt)\b")
 
@@ -69,10 +96,12 @@ SELECT DISTINCT ?item ?article ?sl WHERE {{
 }}""", ttl=30 * TAG)
 
 
-def klassen_bestimmen(ktx: Kontext, eltern: dict[str, set[str]], max_stufen: int = 40) -> dict[str, str]:
-    """Taxon-QID → Tiergruppe. Nur eindeutige Zuordnungen (eine Gruppe)."""
+def klassen_bestimmen(ktx: Kontext, eltern: dict[str, set[str]], max_stufen: int = 40
+                      ) -> tuple[dict[str, str], dict[str, set[str]]]:
+    """Taxon-QID → Tiergruppe (nur eindeutige Zuordnungen) und Taxon-QID → alle gefundenen Vorfahren."""
     vorfahren: dict[str, set[str]] = {}
     offen = {q: set(ps) for q, ps in eltern.items()}
+    alle: dict[str, set[str]] = {q: set(ps) for q, ps in eltern.items()}
     gefunden: dict[str, set[str]] = {}
     for _ in range(max_stufen):
         fehlend = sorted({p for ps in offen.values() for p in ps if p not in vorfahren and p not in KLASSEN})
@@ -92,10 +121,11 @@ def klassen_bestimmen(ktx: Kontext, eltern: dict[str, set[str]], max_stufen: int
             hoeher = {v for p in ps for v in vorfahren.get(p, ())}
             if hoeher:
                 weiter[q] = hoeher
+                alle[q] |= hoeher
         offen = weiter
         if not offen:
             break
-    return {q: next(iter(g)) for q, g in gefunden.items() if len(g) == 1}
+    return {q: next(iter(g)) for q, g in gefunden.items() if len(g) == 1}, alle
 
 
 def artikel_aus_einleitung(einleitung: str, label: str) -> str | None:
@@ -119,66 +149,90 @@ def einleitungen(ktx: Kontext, titel: list[str]) -> dict[str, str]:
     return ergebnis
 
 
-def _gekappt(fragen: list[Frage], gruppe: dict[str, str]) -> list[Frage]:
-    """Bekannteste zuerst, höchstens MAX_PRO_KLASSE pro Tiergruppe."""
-    zaehler: dict[str, int] = {}
-    ergebnis = []
-    for f in sorted(fragen, key=lambda f: -f.score):
-        g = gruppe[f.quelle_id]
-        if zaehler.get(g, 0) < MAX_PRO_KLASSE:
-            zaehler[g] = zaehler.get(g, 0) + 1
-            ergebnis.append(f)
-    return ergebnis
-
-
 def generiere(ktx: Kontext) -> dict[str, list[Frage]]:
     rows = bekannte_arten(ktx)
     # Startpunkt: die Art selbst; klassen_bestimmen holt von dort aus die Elterntaxa
-    gruppe = klassen_bestimmen(ktx, {qid(r["item"]): {qid(r["item"])} for r in rows})
+    gruppe, vorfahren = klassen_bestimmen(ktx, {qid(r["item"]): {qid(r["item"])} for r in rows})
     arten = {qid(r["item"]): r for r in rows if qid(r["item"]) in gruppe}
     bekannt = sorted(ktx.filtern([_kandidat(r) for r in arten.values()], "tier", schwellen=SCHWELLEN_TIER),
                      key=lambda k: -(k.pageviews or 0))
     log.info("Tiere: %d Arten mit Tiergruppe, %d bekannt", len(arten), len(bekannt))
-    texte = einleitungen(ktx, [k.titel for k in bekannt])
 
-    # Tiere mit Artikel im Singular → tierklasse, die übrigen → welches_tier
-    klasse_fragen, rest = [], []
+    # Überraschende Tiere (Wal, Pinguin, Seepferdchen …), höchstens MAX_PRO_TAXON pro Taxon
+    taxon_von: dict[str, str] = {}
+    pro_taxon: dict[str, int] = {}
     for k in bekannt:
-        name = swiss(k.label)
-        artikel = artikel_aus_einleitung(texte.get(k.titel, ""), k.label)
-        g = gruppe[k.qid]
-        if artikel:
-            falsch = VERWECHSLUNG[g][:3]
-            klasse_fragen.append(Frage(
-                kategorie=ktx.kategorie, frage=f"Zu welcher Tiergruppe gehört {artikel} {name}?", richtig=g,
-                falsch=falsch, schwierigkeit=2, quelle_typ="wikidata", quelle_url=artikel_url(k.titel),
-                quelle_titel=k.titel, quelle_id=k.qid, template="tierklasse", score=k.pageviews or 0))
-        else:
-            rest.append(k)
-    klasse_fragen = _gekappt(klasse_fragen, gruppe)
-    verwendet = {f.quelle_id for f in klasse_fragen}
+        taxa = sorted(vorfahren.get(k.qid, set()) & UEBERRASCHEND.keys())
+        if len(taxa) == 1 and UEBERRASCHEND[taxa[0]] != gruppe[k.qid]:
+            if pro_taxon.get(taxa[0], 0) < MAX_PRO_TAXON:
+                pro_taxon[taxa[0]] = pro_taxon.get(taxa[0], 0) + 1
+                taxon_von[k.qid] = taxa[0]
+    ueberraschend = [k for k in bekannt if k.qid in taxon_von]
+    texte = einleitungen(ktx, [k.titel for k in ueberraschend] + [k.titel for k in bekannt[:60]])
 
-    # „Welches dieser Tiere ist ein …?“: Antwort und Distraktoren aus Tieren, die nicht schon in
-    # `tierklasse` vorkommen; Distraktoren aus den verwechselbaren Gruppen
-    pool = [k for k in bekannt if k.qid not in verwendet]
+    def verwechslung(k: Kandidat) -> list[str]:
+        """Naheliegende falsche Gruppe zuerst, dann zwei weitere verwechselbare."""
+        g = gruppe[k.qid]
+        erste = UEBERRASCHEND.get(taxon_von.get(k.qid, ""))
+        rest = [x for x in VERWECHSLUNG[g] if x != erste]
+        rng = ktx.rng("verwechslung", k.qid)
+        return [erste, *rng.sample(rest, 2)] if erste else rng.sample(VERWECHSLUNG[g], 3)
+
+    def klassenfrage(k: Kandidat, artikel: str, score: float) -> Frage:
+        return Frage(
+            kategorie=ktx.kategorie, frage=f"Zu welcher Tiergruppe gehört {artikel} {swiss(k.label)}?",
+            richtig=gruppe[k.qid], falsch=verwechslung(k), schwierigkeit=2, quelle_typ="wikidata",
+            quelle_url=artikel_url(k.titel), quelle_titel=k.titel, quelle_id=k.qid, template="tierklasse",
+            score=score)
+
+    # Überraschende Tiere abwechselnd auf beide Templates verteilen (jedes Tier nur einmal);
+    # ohne Artikel im Singular nur „Welches dieser Tiere …?“
+    klasse_fragen: list[Frage] = []
+    welche_antworten: list[Kandidat] = []
+    for i, k in enumerate(ueberraschend):
+        artikel = artikel_aus_einleitung(texte.get(k.titel, ""), k.label)
+        if artikel and i % 2 == 0:
+            klasse_fragen.append(klassenfrage(k, artikel, 1_000_000 + (k.pageviews or 0)))
+        else:
+            welche_antworten.append(k)
+    # Wenige gewöhnliche Tiere dazu (leichte Fragen), höchstens eines pro Gruppe
+    gewoehnlich: dict[str, int] = {}
+    for k in bekannt[:60]:
+        if k.qid in taxon_von or gewoehnlich.get(gruppe[k.qid], 0) >= MAX_GEWOEHNLICH_PRO_KLASSE:
+            continue
+        artikel = artikel_aus_einleitung(texte.get(k.titel, ""), k.label)
+        if artikel:
+            gewoehnlich[gruppe[k.qid]] = gewoehnlich.get(gruppe[k.qid], 0) + 1
+            klasse_fragen.append(klassenfrage(k, artikel, k.pageviews or 0))
+
+    # „Welches dieser Tiere ist ein Säugetier?“ → Blauwal; Distraktoren aus der Gruppe, mit der man das
+    # Tier verwechselt (Walhai, Weisser Hai …), ergänzt durch eine weitere verwechselbare Gruppe
+    # Fangfrage-Tiere der verwechselten Gruppe zuerst: Zum Walhai (Fisch) passen Wale und Robben als
+    # Distraktoren, nicht Wolf oder Giraffe
     nach_gruppe: dict[str, list[Kandidat]] = {}
-    for k in pool:
+    for k in [*ueberraschend, *(k for k in bekannt if k.qid not in taxon_von)]:
         nach_gruppe.setdefault(gruppe[k.qid], []).append(k)
     welche = []
-    for k in pool:
-        g = gruppe[k.qid]
+    for k in welche_antworten:
+        g, erste = gruppe[k.qid], UEBERRASCHEND[taxon_von[k.qid]]
         rng = ktx.rng("welches_tier", k.qid)
-        andere = [x for vg in VERWECHSLUNG[g][:3] for x in nach_gruppe.get(vg, [])[:8]]
-        if len(andere) < 3:
+        andere = [x for x in nach_gruppe.get(erste, []) if x.qid != k.qid]
+        fang = [x for x in andere if x.qid in taxon_von][:6]
+        andere = fang if len(fang) >= 2 else andere[:10]
+        if len(andere) < 2:
             continue
-        falsch = [swiss(x.label) for x in rng.sample(andere, 3)]
+        falsch = [swiss(x.label) for x in rng.sample(andere, 2)]
+        weitere = [x for vg in VERWECHSLUNG[g] if vg != erste for x in nach_gruppe.get(vg, [])[:5]]
+        if not weitere:
+            continue
+        falsch.append(swiss(rng.choice(weitere).label))
         welche.append(Frage(
             kategorie=ktx.kategorie, frage=f"Welches dieser Tiere ist {EINZAHL[g]}?", richtig=swiss(k.label),
             falsch=falsch, schwierigkeit=2, quelle_typ="wikidata", quelle_url=artikel_url(k.titel),
             quelle_titel=k.titel, quelle_id=k.qid, template="welches_tier", score=k.pageviews or 0))
-    welche = _gekappt(welche, gruppe)
 
-    gruppen = {"tierklasse": klasse_fragen, "welches_tier": welche}
+    gruppen = {"tierklasse": sorted(klasse_fragen, key=lambda f: -f.score),
+               "welches_tier": sorted(welche, key=lambda f: -f.score)}
     for name, fragen in gruppen.items():
         del fragen[MAX_PRO_TEMPLATE[name]:]
         stufen_nach_rang(fragen)

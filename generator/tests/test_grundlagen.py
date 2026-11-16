@@ -442,7 +442,8 @@ def test_natur_klassen_bestimmen():
     try:
         class Ktx:
             http = Http()
-        ergebnis = klassen_bestimmen(Ktx(), {q: {q} for q in ["Q1", "Q2", "Q3"]})
+        ergebnis, vorfahren = klassen_bestimmen(Ktx(), {q: {q} for q in ["Q1", "Q2", "Q3"]})
     finally:
         natur.abfrage = alt
     assert ergebnis == {"Q1": "Säugetiere", "Q2": "Fische"}
+    assert {"Q10", "Q11"} <= vorfahren["Q1"]  # für die Erkennung überraschender Taxa (z. B. Wale)

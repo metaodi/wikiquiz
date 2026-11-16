@@ -258,16 +258,20 @@ ihre deutsche Bezeichnung auf die Landessprache abgebildet. Kantone selbst durch
 
 | Template | Frage | Distraktoren |
 |---|---|---|
-| `tierklasse` | Zu welcher Tiergruppe gehört der {Blauwal}? | verwechselbare Gruppen (Säugetiere → Fische, Vögel, Reptilien) |
-| `welches_tier` | Welches dieser Tiere ist ein {Säugetier}? | bekannte Tiere aus den verwechselbaren Gruppen |
+| `tierklasse` | Zu welcher Tiergruppe gehört der {Narwal}? | die naheliegende Verwechslung (Fische) und zwei weitere verwechselbare Gruppen |
+| `welches_tier` | Welches dieser Tiere ist ein {Säugetier}? → Schwertwal | Tiere aus der verwechselten Gruppe, bevorzugt selbst Fangfrage-Tiere (Weisser Hai, Aal) |
 
+- Gefragt werden vor allem Tiere, bei denen man sich leicht irrt (`UEBERRASCHEND`: Wale, Seekühe, Robben,
+  Fledermäuse, Kloakentiere, Pinguine, Laufvögel, Haie, Rochen, Aale, Seepferdchen, Blindschleichen,
+  Schwanzlurche, Krokodile, Schildkröten …), höchstens 3 pro Taxon. Dazu höchstens ein gewöhnliches Tier
+  pro Gruppe („Zu welcher Tiergruppe gehört der Löwe?“ ist zu leicht).
 - Tiere: Arten (P105) mit deutschem Trivialnamen (P1843) und mind. 60 Sprachversionen. Eine Abfrage aller
   Arten mit vielen Sprachversionen läuft in die Zeitbegrenzung des Abfragedienstes; der Trivialname grenzt ein.
 - Tiergruppe: Elterntaxon (P171) paketweise nach oben verfolgen bis zu einer bekannten Klasse (Säugetiere, Vögel,
   Reptilien, Amphibien, Knochen- und Knorpelfische, Insekten, Spinnentiere). Pflanzen fallen dabei weg.
-- Name = Titel des deutschen Artikels (Labels sind teils wissenschaftlich). Den Artikel („der Blauwal“) liefert
+- Name = Titel des deutschen Artikels (Labels sind teils wissenschaftlich). Den Artikel („der Narwal“) liefert
   der erste Satz des Wikipedia-Artikels; Tiere ohne eindeutigen Artikel im Singular kommen nur in `welches_tier`.
-- Jedes Tier nur in einem Template; höchstens 6 Fragen pro Tiergruppe und Template.
+- Jedes Tier ist nur in einem Template die richtige Antwort.
 
 Wikidata-Fragen werden gegen die bestehenden Wikipedia-Fragen der Kategorie dedupliziert (dieselbe Tatsache,
 gegenseitiges Verraten, höchstens 2 Fragen pro Thema).
