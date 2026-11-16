@@ -195,9 +195,9 @@ ihre deutsche Bezeichnung auf die Landessprache abgebildet. Kantone selbst durch
 
 | Template | Frage | Distraktoren |
 |---|---|---|
-| `literatur` | Wer schrieb «{Der kleine Prinz}»? | bekannte Schriftsteller, Romanciers, Dramatiker oder Dichter (≥ 100 Sitelinks) mit ähnlichem Geburtsjahr |
-| `gemaelde` | Wer malte das Gemälde «{Die Nachtwache}»? | bekannte Maler mit ähnlichem Geburtsjahr |
-| `oper` | Wer komponierte die Oper «{Carmen}»? | bekannte Komponisten mit ähnlichem Geburtsjahr |
+| `literatur` | Wer schrieb «{Der kleine Prinz}»? | Autoren anderer bekannter Werke mit ähnlichem Geburtsjahr |
+| `gemaelde` | Wer malte das Gemälde «{Die Nachtwache}»? | Maler anderer bekannter Gemälde mit ähnlichem Geburtsjahr |
+| `oper` | Wer komponierte die Oper «{Carmen}»? | Komponisten anderer bekannter Opern mit ähnlichem Geburtsjahr |
 
 - Nur Werke mit genau einem Urheber, und dieser muss den passenden Beruf (P106) haben. Das schliesst u. a.
   Bibelbücher aus („Römer“ → Paulus), die Wikidata ebenfalls als literarische Werke führt.
@@ -212,7 +212,7 @@ ihre deutsche Bezeichnung auf die Landessprache abgebildet. Kantone selbst durch
 | `olympia` | In welcher Stadt fanden die Olympischen {Sommerspiele 1972} statt? | Gastgeberstädte zeitlich naher Spiele derselben Art |
 | `wm_land` | In welchem Land fand die {Fussball-Weltmeisterschaft 2006} statt? | Gastgeberländer zeitlich naher Turniere |
 | `wm_sieger` | Welches Land gewann die {Fussball-Weltmeisterschaft 2014}? | andere Weltmeister |
-| `film` | Wer führte Regie beim Film «{Der Pate}»? | bekannte Regisseure mit ähnlichem Geburtsjahr; höchstens 2 Filme pro Person |
+| `film` | Wer führte Regie beim Film «{Der Pate}»? | Regisseure anderer bekannter Filme mit ähnlichem Geburtsjahr (nicht nach Beruf: Dort stehen auch Schauspieler wie Whoopi Goldberg); höchstens 2 Filme pro Person |
 
 - Gastgeberstädte der Olympischen Spiele sind kuratiert (`SOMMER_ORTE`, `WINTER_ORTE`): Wikidata erfasst sie
   uneinheitlich (P131 nur bei wenigen Spielen, P276 meist mit Stadien). Spiele mit mehreren Gastgebern fehlen.

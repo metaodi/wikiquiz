@@ -7,7 +7,7 @@ Templates:
 - wm_sieger:  „Welches Land gewann die Fussball-Weltmeisterschaft 2014?“ → Deutschland
                (Distraktoren: andere Weltmeister und Finalisten)
 - film:       „Wer führte Regie beim Film «Der weisse Hai»?“ → Steven Spielberg
-               (Distraktoren: bekannte Regisseure mit ähnlichem Geburtsjahr)
+               (Distraktoren: Regisseure anderer bekannter Filme mit ähnlichem Geburtsjahr)
 """
 from __future__ import annotations
 
@@ -18,8 +18,8 @@ from ..config import Schwellen
 from ..models import Frage, swiss
 from ..popularity import Kandidat
 from ..sparql import abfrage, artikel_url, qid, titel_aus_url
-from .base import Kontext, personen_nach_beruf, stufen_nach_rang, zeitgenossen
-from .kunst import geburtsjahr
+from .base import Kontext, stufen_nach_rang, zeitgenossen
+from .kunst import geburtsjahr, urheber_pool
 
 log = logging.getLogger(__name__)
 
@@ -27,7 +27,6 @@ SOMMERSPIELE = "Q159821"
 WINTERSPIELE = "Q82414"
 FUSSBALL_WM = "Q19317"
 FILM = "Q11424"
-FILMREGISSEUR = "Q2526255"
 
 # Gastgeberstädte: In Wikidata uneinheitlich erfasst (P131 nur bei wenigen Spielen, P276 meist mit
 # Stadien), darum kuratiert. Spiele mit mehreren Gastgeberstädten (Mailand/Cortina 2026) fehlen.
@@ -171,15 +170,16 @@ def film(ktx: Kontext) -> list[Frage]:
     rows = abfrage(ktx.http, f"""
 SELECT ?item ?label ?article ?sl ?person ?pl ?geboren (COUNT(DISTINCT ?p2) AS ?n) WHERE {{
   ?item wdt:P31 wd:{FILM}; wdt:P57 ?person; wdt:P57 ?p2.
-  ?person rdfs:label ?pl. FILTER(LANG(?pl) = "de") ?person wdt:P569 ?geboren.
+  ?person wdt:P31 wd:Q5; rdfs:label ?pl. FILTER(LANG(?pl) = "de") ?person wdt:P569 ?geboren.
   ?item wikibase:sitelinks ?sl. FILTER(?sl >= {SCHWELLEN_FILM.min_sitelinks})
   ?item rdfs:label ?label. FILTER(LANG(?label) = "de")
   ?article schema:about ?item; schema:isPartOf <https://de.wikipedia.org/>.
 }} GROUP BY ?item ?label ?article ?sl ?person ?pl ?geboren""", ttl=30 * 86400)
-    regie = {qid(r["item"]): (swiss(r["pl"]), geburtsjahr(r["geboren"])) for r in rows if r["n"] == "1"}
-    eindeutig = {qid(r["item"]): r for r in rows if r["n"] == "1"}
+    eindeutig = {qid(r["item"]): r for r in rows if r["n"] == "1" and geburtsjahr(r["geboren"]) is not None}
+    regie = {q: (swiss(r["pl"]), geburtsjahr(r["geboren"])) for q, r in eindeutig.items()}
     bekannt = ktx.filtern([_kandidat(r) for r in eindeutig.values()], "film", schwellen=SCHWELLEN_FILM)
-    pool = personen_nach_beruf(ktx, [FILMREGISSEUR], min_sitelinks=80)
+    # Regisseure bekannter Filme (60+ Sprachversionen), nicht alle Personen mit Beruf „Filmregisseur“
+    pool = urheber_pool(rows)
     fragen, pro_person = [], {}
     for k in sorted(bekannt, key=lambda k: -(k.pageviews or 0)):
         person, jahr = regie[k.qid]

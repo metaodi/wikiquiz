@@ -2,19 +2,20 @@
 
 Ein Template pro Werkart: „Wer schrieb «Die Blechtrommel»?“, „Wer malte das Gemälde
 «Die Nachtwache»?“, „Wer komponierte die Oper «Carmen»?“.
-Nur Werke mit genau einem Urheber. Distraktoren: bekannte Personen desselben Fachs mit ähnlichem
-Geburtsjahr (Zeitgenossen sind schwerer auszuschliessen als Personen aus anderen Jahrhunderten).
+Nur Werke mit genau einem Urheber. Distraktoren: Urheber anderer bekannter Werke derselben Art mit
+ähnlichem Geburtsjahr (Zeitgenossen sind schwerer auszuschliessen als Personen aus anderen Jahrhunderten).
 """
 from __future__ import annotations
 
 import logging
+import re
 from dataclasses import dataclass
 
 from ..config import Schwellen
 from ..models import Frage, swiss
 from ..popularity import Kandidat
 from ..sparql import abfrage, artikel_url, qid, titel_aus_url
-from .base import Kontext, personen_nach_beruf, stufen_nach_rang, zeitgenossen
+from .base import Kontext, stufen_nach_rang, zeitgenossen
 
 log = logging.getLogger(__name__)
 
@@ -23,7 +24,7 @@ log = logging.getLogger(__name__)
 class Werkart:
     muster: str                # SPARQL-Muster für ?item
     urheber: str               # Eigenschaft für den Urheber
-    berufe: tuple[str, ...]    # Berufe (P106) für den Distraktoren-Pool
+    berufe: tuple[str, ...]    # Berufe (P106), einer davon muss beim Urheber stehen
     frage: str                 # Vorlage mit {titel}
     maximal: int
 
@@ -52,10 +53,25 @@ def _kandidat(r: dict) -> Kandidat:
     return Kandidat(qid=qid(r["item"]), label=r["label"], titel=titel_aus_url(r["article"]), sitelinks=int(r["sl"]))
 
 
-def geburtsjahr(datum: str) -> int:
-    """„1564-04-23T00:00:00Z“ → 1564, „-0496-01-01T…“ → -496 (Sophokles)"""
-    jahr = int(datum.lstrip("-").split("-")[0])
-    return -jahr if datum.startswith("-") else jahr
+def geburtsjahr(datum: str | None) -> int | None:
+    """„1564-04-23T00:00:00Z“ → 1564, „-0496-01-01T…“ → -496 (Sophokles). Unbekannte Werte liefert
+    Wikidata als URL (…/.well-known/genid/…) → None."""
+    m = re.fullmatch(r"(-?)(\d{1,4})-\d\d-\d\dT.*", datum or "")
+    if not m:
+        return None
+    return -int(m.group(2)) if m.group(1) else int(m.group(2))
+
+
+def urheber_pool(rows: list[dict]) -> list[tuple[str, int]]:
+    """Alle Urheber bekannter Werke dieser Art als Distraktoren-Pool (Name, Geburtsjahr). Besser als
+    ein Pool nach Beruf (P106): Dort stehen auch Schauspieler oder Musiker, die einmal Regie führten
+    oder malten (Whoopi Goldberg, Cher als „Filmregisseur“)."""
+    pool: dict[str, tuple[str, int]] = {}
+    for r in rows:
+        jahr = geburtsjahr(r.get("geboren"))
+        if jahr is not None:
+            pool.setdefault(r["person"], (swiss(r["pl"]), jahr))
+    return sorted(pool.values())
 
 
 def werke(ktx: Kontext, name: str, art: Werkart) -> list[Frage]:
@@ -76,14 +92,14 @@ SELECT ?item ?label ?article ?sl ?person ?pl ?geboren (COUNT(DISTINCT ?p2) AS ?n
     urheber: dict[str, tuple[str, int]] = {}
     for r in rows:
         q = qid(r["item"])
-        if r["n"] != "1" or not r.get("geboren"):
+        if r["n"] != "1" or geburtsjahr(r.get("geboren")) is None:
             ktx.protokoll.verwerfen(ktx.kategorie, f"template:{name}", "nicht genau ein urheber mit geburtsjahr",
                                     {"qid": q, "label": r["label"]})
             continue
         urheber.setdefault(q, (swiss(r["pl"]), geburtsjahr(r["geboren"])))
     kandidaten = {qid(r["item"]): r for r in rows if qid(r["item"]) in urheber and r["label"] not in AUSSCHLUSS}
     bekannt = ktx.filtern([_kandidat(r) for r in kandidaten.values()], name, schwellen=SCHWELLEN_WERK)
-    pool = personen_nach_beruf(ktx, list(art.berufe))
+    pool = urheber_pool(rows)
     fragen: list[Frage] = []
     pro_urheber: dict[str, int] = {}
     for k in sorted(bekannt, key=lambda k: -(k.pageviews or 0)):

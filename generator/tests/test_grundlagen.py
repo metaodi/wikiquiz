@@ -378,3 +378,16 @@ def test_sport_wm_name_und_olympia_orte():
     assert SOMMER_ORTE[1972] == "München" and WINTER_ORTE[1928] == "St. Moritz"
     # Ausgefallene Spiele (Weltkriege) und Spiele mit mehreren Gastgebern fehlen
     assert not {1916, 1940, 1944} & SOMMER_ORTE.keys() and 2026 not in WINTER_ORTE
+
+
+def test_urheber_pool_ohne_unbekannte_geburtsjahre():
+    from wikiquiz_gen.templates.kunst import geburtsjahr, urheber_pool
+
+    assert geburtsjahr("http://www.wikidata.org/.well-known/genid/abc") is None
+    assert geburtsjahr(None) is None
+    rows = [
+        {"person": "P1", "pl": "James Cameron", "geboren": "1954-08-16T00:00:00Z"},
+        {"person": "P1", "pl": "James Cameron", "geboren": "1954-08-16T00:00:00Z"},  # zwei Filme
+        {"person": "P2", "pl": "Unbekannt", "geboren": "http://www.wikidata.org/.well-known/genid/x"},
+    ]
+    assert urheber_pool(rows) == [("James Cameron", 1954)]

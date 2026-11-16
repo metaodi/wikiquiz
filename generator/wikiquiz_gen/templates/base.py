@@ -71,26 +71,6 @@ def stufen_nach_rang(fragen: list, stufen: tuple[int, ...] = (1, 2, 3)) -> None:
         f.schwierigkeit = stufen[min(len(stufen) - 1, i * len(stufen) // max(1, len(sortiert)))]
 
 
-def personen_nach_beruf(ktx: Kontext, berufe: list[str], min_sitelinks: int = 100) -> list[tuple[str, int]]:
-    """Bekannte Personen mit einem der Berufe (Wikidata P106) als (Name, Geburtsjahr) – Pool für
-    Distraktoren wie „Wer schrieb …?“ oder „Wer führte Regie …?“."""
-    from ..models import swiss
-    from ..sparql import abfrage
-
-    werte = " ".join(f"wd:{b}" for b in berufe)
-    rows = abfrage(ktx.http, f"""
-SELECT DISTINCT ?p ?pl ?jahr WHERE {{
-  VALUES ?beruf {{ {werte} }}
-  ?p wdt:P106 ?beruf; wdt:P569 ?geboren; wikibase:sitelinks ?sl. FILTER(?sl >= {min_sitelinks})
-  ?p rdfs:label ?pl. FILTER(LANG(?pl) = "de") BIND(YEAR(?geboren) AS ?jahr)
-}}""", ttl=30 * 86400)
-    gesehen: dict[str, tuple[str, int]] = {}
-    for r in rows:
-        if r.get("jahr"):
-            gesehen.setdefault(r["p"], (swiss(r["pl"]), int(r["jahr"])))
-    return sorted(gesehen.values())
-
-
 def zeitgenossen(pool: list[tuple[str, int]], jahr: int, ausser: set[str], rng: random.Random,
                  n: int = 3, aus: int = 6) -> list[str]:
     """n Personen aus den `aus` mit dem ähnlichsten Geburtsjahr (ohne `ausser`)."""
