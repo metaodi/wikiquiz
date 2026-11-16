@@ -382,24 +382,6 @@
    "quelle_id": "Q207698"
   },
   {
-   "id": "wd-44ab2b0975",
-   "kategorie": "sport",
-   "frage": "Wer führte Regie beim Film «Harry Potter und der Gefangene von Askaban»?",
-   "antworten": [
-    "Alfonso Cuarón",
-    "Baz Luhrmann",
-    "Rob Marshall",
-    "Jonathan Mostow"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikidata",
-   "quelle_url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Gefangene_von_Askaban_(Film)",
-   "lizenz": "CC0",
-   "quelle_titel": "Harry Potter und der Gefangene von Askaban (Film)",
-   "quelle_id": "Q102448"
-  },
-  {
    "id": "wd-47afda9d68",
    "kategorie": "sport",
    "frage": "In welcher Stadt fanden die Olympischen Sommerspiele 1936 statt?",
