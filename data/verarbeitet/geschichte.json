@@ -1,0 +1,842 @@
+{
+ "1st Special Forces Operational Detachment-Delta (Airborne)": {
+  "qid": "Q209114",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Abraham Lincoln": {
+  "qid": "Q91",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Adolf Eichmann": {
+  "qid": "Q28085",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Adolf Hitler": {
+  "qid": "Q352",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Alexander Gauland": {
+  "qid": "Q1670311",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Alexander der Große": {
+  "qid": "Q8409",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Alexander von Humboldt": {
+  "qid": "Q6694",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Angela Merkel": {
+  "qid": "Q567",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Angriff auf Pearl Harbor": {
+  "qid": "Q52418",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Anne Boleyn": {
+  "qid": "Q80823",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Anne Frank": {
+  "qid": "Q4583",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Arminius": {
+  "qid": "Q68880",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Attentat vom 20. Juli 1944": {
+  "qid": "Q105570",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Attentat von Sarajevo": {
+  "qid": "Q192050",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Attila": {
+  "qid": "Q36724",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Augustus": {
+  "qid": "Q1405",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Barack Obama": {
+  "qid": "Q76",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Bill Clinton": {
+  "qid": "Q1124",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Boeing 747": {
+  "qid": "Q179",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Caracalla": {
+  "qid": "Q1446",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Carl Schmitt": {
+  "qid": "Q77148",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Carl von Clausewitz": {
+  "qid": "Q76430",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Cheops-Pyramide": {
+  "qid": "Q37200",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Dassault Rafale": {
+  "qid": "Q190973",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Deutsch-Französischer Krieg": {
+  "qid": "Q46083",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Deutscher Kaiser": {
+  "qid": "Q501503",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Deutscher Orden": {
+  "qid": "Q48189",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Deutsches Kaiserreich": {
+  "qid": "Q43287",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Dietrich Bonhoeffer": {
+  "qid": "Q76326",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Donald Trump": {
+  "qid": "Q22686",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Dschingis Khan": {
+  "qid": "Q720",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Dwight D. Eisenhower": {
+  "qid": "Q9916",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Eisernes Kreuz": {
+  "qid": "Q154554",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Elisabeth II.": {
+  "qid": "Q9682",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Erster Weltkrieg": {
+  "qid": "Q361",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Europäische Union": {
+  "qid": "Q458",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Falklandkrieg": {
+  "qid": "Q48249",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Franklin D. Roosevelt": {
+  "qid": "Q8007",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Franz Ferdinand von Österreich-Este": {
+  "qid": "Q43063",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Französische Revolution": {
+  "qid": "Q6534",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Friedrich I. (HRR)": {
+  "qid": "Q79789",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Friedrich II. (HRR)": {
+  "qid": "Q130221",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Friedrich Merz": {
+  "qid": "Q566257",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Friedrich Paulus": {
+  "qid": "Q57160",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Gaius Iulius Caesar": {
+  "qid": "Q1048",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Geheime Staatspolizei": {
+  "qid": "Q43250",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Georg Elser": {
+  "qid": "Q77269",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Georg III. (Vereinigtes Königreich)": {
+  "qid": "Q127318",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "George H. W. Bush": {
+  "qid": "Q23505",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "George W. Bush": {
+  "qid": "Q207",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "George Washington": {
+  "qid": "Q23",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Gerhard Schröder": {
+  "qid": "Q2530",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Grumman F-14": {
+  "qid": "Q34945",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Göbekli Tepe": {
+  "qid": "Q214944",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Hans-Ulrich Rudel": {
+  "qid": "Q57131",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 2,
+  "angenommen": 0,
+  "verworfen": 0
+ },
+ "Heiliges Römisches Reich": {
+  "qid": "Q12548",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Helmut Kohl": {
+  "qid": "Q2518",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Helmut Schmidt": {
+  "qid": "Q2516",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Holocaustleugnung": {
+  "qid": "Q151296",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Islamische Revolution": {
+  "qid": "Q126065",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "James A. Garfield": {
+  "qid": "Q34597",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "James Buchanan": {
+  "qid": "Q12325",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Jesus von Nazaret": {
+  "qid": "Q51666",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Jimmy Carter": {
+  "qid": "Q23685",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Joe Biden": {
+  "qid": "Q6279",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "John F. Kennedy": {
+  "qid": "Q9696",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Josef Mengele": {
+  "qid": "Q57109",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "KZ Buchenwald": {
+  "qid": "Q152802",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Kalter Krieg": {
+  "qid": "Q8683",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Karl der Große": {
+  "qid": "Q3044",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Klaus Barbie": {
+  "qid": "Q77088",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Kleopatra VII.": {
+  "qid": "Q635",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Konrad Adenauer": {
+  "qid": "Q2492",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Konstantin der Große": {
+  "qid": "Q8413",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Konzentrationslager": {
+  "qid": "Q328468",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Kurt Georg Kiesinger": {
+  "qid": "Q2512",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Leo Trotzki": {
+  "qid": "Q33391",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Ludwig Erhard": {
+  "qid": "Q2496",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Ludwig XIV.": {
+  "qid": "Q7742",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Margaret Thatcher": {
+  "qid": "Q7416",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Maria I. (England)": {
+  "qid": "Q82674",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Mark Aurel": {
+  "qid": "Q1430",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Martin Luther King": {
+  "qid": "Q8027",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Massaker von Katyn": {
+  "qid": "Q134301",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Massaker von Srebrenica": {
+  "qid": "Q170334",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Mata Hari": {
+  "qid": "Q82180",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Mustafa Kemal Atatürk": {
+  "qid": "Q5152",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Napoleon Bonaparte": {
+  "qid": "Q517",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Nero": {
+  "qid": "Q1413",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Olaf Scholz": {
+  "qid": "Q61053",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Operation Overlord": {
+  "qid": "Q8641370",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Oskar Lafontaine": {
+  "qid": "Q110719",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Otto I. (HRR)": {
+  "qid": "Q43915",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Otto von Bismarck": {
+  "qid": "Q8442",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Pol Pot": {
+  "qid": "Q39464",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Pompeji": {
+  "qid": "Q43332",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Prora": {
+  "qid": "Q685448",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Präsident der Vereinigten Staaten": {
+  "qid": "Q11696",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Reinhard Heydrich": {
+  "qid": "Q60039",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Richard Löwenherz": {
+  "qid": "Q42305",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Richard Nixon": {
+  "qid": "Q9588",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Ritterkreuz des Eisernen Kreuzes": {
+  "qid": "Q165558",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Ronald Reagan": {
+  "qid": "Q9960",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Schlacht um Midway": {
+  "qid": "Q173034",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Schlacht von Stalingrad": {
+  "qid": "Q38789",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Sezessionskrieg": {
+  "qid": "Q8676",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Sokrates": {
+  "qid": "Q913",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Spanischer Bürgerkrieg": {
+  "qid": "Q10859",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Theodore Roosevelt": {
+  "qid": "Q33866",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Tutanchamun": {
+  "qid": "Q12154",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Varusschlacht": {
+  "qid": "Q87779",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Victoria von Großbritannien und Irland (1840–1901)": {
+  "qid": "Q116728",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Völkermord in Ruanda": {
+  "qid": "Q131297",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Wilhelm Gustloff (Schiff)": {
+  "qid": "Q155014",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Wilhelm I. (Deutsches Reich)": {
+  "qid": "Q150652",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Willy Brandt": {
+  "qid": "Q2514",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Winston Churchill": {
+  "qid": "Q8016",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Zwei-plus-Vier-Vertrag": {
+  "qid": "Q159644",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Zweiter Golfkrieg": {
+  "qid": "Q37643",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Zweiter Weltkrieg": {
+  "qid": "Q362",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ }
+}
