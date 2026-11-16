@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "kunst",
- "generiert_am": "2026-11-16T12:14:27Z",
+ "generiert_am": "2026-11-16T13:00:38Z",
  "fragen": [
   {
    "id": "wd-04979d0e68",
@@ -1426,6 +1426,24 @@
    "quelle_id": "Q130531"
   },
   {
+   "id": "wp-2af2f4deb8",
+   "kategorie": "kunst",
+   "frage": "In welchem Zeitraum hatte das Cembalo seine Blütezeit?",
+   "antworten": [
+    "18. bis 19. Jahrhundert",
+    "12. bis 14. Jahrhundert",
+    "15. bis 18. Jahrhundert",
+    "19. bis 20. Jahrhundert"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Cembalo",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Cembalo",
+   "quelle_id": "Q81982"
+  },
+  {
    "id": "wp-2b0df92da3",
    "kategorie": "kunst",
    "frage": "Welches Werk konnte Mozart vor seinem Tod nicht mehr vollenden?",
@@ -2038,6 +2056,24 @@
    "quelle_id": "Q23481"
   },
   {
+   "id": "wp-6dab4b99c3",
+   "kategorie": "kunst",
+   "frage": "Welcher Schriftsteller schuf den grossen Romanzyklus «Die menschliche Komödie»?",
+   "antworten": [
+    "Honoré de Balzac",
+    "Émile Zola",
+    "Gustave Flaubert",
+    "Victor Hugo"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Honor%C3%A9_de_Balzac",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Honoré de Balzac",
+   "quelle_id": "Q9711"
+  },
+  {
    "id": "wp-6db3a967ea",
    "kategorie": "kunst",
    "frage": "Welcher US-Maler machte die auf Max Ernst zurückgehende Technik Drip Painting zum Teil des abstrakten Expressionismus?",
@@ -2126,6 +2162,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Antonio Vivaldi",
    "quelle_id": "Q1340"
+  },
+  {
+   "id": "wp-7af6ba1073",
+   "kategorie": "kunst",
+   "frage": "Welcher Komponist schrieb die berühmten Peer-Gynt-Suiten?",
+   "antworten": [
+    "Carl Nielsen",
+    "Antonín Dvořák",
+    "Jean Sibelius",
+    "Edvard Grieg"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Edvard_Grieg",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Edvard Grieg",
+   "quelle_id": "Q80621"
   },
   {
    "id": "wp-7b10b3af09",
@@ -2774,6 +2828,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Richard Wagner",
    "quelle_id": "Q1511"
+  },
+  {
+   "id": "wp-b583a09206",
+   "kategorie": "kunst",
+   "frage": "Welchen Beruf übte der russische Schriftsteller Anton Tschechow neben dem Schreiben aus?",
+   "antworten": [
+    "Arzt",
+    "Lehrer",
+    "Offizier",
+    "Anwalt"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Anton_Pawlowitsch_Tschechow",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Anton Pawlowitsch Tschechow",
+   "quelle_id": "Q5685"
   },
   {
    "id": "wp-b5f8005081",
