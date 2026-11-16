@@ -1,0 +1,97 @@
+{
+ "version": 1,
+ "kategorie": "naturwissenschaften",
+ "generiert_am": "2026-11-16T05:36:48Z",
+ "fragen": [
+  {
+   "id": "wp-0f9c65a412",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welchem Zahlenwert entspricht das Teilungsverhältnis des Goldenen Schnitts ungefähr?",
+   "antworten": [
+    "2,718",
+    "1,732",
+    "1,414",
+    "1,618"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Goldener_Schnitt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Goldener Schnitt",
+   "quelle_id": "Q41690"
+  },
+  {
+   "id": "wp-219b4691b0",
+   "kategorie": "naturwissenschaften",
+   "frage": "Mit welchem dänischen Astronomen arbeitete Johannes Kepler in Prag zusammen, bevor er dessen Nachfolger wurde?",
+   "antworten": [
+    "Nikolaus Kopernikus",
+    "Ole Rømer",
+    "Galileo Galilei",
+    "Tycho Brahe"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Johannes_Kepler",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Johannes Kepler",
+   "quelle_id": "Q8963"
+  },
+  {
+   "id": "wp-3339bb6608",
+   "kategorie": "naturwissenschaften",
+   "frage": "Welcher Astronom entdeckte die Gesetze, nach denen sich die Planeten um die Sonne bewegen?",
+   "antworten": [
+    "Nikolaus Kopernikus",
+    "Tycho Brahe",
+    "Galileo Galilei",
+    "Johannes Kepler"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Johannes_Kepler",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Johannes Kepler",
+   "quelle_id": "Q8963"
+  },
+  {
+   "id": "wp-55f9c54745",
+   "kategorie": "naturwissenschaften",
+   "frage": "Nach welchem Mathematiker ist die Zahlenfolge benannt, die eng mit dem Goldenen Schnitt verbunden ist?",
+   "antworten": [
+    "Gauss",
+    "Euler",
+    "Fibonacci",
+    "Pascal"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Goldener_Schnitt",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Goldener Schnitt",
+   "quelle_id": "Q41690"
+  },
+  {
+   "id": "wp-925203cb7f",
+   "kategorie": "naturwissenschaften",
+   "frage": "Aus welchem Land stammte Alfred Büchi, der 1905 das Prinzip des Turboladers patentieren liess?",
+   "antworten": [
+    "Deutschland",
+    "Schweiz",
+    "Österreich",
+    "Frankreich"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Turbolader",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Turbolader",
+   "quelle_id": "Q185525"
+  }
+ ]
+}

@@ -145,15 +145,17 @@ def cmd_bereinigen(args: argparse.Namespace) -> int:
         fragen = output.lade_kategorie(kat)
         if not fragen:
             continue
-        neu = []
+        neu, geaendert_kat = [], 0
         for f in fragen:
             g = {**f, "frage": text_bereinigen(f["frage"]),
                  "antworten": [text_bereinigen(a) for a in f["antworten"]]}
             if g != f:
-                geaendert += 1
+                geaendert_kat += 1
                 print(f"{f['id']}: {f['frage']}  →  {g['frage']}")
             neu.append(g)
-        if not args.dry_run:
+        geaendert += geaendert_kat
+        # Nur Dateien mit Änderungen schreiben (sonst ändert sich unnötig der Zeitstempel)
+        if geaendert_kat and not args.dry_run:
             output.speichere_kategorie(kat, neu)
     print(f"{geaendert} Fragen angepasst" + (" (Trockenlauf)" if args.dry_run else ""))
     return 0
