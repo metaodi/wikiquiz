@@ -169,14 +169,26 @@ jobs:
           path: generator/out/
           if-no-files-found: ignore
 
+      # Nur vorhandene Dateien übergeben: data/verarbeitet/ entsteht nur bei Wikipedia-Läufen,
+      # ein fehlender Pfad lässt „git add“ im nächsten Schritt scheitern.
+      - name: Geänderte Dateien bestimmen
+        id: dateien
+        if: ${{ !inputs.trockenlauf }}
+        run: |
+          {
+            echo "liste<<EOF"
+            for f in "data/fragen/${{ matrix.kategorie }}.json" "data/verarbeitet/${{ matrix.kategorie }}.json"; do
+              if [ -f "$f" ]; then echo "$f"; fi
+            done
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
       - name: Pull Request erstellen
         if: ${{ !inputs.trockenlauf }}
         uses: peter-evans/create-pull-request@v8
         with:
           branch: fragen/${{ matrix.kategorie }}-${{ github.run_number }}
-          add-paths: |
-            data/fragen/${{ matrix.kategorie }}.json
-            data/verarbeitet/${{ matrix.kategorie }}.json
+          add-paths: ${{ steps.dateien.outputs.liste }}
           commit-message: "Neue Fragen: ${{ matrix.kategorie }}"
           title: "Neue Fragen: ${{ matrix.kategorie }} (Lauf ${{ github.run_number }})"
           body-path: pr-text.md
