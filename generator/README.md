@@ -254,6 +254,21 @@ ihre deutsche Bezeichnung auf die Landessprache abgebildet. Kantone selbst durch
   nur als Sieger-Frage. Gastgeber 1966 wird als England angezeigt.
 - Eigene Schwellen: Turniere 40 Sitelinks / 50 Aufrufe pro Tag, Filme 60 Sitelinks / 100 Aufrufe pro Tag.
 
+## Natur-Templates (Wikidata)
+
+| Template | Frage | Distraktoren |
+|---|---|---|
+| `tierklasse` | Zu welcher Tiergruppe gehört der {Blauwal}? | verwechselbare Gruppen (Säugetiere → Fische, Vögel, Reptilien) |
+| `welches_tier` | Welches dieser Tiere ist ein {Säugetier}? | bekannte Tiere aus den verwechselbaren Gruppen |
+
+- Tiere: Arten (P105) mit deutschem Trivialnamen (P1843) und mind. 60 Sprachversionen. Eine Abfrage aller
+  Arten mit vielen Sprachversionen läuft in die Zeitbegrenzung des Abfragedienstes; der Trivialname grenzt ein.
+- Tiergruppe: Elterntaxon (P171) paketweise nach oben verfolgen bis zu einer bekannten Klasse (Säugetiere, Vögel,
+  Reptilien, Amphibien, Knochen- und Knorpelfische, Insekten, Spinnentiere). Pflanzen fallen dabei weg.
+- Name = Titel des deutschen Artikels (Labels sind teils wissenschaftlich). Den Artikel („der Blauwal“) liefert
+  der erste Satz des Wikipedia-Artikels; Tiere ohne eindeutigen Artikel im Singular kommen nur in `welches_tier`.
+- Jedes Tier nur in einem Template; höchstens 6 Fragen pro Tiergruppe und Template.
+
 Wikidata-Fragen werden gegen die bestehenden Wikipedia-Fragen der Kategorie dedupliziert (dieselbe Tatsache,
 gegenseitiges Verraten, höchstens 2 Fragen pro Thema).
 

@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING
 
 from .dedupe import deduplizieren
 from .models import Frage
-from .templates import geografie, kunst, naturwissenschaften, schweiz, sport
+from .templates import geografie, kunst, natur, naturwissenschaften, schweiz, sport
 from .templates.base import Kontext
 from .validate import pruefe_formal
 
@@ -22,6 +22,7 @@ WIKIDATA_TEMPLATES: dict[str, Callable[[Kontext], dict[str, list[Frage]]]] = {
     "schweiz": schweiz.generiere,
     "kunst": kunst.generiere,
     "sport": sport.generiere,
+    "natur": natur.generiere,
 }
 
 

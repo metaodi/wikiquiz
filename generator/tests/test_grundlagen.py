@@ -406,3 +406,43 @@ def test_artikel_aus_anderen_kategorien():
     neu = [{"id": "wp-f942ddca42", "frage": "Hesse?"}, {"id": "wp-neu", "frage": "Eiche?"}]
     ok, doppelt = ohne_fremde_ids(neu, andere)
     assert [f["id"] for f in ok] == ["wp-neu"] and [f["id"] for f in doppelt] == ["wp-f942ddca42"]
+
+
+def test_natur_artikel_aus_einleitung():
+    from wikiquiz_gen.templates.natur import artikel_aus_einleitung
+
+    assert artikel_aus_einleitung("Der Blauwal (Balaenoptera musculus) ist eine Art der Furchenwale.", "Blauwal") == "der"
+    assert artikel_aus_einleitung("Die Hauskatze ist die domestizierte Form der Falbkatze.", "Hauskatze") == "die"
+    assert artikel_aus_einleitung("Das Schnabeltier (Ornithorhynchus anatinus), auch Wasserschnabeltier, ist …",
+                                  "Schnabeltier") == "das"
+    # Plural oder anderer Satzbau → kein Artikel
+    assert artikel_aus_einleitung("Die Giraffen (Giraffa) sind eine Gattung …", "Giraffen") is None
+    assert artikel_aus_einleitung("Als Wolf bezeichnet man …", "Wolf") is None
+    # Anderes Subjekt als der Titel
+    assert artikel_aus_einleitung("Der Wolf ist ein Raubtier.", "Löwe") is None
+
+
+def test_natur_klassen_bestimmen():
+    from wikiquiz_gen.templates.natur import klassen_bestimmen
+
+    # Taxonomie: Blauwal → Furchenwale → Wale → Säugetiere; Hai → Knorpelfische
+    baum = {"Q1": {"Q10"}, "Q10": {"Q11"}, "Q11": {"Q7377"}, "Q2": {"Q25371"}, "Q3": {"Q99"}, "Q99": set()}
+
+    class Http:
+        pass
+
+    import wikiquiz_gen.templates.natur as natur
+
+    def abfrage(http, sparql, ttl=0):
+        werte = [w.removeprefix("wd:") for w in sparql.split("{")[2].split("}")[0].split()]
+        return [{"t": f"http://www.wikidata.org/entity/{t}", "p": f"http://www.wikidata.org/entity/{p}"}
+                for t in werte for p in baum.get(t, ())]
+
+    alt, natur.abfrage = natur.abfrage, abfrage
+    try:
+        class Ktx:
+            http = Http()
+        ergebnis = klassen_bestimmen(Ktx(), {q: {q} for q in ["Q1", "Q2", "Q3"]})
+    finally:
+        natur.abfrage = alt
+    assert ergebnis == {"Q1": "Säugetiere", "Q2": "Fische"}
