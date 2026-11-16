@@ -1,0 +1,282 @@
+{
+ "Amazonas": {
+  "qid": "Q3783",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Australien": {
+  "qid": "Q408",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Bali": {
+  "qid": "Q3125978",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Berlin": {
+  "qid": "Q64",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Bornholm": {
+  "qid": "Q769680",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Brasilien": {
+  "qid": "Q155",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Büsum": {
+  "qid": "Q20768",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Donau": {
+  "qid": "Q1653",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Drau": {
+  "qid": "Q171009",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Erzgebirge": {
+  "qid": "Q4198",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Frankfurt am Main": {
+  "qid": "Q1794",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 1
+ },
+ "Harz (Mittelgebirge)": {
+  "qid": "Q4186",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Helgoland": {
+  "qid": "Q3038",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Israel": {
+  "qid": "Q801",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Ithaka": {
+  "qid": "Q187471",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Japan": {
+  "qid": "Q17",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Kanada": {
+  "qid": "Q16",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Katar": {
+  "qid": "Q846",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Kilimandscharo": {
+  "qid": "Q7296",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "London": {
+  "qid": "Q84",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Maas": {
+  "qid": "Q41986",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Mallorca": {
+  "qid": "Q8828",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Monaco": {
+  "qid": "Q235",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Mosel": {
+  "qid": "Q1667",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "New York City": {
+  "qid": "Q60",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 0
+ },
+ "Odenwald": {
+  "qid": "Q8359",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Oder": {
+  "qid": "Q552",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Paris": {
+  "qid": "Q90",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Prag": {
+  "qid": "Q1085",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Rom": {
+  "qid": "Q220",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 2
+ },
+ "Schwarzwald": {
+  "qid": "Q4204",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Sprache": {
+  "qid": "Q315",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Sri Lanka": {
+  "qid": "Q854",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Teutoburger Wald": {
+  "qid": "Q109773",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Totes Meer": {
+  "qid": "Q23883",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Vatikanstadt": {
+  "qid": "Q237",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Vogesen": {
+  "qid": "Q187843",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Westerwald": {
+  "qid": "Q640966",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Wien": {
+  "qid": "Q1741",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Österreich": {
+  "qid": "Q40",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 0,
+  "verworfen": 1
+ }
+}
