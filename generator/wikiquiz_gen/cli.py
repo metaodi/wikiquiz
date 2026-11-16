@@ -83,7 +83,12 @@ def cmd_generate(args: argparse.Namespace) -> int:
                 output.schreibe_verarbeitet(kat, {**verarbeitet, **neu_verarbeitet})
 
         if not args.dry_run and not args.nur_kandidaten and neue:
-            fragen_kat = output.schreibe_kategorie(kat, neue, quellen, modus=args.modus)
+            # „ersetzen“ gilt nur für Wikidata-Fragen (deterministisch neu erzeugbar). Wikipedia-Fragen
+            # werden immer nur ergänzt: Die Pipeline erzeugt nur den fehlenden Bedarf, ein Ersetzen
+            # würde bereits bezahlte Fragen löschen.
+            ersetzen = output.ersetzbare_quellen(args.modus, quellen)
+            fragen_kat = output.schreibe_kategorie(kat, neue, ersetzen,
+                                                   modus="ersetzen" if ersetzen else "ergaenzen")
             zeilen.append(f"Bestand nachher: {len(fragen_kat)} Fragen")
         alle_neuen += neue
         zusammenfassung += zeilen + [""]
@@ -192,7 +197,8 @@ def main(argv: list[str] | None = None) -> int:
     g.add_argument("--pageviews-exakt", action="store_true",
                    help="12-Monats-Werte für alle Kandidaten (sonst nur im Graubereich)")
     g.add_argument("--max-kandidaten", type=int, default=300, help="pro Template aus SPARQL")
-    g.add_argument("--modus", choices=["ersetzen", "ergaenzen"], default="ergaenzen")
+    g.add_argument("--modus", choices=["ersetzen", "ergaenzen"], default="ergaenzen",
+                   help="ersetzen: Wikidata-Fragen der Kategorie neu erzeugen (Wikipedia-Fragen bleiben immer)")
     g.add_argument("--seed", type=int, default=42)
     g.add_argument("--dry-run", action="store_true",
                    help="Trockenlauf: Fragen erzeugen (inkl. LLM), aber nichts in data/ schreiben")

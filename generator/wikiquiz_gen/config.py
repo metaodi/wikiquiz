@@ -52,3 +52,6 @@ SCHWELLEN["sport"] = Schwellen(min_sitelinks=50)
 # Kunst, Musik & Literatur: zeitgenössische Personen mit kurzfristig hohen Seitenaufrufen
 # (z. B. nach Preisverleihungen) ausschliessen
 SCHWELLEN["kunst"] = Schwellen(min_sitelinks=50)
+# Naturwissenschaften & Technik: Fachartikel werden auf de.wikipedia deutlich seltener aufgerufen
+# (Niels Bohr, Enrico Fermi, Elektron < 200/Tag), sind aber Allgemeinwissen
+SCHWELLEN["naturwissenschaften"] = Schwellen(min_pageviews=100.0)

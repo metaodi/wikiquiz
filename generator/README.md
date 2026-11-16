@@ -40,6 +40,9 @@ python -m wikiquiz_gen bereinigen --dry-run
 ```
 
 Standard ist `--modus ergaenzen`: Bestehende Fragen bleiben unverändert, nur neue IDs kommen dazu.
+`--modus ersetzen` erzeugt die **Wikidata-Fragen** einer Kategorie neu (z. B. nach einer Template-Änderung);
+Wikipedia-Fragen werden auch dann nur ergänzt, weil die Pipeline nur den fehlenden Bedarf erzeugt und ein
+Ersetzen bereits bezahlte Fragen löschen würde.
 `data/verarbeitet/<kategorie>.json` merkt sich die bereits verarbeiteten Artikel, damit spätere Läufe
 sie nicht erneut (kostenpflichtig) ans LLM schicken.
 
@@ -49,7 +52,8 @@ Ausgaben in `out/`: `rejected.jsonl` (alle verworfenen Kandidaten und Fragen mit
 ## GitHub Action „Fragen generieren“
 
 `.github/workflows/fragen.yml`, manuell unter *Actions → Fragen generieren → Run workflow*:
-Kategorie (oder „alle“), Quelle, Zielbestand, max. Artikel, Trockenlauf. Pro Kategorie entsteht ein
+Kategorie (oder „alle“), Quelle, Zielbestand, max. Artikel, Modus (`ergaenzen`/`ersetzen`, siehe oben), Trockenlauf.
+Wikidata-Läufe brauchen kein LLM und kosten nichts. Pro Kategorie entsteht ein
 Pull Request mit Zusammenfassung und Stichprobe; `rejected.jsonl` hängt als Artifact am Lauf.
 
 Einmalig nötig:
@@ -107,7 +111,7 @@ Schwellen pro Kategorie in `wikiquiz_gen/config.py` (per CLI übersteuerbar):
 | Schwelle | Standard | Bemerkung |
 |---|---|---|
 | `min_sitelinks` | 30 (Sport, Kunst: 50) | wichtigster Indikator, direkt aus SPARQL. Höher, wo Seitenaufrufe kurzlebig sind (Sport, zeitgenössische Kunst und Literatur) |
-| `min_pageviews` | 200/Tag | abgefragtes Thema, Ø der letzten 12 vollen Monate auf de.wikipedia |
+| `min_pageviews` | 200/Tag (Naturwissenschaften: 100) | abgefragtes Thema, Ø der letzten 12 vollen Monate auf de.wikipedia. Naturwissenschaftliche Artikel werden deutlich seltener aufgerufen (Niels Bohr, Enrico Fermi, Elektron < 200) |
 | `min_pageviews_antwort` | 100/Tag | richtige Antwort (z. B. Hauptstadt) – Städteartikel werden seltener aufgerufen als Länderartikel (Ankara ≈ 170, Nairobi ≈ 150) |
 | `min_zeichen` | 3000 | Klartext, geschätzt als 60 % der Wikitext-Länge (`prop=info`, 50 Titel/Request) |
 
@@ -128,6 +132,21 @@ abgeschnittene Antworten (ungültiges JSON) werden nicht gecacht und neu geladen
 | `hauptstadt` | Wie heisst die Hauptstadt von {Land}? | Hauptstädte desselben Kontinents mit ähnlicher Bekanntheit; Länder mit mehreren Hauptstädten ausgeschlossen |
 | `kontinent` | Auf welchem Kontinent liegt {Land}? | plausible Nachbarkontinente; transkontinentale und umstrittene Fälle ausgeschlossen; max. 25, weniger bekannte Länder zuerst |
 | `stadt` / `berg` / `see` | In welchem Land liegt …? | Nachbarländer, sonst bekannte Länder desselben Kontinents; nur Orte mit genau einem Staat (P17), ohne Sondergebiete (Überseegebiete, SAR) |
+
+## Naturwissenschafts-Templates (Wikidata)
+
+| Template | Frage | Distraktoren |
+|---|---|---|
+| `element` | Welches chemische Element hat das Symbol {Fe}? / Welches chemische Symbol hat das Element {Gold}? | Elemente bis Ordnungszahl 94 mit gleichem Anfangsbuchstaben in Name oder Symbol, bekannte bevorzugt; pro Element nur eine Richtung |
+| `einheit` | Welche physikalische Grösse wird in der Einheit {Watt} angegeben? / In welcher Einheit wird die {Kraft} angegeben? | andere SI-Einheiten bzw. Grössen; kuratierte Liste (Einheit → Hauptgrösse), jedes Paar gegen P111 geprüft |
+| `nobelpreis` | In welchem Fachgebiet erhielt {Max Planck} den Nobelpreis? | die zwei anderen naturwissenschaftlichen Fächer und Literatur oder Frieden; nur Personen mit genau einem Nobelpreis |
+| `entdeckung` | Wer entdeckte {das Elektron / Uranus / den Jupitermond Io}? | Physiker bzw. Astronomen mit ähnlichem Geburtsjahr; kuratierte Liste, nur Entdeckungen mit genau einem Entdecker (P61) |
+
+Bewusst nicht verwendet: P61 („Entdecker oder Erfinder“) für Erfindungen und chemische Elemente –
+dort stehen viele umstrittene oder falsche Angaben (Auto → Ferdinand Verbiest, Kohlenstoff → Lavoisier).
+Erfindungen deckt die LLM-Pipeline mit unabhängiger Prüfung ab.
+
+## Allgemein
 
 Schwierigkeit: Rang nach Seitenaufrufen innerhalb des Templates (bekanntestes Drittel = 1).
 Länder mit Artikel werden grammatisch korrekt eingesetzt („Hauptstadt der Schweiz“,

@@ -23,6 +23,11 @@ on:
         description: Max. Wikipedia-Artikel pro Kategorie und Lauf (Kostenbremse)
         type: number
         default: 40
+      modus:
+        description: "Modus: ergaenzen (nur neue Fragen dazu) oder ersetzen (Wikidata-Fragen der Kategorie neu erzeugen; Wikipedia-Fragen bleiben immer)"
+        type: choice
+        default: ergaenzen
+        options: [ergaenzen, ersetzen]
       trockenlauf:
         description: Trockenlauf (nur Stichprobe als Artifact, kein Pull Request)
         type: boolean
@@ -129,7 +134,7 @@ jobs:
             --quelle "${{ inputs.quelle }}" \
             --ziel "${{ inputs.ziel }}" \
             --max-artikel "${{ inputs.max_artikel }}" \
-            --modus ergaenzen \
+            --modus "${{ inputs.modus }}" \
             ${{ inputs.trockenlauf && '--dry-run' || '' }}
 
       # Pull Requests, die mit GITHUB_TOKEN erstellt werden, lösen keine weiteren Workflows aus.
@@ -145,7 +150,7 @@ jobs:
       - name: PR-Beschreibung
         run: |
           {
-            echo "Automatisch erzeugte Fragen für **${{ matrix.kategorie }}** (Quelle: ${{ inputs.quelle }}, Ziel ${{ inputs.ziel }}, max. ${{ inputs.max_artikel }} Artikel)."
+            echo "Automatisch erzeugte Fragen für **${{ matrix.kategorie }}** (Quelle: ${{ inputs.quelle }}, Modus: ${{ inputs.modus }}, Ziel ${{ inputs.ziel }}, max. ${{ inputs.max_artikel }} Artikel)."
             echo
             cat generator/out/zusammenfassung.md
             echo
