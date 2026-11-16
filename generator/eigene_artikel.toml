@@ -23,5 +23,22 @@ geografie = []
 essen = []
 natur = []
 schweiz = []
-starwars = []
+starwars = [
+  "en:Darth_Vader",
+  "en:Obi-Wan_Kenobi",
+  "en:Han_Solo",
+  "en:Chewbacca",
+  "en:Jar_Jar_Binks",
+  "en:R2-D2",
+  "en:C-3PO",
+  "en:Luke_Skywalker",
+  "en:Rey_(Star_Wars)",
+  "en:BB-8",
+  "en:Finn_(Star_Wars)",
+  "en:Kylo_Ren",
+  "en:Princess_Leia",
+  "en:Yoda",
+  "en:Jabba_the_Hutt",
+  "en:Boba_Fett",
+]
 harrypotter = []
