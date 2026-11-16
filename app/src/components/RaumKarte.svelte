@@ -1,6 +1,8 @@
 <script lang="ts">
   import { renderSVG } from 'uqr';
+  import type { NetzStatus } from '../lib/kanal';
   import type { Teilnehmer } from '../lib/raum';
+  import NetzDiagnose from './NetzDiagnose.svelte';
   import SpielerChip from './SpielerChip.svelte';
 
   /** Raumcode, QR-Code/Link zum Beitreten und Liste der beigetretenen Geräte (Lobby von Host und Gästen) */
@@ -9,7 +11,8 @@
     teilnehmer,
     ich,
     link,
-  }: { code: string; teilnehmer: Teilnehmer[]; ich: string; link?: string } = $props();
+    netz,
+  }: { code: string; teilnehmer: Teilnehmer[]; ich: string; link?: string; netz?: NetzStatus | null } = $props();
 
   const qr = $derived(link ? renderSVG(link, { ecc: 'M', border: 2 }) : '');
   let kopiert = $state(false);
@@ -59,6 +62,7 @@
       </li>
     {/each}
   </ol>
+  {#if netz}<NetzDiagnose status={netz} />{/if}
 </section>
 
 <style>

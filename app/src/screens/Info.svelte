@@ -75,7 +75,10 @@
     <p>
       Beim Spiel mit mehreren Geräten verbinden sich die Geräte direkt miteinander (WebRTC, verschlüsselt). Den
       Verbindungsaufbau vermitteln öffentliche Nostr-Relays; sie sehen dabei die IP-Adresse, aber dank Verschlüsselung
-      weder Namen noch Spielinhalte. Übertragen werden nur Namen, Antworten und Spielstand.
+      weder Namen noch Spielinhalte. Klappt keine direkte Verbindung (z. B. im Mobilfunknetz), leitet ein TURN-Server
+      von <a href="https://www.metered.ca/" target="_blank" rel="noopener noreferrer">Metered</a> die verschlüsselten
+      Daten weiter; auch er sieht die IP-Adresse, aber keine Inhalte. Übertragen werden nur Namen, Antworten und
+      Spielstand.
     </p>
   </section>
 

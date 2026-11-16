@@ -1,11 +1,12 @@
 <script lang="ts">
   import { onDestroy, onMount, untrack } from 'svelte';
   import Kopf from './components/Kopf.svelte';
+  import NetzDiagnose from './components/NetzDiagnose.svelte';
   import { aktionAnwenden, type Aktion } from './lib/aktionen';
   import { NETZ_TOLERANZ_S, RUNDEN_STANDARD, SCHWIERIGKEIT_STANDARD, SPIELER_FARBEN, ZEITLIMIT_S } from './lib/config';
   import * as game from './lib/game';
   import { haptik } from './lib/haptics';
-  import { broadcastKanal, lokalerKanal, netzKanal, type Kanal, type Nachricht } from './lib/kanal';
+  import { broadcastKanal, lokalerKanal, netzKanal, type Kanal, type Nachricht, type NetzStatus } from './lib/kanal';
   import { anzahlProKategorie } from './lib/picker';
   import { ladePool, poolKennung } from './lib/pool';
   import {
@@ -73,6 +74,8 @@
   let versatzBekannt = false;
   /** Netz: Anzahl verbundener anderer Geräte (null = nicht bekannt, z. B. Tabs) */
   let verbindungen = $state<number | null>(null);
+  /** Netz: Zustand der Verbindung für die Diagnose-Anzeige */
+  let netzStatus = $state<NetzStatus | null>(null);
   const geraet = storage.geraetId(() => zufallsCode(Math.random, 12));
 
   const fragen = $derived(pool?.fragen ?? []);
@@ -115,9 +118,12 @@
     kanal = neu;
     const empfangAb = kanal.beiEmpfang(empfangen);
     const verbindungAb = kanal.beiVerbindung?.(verbindungGeaendert);
+    netzStatus = null;
+    const statusAb = kanal.beiStatus?.((s) => (netzStatus = s));
     abmelden = () => {
       empfangAb();
       verbindungAb?.();
+      statusAb?.();
     };
     verbindungen = kanal.beiVerbindung ? 0 : null;
   }
@@ -450,7 +456,10 @@
 </script>
 
 {#if verbindungWeg}
-  <p class="verbindung" role="status">Keine Verbindung zu den anderen Geräten – wird erneut versucht …</p>
+  <div class="verbindung" role="status">
+    <p>Keine Verbindung zu den anderen Geräten – wird erneut versucht …</p>
+    {#if netzStatus}<NetzDiagnose status={netzStatus} />{/if}
+  </div>
 {/if}
 
 {#if ladefehler}
@@ -484,6 +493,7 @@
       link={raumLink(raum.code)}
       teilnehmer={raum.teilnehmer}
       ich={geraet}
+      netz={netzStatus}
       onVerlassen={() => raumVerlassen()}
     />
   {:else}
@@ -492,7 +502,7 @@
       {gesamt}
       onStart={starten}
       onInfo={() => (infoOffen = true)}
-      raum={raum ? { code: raum.code, teilnehmer: raum.teilnehmer, ich: geraet } : undefined}
+      raum={raum ? { code: raum.code, teilnehmer: raum.teilnehmer, ich: geraet, netz: netzStatus } : undefined}
       raumLink={raum ? raumLink(raum.code) : undefined}
       onMehrgeraete={raum ? undefined : () => (raumStartOffen = true)}
       onRaumSchliessen={() => raumVerlassen()}
@@ -626,5 +636,13 @@
     font-weight: 700;
     font-size: 0.95rem;
     text-align: center;
+  }
+  .verbindung p {
+    margin: 0;
+  }
+  .verbindung :global(.diagnose) {
+    color: #fff;
+    font-weight: 400;
+    text-align: left;
   }
 </style>

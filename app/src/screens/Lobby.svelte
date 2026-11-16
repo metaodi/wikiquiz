@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import RaumKarte from '../components/RaumKarte.svelte';
+  import type { NetzStatus } from '../lib/kanal';
   import type { Teilnehmer } from '../lib/raum';
 
   /** Lobby eines Gasts: warten, bis der Host das Spiel startet */
@@ -9,8 +10,16 @@
     link,
     teilnehmer,
     ich,
+    netz = null,
     onVerlassen,
-  }: { code: string; link?: string; teilnehmer: Teilnehmer[]; ich: string; onVerlassen: () => void } = $props();
+  }: {
+    code: string;
+    link?: string;
+    teilnehmer: Teilnehmer[];
+    ich: string;
+    netz?: NetzStatus | null;
+    onVerlassen: () => void;
+  } = $props();
 
   // Dauert die Verbindung lange, Hinweise zur Fehlersuche zeigen
   let lange = $state(false);
@@ -25,7 +34,7 @@
 
 <div class="screen">
   <h1>Mit mehreren Geräten</h1>
-  <RaumKarte {code} {teilnehmer} {ich} link={dabei ? link : undefined} />
+  <RaumKarte {code} {teilnehmer} {ich} link={dabei ? link : undefined} {netz} />
   <p class="muted status" role="status">
     {#if !dabei}
       Verbinde mit Raum {code} …
