@@ -130,8 +130,14 @@ Etappen:
    Einstieg ohne Parameter, `?kanal=tabs` für Tests. Erneuter Stand bei (Wieder-)Verbindung, Hinweis bei Verbindungsverlust.
    Nicht automatisch getestet: echte Verbindungen über Relays (in CI und Testumgebung nicht erreichbar) – manuell auf
    Geräten prüfen.
-5. Nur falls es in der Praxis hakt (Mobilfunk mit CGNAT): TURN-Server ergänzen oder auf ein kleines Backend
-   (Cloudflare Durable Object / PartyKit) wechseln – dank `Kanal` ein Austausch an einer Stelle.
+5. ✅ TURN-Server: Im ersten Test auf echten Geräten fanden sich die Geräte über die Relays, die direkte Verbindung
+   scheiterte aber (`peer-connect-failed`, `turnConfigured: false`). Deshalb holt die App beim Eröffnen/Beitreten
+   TURN-Zugangsdaten von Metered (`src/lib/turn.ts`, URL mit API-Key als Build-Variable `VITE_TURN_CREDENTIALS_URL`,
+   höchstens 5 s Wartezeit, sonst ohne TURN) und übergibt sie Trystero als `turnConfig`. Eine aufklappbare
+   Diagnose in der Raumkarte und im Hinweisbalken zeigt Relays, verbundene Geräte, TURN-Zustand, Verbindungsart
+   (direkt/über TURN, aus `getStats`) und den letzten Fehler von Trystero.
+6. Nur falls es weiter hakt: auf ein kleines Backend (Cloudflare Durable Object / PartyKit) wechseln – dank `Kanal`
+   ein Austausch an einer Stelle.
 
 Verworfen bzw. zurückgestellt: SDP-Austausch per QR-Code (zwei Scans pro Gast, remote unbrauchbar), PeerJS
 (gleiche NAT-Grenzen, Gratis-Server ohne Garantie), Firebase/Supabase/Ably (Konto bei Drittanbieter nötig).
@@ -157,4 +163,5 @@ Verworfen bzw. zurückgestellt: SDP-Austausch per QR-Code (zwei Scans pro Gast, 
 | Gleiche Quelle | Die App stellt Fragen zum selben Artikel (`quelle_url`) im selben Spiel erst, wenn keine anderen mehr übrig sind; so verraten sich Fragen zum selben Thema nicht gegenseitig |
 | Schwierigkeit pro Spieler | Jeder Spieler wählt im Setup leicht/mittel/schwer; die App zieht Fragen dieser Stufe und weicht erst auf die nächstliegende aus, wenn die Kategorie dort aufgebraucht ist. Gleiche Punkte für alle Stufen (die Wahl dient als Handicap in gemischten Runden). Pro Kategorie kann jeder Spieler abweichen; gespeichert werden nur Abweichungen, damit eine geänderte Gesamtstufe weiterhin für alle übrigen Kategorien gilt. Mehrere Geräte: Jedes Gerät schickt seine Wahl mit `hallo`, der Host prüft sie. Bei „Alle gleichzeitig“ gilt eine vom Host gewählte Stufe für alle, weil alle dieselbe Frage bekommen (eine Frage pro Spieler hätte den direkten Vergleich aufgehoben) |
 | Nischenwissen | Pro Kategorie eine von Hand gepflegte Artikelliste (`generator/eigene_artikel.toml`): ohne Bekanntheitsfilter, vor allen anderen und auch bei erreichtem Ziel verarbeitet; das LLM erhält einen Hinweis, die Schwellen für Bekanntheit und Allgemeinwissen entfallen, Beleg und unabhängige Prüfung bleiben |
-| Mehrere Geräte | Ohne eigenes Backend: Host-Gerät hält den Spielstand, Übertragung per WebRTC (Trystero, öffentliche Nostr-Relays für den Verbindungsaufbau) hinter einer `Kanal`-Schnittstelle; Antwortzeit misst das Gerät, der Host begrenzt sie mit einer Toleranz. Kleines Backend oder TURN-Server erst, wenn Verbindungen in der Praxis scheitern. Details im Abschnitt „Mehrere Geräte“ |
+| Mehrere Geräte | Ohne eigenes Backend: Host-Gerät hält den Spielstand, Übertragung per WebRTC (Trystero, öffentliche Nostr-Relays für den Verbindungsaufbau) hinter einer `Kanal`-Schnittstelle; Antwortzeit misst das Gerät, der Host begrenzt sie mit einer Toleranz. TURN-Server von Metered (Gratis-Plan), weil die direkte Verbindung in der Praxis oft scheitert; kleines Backend erst, wenn auch das nicht reicht. Details im Abschnitt „Mehrere Geräte“ |
+| TURN-Zugangsdaten | Metered liefert sie über eine URL mit API-Key, die die App direkt abruft – ohne eigenes Backend. Der Key steht damit im veröffentlichten Code (wie bei jeder statischen App); Schutz über die Domain-Beschränkung bei Metered und das Kontingent. Im Repository steht er nicht: Secret `TURN_CREDENTIALS_URL`, beim Build als `VITE_TURN_CREDENTIALS_URL` eingesetzt |

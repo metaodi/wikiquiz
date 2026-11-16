@@ -1,6 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 const PORT = 4174;
+export const TURN_TEST_URL = 'https://turn.e2e.invalid/api/v1/turn/credentials?apiKey=test';
 
 export default defineConfig({
   testDir: 'e2e',
@@ -17,6 +18,8 @@ export default defineConfig({
     command: `npm run build && npx vite preview --port ${PORT} --strictPort`,
     url: `http://localhost:${PORT}/`,
     reuseExistingServer: !process.env.CI,
+    // TURN-Zugangsdaten: feste Test-URL, die e2e/netz.spec.ts per page.route beantwortet
+    env: { VITE_TURN_CREDENTIALS_URL: TURN_TEST_URL },
     timeout: 120_000,
   },
 });

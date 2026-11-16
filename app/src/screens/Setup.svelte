@@ -19,6 +19,7 @@
     type NeuerSpieler,
   } from '../lib/game';
   import { stufe } from '../lib/picker';
+  import type { NetzStatus } from '../lib/kanal';
   import type { Teilnehmer } from '../lib/raum';
   import type { LetzteSpieler } from '../lib/storage';
   import type { Ablauf, Einstellungen, KategorieId, KategorieModus, ProKategorie, Schwierigkeit } from '../lib/types';
@@ -39,7 +40,7 @@
     onStart: (spieler: NeuerSpieler[], runden: number, einstellungen: Einstellungen) => void;
     onInfo: () => void;
     /** Mehrere Geräte: Lobby des Hosts – die Spieler sind die beigetretenen Geräte */
-    raum?: { code: string; teilnehmer: Teilnehmer[]; ich: string };
+    raum?: { code: string; teilnehmer: Teilnehmer[]; ich: string; netz?: NetzStatus | null };
     /** Link (und QR-Code) zum Beitreten */
     raumLink?: string;
     /** Einstieg „Mit mehreren Geräten spielen“ (nur sichtbar, wenn gesetzt) */
@@ -156,7 +157,7 @@
   </header>
 
   {#if raum}
-    <RaumKarte code={raum.code} teilnehmer={raum.teilnehmer} ich={raum.ich} link={raumLink} />
+    <RaumKarte code={raum.code} teilnehmer={raum.teilnehmer} ich={raum.ich} link={raumLink} netz={raum.netz} />
   {:else}
   <section class="karte" aria-labelledby="spieler-titel">
     <h2 id="spieler-titel">Spieler</h2>

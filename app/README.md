@@ -66,7 +66,10 @@ npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für Git
   Code; „Link teilen“ nutzt das Teilen-Menü bzw. die Zwischenablage). Jedes Gerät ist ein Spieler, die Farbe vergibt der
   Host. Beitreten kann nur, wer denselben Fragenstand hat (`poolKennung`), sonst erscheint die Bitte, neu zu laden.
   `?kanal=tabs` verbindet stattdessen Tabs im selben Browser (`BroadcastChannel`, für E2E-Tests und Entwicklung ohne
-  Netzwerk). Der Host wählt Ablauf,
+  Netzwerk). Klappt keine direkte Verbindung (z. B. im Mobilfunknetz), leitet ein TURN-Server von Metered weiter
+  (`src/lib/turn.ts`, eingerichtet über `VITE_TURN_CREDENTIALS_URL`, siehe Deployment). „Verbindung: …“ in der
+  Raumkarte und im Hinweisbalken klappt eine Diagnose auf: Relays, verbundene Geräte, TURN, direkt oder über TURN,
+  letzter Fehler. Der Host wählt Ablauf,
   Runden, Modus und Kategorien und startet. Zwei Abläufe:
   - *Alle gleichzeitig* (Standard im Raum): Eine Runde ist eine Frage für alle. Die Kategorie wählt reihum ein Spieler
     für alle (bzw. Zufall; „Vorheriger Spieler wählt“ ist gesperrt), keine Übergabe. Jeder antwortet auf seinem Gerät,
@@ -103,8 +106,23 @@ und steuern die Zeit über Playwrights Fake-Clock – Punkte und Timeouts werden
 | Timer | startet erst nach dem Einblenden, Warnfarbe ab 5 s Restzeit |
 | UX | kein horizontales Scrollen bei 320 px, alle Touch-Targets ≥ 48 px, Info-Seite mit Lizenzen, kein „ß“ |
 | Mehrere Geräte | alles mit `?kanal=tabs` (WebRTC selbst wird nicht automatisch getestet). Beitritt per Link/QR-Code (Code vorausgefüllt, Parameter verschwindet aus der Adresse), Ablehnung bei anderem Fragenstand; drei Tabs „Alle gleichzeitig“ (Timeout erst nach der Netz-Toleranz): Standard-Ablauf, gleiche Frage überall, Warten mit Zähler, Timeout für fehlende Antwort, eigene und alle Ergebnisse, Kategoriewahl reihum, eigene Punkte oben, Rangliste, „Nochmals“; Schwierigkeit reihum pro Gerät und gemeinsam bei „Alle gleichzeitig“; zwei Tabs in einem Browser-Kontext (gemeinsame Fake-Clock): Lobby, Züge reihum mit Zuschauen, Neuladen von Gast und Host, Spiel beenden → zurück in den Raum, Raum verlassen; Beitritt mit vergebenem Namen abgelehnt, Host schliesst den Raum; Einstieg nur mit `?mehrgeraete`, 320 px |
+| Netz | Netz-Modus ohne echte Verbindung (Relays blockiert): TURN-Zugangsdaten werden von der Test-URL geladen (`TURN_TEST_URL` in `playwright.config.ts`), Diagnose zeigt TURN „bereit“ bzw. „nicht ladbar“ und den Relay-Fehler |
 
 ## Deployment
 
 `.github/workflows/pages.yml` baut bei jedem Push auf `main` und veröffentlicht auf GitHub Pages.
 Einmalig nötig: *Settings → Pages → Source: GitHub Actions*.
+
+**TURN-Server (Metered) für Spiele mit mehreren Geräten** – ohne ihn scheitert die Verbindung oft, sobald ein Gerät
+im Mobilfunknetz ist:
+
+1. Konto auf [metered.ca](https://www.metered.ca/) anlegen, unter *TURN Server* eine App erstellen (Gratis-Plan genügt).
+2. Unter *TURN Server → Developers* bzw. *API Keys* einen API-Key erzeugen. Die URL zum Abrufen der Zugangsdaten hat
+   die Form `https://<app>.metered.live/api/v1/turn/credentials?apiKey=<KEY>`.
+3. Im Dashboard die erlaubten Domains auf die Domain der App beschränken (z. B. `metaodi.ch`), damit Fremde den Key
+   nicht nutzen können.
+4. Auf GitHub unter *Settings → Secrets and variables → Actions* das Secret `TURN_CREDENTIALS_URL` mit dieser URL
+   anlegen und den Workflow „App bauen und auf GitHub Pages veröffentlichen“ neu starten.
+5. Prüfen: Raum öffnen, „Verbindung: …“ aufklappen → „TURN-Server: bereit“.
+
+Lokal: `VITE_TURN_CREDENTIALS_URL=… npm run dev`. Fehlt die Variable, verbinden sich die Geräte ohne TURN.
