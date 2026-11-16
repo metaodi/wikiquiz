@@ -109,8 +109,8 @@ Ziel: Spiel zwischen Spielern mit eigenen Geräten, am selben Tisch wie auch rem
 
 Etappen:
 
-1. Aktionen als Nachrichten, `aktionAnwenden(stand, aktion, jetzt, rng)` und `Kanal`-Schnittstelle; Pass-and-Play
-   läuft unverändert über den lokalen Kanal.
+1. ✅ Aktionen als Nachrichten (`app/src/lib/aktionen.ts`, `aktionAnwenden(stand, aktion, { pool, history, jetzt, rng })`)
+   und `Kanal`-Schnittstelle (`app/src/lib/kanal.ts`); Pass-and-Play läuft unverändert über den lokalen Kanal.
 2. Raum, Lobby und Host-Logik über `BroadcastChannel`, E2E-Tests mit zwei Seiten und Fake-Clock.
 3. Trystero, Raumcode/QR/Link.
 4. Nur falls es in der Praxis hakt (Mobilfunk mit CGNAT): TURN-Server ergänzen oder auf ein kleines Backend

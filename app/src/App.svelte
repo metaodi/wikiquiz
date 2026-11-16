@@ -1,8 +1,10 @@
 <script lang="ts">
-  import { onMount, untrack } from 'svelte';
+  import { onDestroy, onMount, untrack } from 'svelte';
   import Kopf from './components/Kopf.svelte';
+  import { aktionAnwenden, type Aktion } from './lib/aktionen';
   import * as game from './lib/game';
   import { haptik } from './lib/haptics';
+  import { lokalerKanal } from './lib/kanal';
   import { anzahlProKategorie } from './lib/picker';
   import { ladePool } from './lib/pool';
   import * as storage from './lib/storage';
@@ -70,8 +72,31 @@
     if (spiel?.phase === 'kategorie' && spiel.modus === 'zufall') untrack(() => waehlen('zufall'));
   });
 
-  function setzen(neu: Spielstand) {
-    spiel = neu;
+  // Spielzüge laufen als Aktionen über einen Kanal. Heute ist das Gerät zugleich Host: Es empfängt
+  // seine eigenen Aktionen und wendet sie an (Pass-and-Play). Siehe docs/ARCHITEKTUR.md.
+  const kanal = lokalerKanal();
+  kanal.beiEmpfang((n) => {
+    if (n.typ === 'aktion') anwenden(n.aktion);
+  });
+  onDestroy(() => kanal.schliessen());
+
+  function ausfuehren(aktion: Aktion) {
+    kanal.senden({ typ: 'aktion', aktion });
+  }
+
+  /** Host: Aktion auf den Spielstand anwenden */
+  function anwenden(aktion: Aktion) {
+    if (!spiel) return;
+    const r = aktionAnwenden(spiel, aktion, { pool: fragen, history, jetzt: Date.now() });
+    if (r.fehler) {
+      // Sind alle Fragen aufgebraucht, zeigt der Kategorie-Screen das Spielende bereits an
+      meldung =
+        r.fehler === 'alle_erschoepft' ? null : 'In dieser Kategorie gibt es keine Fragen mehr. Bitte wähle eine andere.';
+      return;
+    }
+    if (aktion.typ === 'kategorie') meldung = null;
+    if (r.neueFrage) history = storage.merkeFrage(r.neueFrage.id);
+    spiel = r.stand;
   }
 
   function starten(spieler: { name: string; farbe: string }[], runden: number, einstellungen: Einstellungen) {
@@ -84,26 +109,17 @@
     };
     storage.speichereLetzteSpieler(letzte);
     meldung = null;
-    setzen(game.neuesSpiel(spieler, runden, einstellungen));
+    spiel = game.neuesSpiel(spieler, runden, einstellungen);
   }
 
   function waehlen(wahl: game.Wahl) {
     if (!spiel) return;
     if (spiel.modus !== 'zufall') haptik.tippen();
-    const r = game.kategorieWaehlen(spiel, fragen, wahl, history);
-    if (!r.ok) {
-      // Sind alle Fragen aufgebraucht, zeigt der Kategorie-Screen das Spielende bereits an
-      meldung =
-        r.grund === 'alle_erschoepft' ? null : 'In dieser Kategorie gibt es keine Fragen mehr. Bitte wähle eine andere.';
-      return;
-    }
-    meldung = null;
-    history = storage.merkeFrage(r.frage.id);
-    setzen(r.stand);
+    ausfuehren({ typ: 'kategorie', wahl });
   }
 
   function zeitPruefen() {
-    if (spiel && aktuelleFrage) setzen(game.pruefeTimeout(spiel, aktuelleFrage, Date.now()));
+    ausfuehren({ typ: 'zeitPruefen' });
   }
 
   function abbrechen() {
@@ -128,14 +144,14 @@
     spieler={spiel.spieler[spiel.aktiverSpieler]}
     runde={spiel.runde}
     runden={spiel.runden}
-    onBereit={() => setzen(game.bereit(spiel!))}
+    onBereit={() => ausfuehren({ typ: 'bereit' })}
   />
 {:else if spiel.phase === 'zwischenstand'}
-  <Zwischenstand {spiel} onWeiter={() => setzen(game.zwischenstandWeiter(spiel!))} />
+  <Zwischenstand {spiel} onWeiter={() => ausfuehren({ typ: 'zwischenstandWeiter' })} />
 {:else if spiel.phase === 'rangliste'}
   <Rangliste
     {spiel}
-    onNochmals={() => setzen(game.nochmals(spiel!))}
+    onNochmals={() => ausfuehren({ typ: 'nochmals' })}
     onNeu={() => (spiel = null)}
   />
 {:else}
@@ -153,19 +169,19 @@
           waehler={w !== spiel.aktiverSpieler ? spiel.spieler[w] : null}
           fuer={spiel.spieler[spiel.aktiverSpieler]}
           onWahl={waehlen}
-          onBeenden={() => setzen(game.beenden(spiel!))}
+          onBeenden={() => ausfuehren({ typ: 'beenden' })}
         />
       {/if}
     {:else if spiel.phase === 'zufall' && spiel.zug}
-      <Zufall ziel={spiel.zug.kategorie} kategorien={spiel.kategorien} onFertig={() => setzen(game.zufallFertig(spiel!))} />
+      <Zufall ziel={spiel.zug.kategorie} kategorien={spiel.kategorien} onFertig={() => ausfuehren({ typ: 'zufallFertig' })} />
     {:else if spiel.phase === 'frage' && spiel.zug && aktuelleFrage}
       {#key spiel.zug.frageId}
         <Frage
           frage={aktuelleFrage}
           reihenfolge={spiel.zug.reihenfolge}
           timerStart={spiel.zug.timerStart}
-          onTimerStart={() => setzen(game.timerStarten(spiel!, Date.now()))}
-          onAntwort={(i) => setzen(game.antworten(spiel!, aktuelleFrage!, i, Date.now()))}
+          onTimerStart={() => ausfuehren({ typ: 'timerStarten' })}
+          onAntwort={(i) => ausfuehren({ typ: 'antworten', index: i })}
           onTimeout={zeitPruefen}
         />
       {/key}
@@ -175,7 +191,7 @@
         zug={spiel.zug}
         spieler={spiel.spieler[spiel.zug.spieler]}
         {letzterZug}
-        onWeiter={() => setzen(game.weiter(spiel!))}
+        onWeiter={() => ausfuehren({ typ: 'weiter' })}
       />
     {/if}
   </div>
