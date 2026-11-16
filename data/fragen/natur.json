@@ -1,8 +1,44 @@
 {
  "version": 1,
  "kategorie": "natur",
- "generiert_am": "2026-11-16T11:49:11Z",
+ "generiert_am": "2026-11-16T13:13:05Z",
  "fragen": [
+  {
+   "id": "wp-041b1fb034",
+   "kategorie": "natur",
+   "frage": "Von welchem Kontinent stammen die Wildarten, aus denen die Kulturheidelbeeren im Supermarkt gezüchtet wurden?",
+   "antworten": [
+    "Asien",
+    "Australien",
+    "Südamerika",
+    "Nordamerika"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Heidelbeere",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Heidelbeere",
+   "quelle_id": "Q5413585"
+  },
+  {
+   "id": "wp-055e88cf5b",
+   "kategorie": "natur",
+   "frage": "Zu welcher Pflanzenfamilie gehört der Mandelbaum?",
+   "antworten": [
+    "Nussgewächse",
+    "Rosengewächse",
+    "Lorbeergewächse",
+    "Ölbaumgewächse"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mandelbaum",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mandelbaum",
+   "quelle_id": "Q15545507"
+  },
   {
    "id": "wp-0608461a4f",
    "kategorie": "natur",
@@ -22,6 +58,24 @@
    "quelle_id": "Q477918"
   },
   {
+   "id": "wp-07036f0b1e",
+   "kategorie": "natur",
+   "frage": "An welches Insekt sind die Blüten des Blauen Eisenhuts besonders angepasst?",
+   "antworten": [
+    "Hummel",
+    "Honigbiene",
+    "Wespe",
+    "Schmetterling"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Blauer_Eisenhut",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Blauer Eisenhut",
+   "quelle_id": "Q159218"
+  },
+  {
    "id": "wp-0713866339",
    "kategorie": "natur",
    "frage": "Was macht den Giersch im Garten so schwer zu bekämpfen?",
@@ -38,6 +92,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Giersch",
    "quelle_id": "Q217778"
+  },
+  {
+   "id": "wp-0cd5a71d23",
+   "kategorie": "natur",
+   "frage": "Von welchem Kontinent stammt das Gemüse Okra vermutlich ursprünglich?",
+   "antworten": [
+    "Südamerika",
+    "Asien",
+    "Afrika",
+    "Australien"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Okra",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Okra",
+   "quelle_id": "Q80531"
   },
   {
    "id": "wp-0d06886f5a",
@@ -94,6 +166,60 @@
    "quelle_id": "Q146190"
   },
   {
+   "id": "wp-115a18b8ba",
+   "kategorie": "natur",
+   "frage": "Welcher Stoff ist reichlich in den Zellwänden des Acker-Schachtelhalms eingelagert und macht ihn fest?",
+   "antworten": [
+    "Kalk",
+    "Gerbsäure",
+    "Harz",
+    "Kieselsäure"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Acker-Schachtelhalm",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Acker-Schachtelhalm",
+   "quelle_id": "Q107592"
+  },
+  {
+   "id": "wp-11fe5bdb9c",
+   "kategorie": "natur",
+   "frage": "Worauf geht der Wortteil «Wal-» im Namen «Walnuss» ursprünglich zurück?",
+   "antworten": [
+    "Auf «wallen» (wogen)",
+    "Auf «Wall» (Erdwall)",
+    "Auf «welsch» (romanisch, fremd)",
+    "Auf «Wald» (Gehölz)"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Echte_Walnuss",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Echte Walnuss",
+   "quelle_id": "Q46871"
+  },
+  {
+   "id": "wp-127048cd36",
+   "kategorie": "natur",
+   "frage": "Welcher Teil der Süssholzpflanze wird zur Herstellung von Lakritze verwendet?",
+   "antworten": [
+    "Die Blätter",
+    "Die Samen",
+    "Die Wurzel",
+    "Die Blüten"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Echtes_S%C3%BC%C3%9Fholz",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Echtes Süßholz",
+   "quelle_id": "Q257106"
+  },
+  {
    "id": "wp-1bd074a8c9",
    "kategorie": "natur",
    "frage": "Auf welche Sprache geht das Wort «Pistazie» ursprünglich zurück?",
@@ -130,6 +256,24 @@
    "quelle_id": "Q45757"
   },
   {
+   "id": "wp-1c1c28b6c6",
+   "kategorie": "natur",
+   "frage": "Welches Getreide zählt neben Reis zu den beiden wichtigsten für die menschliche Ernährung?",
+   "antworten": [
+    "Weizen",
+    "Hirse",
+    "Roggen",
+    "Mais"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Reis",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Reis",
+   "quelle_id": "Q5090"
+  },
+  {
    "id": "wp-1ec8573f96",
    "kategorie": "natur",
    "frage": "Wofür wird das Alpaka vor allem gezüchtet?",
@@ -146,6 +290,60 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Alpaka",
    "quelle_id": "Q81564"
+  },
+  {
+   "id": "wp-1eca60559b",
+   "kategorie": "natur",
+   "frage": "Mit welcher bekannten Gewürzpflanze ist Kurkuma eng verwandt?",
+   "antworten": [
+    "Vanille",
+    "Pfeffer",
+    "Zimt",
+    "Ingwer"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kurkuma",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kurkuma",
+   "quelle_id": "Q42562"
+  },
+  {
+   "id": "wp-1f19b4086f",
+   "kategorie": "natur",
+   "frage": "Welcher Teil des Muskatnussbaums wird als Muskatnuss in der Küche verwendet?",
+   "antworten": [
+    "Der Samen",
+    "Die Knospe",
+    "Die Wurzel",
+    "Die Rinde"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Muskatnussbaum",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Muskatnussbaum",
+   "quelle_id": "Q2724976"
+  },
+  {
+   "id": "wp-203a1b8e9f",
+   "kategorie": "natur",
+   "frage": "Welche Farbe haben die Blüten des Schwarzen Holunders?",
+   "antworten": [
+    "Rosa",
+    "Violett",
+    "Hellblau",
+    "Weiss"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schwarzer_Holunder",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schwarzer Holunder",
+   "quelle_id": "Q22701"
   },
   {
    "id": "wp-24aeef543d",
@@ -166,6 +364,24 @@
    "quelle_id": "Q157954"
   },
   {
+   "id": "wp-252d1a2d64",
+   "kategorie": "natur",
+   "frage": "Welcher Teil der Ingwerpflanze wird als Küchengewürz verwendet?",
+   "antworten": [
+    "Der Wurzelstock",
+    "Die Blüten",
+    "Die Samen",
+    "Die Blätter"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ingwer",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ingwer",
+   "quelle_id": "Q35625"
+  },
+  {
    "id": "wp-2565393fb0",
    "kategorie": "natur",
    "frage": "Mit den Blättern welcher Baumgattung werden Platanenblätter leicht verwechselt?",
@@ -182,6 +398,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Platanen",
    "quelle_id": "Q163025"
+  },
+  {
+   "id": "wp-257e58a01d",
+   "kategorie": "natur",
+   "frage": "Aus welcher Weltregion stammt der Granatapfel ursprünglich?",
+   "antworten": [
+    "Südostasien",
+    "Mittelamerika",
+    "Ostafrika",
+    "West- bis Mittelasien"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Granatapfel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Granatapfel",
+   "quelle_id": "Q13188"
   },
   {
    "id": "wp-25a323d97f",
@@ -292,6 +526,24 @@
    "quelle_id": "Q163025"
   },
   {
+   "id": "wp-33af9cfe68",
+   "kategorie": "natur",
+   "frage": "Zu welcher Pflanzenfamilie gehört der Weizen?",
+   "antworten": [
+    "Hülsenfrüchtler",
+    "Korbblütler",
+    "Süssgräser",
+    "Kreuzblütler"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Weizen",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Weizen",
+   "quelle_id": "Q15645384"
+  },
+  {
    "id": "wp-37ab90a1a0",
    "kategorie": "natur",
    "frage": "Der Cashewbaum trägt einen Beinamen, der auf die Form seiner Kerne anspielt. Welchem Organ ähneln sie?",
@@ -364,6 +616,24 @@
    "quelle_id": "Q157417"
   },
   {
+   "id": "wp-3d43e3538b",
+   "kategorie": "natur",
+   "frage": "Welche Augenlidentzündung trägt denselben Namen wie das Samenkorn eines bekannten Getreides?",
+   "antworten": [
+    "Hagelkorn",
+    "Haferkorn",
+    "Weizenkorn",
+    "Gerstenkorn"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gerste",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gerste",
+   "quelle_id": "Q11577"
+  },
+  {
    "id": "wp-3e15c8c366",
    "kategorie": "natur",
    "frage": "Wie nennt man die länglichen, hängenden Blütenstände der Birke?",
@@ -400,6 +670,78 @@
    "quelle_id": "Q80024"
   },
   {
+   "id": "wp-40d77e3408",
+   "kategorie": "natur",
+   "frage": "Welcher Stoff ist hauptsächlich für die Schärfe von Ingwer verantwortlich?",
+   "antworten": [
+    "Piperin",
+    "Gingerol",
+    "Capsaicin",
+    "Allicin"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ingwer",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ingwer",
+   "quelle_id": "Q35625"
+  },
+  {
+   "id": "wp-41545ba214",
+   "kategorie": "natur",
+   "frage": "Zu welcher Pflanzenfamilie gehört das Schöllkraut?",
+   "antworten": [
+    "Hahnenfussgewächse",
+    "Kreuzblütler",
+    "Korbblütler",
+    "Mohngewächse"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sch%C3%B6llkraut",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schöllkraut",
+   "quelle_id": "Q156807"
+  },
+  {
+   "id": "wp-4415d66885",
+   "kategorie": "natur",
+   "frage": "Auf der 2-Euro-Münze welches Landes ist die Moltebeere abgebildet?",
+   "antworten": [
+    "Irland",
+    "Lettland",
+    "Estland",
+    "Finnland"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Moltebeere",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Moltebeere",
+   "quelle_id": "Q160092"
+  },
+  {
+   "id": "wp-45d3f3f7d4",
+   "kategorie": "natur",
+   "frage": "Auf welchem Kontinent ist Reis vor allem ein Grundnahrungsmittel?",
+   "antworten": [
+    "Afrika",
+    "Südamerika",
+    "Europa",
+    "Asien"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Reis",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Reis",
+   "quelle_id": "Q5090"
+  },
+  {
    "id": "wp-47566f62f7",
    "kategorie": "natur",
    "frage": "In welchem dieser Länder wächst der Pistazienbaum ursprünglich wild?",
@@ -434,6 +776,42 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Mönchspfeffer",
    "quelle_id": "Q259318"
+  },
+  {
+   "id": "wp-52e0621965",
+   "kategorie": "natur",
+   "frage": "Unter welchem Namen ist der Schwarze Holunder in Norddeutschland ebenfalls bekannt?",
+   "antworten": [
+    "Flieder",
+    "Schlehe",
+    "Liguster",
+    "Weissdorn"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schwarzer_Holunder",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schwarzer Holunder",
+   "quelle_id": "Q22701"
+  },
+  {
+   "id": "wp-539a4e93f6",
+   "kategorie": "natur",
+   "frage": "Welches spanische Getränk wird in der Region Valencia traditionell aus Erdmandeln hergestellt?",
+   "antworten": [
+    "Sidra",
+    "Sangria",
+    "Orujo",
+    "Horchata"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Erdmandel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Erdmandel",
+   "quelle_id": "Q1165724"
   },
   {
    "id": "wp-5430174590",
@@ -488,6 +866,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Hauskatze",
    "quelle_id": "Q146"
+  },
+  {
+   "id": "wp-579c68982c",
+   "kategorie": "natur",
+   "frage": "Welcher schmerzstillende Wirkstoff ist in allen Teilen des Schlafmohns enthalten?",
+   "antworten": [
+    "Koffein",
+    "Chinin",
+    "Morphium",
+    "Nikotin"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schlafmohn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schlafmohn",
+   "quelle_id": "Q131584"
   },
   {
    "id": "wp-58ecf1411c",
@@ -598,6 +994,60 @@
    "quelle_id": "Q144"
   },
   {
+   "id": "wp-669ae10e06",
+   "kategorie": "natur",
+   "frage": "Die Blätter der giftigen Herbstzeitlose muss man von welcher beliebten Wildpflanze unterscheiden?",
+   "antworten": [
+    "Löwenzahn",
+    "Sauerampfer",
+    "Bärlauch",
+    "Brennnessel"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Herbstzeitlose",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Herbstzeitlose",
+   "quelle_id": "Q152553"
+  },
+  {
+   "id": "wp-683f8f5613",
+   "kategorie": "natur",
+   "frage": "Zu welcher Pflanzenfamilie gehört das Gemüse Okra?",
+   "antworten": [
+    "Kürbisgewächse",
+    "Malvengewächse",
+    "Hülsenfrüchtler",
+    "Nachtschattengewächse"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Okra",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Okra",
+   "quelle_id": "Q80531"
+  },
+  {
+   "id": "wp-69394c1bad",
+   "kategorie": "natur",
+   "frage": "Die Moltebeere gilt als Wahrzeichen welcher nordeuropäischen Region?",
+   "antworten": [
+    "Karelien",
+    "Schonen",
+    "Jütland",
+    "Lappland"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Moltebeere",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Moltebeere",
+   "quelle_id": "Q160092"
+  },
+  {
    "id": "wp-6e21ed963f",
    "kategorie": "natur",
    "frage": "Aus welcher Weltregion stammt der Cashewbaum ursprünglich?",
@@ -614,6 +1064,78 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Cashewbaum",
    "quelle_id": "Q34007"
+  },
+  {
+   "id": "wp-6e6031ea2c",
+   "kategorie": "natur",
+   "frage": "Unter welchem volkstümlichen Namen ist der Acker-Schachtelhalm ebenfalls bekannt?",
+   "antworten": [
+    "Silberkraut",
+    "Zinnkraut",
+    "Kupferkraut",
+    "Eisenkraut"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Acker-Schachtelhalm",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Acker-Schachtelhalm",
+   "quelle_id": "Q107592"
+  },
+  {
+   "id": "wp-6ef0c16bdc",
+   "kategorie": "natur",
+   "frage": "Welches Gewürz wird aus dem Samenmantel der Muskatnuss gewonnen?",
+   "antworten": [
+    "Safran",
+    "Piment",
+    "Kardamom",
+    "Macis"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Muskatnussbaum",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Muskatnussbaum",
+   "quelle_id": "Q2724976"
+  },
+  {
+   "id": "wp-704fbc1e6f",
+   "kategorie": "natur",
+   "frage": "Der Gattungsname des Mandelbaums, «Prunus», geht auf das lateinische Wort für welche Frucht zurück?",
+   "antworten": [
+    "Pfirsich",
+    "Kirsche",
+    "Aprikose",
+    "Pflaume"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mandelbaum",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mandelbaum",
+   "quelle_id": "Q15545507"
+  },
+  {
+   "id": "wp-74bacd5d0e",
+   "kategorie": "natur",
+   "frage": "Wofür wird das besonders feste und elastische Holz der Esche häufig verwendet?",
+   "antworten": [
+    "Werkzeugstiele",
+    "Weinfässer",
+    "Streichhölzer",
+    "Bleistifte"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gemeine_Esche",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gemeine Esche",
+   "quelle_id": "Q156907"
   },
   {
    "id": "wp-78ff74e384",
@@ -634,6 +1156,24 @@
    "quelle_id": "Q158642"
   },
   {
+   "id": "wp-7a01e6b21b",
+   "kategorie": "natur",
+   "frage": "Mit welcher Blume kann die blühende Herbstzeitlose im Herbst gelegentlich verwechselt werden?",
+   "antworten": [
+    "Narzisse",
+    "Schneeglöckchen",
+    "Krokus",
+    "Tulpe"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Herbstzeitlose",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Herbstzeitlose",
+   "quelle_id": "Q152553"
+  },
+  {
    "id": "wp-7c335986ed",
    "kategorie": "natur",
    "frage": "Welche Schildkrötenart ist als einzige in der Schweiz, in Deutschland und in Österreich einheimisch?",
@@ -652,6 +1192,24 @@
    "quelle_id": "Q223044"
   },
   {
+   "id": "wp-7d7df2cfaf",
+   "kategorie": "natur",
+   "frage": "Als was gilt das Echte Eisenkraut traditionell?",
+   "antworten": [
+    "Als Heilpflanze",
+    "Als Färberpflanze",
+    "Als Faserpflanze",
+    "Als Giftpflanze"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Echtes_Eisenkraut",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Echtes Eisenkraut",
+   "quelle_id": "Q161417"
+  },
+  {
    "id": "wp-7e94e9d111",
    "kategorie": "natur",
    "frage": "Von welchem Kontinent stammt die Robinie, die heute in Europa auch wild wächst?",
@@ -668,6 +1226,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Gewöhnliche Robinie",
    "quelle_id": "Q157417"
+  },
+  {
+   "id": "wp-7ec23f4355",
+   "kategorie": "natur",
+   "frage": "Welche Teile des Blauen Eisenhuts sind giftig?",
+   "antworten": [
+    "Alle Pflanzenteile",
+    "Nur die Samen",
+    "Nur die Blüten",
+    "Nur die Wurzel"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Blauer_Eisenhut",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Blauer Eisenhut",
+   "quelle_id": "Q159218"
   },
   {
    "id": "wp-7fb593cb25",
@@ -722,6 +1298,78 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Mangostane",
    "quelle_id": "Q170662"
+  },
+  {
+   "id": "wp-8458adcfa1",
+   "kategorie": "natur",
+   "frage": "Wofür wird die Heilpflanze Johanniskraut heute vor allem eingesetzt?",
+   "antworten": [
+    "Gegen Sodbrennen",
+    "Gegen Bluthochdruck",
+    "Gegen leichte Depressionen",
+    "Gegen Heuschnupfen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Echtes_Johanniskraut",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Echtes Johanniskraut",
+   "quelle_id": "Q158289"
+  },
+  {
+   "id": "wp-85259d5554",
+   "kategorie": "natur",
+   "frage": "Welcher Name für Walnüsse ist in der Schweiz traditionell gebräuchlich?",
+   "antworten": [
+    "Baumnuss",
+    "Hausnuss",
+    "Waldnuss",
+    "Steinnuss"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Echte_Walnuss",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Echte Walnuss",
+   "quelle_id": "Q46871"
+  },
+  {
+   "id": "wp-8573077956",
+   "kategorie": "natur",
+   "frage": "Zu welcher Pflanzenfamilie gehört die Gemeine Hasel, die Haselnüsse trägt?",
+   "antworten": [
+    "Buchengewächse",
+    "Birkengewächse",
+    "Rosengewächse",
+    "Walnussgewächse"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gemeine_Hasel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gemeine Hasel",
+   "quelle_id": "Q124969"
+  },
+  {
+   "id": "wp-860228a78f",
+   "kategorie": "natur",
+   "frage": "Welche Art von Erreger verursacht das seit den 1990er-Jahren in Europa verbreitete Eschensterben?",
+   "antworten": [
+    "Ein Käfer",
+    "Ein Virus",
+    "Ein Bakterium",
+    "Ein Pilz"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gemeine_Esche",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gemeine Esche",
+   "quelle_id": "Q156907"
   },
   {
    "id": "wp-866c5eed58",
@@ -796,6 +1444,24 @@
    "quelle_id": "Q146110"
   },
   {
+   "id": "wp-8cb1a366f1",
+   "kategorie": "natur",
+   "frage": "Wie nennt man die Fähigkeit junger Sonnenblumen, ihre Knospen im Tagesverlauf der Sonne nachzudrehen?",
+   "antworten": [
+    "Heliotropismus",
+    "Geotropismus",
+    "Hydrotropismus",
+    "Thigmotropismus"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sonnenblume",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sonnenblume",
+   "quelle_id": "Q171497"
+  },
+  {
    "id": "wp-8d4f0c8fb1",
    "kategorie": "natur",
    "frage": "Welche Ernährungsweise ist für Frettchen artgerecht?",
@@ -812,6 +1478,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Frettchen",
    "quelle_id": "Q178973"
+  },
+  {
+   "id": "wp-8dd888415d",
+   "kategorie": "natur",
+   "frage": "Wofür wird der allergrösste Teil des Sojaschrots verwendet, das nach dem Pressen des Öls übrig bleibt?",
+   "antworten": [
+    "Als Tierfutter",
+    "Als Dünger",
+    "Für Kosmetikprodukte",
+    "Als Biotreibstoff"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sojabohne",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sojabohne",
+   "quelle_id": "Q11006"
   },
   {
    "id": "wp-91b1d926ee",
@@ -868,6 +1552,42 @@
    "quelle_id": "Q134185"
   },
   {
+   "id": "wp-9e98bc86a6",
+   "kategorie": "natur",
+   "frage": "Zu welcher Pflanzenfamilie gehören die Pappeln?",
+   "antworten": [
+    "Birkengewächse",
+    "Weidengewächse",
+    "Rosengewächse",
+    "Buchengewächse"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Pappeln",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Pappeln",
+   "quelle_id": "Q25356"
+  },
+  {
+   "id": "wp-a358d19bce",
+   "kategorie": "natur",
+   "frage": "Welche Farbe haben die reifen Beeren des Sanddorns typischerweise?",
+   "antworten": [
+    "Schwarzviolett",
+    "Weiss",
+    "Orange",
+    "Dunkelblau"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sanddorn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sanddorn",
+   "quelle_id": "Q165378"
+  },
+  {
    "id": "wp-a417d75f58",
    "kategorie": "natur",
    "frage": "Wie viele Beine hat ein ausgewachsenes Insekt?",
@@ -886,6 +1606,24 @@
    "quelle_id": "Q1390"
   },
   {
+   "id": "wp-a4d7c6246d",
+   "kategorie": "natur",
+   "frage": "Welche Süssigkeit wird aus dem Echten Süssholz gewonnen?",
+   "antworten": [
+    "Nougat",
+    "Karamell",
+    "Lakritze",
+    "Marzipan"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Echtes_S%C3%BC%C3%9Fholz",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Echtes Süßholz",
+   "quelle_id": "Q257106"
+  },
+  {
    "id": "wp-aa7245fa74",
    "kategorie": "natur",
    "frage": "Zu welcher Tiergruppe zählen die Vögel nach moderner wissenschaftlicher Systematik?",
@@ -902,6 +1640,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Vögel",
    "quelle_id": "Q5113"
+  },
+  {
+   "id": "wp-aa9ed03e55",
+   "kategorie": "natur",
+   "frage": "Wie hoch wird die in Mitteleuropa häufige Gemeine Hasel typischerweise?",
+   "antworten": [
+    "Etwa 30 Meter",
+    "Etwa 5 Meter",
+    "Etwa 15 Meter",
+    "Etwa 1 Meter"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Gemeine_Hasel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Gemeine Hasel",
+   "quelle_id": "Q124969"
   },
   {
    "id": "wp-aede95f53a",
@@ -994,6 +1750,42 @@
    "quelle_id": "Q22699"
   },
   {
+   "id": "wp-b880211082",
+   "kategorie": "natur",
+   "frage": "Zu welcher Pflanzenfamilie gehört die giftige Tollkirsche?",
+   "antworten": [
+    "Nachtschattengewächse",
+    "Hahnenfussgewächse",
+    "Doldenblütler",
+    "Rosengewächse"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schwarze_Tollkirsche",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schwarze Tollkirsche",
+   "quelle_id": "Q156091"
+  },
+  {
+   "id": "wp-ba798d6fe5",
+   "kategorie": "natur",
+   "frage": "Aus welcher Weltregion stammt das gelbe Gewürz Kurkuma ursprünglich?",
+   "antworten": [
+    "Ostafrika",
+    "Südasien",
+    "Südamerika",
+    "Mittelmeerraum"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Kurkuma",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Kurkuma",
+   "quelle_id": "Q42562"
+  },
+  {
    "id": "wp-bc10f3dfc4",
    "kategorie": "natur",
    "frage": "Welchen Vögeln ähnelt der Mauersegler stark, obwohl er mit ihnen nicht näher verwandt ist?",
@@ -1028,6 +1820,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Schildkröten",
    "quelle_id": "Q223044"
+  },
+  {
+   "id": "wp-c071782f28",
+   "kategorie": "natur",
+   "frage": "Unter welchem anderen Namen ist die Erdmandel ebenfalls bekannt?",
+   "antworten": [
+    "Paranuss",
+    "Pekannuss",
+    "Macadamianuss",
+    "Tigernuss"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Erdmandel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Erdmandel",
+   "quelle_id": "Q1165724"
   },
   {
    "id": "wp-c21d0c0415",
@@ -1082,6 +1892,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Zirbelkiefer",
    "quelle_id": "Q147278"
+  },
+  {
+   "id": "wp-c559fb7ab8",
+   "kategorie": "natur",
+   "frage": "Was bedeutet das lateinische Wort «vera» im Pflanzennamen Aloe vera?",
+   "antworten": [
+    "bitter",
+    "echt",
+    "grün",
+    "heilend"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Echte_Aloe",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Echte Aloe",
+   "quelle_id": "Q80079"
   },
   {
    "id": "wp-c66875e3f0",
@@ -1156,6 +1984,78 @@
    "quelle_id": "Q39002"
   },
   {
+   "id": "wp-d71ae4ea98",
+   "kategorie": "natur",
+   "frage": "Aus welchem Pflanzenteil der Aloe vera wird das bekannte Aloe-vera-Gel gewonnen?",
+   "antworten": [
+    "Aus den Wurzeln",
+    "Aus den Blüten",
+    "Aus den Blättern",
+    "Aus den Samen"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Echte_Aloe",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Echte Aloe",
+   "quelle_id": "Q80079"
+  },
+  {
+   "id": "wp-d760fce3fe",
+   "kategorie": "natur",
+   "frage": "Unter welchem anderen Namen ist die Schneerose (Helleborus niger) meist bekannt?",
+   "antworten": [
+    "Märzenbecher",
+    "Pfingstrose",
+    "Christrose",
+    "Osterglocke"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schneerose",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schneerose",
+   "quelle_id": "Q147834"
+  },
+  {
+   "id": "wp-d783e18495",
+   "kategorie": "natur",
+   "frage": "Wofür setzten Frauen früher den Saft der giftigen Tollkirsche zu Schönheitszwecken ein?",
+   "antworten": [
+    "Zum Vergrössern der Pupillen",
+    "Zum Glätten der Haut",
+    "Zum Aufhellen der Haare",
+    "Zum Röten der Lippen"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schwarze_Tollkirsche",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schwarze Tollkirsche",
+   "quelle_id": "Q156091"
+  },
+  {
+   "id": "wp-d7deb8d448",
+   "kategorie": "natur",
+   "frage": "In welcher Jahreszeit blüht die Schneerose hauptsächlich?",
+   "antworten": [
+    "Im Hochsommer",
+    "Im Winter",
+    "Im Frühsommer",
+    "Im Spätsommer"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schneerose",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schneerose",
+   "quelle_id": "Q147834"
+  },
+  {
    "id": "wp-d832d9f63a",
    "kategorie": "natur",
    "frage": "Welches Wildtier gilt als wilde Stammform des Haushundes?",
@@ -1172,6 +2072,42 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Haushund",
    "quelle_id": "Q144"
+  },
+  {
+   "id": "wp-e1089c0b9a",
+   "kategorie": "natur",
+   "frage": "Welcher Baum war 2012 der häufigste Laubbaum in den Wäldern Deutschlands?",
+   "antworten": [
+    "Stieleiche",
+    "Rotbuche",
+    "Hängebirke",
+    "Bergahorn"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rotbuche",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rotbuche",
+   "quelle_id": "Q146149"
+  },
+  {
+   "id": "wp-e252a09f6a",
+   "kategorie": "natur",
+   "frage": "Welches Betäubungsmittel wird aus dem getrockneten Milchsaft des Schlafmohns gewonnen?",
+   "antworten": [
+    "Opium",
+    "Haschisch",
+    "Kokain",
+    "Meskalin"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schlafmohn",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schlafmohn",
+   "quelle_id": "Q131584"
   },
   {
    "id": "wp-e35a05b4f8",
@@ -1192,6 +2128,42 @@
    "quelle_id": "Q2544599"
   },
   {
+   "id": "wp-e50b0756ef",
+   "kategorie": "natur",
+   "frage": "In welcher Weltregion wurde Soja schon vor Jahrtausenden als Nahrungspflanze angebaut?",
+   "antworten": [
+    "Westafrika",
+    "Naher Osten",
+    "Ostasien",
+    "Südamerika"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sojabohne",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sojabohne",
+   "quelle_id": "Q11006"
+  },
+  {
+   "id": "wp-e79d6612bc",
+   "kategorie": "natur",
+   "frage": "Wofür wurde die Heilpflanze Beinwell traditionell vor allem eingesetzt?",
+   "antworten": [
+    "Zum Senken von Fieber",
+    "Zum Lindern von Husten",
+    "Zum Heilen von Knochenbrüchen",
+    "Zum Beruhigen der Nerven"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Beinwell",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Beinwell",
+   "quelle_id": "Q161566"
+  },
+  {
    "id": "wp-e82f5294b6",
    "kategorie": "natur",
    "frage": "In welcher Region ist der Johannisbrotbaum ursprünglich verbreitet?",
@@ -1208,6 +2180,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Johannisbrotbaum",
    "quelle_id": "Q68763"
+  },
+  {
+   "id": "wp-eab8dc417d",
+   "kategorie": "natur",
+   "frage": "Wie wachsen Paranüsse am Baum?",
+   "antworten": [
+    "Zu 10–25 in einer holzigen Kugelfrucht",
+    "In Trauben an langen Stielen",
+    "Einzeln in einer grünen Fruchthülle",
+    "Paarweise in einer stacheligen Hülle"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Paranussbaum",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Paranussbaum",
+   "quelle_id": "Q81671"
   },
   {
    "id": "wp-ec6316af6c",
@@ -1246,6 +2236,42 @@
    "quelle_id": "Q22699"
   },
   {
+   "id": "wp-ecbde78518",
+   "kategorie": "natur",
+   "frage": "Welche Farbe hat der Saft, der beim Abbrechen eines Schöllkraut-Stängels austritt?",
+   "antworten": [
+    "Gelb-orange",
+    "Milchig-weiss",
+    "Hellgrün",
+    "Dunkelrot"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sch%C3%B6llkraut",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Schöllkraut",
+   "quelle_id": "Q156807"
+  },
+  {
+   "id": "wp-ed41094117",
+   "kategorie": "natur",
+   "frage": "Worauf bezieht sich der Namensteil «Rot» bei der Rotbuche?",
+   "antworten": [
+    "Auf die rötliche Farbe der Rinde",
+    "Auf die roten Früchte im Herbst",
+    "Auf die rötliche Färbung des Holzes",
+    "Auf die rote Färbung des Herbstlaubs"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rotbuche",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rotbuche",
+   "quelle_id": "Q146149"
+  },
+  {
    "id": "wp-ee5b25e6e9",
    "kategorie": "natur",
    "frage": "Unter welchem Namen ist Mangold in der Deutschschweiz bekannt?",
@@ -1264,6 +2290,24 @@
    "quelle_id": "Q157954"
   },
   {
+   "id": "wp-ee95121b38",
+   "kategorie": "natur",
+   "frage": "Welches dieser Getreide ist von Natur aus glutenfrei und daher bei Zöliakie geeignet?",
+   "antworten": [
+    "Gerste",
+    "Weizen",
+    "Roggen",
+    "Mais"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Mais",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Mais",
+   "quelle_id": "Q11575"
+  },
+  {
    "id": "wp-f5ec77be01",
    "kategorie": "natur",
    "frage": "Welche Farbe hat die Schale einer reifen Mangostanfrucht?",
@@ -1280,6 +2324,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Mangostane",
    "quelle_id": "Q170662"
+  },
+  {
+   "id": "wp-f6a79c09e2",
+   "kategorie": "natur",
+   "frage": "Unter welchem Namen ist die Aprikose vor allem in Österreich und Bayern bekannt?",
+   "antworten": [
+    "Ringlotte",
+    "Zwetschge",
+    "Mirabelle",
+    "Marille"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Aprikose",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Aprikose",
+   "quelle_id": "Q37453"
   },
   {
    "id": "wp-f77e84d634",
@@ -1318,6 +2380,42 @@
    "quelle_id": "Q80024"
   },
   {
+   "id": "wp-fa60174d8d",
+   "kategorie": "natur",
+   "frage": "Zu welcher Pflanzenfamilie gehört die Sonnenblume?",
+   "antworten": [
+    "Doldenblütler",
+    "Korbblütler",
+    "Kreuzblütler",
+    "Lippenblütler"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Sonnenblume",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sonnenblume",
+   "quelle_id": "Q171497"
+  },
+  {
+   "id": "wp-fa72cd82ea",
+   "kategorie": "natur",
+   "frage": "Zu welcher Pflanzenfamilie gehört der Rizinus, aus dessen Samen Rizinusöl gewonnen wird?",
+   "antworten": [
+    "Nachtschattengewächse",
+    "Hülsenfrüchtler",
+    "Wolfsmilchgewächse",
+    "Malvengewächse"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Ricinus_communis",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Ricinus communis",
+   "quelle_id": "Q155867"
+  },
+  {
    "id": "wp-fdd3c42da0",
    "kategorie": "natur",
    "frage": "Wovon ernähren sich Gürteltiere hauptsächlich?",
@@ -1352,6 +2450,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Rosskastanien",
    "quelle_id": "Q158752"
+  },
+  {
+   "id": "wp-fe59ccc735",
+   "kategorie": "natur",
+   "frage": "Wie heisst Dinkel, der unreif geerntet und anschliessend getrocknet wird?",
+   "antworten": [
+    "Graupen",
+    "Bulgur",
+    "Couscous",
+    "Grünkern"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dinkel",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Dinkel",
+   "quelle_id": "Q158767"
   }
  ]
 }

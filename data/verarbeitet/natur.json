@@ -1,4 +1,11 @@
 {
+ "Acker-Schachtelhalm": {
+  "qid": "Q107592",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Alpaka": {
   "qid": "Q81564",
   "datum": "2026-11-16",
@@ -13,8 +20,22 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Aprikose": {
+  "qid": "Q37453",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Asiatische Tigermücke": {
   "qid": "Q477918",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Beinwell": {
+  "qid": "Q161566",
   "datum": "2026-11-16",
   "bekanntheit_thema": 3,
   "angenommen": 1,
@@ -24,6 +45,13 @@
   "qid": "Q25243",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Blauer Eisenhut": {
+  "qid": "Q159218",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
   "angenommen": 2,
   "verworfen": 0
  },
@@ -55,6 +83,13 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Dinkel": {
+  "qid": "Q158767",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
  "Durian": {
   "qid": "Q134185",
   "datum": "2026-11-16",
@@ -62,12 +97,47 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Echte Aloe": {
+  "qid": "Q80079",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Echte Feige": {
   "qid": "Q36146",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
   "angenommen": 1,
   "verworfen": 1
+ },
+ "Echte Walnuss": {
+  "qid": "Q46871",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Echtes Eisenkraut": {
+  "qid": "Q161417",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Echtes Johanniskraut": {
+  "qid": "Q158289",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Echtes Süßholz": {
+  "qid": "Q257106",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
  },
  "Edelkastanie": {
   "qid": "Q22699",
@@ -78,6 +148,13 @@
  },
  "Elsbeere": {
   "qid": "Q147459",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Erdmandel": {
+  "qid": "Q1165724",
   "datum": "2026-11-16",
   "bekanntheit_thema": 3,
   "angenommen": 2,
@@ -118,10 +195,24 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Gemeine Esche": {
+  "qid": "Q156907",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Gemeine Hainbuche": {
   "qid": "Q158776",
   "datum": "2026-11-16",
   "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Gemeine Hasel": {
+  "qid": "Q124969",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
   "angenommen": 2,
   "verworfen": 0
  },
@@ -131,6 +222,13 @@
   "bekanntheit_thema": 3,
   "angenommen": 2,
   "verworfen": 0
+ },
+ "Gerste": {
+  "qid": "Q11577",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
  },
  "Gewöhnliche Douglasie": {
   "qid": "Q156687",
@@ -160,12 +258,26 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Granatapfel": {
+  "qid": "Q13188",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
  "Gundermann": {
   "qid": "Q162544",
   "datum": "2026-11-16",
   "bekanntheit_thema": 3,
   "angenommen": 2,
   "verworfen": 0
+ },
+ "Gänseblümchen": {
+  "qid": "Q26158",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
  },
  "Götterbaum": {
   "qid": "Q159570",
@@ -202,6 +314,27 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Heidelbeere": {
+  "qid": "Q5413585",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Herbstzeitlose": {
+  "qid": "Q152553",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Ingwer": {
+  "qid": "Q35625",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Insekten": {
   "qid": "Q1390",
   "datum": "2026-11-16",
@@ -230,6 +363,13 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Kichererbse": {
+  "qid": "Q81375",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 0,
+  "verworfen": 2
+ },
  "Kornelkirsche": {
   "qid": "Q158642",
   "datum": "2026-11-16",
@@ -251,6 +391,13 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Kurkuma": {
+  "qid": "Q42562",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Leistenkrokodil": {
   "qid": "Q182599",
   "datum": "2026-11-16",
@@ -269,6 +416,20 @@
   "qid": "Q156811",
   "datum": "2026-11-16",
   "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Mais": {
+  "qid": "Q11575",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Mandelbaum": {
+  "qid": "Q15545507",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
   "angenommen": 2,
   "verworfen": 0
  },
@@ -300,8 +461,29 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Moltebeere": {
+  "qid": "Q160092",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Muskatnussbaum": {
+  "qid": "Q2724976",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Mönchspfeffer": {
   "qid": "Q259318",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Okra": {
+  "qid": "Q80531",
   "datum": "2026-11-16",
   "bekanntheit_thema": 3,
   "angenommen": 2,
@@ -320,6 +502,20 @@
   "bekanntheit_thema": 3,
   "angenommen": 2,
   "verworfen": 0
+ },
+ "Pappeln": {
+  "qid": "Q25356",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Paranussbaum": {
+  "qid": "Q81671",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
  },
  "Pinie": {
   "qid": "Q106094",
@@ -349,8 +545,29 @@
   "angenommen": 1,
   "verworfen": 1
  },
+ "Reis": {
+  "qid": "Q5090",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Ricinus communis": {
+  "qid": "Q155867",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 0
+ },
  "Rosskastanien": {
   "qid": "Q158752",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Rotbuche": {
+  "qid": "Q146149",
   "datum": "2026-11-16",
   "bekanntheit_thema": 4,
   "angenommen": 2,
@@ -363,6 +580,13 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Sanddorn": {
+  "qid": "Q165378",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 1,
+  "verworfen": 1
+ },
  "Schildkröten": {
   "qid": "Q223044",
   "datum": "2026-11-16",
@@ -370,8 +594,57 @@
   "angenommen": 2,
   "verworfen": 0
  },
+ "Schlafmohn": {
+  "qid": "Q131584",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
  "Schlangen": {
   "qid": "Q2102",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Schneerose": {
+  "qid": "Q147834",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Schwarze Tollkirsche": {
+  "qid": "Q156091",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Schwarzer Holunder": {
+  "qid": "Q22701",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Schöllkraut": {
+  "qid": "Q156807",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Sojabohne": {
+  "qid": "Q11006",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0
+ },
+ "Sonnenblume": {
+  "qid": "Q171497",
   "datum": "2026-11-16",
   "bekanntheit_thema": 5,
   "angenommen": 2,
@@ -407,6 +680,13 @@
  },
  "Vögel": {
   "qid": "Q5113",
+  "datum": "2026-11-16",
+  "bekanntheit_thema": 5,
+  "angenommen": 1,
+  "verworfen": 1
+ },
+ "Weizen": {
+  "qid": "Q15645384",
   "datum": "2026-11-16",
   "bekanntheit_thema": 5,
   "angenommen": 1,
