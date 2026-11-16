@@ -40,8 +40,11 @@ npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für Git
   1/2/3 der Fragen. Gezogen wird zuerst aus der gewählten Stufe; ist sie in der Kategorie aufgebraucht, aus der
   nächstliegenden (leicht → mittel → schwer, mittel → leicht → schwer, schwer → mittel → leicht,
   `SCHWIERIGKEIT_REIHENFOLGE` in `config.ts`). Eine Kategorie bleibt so spielbar, solange sie überhaupt Fragen hat.
-  Punkte hängen nicht von der Schwierigkeit ab. Die Wahl wird mit den Namen gemerkt (`schwierigkeiten` in
-  `wikiquiz:players:v1`); ältere Spielstände ohne Wahl gelten als *Mittel*.
+  Unter „Pro Kategorie anpassen“ lässt sich die Stufe pro Spieler für einzelne (gewählte) Kategorien abweichend
+  setzen; ohne Anpassung gilt die Gesamtstufe. Gespeichert werden nur Abweichungen (`proKategorie` am Spieler);
+  wird die Gesamtstufe geändert, fallen Abweichungen weg, die ihr nun entsprechen.
+  Punkte hängen nicht von der Schwierigkeit ab. Die Wahl wird mit den Namen gemerkt (`schwierigkeiten` und
+  `proKategorie` in `wikiquiz:players:v1`); ältere Spielstände ohne Wahl gelten als *Mittel*.
 - **Erschöpfte Kategorien** sind ausgegraut („keine Fragen mehr“ bzw. „bald verfügbar“); beim Antippen erscheint ein Hinweis.
   „Zufall“ wählt nur unter Kategorien mit verbleibenden Fragen. Sind alle erschöpft, endet das Spiel.
 - **Quellenlink** im Feedback: „Mehr auf Wikipedia: Titel“, bei Fragen aus der englischen Wikipedia

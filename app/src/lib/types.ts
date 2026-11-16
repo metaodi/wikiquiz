@@ -39,7 +39,11 @@ export interface Spieler {
   punkte: number;
   /** Bevorzugte Schwierigkeit der Fragen für diesen Spieler */
   schwierigkeit: Schwierigkeit;
+  /** Abweichende Schwierigkeit für einzelne Kategorien (fehlende Kategorien folgen `schwierigkeit`) */
+  proKategorie?: ProKategorie;
 }
+
+export type ProKategorie = Partial<Record<KategorieId, Schwierigkeit>>;
 
 export interface Zug {
   spieler: number;

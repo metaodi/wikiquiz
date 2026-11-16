@@ -140,3 +140,43 @@ test('Schwierigkeit pro Spieler: Fragen der gewählten Stufe, Ausweichen, gemerk
   await expect(page.getByRole('radiogroup', { name: 'Schwierigkeit Spieler 1' }).getByRole('radio', { name: 'Leicht' })).toBeChecked();
   await expect(page.getByRole('radiogroup', { name: 'Schwierigkeit Spieler 2' }).getByRole('radio', { name: 'Schwer' })).toBeChecked();
 });
+
+test('Schwierigkeit pro Kategorie verfeinern: Abweichung gilt nur dort, wird gemerkt', async ({ page }) => {
+  // Geografie 1–2 leicht, 3–6 schwer; Kunst 1 leicht, 2 schwer
+  const pool = fixturePool();
+  for (const f of pool.fragen) {
+    const nr = Number(f.id.split('-')[1]);
+    if (f.kategorie === 'geografie') f.schwierigkeit = nr <= 2 ? 1 : 3;
+    if (f.kategorie === 'kunst') f.schwierigkeit = nr === 1 ? 1 : 3;
+  }
+  await oeffnen(page, pool);
+  const gesamt = page.getByRole('radiogroup', { name: 'Schwierigkeit Spieler 1' });
+  const geo = page.getByRole('radiogroup', { name: /Schwierigkeit Geografie, Spieler 1/ });
+  const kunst = page.getByRole('radiogroup', { name: /Schwierigkeit Kunst, Musik & Literatur, Spieler 1/ });
+  await setup(page, ['Solo'], 5, async () => {
+    await gesamt.getByRole('radio', { name: 'Leicht' }).click();
+    await page.getByText('Pro Kategorie anpassen').click();
+    // Standard: alle Kategorien folgen der Gesamtstufe
+    await expect(kunst.getByRole('radio', { name: 'Leicht' })).toBeChecked();
+    await geo.getByRole('radio', { name: 'Schwer' }).click();
+    await expect(page.getByText('1 angepasst')).toBeVisible();
+  });
+
+  for (let i = 0; i < 2; i++) {
+    expect(await frageOeffnen(page, 'geografie')).toMatch(/Testfrage geografie [3-6]:/);
+    await beantworten(page, { typ: 'falsch' });
+    await weiter(page);
+  }
+  expect(await frageOeffnen(page, 'kunst')).toMatch(/Testfrage kunst 1:/);
+  await beantworten(page, { typ: 'falsch' });
+
+  // Gemerkt fürs nächste Spiel; Gesamtstufe auf „Schwer“ macht die Abweichung überflüssig
+  page.once('dialog', (d) => d.accept());
+  await page.getByRole('button', { name: 'Spiel beenden' }).click();
+  await page.getByText('Pro Kategorie anpassen').click();
+  await expect(geo.getByRole('radio', { name: 'Schwer' })).toBeChecked();
+  await expect(kunst.getByRole('radio', { name: 'Leicht' })).toBeChecked();
+  await gesamt.getByRole('radio', { name: 'Schwer' }).click();
+  await expect(page.getByText('angepasst', { exact: false })).toHaveCount(0);
+  await expect(kunst.getByRole('radio', { name: 'Schwer' })).toBeChecked();
+});

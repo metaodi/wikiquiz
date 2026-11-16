@@ -80,6 +80,7 @@
       namen: spieler.map((p) => p.name),
       farben: spieler.map((p) => p.farbe),
       schwierigkeiten: spieler.map((p) => p.schwierigkeit ?? SCHWIERIGKEIT_STANDARD),
+      proKategorie: spieler.map((p) => p.proKategorie),
       runden,
       ...einstellungen,
       bekannteKategorien: [...game.ALLE_KATEGORIEN],

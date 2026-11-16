@@ -9,7 +9,9 @@ import {
   kategorieWaehlen,
   neuesSpiel,
   nochmals,
+  proKategoriePruefen,
   pruefeTimeout,
+  schwierigkeitFuer,
   rangliste,
   timerStarten,
   waehler,
@@ -199,8 +201,32 @@ describe('Schwierigkeit', () => {
     expect(wiederherstellen(ohne, pool, 0).spieler[0].schwierigkeit).toBe(2);
   });
   it('bleibt bei „Nochmals spielen“ erhalten', () => {
-    const s = neuesSpiel([{ name: 'A', farbe: '#f00', schwierigkeit: 3 }], 5);
-    expect(nochmals(s).spieler[0].schwierigkeit).toBe(3);
+    const s = neuesSpiel([{ name: 'A', farbe: '#f00', schwierigkeit: 3, proKategorie: { kunst: 1 } }], 5);
+    expect(nochmals(s).spieler[0]).toMatchObject({ schwierigkeit: 3, proKategorie: { kunst: 1 } });
+  });
+
+  it('lässt sich pro Kategorie verfeinern, sonst gilt die Gesamtstufe', () => {
+    const p = { schwierigkeit: 1 as const, proKategorie: { kunst: 3 as const } };
+    expect(schwierigkeitFuer(p, 'kunst')).toBe(3);
+    expect(schwierigkeitFuer(p, 'geografie')).toBe(1);
+
+    const kunst = [mitStufe('kl', 1), mitStufe('ks', 3)].map((f) => ({ ...f, kategorie: 'kunst' as const }));
+    const s = neuesSpiel([{ name: 'A', farbe: '#f00', ...p }], 5);
+    const r1 = kategorieWaehlen(s, [...pool, ...kunst], 'kunst', [], rng);
+    const r2 = kategorieWaehlen(s, [...pool, ...kunst], 'geografie', [], rng);
+    expect(r1.ok && r1.frage.id).toBe('ks');
+    expect(r2.ok && r2.frage.id).toBe('l1');
+  });
+
+  it('bereinigt Abweichungen pro Kategorie', () => {
+    // Gleich wie Gesamtstufe, unbekannte Kategorie und ungültige Stufe fallen weg
+    expect(proKategoriePruefen({ kunst: 2, sport: 3, quatsch: 1, natur: 7 }, 2)).toEqual({ sport: 3 });
+    expect(proKategoriePruefen({ kunst: 2 }, 2)).toBeUndefined();
+    expect(proKategoriePruefen('kaputt', 2)).toBeUndefined();
+    const s = neuesSpiel([{ name: 'A', farbe: '#f00', schwierigkeit: 2, proKategorie: { kunst: 2 } }], 5);
+    expect(s.spieler[0].proKategorie).toBeUndefined();
+    const kaputt = { ...s, spieler: [{ ...s.spieler[0], proKategorie: { sport: 9, kunst: 1 } }] } as unknown as Spielstand;
+    expect(wiederherstellen(kaputt, pool, 0).spieler[0].proKategorie).toEqual({ kunst: 1 });
   });
 });
 

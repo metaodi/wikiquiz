@@ -9,10 +9,16 @@
     SCHWIERIGKEITEN,
     SPIELER_FARBEN,
   } from '../lib/config';
-  import { ALLE_KATEGORIEN, einstellungenPruefen, neueKategorienErgaenzen, type NeuerSpieler } from '../lib/game';
+  import {
+    ALLE_KATEGORIEN,
+    einstellungenPruefen,
+    neueKategorienErgaenzen,
+    proKategoriePruefen,
+    type NeuerSpieler,
+  } from '../lib/game';
   import { stufe } from '../lib/picker';
   import type { LetzteSpieler } from '../lib/storage';
-  import type { Einstellungen, KategorieId, KategorieModus } from '../lib/types';
+  import type { Einstellungen, KategorieId, KategorieModus, ProKategorie, Schwierigkeit } from '../lib/types';
 
   let {
     letzte,
@@ -33,16 +39,22 @@
     { id: 'zufall', titel: 'Immer Zufall', text: 'Die Kategorie wird jedes Mal ausgelost.' },
   ];
 
+  type SetupSpieler = { name: string; farbe: string; schwierigkeit: Schwierigkeit; proKategorie: ProKategorie };
+
   // svelte-ignore state_referenced_locally
   const start = letzte;
-  let spieler = $state(
+  let spieler = $state<SetupSpieler[]>(
     start?.namen.length
-      ? start.namen.map((name, i) => ({
-          name,
-          farbe: start.farben[i] ?? SPIELER_FARBEN[i],
-          schwierigkeit: stufe(start.schwierigkeiten?.[i]),
-        }))
-      : [{ name: '', farbe: SPIELER_FARBEN[0], schwierigkeit: SCHWIERIGKEIT_STANDARD }],
+      ? start.namen.map((name, i) => {
+          const schwierigkeit = stufe(start.schwierigkeiten?.[i]);
+          return {
+            name,
+            farbe: start.farben[i] ?? SPIELER_FARBEN[i],
+            schwierigkeit,
+            proKategorie: proKategoriePruefen(start.proKategorie?.[i], schwierigkeit) ?? {},
+          };
+        })
+      : [{ name: '', farbe: SPIELER_FARBEN[0], schwierigkeit: SCHWIERIGKEIT_STANDARD, proKategorie: {} }],
   );
   // svelte-ignore state_referenced_locally
   let runden = $state(start?.runden ?? RUNDEN_STANDARD);
@@ -70,7 +82,22 @@
 
   function hinzufuegen() {
     const frei = SPIELER_FARBEN.find((f) => !spieler.some((p) => p.farbe === f)) ?? SPIELER_FARBEN[0];
-    spieler.push({ name: '', farbe: frei, schwierigkeit: SCHWIERIGKEIT_STANDARD });
+    spieler.push({ name: '', farbe: frei, schwierigkeit: SCHWIERIGKEIT_STANDARD, proKategorie: {} });
+  }
+
+  /** Gesamtstufe ändern; Abweichungen, die ihr jetzt entsprechen, fallen weg */
+  function gesamtSetzen(p: SetupSpieler, wert: Schwierigkeit) {
+    p.schwierigkeit = wert;
+    p.proKategorie = proKategoriePruefen(p.proKategorie, wert) ?? {};
+  }
+
+  function kategorieSetzen(p: SetupSpieler, k: KategorieId, wert: Schwierigkeit) {
+    p.proKategorie = proKategoriePruefen({ ...p.proKategorie, [k]: wert }, p.schwierigkeit) ?? {};
+  }
+
+  /** Anzahl Abweichungen in den gewählten Kategorien */
+  function angepasst(p: SetupSpieler): number {
+    return kategorien.filter((k) => p.proKategorie[k] !== undefined).length;
   }
 
   function entfernen(i: number) {
@@ -81,7 +108,12 @@
     e.preventDefault();
     if (doppelt || fragenGewaehlt === 0) return;
     onStart(
-      spieler.map((p, i) => ({ name: namen[i], farbe: p.farbe, schwierigkeit: p.schwierigkeit })),
+      spieler.map((p, i) => ({
+        name: namen[i],
+        farbe: p.farbe,
+        schwierigkeit: p.schwierigkeit,
+        proKategorie: proKategoriePruefen({ ...p.proKategorie }, p.schwierigkeit),
+      })),
       runden,
       { modus: modusEffektiv, kategorien: [...kategorien] },
     );
@@ -99,6 +131,7 @@
     <p class="muted klein-text">Name, Farbe und Schwierigkeit der Fragen – für jeden Spieler einzeln.</p>
     <ol class="liste">
       {#each spieler as p, i (i)}
+        {@const n = angepasst(p)}
         <li class="zeile">
           <input
             class="name"
@@ -134,12 +167,44 @@
                 role="radio"
                 aria-checked={p.schwierigkeit === st.wert}
                 class:aktiv={p.schwierigkeit === st.wert}
-                onclick={() => (p.schwierigkeit = st.wert)}
+                onclick={() => gesamtSetzen(p, st.wert)}
               >
                 {st.name}
               </button>
             {/each}
           </div>
+          <details class="fein">
+            <summary>
+              <span>Pro Kategorie anpassen{#if n > 0}<span class="anzahl">{` · ${n} angepasst`}</span>{/if}</span>
+            </summary>
+            <p class="muted klein-text">Ohne Anpassung gilt die Stufe oben.</p>
+            <ul class="fein-liste">
+              {#each KATEGORIEN.filter((k) => kategorien.includes(k.id)) as k (k.id)}
+                {@const wert = p.proKategorie[k.id] ?? p.schwierigkeit}
+                <li class="fein-zeile" class:abweichend={p.proKategorie[k.id] !== undefined}>
+                  <span class="fein-name"><span aria-hidden="true">{k.icon}</span> {k.name}</span>
+                  <div class="segment stufen" role="radiogroup" aria-label={`Schwierigkeit ${k.name}, Spieler ${i + 1}`}>
+                    {#each SCHWIERIGKEITEN as st (st.wert)}
+                      <button
+                        type="button"
+                        role="radio"
+                        aria-checked={wert === st.wert}
+                        class:aktiv={wert === st.wert}
+                        onclick={() => kategorieSetzen(p, k.id, st.wert)}
+                      >
+                        {st.name}
+                      </button>
+                    {/each}
+                  </div>
+                </li>
+              {/each}
+            </ul>
+            {#if n > 0}
+              <button type="button" class="textlink zuruecksetzen" onclick={() => (p.proKategorie = {})}>
+                Alle wie oben
+              </button>
+            {/if}
+          </details>
         </li>
       {/each}
     </ol>
@@ -307,6 +372,56 @@
   .stufen button {
     font-size: 1rem;
     min-height: 48px;
+  }
+  .fein {
+    grid-column: 1 / -1;
+  }
+  .fein summary {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-2);
+  }
+  .fein summary::before {
+    content: '▸';
+    margin-right: 6px;
+  }
+  .fein[open] summary::before {
+    content: '▾';
+  }
+  .fein[open] summary {
+    margin-bottom: 8px;
+  }
+  .anzahl {
+    color: var(--accent);
+  }
+  .fein-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .fein-zeile {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-left: 8px;
+    border-left: 3px solid transparent;
+  }
+  .fein-zeile.abweichend {
+    border-left-color: var(--accent);
+  }
+  .fein-name {
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+  }
+  .zuruecksetzen {
+    min-height: 48px;
+    align-self: flex-start;
   }
   .segment button.aktiv {
     background: var(--accent);
