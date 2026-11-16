@@ -1,8 +1,422 @@
 {
  "version": 1,
  "kategorie": "natur",
- "generiert_am": "2026-11-16T13:13:05Z",
+ "generiert_am": "2026-11-16T14:45:17Z",
  "fragen": [
+  {
+   "id": "wd-027158aab1",
+   "kategorie": "natur",
+   "frage": "Welches dieser Tiere ist ein Säugetier?",
+   "antworten": [
+    "Riesenhai",
+    "Rotkehlchen",
+    "Weisser Hai",
+    "Walross"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Walross",
+   "lizenz": "CC0",
+   "quelle_titel": "Walross",
+   "quelle_id": "Q40994"
+  },
+  {
+   "id": "wd-0bd37200bd",
+   "kategorie": "natur",
+   "frage": "Welches dieser Tiere ist ein Fisch?",
+   "antworten": [
+    "Lederschildkröte",
+    "Europäischer Aal",
+    "Nilkrokodil",
+    "Schwertwal"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Europ%C3%A4ischer_Aal",
+   "lizenz": "CC0",
+   "quelle_titel": "Europäischer Aal",
+   "quelle_id": "Q26387"
+  },
+  {
+   "id": "wd-1d4b491115",
+   "kategorie": "natur",
+   "frage": "Welches dieser Tiere ist ein Reptil?",
+   "antworten": [
+    "Rotkehlchen",
+    "Grasfrosch",
+    "Erdkröte",
+    "Lederschildkröte"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Lederschildkr%C3%B6te",
+   "lizenz": "CC0",
+   "quelle_titel": "Lederschildkröte",
+   "quelle_id": "Q120043"
+  },
+  {
+   "id": "wd-36bb3ebb80",
+   "kategorie": "natur",
+   "frage": "Zu welcher Tiergruppe gehört die Blindschleiche?",
+   "antworten": [
+    "Vögel",
+    "Reptilien",
+    "Fische",
+    "Amphibien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Blindschleiche",
+   "lizenz": "CC0",
+   "quelle_titel": "Blindschleiche",
+   "quelle_id": "Q183660"
+  },
+  {
+   "id": "wd-44cfd38513",
+   "kategorie": "natur",
+   "frage": "Welches dieser Tiere ist ein Reptil?",
+   "antworten": [
+    "Afrikanischer Strauss",
+    "Erdkröte",
+    "Nilkrokodil",
+    "Grasfrosch"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Nilkrokodil",
+   "lizenz": "CC0",
+   "quelle_titel": "Nilkrokodil",
+   "quelle_id": "Q168745"
+  },
+  {
+   "id": "wd-4665affdfe",
+   "kategorie": "natur",
+   "frage": "Zu welcher Tiergruppe gehört der Adeliepinguin?",
+   "antworten": [
+    "Reptilien",
+    "Säugetiere",
+    "Vögel",
+    "Insekten"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Adeliepinguin",
+   "lizenz": "CC0",
+   "quelle_titel": "Adeliepinguin",
+   "quelle_id": "Q187958"
+  },
+  {
+   "id": "wd-46f45a602e",
+   "kategorie": "natur",
+   "frage": "Zu welcher Tiergruppe gehört das Rotkehlchen?",
+   "antworten": [
+    "Insekten",
+    "Fische",
+    "Säugetiere",
+    "Vögel"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rotkehlchen",
+   "lizenz": "CC0",
+   "quelle_titel": "Rotkehlchen",
+   "quelle_id": "Q25334"
+  },
+  {
+   "id": "wd-6ecdb0a274",
+   "kategorie": "natur",
+   "frage": "Welches dieser Tiere ist ein Fisch?",
+   "antworten": [
+    "Unechte Karettschildkröte",
+    "Dugong",
+    "Walross",
+    "Weisser Hai"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Wei%C3%9Fer_Hai",
+   "lizenz": "CC0",
+   "quelle_titel": "Weißer Hai",
+   "quelle_id": "Q129026"
+  },
+  {
+   "id": "wd-740923eabf",
+   "kategorie": "natur",
+   "frage": "Zu welcher Tiergruppe gehört der Komodowaran?",
+   "antworten": [
+    "Säugetiere",
+    "Reptilien",
+    "Vögel",
+    "Fische"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Komodowaran",
+   "lizenz": "CC0",
+   "quelle_titel": "Komodowaran",
+   "quelle_id": "Q4504"
+  },
+  {
+   "id": "wd-8d4457a47f",
+   "kategorie": "natur",
+   "frage": "Zu welcher Tiergruppe gehört die Unechte Karettschildkröte?",
+   "antworten": [
+    "Amphibien",
+    "Reptilien",
+    "Vögel",
+    "Fische"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Unechte_Karettschildkr%C3%B6te",
+   "lizenz": "CC0",
+   "quelle_titel": "Unechte Karettschildkröte",
+   "quelle_id": "Q192095"
+  },
+  {
+   "id": "wd-a4ba0d87d2",
+   "kategorie": "natur",
+   "frage": "Zu welcher Tiergruppe gehört der Riesenhai?",
+   "antworten": [
+    "Fische",
+    "Vögel",
+    "Reptilien",
+    "Säugetiere"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Riesenhai",
+   "lizenz": "CC0",
+   "quelle_titel": "Riesenhai",
+   "quelle_id": "Q185260"
+  },
+  {
+   "id": "wd-a51c3b0fc7",
+   "kategorie": "natur",
+   "frage": "Zu welcher Tiergruppe gehört der Puma?",
+   "antworten": [
+    "Vögel",
+    "Reptilien",
+    "Fische",
+    "Säugetiere"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Puma",
+   "lizenz": "CC0",
+   "quelle_titel": "Puma",
+   "quelle_id": "Q35255"
+  },
+  {
+   "id": "wd-a715c97911",
+   "kategorie": "natur",
+   "frage": "Zu welcher Tiergruppe gehört der Dugong?",
+   "antworten": [
+    "Amphibien",
+    "Fische",
+    "Reptilien",
+    "Säugetiere"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Dugong",
+   "lizenz": "CC0",
+   "quelle_titel": "Dugong",
+   "quelle_id": "Q129544"
+  },
+  {
+   "id": "wd-ab96211316",
+   "kategorie": "natur",
+   "frage": "Welches dieser Tiere ist ein Fisch?",
+   "antworten": [
+    "Rotkehlchen",
+    "Seeleopard",
+    "Walhai",
+    "Schwertwal"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Walhai",
+   "lizenz": "CC0",
+   "quelle_titel": "Walhai",
+   "quelle_id": "Q80378"
+  },
+  {
+   "id": "wd-c2b8236606",
+   "kategorie": "natur",
+   "frage": "Zu welcher Tiergruppe gehört der Seeleopard?",
+   "antworten": [
+    "Reptilien",
+    "Säugetiere",
+    "Amphibien",
+    "Fische"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Seeleopard",
+   "lizenz": "CC0",
+   "quelle_titel": "Seeleopard",
+   "quelle_id": "Q186663"
+  },
+  {
+   "id": "wd-c7ec87d1a3",
+   "kategorie": "natur",
+   "frage": "Zu welcher Tiergruppe gehört der Brillenpinguin?",
+   "antworten": [
+    "Vögel",
+    "Insekten",
+    "Reptilien",
+    "Säugetiere"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Brillenpinguin",
+   "lizenz": "CC0",
+   "quelle_titel": "Brillenpinguin",
+   "quelle_id": "Q244813"
+  },
+  {
+   "id": "wd-cdee242c9c",
+   "kategorie": "natur",
+   "frage": "Welches dieser Tiere ist ein Säugetier?",
+   "antworten": [
+    "Narwal",
+    "Weisser Hai",
+    "Walhai",
+    "Erdkröte"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Narwal",
+   "lizenz": "CC0",
+   "quelle_titel": "Narwal",
+   "quelle_id": "Q159426"
+  },
+  {
+   "id": "wd-cea818c90a",
+   "kategorie": "natur",
+   "frage": "Welches dieser Tiere ist ein Säugetier?",
+   "antworten": [
+    "Grasfrosch",
+    "Europäischer Aal",
+    "Blauwal",
+    "Weisser Hai"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Blauwal",
+   "lizenz": "CC0",
+   "quelle_titel": "Blauwal",
+   "quelle_id": "Q42196"
+  },
+  {
+   "id": "wd-d62938c759",
+   "kategorie": "natur",
+   "frage": "Welches dieser Tiere ist ein Säugetier?",
+   "antworten": [
+    "Riesenhai",
+    "Seehund",
+    "Unechte Karettschildkröte",
+    "Weisser Hai"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Seehund",
+   "lizenz": "CC0",
+   "quelle_titel": "Seehund",
+   "quelle_id": "Q26913"
+  },
+  {
+   "id": "wd-d7c70214fa",
+   "kategorie": "natur",
+   "frage": "Welches dieser Tiere ist ein Vogel?",
+   "antworten": [
+    "Dugong",
+    "Walross",
+    "Unechte Karettschildkröte",
+    "Eselspinguin"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Eselspinguin",
+   "lizenz": "CC0",
+   "quelle_titel": "Eselspinguin",
+   "quelle_id": "Q213021"
+  },
+  {
+   "id": "wd-db4a082a15",
+   "kategorie": "natur",
+   "frage": "Welches dieser Tiere ist ein Säugetier?",
+   "antworten": [
+    "Walhai",
+    "Unechte Karettschildkröte",
+    "Schwertwal",
+    "Weisser Hai"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Schwertwal",
+   "lizenz": "CC0",
+   "quelle_titel": "Schwertwal",
+   "quelle_id": "Q26843"
+  },
+  {
+   "id": "wd-e9eade3a10",
+   "kategorie": "natur",
+   "frage": "Welches dieser Tiere ist ein Vogel?",
+   "antworten": [
+    "Afrikanischer Strauss",
+    "Schwertwal",
+    "Europäischer Aal",
+    "Narwal"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Afrikanischer_Strau%C3%9F",
+   "lizenz": "CC0",
+   "quelle_titel": "Afrikanischer Strauß",
+   "quelle_id": "Q17592"
+  },
+  {
+   "id": "wd-ecb9d4183d",
+   "kategorie": "natur",
+   "frage": "Zu welcher Tiergruppe gehört der Hecht?",
+   "antworten": [
+    "Amphibien",
+    "Fische",
+    "Vögel",
+    "Reptilien"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 3,
+   "quelle_typ": "wikidata",
+   "quelle_url": "https://de.wikipedia.org/wiki/Hecht",
+   "lizenz": "CC0",
+   "quelle_titel": "Hecht",
+   "quelle_id": "Q165278"
+  },
   {
    "id": "wp-055e88cf5b",
    "kategorie": "natur",
