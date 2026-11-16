@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "geschichte",
- "generiert_am": "2026-11-16T08:12:22Z",
+ "generiert_am": "2026-11-16T08:35:53Z",
  "fragen": [
   {
    "id": "wp-0098785dd9",
@@ -310,24 +310,6 @@
    "quelle_id": "Q154554"
   },
   {
-   "id": "wp-195bc0d5ed",
-   "kategorie": "geschichte",
-   "frage": "Welcher US-Geheimdienst betrieb das geheime Forschungsprogramm MKULTRA zur Bewusstseinskontrolle?",
-   "antworten": [
-    "NSA",
-    "DIA",
-    "CIA",
-    "FBI"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/MKULTRA",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "MKULTRA",
-   "quelle_id": "Q815614"
-  },
-  {
    "id": "wp-198fa62de1",
    "kategorie": "geschichte",
    "frage": "Welcher britische König verlor im Amerikanischen Unabhängigkeitskrieg einen Grossteil seiner Kolonien?",
@@ -544,6 +526,24 @@
    "quelle_id": "Q79789"
   },
   {
+   "id": "wp-2bc823fbbf",
+   "kategorie": "geschichte",
+   "frage": "Welche Schulpädagogik geht auf den österreichischen Denker Rudolf Steiner zurück?",
+   "antworten": [
+    "Waldorfpädagogik",
+    "Montessoripädagogik",
+    "Jenaplan-Pädagogik",
+    "Reggio-Pädagogik"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Rudolf_Steiner",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Rudolf Steiner",
+   "quelle_id": "Q78484"
+  },
+  {
    "id": "wp-2d0998bfb5",
    "kategorie": "geschichte",
    "frage": "Aus welchem Land stammten die UNO-Blauhelmsoldaten, die 1995 in Srebrenica stationiert waren?",
@@ -560,24 +560,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Massaker von Srebrenica",
    "quelle_id": "Q170334"
-  },
-  {
-   "id": "wp-3062209c79",
-   "kategorie": "geschichte",
-   "frage": "Nach welchem germanischen Volk ist eine Dialektgruppe im Südwesten des deutschen Sprachraums benannt?",
-   "antworten": [
-    "Alamannen",
-    "Vandalen",
-    "Langobarden",
-    "Burgunder"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Alamannen",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Alamannen",
-   "quelle_id": "Q132990"
   },
   {
    "id": "wp-3122fb83b4",
@@ -1570,6 +1552,24 @@
    "quelle_id": "Q76326"
   },
   {
+   "id": "wp-9782941aef",
+   "kategorie": "geschichte",
+   "frage": "Welchem Philosophen der Aufklärung wird der Aufruf «Zurück zur Natur!» zugeschrieben?",
+   "antworten": [
+    "Denis Diderot",
+    "Jean-Jacques Rousseau",
+    "Immanuel Kant",
+    "Charles de Montesquieu"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://de.wikipedia.org/wiki/Jean-Jacques_Rousseau",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Jean-Jacques Rousseau",
+   "quelle_id": "Q6527"
+  },
+  {
    "id": "wp-9a5583da8b",
    "kategorie": "geschichte",
    "frage": "In welcher Stadt versteckte sich Anne Frank mit ihrer Familie von 1942 bis 1944 in einem Hinterhaus?",
@@ -1714,24 +1714,6 @@
    "quelle_id": "Q165558"
   },
   {
-   "id": "wp-a8d48b48fd",
-   "kategorie": "geschichte",
-   "frage": "In welchem Jahr wurde der Flugbetrieb am Berliner Flughafen Tegel eingestellt?",
-   "antworten": [
-    "2017",
-    "2012",
-    "2023",
-    "2020"
-   ],
-   "korrekt_index": 3,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Flughafen_Berlin-Tegel",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Flughafen Berlin-Tegel",
-   "quelle_id": "Q9688"
-  },
-  {
    "id": "wp-a902b11731",
    "kategorie": "geschichte",
    "frage": "Welcher US-Präsident amtierte als einziger länger als zwei Wahlperioden?",
@@ -1838,24 +1820,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Europäische Union",
    "quelle_id": "Q458"
-  },
-  {
-   "id": "wp-b167ba1687",
-   "kategorie": "geschichte",
-   "frage": "Welche Droge wurde den ahnungslosen Versuchspersonen im Programm MKULTRA vor allem verabreicht?",
-   "antworten": [
-    "Cannabis",
-    "Heroin",
-    "LSD",
-    "Kokain"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/MKULTRA",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "MKULTRA",
-   "quelle_id": "Q815614"
   },
   {
    "id": "wp-b2c6688839",
@@ -2000,24 +1964,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Jimmy Carter",
    "quelle_id": "Q23685"
-  },
-  {
-   "id": "wp-c2af042d55",
-   "kategorie": "geschichte",
-   "frage": "Nach welchem Flugpionier war der Berliner Flughafen Tegel benannt?",
-   "antworten": [
-    "Ferdinand von Zeppelin",
-    "Hugo Junkers",
-    "Otto Lilienthal",
-    "August Euler"
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Flughafen_Berlin-Tegel",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Flughafen Berlin-Tegel",
-   "quelle_id": "Q9688"
   },
   {
    "id": "wp-c37c345d34",
@@ -2488,24 +2434,6 @@
    "quelle_id": "Q1430"
   },
   {
-   "id": "wp-f3fde52428",
-   "kategorie": "geschichte",
-   "frage": "Unter welchem englischen König diente Thomas Morus als Lordkanzler, bevor dieser ihn hinrichten liess?",
-   "antworten": [
-    "Richard III.",
-    "Eduard VI.",
-    "Heinrich VIII.",
-    "Heinrich VII."
-   ],
-   "korrekt_index": 2,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Thomas_Morus",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Thomas Morus",
-   "quelle_id": "Q42544"
-  },
-  {
    "id": "wp-f535271c9f",
    "kategorie": "geschichte",
    "frage": "In welchem Zeitraum bestand das System der Konzentrationslager im nationalsozialistischen Deutschland?",
@@ -2702,42 +2630,6 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Angriff auf Pearl Harbor",
    "quelle_id": "Q52418"
-  },
-  {
-   "id": "wp-2bc823fbbf",
-   "kategorie": "geschichte",
-   "frage": "Welche Schulpädagogik geht auf den österreichischen Denker Rudolf Steiner zurück?",
-   "antworten": [
-    "Waldorfpädagogik",
-    "Montessoripädagogik",
-    "Jenaplan-Pädagogik",
-    "Reggio-Pädagogik"
-   ],
-   "korrekt_index": 0,
-   "schwierigkeit": 1,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Rudolf_Steiner",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Rudolf Steiner",
-   "quelle_id": "Q78484"
-  },
-  {
-   "id": "wp-9782941aef",
-   "kategorie": "geschichte",
-   "frage": "Welchem Philosophen der Aufklärung wird der Aufruf «Zurück zur Natur!» zugeschrieben?",
-   "antworten": [
-    "Denis Diderot",
-    "Jean-Jacques Rousseau",
-    "Immanuel Kant",
-    "Charles de Montesquieu"
-   ],
-   "korrekt_index": 1,
-   "schwierigkeit": 2,
-   "quelle_typ": "wikipedia",
-   "quelle_url": "https://de.wikipedia.org/wiki/Jean-Jacques_Rousseau",
-   "lizenz": "CC BY-SA 4.0",
-   "quelle_titel": "Jean-Jacques Rousseau",
-   "quelle_id": "Q6527"
   }
  ]
 }

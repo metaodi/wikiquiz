@@ -25,8 +25,21 @@ export function anzahlProKategorie(pool: Frage[], gestellt: string[]): Record<Ka
 }
 
 /**
- * Wählt eine Frage der Kategorie. Fragen, die nicht in der History stehen, werden bevorzugt;
- * sind alle schon einmal gestellt worden, kommt die am längsten zurückliegende dran.
+ * Fragen, deren Quelle (Wikipedia-Artikel) im laufenden Spiel noch nicht vorkam. Zwei Fragen zum selben
+ * Artikel verraten sich oft gegenseitig („Wer komponierte «Ein deutsches Requiem»?“ und „Wo wurde
+ * Johannes Brahms geboren?“). Gibt es keine solchen Fragen mehr, bleiben alle Kandidaten erlaubt.
+ */
+export function andereQuellen(kandidaten: Frage[], pool: Frage[], gestellt: string[]): Frage[] {
+  const g = new Set(gestellt);
+  const benutzt = new Set(pool.filter((f) => g.has(f.id)).map((f) => f.quelle_url));
+  const neu = kandidaten.filter((f) => !benutzt.has(f.quelle_url));
+  return neu.length > 0 ? neu : kandidaten;
+}
+
+/**
+ * Wählt eine Frage der Kategorie, möglichst zu einem Artikel, der im Spiel noch nicht vorkam.
+ * Fragen, die nicht in der History stehen, werden bevorzugt; sind alle schon einmal gestellt
+ * worden, kommt die am längsten zurückliegende dran.
  */
 export function waehleFrage(
   pool: Frage[],
@@ -35,8 +48,9 @@ export function waehleFrage(
   history: string[],
   rng: Rng = Math.random,
 ): Frage | null {
-  const kandidaten = verfuegbar(pool, kategorie, gestellt);
-  if (kandidaten.length === 0) return null;
+  const offen = verfuegbar(pool, kategorie, gestellt);
+  if (offen.length === 0) return null;
+  const kandidaten = andereQuellen(offen, pool, gestellt);
   const pos = new Map(history.map((id, i) => [id, i]));
   const frisch = kandidaten.filter((f) => !pos.has(f.id));
   if (frisch.length > 0) return frisch[Math.floor(rng() * frisch.length)];

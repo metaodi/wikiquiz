@@ -19,7 +19,7 @@ npm run build      # Produktions-Build nach dist/ (BASE_PATH=/wikiquiz/ für Git
 |---|---|
 | `src/lib/config.ts` | Zeitlimit (15 s), Punkteformel, Runden, Farben – zentral konfigurierbar |
 | `src/lib/game.ts` | Spiellogik als reine Funktionen (Zeit und Zufall werden hereingereicht) |
-| `src/lib/picker.ts` | Fragenauswahl: nie doppelt pro Spiel, zuletzt gestellte Fragen bevorzugt vermeiden |
+| `src/lib/picker.ts` | Fragenauswahl: nie doppelt pro Spiel, möglichst kein zweites Mal derselbe Wikipedia-Artikel im Spiel (Fragen dazu verraten sich oft gegenseitig), zuletzt gestellte Fragen bevorzugt vermeiden |
 | `src/lib/storage.ts` | `localStorage` (Spielstand, History, letzte Spieler), alles in try/catch |
 | `src/screens/*` | Setup, Übergabe, Kategorie, Zufall, Frage, Feedback, Zwischenstand, Rangliste, Info |
 
