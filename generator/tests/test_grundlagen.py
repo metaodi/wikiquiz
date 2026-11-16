@@ -275,6 +275,7 @@ def _schweiz_testdaten():
         "K4": kanton("K4", "Freiburg", ["Deutsch", "Französisch"]),
         "K5": kanton("K5", "Wallis", ["Deutsch", "Französisch"]),
         "K6": kanton("K6", "Uri", ["Deutsch"]),
+        "K7": kanton("K7", "Zug", ["Deutsch"], "G6"),
     }
     return ktx, kantone
 
@@ -287,10 +288,12 @@ def test_schweiz_hauptort_mit_gemeinden_des_kantons():
         {"item": f"http://www.wikidata.org/entity/{q}", "label": n, "kantone": k, "einwohner": str(e)}
         for q, n, k, e in [("G1", "Bellinzona", "K1", 45000), ("G2", "Lugano", "K1", 63000),
                            ("G3", "Locarno", "K1", 16000), ("G4", "Mendrisio", "K1", 15000),
-                           ("G5", "Bern", "K2", 134000)]
+                           ("G5", "Bern", "K2", 134000), ("G6", "Zug", "K7", 31000), ("G7", "Baar", "K7", 25000),
+                           ("G8", "Cham", "K7", 17000), ("G9", "Risch", "K7", 11000)]
     ]
     fragen = hauptort(ktx, kantone, gemeinden)
-    assert len(fragen) == 1  # Bern hat zu wenige Gemeinden im Test, die übrigen keinen Hauptort
+    # Bern: zu wenige Gemeinden im Test; Zug: Hauptort steckt im Namen; die übrigen ohne Hauptort
+    assert len(fragen) == 1
     f = fragen[0]
     assert f.frage == "Wie heisst der Hauptort des Kantons Tessin?" and f.richtig == "Bellinzona"
     assert sorted(f.falsch) == ["Locarno", "Lugano", "Mendrisio"]

@@ -180,7 +180,7 @@ Erfindungen deckt die LLM-Pipeline mit unabhängiger Prüfung ab.
 
 | Template | Frage | Distraktoren |
 |---|---|---|
-| `hauptort` | Wie heisst der Hauptort des Kantons {Tessin}? | die grössten anderen Gemeinden des Kantons (Lugano, Locarno …); Kantone, deren Hauptort im Namen steckt (Bern, Zürich), fallen über die formale Regel weg |
+| `hauptort` | Wie heisst der Hauptort des Kantons {Tessin}? | die grössten anderen Gemeinden des Kantons (Lugano, Locarno …); Kantone, deren Hauptort im Namen steckt (Bern, Zürich, Zug), fallen weg |
 | `gemeinde` | In welchem Kanton liegt die Gemeinde {Zermatt}? | Nachbarkantone (P47); nur Gemeinden in genau einem Kanton, mit Bekanntheitsfilter; ohne Kantonshauptorte (Aarau ↔ Hauptort des Aargaus verrieten sich gegenseitig) |
 | `berg` / `see` | In welchem Kanton liegt der Berg {Pilatus} / der {Walensee}? | wie `gemeinde`; Berge und Seen in mehreren Kantonen werden ausgelassen; tiefere Schwellen (10 Sitelinks, 40 Aufrufe pro Tag, 1500 Zeichen), weil auch bekannte Berge und Seen selten aufgerufen werden |
 | `sprache` | Welche Amtssprache hat der Kanton {Waadt}? / Welcher Kanton hat drei Amtssprachen? | die anderen Landessprachen bzw. die zweisprachigen Kantone; nur französisch- oder italienischsprachige Kantone (deutschsprachige wären zu einfach) |

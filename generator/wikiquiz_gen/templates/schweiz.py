@@ -160,6 +160,11 @@ def hauptort(ktx: Kontext, kantone: dict[str, Kanton], gemeinden: list[dict]) ->
         ort = next(iter(kt.hauptorte))
         if ort not in namen:
             continue
+        if namen[ort].lower() in kt.name.lower():
+            # Kanton Zug → Zug: Die formale Regel prüft erst Wörter ab 4 Zeichen
+            ktx.protokoll.verwerfen(ktx.kategorie, "template:hauptort", "hauptort im kantonsnamen",
+                                    {"qid": q, "label": kt.name})
+            continue
         groesste = [namen[g] for g, _ in sorted(kt.gemeinden, key=lambda e: -e[1]) if g != ort]
         groesste = [n for n in groesste if n != namen[ort]][:GEMEINDEN_PRO_KANTON]
         if len(groesste) < 3:
