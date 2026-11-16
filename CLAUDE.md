@@ -61,6 +61,8 @@ In der Cloud-Umgebung ist Chromium vorinstalliert – `playwright install` nicht
   `generator/cache/`). Keine direkten `requests`-Aufrufe an anderen Stellen.
 - Modelle über `WIKIQUIZ_GEN_MODEL` / `WIKIQUIZ_CHECK_MODEL` (Standard `claude-opus-5-5`), Aufwand über `WIKIQUIZ_EFFORT`.
   Ein API-Key gehört nie in die App oder ins Repository.
+- Eigene Artikel pro Kategorie (Nischenwissen der Spielrunde) in `generator/eigene_artikel.toml`: ohne
+  Bekanntheitsfilter, auch bei erreichtem Ziel verarbeitet; Prompt-Zusatz `GENERIERUNG_ZUSATZ_EIGEN` (auch in `SPEC.md`).
 - Schwellen des Bekanntheitsfilters pro Kategorie in `wikiquiz_gen/config.py`; neue Wikidata-Templates unter
   `wikiquiz_gen/templates/` und im Generator-README dokumentieren.
 

@@ -193,6 +193,15 @@ Artikeltext (Einleitung und erste Abschnitte):
 """
 ~~~
 
+**Zusatz für eigene Artikel:** Bei Artikeln aus der von Hand gepflegten Liste (Nischenwissen der eigenen Spielrunde, ohne Bekanntheitsfilter) wird an die USER-Nachricht nach einer Leerzeile angehängt:
+
+~~~
+Hinweis: Dieser Artikel wurde von Hand ausgewählt, weil die Spielrunde
+das Thema kennt. Bewerte bekanntheit_thema wie gewohnt, erstelle die
+Fragen aber auch dann, wenn es unter 3 liegt. Frage nach dem, wofür
+das Thema bekannt ist; die übrigen Grundsätze gelten weiterhin.
+~~~
+
 **Prüf-Prompt:** Jede generierte Frage in einem zweiten, unabhängigen LLM-Call prüfen. Der Prüfer sieht die Antworten gemischt und erfährt NICHT, welche als richtig markiert ist:
 
 ~~~

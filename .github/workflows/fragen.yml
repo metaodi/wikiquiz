@@ -156,7 +156,7 @@ jobs:
             echo "## Prüfliste vor dem Mergen"
             echo
             echo "- [ ] Stichprobe durchgesehen: Fragen eindeutig, richtige Antwort stimmt, Distraktoren eindeutig falsch"
-            echo "- [ ] Allgemeinwissen statt Nischenwissen, Schwierigkeit plausibel"
+            echo "- [ ] Allgemeinwissen statt Nischenwissen (ausser Fragen zu eigenen Artikeln aus \`eigene_artikel.toml\`), Schwierigkeit plausibel"
             echo "- [ ] Keine zeitabhängigen Fragen (amtierende Personen, aktuelle Rekorde)"
             echo "- [ ] Keine Dubletten zu bestehenden Fragen"
             echo "- [ ] \`rejected.jsonl\` überflogen: keine auffälligen Häufungen bei den Ablehnungsgründen"

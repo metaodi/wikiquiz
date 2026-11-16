@@ -1,0 +1,27 @@
+# Eigene Artikel pro Kategorie – Nischenwissen der eigenen Spielrunde
+#
+# Diese Artikel werden zusätzlich zur automatischen Auswahl verarbeitet, unabhängig von Sitelinks,
+# Seitenaufrufen und Artikellänge (Bekanntheitsfilter) und auch dann, wenn der Zielbestand schon
+# erreicht ist. Das LLM erfährt, dass das Thema bewusst ausgewählt wurde; die Schwellen für
+# Bekanntheit des Themas und Allgemeinwissen gelten für sie nicht. Belegstelle, unabhängige Prüfung
+# und Eindeutigkeit gelten weiterhin.
+#
+# - Titel genau wie in der deutschsprachigen Wikipedia (Weiterleitungen werden aufgelöst).
+# - Englische Wikipedia mit Präfix „en:“, z. B. "en:Grogu".
+# - Bereits verarbeitete Artikel (data/verarbeitet/) werden nicht erneut verarbeitet.
+# - Schlüssel: naturwissenschaften, kunst, geschichte, sport, geografie, essen, natur,
+#   schweiz, starwars, harrypotter
+#
+# Beispiel:
+# schweiz = ["Zibelemärit", "Chesslete"]
+
+naturwissenschaften = []
+kunst = []
+geschichte = []
+sport = []
+geografie = []
+essen = []
+natur = []
+schweiz = []
+starwars = []
+harrypotter = []
