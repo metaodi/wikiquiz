@@ -22,7 +22,12 @@ sport = []
 geografie = []
 essen = []
 natur = []
-schweiz = []
+schweiz = [
+  "Thalwil",
+  "Säntis",
+  "Zürich",
+  "Sihl",
+]
 starwars = [
   "en:Darth_Vader",
   "en:Obi-Wan_Kenobi",
@@ -41,4 +46,12 @@ starwars = [
   "en:Jabba_the_Hutt",
   "en:Boba_Fett",
 ]
-harrypotter = []
+harrypotter = [
+  "en:Sirius_Black",
+  "en:Death_Eater",
+  "en:List_of_Harry_Potter_characters",
+  "en:Magical_creatures_in_Harry_Potter",
+  "en:Magical_objects_in_Harry_Potter",
+  "en:Diagon_Alley",
+  "en:Hogwarts",
+]
