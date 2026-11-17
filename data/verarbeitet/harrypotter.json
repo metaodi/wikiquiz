@@ -176,10 +176,19 @@
  },
  "en:Death Eater": {
   "qid": "Q181291",
-  "datum": "2026-11-16",
+  "datum": "2026-11-17",
+  "bekanntheit_thema": 3,
+  "angenommen": 2,
+  "verworfen": 0,
+  "eigen": true
+ },
+ "en:Diagon Alley": {
+  "qid": "Q834374",
+  "datum": "2026-11-17",
   "bekanntheit_thema": 4,
-  "angenommen": 0,
-  "verworfen": 2
+  "angenommen": 2,
+  "verworfen": 0,
+  "eigen": true
  },
  "en:Dolores Umbridge": {
   "qid": "Q716941",
@@ -260,10 +269,11 @@
  },
  "en:Hogwarts": {
   "qid": "Q174097",
-  "datum": "2026-11-16",
+  "datum": "2026-11-17",
   "bekanntheit_thema": 5,
   "angenommen": 1,
-  "verworfen": 1
+  "verworfen": 0,
+  "eigen": true
  },
  "en:Luna Lovegood": {
   "qid": "Q190282",
@@ -271,6 +281,14 @@
   "bekanntheit_thema": 3,
   "angenommen": 2,
   "verworfen": 0
+ },
+ "en:Magical objects in Harry Potter": {
+  "qid": "Q190327",
+  "datum": "2026-11-17",
+  "bekanntheit_thema": 4,
+  "angenommen": 2,
+  "verworfen": 0,
+  "eigen": true
  },
  "en:Minerva McGonagall": {
   "qid": "Q192179",
@@ -330,10 +348,11 @@
  },
  "en:Sirius Black": {
   "qid": "Q713701",
-  "datum": "2026-11-16",
+  "datum": "2026-11-17",
   "bekanntheit_thema": 4,
   "angenommen": 2,
-  "verworfen": 0
+  "verworfen": 0,
+  "eigen": true
  },
  "en:Voldemort": {
   "qid": "Q176132",
