@@ -1,7 +1,7 @@
 {
  "version": 1,
  "kategorie": "harrypotter",
- "generiert_am": "2026-11-16T10:25:43Z",
+ "generiert_am": "2026-11-17T06:45:33Z",
  "fragen": [
   {
    "id": "wp-009a6194db",
@@ -490,6 +490,24 @@
    "quelle_id": "Q99397854"
   },
   {
+   "id": "wp-620948c720",
+   "kategorie": "harrypotter",
+   "frage": "In welchem Gegenstand hinterlässt Dumbledore Harry Potter den Stein der Auferstehung?",
+   "antworten": [
+    "Spickoskop",
+    "Erinnermich",
+    "Deluminator",
+    "Goldener Schnatz"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Magical_objects_in_Harry_Potter",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Magical objects in Harry Potter",
+   "quelle_id": "Q190327"
+  },
+  {
    "id": "wp-72138b64ea",
    "kategorie": "harrypotter",
    "frage": "Welche Schauspielerin spielte Hermine Granger in allen acht Harry-Potter-Filmen?",
@@ -724,6 +742,42 @@
    "quelle_id": "Q1057918"
   },
   {
+   "id": "wp-a123e4d50e",
+   "kategorie": "harrypotter",
+   "frage": "Welcher Gegenstand gehört in «Harry Potter» zu den drei Heiligtümern des Todes?",
+   "antworten": [
+    "Elderstab",
+    "Stein der Weisen",
+    "Zeitumkehrer",
+    "Karte des Rumtreibers"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Magical_objects_in_Harry_Potter",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Magical objects in Harry Potter",
+   "quelle_id": "Q190327"
+  },
+  {
+   "id": "wp-a5a2970b35",
+   "kategorie": "harrypotter",
+   "frage": "Welche Wesen führen in Harry Potter die Zaubererbank Gringotts in der Winkelgasse?",
+   "antworten": [
+    "Hauselfen",
+    "Zwerge",
+    "Zentauren",
+    "Kobolde"
+   ],
+   "korrekt_index": 3,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Diagon_Alley",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Diagon Alley",
+   "quelle_id": "Q834374"
+  },
+  {
    "id": "wp-a65f6b3397",
    "kategorie": "harrypotter",
    "frage": "Wer führt bei Harry Potter die Erstklässler bei ihrer Ankunft mit Booten über den See zur Schule?",
@@ -758,6 +812,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Harry Potter und das verwunschene Kind",
    "quelle_id": "Q20711488"
+  },
+  {
+   "id": "wp-b2dd82dfe1",
+   "kategorie": "harrypotter",
+   "frage": "Welcher magische Gegenstand teilt neue Schülerinnen und Schüler in Hogwarts ihren Häusern zu?",
+   "antworten": [
+    "Der Feuerkelch",
+    "Der Sprechende Hut",
+    "Der Stein der Weisen",
+    "Der Spiegel Nerhegeb"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Hogwarts",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Hogwarts",
+   "quelle_id": "Q174097"
   },
   {
    "id": "wp-b867fb3599",
@@ -796,6 +868,42 @@
    "quelle_id": "Q177439"
   },
   {
+   "id": "wp-bf307e61c7",
+   "kategorie": "harrypotter",
+   "frage": "Welche Überzeugung vertreten die Todesser in Harry Potter?",
+   "antworten": [
+    "Reinblütige Zauberer sollen herrschen",
+    "Alle Hauselfen sollen frei sein",
+    "Kobolde sollen gleiche Rechte haben",
+    "Muggel sollen von Magie erfahren"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Death_Eater",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Death Eater",
+   "quelle_id": "Q181291"
+  },
+  {
+   "id": "wp-bf468ca979",
+   "kategorie": "harrypotter",
+   "frage": "In welches Tier kann sich Sirius Black in den Harry-Potter-Büchern verwandeln?",
+   "antworten": [
+    "Schwarzer Hund",
+    "Getigerte Katze",
+    "Silberner Hirsch",
+    "Graue Ratte"
+   ],
+   "korrekt_index": 0,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Sirius_Black",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sirius Black",
+   "quelle_id": "Q713701"
+  },
+  {
    "id": "wp-c11ba644e9",
    "kategorie": "harrypotter",
    "frage": "Wer führte beim Harry-Potter-Film von 2002 wie schon beim ersten Teil Regie?",
@@ -830,6 +938,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Minerva McGonagall",
    "quelle_id": "Q192179"
+  },
+  {
+   "id": "wp-c8e81a23c4",
+   "kategorie": "harrypotter",
+   "frage": "Durch welches Londoner Pub gelangt man in den Harry-Potter-Büchern in die Winkelgasse?",
+   "antworten": [
+    "Die Drei Besen",
+    "Der Grüne Drache",
+    "Der Tropfende Kessel",
+    "Der Eberkopf"
+   ],
+   "korrekt_index": 2,
+   "schwierigkeit": 2,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Diagon_Alley",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Diagon Alley",
+   "quelle_id": "Q834374"
   },
   {
    "id": "wp-cce93e9147",
@@ -884,6 +1010,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Ginny Weasley",
    "quelle_id": "Q187923"
+  },
+  {
+   "id": "wp-db85643da1",
+   "kategorie": "harrypotter",
+   "frage": "Welche Figur ist in den Harry-Potter-Büchern der Pate von Harry Potter?",
+   "antworten": [
+    "Rubeus Hagrid",
+    "Sirius Black",
+    "Remus Lupin",
+    "Albus Dumbledore"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Sirius_Black",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Sirius Black",
+   "quelle_id": "Q713701"
   },
   {
    "id": "wp-dfcbb9074d",
@@ -974,6 +1118,24 @@
    "lizenz": "CC BY-SA 4.0",
    "quelle_titel": "Draco Malfoy",
    "quelle_id": "Q179641"
+  },
+  {
+   "id": "wp-eb13c6109b",
+   "kategorie": "harrypotter",
+   "frage": "Wer ist in den Harry-Potter-Büchern der Anführer der Todesser?",
+   "antworten": [
+    "Lucius Malfoy",
+    "Lord Voldemort",
+    "Gellert Grindelwald",
+    "Salazar Slytherin"
+   ],
+   "korrekt_index": 1,
+   "schwierigkeit": 1,
+   "quelle_typ": "wikipedia",
+   "quelle_url": "https://en.wikipedia.org/wiki/Death_Eater",
+   "lizenz": "CC BY-SA 4.0",
+   "quelle_titel": "Death Eater",
+   "quelle_id": "Q181291"
   },
   {
    "id": "wp-ee8f0b301a",
